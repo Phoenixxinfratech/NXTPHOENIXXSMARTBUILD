@@ -53,7 +53,7 @@ export default function ContactUsPage() {
     '@type': 'Organization',
     name: 'NXT PHOENIXX SMARTBUILD LLP',
     url: 'https://phoenixxsmartbuild.com',
-    logo: 'https://phoenixxsmartbuild.com/images/logo.png',
+    logo: 'https://phoenixxsmartbuild.com/images/brand/logos/logo.png',
     contactPoint: [
       {
         '@type': 'ContactPoint',

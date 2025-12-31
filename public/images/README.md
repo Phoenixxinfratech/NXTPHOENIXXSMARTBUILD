@@ -1,163 +1,244 @@
-# Image Folder Structure
+# 📁 Image Assets Structure
 
-This document explains the organization of images for the PHOENIXX SmartBuild website.
+This document describes the organized folder structure for all website images.
 
-## 📁 Folder Structure
+---
+
+## 📂 Folder Structure
 
 ```
 public/images/
-├── products/                    # Product images
+├── brand/                    # 🏷️ Brand Assets
+│   ├── logos/                # Logo variations
+│   ├── favicons/             # Favicon & app icons
+│   └── og-images/            # Open Graph / social sharing images
+│
+├── clients/                  # 🤝 Client Logos (107 logos)
+│   └── [client-name].png     # Use kebab-case: amul.png, coca-cola.jpg
+│
+├── products/                 # 📦 Product Images
 │   ├── sandwich-panels/
-│   │   ├── pir-panel/          # PIR Panel images
-│   │   ├── sandwich-puf-panel/ # Sandwich PUF Panel images
-│   │   ├── roofing-puf-panel/  # Roofing PUF Panel images
-│   │   └── wall-ceiling-panel/ # Wall & Ceiling Panel images
+│   │   ├── pir-panel/
+│   │   ├── puf-panel/
+│   │   ├── roofing-panel/
+│   │   └── wall-ceiling-panel/
 │   ├── doors/
-│   │   ├── cleanroom-door/     # Cleanroom Door images
-│   │   ├── fire-door-emergency-exit/
-│   │   └── fire-rated-multipurpose-door/
-│   └── cleanroom-solutions/
-│       ├── cleanroom-partition/
-│       ├── cleanroom-doors/
-│       └── cleanroom-false-ceiling/
+│   │   ├── fire-door/
+│   │   └── multipurpose-door/
+│   ├── cleanroom/
+│   │   ├── partition/
+│   │   ├── doors/
+│   │   ├── ceiling/
+│   │   └── flooring/
+│   └── cold-storage/
+│       ├── cold-room/
+│       ├── freezer/
+│       ├── ripening-chamber/
+│       └── blast-freezer/
 │
-├── solutions/                   # Solution images
-│   ├── peb/                    # Pre-Engineered Buildings
-│   ├── cold-storage-construction/
-│   ├── walkable-ceiling-systems/
-│   ├── non-walkable-ceiling-systems/
-│   ├── partition-solutions/
-│   └── prefab-house/
+├── solutions/                # 🏗️ Solution Images
+│   ├── peb/                  # Pre-Engineered Buildings
+│   ├── cold-storage/         # Cold Storage Construction
+│   ├── cleanroom/            # Cleanroom Solutions
+│   ├── false-ceiling/        # Walkable & Non-walkable Ceilings
+│   ├── partition/            # Partition Systems
+│   └── prefab-house/         # Prefab Housing
 │
-├── industries/                  # Industry-specific images
-│   ├── pharma-chemical/        # Pharmaceuticals & Life Sciences
-│   ├── food-processing/        # Food & Beverage
-│   ├── dairy/                  # Dairy Industries
-│   ├── cold-chain/             # Cold Chain & Logistics
-│   ├── precision-engineering/  # Manufacturing & Engineering
-│   ├── hospitality/            # Hospitality & Commercial
-│   ├── automobile/             # Automotive Industry
-│   └── agri-processing/        # Agriculture & Agri-Processing
+├── industries/               # 🏭 Industry Images (18 industries)
+│   ├── pharmaceuticals/
+│   ├── biotechnology/
+│   ├── medical-devices/
+│   ├── healthcare/
+│   ├── hospitals/
+│   ├── precision-engineering/
+│   ├── electronics/
+│   ├── cosmetics/
+│   ├── automotive/
+│   ├── aerospace/
+│   ├── solar-panel/
+│   ├── semiconductor/
+│   ├── food-processing/
+│   ├── dairy/
+│   ├── hospitality/
+│   ├── textile/
+│   ├── chemical/
+│   └── research-development/
 │
-├── pages/                       # Page-specific images
+├── projects/                 # 🖼️ Project Gallery
+│   └── gallery/              # Individual project images
+│
+├── team/                     # 👥 Team Photos
+│   ├── leadership/           # CEO, Directors
+│   └── operations/           # Operations team
+│
+├── testimonials/             # 💬 Testimonial Images
+│   └── clients/              # Client photos for testimonials
+│
+├── resources/                # 📚 Resource Images
+│   ├── blogs/                # Blog post images
+│   ├── brochures/            # Brochure thumbnails
+│   ├── technical-sheets/     # Technical document images
+│   └── case-studies/         # Case study images
+│
+├── pages/                    # 📄 Page-Specific Images
 │   ├── home/
-│   │   ├── hero/              # Homepage hero section
-│   │   ├── about/             # Homepage about section
-│   │   └── features/          # Homepage features section
-│   ├── about-us/
-│   │   ├── hero/              # About page hero
-│   │   ├── team/              # Team photos
-│   │   └── milestones/        # Milestone/timeline images
-│   ├── contact-us/
+│   │   ├── hero/             # Homepage hero images
+│   │   ├── features/         # Feature section images
+│   │   ├── clients/          # Homepage client section
+│   │   └── stats/            # Statistics section
+│   ├── about/
+│   │   ├── hero/
+│   │   ├── timeline/
+│   │   └── values/
+│   ├── contact/
+│   ├── careers/
 │   ├── get-a-quote/
-│   ├── career/
 │   └── clientele/
 │
-├── resources/                   # Resource images
-│   ├── blogs/                  # Blog post images
-│   ├── project-gallery/        # Project photos
-│   ├── brochures/              # Brochure thumbnails
-│   └── technical-sheets/       # Technical sheet images
+├── backgrounds/              # 🎨 Background Images
+│   ├── patterns/             # Repeating patterns
+│   ├── gradients/            # Gradient backgrounds
+│   └── textures/             # Texture overlays
 │
-├── clients/                     # Client logos
-├── team/                        # Team member photos
-├── icons/                       # Custom icons
-├── logos/                       # Company logos (main, white, dark)
-├── backgrounds/                 # Background images/patterns
-└── testimonials/                # Testimonial author photos
+└── icons/                    # 🎯 Icons
+    ├── ui/                   # UI icons
+    ├── social/               # Social media icons
+    └── features/             # Feature icons
 ```
+
+---
+
+## 📏 Recommended Image Sizes
+
+### Logos
+| Type | Size | Format |
+|------|------|--------|
+| Header Logo | 160×40px | PNG/SVG |
+| Footer Logo (white) | 200×50px | PNG/SVG |
+| Favicon | 32×32px | PNG/ICO |
+| Apple Touch Icon | 180×180px | PNG |
+| Android Chrome | 192×192px, 512×512px | PNG |
+| OG Image | 1200×630px | JPG/PNG |
+
+### Client Logos
+| Type | Size | Format |
+|------|------|--------|
+| Client Logo | 200×100px (max) | PNG (transparent) |
+| Homepage Display | 120×60px | PNG |
+| Clientele Page | 180×90px | PNG |
+
+### Products & Solutions
+| Type | Size | Format |
+|------|------|--------|
+| Thumbnail | 400×300px | JPG/WebP |
+| Card Image | 600×400px | JPG/WebP |
+| Hero/Banner | 1920×600px | JPG/WebP |
+| Gallery | 1200×800px | JPG/WebP |
+
+### Industries
+| Type | Size | Format |
+|------|------|--------|
+| Card Image | 400×300px | JPG/WebP |
+| Hero Image | 1920×600px | JPG/WebP |
+
+### Team Photos
+| Type | Size | Format |
+|------|------|--------|
+| Leadership | 400×400px | JPG (square) |
+| Team Grid | 300×300px | JPG (square) |
+
+### Blog/Resources
+| Type | Size | Format |
+|------|------|--------|
+| Featured Image | 1200×630px | JPG/WebP |
+| Thumbnail | 400×250px | JPG/WebP |
+
+---
 
 ## 📝 Naming Conventions
 
 ### General Rules
-- Use lowercase letters
-- Use hyphens (-) instead of spaces
-- Use descriptive names
-- Include dimensions for different sizes (e.g., `hero-1920x1080.jpg`)
+- Use **kebab-case** for all file names: `cold-storage-facility.jpg`
+- Use **lowercase** only: `amul-logo.png` ✅ not `Amul_Logo.PNG` ❌
+- Include **descriptive names**: `pir-panel-installation.jpg` ✅ not `IMG_1234.jpg` ❌
+- Add **variant suffix** for variations: `logo-white.png`, `logo-dark.png`
 
-### Examples
+### Client Logos
+```
+clients/
+├── amul.png
+├── coca-cola.jpg
+├── reliance-industries.png
+├── skf.png
+└── uflex.png
+```
+
+### Product Images
 ```
 products/sandwich-panels/pir-panel/
-├── pir-panel-hero.jpg          # Main hero image
-├── pir-panel-detail-1.jpg      # Detail shots
-├── pir-panel-detail-2.jpg
-├── pir-panel-installation.jpg  # Installation image
-├── pir-panel-thumbnail.jpg     # Thumbnail (300x200)
-└── pir-panel-og.jpg            # OpenGraph image (1200x630)
-
-clients/
-├── coca-cola.png               # Client logo (transparent PNG)
-├── amul.png
-├── ford.png
-└── torrent-pharma.png
-
-team/
-├── piyush-gupta.jpg            # CEO photo
-├── harshad-gupta.jpg           # Operations Head photo
-└── team-group.jpg              # Group photo
+├── pir-panel-hero.jpg
+├── pir-panel-01.jpg
+├── pir-panel-02.jpg
+├── pir-panel-specs.png
+└── pir-panel-thumbnail.jpg
 ```
 
-## 🖼️ Recommended Sizes
+### Project Gallery
+```
+projects/gallery/
+├── vyara-tiles-01.jpg
+├── vyara-tiles-02.jpg
+├── reliance-jamnagar-01.jpg
+└── skf-ahmedabad-01.jpg
+```
 
-| Image Type | Recommended Size | Format |
-|------------|-----------------|--------|
-| Hero images | 1920×1080 px | JPG/WebP |
-| Product images | 800×600 px | JPG/WebP |
-| Thumbnails | 400×300 px | JPG/WebP |
-| Client logos | 200×100 px | PNG (transparent) |
-| Team photos | 400×400 px | JPG |
-| OpenGraph | 1200×630 px | JPG |
-| Icons | 64×64 px | SVG/PNG |
-| Backgrounds | 1920×1080 px | JPG/WebP |
+---
 
-## 🎨 Image Optimization
+## 🔗 Usage in Code
 
-Before uploading, optimize images using:
-- [TinyPNG](https://tinypng.com/) - PNG compression
-- [Squoosh](https://squoosh.app/) - WebP conversion
-- [SVGOMG](https://jakearchibald.github.io/svgomg/) - SVG optimization
-
-### Next.js Image Component
-Use the Next.js `<Image>` component for automatic optimization:
+### Import Examples
 
 ```tsx
-import Image from 'next/image';
+// Logo in Header
+<Image src="/images/brand/logos/logo.png" alt="PHOENIXX" />
 
-<Image
-  src="/images/products/sandwich-panels/pir-panel/pir-panel-hero.jpg"
-  alt="PIR Panel"
-  width={800}
-  height={600}
-  priority={false}
-/>
+// Client Logo
+<Image src="/images/clients/amul.png" alt="Amul" />
+
+// Product Image
+<Image src="/images/products/sandwich-panels/pir-panel/hero.jpg" alt="PIR Panel" />
+
+// Industry Image
+<Image src="/images/industries/pharmaceuticals/pharma-cleanroom.jpg" alt="Pharma" />
+
+// Page-specific Image
+<Image src="/images/pages/home/hero/main-hero.jpg" alt="Hero" />
 ```
 
-## 📋 Required Images Checklist
+---
 
-### Homepage
-- [ ] Hero background image
-- [ ] Featured product images (4)
-- [ ] Solution icons or images (6)
-- [ ] Industry category images (4)
+## ✅ Checklist for Adding New Images
 
-### About Us
-- [ ] Company hero image
-- [ ] Team member photos
-- [ ] Milestone/timeline images
-- [ ] Office/facility photos
+- [ ] Image is optimized (compressed, correct format)
+- [ ] Placed in the correct folder
+- [ ] Named using kebab-case
+- [ ] Appropriate size for use case
+- [ ] Has WebP alternative for web optimization (optional)
+- [ ] Alt text is descriptive and SEO-friendly
 
-### Products (per product)
-- [ ] Hero/main image
-- [ ] 2-3 detail images
-- [ ] Installation image
-- [ ] Thumbnail
+---
 
-### Clients
-- [ ] All client logos (PNG, transparent)
+## 🗂️ Current Image Count
 
-### General
-- [ ] Company logo (color, white, dark versions)
-- [ ] Favicon
-- [ ] OpenGraph image
-- [ ] 404 page image
+| Folder | Count |
+|--------|-------|
+| clients/ | 107 |
+| brand/logos/ | 14 |
+| brand/favicons/ | 3 |
+| solutions/peb/ | 17 |
+| industries/ | 2 |
+| (other folders) | Ready for images |
 
+---
+
+*Last updated: December 2024*

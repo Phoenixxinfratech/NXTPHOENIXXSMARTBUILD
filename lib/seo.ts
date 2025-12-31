@@ -178,3 +178,4 @@ export function truncateDescription(text: string, maxLength = 155): string {
   return stripped.slice(0, maxLength - 3).trim() + '...';
 }
 
+

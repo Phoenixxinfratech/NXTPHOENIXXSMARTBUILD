@@ -8,18 +8,18 @@ import { FAQBlock } from '@/components/blocks/faq-block';
 
 // Homepage client logos
 const homepageClients = [
-  { name: 'Coca-Cola', logo: '/images/homepage-clients/coca-cola.jpg' },
-  { name: 'Hershey', logo: '/images/homepage-clients/hershey.webp' },
-  { name: 'Cargill', logo: '/images/homepage-clients/cargill.jpg' },
-  { name: 'Bunge', logo: '/images/homepage-clients/bunge.jpg' },
-  { name: 'Balaji Wafers', logo: '/images/homepage-clients/balaji.jpg' },
-  { name: 'Sarhad Dairy', logo: '/images/homepage-clients/sarhad-dairy.png' },
-  { name: 'Hotel Fern', logo: '/images/homepage-clients/hotel-fern.png' },
-  { name: 'Info City Club', logo: '/images/homepage-clients/info-city.png' },
-  { name: 'Uflex', logo: '/images/homepage-clients/uflex.png' },
-  { name: 'IFGL', logo: '/images/homepage-clients/ifgl.png' },
-  { name: 'Vyara Tiles', logo: '/images/homepage-clients/vyara-tiles.png' },
-  { name: 'SKF Bearings', logo: '/images/homepage-clients/skf.png' },
+  { name: 'Coca-Cola', logo: '/images/clients/coca-cola.jpg' },
+  { name: 'Hershey', logo: '/images/clients/hershey.webp' },
+  { name: 'Cargill', logo: '/images/clients/cargill.jpg' },
+  { name: 'Bunge', logo: '/images/clients/bunge.jpg' },
+  { name: 'Balaji Wafers', logo: '/images/clients/balaji.jpg' },
+  { name: 'Sarhad Dairy', logo: '/images/clients/sarhad-dairy.png' },
+  { name: 'Hotel Fern', logo: '/images/clients/hotel-fern.png' },
+  { name: 'Info City Club', logo: '/images/clients/info-city-club.png' },
+  { name: 'Uflex', logo: '/images/clients/Uflex.png' },
+  { name: 'IFGL', logo: '/images/clients/ifgl.png' },
+  { name: 'Vyara Tiles', logo: '/images/clients/vyara-tiles.png' },
+  { name: 'SKF Bearings', logo: '/images/clients/SKF-01.png' },
 ];
 
 export const metadata: Metadata = {

@@ -55,7 +55,7 @@ export function Footer() {
           <div className="lg:col-span-4">
             <Link href="/" className="inline-block">
               <Image
-                src="/images/logo-white.png"
+                src="/images/brand/logos/logo-white.png"
                 alt="PHOENIXX"
                 width={200}
                 height={50}

@@ -58,3 +58,4 @@ export function FAQCompact({ faqs }: { faqs: FAQ[] }) {
   );
 }
 
+
