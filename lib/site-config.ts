@@ -35,7 +35,7 @@ export const siteConfig = {
     linkedin: 'https://linkedin.com/company/phoenixxsmartbuild',
     facebook: 'https://facebook.com/phoenixxsmartbuild',
     instagram: 'https://instagram.com/phoenixxsmartbuild',
-    googleBusiness: '#',
+    googleBusiness: 'https://g.page/phoenixxsmartbuild',
   },
   contact: {
     email: 'projects@phoenixxsmartbuild.com',
@@ -46,7 +46,7 @@ export const siteConfig = {
   company: {
     name: 'PHOENIXX SmartBuild',
     legalName: 'NXT PHOENIXX SMARTBUILD LLP',
-    foundingDate: '1999',
+    foundingDate: '2013',
   },
 } as const;
 

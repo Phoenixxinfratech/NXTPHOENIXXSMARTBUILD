@@ -1,0 +1,22 @@
+{
+  "name": "PHOENIXX SmartBuild",
+  "short_name": "PHOENIXX",
+  "description": "Smart, Sustainable Infrastructure Built for Performance",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4949e9",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ]
+}
+

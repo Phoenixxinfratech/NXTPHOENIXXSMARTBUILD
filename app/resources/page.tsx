@@ -265,7 +265,7 @@ export default function ResourcesPage() {
             </p>
             <Link
               href="/contact-us"
-              className="mt-8 inline-flex items-center justify-center gap-2 rounded-lg bg-white px-8 py-4 font-semibold text-blue-600 shadow-lg hover:shadow-xl transition-all"
+              className="mt-8 btn-white"
             >
               Contact Us
             </Link>

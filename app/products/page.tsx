@@ -62,7 +62,7 @@ const productCategories = [
 
 const stats = [
   { value: '500+', label: 'Projects Delivered' },
-  { value: '25+', label: 'Years Experience' },
+  { value: '12+', label: 'Years Experience' },
   { value: '100%', label: 'Quality Assured' },
   { value: '24/7', label: 'Support Available' },
 ];
@@ -115,13 +115,13 @@ export default function ProductsPage() {
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link
                   href="/get-a-quote"
-                  className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-blue-600 to-emerald-600 px-6 py-3 font-semibold text-white shadow-lg hover:shadow-xl transition-all"
+                  className="btn-primary-sm"
                 >
                   Request Technical Quote
                 </Link>
                 <Link
                   href="/resources/technical-sheet"
-                  className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/5 px-6 py-3 font-semibold text-white hover:bg-white/10 transition-all"
+                  className="btn-secondary-sm !border-white/20 !text-white hover:!bg-white/10"
                 >
                   Download Datasheets
                 </Link>
@@ -274,13 +274,13 @@ export default function ProductsPage() {
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/get-a-quote"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-8 py-4 font-semibold text-blue-600 shadow-lg hover:shadow-xl transition-all"
+                className="btn-white"
               >
                 Get Custom Quote
               </Link>
               <Link
                 href="/contact-us"
-                className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-white/30 px-8 py-4 font-semibold text-white hover:bg-white/10 transition-all"
+                className="btn-secondary"
               >
                 Talk to an Expert
               </Link>

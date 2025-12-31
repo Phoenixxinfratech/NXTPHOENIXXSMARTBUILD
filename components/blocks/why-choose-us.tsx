@@ -1,7 +1,7 @@
 const features = [
   {
     title: 'Industry Expertise',
-    description: 'Over 25 years of experience serving diverse industries with specialized solutions.',
+    description: 'Over 12 years of experience serving diverse industries with specialized solutions.',
     icon: '🏆',
   },
   {

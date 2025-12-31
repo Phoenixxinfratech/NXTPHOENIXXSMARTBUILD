@@ -23,18 +23,18 @@ const clientsByIndustry = [
     gradient: 'from-amber-500 to-orange-600',
     showLogos: true,
     clients: [
+      { name: 'Coca-Cola', logo: '/images/clients/coca-cola.jpg' },
       { name: 'Amul Chocolate', logo: '/images/clients/amul.png' },
       { name: 'Hershey', logo: '/images/clients/hershey.webp' },
+      { name: 'Cargill Foods', logo: '/images/clients/cargill.jpg' },
+      { name: 'Bunge India', logo: '/images/clients/bunge.jpg' },
+      { name: 'Agro Tech Foods', logo: '/images/clients/agrotech.jpg' },
       { name: 'Balaji Wafers', logo: '/images/clients/balaji-wafers.png' },
+      { name: 'Tirupati Balaji Foods', logo: null },
       { name: 'Iscon Balaji Foods', logo: '/images/clients/iscon-balaji.jpg' },
+      { name: 'Makson (Confectionery)', logo: '/images/clients/makson.png' },
       { name: 'Schmitten Chocolates', logo: '/images/clients/schmitten.png' },
       { name: 'Hot & Spicy Namkeen', logo: '/images/clients/hot-spicy.png' },
-      { name: 'Coca-Cola', logo: null },
-      { name: 'Cargill Foods', logo: null },
-      { name: 'Bunge India', logo: null },
-      { name: 'Agro Tech Foods', logo: null },
-      { name: 'Tirupati Balaji Foods', logo: null },
-      { name: 'Makson (Confectionery)', logo: null },
       { name: 'Aero Roast Coffee', logo: null },
       { name: 'Telaa Coffee & Tea', logo: null },
     ],
@@ -46,12 +46,12 @@ const clientsByIndustry = [
     showLogos: true,
     clients: [
       { name: 'Amul Dairy', logo: '/images/clients/amul.png' },
-      { name: 'Mother Dairy', logo: '/images/clients/mother-dairy.jpg' },
+      { name: 'Mother Dairy', logo: null },
       { name: 'NDDB', logo: '/images/clients/nddb.jpg' },
+      { name: 'Banas Dairy', logo: '/images/clients/banas-dairy.png' },
       { name: 'Sumul Dairy', logo: '/images/clients/sumul-dairy.png' },
-      { name: 'Banas Dairy', logo: null },
-      { name: 'Sarhad Dairy', logo: null },
-      { name: 'ABC Food Process', logo: null },
+      { name: 'Sarhad Dairy', logo: '/images/clients/sarhad-dairy.png' },
+      { name: 'ABC Food Process', logo: '/images/clients/abc-food.jpg' },
     ],
   },
   {
@@ -60,11 +60,11 @@ const clientsByIndustry = [
     gradient: 'from-violet-500 to-purple-600',
     showLogos: true,
     clients: [
-      { name: 'Fortune Landmark', logo: null },
-      { name: 'Hotel Fern – Rajkot', logo: null },
-      { name: 'West Inn Hotel', logo: null },
-      { name: 'United Yogi LLP', logo: null },
-      { name: 'Info City Club & Resort', logo: null },
+      { name: 'Fortune Landmark', logo: '/images/clients/fortune-landmark.png' },
+      { name: 'Hotel Fern – Rajkot', logo: '/images/clients/hotel-fern.png' },
+      { name: 'West Inn Hotel', logo: '/images/clients/west-inn.png' },
+      { name: 'United Yogi LLP', logo: '/images/clients/united-yogi.jpg' },
+      { name: 'Info City Club & Resort', logo: '/images/clients/info-city-club.png' },
     ],
   },
   {
@@ -73,17 +73,17 @@ const clientsByIndustry = [
     gradient: 'from-rose-500 to-pink-600',
     showLogos: true,
     clients: [
-      { name: 'Torrent Pharmaceuticals', logo: '/images/clients/torrent-pharma.png' },
+      { name: 'Torrent Pharmaceuticals', logo: null },
       { name: 'Intas Pharmaceuticals', logo: '/images/clients/intas.png' },
+      { name: 'Amneal Pharmaceuticals', logo: '/images/clients/amneal.jpg' },
       { name: 'Claris Life Sciences', logo: '/images/clients/claris.png' },
+      { name: 'Dishman Carbogen Amcis', logo: '/images/clients/dishman.jpg' },
       { name: 'Lincoln Pharmaceuticals', logo: '/images/clients/lincoln.png' },
-      { name: 'Amneal Pharmaceuticals', logo: null },
-      { name: 'Dishman Carbogen Amcis', logo: null },
-      { name: 'Makson Pharmaceuticals', logo: null },
-      { name: 'Renown Pharmaceuticals', logo: null },
+      { name: 'Makson Pharmaceuticals', logo: '/images/clients/makson.png' },
+      { name: 'Renown Pharmaceuticals', logo: '/images/clients/renown.jpg' },
       { name: 'Mahalaxmi Pharmaceuticals', logo: null },
-      { name: 'Pellucid Lifesciences', logo: null },
-      { name: 'Brichem Sciences', logo: null },
+      { name: 'Pellucid Lifesciences', logo: '/images/clients/pellucid.jpg' },
+      { name: 'Brichem Sciences', logo: '/images/clients/brichem.webp' },
     ],
   },
   {
@@ -92,16 +92,16 @@ const clientsByIndustry = [
     gradient: 'from-slate-500 to-zinc-600',
     showLogos: true,
     clients: [
-      { name: 'Uflex Ltd.', logo: '/images/clients/uflex.png' },
+      { name: 'Uflex Ltd.', logo: '/images/clients/Uflex.png' },
       { name: 'PGP Glass', logo: '/images/clients/pgp-glass.png' },
-      { name: 'Kalpataru Doors', logo: '/images/clients/kalpataru.png' },
-      { name: 'IFGL Refractories', logo: null },
-      { name: 'Jaquar Sanitaryware', logo: null },
-      { name: 'Vyara Tiles Limited', logo: null },
+      { name: 'IFGL Refractories', logo: '/images/clients/ifgl.png' },
+      { name: 'Jaquar Sanitaryware', logo: '/images/clients/jaquar.png' },
+      { name: 'Vyara Tiles Limited', logo: '/images/clients/vyara-tiles.png' },
       { name: 'Prabhu Krupa Packaging', logo: null },
       { name: 'Aqua Machineries', logo: null },
-      { name: 'Aaiswarya Dyeing Mills', logo: null },
-      { name: 'Denasa Buildcon', logo: null },
+      { name: 'Aaiswarya Dyeing Mills', logo: '/images/clients/aaiswarya.png' },
+      { name: 'Denasa Buildcon', logo: '/images/clients/denasa.webp' },
+      { name: 'Kalpataru Doors', logo: '/images/clients/kalpataru.png' },
     ],
   },
   {
@@ -110,13 +110,13 @@ const clientsByIndustry = [
     gradient: 'from-red-500 to-rose-600',
     showLogos: true,
     clients: [
+      { name: 'Ford Motors', logo: '/images/clients/ford.png' },
       { name: 'SKF Bearings', logo: '/images/clients/skf.png' },
+      { name: 'Marelli Motherson', logo: '/images/clients/marelli.png' },
+      { name: 'L&T', logo: '/images/clients/lnt.png' },
       { name: 'Hager Electricals', logo: '/images/clients/hager.jpg' },
       { name: 'Rotomotive Powerdrives', logo: '/images/clients/rotomotive.jpg' },
-      { name: 'Ford Motors', logo: null },
-      { name: 'Marelli Motherson', logo: null },
-      { name: 'L&T', logo: null },
-      { name: 'Rotomag', logo: null },
+      { name: 'Rotomag', logo: '/images/clients/rotomag.png' },
     ],
   },
   {
@@ -153,18 +153,18 @@ const clientsByIndustry = [
 
 // Featured clients for the top section - clients with logos
 const featuredClients = [
+  { name: 'Coca-Cola', logo: '/images/clients/coca-cola.jpg' },
   { name: 'Amul', logo: '/images/clients/amul.png' },
-  { name: 'Mother Dairy', logo: '/images/clients/mother-dairy.jpg' },
-  { name: 'Torrent Pharma', logo: '/images/clients/torrent-pharma.png' },
   { name: 'Intas Pharma', logo: '/images/clients/intas.png' },
+  { name: 'Ford Motors', logo: '/images/clients/ford.png' },
   { name: 'SKF Bearings', logo: '/images/clients/skf.png' },
-  { name: 'Uflex', logo: '/images/clients/uflex.png' },
+  { name: 'L&T', logo: '/images/clients/lnt.png' },
+  { name: 'Uflex', logo: '/images/clients/Uflex.png' },
   { name: 'Hershey', logo: '/images/clients/hershey.webp' },
   { name: 'NDDB', logo: '/images/clients/nddb.jpg' },
   { name: 'Balaji Wafers', logo: '/images/clients/balaji-wafers.png' },
   { name: 'Claris Life Sciences', logo: '/images/clients/claris.png' },
   { name: 'Schmitten', logo: '/images/clients/schmitten.png' },
-  { name: 'Sumul Dairy', logo: '/images/clients/sumul-dairy.png' },
 ];
 
 const testimonials = [
@@ -239,7 +239,7 @@ export default function ClientelePage() {
                 <p className="mt-2 text-sm text-slate-600">Industries Served</p>
               </div>
               <div>
-                <p className="text-4xl font-bold text-blue-600">25+</p>
+                <p className="text-4xl font-bold text-blue-600">12+</p>
                 <p className="mt-2 text-sm text-slate-600">Years of Trust</p>
               </div>
               <div>
@@ -250,7 +250,7 @@ export default function ClientelePage() {
           </div>
         </section>
 
-        {/* Featured Client Logos */}
+        {/* Featured Client Logos - 1.5x size (w-28 h-28 instead of w-20 h-20) */}
         <section className="section-padding bg-white">
           <div className="container-custom">
             <h2 className="text-3xl font-bold text-center mb-4 text-slate-900">Trusted By Industry Leaders</h2>
@@ -258,19 +258,19 @@ export default function ClientelePage() {
               Leading manufacturers, processors, and infrastructure developers rely on PHOENIXX 
               for mission-critical projects where performance, compliance, and timelines matter.
             </p>
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
               {featuredClients.map((client) => (
                 <div
                   key={client.name}
-                  className="group flex flex-col items-center gap-3 p-4 rounded-xl border border-slate-200 bg-white hover:shadow-lg hover:border-blue-300 transition-all duration-300"
+                  className="group flex flex-col items-center gap-4 p-5 rounded-xl border border-slate-200 bg-white hover:shadow-lg hover:border-blue-300 transition-all duration-300"
                 >
-                  {/* Logo */}
-                  <div className="w-20 h-20 rounded-xl bg-white flex items-center justify-center overflow-hidden p-2">
+                  {/* Logo - 1.5x size: w-28 h-28 (was w-20 h-20) */}
+                  <div className="w-28 h-28 rounded-xl bg-white flex items-center justify-center overflow-hidden p-3">
                     <Image
                       src={client.logo}
                       alt={`${client.name} logo`}
-                      width={72}
-                      height={72}
+                      width={100}
+                      height={100}
                       className="object-contain w-full h-full grayscale group-hover:grayscale-0 transition-all duration-300"
                     />
                   </div>
@@ -307,24 +307,24 @@ export default function ClientelePage() {
                   {/* Clients Grid */}
                   <div className="p-6">
                     {industry.showLogos ? (
-                      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+                      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-5">
                         {industry.clients.map((client) => (
                           <div
                             key={client.name}
                             className="group flex flex-col items-center gap-3 p-4 rounded-xl border border-slate-200 bg-white hover:shadow-md hover:border-blue-300 transition-all duration-200"
                           >
-                            {/* Logo or Placeholder */}
-                            <div className={`w-16 h-16 rounded-xl flex items-center justify-center overflow-hidden ${client.logo ? 'bg-white p-1' : `bg-gradient-to-br ${industry.gradient}`}`}>
+                            {/* Logo or Placeholder - 1.5x size: w-24 h-24 (was w-16 h-16) */}
+                            <div className={`w-24 h-24 rounded-xl flex items-center justify-center overflow-hidden ${client.logo ? 'bg-white p-2' : `bg-gradient-to-br ${industry.gradient}`}`}>
                               {client.logo ? (
                                 <Image
                                   src={client.logo}
                                   alt={`${client.name} logo`}
-                                  width={56}
-                                  height={56}
+                                  width={84}
+                                  height={84}
                                   className="object-contain w-full h-full grayscale group-hover:grayscale-0 transition-all duration-300"
                                 />
                               ) : (
-                                <span className="text-2xl font-bold text-white">
+                                <span className="text-3xl font-bold text-white">
                                   {client.name.charAt(0)}
                                 </span>
                               )}
@@ -336,7 +336,7 @@ export default function ClientelePage() {
                         ))}
                         {/* And many more */}
                         <div className="flex flex-col items-center justify-center gap-2 p-4 rounded-xl border-2 border-dashed border-slate-300 bg-slate-50/50">
-                          <span className="text-2xl text-slate-400">+</span>
+                          <span className="text-3xl text-slate-400">+</span>
                           <span className="text-xs font-medium text-slate-500 text-center">
                             And many more...
                           </span>
@@ -397,13 +397,13 @@ export default function ClientelePage() {
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
               <Link
                 href="/get-a-quote"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-white text-blue-600 px-8 py-4 font-semibold hover:bg-white/90 shadow-lg hover:shadow-xl transition-all"
+                className="btn-white"
               >
                 Get a Quote
               </Link>
               <Link
                 href="/resources/project-gallery"
-                className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-white/30 bg-transparent px-8 py-4 font-semibold hover:bg-white/10 transition-all"
+                className="btn-secondary"
               >
                 View Projects
               </Link>

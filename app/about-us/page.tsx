@@ -158,7 +158,7 @@ export default function AboutPage() {
               <div className="mt-10">
                 <a
                   href="#who-we-are"
-                  className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-blue-600 to-emerald-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-blue-500/25 transition-all hover:shadow-xl hover:shadow-blue-500/30"
+                  className="btn-primary"
                 >
                   Explore Our Journey
                   <svg className="w-5 h-5 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -446,13 +446,13 @@ export default function AboutPage() {
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact-us"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-blue-600 to-emerald-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-blue-500/25 transition-all hover:shadow-xl hover:shadow-blue-500/30"
+                className="btn-primary"
               >
                 Contact Us
               </Link>
               <Link
                 href="/resources/project-gallery"
-                className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/20 bg-white/5 px-8 py-4 text-base font-semibold text-white transition-all hover:bg-white/10"
+                className="btn-secondary"
               >
                 Explore Projects
               </Link>

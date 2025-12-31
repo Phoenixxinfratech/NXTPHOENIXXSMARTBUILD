@@ -1,9 +1,26 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Metadata } from 'next';
 import { AISummaryBlock } from '@/components/ai/ai-summary-block';
 import { JsonLd } from '@/components/seo/json-ld';
 import { generateOrganizationSchema, generateFAQSchema } from '@/lib/schema';
 import { FAQBlock } from '@/components/blocks/faq-block';
+
+// Homepage client logos
+const homepageClients = [
+  { name: 'Coca-Cola', logo: '/images/homepage-clients/coca-cola.jpg' },
+  { name: 'Hershey', logo: '/images/homepage-clients/hershey.webp' },
+  { name: 'Cargill', logo: '/images/homepage-clients/cargill.jpg' },
+  { name: 'Bunge', logo: '/images/homepage-clients/bunge.jpg' },
+  { name: 'Balaji Wafers', logo: '/images/homepage-clients/balaji.jpg' },
+  { name: 'Sarhad Dairy', logo: '/images/homepage-clients/sarhad-dairy.png' },
+  { name: 'Hotel Fern', logo: '/images/homepage-clients/hotel-fern.png' },
+  { name: 'Info City Club', logo: '/images/homepage-clients/info-city.png' },
+  { name: 'Uflex', logo: '/images/homepage-clients/uflex.png' },
+  { name: 'IFGL', logo: '/images/homepage-clients/ifgl.png' },
+  { name: 'Vyara Tiles', logo: '/images/homepage-clients/vyara-tiles.png' },
+  { name: 'SKF Bearings', logo: '/images/homepage-clients/skf.png' },
+];
 
 export const metadata: Metadata = {
   title: 'PHOENIXX | Smart, Sustainable Infrastructure Built for Performance',
@@ -231,7 +248,7 @@ export default function HomePage() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
-              Engineering Excellence Since 1999
+              Engineering Excellence Since 2013
             </div>
 
             {/* Main Heading */}
@@ -256,7 +273,7 @@ export default function HomePage() {
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <Link
                 href="/get-a-quote"
-                className="group inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-blue-600 to-emerald-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-blue-500/25 transition-all hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5"
+                className="btn-primary group"
               >
                 Request a Free Technical Quote
                 <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -265,7 +282,7 @@ export default function HomePage() {
               </Link>
               <Link
                 href="/solutions"
-                className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-700 bg-slate-800/50 px-8 py-4 text-base font-semibold text-white transition-all hover:bg-slate-800 hover:border-slate-600"
+                className="btn-secondary"
               >
                 Explore Our Solutions
               </Link>
@@ -274,7 +291,7 @@ export default function HomePage() {
             {/* Quick Stats */}
             <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
-                { value: '25+', label: 'Years Experience' },
+                { value: '12+', label: 'Years Experience' },
                 { value: '500+', label: 'Projects Delivered' },
                 { value: '8+', label: 'Industries Served' },
                 { value: '100%', label: 'On-Time Delivery' },
@@ -307,12 +324,18 @@ export default function HomePage() {
 
           {/* Client Logos Grid */}
           <div className="grid grid-cols-3 md:grid-cols-6 gap-6 md:gap-8 items-center justify-items-center">
-            {Array.from({ length: 12 }).map((_, idx) => (
+            {homepageClients.map((client) => (
               <div
-                key={idx}
-                className="w-full h-16 md:h-20 rounded-lg bg-white border border-slate-200 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 hover:shadow-md"
+                key={client.name}
+                className="group w-full h-20 md:h-24 rounded-xl bg-white border border-slate-200 flex items-center justify-center p-4 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 hover:shadow-lg hover:border-blue-300"
               >
-                <span className="text-slate-400 text-sm font-medium">Client Logo</span>
+                <Image
+                  src={client.logo}
+                  alt={`${client.name} logo`}
+                  width={120}
+                  height={60}
+                  className="object-contain w-full h-full"
+                />
               </div>
             ))}
           </div>
@@ -424,7 +447,7 @@ export default function HomePage() {
           <div className="mt-12 text-center">
             <Link
               href="/contact-us"
-              className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-emerald-600 to-teal-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-emerald-500/25 transition-all hover:shadow-xl hover:shadow-emerald-500/30"
+              className="btn-primary"
             >
               Schedule a Technical Consultation
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -511,7 +534,7 @@ export default function HomePage() {
           <div className="mt-12 text-center">
             <Link
               href="/get-a-quote"
-              className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-violet-600 to-purple-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-violet-500/25 transition-all hover:shadow-xl hover:shadow-violet-500/30"
+              className="btn-primary"
             >
               Start Your Project with PHOENIXX
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -706,7 +729,7 @@ export default function HomePage() {
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/get-a-quote"
-              className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-blue-600 to-emerald-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-blue-500/25 transition-all hover:shadow-xl hover:shadow-blue-500/30"
+              className="btn-primary"
             >
               Get a Free Quote
             </Link>

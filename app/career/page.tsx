@@ -102,7 +102,7 @@ export default function CareerPage() {
               <div className="mt-8">
                 <a
                   href="#openings"
-                  className="inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 font-semibold text-purple-700 shadow-lg hover:shadow-xl transition-all"
+                  className="btn-white !text-purple-700"
                 >
                   View Open Positions
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -263,7 +263,7 @@ export default function CareerPage() {
             <div className="mt-8">
               <a
                 href="#openings"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-8 py-4 font-semibold text-purple-600 shadow-lg hover:shadow-xl transition-all"
+                className="btn-white !text-purple-600"
               >
                 Explore Opportunities
               </a>

@@ -303,13 +303,13 @@ export default function IndustriesPage() {
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact-us"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-8 py-4 font-semibold text-orange-600 shadow-lg hover:shadow-xl transition-all"
+                className="btn-white !text-orange-600"
               >
                 Contact Us
               </Link>
               <Link
                 href="/get-a-quote"
-                className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-white/30 px-8 py-4 font-semibold text-white hover:bg-white/10 transition-all"
+                className="btn-secondary"
               >
                 Get a Quote
               </Link>
