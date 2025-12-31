@@ -3,6 +3,10 @@ import { Inter } from 'next/font/google';
 import '@/styles/globals.css';
 import { cn } from '@/lib/utils';
 import { siteConfig } from '@/lib/site-config';
+import { AnalyticsProvider } from '@/components/tracking/analytics';
+import { WhatsAppButton } from '@/components/ui/whatsapp-button';
+import { CookieConsent } from '@/components/ui/cookie-consent';
+import { ImageProtection } from '@/components/ui/image-protection';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -13,7 +17,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: siteConfig.name,
+    default: `${siteConfig.name} | ${siteConfig.tagline}`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -34,9 +38,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    locale: 'en_US',
+    locale: 'en_IN',
     url: siteConfig.url,
-    title: siteConfig.name,
+    title: `${siteConfig.name} | ${siteConfig.tagline}`,
     description: siteConfig.description,
     siteName: siteConfig.name,
     images: [
@@ -50,7 +54,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: siteConfig.name,
+    title: `${siteConfig.name} | ${siteConfig.tagline}`,
     description: siteConfig.description,
     images: [siteConfig.ogImage],
     creator: siteConfig.twitterHandle,
@@ -64,6 +68,11 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png',
   },
   manifest: '/site.webmanifest',
+  verification: {
+    // Add your verification codes here
+    // google: 'YOUR_GOOGLE_VERIFICATION_CODE',
+    // other: { 'msvalidate.01': 'YOUR_BING_VERIFICATION_CODE' },
+  },
 };
 
 export const viewport: Viewport = {
@@ -87,6 +96,14 @@ export default function RootLayout({
         {/* Preconnect to external resources */}
         <link rel="preconnect" href="https://cdn.sanity.io" />
         <link rel="dns-prefetch" href="https://cdn.sanity.io" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        
+        {/* Geo and business verification meta tags */}
+        <meta name="geo.region" content="IN-GJ" />
+        <meta name="geo.placename" content="Ahmedabad" />
+        <meta name="geo.position" content="23.0225;72.5714" />
+        <meta name="ICBM" content="23.0225, 72.5714" />
       </head>
       <body
         className={cn(
@@ -94,9 +111,21 @@ export default function RootLayout({
           inter.variable
         )}
       >
+        {/* Analytics & Tracking */}
+        <AnalyticsProvider />
+        
+        {/* Image Protection */}
+        <ImageProtection />
+        
+        {/* Main Content */}
         {children}
+        
+        {/* Floating WhatsApp Button */}
+        <WhatsAppButton />
+        
+        {/* Cookie Consent Banner */}
+        <CookieConsent />
       </body>
     </html>
   );
 }
-

@@ -1,9 +1,70 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
+
+// Industry images mapping
+const industryImages: Record<string, string[]> = {
+  'pharma-chemical': [
+    '/images/industries/pharmaceuticals/cleanroom.jpg',
+    '/images/industries/pharmaceuticals/pharmaceutical-cleanroom-components-494_L.jpg',
+    '/images/industries/pharmaceuticals/sterile_pharma_manufacturing_discovery_450x300.jpg',
+  ],
+  'food-processing': [
+    '/images/industries/food-processing/Food-processing-industries-phoenixx-work.jpg',
+    '/images/industries/food-processing/Food-processing .jpg',
+  ],
+  'dairy': [
+    '/images/industries/dairy/epub_dairy-processing-equipment-milk-tanks-facility-plant_1200x635.jpg',
+    '/images/industries/dairy/Sanitary-Blending-Tank-1-1-823x1024.webp',
+  ],
+  'hospitality': [
+    '/images/industries/hospitality/Hotel-design.webp',
+    '/images/industries/hospitality/7d5574129618065.616eeb838676c.jpg',
+  ],
+  'automotive': [
+    '/images/industries/automotive/Assembly-Line-Best-Practices.jpg',
+  ],
+  'textile': [
+    '/images/industries/textile/machine-woven-fabric-2932647_1280.jpg',
+    '/images/industries/textile/WeavingItematech_A9500-2.jpg',
+  ],
+  'electronics': [
+    '/images/industries/electronics/smt-assembly-banner-image.webp',
+    '/images/industries/electronics/PCB-Assembly-Line.jpg',
+  ],
+  'chemical': [
+    '/images/industries/chemical/Chemical-Reactor-Manufacturing-Conventional-Jacket-Process-Reactors.jpg',
+    '/images/industries/chemical/FCC-oil-refinery-project_jpg.jpg',
+    '/images/industries/chemical/hero-29-1200w.jpg',
+  ],
+  'semiconductor': [
+    '/images/industries/semiconductor/image-5-1024x576.png',
+    '/images/industries/semiconductor/semiconductor-cleanroom-1080x675.jpg',
+  ],
+  'healthcare': [
+    '/images/industries/healthcare/19005_000_N57_medium-1.jpg',
+    '/images/industries/healthcare/IR.webp',
+  ],
+  'biotechnology': [
+    '/images/industries/biotechnology/biotechnology-lab-design.webp',
+    '/images/industries/biotechnology/Amgen-biotechnology-lab.webp',
+  ],
+  'medical-devices': [
+    '/images/industries/medical-devices/sterile_pharma_manufacturing_discovery_450x300.jpg',
+    '/images/industries/medical-devices/Medical-Device-Manufacturing-Clean-Room-1.jpg',
+  ],
+  'research-development': [
+    '/images/industries/research-development/research_development.jpg',
+    '/images/industries/research-development/rd_banniere_photo1-1800x1200.jpg',
+  ],
+  'solar-panel': [
+    '/images/industries/solar-panel/AP23362256909312-crop.webp',
+  ],
+};
 
 const industriesData: Record<string, {
   title: string;
@@ -255,8 +316,30 @@ export default async function IndustryDetailPage({ params }: Props) {
           </div>
         </section>
 
+        {/* Industry Gallery */}
+        {industryImages[slug] && industryImages[slug].length > 0 && (
+          <section className="section-padding bg-white">
+            <div className="container-custom">
+              <h2 className="text-3xl font-bold text-slate-900 mb-8">Industry Projects</h2>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {industryImages[slug].map((img, idx) => (
+                  <div key={idx} className="relative aspect-[4/3] rounded-xl overflow-hidden group shadow-lg">
+                    <Image
+                      src={img}
+                      alt={`${data.title} - Project ${idx + 1}`}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Requirements */}
-        <section className="section-padding bg-white">
+        <section className="section-padding bg-slate-50">
           <div className="container-custom">
             <h2 className="text-3xl font-bold text-slate-900 mb-12">Industry Requirements</h2>
             <div className="grid gap-8 md:grid-cols-2">

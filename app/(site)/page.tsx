@@ -36,6 +36,7 @@ const products = [
     details: 'Includes PIR Panels, Sandwich PUF Panels, Roofing PUF Panels, and Wall & Ceiling Panels—ideal for energy-efficient industrial and commercial buildings.',
     href: '/products/sandwich-panels',
     icon: '🧱',
+    image: '/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL1.jpg',
   },
   {
     title: 'Industrial & Specialty Doors',
@@ -43,6 +44,7 @@ const products = [
     details: 'Includes Cleanroom Doors, Fire-Rated Emergency Exit Doors, and Fire-Rated Multipurpose Doors, compliant with relevant standards.',
     href: '/products/doors',
     icon: '🚪',
+    image: '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-1.jpg',
   },
   {
     title: 'Cold Chain Solutions',
@@ -50,6 +52,7 @@ const products = [
     details: 'Cold Rooms, Freezers, Ripening Chambers, and specialized storage solutions for fruits, dairy, seeds, pharmaceuticals, and frozen products.',
     href: '/solutions/cold-storage-construction',
     icon: '❄️',
+    image: '/images/solutions/cold-storage/Cold-Storage-Warehouse-manufacture-1.jpg',
   },
   {
     title: 'Cleanroom Solutions',
@@ -57,6 +60,7 @@ const products = [
     details: 'Includes partitions, doors, false ceilings, and compatible flooring systems such as Epoxy, PU, and Rubber flooring.',
     href: '/products/cleanroom-solutions',
     icon: '🔬',
+    image: '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat1.jpg',
   },
 ];
 
@@ -67,36 +71,35 @@ const solutions = [
     description: 'Design, supply, and construction of robust steel structures for warehouses, factories, workshops, and multi-storey facilities—optimized for speed, cost efficiency, and strength.',
     href: '/solutions/peb',
     icon: '🏭',
+    image: '/images/solutions/peb/Pre-Engineering-Building-Ahmedabad-Phoenixx-infratech-projects15.jpg',
   },
   {
-    title: 'PEB Erection Services',
-    description: 'Specialized erection teams and equipment ensure safe, accurate, and time-bound assembly of PEB structures with minimal site disruption.',
-    href: '/solutions/peb',
-    icon: '🏗️',
-  },
-  {
-    title: 'False Ceiling Systems',
+    title: 'Ceiling Systems',
     description: 'Walkable and non-walkable ceiling systems designed for accessibility, acoustic control, and clean aesthetics—suitable for offices, industries, and cleanrooms.',
     href: '/solutions/walkable-ceiling-systems',
     icon: '📐',
+    image: '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-2.jpg',
   },
   {
     title: 'Partition Solutions',
     description: 'Modular and insulated partition systems for cleanrooms, offices, and industrial spaces—offering flexibility, thermal control, and fast installation.',
     href: '/solutions/partition-solutions',
     icon: '🧱',
+    image: '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat2.jpg',
   },
   {
     title: 'Cold Storage Construction',
     description: 'Complete EPC execution of cold storage facilities including cold rooms, freezers, ripening chambers, and temperature-controlled warehouses.',
     href: '/solutions/cold-storage-construction',
     icon: '🧊',
+    image: '/images/solutions/cold-storage/Cold-Storage-Warehouse-manufacture-2.jpg',
   },
   {
     title: 'Turnkey Industrial EPC Projects',
     description: 'End-to-end project delivery—from concept and engineering to construction and commissioning—ensuring seamless coordination, cost control, and predictable outcomes.',
     href: '/contact-us',
     icon: '🔧',
+    image: '/images/solutions/peb/Pre-Engineering-Building-Ahmedabad-Phoenixx-infratech-projects17.jpg',
   },
 ];
 
@@ -153,7 +156,7 @@ const industries = [
   {
     category: 'Life Sciences & Healthcare',
     items: ['Pharmaceuticals', 'Biotechnology', 'Medical Devices', 'Hospitals'],
-    image: '/images/industries/life-sciences.jpg',
+    image: '/images/industries/pharmaceuticals/cleanroom.jpg',
     gradient: 'from-rose-500 via-red-500 to-pink-600',
     bgPattern: 'radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%)',
     icon: '💊',
@@ -162,7 +165,7 @@ const industries = [
   {
     category: 'Manufacturing & Engineering',
     items: ['Precision Engineering', 'Electronics', 'Automotive', 'Aerospace', 'Solar & Semiconductor'],
-    image: '/images/industries/manufacturing.jpg',
+    image: '/images/industries/automotive/Assembly-Line-Best-Practices.jpg',
     gradient: 'from-amber-500 via-orange-500 to-yellow-600',
     bgPattern: 'radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%)',
     icon: '⚙️',
@@ -171,7 +174,7 @@ const industries = [
   {
     category: 'Food & Hospitality',
     items: ['Food Processing', 'Dairy', 'Cold Chain', 'Hospitality'],
-    image: '/images/industries/food-hospitality.jpg',
+    image: '/images/industries/food-processing/Food-processing-industries-phoenixx-work.jpg',
     gradient: 'from-emerald-500 via-teal-500 to-cyan-600',
     bgPattern: 'radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 50%)',
     icon: '🍽️',
@@ -180,7 +183,7 @@ const industries = [
   {
     category: 'Industrial & Research Facilities',
     items: ['Textiles', 'Chemicals', 'R&D Facilities', 'Process Industries'],
-    image: '/images/industries/research.jpg',
+    image: '/images/industries/research-development/rd_banniere_photo1-1800x1200.jpg',
     gradient: 'from-blue-500 via-indigo-500 to-violet-600',
     bgPattern: 'radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 0%, transparent 50%)',
     icon: '🔬',
@@ -367,28 +370,37 @@ export default function HomePage() {
             {products.map((product) => (
               <div
                 key={product.title}
-                className="group relative rounded-2xl border border-slate-200 bg-white p-8 transition-all hover:shadow-xl hover:border-blue-200 hover:-translate-y-1"
+                className="group relative rounded-2xl border border-slate-200 bg-white overflow-hidden transition-all hover:shadow-xl hover:border-blue-200 hover:-translate-y-1"
               >
-                <div className="flex items-start gap-5">
-                  <span className="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-blue-100 to-emerald-100 flex items-center justify-center text-3xl">
+                {/* Product Image */}
+                <div className="relative h-48 w-full overflow-hidden">
+                  <Image
+                    src={product.image}
+                    alt={product.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                  <span className="absolute bottom-4 left-4 flex-shrink-0 w-12 h-12 rounded-xl bg-white/90 backdrop-blur-sm flex items-center justify-center text-2xl shadow-lg">
                     {product.icon}
                   </span>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
-                      {product.title}
-                    </h3>
-                    <p className="mt-2 text-slate-600">{product.description}</p>
-                    <p className="mt-2 text-sm text-slate-500">{product.details}</p>
-                    <Link
-                      href={product.href}
-                      className="mt-4 inline-flex items-center gap-1 text-blue-600 font-medium hover:gap-2 transition-all"
-                    >
-                      Learn More
-                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </Link>
-                  </div>
+                </div>
+                {/* Product Content */}
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                    {product.title}
+                  </h3>
+                  <p className="mt-2 text-slate-600">{product.description}</p>
+                  <p className="mt-2 text-sm text-slate-500 line-clamp-2">{product.details}</p>
+                  <Link
+                    href={product.href}
+                    className="mt-4 inline-flex items-center gap-1 text-blue-600 font-medium hover:gap-2 transition-all"
+                  >
+                    Learn More
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -429,17 +441,30 @@ export default function HomePage() {
               <Link
                 key={solution.title}
                 href={solution.href}
-                className="group relative rounded-xl border border-slate-200 bg-white p-6 transition-all hover:shadow-lg hover:border-emerald-200"
+                className="group relative rounded-xl border border-slate-200 bg-white overflow-hidden transition-all hover:shadow-lg hover:border-emerald-200"
               >
-                <span className="w-12 h-12 rounded-lg bg-gradient-to-br from-emerald-100 to-teal-100 flex items-center justify-center text-2xl mb-4">
-                  {solution.icon}
-                </span>
-                <h3 className="text-lg font-bold text-slate-900 group-hover:text-emerald-600 transition-colors">
-                  {solution.title}
-                </h3>
-                <p className="mt-2 text-sm text-slate-600 leading-relaxed">
-                  {solution.description}
-                </p>
+                {/* Solution Image */}
+                <div className="relative h-40 w-full overflow-hidden">
+                  <Image
+                    src={solution.image}
+                    alt={solution.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <span className="absolute bottom-3 left-3 w-10 h-10 rounded-lg bg-white/90 backdrop-blur-sm flex items-center justify-center text-xl shadow-lg">
+                    {solution.icon}
+                  </span>
+                </div>
+                {/* Solution Content */}
+                <div className="p-5">
+                  <h3 className="text-lg font-bold text-slate-900 group-hover:text-emerald-600 transition-colors">
+                    {solution.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-slate-600 leading-relaxed line-clamp-3">
+                    {solution.description}
+                  </p>
+                </div>
               </Link>
             ))}
           </div>
@@ -568,13 +593,17 @@ export default function HomePage() {
                 href={industry.href}
                 className="group rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
               >
-                {/* Industry Image/Gradient Header */}
+                {/* Industry Image Header */}
                 <div className="relative h-52 overflow-hidden">
-                  {/* Gradient Background */}
-                  <div 
-                    className={`absolute inset-0 bg-gradient-to-br ${industry.gradient}`}
-                    style={{ backgroundImage: industry.bgPattern }}
+                  {/* Actual Image */}
+                  <Image
+                    src={industry.image}
+                    alt={industry.category}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
+                  {/* Gradient Overlay */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${industry.gradient} opacity-60`} />
                   
                   {/* Decorative Elements */}
                   <div className="absolute inset-0 opacity-30">
@@ -588,7 +617,7 @@ export default function HomePage() {
                   </div>
                   
                   {/* Category title on image */}
-                  <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black/50 to-transparent">
+                  <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black/70 to-transparent">
                     <h3 className="text-xl font-bold text-white drop-shadow-lg leading-tight">
                       {industry.category}
                     </h3>

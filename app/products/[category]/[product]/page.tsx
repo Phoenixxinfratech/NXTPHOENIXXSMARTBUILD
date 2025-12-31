@@ -1,9 +1,111 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
+
+// Product images mapping
+const productImages: Record<string, Record<string, string[]>> = {
+  'sandwich-panels': {
+    'pir-panel': [
+      '/images/products/sandwich-panels/pir-panel/PIR-Sandwich-FM-approved-Panel-2.jpg',
+      '/images/products/sandwich-panels/pir-panel/PIR-Sandwich-FM-approved-Panel-3.jpg',
+      '/images/products/sandwich-panels/pir-panel/PIR-Sandwich-FM-approved-Panel-4.jpg',
+      '/images/products/sandwich-panels/pir-panel/PIR-Sandwich-FM-approved-Panel-5.jpg',
+      '/images/products/sandwich-panels/pir-panel/PIR-Sandwich-FM-approved-Panel-6.jpg',
+      '/images/products/sandwich-panels/pir-panel/PIR-Sandwich-FM-approved-Panel-7.jpg',
+      '/images/products/sandwich-panels/pir-panel/PIR-Sandwich-FM-approved-Panel-8.jpg',
+      '/images/products/sandwich-panels/pir-panel/PIR-Sandwich-FM-approved-Panel-9.jpg',
+    ],
+    'sandwich-puf-panel': [
+      '/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL1.jpg',
+      '/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL3.jpg',
+      '/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL9.jpg',
+      '/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL19.jpg',
+    ],
+    'roofing-puf-panel': [
+      '/images/products/sandwich-panels/roofing-panel/PHOENIXX_ROOFING_PANEL5.jpg',
+      '/images/products/sandwich-panels/roofing-panel/PHOENIXX_ROOFING_PANEL8.jpg',
+      '/images/products/sandwich-panels/roofing-panel/PHOENIXX_ROOFING_PANEL16.jpg',
+    ],
+    'wall-ceiling-panel': [
+      '/images/products/sandwich-panels/wall-ceiling-panel/Industrial-False-Ceiling-PUF-Panel-2.jpg',
+      '/images/products/sandwich-panels/wall-ceiling-panel/Industrial-False-Ceiling-PUF-Panel-3.jpg',
+      '/images/products/sandwich-panels/wall-ceiling-panel/Industrial-False-Ceiling-PUF-Panel-4.jpg',
+      '/images/products/sandwich-panels/wall-ceiling-panel/Industrial-False-Ceiling-PUF-Panel-10.jpg',
+    ],
+    'rockwool-panel': [
+      '/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCHWOOL_PANEL1.jpg',
+      '/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCHWOOL_PANEL2.jpg',
+      '/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCHWOOL_PANEL3.jpg',
+      '/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCHWOOL_PANEL10.jpg',
+      '/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCHWOOL_PANEL11.jpg',
+      '/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCHWOOL_PANEL12.jpg',
+    ],
+  },
+  'doors': {
+    'cleanroom-door': [
+      '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-1.jpg',
+      '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-2.jpg',
+      '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-3.jpg',
+      '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-4.jpg',
+      '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-5.jpg',
+      '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-6.jpg',
+    ],
+    'fire-rated-multipurpose-door': [
+      '/images/products/doors/multipurpose-door/Metal-Door-Manufacturer-Ahmedabad-1.jpg',
+      '/images/products/doors/multipurpose-door/Metal-Door-Manufacturer-Ahmedabad-2.jpg',
+      '/images/products/doors/multipurpose-door/Metal-Door-Manufacturer-Ahmedabad-3.jpg',
+      '/images/products/doors/multipurpose-door/Metal-Door-Manufacturer-Ahmedabad-5.jpg',
+      '/images/products/doors/multipurpose-door/Metal-Door-Manufacturer-Ahmedabad-6.jpg',
+      '/images/products/doors/multipurpose-door/Metal-Door-Manufacturer-Ahmedabad-7.jpg',
+      '/images/products/doors/multipurpose-door/Metal-Door-Manufacturer-Ahmedabad-8.jpg',
+      '/images/products/doors/multipurpose-door/Metal-Door-Manufacturer-Ahmedabad-9.jpg',
+    ],
+    'fire-door-emergency-exit': [
+      '/images/products/doors/fire-door/TORDRIX_FIRE_DOOR2.jpg',
+      '/images/products/doors/fire-door/TORDRIX_FIRE_DOOR3.jpg',
+      '/images/products/doors/fire-door/TORDRIX_FIRE_DOOR5.jpg',
+      '/images/products/doors/fire-door/TORDRIX_FIRE_DOOR7.jpg',
+    ],
+  },
+  'cleanroom-solutions': {
+    'cleanroom-partition': [
+      '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat1.jpg',
+      '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat2.jpg',
+      '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat3.jpg',
+      '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat4.jpg',
+      '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat5.jpg',
+      '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat6.jpg',
+      '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat7.jpg',
+      '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat8.jpg',
+    ],
+    'cleanroom-false-ceiling': [
+      '/images/products/cleanroom/ceiling/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects26.jpg',
+      '/images/products/cleanroom/ceiling/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects74.jpg',
+      '/images/products/cleanroom/ceiling/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects75.jpg',
+      '/images/products/cleanroom/ceiling/cleanroom-Manufacture-Supplier-in-Ahmedabad5.jpg',
+    ],
+    'cleanroom-doors': [
+      '/images/products/cleanroom/doors/Cleanroom-Door-Manufacturer-in-Ahmedabad-1.jpg',
+      '/images/products/cleanroom/doors/Cleanroom-Door-Manufacturer-in-Ahmedabad-2.jpg',
+      '/images/products/cleanroom/doors/Cleanroom-Door-Manufacturer-in-Ahmedabad-10.jpg',
+      '/images/products/cleanroom/doors/Cleanroom-Door-Manufacturer-in-Ahmedabad-12.jpg',
+    ],
+    'cleanroom-flooring': [
+      '/images/products/cleanroom/flooring/Cleanroom-Epoxy-PU-Flooring-1.jpg',
+      '/images/products/cleanroom/flooring/Cleanroom-Epoxy-PU-Flooring-2.jpg',
+      '/images/products/cleanroom/flooring/Cleanroom-Epoxy-PU-Flooring-3.jpg',
+      '/images/products/cleanroom/flooring/Cleanroom-Epoxy-PU-Flooring-4.jpg',
+      '/images/products/cleanroom/flooring/Cleanroom-Epoxy-PU-Flooring-5.jpg',
+      '/images/products/cleanroom/flooring/Cleanroom-Epoxy-PU-Flooring-6.jpg',
+      '/images/products/cleanroom/flooring/Cleanroom-Epoxy-PU-Flooring-7.jpg',
+      '/images/products/cleanroom/flooring/Cleanroom-Epoxy-PU-Flooring-8.jpg',
+    ],
+  },
+};
 
 // Detailed product data
 const productsData: Record<string, Record<string, {
@@ -335,8 +437,30 @@ export default async function ProductDetailPage({ params }: Props) {
           </div>
         </section>
 
+        {/* Product Gallery */}
+        {productImages[category]?.[product] && productImages[category][product].length > 0 && (
+          <section className="section-padding bg-white">
+            <div className="container-custom">
+              <h2 className="text-3xl font-bold text-slate-900 mb-8">Product Gallery</h2>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {productImages[category][product].map((img, idx) => (
+                  <div key={idx} className="relative aspect-[4/3] rounded-xl overflow-hidden group shadow-lg">
+                    <Image
+                      src={img}
+                      alt={`${data.name} - Image ${idx + 1}`}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Features */}
-        <section className="section-padding bg-white">
+        <section className="section-padding bg-slate-50">
           <div className="container-custom">
             <h2 className="text-3xl font-bold text-slate-900 mb-12">Key Features</h2>
             <div className="grid gap-8 md:grid-cols-2">

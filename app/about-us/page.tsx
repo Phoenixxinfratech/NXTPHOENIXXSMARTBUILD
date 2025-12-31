@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { AISummaryBlock } from '@/components/ai/ai-summary-block';
@@ -83,7 +84,7 @@ const leadership = [
     role: 'Chief Executive Officer',
     bio: 'A visionary leader with extensive experience in industrial infrastructure and EPC delivery. Piyush drives PHOENIXX\'s mission of building smart, sustainable, and scalable infrastructure solutions.',
     quote: 'We don\'t just deliver projects; we deliver trust.',
-    image: '/images/team/piyush-gupta.jpg',
+    image: '/images/team/leadership/Piyush-gupta-photo-dp_optimized_500.jpg',
   },
   {
     name: 'Harshad Gupta',
@@ -409,9 +410,20 @@ export default function AboutPage() {
                   {/* Decorative */}
                   <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-amber-500/10 to-orange-500/10 rounded-full blur-2xl" />
                   
-                  {/* Photo Placeholder */}
-                  <div className="relative w-24 h-24 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-4xl text-white shadow-lg mb-6">
-                    👤
+                  {/* Leadership Photo */}
+                  <div className="relative w-24 h-24 rounded-2xl overflow-hidden shadow-lg mb-6">
+                    {leader.image ? (
+                      <Image
+                        src={leader.image}
+                        alt={leader.name}
+                        fill
+                        className="object-cover"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-4xl text-white">
+                        👤
+                      </div>
+                    )}
                   </div>
 
                   <h3 className="text-xl font-bold text-slate-900">{leader.name}</h3>
