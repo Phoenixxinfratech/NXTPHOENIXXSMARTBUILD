@@ -10,7 +10,7 @@ export const siteConfig = {
   description:
     'PHOENIXX designs and delivers high-performance insulated panels, industrial doors, cleanroom systems, and EPC solutions for modern infrastructure. From Pre-Engineered Buildings to cold chain and controlled environments.',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://phoenixxsmartbuild.com',
-  ogImage: '/images/og-image.jpg',
+  ogImage: '/og-image.png',
   twitterHandle: '@phoenixxsmartbuild',
   keywords: [
     'insulated panels',
