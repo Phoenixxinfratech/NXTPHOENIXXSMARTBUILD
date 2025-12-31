@@ -205,6 +205,135 @@ const productsData: Record<string, Record<string, {
       applications: ['Industrial Buildings', 'Warehouses', 'Cold Rooms', 'Commercial Buildings', 'Agricultural Buildings'],
       gradient: 'from-blue-600 to-cyan-600',
     },
+    'roofing-puf-panel': {
+      name: 'Roofing PUF Panels',
+      tagline: 'Weather-Resistant Insulated Roofing',
+      description: 'High-performance PUF roofing panels with superior weather resistance and thermal insulation.',
+      longDescription: 'PHOENIXX Roofing PUF Panels are specifically designed for industrial and commercial roofing applications. The trapezoidal profile provides excellent structural strength and water drainage, while the PUF core ensures superior thermal insulation and energy efficiency.',
+      features: [
+        { title: 'Trapezoidal Profile', description: 'Optimized shape for superior structural strength and efficient water drainage.' },
+        { title: 'Weather Resistance', description: 'UV-stabilized coatings and sealed joints protect against harsh weather conditions.' },
+        { title: 'Thermal Performance', description: 'PUF core provides excellent thermal insulation reducing HVAC costs.' },
+        { title: 'Long Span Capability', description: 'Supports longer spans reducing structural steel requirements.' },
+      ],
+      specifications: [
+        {
+          category: 'Core Properties',
+          items: [
+            { label: 'Core Material', value: 'Polyurethane Foam (PUF)' },
+            { label: 'Density', value: '38-42 kg/m³' },
+            { label: 'Thermal Conductivity', value: '0.024 W/mK' },
+            { label: 'Closed Cell', value: '>90%' },
+          ],
+        },
+        {
+          category: 'Panel Dimensions',
+          items: [
+            { label: 'Thickness', value: '30, 40, 50, 60, 80, 100 mm' },
+            { label: 'Width', value: '1000 mm (effective)' },
+            { label: 'Length', value: 'Up to 14,000 mm' },
+            { label: 'Profile', value: 'Trapezoidal/Corrugated' },
+          ],
+        },
+        {
+          category: 'Facing Options',
+          items: [
+            { label: 'Steel Thickness', value: '0.40-0.60 mm' },
+            { label: 'Coating', value: 'PPGI/PPGL/PVDF' },
+            { label: 'Colors', value: 'RAL standard colors' },
+            { label: 'Surface', value: 'Trapezoidal ribbed' },
+          ],
+        },
+      ],
+      applications: ['Industrial Warehouses', 'Factory Buildings', 'Cold Storage Roofs', 'Commercial Buildings', 'Agricultural Sheds'],
+      gradient: 'from-blue-600 to-cyan-600',
+    },
+    'wall-ceiling-panel': {
+      name: 'Wall & Ceiling Panels',
+      tagline: 'Versatile Interior & Exterior Cladding',
+      description: 'Multi-purpose PUF panels for wall cladding, false ceilings, and partition systems.',
+      longDescription: 'PHOENIXX Wall & Ceiling Panels offer versatile solutions for both interior and exterior applications. Ideal for industrial false ceilings, partition walls, and exterior cladding, these panels combine aesthetic appeal with excellent thermal and acoustic insulation properties.',
+      features: [
+        { title: 'Dual Application', description: 'Suitable for both wall cladding and ceiling installations in single product.' },
+        { title: 'Aesthetic Finish', description: 'Smooth, flat surfaces with multiple color options for modern interiors.' },
+        { title: 'Acoustic Insulation', description: 'Excellent sound absorption for noise-sensitive environments.' },
+        { title: 'Easy Maintenance', description: 'Smooth surfaces enable easy cleaning and long-term maintenance.' },
+      ],
+      specifications: [
+        {
+          category: 'Core Properties',
+          items: [
+            { label: 'Core Material', value: 'Polyurethane Foam (PUF)' },
+            { label: 'Density', value: '38-42 kg/m³' },
+            { label: 'Thermal Conductivity', value: '0.024 W/mK' },
+            { label: 'Fire Class', value: 'B2 (Self-extinguishing)' },
+          ],
+        },
+        {
+          category: 'Panel Dimensions',
+          items: [
+            { label: 'Thickness', value: '25, 30, 40, 50 mm' },
+            { label: 'Width', value: '1000/1200 mm' },
+            { label: 'Length', value: 'Up to 6,000 mm' },
+            { label: 'Weight', value: '6-12 kg/m²' },
+          ],
+        },
+        {
+          category: 'Facing Options',
+          items: [
+            { label: 'Steel Thickness', value: '0.35-0.50 mm' },
+            { label: 'Coating', value: 'PE/PVDF/PVC Film' },
+            { label: 'Colors', value: 'White/Off-white/Custom RAL' },
+            { label: 'Surface', value: 'Flat smooth finish' },
+          ],
+        },
+      ],
+      applications: ['Industrial False Ceilings', 'Clean Room Partitions', 'Cold Storage Interiors', 'Commercial Interiors', 'Food Processing Units'],
+      gradient: 'from-blue-600 to-cyan-600',
+    },
+    'rockwool-panel': {
+      name: 'Rockwool Panels',
+      tagline: 'Premium Fire-Resistant Insulation',
+      description: 'Mineral wool sandwich panels with superior fire resistance and acoustic properties.',
+      longDescription: 'PHOENIXX Rockwool Panels feature a mineral wool core that provides exceptional fire resistance up to 4 hours. Ideal for applications requiring the highest fire safety standards, these panels also offer excellent acoustic insulation making them perfect for industrial and commercial buildings.',
+      features: [
+        { title: 'A1 Fire Rating', description: 'Non-combustible mineral wool core provides up to 4-hour fire resistance.' },
+        { title: 'Superior Acoustics', description: 'Excellent sound absorption coefficient for noise control applications.' },
+        { title: 'Temperature Stability', description: 'Maintains properties at temperatures up to 1000°C.' },
+        { title: 'Eco-Friendly', description: 'Made from natural basalt rock, recyclable and sustainable.' },
+      ],
+      specifications: [
+        {
+          category: 'Core Properties',
+          items: [
+            { label: 'Core Material', value: 'Mineral Wool (Rockwool)' },
+            { label: 'Density', value: '100-150 kg/m³' },
+            { label: 'Thermal Conductivity', value: '0.038-0.040 W/mK' },
+            { label: 'Fire Classification', value: 'A1 (Non-combustible)' },
+          ],
+        },
+        {
+          category: 'Panel Dimensions',
+          items: [
+            { label: 'Thickness', value: '50, 75, 100, 120, 150 mm' },
+            { label: 'Width', value: '1000 mm (effective)' },
+            { label: 'Length', value: 'Up to 10,000 mm' },
+            { label: 'Weight', value: '15-25 kg/m²' },
+          ],
+        },
+        {
+          category: 'Facing Options',
+          items: [
+            { label: 'Steel Thickness', value: '0.40-0.70 mm' },
+            { label: 'Coating', value: 'PE/PVDF/Stainless Steel' },
+            { label: 'Colors', value: 'RAL standard colors' },
+            { label: 'Surface', value: 'Flat/Micro-rib' },
+          ],
+        },
+      ],
+      applications: ['Fire-Rated Buildings', 'Acoustic Studios', 'Data Centers', 'Industrial Facilities', 'High-Rise Buildings'],
+      gradient: 'from-orange-500 to-red-600',
+    },
   },
   'doors': {
     'cleanroom-door': {
@@ -275,6 +404,40 @@ const productsData: Record<string, Record<string, {
       applications: ['Industrial Buildings', 'Commercial Complexes', 'Hospitals', 'Hotels', 'Educational Institutions'],
       gradient: 'from-orange-600 to-red-600',
     },
+    'fire-rated-multipurpose-door': {
+      name: 'Fire-Rated Multipurpose Doors',
+      tagline: 'Versatile Industrial & Commercial Doors',
+      description: 'Heavy-duty metal doors with fire rating options for industrial and commercial applications.',
+      longDescription: 'PHOENIXX Fire-Rated Multipurpose Doors are engineered for demanding industrial and commercial environments. These robust metal doors offer optional fire ratings, superior security, and long-lasting durability for warehouses, factories, and commercial buildings.',
+      features: [
+        { title: 'Heavy-Duty Construction', description: 'Reinforced steel frame and panel for maximum durability and security.' },
+        { title: 'Optional Fire Rating', description: 'Available with fire ratings from 30 to 120 minutes as per requirement.' },
+        { title: 'Weather Sealed', description: 'Comprehensive sealing system for weather protection and energy efficiency.' },
+        { title: 'Multiple Configurations', description: 'Single, double leaf, and wicket door options available.' },
+      ],
+      specifications: [
+        {
+          category: 'Door Specifications',
+          items: [
+            { label: 'Type', value: 'Single/Double Leaf' },
+            { label: 'Material', value: 'MS/GI Steel' },
+            { label: 'Thickness', value: '46-60 mm' },
+            { label: 'Fire Rating', value: 'Optional 30-120 min' },
+          ],
+        },
+        {
+          category: 'Construction',
+          items: [
+            { label: 'Frame', value: 'Pressed steel 1.6-2.0 mm' },
+            { label: 'Skin', value: 'GI/PPGI 0.6-1.0 mm' },
+            { label: 'Core', value: 'PUF/Honeycomb/Rockwool' },
+            { label: 'Hardware', value: 'Heavy-duty SS/MS' },
+          ],
+        },
+      ],
+      applications: ['Industrial Warehouses', 'Factory Buildings', 'Commercial Complexes', 'Cold Storage', 'Service Areas'],
+      gradient: 'from-orange-600 to-red-600',
+    },
   },
   'cleanroom-solutions': {
     'cleanroom-partition': {
@@ -343,6 +506,74 @@ const productsData: Record<string, Record<string, {
         },
       ],
       applications: ['Pharmaceutical Cleanrooms', 'Semiconductor Fabs', 'Hospitals', 'Research Labs', 'Food Processing'],
+      gradient: 'from-emerald-600 to-teal-600',
+    },
+    'cleanroom-doors': {
+      name: 'Cleanroom Doors',
+      tagline: 'Contamination Control Door Systems',
+      description: 'High-performance doors engineered for ISO-classified cleanroom environments.',
+      longDescription: 'PHOENIXX Cleanroom Doors are designed specifically for pharmaceutical, healthcare, electronics, and food processing cleanrooms. Features include airtight sealing, flush surfaces, and compatibility with interlock systems to maintain cleanroom integrity.',
+      features: [
+        { title: 'Airtight Sealing', description: 'Magnetic or brush seals ensure contamination prevention and pressure integrity.' },
+        { title: 'Flush Design', description: 'Smooth, crevice-free surfaces prevent particle accumulation and enable easy cleaning.' },
+        { title: 'Interlock Compatible', description: 'Can be integrated with airlock interlock systems for cleanroom protocols.' },
+        { title: 'Automation Ready', description: 'Compatible with various automatic opening systems including touchless sensors.' },
+      ],
+      specifications: [
+        {
+          category: 'Door Specifications',
+          items: [
+            { label: 'Type', value: 'Swing/Sliding/Hermetic' },
+            { label: 'Frame Material', value: 'Stainless Steel/Aluminum' },
+            { label: 'Panel Thickness', value: '40-60 mm' },
+            { label: 'Cleanroom Class', value: 'ISO 5-8 compatible' },
+          ],
+        },
+        {
+          category: 'Features',
+          items: [
+            { label: 'Vision Panel', value: 'Full/Half/Round glazing' },
+            { label: 'Sealing', value: 'Magnetic/Brush/Inflatable' },
+            { label: 'Finish', value: 'Powder coated/SS finish' },
+            { label: 'Hardware', value: 'SS 304/316 grade' },
+          ],
+        },
+      ],
+      applications: ['Pharmaceutical Cleanrooms', 'Electronics Manufacturing', 'Food Processing', 'Hospitals', 'Research Laboratories'],
+      gradient: 'from-emerald-600 to-teal-600',
+    },
+    'cleanroom-flooring': {
+      name: 'Cleanroom Flooring',
+      tagline: 'High-Performance Epoxy & PU Flooring Systems',
+      description: 'Seamless, anti-static flooring solutions for cleanroom and controlled environments.',
+      longDescription: 'PHOENIXX Cleanroom Flooring systems provide seamless, non-porous surfaces that meet the stringent requirements of pharmaceutical, electronics, and food processing industries. Options include epoxy, polyurethane, and ESD-safe flooring with coved skirting for complete contamination control.',
+      features: [
+        { title: 'Seamless Surface', description: 'Monolithic, joint-free finish eliminates particle traps and enables easy cleaning.' },
+        { title: 'Chemical Resistance', description: 'Resistant to acids, alkalis, solvents, and cleaning agents.' },
+        { title: 'ESD Options', description: 'Anti-static and conductive variants for electronics manufacturing.' },
+        { title: 'Coved Skirting', description: 'Integrated wall-to-floor coving prevents dust accumulation.' },
+      ],
+      specifications: [
+        {
+          category: 'Flooring Types',
+          items: [
+            { label: 'Systems', value: 'Epoxy/PU/ESD/MMA' },
+            { label: 'Thickness', value: '2-6 mm' },
+            { label: 'Surface Finish', value: 'Smooth/Textured/Matt' },
+            { label: 'ESD Rating', value: '10⁴-10⁹ Ohms' },
+          ],
+        },
+        {
+          category: 'Performance',
+          items: [
+            { label: 'Compressive Strength', value: '>50 N/mm²' },
+            { label: 'Abrasion Resistance', value: '<30 mg (CS17 wheel)' },
+            { label: 'Chemical Resistance', value: 'Excellent' },
+            { label: 'Cleanability', value: 'Easy to clean, non-porous' },
+          ],
+        },
+      ],
+      applications: ['Pharmaceutical Manufacturing', 'Electronics Cleanrooms', 'Food Processing', 'Hospitals', 'Laboratories'],
       gradient: 'from-emerald-600 to-teal-600',
     },
   },
