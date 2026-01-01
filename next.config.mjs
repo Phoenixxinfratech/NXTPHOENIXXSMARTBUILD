@@ -21,7 +21,7 @@ const nextConfig = {
     scrollRestoration: true,
   },
 
-  // Headers for security and caching
+  // Headers for security, caching, and image protection
   async headers() {
     return [
       {
@@ -43,6 +43,61 @@ const nextConfig = {
             key: 'Referrer-Policy',
             value: 'strict-origin-when-cross-origin',
           },
+          {
+            // Prevent embedding in iframes (additional protection)
+            key: 'Content-Security-Policy',
+            value: "frame-ancestors 'self'",
+          },
+        ],
+      },
+      // Image-specific headers for protection
+      {
+        source: '/images/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+          {
+            // Prevent hotlinking from other domains
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            // Discourage automated scraping tools
+            key: 'X-Robots-Tag',
+            value: 'noindex, noimageindex',
+          },
+        ],
+      },
+      // Product images protection
+      {
+        source: '/products/:path*',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noimageindex',
+          },
+        ],
+      },
+      // Industries images protection
+      {
+        source: '/industries/:path*',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noimageindex',
+          },
+        ],
+      },
+      // Solutions images protection
+      {
+        source: '/solutions/:path*',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noimageindex',
+          },
         ],
       },
       {
@@ -51,6 +106,16 @@ const nextConfig = {
           {
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      // Next.js Image optimization route protection
+      {
+        source: '/_next/image/:path*',
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex, noimageindex',
           },
         ],
       },
@@ -69,5 +134,6 @@ const nextConfig = {
 };
 
 export default nextConfig;
+
 
 

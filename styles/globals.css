@@ -383,6 +383,63 @@
 }
 
 /* ============================================
+   IMAGE PROTECTION STYLES
+   ============================================ */
+@layer utilities {
+  /* Comprehensive image protection */
+  img,
+  picture,
+  figure img,
+  [data-nimg] {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    -webkit-touch-callout: none !important;
+    -webkit-user-drag: none !important;
+    -khtml-user-drag: none !important;
+    -moz-user-drag: none !important;
+    -o-user-drag: none !important;
+    user-drag: none !important;
+    pointer-events: none;
+  }
+
+  /* Re-enable pointer events for clickable image containers */
+  a:has(img),
+  button:has(img),
+  [role="button"]:has(img),
+  .clickable-image,
+  .image-link {
+    pointer-events: auto !important;
+  }
+
+  /* Protected image wrapper utility */
+  .image-protected {
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  .image-protected::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    z-index: 1;
+    pointer-events: auto;
+  }
+
+  /* Disable save image on mobile long-press */
+  img {
+    -webkit-touch-callout: none;
+  }
+}
+
+/* ============================================
    PRINT STYLES
    ============================================ */
 @media print {
@@ -402,6 +459,13 @@
 
   a[href^='http']::after {
     content: ' (' attr(href) ')';
+  }
+
+  /* Protect images during print */
+  img,
+  picture,
+  figure img {
+    opacity: 0.3 !important;
   }
 }
 
