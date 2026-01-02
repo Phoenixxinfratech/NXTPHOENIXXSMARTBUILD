@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 
@@ -24,6 +25,7 @@ const projects = [
     area: '38,000 Sq. Ft.',
     scope: 'Insulated roofing and enclosures for large-scale industrial operations.',
     icon: '🏭',
+    image: '/images/projects/gallery/Phoenix-PUF-Panel-Manufacturers6.jpg',
   },
   {
     slug: 'uflex-sanand',
@@ -36,6 +38,7 @@ const projects = [
     area: '34,000 Sq. Ft.',
     scope: 'Insulated roofing and clean partition systems for packaging production units.',
     icon: '📦',
+    image: '/images/projects/gallery/Phoenixx_infratech_Projects188.jpg',
   },
   {
     slug: 'cargill-gandhidham',
@@ -48,6 +51,7 @@ const projects = [
     area: '31,200 Sq. Ft.',
     scope: 'Large-span insulated roofing system for processing and storage facilities.',
     icon: '🌾',
+    image: '/images/projects/gallery/Phoenixx_infratech_Projects189.jpg',
   },
   {
     slug: 'bunge-gandhidham',
@@ -60,6 +64,7 @@ const projects = [
     area: '29,500 Sq. Ft.',
     scope: 'Energy-efficient roofing and wall insulation for industrial operations.',
     icon: '🌻',
+    image: '/images/projects/gallery/Phoenix-Infratech-Project-Pics23.jpg',
   },
   {
     slug: 'vyara-tiles-gangad',
@@ -72,6 +77,7 @@ const projects = [
     area: '28,000 Sq. Ft.',
     scope: 'Design, supply & installation of PUF insulated roofing and wall panels for manufacturing facility.',
     icon: '🧱',
+    image: '/images/projects/gallery/Industrial-False-Ceiling-PUF-Panel-2.jpg',
   },
   {
     slug: 'motherson-marelli-sanand',
@@ -84,6 +90,7 @@ const projects = [
     area: '27,500 Sq. Ft.',
     scope: 'Insulated roofing and partition systems for automotive manufacturing plant.',
     icon: '🚗',
+    image: '/images/projects/gallery/PHOENIXX_WALL_PUF_PANEL3.jpg',
   },
   {
     slug: 'skf-ahmedabad',
@@ -96,6 +103,7 @@ const projects = [
     area: '26,400 Sq. Ft.',
     scope: 'Durable insulated panels for precision manufacturing areas.',
     icon: '⚙️',
+    image: '/images/projects/gallery/PUF-Panel-False-Ceiling-1.jpg',
   },
   {
     slug: 'sarhad-dairy-bhuj',
@@ -108,6 +116,7 @@ const projects = [
     area: '24,000 Sq. Ft.',
     scope: 'Insulated wall and ceiling panels for temperature-controlled dairy zones.',
     icon: '🥛',
+    image: '/images/projects/gallery/Sandwich-PUF-Ceiling-Panel-1.jpg',
   },
   {
     slug: 'pgp-glass-dahej',
@@ -120,6 +129,7 @@ const projects = [
     area: '23,000 Sq. Ft.',
     scope: 'Industrial roofing and wall cladding for glass packaging plant.',
     icon: '🫙',
+    image: '/images/projects/gallery/PHOENIXX_WALL_PUF_PANEL9.jpg',
   },
   {
     slug: 'agro-tech-ankleshwar',
@@ -132,6 +142,7 @@ const projects = [
     area: '22,000 Sq. Ft.',
     scope: 'Food-grade insulated wall and ceiling panels for hygienic processing zones.',
     icon: '🍿',
+    image: '/images/projects/gallery/Industrial-False-Ceiling-PUF-Panel-3.jpg',
   },
   {
     slug: 'rotomotive-anand',
@@ -144,6 +155,7 @@ const projects = [
     area: '21,600 Sq. Ft.',
     scope: 'Energy-efficient insulated panel systems for manufacturing units.',
     icon: '🔧',
+    image: '/images/projects/gallery/PUF-Panel-False-Ceiling-2.jpg',
   },
   {
     slug: 'rajhans-nutriments-surat',
@@ -156,6 +168,7 @@ const projects = [
     area: '20,400 Sq. Ft.',
     scope: 'Clean insulated wall and ceiling panels for food-grade production areas.',
     icon: '💊',
+    image: '/images/projects/gallery/Insulated-Ceiling-Panels-1.jpg',
   },
   {
     slug: 'fuji-silvertech-ahmedabad',
@@ -168,6 +181,7 @@ const projects = [
     area: '19,000 Sq. Ft.',
     scope: 'High-performance insulated roofing panels for precast manufacturing sheds.',
     icon: '🏗️',
+    image: '/images/projects/gallery/Sandwich-PUF-Ceiling-Panel-2.jpg',
   },
   {
     slug: 'aishwarya-dyeing-surat',
@@ -180,6 +194,7 @@ const projects = [
     area: '18,500 Sq. Ft.',
     scope: 'High thermal insulation roofing and internal partitions for controlled production environment.',
     icon: '🧵',
+    image: '/images/projects/gallery/PHOENIXX_WALL_PUF_PANEL19.jpg',
   },
   {
     slug: 'narmada-biochem-dahej',
@@ -192,6 +207,7 @@ const projects = [
     area: '17,500 Sq. Ft.',
     scope: 'Chemical-resistant insulated panel solutions for process areas.',
     icon: '⚗️',
+    image: '/images/projects/gallery/Industrial-False-Ceiling-PUF-Panel-4.jpg',
   },
   {
     slug: 'bc-foods-mahua',
@@ -204,6 +220,7 @@ const projects = [
     area: '16,800 Sq. Ft.',
     scope: 'Cleanroom wall and ceiling panels for processing and packing areas.',
     icon: '🥫',
+    image: '/images/projects/gallery/cleanroom-Manufacture-Supplier-in-Ahmedabad5.jpg',
   },
   {
     slug: 'edkem-pharma-ahmedabad',
@@ -216,6 +233,7 @@ const projects = [
     area: '14,200 Sq. Ft.',
     scope: 'GMP-compliant cleanroom wall, ceiling panels and insulated doors.',
     icon: '💉',
+    image: '/images/projects/gallery/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects26.jpg',
   },
   {
     slug: 'makson-pharma-surendranagar',
@@ -228,6 +246,7 @@ const projects = [
     area: '13,600 Sq. Ft.',
     scope: 'Turnkey cleanroom envelope including insulated doors.',
     icon: '🏥',
+    image: '/images/projects/gallery/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects74.jpg',
   },
   {
     slug: 'infocity-club-gandhinagar',
@@ -240,6 +259,7 @@ const projects = [
     area: '12,500 Sq. Ft.',
     scope: 'Thermal and acoustic roofing solutions for enhanced indoor comfort.',
     icon: '🏨',
+    image: '/images/projects/gallery/Insulated-Ceiling-Panels-2.jpg',
   },
   {
     slug: 'agrawal-metal-vithlapur',
@@ -252,6 +272,7 @@ const projects = [
     area: '11,800 Sq. Ft.',
     scope: 'Robust PUF roofing panels for fabrication facility.',
     icon: '🔩',
+    image: '/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
   },
 ];
 
@@ -337,15 +358,24 @@ export default function ProjectGalleryPage() {
         <section className="section-padding bg-slate-50">
           <div className="container-custom">
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {projects.map((project) => (
+              {projects.map((project, idx) => (
                 <article
                   key={project.slug}
                   className="group rounded-2xl bg-white border border-slate-200 overflow-hidden hover:shadow-xl hover:border-emerald-200 transition-all"
                 >
-                  <div className="relative h-48 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center">
-                    <span className="text-6xl">{project.icon}</span>
+                  <div className="relative h-52 overflow-hidden">
+                    <Image
+                      src={project.image}
+                      alt={`${project.title} - ${project.projectType}`}
+                      fill
+                      quality={85}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      priority={idx < 6}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                     <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1 rounded-full bg-white/90 text-slate-700 text-xs font-medium shadow-sm">
+                      <span className="px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm text-slate-700 text-xs font-medium shadow-sm">
                         {project.category}
                       </span>
                     </div>
@@ -354,6 +384,9 @@ export default function ProjectGalleryPage() {
                         {project.area}
                       </span>
                     </div>
+                    <span className="absolute bottom-4 left-4 w-10 h-10 rounded-lg bg-white/90 backdrop-blur-sm flex items-center justify-center text-xl shadow-lg">
+                      {project.icon}
+                    </span>
                   </div>
                   <div className="p-6">
                     <h3 className="text-lg font-bold text-slate-900 group-hover:text-emerald-600 transition-colors">

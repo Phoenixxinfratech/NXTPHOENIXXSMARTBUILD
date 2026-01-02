@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     'PHOENIXX designs and delivers high-performance insulated panels, industrial doors, cleanroom systems, and EPC solutions. From Pre-Engineered Buildings to cold chain and controlled environments.',
 };
 
-// Products data
+// Products data - Using high-quality images for better display
 const products = [
   {
     title: 'Wall & Roof Panels',
@@ -36,7 +36,7 @@ const products = [
     details: 'Includes PIR Panels, Sandwich PUF Panels, Roofing PUF Panels, and Wall & Ceiling Panels—ideal for energy-efficient industrial and commercial buildings.',
     href: '/products/sandwich-panels',
     icon: '🧱',
-    image: '/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL1.jpg',
+    image: '/images/products/sandwich-panels/puf-panel/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
   },
   {
     title: 'Industrial & Specialty Doors',
@@ -44,7 +44,7 @@ const products = [
     details: 'Includes Cleanroom Doors, Fire-Rated Emergency Exit Doors, and Fire-Rated Multipurpose Doors, compliant with relevant standards.',
     href: '/products/doors',
     icon: '🚪',
-    image: '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-1.jpg',
+    image: '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-2.jpg',
   },
   {
     title: 'Cold Chain Solutions',
@@ -367,17 +367,20 @@ export default function HomePage() {
           </div>
 
           <div className="grid gap-8 md:grid-cols-2">
-            {products.map((product) => (
+            {products.map((product, idx) => (
               <div
                 key={product.title}
                 className="group relative rounded-2xl border border-slate-200 bg-white overflow-hidden transition-all hover:shadow-xl hover:border-blue-200 hover:-translate-y-1"
               >
                 {/* Product Image */}
-                <div className="relative h-48 w-full overflow-hidden">
+                <div className="relative h-56 w-full overflow-hidden">
                   <Image
                     src={product.image}
                     alt={product.title}
                     fill
+                    priority={idx < 2}
+                    quality={90}
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
@@ -437,18 +440,21 @@ export default function HomePage() {
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {solutions.map((solution) => (
+            {solutions.map((solution, idx) => (
               <Link
                 key={solution.title}
                 href={solution.href}
                 className="group relative rounded-xl border border-slate-200 bg-white overflow-hidden transition-all hover:shadow-lg hover:border-emerald-200"
               >
                 {/* Solution Image */}
-                <div className="relative h-40 w-full overflow-hidden">
+                <div className="relative h-44 w-full overflow-hidden">
                   <Image
                     src={solution.image}
                     alt={solution.title}
                     fill
+                    priority={idx < 3}
+                    quality={85}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -600,6 +606,8 @@ export default function HomePage() {
                     src={industry.image}
                     alt={industry.category}
                     fill
+                    quality={85}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   {/* Gradient Overlay */}
