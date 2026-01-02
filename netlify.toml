@@ -32,14 +32,26 @@
 [context.branch-deploy]
   command = "npm run build"
 
-# Headers configuration
+# ============================================
+# Security Headers Configuration
+# ============================================
 [[headers]]
   for = "/*"
   [headers.values]
+    # Prevent clickjacking attacks
     X-Frame-Options = "DENY"
+    # XSS protection
     X-XSS-Protection = "1; mode=block"
+    # Prevent MIME type sniffing
     X-Content-Type-Options = "nosniff"
+    # Control referrer information
     Referrer-Policy = "strict-origin-when-cross-origin"
+    # HTTP Strict Transport Security (HSTS) - Forces HTTPS for 1 year
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    # Content Security Policy
+    Content-Security-Policy = "frame-ancestors 'self'; upgrade-insecure-requests"
+    # Permissions Policy (restrict browser features)
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(self)"
 
 # Cache static assets
 [[headers]]
@@ -57,7 +69,30 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Redirects
+# ============================================
+# CRITICAL: Domain Redirects for SSL/Security
+# ============================================
+
+# Force HTTPS and redirect www to non-www (PRIMARY DOMAIN)
+[[redirects]]
+  from = "https://www.phoenixxsmartbuild.com/*"
+  to = "https://phoenixxsmartbuild.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.phoenixxsmartbuild.com/*"
+  to = "https://phoenixxsmartbuild.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://phoenixxsmartbuild.com/*"
+  to = "https://phoenixxsmartbuild.com/:splat"
+  status = 301
+  force = true
+
+# Legacy redirects
 [[redirects]]
   from = "/home"
   to = "/"
