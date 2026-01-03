@@ -71,7 +71,7 @@ export function ContactForm() {
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="mt-8 space-y-6">
+      <form onSubmit={handleSubmit} className="mt-8 space-y-6" data-netlify="true" name="contact-form">
         <div className="grid gap-6 sm:grid-cols-2">
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">

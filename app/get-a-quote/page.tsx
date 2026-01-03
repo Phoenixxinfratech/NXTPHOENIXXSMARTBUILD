@@ -166,7 +166,7 @@ Details: ${data.details || 'No additional details'}
                     </div>
                   )}
 
-                  <form onSubmit={handleSubmit} className="mt-8 space-y-8">
+                  <form onSubmit={handleSubmit} className="mt-8 space-y-8" data-netlify="true" name="quote-form">
                     {/* Contact Information */}
                     <div>
                       <h3 className="text-lg font-semibold text-slate-900 mb-4 pb-2 border-b">

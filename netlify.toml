@@ -98,6 +98,27 @@
   to = "/"
   status = 301
 
+# ============================================
+# Netlify Forms Configuration
+# ============================================
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = false
+
+[build.processing.js]
+  bundle = true
+  minify = false
+
+[build.processing.html]
+  pretty_urls = true
+
+# Netlify Forms Spam Filter
+[build.processing.form_detection]
+  form_detection = "true"
+
 # Functions configuration
 [functions]
   directory = "netlify/functions"
