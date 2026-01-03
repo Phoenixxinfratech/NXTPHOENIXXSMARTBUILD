@@ -1,8 +1,10 @@
-import { Metadata } from 'next';
 import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
+import { ContactForm } from './contact-form';
+import { siteConfig } from '@/lib/site-config';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Contact Us | PHOENIXX SmartBuild',
@@ -18,23 +20,23 @@ const contactInfo = [
     icon: '📧',
     title: 'Email Us',
     description: 'Get a response within 24 hours',
-    primary: 'projects@phoenixxsmartbuild.com',
-    secondary: 'info@phoenixxsmartbuild.com',
-    action: 'mailto:projects@phoenixxsmartbuild.com',
+    primary: siteConfig.contact.projects,
+    secondary: siteConfig.contact.email,
+    action: `mailto:${siteConfig.contact.projects}`,
   },
   {
     icon: '📞',
     title: 'Call Us',
     description: 'Mon-Sat, 9:00 AM - 6:00 PM',
-    primary: '+91 97277 00442',
-    secondary: '+91 95126 16169',
-    action: 'tel:+919727700442',
+    primary: siteConfig.contact.phone,
+    secondary: siteConfig.contact.phoneAlt,
+    action: `tel:${siteConfig.contact.phone.replace(/\s/g, '')}`,
   },
   {
     icon: '📍',
     title: 'Visit Us',
     description: 'Head Office',
-    primary: 'Ahmedabad, Gujarat',
+    primary: siteConfig.contact.address,
     secondary: 'India',
     action: 'https://goo.gl/maps/phoenixx',
   },
@@ -141,111 +143,7 @@ export default function ContactUsPage() {
           <div className="container-custom">
             <div className="grid gap-12 lg:grid-cols-2">
               {/* Contact Form */}
-              <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10">
-                <h2 className="text-2xl font-bold text-slate-900">Send Us a Message</h2>
-                <p className="mt-2 text-slate-600">
-                  Fill out the form below and we&apos;ll get back to you within 24 hours.
-                </p>
-
-                <form className="mt-8 space-y-6">
-                  <div className="grid gap-6 sm:grid-cols-2">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
-                        Full Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        required
-                        className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                        placeholder="Your name"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-slate-700 mb-2">
-                        Company
-                      </label>
-                      <input
-                        type="text"
-                        id="company"
-                        name="company"
-                        className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                        placeholder="Your company"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid gap-6 sm:grid-cols-2">
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                        className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                        placeholder="you@example.com"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-2">
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                        placeholder="+91 XXXXX XXXXX"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-slate-700 mb-2">
-                      Subject *
-                    </label>
-                    <select
-                      id="subject"
-                      name="subject"
-                      required
-                      className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                    >
-                      <option value="">Select a subject</option>
-                      <option value="quote">Request a Quote</option>
-                      <option value="consultation">Technical Consultation</option>
-                      <option value="support">Product Support</option>
-                      <option value="partnership">Partnership Inquiry</option>
-                      <option value="career">Career Inquiry</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
-                      Message *
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      required
-                      rows={5}
-                      className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
-                      placeholder="Tell us about your project or inquiry..."
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full rounded-lg bg-gradient-to-r from-blue-600 to-emerald-600 px-6 py-4 font-semibold text-white shadow-lg hover:shadow-xl transition-all"
-                  >
-                    Send Message
-                  </button>
-                </form>
-              </div>
+              <ContactForm />
 
               {/* Quick Links & Map */}
               <div className="space-y-8">

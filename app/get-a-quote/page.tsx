@@ -1,16 +1,11 @@
-import { Metadata } from 'next';
+'use client';
+
+import { useState, FormEvent } from 'react';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
-
-export const metadata: Metadata = {
-  title: 'Get a Quote | Free Project Consultation',
-  description:
-    'Request a free quote for your industrial infrastructure project. PEB, Cold Storage, Cleanrooms, Insulated Panels, and more. Get customized pricing within 48 hours.',
-  alternates: {
-    canonical: '/get-a-quote',
-  },
-};
+import { siteConfig } from '@/lib/site-config';
 
 const productOptions = [
   { value: 'pir-panels', label: 'PIR Panels' },
@@ -46,6 +41,82 @@ const industryOptions = [
 ];
 
 export default function GetAQuotePage() {
+  const router = useRouter();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setError('');
+
+    const formData = new FormData(e.currentTarget);
+    
+    // Collect form data
+    const data = {
+      name: formData.get('name') as string,
+      company: formData.get('company') as string,
+      email: formData.get('email') as string,
+      phone: formData.get('phone') as string,
+      industry: formData.get('industry') as string,
+      products: formData.getAll('products') as string[],
+      solutions: formData.getAll('solutions') as string[],
+      area: formData.get('area') as string,
+      location: formData.get('location') as string,
+      timeline: formData.get('timeline') as string,
+      budget: formData.get('budget') as string,
+      details: formData.get('details') as string,
+      source: 'Quote Form',
+      formType: 'quote',
+      timestamp: new Date().toISOString(),
+    };
+
+    try {
+      // Submit to API
+      const response = await fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          company: data.company,
+          message: `
+Industry: ${data.industry}
+Products: ${data.products.join(', ') || 'None selected'}
+Solutions: ${data.solutions.join(', ') || 'None selected'}
+Area: ${data.area || 'Not specified'}
+Location: ${data.location || 'Not specified'}
+Timeline: ${data.timeline || 'Not specified'}
+Budget: ${data.budget || 'Not disclosed'}
+
+Details: ${data.details || 'No additional details'}
+          `.trim(),
+          source: 'Quote Form',
+          industry: data.industry,
+        }),
+      });
+
+      if (response.ok) {
+        // Track conversion event
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('event', 'generate_lead', {
+            event_category: 'Quote',
+            event_label: data.industry,
+          });
+        }
+        
+        // Redirect to thank you page
+        router.push('/thank-you?type=quote&source=Quote%20Form');
+      } else {
+        throw new Error('Submission failed');
+      }
+    } catch (err) {
+      setError('Something went wrong. Please try again or contact us directly.');
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
@@ -89,7 +160,13 @@ export default function GetAQuotePage() {
                     Fill in the details below. Fields marked with * are required.
                   </p>
 
-                  <form className="mt-8 space-y-8">
+                  {error && (
+                    <div className="mt-4 p-4 rounded-lg bg-red-50 border border-red-200 text-red-700">
+                      {error}
+                    </div>
+                  )}
+
+                  <form onSubmit={handleSubmit} className="mt-8 space-y-8">
                     {/* Contact Information */}
                     <div>
                       <h3 className="text-lg font-semibold text-slate-900 mb-4 pb-2 border-b">
@@ -287,39 +364,25 @@ export default function GetAQuotePage() {
                             placeholder="Describe your project requirements, specifications, or any specific needs..."
                           />
                         </div>
-
-                        <div>
-                          <label htmlFor="file" className="block text-sm font-medium text-slate-700 mb-2">
-                            Attach Documents (Optional)
-                          </label>
-                          <div className="border-2 border-dashed border-slate-300 rounded-lg p-6 text-center hover:border-blue-400 transition-colors cursor-pointer">
-                            <input
-                              type="file"
-                              id="file"
-                              name="file"
-                              className="hidden"
-                              multiple
-                              accept=".pdf,.doc,.docx,.dwg,.xls,.xlsx,.jpg,.png"
-                            />
-                            <label htmlFor="file" className="cursor-pointer">
-                              <span className="text-4xl">📎</span>
-                              <p className="mt-2 text-sm text-slate-600">
-                                Click to upload or drag and drop
-                              </p>
-                              <p className="text-xs text-slate-400">
-                                PDF, DOC, DWG, XLS, JPG, PNG (max 10MB)
-                              </p>
-                            </label>
-                          </div>
-                        </div>
                       </div>
                     </div>
 
                     <button
                       type="submit"
-                      className="w-full rounded-lg bg-gradient-to-r from-blue-600 to-emerald-600 px-6 py-4 font-semibold text-white shadow-lg hover:shadow-xl transition-all"
+                      disabled={isSubmitting}
+                      className="w-full rounded-lg bg-gradient-to-r from-blue-600 to-emerald-600 px-6 py-4 font-semibold text-white shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      Submit Quote Request
+                      {isSubmitting ? (
+                        <span className="flex items-center justify-center gap-2">
+                          <svg className="animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                          </svg>
+                          Submitting...
+                        </span>
+                      ) : (
+                        'Submit Quote Request'
+                      )}
                     </button>
 
                     <p className="text-xs text-slate-500 text-center">
@@ -365,13 +428,22 @@ export default function GetAQuotePage() {
                     For urgent requirements, reach us directly.
                   </p>
                   <div className="mt-4 space-y-3">
-                    <a href="tel:+919727700442" className="flex items-center gap-3 text-sm hover:text-blue-300 transition-colors">
+                    <a href={`tel:${siteConfig.contact.phone.replace(/\s/g, '')}`} className="flex items-center gap-3 text-sm hover:text-blue-300 transition-colors">
                       <span>📞</span>
-                      +91 97277 00442
+                      {siteConfig.contact.phone}
                     </a>
-                    <a href="mailto:projects@phoenixxsmartbuild.com" className="flex items-center gap-3 text-sm hover:text-blue-300 transition-colors">
+                    <a href={`mailto:${siteConfig.contact.projects}`} className="flex items-center gap-3 text-sm hover:text-blue-300 transition-colors">
                       <span>📧</span>
-                      projects@phoenixxsmartbuild.com
+                      {siteConfig.contact.projects}
+                    </a>
+                    <a 
+                      href={`https://wa.me/${siteConfig.whatsapp}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 text-sm hover:text-green-300 transition-colors"
+                    >
+                      <span>💬</span>
+                      WhatsApp Us
                     </a>
                   </div>
                 </div>
