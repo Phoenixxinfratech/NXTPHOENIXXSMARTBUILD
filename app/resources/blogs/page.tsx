@@ -13,6 +13,35 @@ export const metadata: Metadata = {
 };
 
 const blogPosts = [
+  // NEW PUF PANEL SERIES - Featured
+  {
+    slug: 'what-is-puf-panel-how-does-it-work',
+    title: 'What Is a PUF Panel and How Does It Work?',
+    excerpt: 'PUF panels have become one of the most widely used construction materials in modern industrial and commercial infrastructure. Understanding what a PUF panel is and how it works helps businesses choose the right insulation solution.',
+    category: 'PUF Panels',
+    date: 'Jan 3, 2025',
+    readTime: '6 min read',
+    featured: true,
+  },
+  {
+    slug: 'puf-panel-vs-traditional-roofing-sheets',
+    title: 'PUF Panel vs Traditional Roofing Sheets: Which Is Better?',
+    excerpt: 'Traditional roofing sheets have been used for decades, but rising energy costs and modern compliance requirements have pushed industries to adopt PUF panels. This comparison explains why.',
+    category: 'PUF Panels',
+    date: 'Jan 2, 2025',
+    readTime: '5 min read',
+    featured: true,
+  },
+  {
+    slug: 'how-puf-panels-reduce-energy-costs-factories',
+    title: 'How PUF Panels Reduce Energy Costs in Factories',
+    excerpt: 'Energy costs account for a significant portion of factory operating expenses. One of the most effective ways to reduce these costs is by using PUF panels for insulation.',
+    category: 'PUF Panels',
+    date: 'Dec 27, 2024',
+    readTime: '7 min read',
+    featured: true,
+  },
+  // Other featured posts
   {
     slug: 'rise-of-sustainable-peb-structures',
     title: 'The Rise of Sustainable PEB Structures in India',
@@ -20,7 +49,7 @@ const blogPosts = [
     category: 'PEB',
     date: 'Dec 28, 2024',
     readTime: '5 min read',
-    featured: true,
+    featured: false,
   },
   {
     slug: 'optimizing-cold-storage-energy-efficiency',
@@ -29,7 +58,26 @@ const blogPosts = [
     category: 'Cold Storage',
     date: 'Dec 20, 2024',
     readTime: '7 min read',
-    featured: true,
+    featured: false,
+  },
+  // More PUF Panel blogs
+  {
+    slug: 'puf-panel-thickness-guide-industrial-buildings',
+    title: 'PUF Panel Thickness Guide for Industrial Buildings',
+    excerpt: 'Choosing the correct PUF panel thickness is critical for insulation performance, compliance, and cost optimization. This guide helps you select the right thickness.',
+    category: 'PUF Panels',
+    date: 'Dec 20, 2024',
+    readTime: '8 min read',
+    featured: false,
+  },
+  {
+    slug: 'puf-panels-cold-storage-pharma-applications',
+    title: 'Applications of PUF Panels in Cold Storage & Pharma',
+    excerpt: 'Cold storage and pharmaceutical industries demand strict temperature control and hygiene standards. PUF panels are the preferred insulation solution in these sectors.',
+    category: 'PUF Panels',
+    date: 'Dec 15, 2024',
+    readTime: '8 min read',
+    featured: false,
   },
   {
     slug: 'cleanroom-design-best-practices',
@@ -38,7 +86,7 @@ const blogPosts = [
     category: 'Cleanroom',
     date: 'Dec 15, 2024',
     readTime: '8 min read',
-    featured: true,
+    featured: false,
   },
   {
     slug: 'choosing-right-insulated-panel',
@@ -87,7 +135,7 @@ const blogPosts = [
   },
 ];
 
-const categories = ['All', 'PEB', 'Cold Storage', 'Cleanroom', 'Panels', 'Safety', 'EPC', 'Doors'];
+const categories = ['All', 'PUF Panels', 'PEB', 'Cold Storage', 'Cleanroom', 'Panels', 'Safety', 'EPC', 'Doors'];
 
 export default function BlogsPage() {
   const featuredPosts = blogPosts.filter((post) => post.featured);

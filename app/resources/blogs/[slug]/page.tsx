@@ -11,9 +11,11 @@ interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
 }
 
-// Complete blog data with internal linking
+// Complete blog data with internal linking and FAQs
 const blogPosts: Record<string, {
   title: string;
+  metaTitle?: string;
+  metaDescription?: string;
   excerpt: string;
   content: string;
   category: string;
@@ -23,6 +25,7 @@ const blogPosts: Record<string, {
   keywords: string[];
   relatedProducts: { name: string; href: string }[];
   relatedSolutions: { name: string; href: string }[];
+  faqs?: { question: string; answer: string }[];
 }> = {
   'rise-of-sustainable-peb-structures': {
     title: 'The Rise of Sustainable PEB Structures in India',
@@ -727,6 +730,580 @@ const blogPosts: Record<string, {
     ],
     relatedSolutions: [],
   },
+  
+  // ========== PUF PANEL BLOG SERIES ==========
+  
+  'what-is-puf-panel-how-does-it-work': {
+    title: 'What Is a PUF Panel and How Does It Work?',
+    metaTitle: 'What Is a PUF Panel? Complete Guide to PUF Panels | PHOENIXX',
+    metaDescription: 'Learn what PUF panels are, how they work, and why they are the preferred insulation solution for cold storage, warehouses, cleanrooms, and industrial buildings in India.',
+    excerpt: 'PUF panels have become one of the most widely used construction materials in modern industrial and commercial infrastructure. Understanding what a PUF panel is and how it works helps businesses choose the right insulation solution.',
+    content: `
+      <h2>Introduction</h2>
+      <p><a href="/products/sandwich-panels/sandwich-puf-panel">PUF panels</a> have become one of the most widely used construction materials in modern industrial and commercial infrastructure. From cold storage facilities to warehouses and cleanrooms, PUF panels are preferred for their insulation efficiency, durability, and speed of installation. Understanding what a PUF panel is and how it works helps businesses choose the right insulation solution for long-term performance and cost savings.</p>
+      
+      <h2>What Is a PUF Panel?</h2>
+      <p>A PUF (Polyurethane Foam) panel is a factory-manufactured insulated sandwich panel made by injecting rigid polyurethane foam between two pre-painted metal sheets (GI/PPGI/SS). The foam core acts as a high-performance thermal barrier, while the metal sheets provide structural strength and surface durability.</p>
+      
+      <p>Key characteristics of <a href="/products/sandwich-panels/sandwich-puf-panel">PUF panels</a>:</p>
+      <ul>
+        <li><strong>Core Material:</strong> Rigid polyurethane foam (density 40±2 kg/m³)</li>
+        <li><strong>Facing:</strong> Pre-painted galvanized steel (PPGI/PPGL)</li>
+        <li><strong>Thermal Conductivity:</strong> 0.024 W/mK (excellent insulation)</li>
+        <li><strong>Available Thickness:</strong> 30mm to 150mm</li>
+      </ul>
+      
+      <h2>How Does a PUF Panel Work?</h2>
+      <p>PUF panels work on the principle of <strong>thermal resistance</strong>. The closed-cell polyurethane foam core significantly reduces heat transfer between the inside and outside environments. This makes PUF panels ideal for applications where temperature control, hygiene, and energy efficiency are critical.</p>
+      
+      <h3>Key Working Mechanisms:</h3>
+      <ul>
+        <li>Minimizes heat gain and heat loss through walls and roofs</li>
+        <li>Reduces HVAC and refrigeration load by up to 40%</li>
+        <li>Maintains consistent internal temperatures</li>
+        <li>Creates airtight building envelopes</li>
+        <li>Provides structural support and durability</li>
+      </ul>
+      
+      <h2>Where Are PUF Panels Used?</h2>
+      <p>PUF panels are widely used across industries:</p>
+      <ul>
+        <li><strong><a href="/solutions/cold-storage-construction">Cold Storage & Cold Rooms:</a></strong> Maintaining low temperatures efficiently</li>
+        <li><strong>Industrial Sheds & Warehouses:</strong> Thermal comfort and energy savings</li>
+        <li><strong><a href="/products/cleanroom-solutions">Cleanrooms & Pharmaceutical Plants:</a></strong> Hygienic, controlled environments</li>
+        <li><strong><a href="/industries/food-processing">Food Processing Facilities:</a></strong> Temperature and hygiene control</li>
+        <li><strong><a href="/solutions/peb">Prefabricated & Modular Buildings:</a></strong> Fast construction with insulation</li>
+      </ul>
+      
+      <h2>Benefits of Using PUF Panels</h2>
+      <table>
+        <tr><th>Benefit</th><th>Impact</th></tr>
+        <tr><td>Excellent Thermal Insulation</td><td>20-40% energy savings</td></tr>
+        <tr><td>Faster Construction Time</td><td>40-60% faster than conventional</td></tr>
+        <tr><td>Lower Operational Energy Costs</td><td>Reduced HVAC expenses</td></tr>
+        <tr><td>Long Service Life</td><td>25–30 years durability</td></tr>
+        <tr><td>Clean & Low-Maintenance</td><td>Easy to clean surfaces</td></tr>
+      </table>
+      
+      <h2>Why Choose PHOENIXX PUF Panels?</h2>
+      <p>As a leading <a href="/products/sandwich-panels/sandwich-puf-panel">PUF panel manufacturer in India</a>, PHOENIXX offers:</p>
+      <ul>
+        <li>High-density foam core (40 kg/m³) for superior insulation</li>
+        <li>Custom thicknesses from 30mm to 150mm</li>
+        <li>Multiple coating options (SMP, SDP, PVDF)</li>
+        <li>CFC & HFC-free environmentally friendly panels</li>
+        <li>Pan-India delivery and installation support</li>
+      </ul>
+      
+      <h2>Conclusion</h2>
+      <p>PUF panels are not just building materials—they are long-term energy-saving solutions. Choosing the right manufacturer and panel specification ensures optimal performance throughout the building's lifecycle.</p>
+      
+      <p><strong>Looking for premium PUF panels for your project?</strong> <a href="/get-a-quote">Contact PHOENIXX</a> for expert consultation and competitive pricing.</p>
+    `,
+    category: 'PUF Panels',
+    date: '2025-01-03',
+    readTime: '6 min read',
+    author: { name: 'Technical Team', role: 'PHOENIXX SmartBuild' },
+    keywords: ['PUF Panel', 'What is PUF Panel', 'PUF Panel Manufacturer India', 'Polyurethane Foam Panel', 'Insulated Sandwich Panel'],
+    relatedProducts: [
+      { name: 'Sandwich PUF Panels', href: '/products/sandwich-panels/sandwich-puf-panel' },
+      { name: 'Roofing PUF Panels', href: '/products/sandwich-panels/roofing-puf-panel' },
+      { name: 'Wall & Ceiling Panels', href: '/products/sandwich-panels/wall-ceiling-panel' },
+    ],
+    relatedSolutions: [
+      { name: 'Cold Storage Construction', href: '/solutions/cold-storage-construction' },
+      { name: 'Pre-Engineered Buildings', href: '/solutions/peb' },
+    ],
+    faqs: [
+      { question: 'What is a PUF panel made of?', answer: 'A PUF panel is made of rigid polyurethane foam (PUF) sandwiched between two pre-painted metal sheets. The foam core provides thermal insulation while the metal sheets offer structural strength and durability.' },
+      { question: 'How long do PUF panels last?', answer: 'High-quality PUF panels from reputable manufacturers like PHOENIXX can last 25-30 years or more with proper installation and minimal maintenance.' },
+      { question: 'Are PUF panels fire-resistant?', answer: 'Standard PUF panels have a Class E fire rating. For enhanced fire safety, PHOENIXX offers PIR panels (Class B-s1, d0) and Rockwool panels (Class A1 non-combustible) for fire-sensitive applications.' },
+      { question: 'What thickness of PUF panel should I use?', answer: 'The recommended thickness depends on your application: 30-40mm for partitions, 50-60mm for warehouses, 80-100mm for cold storage, and 120-150mm for freezers and deep cold rooms.' },
+    ],
+  },
+  
+  'puf-panel-vs-traditional-roofing-sheets': {
+    title: 'PUF Panel vs Traditional Roofing Sheets: Which Is Better?',
+    metaTitle: 'PUF Panel vs Traditional Roofing Sheets Comparison | PHOENIXX',
+    metaDescription: 'Compare PUF panels with traditional roofing sheets. Learn why PUF roofing panels offer better insulation, energy efficiency, and long-term ROI for industrial buildings.',
+    excerpt: 'Traditional roofing sheets have been used for decades, but rising energy costs and modern compliance requirements have pushed industries to adopt PUF panels. This comparison explains why.',
+    content: `
+      <h2>Introduction</h2>
+      <p>Traditional roofing sheets have been used for decades, but rising energy costs and modern compliance requirements have pushed industries to adopt <a href="/products/sandwich-panels/roofing-puf-panel">PUF roofing panels</a> instead of conventional roofing systems. This comparison explains why businesses are making the switch.</p>
+      
+      <h2>Traditional Roofing Sheets: Limitations</h2>
+      <p>Conventional metal roofing sheets (GI/PPGI) have several drawbacks:</p>
+      <ul>
+        <li><strong>High Heat Transfer:</strong> Metal conducts heat directly into the building</li>
+        <li><strong>Poor Insulation:</strong> No thermal barrier means extreme indoor temperatures</li>
+        <li><strong>Higher Indoor Temperatures:</strong> Can reach 10-15°C above ambient in summer</li>
+        <li><strong>Increased Cooling Costs:</strong> HVAC systems work overtime</li>
+        <li><strong>Condensation Issues:</strong> Temperature differential causes moisture problems</li>
+        <li><strong>Noise Transmission:</strong> Rain and hail create significant noise</li>
+      </ul>
+      
+      <h2>PUF Panels: A Modern Alternative</h2>
+      <p><a href="/products/sandwich-panels/roofing-puf-panel">PUF roofing panels</a> combine insulation and structure into a single system, reducing both construction time and energy consumption.</p>
+      
+      <h3>Key Advantages:</h3>
+      <ul>
+        <li>Built-in thermal insulation (0.024 W/mK)</li>
+        <li>Maintains stable indoor temperatures</li>
+        <li>Reduces cooling costs by 20-40%</li>
+        <li>Eliminates condensation issues</li>
+        <li>Excellent acoustic insulation</li>
+        <li>Faster installation (40-60% quicker)</li>
+      </ul>
+      
+      <h2>Head-to-Head Comparison</h2>
+      <table>
+        <tr><th>Parameter</th><th>Traditional Sheets</th><th>PUF Panels</th></tr>
+        <tr><td>Insulation</td><td>❌ None</td><td>✅ Excellent (0.024 W/mK)</td></tr>
+        <tr><td>Energy Efficiency</td><td>❌ Low</td><td>✅ High (20-40% savings)</td></tr>
+        <tr><td>Installation Speed</td><td>❌ Slow (multiple layers)</td><td>✅ Fast (single panel)</td></tr>
+        <tr><td>Maintenance</td><td>❌ High (corrosion, leaks)</td><td>✅ Low (durable surface)</td></tr>
+        <tr><td>Lifespan</td><td>10-15 years</td><td>25-30 years</td></tr>
+        <tr><td>Initial Cost</td><td>Lower</td><td>Higher</td></tr>
+        <tr><td>Total Cost of Ownership</td><td>❌ Higher (energy costs)</td><td>✅ Lower (energy savings)</td></tr>
+      </table>
+      
+      <h2>Why Industries Prefer PUF Panels</h2>
+      <p>Modern industries choose <a href="/products/sandwich-panels/roofing-puf-panel">PUF roof panels</a> for:</p>
+      <ul>
+        <li><strong>Stable Indoor Temperatures:</strong> Critical for manufacturing quality</li>
+        <li><strong>Lower HVAC Costs:</strong> Significant operational savings</li>
+        <li><strong>Compliance:</strong> Meeting cold chain & pharma norms</li>
+        <li><strong>Better Long-term ROI:</strong> Energy savings offset initial investment</li>
+        <li><strong>Worker Comfort:</strong> Improved productivity in comfortable environments</li>
+      </ul>
+      
+      <h2>Cost-Benefit Analysis</h2>
+      <p>While traditional roofing sheets appear cheaper initially, consider the total cost:</p>
+      <ul>
+        <li><strong>Year 1:</strong> PUF panels cost 30-40% more upfront</li>
+        <li><strong>Years 2-5:</strong> Energy savings begin offsetting the difference</li>
+        <li><strong>Years 5-10:</strong> PUF panels deliver net positive ROI</li>
+        <li><strong>Years 10-25:</strong> Continued savings without replacement costs</li>
+      </ul>
+      
+      <h2>PHOENIXX PUF Roofing Solutions</h2>
+      <p>As a leading <a href="/products/sandwich-panels/roofing-puf-panel">PUF roof panel manufacturer in India</a>, PHOENIXX provides:</p>
+      <ul>
+        <li>Trapezoidal profile roofing panels</li>
+        <li>Custom lengths up to 20 meters</li>
+        <li>Multiple thickness options (30-120mm)</li>
+        <li>Weather-resistant coatings (SMP, SDP, PVDF)</li>
+        <li>Engineering support for optimal panel selection</li>
+      </ul>
+      
+      <h2>Conclusion</h2>
+      <p>While traditional roofing sheets may appear cheaper initially, PUF panels deliver far greater value over time through energy savings, durability, and performance. For any industrial or commercial building, PUF roofing panels are the smarter long-term investment.</p>
+      
+      <p><strong>Ready to upgrade your roofing?</strong> <a href="/get-a-quote">Contact PHOENIXX</a> for a detailed comparison and quote for your project.</p>
+    `,
+    category: 'PUF Panels',
+    date: '2025-01-02',
+    readTime: '5 min read',
+    author: { name: 'Engineering Team', role: 'PHOENIXX SmartBuild' },
+    keywords: ['PUF Panel vs Metal Sheet', 'PUF Roofing Panel', 'Industrial Roofing', 'PUF Panel Manufacturer India', 'Energy Efficient Roofing'],
+    relatedProducts: [
+      { name: 'Roofing PUF Panels', href: '/products/sandwich-panels/roofing-puf-panel' },
+      { name: 'Sandwich PUF Panels', href: '/products/sandwich-panels/sandwich-puf-panel' },
+      { name: 'PIR Panels', href: '/products/sandwich-panels/pir-panel' },
+    ],
+    relatedSolutions: [
+      { name: 'Pre-Engineered Buildings', href: '/solutions/peb' },
+    ],
+    faqs: [
+      { question: 'Is PUF panel roofing more expensive than traditional sheets?', answer: 'PUF panels have a higher initial cost (30-40% more), but they deliver better ROI through energy savings of 20-40% annually, longer lifespan (25-30 years vs 10-15 years), and lower maintenance costs.' },
+      { question: 'Can PUF panels be used for both roofing and walls?', answer: 'Yes, PHOENIXX manufactures PUF panels for both roofing (trapezoidal profile) and wall applications (flat profile). Roofing panels have specific profiles for water drainage.' },
+      { question: 'How much can I save on energy costs with PUF roofing?', answer: 'Depending on the building type and climate, PUF roofing panels can reduce cooling costs by 20-40% compared to non-insulated metal roofing sheets.' },
+    ],
+  },
+  
+  'how-puf-panels-reduce-energy-costs-factories': {
+    title: 'How PUF Panels Reduce Energy Costs in Factories',
+    metaTitle: 'How PUF Panels Reduce Energy Costs in Factories | PHOENIXX',
+    metaDescription: 'Discover how PUF panels help factories reduce energy costs by 20-40%. Learn the science behind thermal insulation and calculate your potential savings.',
+    excerpt: 'Energy costs account for a significant portion of factory operating expenses. One of the most effective ways to reduce these costs is by using PUF panels for insulation.',
+    content: `
+      <h2>Introduction</h2>
+      <p>Energy costs account for a significant portion of factory operating expenses—often 30-40% of total overhead. One of the most effective ways to reduce these costs is by using <a href="/products/sandwich-panels/sandwich-puf-panel">PUF panels</a> for building insulation. This article explains the science and economics behind PUF panel energy savings.</p>
+      
+      <h2>The Energy Loss Problem in Factories</h2>
+      <p>Factories with conventional construction lose energy through:</p>
+      <ul>
+        <li><strong>Roofs:</strong> Up to 40% of heat gain/loss occurs through uninsulated roofs</li>
+        <li><strong>Walls:</strong> Another 25-35% through walls</li>
+        <li><strong>Poor Insulation Materials:</strong> Traditional fiberglass degrades over time</li>
+        <li><strong>Air Leakage:</strong> Gaps and joints allow conditioned air to escape</li>
+      </ul>
+      
+      <p>This forces HVAC systems to work harder, increasing electricity bills significantly. A typical 50,000 sq.ft factory can spend ₹15-25 lakhs annually on cooling alone.</p>
+      
+      <h2>How PUF Panels Save Energy</h2>
+      <p><a href="/products/sandwich-panels/sandwich-puf-panel">PUF panels</a> reduce energy costs through multiple mechanisms:</p>
+      
+      <h3>1. Superior Thermal Barrier</h3>
+      <ul>
+        <li>Thermal conductivity of just 0.024 W/mK</li>
+        <li>Closed-cell foam structure prevents heat transfer</li>
+        <li>Better R-value per inch than any other common insulation</li>
+      </ul>
+      
+      <h3>2. Airtight Construction</h3>
+      <ul>
+        <li>Interlocking panel joints minimize air leakage</li>
+        <li>Factory-controlled manufacturing ensures consistency</li>
+        <li>Eliminates thermal bridging at connections</li>
+      </ul>
+      
+      <h3>3. Stable Indoor Temperatures</h3>
+      <ul>
+        <li>Reduces temperature fluctuation</li>
+        <li>HVAC systems cycle less frequently</li>
+        <li>Consistent comfort for workers</li>
+      </ul>
+      
+      <h2>Energy Savings Data</h2>
+      <p>Studies and real-world projects show factories can save <strong>20–40% on cooling costs</strong> after switching to insulated panels:</p>
+      
+      <table>
+        <tr><th>Building Type</th><th>Typical Energy Savings</th></tr>
+        <tr><td>Manufacturing Units</td><td>20-30%</td></tr>
+        <tr><td>Warehouses</td><td>25-35%</td></tr>
+        <tr><td>Food Processing Plants</td><td>30-40%</td></tr>
+        <tr><td><a href="/solutions/cold-storage-construction">Cold Storage Facilities</a></td><td>35-45%</td></tr>
+      </table>
+      
+      <h2>Calculate Your Potential Savings</h2>
+      <p>For a typical factory spending ₹20 lakhs/year on cooling:</p>
+      <ul>
+        <li>30% savings = ₹6 lakhs/year</li>
+        <li>Over 10 years = ₹60 lakhs saved</li>
+        <li>Over 25-year panel life = ₹1.5 Crores saved</li>
+      </ul>
+      
+      <h2>Ideal Applications for Maximum Savings</h2>
+      <p><a href="/products/sandwich-panels/sandwich-puf-panel">PUF panel insulation</a> delivers the best ROI in:</p>
+      <ul>
+        <li><strong>Manufacturing Units:</strong> Temperature-sensitive processes</li>
+        <li><strong>Warehouses:</strong> Large surface area = large savings</li>
+        <li><strong><a href="/industries/food-processing">Food Processing Plants:</a></strong> Hygiene + temperature control</li>
+        <li><strong>Cold Chain Infrastructure:</strong> Critical temperature maintenance</li>
+        <li><strong><a href="/industries/pharma-chemical">Pharmaceutical Facilities:</a></strong> Compliance + energy efficiency</li>
+      </ul>
+      
+      <h2>PHOENIXX Energy-Efficient Solutions</h2>
+      <p>As a leading <a href="/products/sandwich-panels/sandwich-puf-panel">PUF panel manufacturer in India</a>, PHOENIXX helps factories optimize energy consumption with:</p>
+      <ul>
+        <li>High-density PUF panels (40 kg/m³) for maximum insulation</li>
+        <li>Custom thickness selection based on thermal calculations</li>
+        <li>Complete wall and roof panel systems</li>
+        <li>Professional installation for airtight construction</li>
+        <li>Energy audit support for existing buildings</li>
+      </ul>
+      
+      <h2>Conclusion</h2>
+      <p>Installing PUF panels is a one-time investment that delivers continuous energy savings year after year. For factories looking to reduce operating costs and improve sustainability, PUF panel insulation is one of the smartest investments available.</p>
+      
+      <p><strong>Want to calculate your potential savings?</strong> <a href="/get-a-quote">Contact PHOENIXX</a> for a free energy assessment and quote.</p>
+    `,
+    category: 'PUF Panels',
+    date: '2024-12-27',
+    readTime: '7 min read',
+    author: { name: 'Energy Solutions Team', role: 'PHOENIXX SmartBuild' },
+    keywords: ['PUF Panel Energy Savings', 'Factory Insulation', 'Industrial Energy Efficiency', 'PUF Panel Manufacturer India', 'Reduce Factory Energy Costs'],
+    relatedProducts: [
+      { name: 'Sandwich PUF Panels', href: '/products/sandwich-panels/sandwich-puf-panel' },
+      { name: 'Roofing PUF Panels', href: '/products/sandwich-panels/roofing-puf-panel' },
+      { name: 'PIR Panels', href: '/products/sandwich-panels/pir-panel' },
+    ],
+    relatedSolutions: [
+      { name: 'Pre-Engineered Buildings', href: '/solutions/peb' },
+      { name: 'Cold Storage Construction', href: '/solutions/cold-storage-construction' },
+    ],
+    faqs: [
+      { question: 'How much can PUF panels reduce my factory energy costs?', answer: 'Depending on your current insulation and climate, PUF panels can reduce cooling costs by 20-40%. A factory spending ₹20 lakhs/year on cooling could save ₹4-8 lakhs annually.' },
+      { question: 'How long does it take to recover the investment in PUF panels?', answer: 'Most factories see full ROI within 3-5 years through energy savings. The panels then continue saving money for another 20-25 years.' },
+      { question: 'Can I retrofit PUF panels on an existing factory?', answer: 'Yes, PUF panels can be installed over existing structures or as replacement for old roofing/walls. PHOENIXX provides retrofit solutions with minimal production disruption.' },
+    ],
+  },
+  
+  'puf-panel-thickness-guide-industrial-buildings': {
+    title: 'PUF Panel Thickness Guide for Industrial Buildings',
+    metaTitle: 'PUF Panel Thickness Guide: How to Choose the Right Thickness | PHOENIXX',
+    metaDescription: 'Complete guide to selecting the right PUF panel thickness for your industrial building. Learn thickness recommendations for warehouses, cold storage, cleanrooms, and more.',
+    excerpt: 'Choosing the correct PUF panel thickness is critical for insulation performance, compliance, and cost optimization. This guide helps you select the right thickness based on application.',
+    content: `
+      <h2>Introduction</h2>
+      <p>Choosing the correct <a href="/products/sandwich-panels/sandwich-puf-panel">PUF panel</a> thickness is critical for insulation performance, regulatory compliance, and cost optimization. This comprehensive guide helps you select the right thickness based on your specific application and requirements.</p>
+      
+      <h2>Common PUF Panel Thickness Options</h2>
+      <p>PHOENIXX manufactures <a href="/products/sandwich-panels/sandwich-puf-panel">PUF panels</a> in the following standard thicknesses:</p>
+      
+      <table>
+        <tr><th>Thickness</th><th>Best Applications</th><th>R-Value (m²K/W)</th></tr>
+        <tr><td><strong>30-40 mm</strong></td><td>Office partitions, light insulation, interior walls</td><td>1.25-1.67</td></tr>
+        <tr><td><strong>50-60 mm</strong></td><td>Warehouses, industrial sheds, commercial buildings</td><td>2.08-2.50</td></tr>
+        <tr><td><strong>80-100 mm</strong></td><td>Cold storage (+2°C to +8°C), temperature-controlled areas</td><td>3.33-4.17</td></tr>
+        <tr><td><strong>120-150 mm</strong></td><td>Freezers (-18°C to -25°C), deep cold rooms</td><td>5.00-6.25</td></tr>
+      </table>
+      
+      <h2>How to Choose the Right Thickness</h2>
+      <p>Consider these factors when selecting PUF panel thickness:</p>
+      
+      <h3>1. Temperature Differential</h3>
+      <p>The greater the difference between inside and outside temperatures, the thicker the panel needed:</p>
+      <ul>
+        <li><strong>Small difference (5-10°C):</strong> 40-50mm panels</li>
+        <li><strong>Moderate difference (15-25°C):</strong> 60-80mm panels</li>
+        <li><strong>Large difference (30-50°C):</strong> 100-150mm panels</li>
+      </ul>
+      
+      <h3>2. Climate Conditions</h3>
+      <ul>
+        <li><strong>Hot climates (Gujarat, Rajasthan):</strong> +10-20mm additional thickness recommended</li>
+        <li><strong>Moderate climates:</strong> Standard thickness sufficient</li>
+        <li><strong>High humidity areas:</strong> Consider vapor barriers</li>
+      </ul>
+      
+      <h3>3. Energy Efficiency Goals</h3>
+      <ul>
+        <li><strong>Basic compliance:</strong> Minimum recommended thickness</li>
+        <li><strong>Energy optimization:</strong> +20-30% thicker panels</li>
+        <li><strong>Green building certification:</strong> Maximum practical thickness</li>
+      </ul>
+      
+      <h3>4. Regulatory Requirements</h3>
+      <ul>
+        <li><strong><a href="/industries/pharma-chemical">Pharmaceutical facilities:</a></strong> CGMP-specified insulation values</li>
+        <li><strong><a href="/industries/food-processing">Food processing:</a></strong> FSSAI/HACCP temperature requirements</li>
+        <li><strong><a href="/solutions/cold-storage-construction">Cold storage:</a></strong> WDRA/NHB specifications</li>
+      </ul>
+      
+      <h2>Application-Specific Recommendations</h2>
+      
+      <h3>Warehouses & Industrial Sheds</h3>
+      <ul>
+        <li><strong>Roof panels:</strong> 50-60mm PUF</li>
+        <li><strong>Wall panels:</strong> 40-50mm PUF</li>
+        <li><strong>Key benefit:</strong> Reduced cooling load, worker comfort</li>
+      </ul>
+      
+      <h3>Cold Storage (Chilled: +2°C to +8°C)</h3>
+      <ul>
+        <li><strong>Roof panels:</strong> 100mm PUF or <a href="/products/sandwich-panels/pir-panel">PIR</a></li>
+        <li><strong>Wall panels:</strong> 80-100mm PUF or PIR</li>
+        <li><strong>Floor insulation:</strong> 100mm with vapor barrier</li>
+      </ul>
+      
+      <h3>Freezer Rooms (-18°C to -25°C)</h3>
+      <ul>
+        <li><strong>Roof panels:</strong> 150mm <a href="/products/sandwich-panels/pir-panel">PIR panels</a></li>
+        <li><strong>Wall panels:</strong> 120-150mm PIR</li>
+        <li><strong>Floor insulation:</strong> 150mm with heating cables</li>
+      </ul>
+      
+      <h3>Deep Freeze (-35°C to -40°C)</h3>
+      <ul>
+        <li><strong>All surfaces:</strong> 175-200mm PIR panels</li>
+        <li><strong>Critical:</strong> Professional vapor barrier installation</li>
+      </ul>
+      
+      <h2>Cost vs Performance Analysis</h2>
+      <p>While thicker panels cost more upfront, they offer higher energy savings and faster ROI in temperature-critical applications:</p>
+      
+      <table>
+        <tr><th>Scenario</th><th>Additional Cost</th><th>Annual Savings</th><th>Payback</th></tr>
+        <tr><td>50mm → 80mm (Warehouse)</td><td>+15%</td><td>10-15% energy</td><td>3-4 years</td></tr>
+        <tr><td>80mm → 100mm (Cold Storage)</td><td>+20%</td><td>15-20% energy</td><td>2-3 years</td></tr>
+        <tr><td>100mm → 150mm (Freezer)</td><td>+25%</td><td>20-25% energy</td><td>2-3 years</td></tr>
+      </table>
+      
+      <h2>PHOENIXX Panel Thickness Options</h2>
+      <p>PHOENIXX offers <a href="/products/sandwich-panels/sandwich-puf-panel">PUF panels</a> and <a href="/products/sandwich-panels/pir-panel">PIR panels</a> in all standard thicknesses:</p>
+      <ul>
+        <li>30, 40, 50, 60, 80, 100, 120, 150mm standard options</li>
+        <li>Custom thicknesses available for special requirements</li>
+        <li>Technical support for optimal thickness selection</li>
+        <li>Thermal calculations and energy modeling</li>
+      </ul>
+      
+      <h2>Conclusion</h2>
+      <p>Selecting the right panel thickness ensures optimal insulation, regulatory compliance, and operating efficiency. Don't compromise on thickness for short-term cost savings—the right insulation pays for itself through energy savings.</p>
+      
+      <p><strong>Need help selecting the right thickness?</strong> <a href="/get-a-quote">Contact PHOENIXX</a> for free technical consultation and thermal calculations.</p>
+    `,
+    category: 'PUF Panels',
+    date: '2024-12-20',
+    readTime: '8 min read',
+    author: { name: 'Technical Team', role: 'PHOENIXX SmartBuild' },
+    keywords: ['PUF Panel Thickness', 'PUF Panel Specifications', 'Cold Storage Insulation', 'PUF Panel Price per sq ft India', 'Industrial Insulation Guide'],
+    relatedProducts: [
+      { name: 'Sandwich PUF Panels', href: '/products/sandwich-panels/sandwich-puf-panel' },
+      { name: 'PIR Panels', href: '/products/sandwich-panels/pir-panel' },
+      { name: 'Roofing PUF Panels', href: '/products/sandwich-panels/roofing-puf-panel' },
+    ],
+    relatedSolutions: [
+      { name: 'Cold Storage Construction', href: '/solutions/cold-storage-construction' },
+      { name: 'Pre-Engineered Buildings', href: '/solutions/peb' },
+    ],
+    faqs: [
+      { question: 'What PUF panel thickness is best for a warehouse?', answer: 'For standard warehouses in India, 50-60mm PUF panels for roofing and 40-50mm for walls provide good insulation and cost efficiency. In hotter regions, consider 60-80mm for better energy savings.' },
+      { question: 'What thickness is required for cold storage?', answer: 'Cold storage (+2°C to +8°C) typically requires 80-100mm PUF/PIR panels. Freezer rooms (-18°C to -25°C) need 120-150mm panels for optimal efficiency and compliance.' },
+      { question: 'Does thicker always mean better?', answer: 'Thicker panels provide better insulation but cost more. The optimal thickness balances thermal requirements, budget, and payback period. PHOENIXX engineers can help calculate the most cost-effective option for your specific application.' },
+      { question: 'What is the price difference between thicknesses?', answer: 'Generally, each 20mm increase in thickness adds approximately 15-20% to the panel cost. However, thicker panels also provide proportionally better insulation and energy savings.' },
+    ],
+  },
+  
+  'puf-panels-cold-storage-pharma-applications': {
+    title: 'Applications of PUF Panels in Cold Storage & Pharma',
+    metaTitle: 'PUF Panels for Cold Storage & Pharmaceutical Applications | PHOENIXX',
+    metaDescription: 'Learn how PUF panels are used in cold storage and pharmaceutical facilities. Understand compliance requirements, panel specifications, and why PUF is essential for these industries.',
+    excerpt: 'Cold storage and pharmaceutical industries demand strict temperature control and hygiene standards. PUF panels are the preferred insulation solution in these sectors.',
+    content: `
+      <h2>Introduction</h2>
+      <p>Cold storage and pharmaceutical industries demand strict temperature control and hygiene standards that conventional construction cannot deliver. <a href="/products/sandwich-panels/sandwich-puf-panel">PUF panels</a> are the preferred insulation solution in these sectors due to their thermal performance, clean surfaces, and compliance capabilities.</p>
+      
+      <h2>Cold Storage Applications</h2>
+      <p><a href="/solutions/cold-storage-construction">Cold storage facilities</a> using PUF panels include:</p>
+      
+      <h3>Chillers & Cold Rooms (+2°C to +8°C)</h3>
+      <ul>
+        <li>Dairy product storage</li>
+        <li>Fresh produce holding</li>
+        <li>Pharmaceutical warehousing</li>
+        <li><strong>Recommended:</strong> 80-100mm <a href="/products/sandwich-panels/pir-panel">PIR panels</a></li>
+      </ul>
+      
+      <h3>Freezer Rooms (-18°C to -25°C)</h3>
+      <ul>
+        <li>Frozen food storage</li>
+        <li>Ice cream holding</li>
+        <li>Meat & seafood processing</li>
+        <li><strong>Recommended:</strong> 120-150mm PIR panels</li>
+      </ul>
+      
+      <h3>Frozen Warehouses (-25°C to -40°C)</h3>
+      <ul>
+        <li>Deep freeze storage</li>
+        <li>Blast freezing chambers</li>
+        <li>Cold chain distribution hubs</li>
+        <li><strong>Recommended:</strong> 150-200mm PIR panels</li>
+      </ul>
+      
+      <h3>Key Benefits for Cold Storage</h3>
+      <p><a href="/products/sandwich-panels/sandwich-puf-panel">PUF panels</a> prevent temperature fluctuation and reduce refrigeration energy consumption by:</p>
+      <ul>
+        <li>Maintaining precise temperature control (±1°C)</li>
+        <li>Reducing refrigeration load by 30-40%</li>
+        <li>Eliminating condensation and moisture problems</li>
+        <li>Providing airtight construction</li>
+        <li>Enabling quick installation (minimal downtime)</li>
+      </ul>
+      
+      <h2>Pharmaceutical & Cleanroom Applications</h2>
+      <p><a href="/products/cleanroom-solutions">Cleanroom facilities</a> using PUF panels include:</p>
+      
+      <h3>Manufacturing Units</h3>
+      <ul>
+        <li>Tablet & capsule production areas</li>
+        <li>Injectable manufacturing suites</li>
+        <li>API processing facilities</li>
+      </ul>
+      
+      <h3>Labs & R&D Facilities</h3>
+      <ul>
+        <li>Quality control laboratories</li>
+        <li>Research cleanrooms</li>
+        <li>Stability chambers</li>
+      </ul>
+      
+      <h3>Storage & Packaging</h3>
+      <ul>
+        <li>Finished goods storage</li>
+        <li>Primary packaging areas</li>
+        <li>Temperature-controlled warehouses</li>
+      </ul>
+      
+      <h3>Key Features for Pharma Applications</h3>
+      <p><a href="/products/sandwich-panels/sandwich-puf-panel">PUF panels</a> for <a href="/industries/pharma-chemical">pharmaceutical facilities</a> offer:</p>
+      <ul>
+        <li><strong>Smooth, Non-Porous Surfaces:</strong> Easy to clean and sanitize</li>
+        <li><strong>Airtight Joints:</strong> Maintains pressure differentials</li>
+        <li><strong>HVAC Compatibility:</strong> Integrates with cleanroom air handling</li>
+        <li><strong>Flush Panel Design:</strong> No ledges for dust accumulation</li>
+        <li><strong>Chemical Resistance:</strong> Withstands cleaning agents</li>
+      </ul>
+      
+      <h2>Regulatory & Performance Benefits</h2>
+      
+      <h3>Compliance Standards</h3>
+      <table>
+        <tr><th>Industry</th><th>Standards</th><th>PUF Panel Role</th></tr>
+        <tr><td>Pharma</td><td>WHO GMP, Schedule M, US FDA 21 CFR</td><td>Clean surfaces, temperature control</td></tr>
+        <tr><td>Food</td><td>FSSAI, HACCP, ISO 22000</td><td>Hygiene, cold chain integrity</td></tr>
+        <tr><td>Cold Storage</td><td>WDRA, NHB Guidelines</td><td>Insulation, energy efficiency</td></tr>
+      </table>
+      
+      <h3>Performance Benefits</h3>
+      <ul>
+        <li><strong>Reduced Contamination Risk:</strong> Sealed surfaces prevent microbial growth</li>
+        <li><strong>Energy Efficiency:</strong> Lower operating costs</li>
+        <li><strong>Long-term Operational Stability:</strong> Consistent performance over 25+ years</li>
+        <li><strong>Quick Installation:</strong> Faster project completion</li>
+        <li><strong>Compliance Documentation:</strong> Material certificates for audits</li>
+      </ul>
+      
+      <h2>PHOENIXX Solutions for Cold Storage & Pharma</h2>
+      <p>As the <a href="/products/sandwich-panels/sandwich-puf-panel">best PUF panel manufacturer in India</a> for controlled environment applications, PHOENIXX provides:</p>
+      
+      <h3>Products</h3>
+      <ul>
+        <li><a href="/products/sandwich-panels/sandwich-puf-panel">Sandwich PUF Panels</a> for walls and ceilings</li>
+        <li><a href="/products/sandwich-panels/pir-panel">PIR Panels</a> for enhanced fire safety</li>
+        <li><a href="/products/doors/cleanroom-door">Cleanroom Doors</a> with airtight seals</li>
+        <li><a href="/products/cleanroom-solutions/cleanroom-false-ceiling">Cleanroom False Ceilings</a></li>
+        <li><a href="/products/cleanroom-solutions/cleanroom-flooring">Cleanroom Flooring Systems</a></li>
+      </ul>
+      
+      <h3>Services</h3>
+      <ul>
+        <li>Design and engineering consultation</li>
+        <li>Thermal load calculations</li>
+        <li>Turnkey installation</li>
+        <li>Compliance documentation support</li>
+        <li>After-sales maintenance</li>
+      </ul>
+      
+      <h2>Conclusion</h2>
+      <p>For cold storage and pharmaceutical projects, PUF panels are not optional—they are essential for efficiency, safety, and compliance. Choosing a quality manufacturer ensures your facility meets all regulatory requirements while optimizing operating costs.</p>
+      
+      <p><strong>Planning a cold storage or pharma project?</strong> <a href="/get-a-quote">Contact PHOENIXX</a> for expert guidance and compliant solutions.</p>
+    `,
+    category: 'PUF Panels',
+    date: '2024-12-15',
+    readTime: '8 min read',
+    author: { name: 'Projects Team', role: 'PHOENIXX SmartBuild' },
+    keywords: ['Cold Storage PUF Panel', 'Pharmaceutical Cleanroom Panels', 'PUF Panel Manufacturer India', 'GMP Compliant Panels', 'Cold Room Insulation'],
+    relatedProducts: [
+      { name: 'Sandwich PUF Panels', href: '/products/sandwich-panels/sandwich-puf-panel' },
+      { name: 'PIR Panels', href: '/products/sandwich-panels/pir-panel' },
+      { name: 'Cleanroom Doors', href: '/products/doors/cleanroom-door' },
+      { name: 'Cleanroom Partitions', href: '/products/cleanroom-solutions/cleanroom-partition' },
+    ],
+    relatedSolutions: [
+      { name: 'Cold Storage Construction', href: '/solutions/cold-storage-construction' },
+      { name: 'Cleanroom Construction', href: '/solutions/cleanroom-construction' },
+    ],
+    faqs: [
+      { question: 'Are PUF panels suitable for GMP-compliant pharmaceutical facilities?', answer: 'Yes, PHOENIXX PUF panels meet WHO GMP, Schedule M, and US FDA requirements. They provide smooth, non-porous surfaces that are easy to clean and sanitize, making them ideal for pharmaceutical manufacturing and cleanroom applications.' },
+      { question: 'What panel thickness is recommended for cold storage?', answer: 'For chilled storage (+2°C to +8°C), 80-100mm PIR panels are recommended. For freezer rooms (-18°C to -25°C), use 120-150mm panels. Deep freeze applications may require 150-200mm panels.' },
+      { question: 'Can PUF panels maintain sterile conditions in cleanrooms?', answer: 'Yes, PUF panels with flush joints and smooth surfaces help maintain cleanroom conditions. Combined with proper air handling, sealing, and cleaning protocols, they support ISO Class 5-8 cleanroom classifications.' },
+      { question: 'What certifications should I look for in cold storage panels?', answer: 'Look for panels with fire safety certifications (Class B or better), thermal conductivity certificates, and material compliance documentation. PHOENIXX provides all necessary certificates for regulatory compliance and insurance purposes.' },
+    ],
+  },
 };
 
 async function getBlogPost(slug: string) {
@@ -742,10 +1319,17 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   }
 
   return {
-    title: post.title,
-    description: post.excerpt,
+    title: post.metaTitle || post.title,
+    description: post.metaDescription || post.excerpt,
     keywords: post.keywords,
     alternates: { canonical: `/resources/blogs/${slug}` },
+    openGraph: {
+      title: post.metaTitle || post.title,
+      description: post.metaDescription || post.excerpt,
+      type: 'article',
+      publishedTime: post.date,
+      authors: [post.author.name],
+    },
   };
 }
 
@@ -782,12 +1366,27 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     },
   };
 
+  // FAQ Schema (if FAQs exist)
+  const faqSchema = post.faqs && post.faqs.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: post.faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  } : null;
+
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
         <JsonLd data={breadcrumbSchema} />
         <JsonLd data={articleSchema} />
+        {faqSchema && <JsonLd data={faqSchema} />}
 
         <AISummaryBlock
           summary={`${post.title}: ${post.excerpt}`}
@@ -841,6 +1440,25 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   className="prose-custom prose prose-slate prose-lg prose-a:text-primary prose-a:no-underline hover:prose-a:underline"
                   dangerouslySetInnerHTML={{ __html: post.content }}
                 />
+                
+                {/* FAQ Section */}
+                {post.faqs && post.faqs.length > 0 && (
+                  <div className="mt-12 pt-8 border-t border-slate-200">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-6">
+                      Frequently Asked Questions
+                    </h2>
+                    <div className="space-y-6">
+                      {post.faqs.map((faq, idx) => (
+                        <div key={idx} className="bg-slate-50 rounded-xl p-6">
+                          <h3 className="font-semibold text-slate-900 mb-2">
+                            {faq.question}
+                          </h3>
+                          <p className="text-slate-600">{faq.answer}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* Sidebar */}
