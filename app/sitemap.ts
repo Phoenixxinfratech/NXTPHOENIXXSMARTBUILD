@@ -142,6 +142,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
+  // Shop pages (E-commerce style with pricing)
+  const shopPages: MetadataRoute.Sitemap = [
+    { url: `${baseUrl}/shop`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${baseUrl}/shop/sandwich-puf-panel`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${baseUrl}/shop/roofing-puf-panel`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${baseUrl}/shop/rockwool-panel`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${baseUrl}/shop/pir-panel`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${baseUrl}/shop/fm-approved-panel`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+  ];
+
   // Legal/Utility pages
   const utilityPages: MetadataRoute.Sitemap = [
     { url: `${baseUrl}/privacy-policy`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
@@ -161,6 +171,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...seoAuthorityPages,
     ...cityLandingPages,
     ...productLocationPages,
+    ...shopPages,
     ...utilityPages,
   ];
 }

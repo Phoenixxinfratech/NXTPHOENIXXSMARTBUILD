@@ -108,12 +108,14 @@ export default async function ProductLocationPage({ params }: { params: Promise<
   // Generate FAQs
   const faqs = generateFAQs(product, location);
   
-  // Schema markup
+  // Schema markup - Product schema WITHOUT offers (to avoid Google validation errors)
+  // Pricing info available on dedicated /shop/ pages
   const productSchema = {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: `${product.name} in ${location.name}`,
     description: product.description,
+    image: 'https://phoenixxsmartbuild.com/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
     brand: {
       '@type': 'Brand',
       name: 'PHOENIXX SMARTBUILD',
@@ -123,14 +125,15 @@ export default async function ProductLocationPage({ params }: { params: Promise<
       name: 'PHOENIXX SMARTBUILD',
       url: 'https://phoenixxsmartbuild.com',
     },
-    offers: {
-      '@type': 'Offer',
-      availability: 'https://schema.org/InStock',
-      priceCurrency: 'INR',
-      areaServed: {
-        '@type': location.type === 'country' ? 'Country' : location.type === 'state' ? 'State' : 'City',
-        name: location.name,
-      },
+    category: 'Industrial Insulated Panels',
+    material: product.slug.includes('rockwool') ? 'Mineral Wool' : product.slug.includes('pir') ? 'Polyisocyanurate Foam' : 'Polyurethane Foam',
+    audience: {
+      '@type': 'BusinessAudience',
+      audienceType: 'Industrial Buyers, EPC Contractors, Architects',
+    },
+    areaServed: {
+      '@type': location.type === 'country' ? 'Country' : location.type === 'state' ? 'State' : 'City',
+      name: location.name,
     },
   };
   
@@ -596,6 +599,19 @@ export default async function ProductLocationPage({ params }: { params: Promise<
               <span>📧 sales@phoenixxsmartbuild.com</span>
               <span>📞 +91 97277 00442</span>
               <span>📞 +91 93289 15237</span>
+            </div>
+            
+            {/* Link to Shop Page for Pricing */}
+            <div className="mt-8 pt-6 border-t border-white/20">
+              <Link
+                href={`/shop/${parsed.productSlug}`}
+                className="inline-flex items-center gap-2 text-white/90 hover:text-white transition-colors"
+              >
+                💰 View pricing & specifications for {product.name}
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
             </div>
           </div>
         </section>
