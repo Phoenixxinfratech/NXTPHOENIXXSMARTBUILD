@@ -127,9 +127,22 @@ const nextConfig = {
     return [];
   },
 
-  // Rewrites configuration (add your rewrites here)
+  // Rewrites configuration - Sitemap URL rewrites
   async rewrites() {
-    return [];
+    return [
+      {
+        source: '/sitemap-core.xml',
+        destination: '/sitemap-core',
+      },
+      {
+        source: '/sitemap-shop.xml',
+        destination: '/sitemap-shop',
+      },
+      {
+        source: '/sitemap-geo.xml',
+        destination: '/sitemap-geo',
+      },
+    ];
   },
 };
 
