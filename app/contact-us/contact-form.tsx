@@ -6,58 +6,55 @@ import Link from 'next/link';
 
 export function ContactForm() {
   const router = useRouter();
-  const [formData, setFormData] = useState({
-    name: '',
-    company: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: '',
-  });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setError(null);
 
-    try {
-      const response = await fetch('/api/lead', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...formData,
-          source: 'Contact Us Form',
-          formType: 'contact',
-        }),
-      });
+    const form = e.currentTarget;
+    const formData = new FormData(form);
 
-      const result = await response.json();
+    try {
+      // Submit to Netlify Forms
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString(),
+      });
 
       if (response.ok) {
         router.push('/thank-you?formType=contact');
       } else {
-        setError(result.error || 'An unexpected error occurred.');
+        setError('Submission failed. Please try again.');
       }
     } catch (err) {
       console.error('Form submission error:', err);
-      setError('Failed to submit the form. Please try again later.');
+      setError('Failed to submit. Please try again or contact us directly.');
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <form className="mt-8 space-y-6" onSubmit={handleSubmit} data-netlify="true" name="contact">
+    <form 
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      onSubmit={handleSubmit}
+      className="mt-8 space-y-6"
+    >
+      {/* Hidden fields for Netlify */}
       <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="subject" value="New Contact Form Submission" />
+      <p className="hidden">
+        <label>
+          Don&apos;t fill this out: <input name="bot-field" />
+        </label>
+      </p>
       
       <div className="grid gap-6 sm:grid-cols-2">
         <div>
@@ -71,8 +68,6 @@ export function ContactForm() {
             required
             className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
             placeholder="Your name"
-            value={formData.name}
-            onChange={handleChange}
           />
         </div>
         <div>
@@ -85,8 +80,6 @@ export function ContactForm() {
             name="company"
             className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
             placeholder="Your company"
-            value={formData.company}
-            onChange={handleChange}
           />
         </div>
       </div>
@@ -103,8 +96,6 @@ export function ContactForm() {
             required
             className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
             placeholder="you@example.com"
-            value={formData.email}
-            onChange={handleChange}
           />
         </div>
         <div>
@@ -117,8 +108,6 @@ export function ContactForm() {
             name="phone"
             className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
             placeholder="+91 XXXXX XXXXX"
-            value={formData.phone}
-            onChange={handleChange}
           />
         </div>
       </div>
@@ -129,11 +118,9 @@ export function ContactForm() {
         </label>
         <select
           id="subject"
-          name="subject"
+          name="inquiry-type"
           required
           className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-          value={formData.subject}
-          onChange={handleChange}
         >
           <option value="">Select a subject</option>
           <option value="quote">Request a Quote</option>
@@ -156,17 +143,19 @@ export function ContactForm() {
           rows={5}
           className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
           placeholder="Tell us about your project or inquiry..."
-          value={formData.message}
-          onChange={handleChange}
         />
       </div>
 
-      {error && <p className="text-red-500 text-center">{error}</p>}
+      {error && (
+        <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
+          <p className="text-red-600 text-center">{error}</p>
+        </div>
+      )}
 
       <button
         type="submit"
-        className="w-full rounded-lg bg-gradient-to-r from-blue-600 to-emerald-600 px-6 py-4 font-semibold text-white shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed"
         disabled={isSubmitting}
+        className="w-full rounded-lg bg-gradient-to-r from-blue-600 to-emerald-600 px-6 py-4 font-semibold text-white shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {isSubmitting ? 'Sending...' : 'Send Message'}
       </button>
@@ -181,4 +170,3 @@ export function ContactForm() {
     </form>
   );
 }
-

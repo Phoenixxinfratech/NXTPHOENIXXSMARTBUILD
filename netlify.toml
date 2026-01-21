@@ -8,7 +8,7 @@
   # Directory that contains the deploy-ready built files
   publish = ".next"
 
-# Next.js requires the Essential Next.js plugin
+# Next.js requires the Essential Next.js plugin (pinned to v4.x)
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
@@ -101,6 +101,35 @@
 # ============================================
 # Netlify Forms Configuration
 # ============================================
+# 
+# IMPORTANT: Email Notifications Setup (Configure in Netlify Dashboard)
+# Go to: Site settings > Forms > Form notifications
+#
+# Form: quote-request
+#   - Email to: info@phoenixxsmartbuild.com, sales@phoenixxsmartbuild.com
+#   - Subject: New Quote Request from Website
+#
+# Form: contact
+#   - Email to: info@phoenixxsmartbuild.com, sales@phoenixxsmartbuild.com
+#   - Subject: New Contact Form Submission
+#
+# Form: career-application
+#   - Email to: hr@phoenixxsmartbuild.com
+#   - Subject: New Career Application from Website
+#
+# Form: partner-application
+#   - Email to: sales@phoenixxsmartbuild.com
+#   - Subject: New Partner Application from Website
+#
+# Form: vendor-registration
+#   - Email to: accounts@phoenixxsmartbuild.com
+#   - Subject: New Vendor Registration from Website
+#
+# Form: newsletter
+#   - Email to: info@phoenixxsmartbuild.com
+#   - Subject: New Newsletter Subscription
+# ============================================
+
 [build.processing]
   skip_processing = false
 
@@ -115,10 +144,6 @@
 [build.processing.html]
   pretty_urls = true
 
-# Netlify Forms Spam Filter
-[build.processing.form_detection]
-  form_detection = "true"
-
 # Functions configuration
 [functions]
   directory = "netlify/functions"
@@ -130,4 +155,3 @@
   port = 3000
   targetPort = 3000
   autoLaunch = false
-

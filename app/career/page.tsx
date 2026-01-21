@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
+import { CareerForm } from './career-form';
 
 export const metadata: Metadata = {
   title: 'Careers at PHOENIXX | Join Our Team',
@@ -251,6 +252,29 @@ export default function CareerPage() {
           </div>
         </section>
 
+        {/* Application Form Section */}
+        <section id="apply" className="section-padding bg-slate-50">
+          <div className="container-custom">
+            <div className="max-w-3xl mx-auto">
+              <div className="text-center mb-10">
+                <span className="inline-block px-4 py-1 rounded-full bg-purple-100 text-purple-700 text-sm font-medium mb-4">
+                  Apply Now
+                </span>
+                <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
+                  Submit Your Application
+                </h2>
+                <p className="mt-4 text-slate-600">
+                  Fill out the form below to apply for a position at PHOENIXX. Our HR team will review your application and get back to you within 7 working days.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10">
+                <CareerForm />
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-purple-600 to-pink-600">
           <div className="container-custom text-center">
@@ -260,12 +284,18 @@ export default function CareerPage() {
             <p className="mt-4 text-purple-100 max-w-2xl mx-auto">
               Join PHOENIXX and be part of a team that&apos;s building the future of industrial infrastructure.
             </p>
-            <div className="mt-8">
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#openings"
                 className="btn-white !text-purple-600"
               >
-                Explore Opportunities
+                View Openings
+              </a>
+              <a
+                href="#apply"
+                className="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors"
+              >
+                Apply Now
               </a>
             </div>
           </div>
