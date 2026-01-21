@@ -145,11 +145,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Shop pages (E-commerce style with pricing)
   const shopPages: MetadataRoute.Sitemap = [
     { url: `${baseUrl}/shop`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+    // Sandwich Panels
     { url: `${baseUrl}/shop/sandwich-puf-panel`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/shop/roofing-puf-panel`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/shop/rockwool-panel`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/shop/pir-panel`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/shop/fm-approved-panel`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${baseUrl}/shop/wall-ceiling-panel`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+    // Doors
+    { url: `${baseUrl}/shop/cleanroom-door`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${baseUrl}/shop/fire-door-emergency-exit`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${baseUrl}/shop/fire-rated-multipurpose-door`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${baseUrl}/shop/cold-storage-door`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${baseUrl}/shop/hermetic-door`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+    // Cleanroom Solutions
+    { url: `${baseUrl}/shop/cleanroom-partition`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${baseUrl}/shop/cleanroom-false-ceiling`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${baseUrl}/shop/cleanroom-doors`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${baseUrl}/shop/cleanroom-flooring`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
   ];
 
   // Legal/Utility pages
