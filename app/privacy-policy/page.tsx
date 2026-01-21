@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     'Privacy Policy for PHOENIXX SmartBuild. Learn how we collect, use, and protect your personal information.',
   alternates: {
-    canonical: '/privacy-policy',
+    canonical: 'https://phoenixxsmartbuild.com/privacy-policy',
   },
 };
 

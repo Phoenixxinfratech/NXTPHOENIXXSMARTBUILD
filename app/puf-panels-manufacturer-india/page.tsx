@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'PUF panels manufacturer India. PHOENIXX SmartBuild delivers quality polyurethane foam panels for industrial, commercial & cold storage applications.',
   keywords: ['PUF panels manufacturer India', 'polyurethane panels', 'PUF panel supplier', 'PHOENIXX SmartBuild'],
   alternates: {
-    canonical: '/puf-panels-manufacturer-india',
+    canonical: 'https://phoenixxsmartbuild.com/puf-panels-manufacturer-india',
   },
 };
 

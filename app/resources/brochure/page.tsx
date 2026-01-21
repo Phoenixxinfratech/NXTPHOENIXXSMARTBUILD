@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     'Download PHOENIXX SmartBuild company brochure. Complete overview of our products, solutions, and capabilities.',
   alternates: {
-    canonical: '/resources/brochure',
+    canonical: 'https://phoenixxsmartbuild.com/resources/brochure',
   },
 };
 

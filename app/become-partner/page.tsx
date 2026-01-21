@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     'Partner with PHOENIXX for industrial infrastructure solutions. Dealers, distributors, contractors, and consultants welcome. Grow together with us.',
   alternates: {
-    canonical: '/become-partner',
+    canonical: 'https://phoenixxsmartbuild.com/become-partner',
   },
 };
 

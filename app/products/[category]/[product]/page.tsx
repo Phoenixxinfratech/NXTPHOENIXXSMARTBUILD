@@ -1156,7 +1156,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: data.metaTitle || `${data.name} | PHOENIXX Products`,
     description: data.metaDescription || data.description,
-    alternates: { canonical: `/products/${category}/${product}` },
+    alternates: { canonical: `https://phoenixxsmartbuild.com/products/${category}/${product}` },
     keywords: [data.name, category.replace(/-/g, ' '), 'PHOENIXX', 'manufacturer', 'India', 'insulated panels', 'industrial building'],
     openGraph: {
       title: data.metaTitle || data.name,

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'PUF Panel Manufacturer in Jamnagar | PHOENIXX SmartBuild',
   description: 'Leading PUF panel manufacturer in Jamnagar, Gujarat. Insulated panels for refinery contractors, GIDC industries & cold storage. Get quote now!',
   keywords: ['PUF panel manufacturer in Jamnagar', 'PUF panel Jamnagar', 'insulated panel refinery', 'cold storage panel Jamnagar'],
-  alternates: { canonical: '/puf-panel-manufacturer-in-jamnagar' },
+  alternates: { canonical: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-jamnagar' },
 };
 
 const faqs = [

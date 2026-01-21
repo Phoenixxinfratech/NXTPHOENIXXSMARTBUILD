@@ -659,7 +659,7 @@ export async function generateMetadata({ params }: { params: Promise<{ productSl
       `${product.shortName} cost per sq meter`,
     ],
     alternates: {
-      canonical: `/shop/${productSlug}`,
+      canonical: `https://phoenixxsmartbuild.com/shop/${productSlug}`,
     },
     openGraph: {
       title: `Buy ${product.name} | Starting ₹${product.basePrice}/${product.priceUnit}`,

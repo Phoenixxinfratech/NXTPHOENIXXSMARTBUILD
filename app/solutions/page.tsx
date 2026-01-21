@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     'PHOENIXX delivers complete EPC solutions: Pre-Engineered Buildings (PEB), Cold Storage Construction, Cleanroom Systems, Ceiling & Partition Solutions, and Turnkey Industrial Projects.',
   alternates: {
-    canonical: '/solutions',
+    canonical: 'https://phoenixxsmartbuild.com/solutions',
   },
 };
 

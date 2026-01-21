@@ -19,6 +19,7 @@ export default function robots(): MetadataRoute.Robots {
           '/admin/',
           '/_next/',
           '/private/',
+          '/thank-you',
         ],
       },
       // Specific rules for AI crawlers (AEO/GEO optimization)
@@ -56,13 +57,19 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: ['/api/', '/admin/'],
       },
+      {
+        userAgent: 'CCBot',
+        allow: '/',
+        disallow: ['/api/', '/admin/'],
+      },
     ],
-    sitemap: `${baseUrl}/sitemap.xml`,
+    sitemap: [
+      `${baseUrl}/sitemap.xml`,
+      `${baseUrl}/sitemap-index.xml`,
+      `${baseUrl}/sitemap-core.xml`,
+      `${baseUrl}/sitemap-shop.xml`,
+      `${baseUrl}/sitemap-geo.xml`,
+    ],
     host: baseUrl,
   };
 }
-
-
-
-
-

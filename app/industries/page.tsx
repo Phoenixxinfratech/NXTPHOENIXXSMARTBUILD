@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     'PHOENIXX delivers tailored infrastructure solutions for Pharmaceuticals, Food Processing, Dairy, Cold Chain, Automotive, Hospitality, and more. Industry-specific compliance and performance.',
   alternates: {
-    canonical: '/industries',
+    canonical: 'https://phoenixxsmartbuild.com/industries',
   },
 };
 

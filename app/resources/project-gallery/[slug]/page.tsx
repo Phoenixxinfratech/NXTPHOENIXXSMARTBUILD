@@ -58,7 +58,7 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
   return {
     title: `${project.title} | Project Gallery`,
     description: project.description,
-    alternates: { canonical: `/resources/project-gallery/${slug}` },
+    alternates: { canonical: `https://phoenixxsmartbuild.com/resources/project-gallery/${slug}` },
   };
 }
 

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     'Complete sitemap of PHOENIXX website. Navigate to all pages including products, solutions, industries, and resources.',
   alternates: {
-    canonical: '/sitemap',
+    canonical: 'https://phoenixxsmartbuild.com/sitemap',
   },
 };
 

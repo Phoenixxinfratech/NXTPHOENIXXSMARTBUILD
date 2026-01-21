@@ -1402,7 +1402,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     title: post.metaTitle || post.title,
     description: post.metaDescription || post.excerpt,
     keywords: post.keywords,
-    alternates: { canonical: `/resources/blogs/${slug}` },
+    alternates: { canonical: `https://phoenixxsmartbuild.com/resources/blogs/${slug}` },
     openGraph: {
       title: post.metaTitle || post.title,
       description: post.metaDescription || post.excerpt,

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'PUF Panel Manufacturer in Rajkot | PHOENIXX SmartBuild',
   description: 'Top PUF panel manufacturer in Rajkot, Gujarat. Insulated panels for engineering industries, Metoda GIDC & Shapar Veraval. Call for best prices!',
   keywords: ['PUF panel manufacturer in Rajkot', 'PUF sandwich panel Rajkot', 'insulated panel Rajkot', 'cold storage panel Saurashtra'],
-  alternates: { canonical: '/puf-panel-manufacturer-in-rajkot' },
+  alternates: { canonical: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-rajkot' },
 };
 
 const faqs = [

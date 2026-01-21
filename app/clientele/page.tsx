@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     'Trusted by industry leaders including Coca-Cola, Amul, Torrent Pharmaceuticals, Ford Motors, and 300+ more. View our client list across Food & Beverages, Dairy, Pharma, Automotive, and Cold Chain industries.',
   alternates: {
-    canonical: '/clientele',
+    canonical: 'https://phoenixxsmartbuild.com/clientele',
   },
 };
 

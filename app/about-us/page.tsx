@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     'PHOENIXX delivers smart, sustainable, and future-ready EPC solutions. From Pre-Engineered Buildings to cold storage and cleanroom solutions, we are India\'s trusted industrial infrastructure partner.',
   alternates: {
-    canonical: '/about-us',
+    canonical: 'https://phoenixxsmartbuild.com/about-us',
   },
 };
 

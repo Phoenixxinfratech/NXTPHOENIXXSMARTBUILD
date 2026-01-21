@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     'Build your career with PHOENIXX SmartBuild. Join our team of engineers, project managers, and industry experts. Explore current openings and opportunities.',
   alternates: {
-    canonical: '/career',
+    canonical: 'https://phoenixxsmartbuild.com/career',
   },
 };
 

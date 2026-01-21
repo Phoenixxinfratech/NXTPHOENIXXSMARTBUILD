@@ -292,7 +292,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: sandwichPanelsData.seoTitle,
       description: sandwichPanelsData.seoDescription,
       keywords: sandwichPanelsData.keywords,
-      alternates: { canonical: `/products/${category}` },
+      alternates: { canonical: `https://phoenixxsmartbuild.com/products/${category}` },
     };
   }
   const data = otherCategoriesData[category];

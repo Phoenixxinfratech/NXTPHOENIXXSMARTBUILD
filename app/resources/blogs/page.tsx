@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     'Expert articles on industrial infrastructure, insulated panels, cold storage, cleanrooms, PEB, and EPC solutions. Stay informed with PHOENIXX insights.',
   alternates: {
-    canonical: '/resources/blogs',
+    canonical: 'https://phoenixxsmartbuild.com/resources/blogs',
   },
 };
 

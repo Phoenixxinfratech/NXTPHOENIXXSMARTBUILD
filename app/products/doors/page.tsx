@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     'hermetic doors', 'fire doors manufacturer india', 'cleanroom door supplier',
     'pharmaceutical doors', 'IS fire rated doors', 'emergency exit doors',
   ],
-  alternates: { canonical: '/products/doors' },
+  alternates: { canonical: 'https://phoenixxsmartbuild.com/products/doors' },
 };
 
 const doorsData = {

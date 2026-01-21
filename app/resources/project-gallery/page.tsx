@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     'Browse PHOENIXX completed projects: Industrial Roofing, Cleanrooms, PUF Panels, and Insulated Wall Systems across Gujarat, India.',
   alternates: {
-    canonical: '/resources/project-gallery',
+    canonical: 'https://phoenixxsmartbuild.com/resources/project-gallery',
   },
 };
 

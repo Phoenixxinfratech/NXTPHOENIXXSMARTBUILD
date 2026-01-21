@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     'Download technical specifications and datasheets for PHOENIXX products: PIR panels, PUF panels, cleanroom doors, fire doors, and more.',
   alternates: {
-    canonical: '/resources/technical-sheet',
+    canonical: 'https://phoenixxsmartbuild.com/resources/technical-sheet',
   },
 };
 

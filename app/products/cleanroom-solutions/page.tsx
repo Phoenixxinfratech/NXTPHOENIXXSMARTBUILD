@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     'cleanroom manufacturer india', 'pharmaceutical cleanroom', 'GMP cleanroom',
     'cleanroom flooring', 'walkable ceiling', 'ISO cleanroom', 'cleanroom panels',
   ],
-  alternates: { canonical: '/products/cleanroom-solutions' },
+  alternates: { canonical: 'https://phoenixxsmartbuild.com/products/cleanroom-solutions' },
 };
 
 const cleanroomData = {

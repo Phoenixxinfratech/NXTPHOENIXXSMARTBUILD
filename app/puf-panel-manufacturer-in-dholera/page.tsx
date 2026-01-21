@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'PUF Panel Manufacturer in Dholera | PHOENIXX SmartBuild',
   description: 'PUF panel manufacturer in Dholera SIR, Gujarat. Insulated panels for smart city projects, industrial parks & greenfield developments. Get quote!',
   keywords: ['PUF panel manufacturer in Dholera', 'PUF panel Dholera SIR', 'insulated panel smart city', 'industrial panel Dholera'],
-  alternates: { canonical: '/puf-panel-manufacturer-in-dholera' },
+  alternates: { canonical: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-dholera' },
 };
 
 const faqs = [

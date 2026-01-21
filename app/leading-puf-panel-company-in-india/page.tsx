@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'PHOENIXX SmartBuild is a leading PUF panel company in India. Premium insulated panels for industrial buildings, cold storage & warehouses nationwide.',
   keywords: ['leading PUF panel company in India', 'PUF panel company', 'insulated panels', 'industrial panels India'],
   alternates: {
-    canonical: '/leading-puf-panel-company-in-india',
+    canonical: 'https://phoenixxsmartbuild.com/leading-puf-panel-company-in-india',
   },
 };
 

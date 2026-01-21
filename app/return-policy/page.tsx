@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     'Return and Refund Policy for PHOENIXX SmartBuild products and services. Understand our policies for product returns and service cancellations.',
   alternates: {
-    canonical: '/return-policy',
+    canonical: 'https://phoenixxsmartbuild.com/return-policy',
   },
 };
 

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Leading sandwich PUF panel manufacturer in India. PHOENIXX offers high-quality composite panels for roofing, walls & cold storage applications nationwide.',
   keywords: ['sandwich PUF panel manufacturer in India', 'sandwich panels', 'composite panels', 'insulated roof panels'],
   alternates: {
-    canonical: '/sandwich-puf-panel-manufacturer-in-india',
+    canonical: 'https://phoenixxsmartbuild.com/sandwich-puf-panel-manufacturer-in-india',
   },
 };
 

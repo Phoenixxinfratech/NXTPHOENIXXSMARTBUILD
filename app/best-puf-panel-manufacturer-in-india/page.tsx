@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'PHOENIXX SmartBuild is the best PUF panel manufacturer in India. High-quality insulated panels for cold storage, warehouses & industrial buildings.',
   keywords: ['best PUF panel manufacturer in India', 'PUF panel manufacturer', 'insulated panels India', 'PHOENIXX SmartBuild'],
   alternates: {
-    canonical: '/best-puf-panel-manufacturer-in-india',
+    canonical: 'https://phoenixxsmartbuild.com/best-puf-panel-manufacturer-in-india',
   },
 };
 

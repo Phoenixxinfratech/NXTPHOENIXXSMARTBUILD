@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     'Get in touch with PHOENIXX for your industrial infrastructure needs. Request quotes, schedule consultations, or visit our Ahmedabad office.',
   alternates: {
-    canonical: '/contact-us',
+    canonical: 'https://phoenixxsmartbuild.com/contact-us',
   },
 };
 

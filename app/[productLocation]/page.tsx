@@ -74,7 +74,7 @@ export async function generateMetadata({ params }: { params: Promise<{ productLo
       ...product.idealFor.map(i => `${i.toLowerCase()} ${product.shortName.toLowerCase()}`),
     ],
     alternates: {
-      canonical: `/${productLocation}`,
+      canonical: `https://phoenixxsmartbuild.com/${productLocation}`,
     },
     openGraph: {
       title,

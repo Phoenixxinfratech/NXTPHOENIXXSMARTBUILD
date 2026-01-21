@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     'Access PHOENIXX resources: technical articles, project gallery, datasheets, brochures, and FAQs. Expert insights on industrial infrastructure.',
   alternates: {
-    canonical: '/resources',
+    canonical: 'https://phoenixxsmartbuild.com/resources',
   },
 };
 

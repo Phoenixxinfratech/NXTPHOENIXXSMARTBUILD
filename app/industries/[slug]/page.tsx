@@ -249,7 +249,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${data.title} | PHOENIXX Industries`,
     description: data.description,
-    alternates: { canonical: `/industries/${slug}` },
+    alternates: { canonical: `https://phoenixxsmartbuild.com/industries/${slug}` },
   };
 }
 

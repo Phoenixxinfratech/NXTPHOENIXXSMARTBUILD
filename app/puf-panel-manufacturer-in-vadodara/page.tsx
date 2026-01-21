@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Trusted PUF panel manufacturer in Vadodara, Gujarat. High-quality insulated panels for Makarpura GIDC, Savli & Waghodia industries. Get free quote!',
   keywords: ['PUF panel manufacturer in Vadodara', 'PUF sandwich panel Vadodara', 'cold storage panel Vadodara', 'insulated panel Baroda'],
   alternates: {
-    canonical: '/puf-panel-manufacturer-in-vadodara',
+    canonical: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-vadodara',
   },
 };
 

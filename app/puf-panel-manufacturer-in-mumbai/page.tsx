@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'PUF Panel Manufacturer in Mumbai | PHOENIXX SmartBuild',
   description: 'Leading PUF panel manufacturer in Mumbai, Maharashtra. Quality insulated panels for cold storage, warehouses & industrial buildings. Get free quote!',
   keywords: ['PUF panel manufacturer in Mumbai', 'PUF sandwich panel Mumbai', 'cold storage panel Mumbai', 'insulated panel Maharashtra'],
-  alternates: { canonical: '/puf-panel-manufacturer-in-mumbai' },
+  alternates: { canonical: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-mumbai' },
 };
 
 const faqs = [

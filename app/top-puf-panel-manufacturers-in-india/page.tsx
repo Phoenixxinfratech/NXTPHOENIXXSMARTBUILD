@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Discover top PUF panel manufacturers in India. PHOENIXX SmartBuild offers superior quality insulated panels with pan-India delivery & installation.',
   keywords: ['top PUF panel manufacturers in India', 'PUF panel manufacturers', 'insulated panel suppliers', 'PHOENIXX'],
   alternates: {
-    canonical: '/top-puf-panel-manufacturers-in-india',
+    canonical: 'https://phoenixxsmartbuild.com/top-puf-panel-manufacturers-in-india',
   },
 };
 

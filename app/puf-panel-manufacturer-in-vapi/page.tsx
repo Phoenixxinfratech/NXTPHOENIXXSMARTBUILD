@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'PUF Panel Manufacturer in Vapi | PHOENIXX SmartBuild',
   description: 'Trusted PUF panel manufacturer in Vapi, Gujarat. Quality insulated panels for Vapi GIDC, chemical industries & pharma units. Best prices guaranteed!',
   keywords: ['PUF panel manufacturer in Vapi', 'PUF panel Vapi GIDC', 'insulated panel Vapi', 'cold storage panel South Gujarat'],
-  alternates: { canonical: '/puf-panel-manufacturer-in-vapi' },
+  alternates: { canonical: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-vapi' },
 };
 
 const faqs = [

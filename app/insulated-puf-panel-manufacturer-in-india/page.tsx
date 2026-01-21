@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Insulated PUF panel manufacturer in India. PHOENIXX delivers superior thermal insulation panels for cold storage, industrial & commercial buildings.',
   keywords: ['insulated PUF panel manufacturer in India', 'thermal insulation panels', 'insulated sandwich panels', 'PHOENIXX'],
   alternates: {
-    canonical: '/insulated-puf-panel-manufacturer-in-india',
+    canonical: 'https://phoenixxsmartbuild.com/insulated-puf-panel-manufacturer-in-india',
   },
 };
 

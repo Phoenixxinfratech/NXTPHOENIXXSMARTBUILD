@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'industrial panel manufacturer',
   ],
   alternates: {
-    canonical: '/shop',
+    canonical: 'https://phoenixxsmartbuild.com/shop',
   },
 };
 

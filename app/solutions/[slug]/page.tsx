@@ -399,7 +399,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: data.seoTitle,
     description: data.seoDescription,
     keywords: data.keywords,
-    alternates: { canonical: `/solutions/${slug}` },
+    alternates: { canonical: `https://phoenixxsmartbuild.com/solutions/${slug}` },
   };
 }
 

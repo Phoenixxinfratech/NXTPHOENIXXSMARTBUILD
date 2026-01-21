@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     'Terms and Conditions for business with PHOENIXX SmartBuild. Understand our policies for quotes, orders, payments, and project execution.',
   alternates: {
-    canonical: '/business-terms',
+    canonical: 'https://phoenixxsmartbuild.com/business-terms',
   },
 };
 

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Leading PUF panel manufacturer in Surat, Gujarat. Quality insulated panels for cold storage, warehouses & industrial buildings. Get quote today!',
   keywords: ['PUF panel manufacturer in Surat', 'PUF sandwich panel Surat', 'cold storage panel Surat', 'insulated panel supplier Surat'],
   alternates: {
-    canonical: '/puf-panel-manufacturer-in-surat',
+    canonical: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-surat',
   },
 };
 

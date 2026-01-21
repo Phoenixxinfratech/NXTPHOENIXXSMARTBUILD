@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Premium PUF panel manufacturer in India. PHOENIXX delivers high-quality insulated panels with superior foam density & coatings for demanding applications.',
   keywords: ['premium PUF panel manufacturer in India', 'high-quality PUF panels', 'premium insulated panels', 'PHOENIXX'],
   alternates: {
-    canonical: '/premium-puf-panel-manufacturer-in-india',
+    canonical: 'https://phoenixxsmartbuild.com/premium-puf-panel-manufacturer-in-india',
   },
 };
 

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Industrial PUF panel manufacturer in India. PHOENIXX provides heavy-duty insulated panels for factories, warehouses, manufacturing plants & industrial sheds.',
   keywords: ['industrial PUF panel manufacturer in India', 'factory insulation panels', 'industrial shed panels', 'warehouse panels'],
   alternates: {
-    canonical: '/industrial-puf-panel-manufacturer-in-india',
+    canonical: 'https://phoenixxsmartbuild.com/industrial-puf-panel-manufacturer-in-india',
   },
 };
 

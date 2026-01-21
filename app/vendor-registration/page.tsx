@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     'Register as a vendor or supplier with PHOENIXX SmartBuild. Supply raw materials, equipment, and services for industrial infrastructure projects.',
   alternates: {
-    canonical: '/vendor-registration',
+    canonical: 'https://phoenixxsmartbuild.com/vendor-registration',
   },
 };
 

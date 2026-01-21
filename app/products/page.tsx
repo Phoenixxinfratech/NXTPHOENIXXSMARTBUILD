@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     'Insulated Panels India',
   ],
   alternates: {
-    canonical: '/products',
+    canonical: 'https://phoenixxsmartbuild.com/products',
   },
 };
 

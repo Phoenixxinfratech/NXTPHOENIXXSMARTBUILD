@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Reliable PUF panel suppliers in India. PHOENIXX SmartBuild supplies quality insulated panels with pan-India delivery for industrial & commercial projects.',
   keywords: ['PUF panel suppliers in India', 'PUF panel supply', 'insulated panel suppliers', 'PHOENIXX'],
   alternates: {
-    canonical: '/puf-panel-suppliers-in-india',
+    canonical: 'https://phoenixxsmartbuild.com/puf-panel-suppliers-in-india',
   },
 };
 
