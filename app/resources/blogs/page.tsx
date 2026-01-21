@@ -33,6 +33,15 @@ const blogPosts = [
     featured: true,
   },
   {
+    slug: 'puf-vs-pir-vs-rockwool',
+    title: 'PUF vs PIR vs Rockwool: Which Insulated Panel Is Best?',
+    excerpt: 'Compare PUF, PIR, and Rockwool panels by insulation performance, fire safety, cost, and application fit to choose the right panel for your project.',
+    category: 'Panels',
+    date: 'Jan 1, 2025',
+    readTime: '7 min read',
+    featured: false,
+  },
+  {
     slug: 'how-puf-panels-reduce-energy-costs-factories',
     title: 'How PUF Panels Reduce Energy Costs in Factories',
     excerpt: 'Energy costs account for a significant portion of factory operating expenses. One of the most effective ways to reduce these costs is by using PUF panels for insulation.',

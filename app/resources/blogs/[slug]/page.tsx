@@ -920,6 +920,86 @@ const blogPosts: Record<string, {
       { question: 'How much can I save on energy costs with PUF roofing?', answer: 'Depending on the building type and climate, PUF roofing panels can reduce cooling costs by 20-40% compared to non-insulated metal roofing sheets.' },
     ],
   },
+  'puf-vs-pir-vs-rockwool': {
+    title: 'PUF vs PIR vs Rockwool: Which Insulated Panel Is Best?',
+    metaTitle: 'PUF vs PIR vs Rockwool Panels Comparison | PHOENIXX',
+    metaDescription: 'Compare PUF, PIR, and Rockwool panels by insulation performance, fire safety, cost, and applications to select the right panel for your project.',
+    excerpt: 'Compare PUF, PIR, and Rockwool panels by insulation performance, fire safety, cost, and application fit to choose the right panel for your project.',
+    content: `
+      <h2>Introduction</h2>
+      <p>Choosing the right insulated panel impacts energy costs, fire safety compliance, and long-term durability. This guide compares <a href="/products/sandwich-panels/sandwich-puf-panel">PUF panels</a>, <a href="/products/sandwich-panels/pir-panel">PIR panels</a>, and Rockwool panels so you can select the right system for your facility.</p>
+      
+      <h2>Quick Comparison Snapshot</h2>
+      <table>
+        <tr><th>Parameter</th><th>PUF</th><th>PIR</th><th>Rockwool</th></tr>
+        <tr><td>Thermal Conductivity</td><td>0.024 W/mK</td><td>0.022 W/mK</td><td>0.037–0.040 W/mK</td></tr>
+        <tr><td>Fire Rating</td><td>Class E</td><td>Class B-s1,d0</td><td>Class A1 (Non-combustible)</td></tr>
+        <tr><td>Weight</td><td>Light</td><td>Light</td><td>Heavy</td></tr>
+        <tr><td>Cost</td><td>Economical</td><td>Mid-High</td><td>Higher</td></tr>
+        <tr><td>Best For</td><td>General industrial</td><td>Fire-safe projects</td><td>High fire compliance</td></tr>
+      </table>
+      
+      <h2>PUF Panels: Best for Energy Efficiency & Value</h2>
+      <p><a href="/products/sandwich-panels/sandwich-puf-panel">PUF panels</a> deliver excellent thermal insulation at an economical cost. They are widely used in industrial sheds, warehouses, and cold storage facilities where energy efficiency matters most.</p>
+      <ul>
+        <li>Thermal conductivity ~0.024 W/mK</li>
+        <li>Lightweight and fast to install</li>
+        <li>Ideal for general industrial roofing and walls</li>
+        <li>Best ROI for large-area buildings</li>
+      </ul>
+      
+      <h2>PIR Panels: Better Fire Performance with Strong Insulation</h2>
+      <p><a href="/products/sandwich-panels/pir-panel">PIR panels</a> are chemically modified polyurethane panels designed for improved fire resistance. They are commonly selected for pharmaceutical, cold chain, and compliance-driven facilities.</p>
+      <ul>
+        <li>Thermal conductivity ~0.022 W/mK</li>
+        <li>Improved fire rating vs PUF</li>
+        <li>Recommended for pharma, food processing, and cold storage</li>
+        <li>Balances insulation and safety</li>
+      </ul>
+      
+      <h2>Rockwool Panels: Maximum Fire Safety</h2>
+      <p>Rockwool panels are non-combustible and preferred where strict fire safety standards apply. They are heavier and offer lower insulation performance compared to PUF/PIR, but provide the best fire protection.</p>
+      <ul>
+        <li>Fire rating Class A1 (non-combustible)</li>
+        <li>Lower insulation vs PUF/PIR</li>
+        <li>Higher density and weight</li>
+        <li>Suitable for high-risk industrial zones</li>
+      </ul>
+      
+      <h2>How to Choose the Right Panel</h2>
+      <ul>
+        <li><strong>Choose PUF</strong> for general industrial buildings and cost-effective insulation.</li>
+        <li><strong>Choose PIR</strong> when fire performance is required without sacrificing insulation.</li>
+        <li><strong>Choose Rockwool</strong> for maximum fire safety and compliance.</li>
+      </ul>
+      
+      <h2>PHOENIXX Recommendation</h2>
+      <p>PHOENIXX helps you select the best panel type based on project requirements, compliance needs, and total lifecycle costs. Explore our <a href="/products/sandwich-panels">insulated panel range</a> or request a technical consultation.</p>
+      
+      <p><strong>Need help selecting the right panel?</strong> <a href="/get-a-quote">Request a project consultation</a> with our engineering team.</p>
+    `,
+    category: 'Panels',
+    date: '2025-01-01',
+    readTime: '7 min read',
+    author: { name: 'Technical Team', role: 'PHOENIXX SmartBuild' },
+    keywords: ['PUF vs PIR vs Rockwool', 'Insulated Panels', 'Fire Rated Panels', 'Cold Storage Panels', 'PUF Panel Manufacturer'],
+    relatedProducts: [
+      { name: 'Sandwich PUF Panels', href: '/products/sandwich-panels/sandwich-puf-panel' },
+      { name: 'PIR Panels', href: '/products/sandwich-panels/pir-panel' },
+      { name: 'Rockwool Panels', href: '/products/sandwich-panels/rockwool-panel' },
+    ],
+    relatedSolutions: [
+      { name: 'Cold Storage Construction', href: '/solutions/cold-storage-construction' },
+      { name: 'Pre-Engineered Buildings', href: '/solutions/peb' },
+    ],
+    faqs: [
+      { question: 'Which panel has the best insulation performance?', answer: 'PIR panels have the lowest thermal conductivity (~0.022 W/mK), followed closely by PUF (~0.024 W/mK). Rockwool provides lower insulation compared to foam-based panels.' },
+      { question: 'Which panel is best for fire safety?', answer: 'Rockwool panels are Class A1 non-combustible and offer the highest fire safety. PIR panels provide improved fire performance compared to standard PUF.' },
+      { question: 'Which panel is most cost-effective?', answer: 'PUF panels are generally the most cost-effective choice for large industrial buildings, offering strong insulation performance at economical pricing.' },
+      { question: 'Are PIR panels suitable for cold storage?', answer: 'Yes, PIR panels are recommended for cold storage projects where both insulation and fire safety compliance are required.' },
+      { question: 'Does PHOENIXX supply all three panel types?', answer: 'PHOENIXX supplies PUF, PIR, and Rockwool panels and helps clients select the right option based on compliance and performance needs.' },
+    ],
+  },
   
   'how-puf-panels-reduce-energy-costs-factories': {
     title: 'How PUF Panels Reduce Energy Costs in Factories',
