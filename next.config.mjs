@@ -143,9 +143,26 @@ const nextConfig = {
     return [];
   },
 
-  // Rewrites configuration
+  // Rewrites configuration - Sitemap XML routing
   async rewrites() {
-    return [];
+    return [
+      {
+        source: '/sitemap-core.xml',
+        destination: '/api/sitemap-core',
+      },
+      {
+        source: '/sitemap-shop.xml',
+        destination: '/api/sitemap-shop',
+      },
+      {
+        source: '/sitemap-geo.xml',
+        destination: '/api/sitemap-geo',
+      },
+      {
+        source: '/sitemap-index.xml',
+        destination: '/api/sitemap-index',
+      },
+    ];
   },
 };
 

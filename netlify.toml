@@ -133,31 +133,13 @@
   status = 301
 
 # ============================================
-# Sitemap Redirects - Route to API handlers
+# Sitemap Redirects - Handled by Next.js rewrites
 # ============================================
-[[redirects]]
-  from = "/sitemap-core.xml"
-  to = "/api/sitemap-core"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/sitemap-shop.xml"
-  to = "/api/sitemap-shop"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/sitemap-geo.xml"
-  to = "/api/sitemap-geo"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/sitemap-index.xml"
-  to = "/api/sitemap-index"
-  status = 200
-  force = true
+# Note: Sitemaps are now handled via Next.js rewrites in next.config.mjs
+# /sitemap-core.xml -> /api/sitemap-core
+# /sitemap-shop.xml -> /api/sitemap-shop
+# /sitemap-geo.xml -> /api/sitemap-geo
+# /sitemap-index.xml -> /api/sitemap-index
 
 # ============================================
 # Netlify Forms Configuration
