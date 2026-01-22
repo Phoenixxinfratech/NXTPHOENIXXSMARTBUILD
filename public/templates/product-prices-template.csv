@@ -1,0 +1,97 @@
+SKU,Product Name,Variant/Thickness,Price (INR),Unit,Last Updated
+PHX-PUF-30,Sandwich PUF Panel,30mm,850,per sq.mtr,2026-01-22
+PHX-PUF-40,Sandwich PUF Panel,40mm,950,per sq.mtr,2026-01-22
+PHX-PUF-50,Sandwich PUF Panel,50mm,1100,per sq.mtr,2026-01-22
+PHX-PUF-60,Sandwich PUF Panel,60mm,1250,per sq.mtr,2026-01-22
+PHX-PUF-80,Sandwich PUF Panel,80mm,1500,per sq.mtr,2026-01-22
+PHX-PUF-100,Sandwich PUF Panel,100mm,1750,per sq.mtr,2026-01-22
+PHX-PUF-120,Sandwich PUF Panel,120mm,2000,per sq.mtr,2026-01-22
+PHX-PUF-150,Sandwich PUF Panel,150mm,2400,per sq.mtr,2026-01-22
+PHX-ROOF-30,Roofing PUF Panel,30mm,950,per sq.mtr,2026-01-22
+PHX-ROOF-40,Roofing PUF Panel,40mm,1100,per sq.mtr,2026-01-22
+PHX-ROOF-50,Roofing PUF Panel,50mm,1250,per sq.mtr,2026-01-22
+PHX-ROOF-60,Roofing PUF Panel,60mm,1400,per sq.mtr,2026-01-22
+PHX-ROOF-80,Roofing PUF Panel,80mm,1650,per sq.mtr,2026-01-22
+PHX-ROOF-100,Roofing PUF Panel,100mm,1900,per sq.mtr,2026-01-22
+PHX-ROOF-120,Roofing PUF Panel,120mm,2150,per sq.mtr,2026-01-22
+PHX-ROOF-150,Roofing PUF Panel,150mm,2600,per sq.mtr,2026-01-22
+PHX-PIR-40,PIR Panel,40mm,1200,per sq.mtr,2026-01-22
+PHX-PIR-50,PIR Panel,50mm,1400,per sq.mtr,2026-01-22
+PHX-PIR-60,PIR Panel,60mm,1600,per sq.mtr,2026-01-22
+PHX-PIR-80,PIR Panel,80mm,1900,per sq.mtr,2026-01-22
+PHX-PIR-100,PIR Panel,100mm,2200,per sq.mtr,2026-01-22
+PHX-PIR-120,PIR Panel,120mm,2500,per sq.mtr,2026-01-22
+PHX-PIR-150,PIR Panel,150mm,3000,per sq.mtr,2026-01-22
+PHX-RW-50,Rockwool Panel,50mm,1400,per sq.mtr,2026-01-22
+PHX-RW-80,Rockwool Panel,80mm,1750,per sq.mtr,2026-01-22
+PHX-RW-100,Rockwool Panel,100mm,2000,per sq.mtr,2026-01-22
+PHX-RW-120,Rockwool Panel,120mm,2300,per sq.mtr,2026-01-22
+PHX-RW-150,Rockwool Panel,150mm,2700,per sq.mtr,2026-01-22
+PHX-RW-200,Rockwool Panel,200mm,3200,per sq.mtr,2026-01-22
+PHX-FM-PIR-50,FM Approved Panel,50mm PIR,1600,per sq.mtr,2026-01-22
+PHX-FM-PIR-80,FM Approved Panel,80mm PIR,2100,per sq.mtr,2026-01-22
+PHX-FM-PIR-100,FM Approved Panel,100mm PIR,2500,per sq.mtr,2026-01-22
+PHX-FM-RW-100,FM Approved Panel,100mm Rockwool,2800,per sq.mtr,2026-01-22
+PHX-FM-RW-120,FM Approved Panel,120mm Rockwool,3200,per sq.mtr,2026-01-22
+PHX-FM-RW-150,FM Approved Panel,150mm Rockwool,3800,per sq.mtr,2026-01-22
+PHX-WALL-30,Wall & Ceiling Panel,30mm,750,per sq.mtr,2026-01-22
+PHX-WALL-40,Wall & Ceiling Panel,40mm,850,per sq.mtr,2026-01-22
+PHX-WALL-50,Wall & Ceiling Panel,50mm,950,per sq.mtr,2026-01-22
+PHX-WALL-60,Wall & Ceiling Panel,60mm,1100,per sq.mtr,2026-01-22
+PHX-WALL-80,Wall & Ceiling Panel,80mm,1300,per sq.mtr,2026-01-22
+PHX-WALL-100,Wall & Ceiling Panel,100mm,1500,per sq.mtr,2026-01-22
+PHX-CRD-S90,Cleanroom Door,Single Leaf 900x2100mm,35000,per unit,2026-01-22
+PHX-CRD-S100,Cleanroom Door,Single Leaf 1000x2100mm,38000,per unit,2026-01-22
+PHX-CRD-D120,Cleanroom Door,Double Leaf 1200x2100mm,55000,per unit,2026-01-22
+PHX-CRD-D150,Cleanroom Door,Double Leaf 1500x2100mm,65000,per unit,2026-01-22
+PHX-CRD-D180,Cleanroom Door,Double Leaf 1800x2100mm,75000,per unit,2026-01-22
+PHX-CRD-SL120,Cleanroom Door,Sliding Door 1200x2100mm,85000,per unit,2026-01-22
+PHX-FED-60S,Fire Door – Emergency Exit,60 min Single 900x2100mm,28000,per unit,2026-01-22
+PHX-FED-60D,Fire Door – Emergency Exit,60 min Double 1200x2100mm,45000,per unit,2026-01-22
+PHX-FED-90S,Fire Door – Emergency Exit,90 min Single 900x2100mm,35000,per unit,2026-01-22
+PHX-FED-90D,Fire Door – Emergency Exit,90 min Double 1200x2100mm,55000,per unit,2026-01-22
+PHX-FED-120S,Fire Door – Emergency Exit,120 min Single 900x2100mm,42000,per unit,2026-01-22
+PHX-FED-120D,Fire Door – Emergency Exit,120 min Double 1200x2100mm,68000,per unit,2026-01-22
+PHX-FMD-60S,Fire Rated Multipurpose Door,60 min Single 900x2100mm,25000,per unit,2026-01-22
+PHX-FMD-60D,Fire Rated Multipurpose Door,60 min Double 1200x2100mm,42000,per unit,2026-01-22
+PHX-FMD-90S,Fire Rated Multipurpose Door,90 min Single 900x2100mm,32000,per unit,2026-01-22
+PHX-FMD-90D,Fire Rated Multipurpose Door,90 min Double 1200x2100mm,52000,per unit,2026-01-22
+PHX-FMD-120S,Fire Rated Multipurpose Door,120 min Single 900x2100mm,38000,per unit,2026-01-22
+PHX-FMD-120D,Fire Rated Multipurpose Door,120 min Double 1200x2100mm,62000,per unit,2026-01-22
+PHX-CSD-H100,Cold Storage Door,Hinged 1000x2100mm 100mm,45000,per unit,2026-01-22
+PHX-CSD-H120,Cold Storage Door,Hinged 1200x2100mm 100mm,52000,per unit,2026-01-22
+PHX-CSD-S150,Cold Storage Door,Sliding 1500x2100mm 100mm,75000,per unit,2026-01-22
+PHX-CSD-S200,Cold Storage Door,Sliding 2000x2100mm 120mm,95000,per unit,2026-01-22
+PHX-CSD-BP250,Cold Storage Door,Bi-parting 2500x2500mm,125000,per unit,2026-01-22
+PHX-CSD-RR,Cold Storage Door,Rapid Roll Freezer,185000,per unit,2026-01-22
+PHX-HRM-S100,Hermetic Door,Single Leaf 1000x2100mm,125000,per unit,2026-01-22
+PHX-HRM-S120,Hermetic Door,Single Leaf 1200x2100mm,138000,per unit,2026-01-22
+PHX-HRM-D150,Hermetic Door,Double Leaf 1500x2100mm,185000,per unit,2026-01-22
+PHX-HRM-D180,Hermetic Door,Double Leaf 1800x2100mm,215000,per unit,2026-01-22
+PHX-HRM-XR,Hermetic Door,Lead-lined (X-ray),195000,per unit,2026-01-22
+PHX-HRM-ICU,Hermetic Door,ICU/OT Interlock System,285000,per unit,2026-01-22
+PHX-CRP-50P,Cleanroom Partition,50mm PUF Panel,2800,per sq.mtr,2026-01-22
+PHX-CRP-50R,Cleanroom Partition,50mm PIR Panel,3200,per sq.mtr,2026-01-22
+PHX-CRP-50W,Cleanroom Partition,50mm Rockwool Panel,3800,per sq.mtr,2026-01-22
+PHX-CRP-60P,Cleanroom Partition,60mm PUF Panel,3100,per sq.mtr,2026-01-22
+PHX-CRP-80P,Cleanroom Partition,80mm PUF Panel,3600,per sq.mtr,2026-01-22
+PHX-CRP-SS,Cleanroom Partition,SS 304 Clad System,4500,per sq.mtr,2026-01-22
+PHX-CRC-NW50,Cleanroom False Ceiling,Non-walkable 50mm,3500,per sq.mtr,2026-01-22
+PHX-CRC-NW60,Cleanroom False Ceiling,Non-walkable 60mm,3900,per sq.mtr,2026-01-22
+PHX-CRC-W80,Cleanroom False Ceiling,Walkable 80mm,5500,per sq.mtr,2026-01-22
+PHX-CRC-W100,Cleanroom False Ceiling,Walkable 100mm,6500,per sq.mtr,2026-01-22
+PHX-CRC-TG,Cleanroom False Ceiling,T-Grid System,4200,per sq.mtr,2026-01-22
+PHX-CRC-SSW,Cleanroom False Ceiling,SS Clad Walkable,8500,per sq.mtr,2026-01-22
+PHX-CRDS-S90,Cleanroom Doors (Solutions),Swing Single 900x2100mm,32000,per unit,2026-01-22
+PHX-CRDS-D150,Cleanroom Doors (Solutions),Swing Double 1500x2100mm,52000,per unit,2026-01-22
+PHX-CRDS-SL100,Cleanroom Doors (Solutions),Sliding Single 1000x2100mm,65000,per unit,2026-01-22
+PHX-CRDS-SLD180,Cleanroom Doors (Solutions),Sliding Double 1800x2100mm,95000,per unit,2026-01-22
+PHX-CRDS-AT,Cleanroom Doors (Solutions),Airtight Swing,48000,per unit,2026-01-22
+PHX-CRDS-INT,Cleanroom Doors (Solutions),Interlocked Pair,85000,per unit,2026-01-22
+PHX-CRF-EP2,Cleanroom Flooring,Epoxy Coating 2mm,850,per sq.mtr,2026-01-22
+PHX-CRF-EP3,Cleanroom Flooring,Epoxy Self-leveling 3mm,1200,per sq.mtr,2026-01-22
+PHX-CRF-PU4,Cleanroom Flooring,PU Screed 4mm,1500,per sq.mtr,2026-01-22
+PHX-CRF-ESD,Cleanroom Flooring,ESD Epoxy 3mm,1400,per sq.mtr,2026-01-22
+PHX-CRF-VIN,Cleanroom Flooring,Vinyl Sheet Antistatic,950,per sq.mtr,2026-01-22
+PHX-CRF-RAF,Cleanroom Flooring,Raised Access Floor,3500,per sq.mtr,2026-01-22
+

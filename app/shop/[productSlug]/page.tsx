@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
+import { fetchPricesFromSheet } from '@/lib/google-sheets';
 
 // Product catalog with pricing data for shop pages
 const shopProducts: Record<string, {
@@ -673,11 +674,30 @@ export async function generateMetadata({ params }: { params: Promise<{ productSl
 // Main Page Component
 export default async function ShopProductPage({ params }: { params: Promise<{ productSlug: string }> }) {
   const { productSlug } = await params;
-  const product = shopProducts[productSlug];
+  const staticProduct = shopProducts[productSlug];
   
-  if (!product) {
+  if (!staticProduct) {
     notFound();
   }
+  
+  // Fetch live prices from Google Sheets
+  const livePrices = await fetchPricesFromSheet();
+  
+  // Update variants with live prices
+  const updatedVariants = staticProduct.variants.map(variant => ({
+    ...variant,
+    price: livePrices.get(variant.sku) ?? variant.price,
+  }));
+  
+  // Calculate updated base price (lowest variant price)
+  const updatedBasePrice = Math.min(...updatedVariants.map(v => v.price));
+  
+  // Create product with updated prices
+  const product = {
+    ...staticProduct,
+    basePrice: updatedBasePrice,
+    variants: updatedVariants,
+  };
   
   // Calculate price valid until (6 months from now)
   const priceValidUntil = new Date();
