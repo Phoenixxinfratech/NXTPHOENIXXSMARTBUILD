@@ -143,26 +143,9 @@ const nextConfig = {
     return [];
   },
 
-  // Rewrites configuration - Sitemap XML routing
+  // Rewrites configuration (sitemaps now use direct route handlers)
   async rewrites() {
-    return [
-      {
-        source: '/sitemap-core.xml',
-        destination: '/api/sitemap-core',
-      },
-      {
-        source: '/sitemap-shop.xml',
-        destination: '/api/sitemap-shop',
-      },
-      {
-        source: '/sitemap-geo.xml',
-        destination: '/api/sitemap-geo',
-      },
-      {
-        source: '/sitemap-index.xml',
-        destination: '/api/sitemap-index',
-      },
-    ];
+    return [];
   },
 };
 

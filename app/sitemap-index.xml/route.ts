@@ -8,15 +8,15 @@ export async function GET() {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>${baseUrl}/api/sitemap-core</loc>
+    <loc>${baseUrl}/sitemap-core.xml</loc>
     <lastmod>${today}</lastmod>
   </sitemap>
   <sitemap>
-    <loc>${baseUrl}/api/sitemap-shop</loc>
+    <loc>${baseUrl}/sitemap-shop.xml</loc>
     <lastmod>${today}</lastmod>
   </sitemap>
   <sitemap>
-    <loc>${baseUrl}/api/sitemap-geo</loc>
+    <loc>${baseUrl}/sitemap-geo.xml</loc>
     <lastmod>${today}</lastmod>
   </sitemap>
 </sitemapindex>`;
