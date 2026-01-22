@@ -138,9 +138,74 @@ const nextConfig = {
     ];
   },
 
-  // Redirects configuration (add your redirects here)
+  // Redirects configuration - 301 redirects for legacy/broken URLs
   async redirects() {
-    return [];
+    return [
+      // Blog slug redirects (short slugs → full slugs)
+      {
+        source: '/resources/blogs/sustainable-peb-structures',
+        destination: '/resources/blogs/rise-of-sustainable-peb-structures',
+        permanent: true,
+      },
+      {
+        source: '/resources/blogs/cold-storage-energy-efficiency',
+        destination: '/resources/blogs/optimizing-cold-storage-energy-efficiency',
+        permanent: true,
+      },
+      {
+        source: '/resources/blogs/turnkey-epc-projects',
+        destination: '/resources/blogs/future-of-prefab-construction',
+        permanent: true,
+      },
+      // Industry slug redirects
+      {
+        source: '/industries/semiconductor',
+        destination: '/industries/precision-engineering',
+        permanent: true,
+      },
+      {
+        source: '/industries/research-development',
+        destination: '/industries/pharma-chemical',
+        permanent: true,
+      },
+      {
+        source: '/industries/automotive',
+        destination: '/industries/automobile',
+        permanent: true,
+      },
+      {
+        source: '/industries/electronics',
+        destination: '/industries/precision-engineering',
+        permanent: true,
+      },
+      {
+        source: '/industries/textile',
+        destination: '/industries/precision-engineering',
+        permanent: true,
+      },
+      {
+        source: '/industries/pharma',
+        destination: '/industries/pharma-chemical',
+        permanent: true,
+      },
+      {
+        source: '/industries/healthcare',
+        destination: '/industries/pharma-chemical',
+        permanent: true,
+      },
+      // Solution redirects
+      {
+        source: '/solutions/false-ceiling-partition',
+        destination: '/solutions/partition-solutions',
+        permanent: true,
+      },
+      // Sitemap redirect
+      {
+        source: '/sitemap',
+        destination: '/sitemap-page',
+        permanent: true,
+      },
+    ];
   },
 
   // Rewrites configuration (sitemaps now use direct route handlers)

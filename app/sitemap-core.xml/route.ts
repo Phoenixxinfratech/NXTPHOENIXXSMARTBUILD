@@ -39,20 +39,20 @@ export async function GET() {
     { loc: '/products/cleanroom-solutions/cleanroom-false-ceiling', changefreq: 'monthly', priority: '0.7' },
     { loc: '/products/cleanroom-solutions/cleanroom-flooring', changefreq: 'monthly', priority: '0.7' },
     
-    // Solutions
+    // Solutions (all existing solution pages)
     { loc: '/solutions', changefreq: 'weekly', priority: '0.9' },
     { loc: '/solutions/peb', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/solutions/cold-storage-construction', changefreq: 'monthly', priority: '0.8' },
     { loc: '/solutions/walkable-ceiling-systems', changefreq: 'monthly', priority: '0.7' },
     { loc: '/solutions/non-walkable-ceiling-systems', changefreq: 'monthly', priority: '0.7' },
     { loc: '/solutions/partition-solutions', changefreq: 'monthly', priority: '0.7' },
-    { loc: '/solutions/cold-storage-construction', changefreq: 'monthly', priority: '0.8' },
     { loc: '/solutions/prefab-house', changefreq: 'monthly', priority: '0.7' },
     
-    // Industries
+    // Industries (only pages that exist in industriesData)
     { loc: '/industries', changefreq: 'monthly', priority: '0.8' },
-    { loc: '/industries/dairy', changefreq: 'monthly', priority: '0.7' },
     { loc: '/industries/pharma-chemical', changefreq: 'monthly', priority: '0.7' },
     { loc: '/industries/food-processing', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/industries/dairy', changefreq: 'monthly', priority: '0.7' },
     { loc: '/industries/cold-chain', changefreq: 'monthly', priority: '0.7' },
     { loc: '/industries/precision-engineering', changefreq: 'monthly', priority: '0.7' },
     { loc: '/industries/hospitality', changefreq: 'monthly', priority: '0.7' },
@@ -83,9 +83,29 @@ export async function GET() {
     { loc: '/resources/blogs/applications-of-puf-panels-in-cold-storage-pharma', changefreq: 'monthly', priority: '0.6' },
     { loc: '/resources/blogs/puf-vs-pir-vs-rockwool', changefreq: 'monthly', priority: '0.6' },
     
-    // Project Gallery
+    // Project Gallery (all project pages)
     { loc: '/resources/project-gallery/pharma-cleanroom-pune', changefreq: 'monthly', priority: '0.6' },
     { loc: '/resources/project-gallery/cold-storage-mumbai', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/project-gallery/reliance-industries-jamnagar', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/project-gallery/uflex-sanand', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/project-gallery/cargill-gandhidham', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/project-gallery/bunge-gandhidham', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/project-gallery/vyara-tiles-gangad', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/project-gallery/motherson-marelli-sanand', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/project-gallery/skf-ahmedabad', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/project-gallery/sarhad-dairy-bhuj', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/project-gallery/pgp-glass-dahej', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/project-gallery/agro-tech-ankleshwar', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/project-gallery/rotomotive-anand', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/project-gallery/rajhans-nutriments-surat', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/project-gallery/fuji-silvertech-ahmedabad', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/project-gallery/aishwarya-dyeing-surat', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/project-gallery/narmada-biochem-dahej', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/project-gallery/bc-foods-mahua', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/project-gallery/edkem-pharma-ahmedabad', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/project-gallery/makson-pharma-surendranagar', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/project-gallery/infocity-club-gandhinagar', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/project-gallery/agrawal-metal-vithlapur', changefreq: 'monthly', priority: '0.6' },
     
     // SEO Authority Pages
     { loc: '/best-puf-panel-manufacturer-in-india', changefreq: 'monthly', priority: '0.8' },

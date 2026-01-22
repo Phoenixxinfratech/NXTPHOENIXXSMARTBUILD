@@ -1,26 +1,16 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
-// Standard industries data (from memory)
+// Industries data - slugs match actual pages in /industries/[slug]
 const industries = [
-  { name: 'Pharmaceuticals', image: '/industries/pharmaceuticals.jpg', icon: '💊', slug: 'pharmaceuticals' },
-  { name: 'Biotechnology', image: '/industries/biotechnology.jpg', icon: '🧬', slug: 'biotechnology' },
-  { name: 'Medical Devices', image: '/industries/medical-devices.jpg', icon: '🩺', slug: 'medical-devices' },
-  { name: 'Healthcare', image: '/industries/healthcare.jpg', icon: '⚕️', slug: 'healthcare' },
-  { name: 'Hospitals', image: '/industries/hospitals.jpg', icon: '🏥', slug: 'hospitals' },
-  { name: 'Precision Engineering', image: '/industries/precision-engineering.jpg', icon: '⚙️', slug: 'precision-engineering' },
-  { name: 'Electronics Manufacturing', image: '/industries/electronics.jpg', icon: '⚡', slug: 'electronics-manufacturing' },
-  { name: 'Cosmetics Manufacturing', image: '/industries/cosmetics.jpg', icon: '💄', slug: 'cosmetics-manufacturing' },
-  { name: 'Automotive Manufacturing', image: '/industries/automotive.jpg', icon: '🚗', slug: 'automotive-manufacturing' },
-  { name: 'Aerospace Industry', image: '/industries/aerospace.jpg', icon: '✈️', slug: 'aerospace-industry' },
-  { name: 'Solar Panel Manufacturing', image: '/industries/solar-panel.jpg', icon: '☀️', slug: 'solar-panel-manufacturing' },
-  { name: 'Semiconductor Manufacturing', image: '/industries/semiconductor.jpg', icon: '💾', slug: 'semiconductor-manufacturing' },
-  { name: 'Food Processing', image: '/industries/food-processing.jpg', icon: '🍽️', slug: 'food-processing' },
-  { name: 'Dairy Industry', image: '/industries/dairy.jpg', icon: '🥛', slug: 'dairy-industry' },
-  { name: 'Hospitality & Hotels', image: '/industries/hospitality.jpg', icon: '🏨', slug: 'hospitality-hotels' },
-  { name: 'Textile Industry', image: '/industries/textile.jpg', icon: '🧵', slug: 'textile-industry' },
-  { name: 'Chemical Processing Plants', image: '/industries/chemical.jpg', icon: '⚗️', slug: 'chemical-processing' },
-  { name: 'Research & Development (R&D) Facilities', image: '/industries/research.jpg', icon: '🔬', slug: 'research-development' },
+  { name: 'Pharma & Chemical', image: '/images/industries/pharmaceuticals/cleanroom.jpg', icon: '💊', slug: 'pharma-chemical' },
+  { name: 'Food Processing', image: '/images/industries/food-processing/Food-processing-industries-phoenixx-work.jpg', icon: '🍽️', slug: 'food-processing' },
+  { name: 'Dairy Industry', image: '/images/industries/dairy/epub_dairy-processing-equipment-milk-tanks-facility-plant_1200x635.jpg', icon: '🥛', slug: 'dairy' },
+  { name: 'Cold Chain & Logistics', image: '/images/solutions/cold-storage/Cold-Storage-Warehouse-manufacture-1.jpg', icon: '❄️', slug: 'cold-chain' },
+  { name: 'Manufacturing & Engineering', image: '/images/industries/precision-engineering/precision-engineering-1.jpg', icon: '⚙️', slug: 'precision-engineering' },
+  { name: 'Hospitality & Hotels', image: '/images/industries/hospitality/Hotel-design.webp', icon: '🏨', slug: 'hospitality' },
+  { name: 'Automotive Industry', image: '/images/industries/automotive/Assembly-Line-Best-Practices.jpg', icon: '🚗', slug: 'automobile' },
+  { name: 'Agriculture & Agri-Processing', image: '/images/industries/food-processing/Food-processing .jpg', icon: '🌾', slug: 'agri-processing' },
 ];
 
 export function IndustriesSection() {

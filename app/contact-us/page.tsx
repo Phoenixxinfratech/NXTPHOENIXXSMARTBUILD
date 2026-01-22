@@ -38,7 +38,7 @@ const contactInfo = [
     description: 'Head Office',
     primary: siteConfig.contact.address,
     secondary: 'India',
-    action: 'https://goo.gl/maps/phoenixx',
+    action: 'https://maps.google.com/?q=Ahmedabad+Gujarat+India',
   },
 ];
 
@@ -72,9 +72,9 @@ export default function ContactUsPage() {
       addressCountry: 'IN',
     },
     sameAs: [
-      'https://linkedin.com/company/phoenixxsmartbuild',
-      'https://facebook.com/phoenixxsmartbuild',
-      'https://instagram.com/phoenixxsmartbuild',
+      'https://www.linkedin.com/company/phoenixxinfratech',
+      'https://www.facebook.com/phoenixxinfratech',
+      'https://www.instagram.com/phoenixxinfratech',
     ],
   };
 
@@ -200,10 +200,10 @@ export default function ContactUsPage() {
                   </p>
                   <div className="mt-4 flex gap-4">
                     {[
-                      { name: 'LinkedIn', icon: 'in', href: 'https://linkedin.com/company/phoenixxsmartbuild' },
-                      { name: 'Facebook', icon: 'f', href: 'https://facebook.com/phoenixxsmartbuild' },
-                      { name: 'Instagram', icon: 'ig', href: 'https://instagram.com/phoenixxsmartbuild' },
-                      { name: 'Google', icon: 'G', href: 'https://g.page/phoenixxsmartbuild' },
+                      { name: 'LinkedIn', icon: 'in', href: 'https://www.linkedin.com/company/phoenixxinfratech' },
+                      { name: 'Facebook', icon: 'f', href: 'https://www.facebook.com/phoenixxinfratech' },
+                      { name: 'Instagram', icon: 'ig', href: 'https://www.instagram.com/phoenixxinfratech' },
+                      { name: 'Google', icon: 'G', href: 'https://maps.google.com/?q=Ahmedabad+Gujarat+India' },
                     ].map((social) => (
                       <a
                         key={social.name}
