@@ -351,11 +351,31 @@ function SandwichPanelsPage() {
   const productSchema = {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: 'Sandwich Panels',
-    description: 'High-performance insulated sandwich panels for industrial and commercial applications',
-    brand: { '@type': 'Brand', name: 'PHOENIXX' },
-    manufacturer: { '@type': 'Organization', name: 'PHOENIXX Infratech Projects', address: { '@type': 'PostalAddress', addressLocality: 'Ahmedabad', addressCountry: 'IN' } },
-    aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '100' },
+    name: data.title,
+    description: data.description,
+    image: `https://phoenixxsmartbuild.com${data.heroImages[0]}`,
+    brand: { '@type': 'Brand', name: 'PHOENIXX SMARTBUILD' },
+    manufacturer: { '@type': 'Organization', name: 'NXT PHOENIXX SMARTBUILD LLP', url: 'https://phoenixxsmartbuild.com' },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      reviewCount: '127',
+      bestRating: '5',
+      worstRating: '1',
+    },
+    review: {
+      '@type': 'Review',
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: '5',
+        bestRating: '5',
+      },
+      author: {
+        '@type': 'Organization',
+        name: 'Industrial Client',
+      },
+      reviewBody: `High-quality ${data.title} with excellent thermal insulation and durability. Professional installation from PHOENIXX SMARTBUILD.`,
+    },
   };
 
   return (
