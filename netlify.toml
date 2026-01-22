@@ -53,6 +53,40 @@
     # Permissions Policy (restrict browser features)
     Permissions-Policy = "camera=(), microphone=(), geolocation=(self)"
 
+# ============================================
+# Sitemap XML Headers - Ensure proper content type
+# ============================================
+[[headers]]
+  for = "/sitemap*.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=utf-8"
+    Cache-Control = "public, max-age=3600, stale-while-revalidate=86400"
+    X-Robots-Tag = "noindex"
+
+[[headers]]
+  for = "/sitemap-index.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=utf-8"
+    Cache-Control = "public, max-age=3600, stale-while-revalidate=86400"
+
+[[headers]]
+  for = "/sitemap-core.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=utf-8"
+    Cache-Control = "public, max-age=3600, stale-while-revalidate=86400"
+
+[[headers]]
+  for = "/sitemap-shop.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=utf-8"
+    Cache-Control = "public, max-age=3600, stale-while-revalidate=86400"
+
+[[headers]]
+  for = "/sitemap-geo.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=utf-8"
+    Cache-Control = "public, max-age=3600, stale-while-revalidate=86400"
+
 # Cache static assets
 [[headers]]
   for = "/fonts/*"
@@ -97,6 +131,33 @@
   from = "/home"
   to = "/"
   status = 301
+
+# ============================================
+# Sitemap Redirects - Route to API handlers
+# ============================================
+[[redirects]]
+  from = "/sitemap-core.xml"
+  to = "/api/sitemap-core"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/sitemap-shop.xml"
+  to = "/api/sitemap-shop"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/sitemap-geo.xml"
+  to = "/api/sitemap-geo"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/sitemap-index.xml"
+  to = "/api/sitemap-index"
+  status = 200
+  force = true
 
 # ============================================
 # Netlify Forms Configuration

@@ -2,8 +2,8 @@ import { MetadataRoute } from 'next';
 import { products, locations } from '@/lib/landing-page-data';
 
 /**
- * Main Sitemap - All URLs in one file
- * This is the most reliable approach for Netlify deployment
+ * Main Sitemap Generator
+ * Generates a comprehensive sitemap with all URLs
  */
 
 const baseUrl = 'https://phoenixxsmartbuild.com';
@@ -122,35 +122,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/puf-panel-manufacturer-in-kolhapur`, lastModified: today, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/puf-panel-manufacturer-in-chhatrapati-sambhajinagar`, lastModified: today, changeFrequency: 'monthly', priority: 0.8 },
     
-    // Legal
-    { url: `${baseUrl}/privacy-policy`, lastModified: today, changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${baseUrl}/return-policy`, lastModified: today, changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${baseUrl}/business-terms`, lastModified: today, changeFrequency: 'yearly', priority: 0.3 },
-  ];
-  
-  // ============================================
-  // SHOP PAGES
-  // ============================================
-  const shopPages: MetadataRoute.Sitemap = [
+    // Shop Pages
     { url: `${baseUrl}/shop`, lastModified: today, changeFrequency: 'weekly', priority: 0.9 },
-    // Sandwich Panels
     { url: `${baseUrl}/shop/sandwich-puf-panel`, lastModified: today, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/shop/roofing-puf-panel`, lastModified: today, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/shop/pir-panel`, lastModified: today, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/shop/rockwool-panel`, lastModified: today, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/shop/wall-ceiling-panel`, lastModified: today, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/shop/fm-approved-panel`, lastModified: today, changeFrequency: 'weekly', priority: 0.9 },
-    // Doors
     { url: `${baseUrl}/shop/cleanroom-door`, lastModified: today, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/shop/fire-door-emergency-exit`, lastModified: today, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/shop/fire-rated-multipurpose-door`, lastModified: today, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/shop/cold-storage-door`, lastModified: today, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/shop/hermetic-door`, lastModified: today, changeFrequency: 'weekly', priority: 0.9 },
-    // Cleanroom
     { url: `${baseUrl}/shop/cleanroom-partition`, lastModified: today, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/shop/cleanroom-false-ceiling`, lastModified: today, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/shop/cleanroom-doors`, lastModified: today, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/shop/cleanroom-flooring`, lastModified: today, changeFrequency: 'weekly', priority: 0.9 },
+    
+    // Legal
+    { url: `${baseUrl}/privacy-policy`, lastModified: today, changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${baseUrl}/return-policy`, lastModified: today, changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${baseUrl}/business-terms`, lastModified: today, changeFrequency: 'yearly', priority: 0.3 },
   ];
   
   // ============================================
@@ -168,5 +161,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
-  return [...corePages, ...shopPages, ...geoPages];
+  return [...corePages, ...geoPages];
 }

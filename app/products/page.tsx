@@ -315,6 +315,8 @@ export default function ProductsPage() {
                       {['Sandwich Panels', 'Doors', 'Cold Chain Solutions', 'Cleanroom Products'].map((filter) => (
                         <button
                           key={filter}
+                          type="button"
+                          aria-label={`Filter by ${filter}`}
                           className="px-4 py-2 rounded-full bg-slate-100 text-slate-700 text-sm font-medium hover:bg-blue-100 hover:text-blue-700 transition-colors"
                         >
                           {filter}
@@ -328,6 +330,8 @@ export default function ProductsPage() {
                       {['Fire-Rated', 'Energy-Efficient', 'Acoustic', 'Hygienic', 'Custom Sizes'].map((filter) => (
                         <button
                           key={filter}
+                          type="button"
+                          aria-label={`Filter by ${filter} feature`}
                           className="px-4 py-2 rounded-full bg-slate-100 text-slate-700 text-sm font-medium hover:bg-emerald-100 hover:text-emerald-700 transition-colors"
                         >
                           {filter}
@@ -341,6 +345,8 @@ export default function ProductsPage() {
                       {['Pharma', 'Food Processing', 'Dairy', 'Healthcare', 'Manufacturing', 'Logistics'].map((filter) => (
                         <button
                           key={filter}
+                          type="button"
+                          aria-label={`Filter by ${filter} industry`}
                           className="px-4 py-2 rounded-full bg-slate-100 text-slate-700 text-sm font-medium hover:bg-orange-100 hover:text-orange-700 transition-colors"
                         >
                           {filter}

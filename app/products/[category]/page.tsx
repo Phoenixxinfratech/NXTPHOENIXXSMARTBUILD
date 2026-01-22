@@ -374,7 +374,7 @@ function SandwichPanelsPage() {
           <div className="absolute inset-0 grid grid-cols-3">
             {data.heroImages.map((img, idx) => (
               <div key={idx} className="relative overflow-hidden">
-                <Image src={img} alt={`Sandwich Panel ${idx + 1}`} fill className="object-cover" priority={idx === 0} />
+                <Image src={img} alt={`Sandwich Panel ${idx + 1}`} fill sizes="33vw" className="object-cover" priority={idx === 0} />
               </div>
             ))}
             <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/80 to-slate-900/70" />
@@ -466,7 +466,7 @@ function SandwichPanelsPage() {
                   className="group rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className="relative h-48 overflow-hidden">
-                    <Image src={product.image} alt={product.name} fill className="object-cover transition-transform duration-500 group-hover:scale-110" />
+                    <Image src={product.image} alt={product.name} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw" className="object-cover transition-transform duration-500 group-hover:scale-110" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   </div>
                   <div className="p-5">
@@ -832,7 +832,7 @@ function OtherCategoryPage({ data, category }: { data: typeof otherCategoriesDat
         {/* Hero */}
         <section className="relative min-h-[50vh] flex items-center overflow-hidden">
           <div className="absolute inset-0">
-            <Image src={data.heroImage} alt={data.title} fill className="object-cover" priority />
+            <Image src={data.heroImage} alt={data.title} fill sizes="100vw" className="object-cover" priority />
             <div className={`absolute inset-0 bg-gradient-to-r ${data.gradient} opacity-80`} />
             <div className="absolute inset-0 bg-black/30" />
           </div>
@@ -863,7 +863,7 @@ function OtherCategoryPage({ data, category }: { data: typeof otherCategoriesDat
                 <div key={product.slug} className={`grid gap-8 lg:grid-cols-2 lg:items-center ${idx % 2 === 1 ? '' : ''}`}>
                   <div className={idx % 2 === 1 ? 'lg:order-2' : ''}>
                     <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
-                      <Image src={product.image} alt={product.name} fill className="object-cover" />
+                      <Image src={product.image} alt={product.name} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
                     </div>
                   </div>
                   <div className={idx % 2 === 1 ? 'lg:order-1' : ''}>

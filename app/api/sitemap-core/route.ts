@@ -1,0 +1,139 @@
+import { NextResponse } from 'next/server';
+
+const baseUrl = 'https://phoenixxsmartbuild.com';
+
+export async function GET() {
+  const today = new Date().toISOString().split('T')[0];
+  
+  const coreUrls = [
+    // Main
+    { loc: '/', changefreq: 'weekly', priority: '1.0' },
+    { loc: '/about-us', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/contact-us', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/get-a-quote', changefreq: 'monthly', priority: '0.9' },
+    { loc: '/clientele', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/career', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/become-partner', changefreq: 'monthly', priority: '0.6' },
+    
+    // Products Main
+    { loc: '/products', changefreq: 'weekly', priority: '0.9' },
+    
+    // Sandwich Panels
+    { loc: '/products/sandwich-panels', changefreq: 'weekly', priority: '0.8' },
+    { loc: '/products/sandwich-panels/sandwich-puf-panel', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/products/sandwich-panels/roofing-puf-panel', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/products/sandwich-panels/pir-panel', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/products/sandwich-panels/rockwool-panel', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/products/sandwich-panels/wall-ceiling-panel', changefreq: 'monthly', priority: '0.8' },
+    
+    // Doors
+    { loc: '/products/doors', changefreq: 'weekly', priority: '0.8' },
+    { loc: '/products/doors/cleanroom-door', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/products/doors/fire-door-emergency-exit', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/products/doors/fire-rated-multipurpose-door', changefreq: 'monthly', priority: '0.7' },
+    
+    // Cleanroom Solutions
+    { loc: '/products/cleanroom-solutions', changefreq: 'weekly', priority: '0.8' },
+    { loc: '/products/cleanroom-solutions/cleanroom-partition', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/products/cleanroom-solutions/cleanroom-doors', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/products/cleanroom-solutions/cleanroom-false-ceiling', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/products/cleanroom-solutions/cleanroom-flooring', changefreq: 'monthly', priority: '0.7' },
+    
+    // Solutions
+    { loc: '/solutions', changefreq: 'weekly', priority: '0.9' },
+    { loc: '/solutions/peb', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/solutions/walkable-ceiling-systems', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/solutions/non-walkable-ceiling-systems', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/solutions/partition-solutions', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/solutions/cold-storage-construction', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/solutions/prefab-house', changefreq: 'monthly', priority: '0.7' },
+    
+    // Industries
+    { loc: '/industries', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/industries/dairy', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/industries/pharma-chemical', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/industries/food-processing', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/industries/cold-chain', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/industries/precision-engineering', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/industries/hospitality', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/industries/automobile', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/industries/agri-processing', changefreq: 'monthly', priority: '0.7' },
+    
+    // Resources
+    { loc: '/resources', changefreq: 'weekly', priority: '0.8' },
+    { loc: '/resources/blogs', changefreq: 'weekly', priority: '0.7' },
+    { loc: '/resources/project-gallery', changefreq: 'weekly', priority: '0.7' },
+    { loc: '/resources/technical-sheet', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/brochure', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/faq', changefreq: 'monthly', priority: '0.7' },
+    
+    // Blog Posts
+    { loc: '/resources/blogs/rise-of-sustainable-peb-structures', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/blogs/optimizing-cold-storage-energy-efficiency', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/blogs/cleanroom-design-best-practices', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/blogs/future-of-prefab-construction', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/blogs/fire-safety-industrial-buildings', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/blogs/choosing-right-insulation-cold-storage', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/blogs/puf-panels-food-processing', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/blogs/industrial-door-solutions-guide', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/blogs/what-is-a-puf-panel', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/blogs/puf-panel-vs-traditional-roofing-sheets', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/blogs/how-puf-panels-reduce-energy-costs', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/blogs/puf-panel-thickness-guide', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/blogs/applications-of-puf-panels-in-cold-storage-pharma', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/blogs/puf-vs-pir-vs-rockwool', changefreq: 'monthly', priority: '0.6' },
+    
+    // Project Gallery
+    { loc: '/resources/project-gallery/pharma-cleanroom-pune', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/project-gallery/cold-storage-mumbai', changefreq: 'monthly', priority: '0.6' },
+    
+    // SEO Authority Pages
+    { loc: '/best-puf-panel-manufacturer-in-india', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/industrial-puf-panel-manufacturer-in-india', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/insulated-puf-panel-manufacturer-in-india', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/leading-puf-panel-company-in-india', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/premium-puf-panel-manufacturer-in-india', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/puf-panel-company-in-india', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/puf-panel-suppliers-in-india', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/puf-panels-manufacturer-india', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/sandwich-puf-panel-manufacturer-in-india', changefreq: 'monthly', priority: '0.8' },
+    
+    // City Landing Pages
+    { loc: '/puf-panel-manufacturer-in-surat', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/puf-panel-manufacturer-in-vadodara', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/puf-panel-manufacturer-in-rajkot', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/puf-panel-manufacturer-in-jamnagar', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/puf-panel-manufacturer-in-vapi', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/puf-panel-manufacturer-in-dholera', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/puf-panel-manufacturer-in-pune', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/puf-panel-manufacturer-in-nagpur', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/puf-panel-manufacturer-in-nashik', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/puf-panel-manufacturer-in-thane', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/puf-panel-manufacturer-in-mumbai', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/puf-panel-manufacturer-in-kolhapur', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/puf-panel-manufacturer-in-chhatrapati-sambhajinagar', changefreq: 'monthly', priority: '0.8' },
+    
+    // Legal
+    { loc: '/privacy-policy', changefreq: 'yearly', priority: '0.3' },
+    { loc: '/return-policy', changefreq: 'yearly', priority: '0.3' },
+    { loc: '/business-terms', changefreq: 'yearly', priority: '0.3' },
+  ];
+
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${coreUrls.map(url => `  <url>
+    <loc>${baseUrl}${url.loc}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>${url.changefreq}</changefreq>
+    <priority>${url.priority}</priority>
+  </url>`).join('\n')}
+</urlset>`;
+
+  return new NextResponse(xml, {
+    headers: {
+      'Content-Type': 'application/xml',
+      'Cache-Control': 'public, max-age=3600, stale-while-revalidate=86400',
+    },
+  });
+}
+

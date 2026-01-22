@@ -217,13 +217,118 @@ export function generateLocalBusinessSchema() {
     address: {
       '@type': 'PostalAddress',
       streetAddress: siteConfig.contact.address,
+      addressLocality: 'Ahmedabad',
+      addressRegion: 'Gujarat',
+      postalCode: '380015',
+      addressCountry: 'IN',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: '23.0225',
+      longitude: '72.5714',
     },
     openingHoursSpecification: {
       '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
       opens: '09:00',
       closes: '18:00',
     },
+    priceRange: '₹₹₹',
+    servesCuisine: undefined,
+    areaServed: {
+      '@type': 'Country',
+      name: 'India',
+    },
+  };
+}
+
+/**
+ * Generate SpeakableSpecification for voice search
+ */
+export function generateSpeakableSchema(cssSelectors: string[] = ['h1', '.ai-summary', '.faq-answer']) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: cssSelectors,
+    },
+  };
+}
+
+/**
+ * Generate VideoObject schema (for future video content)
+ */
+export function generateVideoSchema(video: {
+  name: string;
+  description: string;
+  thumbnailUrl: string;
+  uploadDate: string;
+  duration?: string;
+  contentUrl?: string;
+  embedUrl?: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name: video.name,
+    description: video.description,
+    thumbnailUrl: video.thumbnailUrl,
+    uploadDate: video.uploadDate,
+    duration: video.duration,
+    contentUrl: video.contentUrl,
+    embedUrl: video.embedUrl,
+    publisher: {
+      '@type': 'Organization',
+      name: siteConfig.company.name,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteConfig.url}/images/brand/logos/logo.png`,
+      },
+    },
+  };
+}
+
+/**
+ * Generate ContactPage schema
+ */
+export function generateContactPageSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    name: 'Contact PHOENIXX SMARTBUILD',
+    description: 'Get in touch with PHOENIXX SMARTBUILD for industrial infrastructure solutions, PUF panels, cleanrooms, and EPC projects.',
+    url: `${siteConfig.url}/contact-us`,
+    mainEntity: {
+      '@type': 'Organization',
+      name: siteConfig.company.name,
+      telephone: siteConfig.contact.phone,
+      email: siteConfig.contact.email,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: siteConfig.contact.address,
+        addressLocality: 'Ahmedabad',
+        addressRegion: 'Gujarat',
+        addressCountry: 'IN',
+      },
+    },
+  };
+}
+
+/**
+ * Generate ItemList schema for product listings
+ */
+export function generateItemListSchema(items: { name: string; url: string; image?: string; position: number }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: items.map((item) => ({
+      '@type': 'ListItem',
+      position: item.position,
+      name: item.name,
+      url: item.url.startsWith('http') ? item.url : `${siteConfig.url}${item.url}`,
+      ...(item.image && { image: item.image }),
+    })),
   };
 }
 

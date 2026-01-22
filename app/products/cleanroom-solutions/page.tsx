@@ -142,8 +142,9 @@ export default function CleanroomSolutionsPage() {
           <div className="absolute inset-0">
             <Image
               src="/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat1.jpg"
-              alt="Cleanroom Solutions"
+              alt="Cleanroom Solutions - Modular Cleanroom Partitions and Systems by PHOENIXX SMARTBUILD"
               fill
+              sizes="100vw"
               className="object-cover"
               priority
             />
@@ -218,7 +219,7 @@ export default function CleanroomSolutionsPage() {
                 <Link key={product.slug} href={product.link} className="group rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1">
                   <div className="grid md:grid-cols-2">
                     <div className="relative h-64 md:h-auto overflow-hidden">
-                      <Image src={product.image} alt={product.name} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
+                      <Image src={product.image} alt={product.name} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-110 transition-transform duration-500" />
                     </div>
                     <div className="p-6">
                       <h3 className="text-xl font-bold text-slate-900 group-hover:text-emerald-600 transition-colors">{product.name}</h3>

@@ -39,7 +39,6 @@ Allow: /
 
 # Sitemaps - All sitemaps for comprehensive indexing
 Sitemap: https://phoenixxsmartbuild.com/sitemap.xml
-Sitemap: https://phoenixxsmartbuild.com/sitemap-index.xml
 Sitemap: https://phoenixxsmartbuild.com/sitemap-core.xml
 Sitemap: https://phoenixxsmartbuild.com/sitemap-shop.xml
 Sitemap: https://phoenixxsmartbuild.com/sitemap-geo.xml

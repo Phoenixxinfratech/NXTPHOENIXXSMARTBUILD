@@ -153,8 +153,9 @@ export default function DoorsPage() {
           <div className="absolute inset-0">
             <Image
               src="/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-1.jpg"
-              alt="Industrial Doors"
+              alt="Industrial Doors - Cleanroom, Fire Rated and Cold Storage Doors by PHOENIXX SMARTBUILD"
               fill
+              sizes="100vw"
               className="object-cover"
               priority
             />
@@ -226,7 +227,7 @@ export default function DoorsPage() {
               {doorsData.products.map((product) => (
                 <Link key={product.slug} href={product.link} className="group rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1">
                   <div className="relative h-52 overflow-hidden">
-                    <Image src={product.image} alt={product.name} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <Image src={product.image} alt={product.name} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover group-hover:scale-110 transition-transform duration-500" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   </div>
                   <div className="p-5">
