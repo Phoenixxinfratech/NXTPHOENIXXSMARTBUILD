@@ -61,6 +61,7 @@ export function Footer() {
                 width={200}
                 height={50}
                 className="h-12 w-auto brightness-0 invert"
+                unoptimized
               />
             </Link>
             <p className="mt-2 text-lg font-medium text-white">

@@ -11,6 +11,8 @@ const nextConfig = {
 
   // Image optimization configuration
   images: {
+    // Disable image optimization to use direct images (fixes Netlify IPX issues)
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
