@@ -1,12 +1,30 @@
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
+import dynamic from 'next/dynamic';
 import '@/styles/globals.css';
 import { cn } from '@/lib/utils';
 import { siteConfig } from '@/lib/site-config';
-import { AnalyticsProvider } from '@/components/tracking/analytics';
-import { WhatsAppButton } from '@/components/ui/whatsapp-button';
-import { CookieConsent } from '@/components/ui/cookie-consent';
-import { ImageProtection } from '@/components/ui/image-protection';
+
+// Lazy load non-critical components to improve initial load time
+const AnalyticsProvider = dynamic(
+  () => import('@/components/tracking/analytics').then(mod => ({ default: mod.AnalyticsProvider })),
+  { ssr: false }
+);
+
+const WhatsAppButton = dynamic(
+  () => import('@/components/ui/whatsapp-button').then(mod => ({ default: mod.WhatsAppButton })),
+  { ssr: false }
+);
+
+const CookieConsent = dynamic(
+  () => import('@/components/ui/cookie-consent').then(mod => ({ default: mod.CookieConsent })),
+  { ssr: false }
+);
+
+const ImageProtection = dynamic(
+  () => import('@/components/ui/image-protection').then(mod => ({ default: mod.ImageProtection })),
+  { ssr: false }
+);
 
 const inter = Inter({
   subsets: ['latin'],
@@ -94,11 +112,21 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Preconnect to external resources */}
+        {/* Preconnect to external resources for faster loading */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://cdn.sanity.io" />
         <link rel="dns-prefetch" href="https://cdn.sanity.io" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        
+        {/* Preload critical assets */}
+        <link 
+          rel="preload" 
+          href="/images/brand/logos/logo.png" 
+          as="image"
+          type="image/png"
+        />
         
         {/* Geo and business verification meta tags */}
         <meta name="geo.region" content="IN-GJ" />

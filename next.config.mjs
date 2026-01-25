@@ -32,12 +32,36 @@ const nextConfig = {
   experimental: {
     // Enable scroll restoration
     scrollRestoration: true,
-    // Optimize package imports
-    optimizePackageImports: ['lucide-react', 'framer-motion'],
+    // Optimize package imports - reduces bundle size significantly
+    optimizePackageImports: [
+      'lucide-react',
+      'framer-motion',
+      '@radix-ui/react-accordion',
+      '@radix-ui/react-dialog',
+      '@radix-ui/react-dropdown-menu',
+      '@radix-ui/react-navigation-menu',
+      '@radix-ui/react-tabs',
+      'class-variance-authority',
+      'clsx',
+      'tailwind-merge',
+    ],
+  },
+
+  // Modular imports to reduce bundle size
+  modularizeImports: {
+    'lucide-react': {
+      transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}',
+    },
   },
 
   // Enable powered by header removal for security
   poweredByHeader: false,
+  
+  // Generate ETags for better caching
+  generateEtags: true,
+  
+  // Compress responses
+  compress: true,
 
   // Headers for security, caching, and image protection
   async headers() {
@@ -124,6 +148,26 @@ const nextConfig = {
           {
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      // Static assets caching (JS, CSS)
+      {
+        source: '/_next/static/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      // HTML pages with stale-while-revalidate
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=0, s-maxage=86400, stale-while-revalidate=86400',
           },
         ],
       },
