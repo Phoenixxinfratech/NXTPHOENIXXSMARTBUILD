@@ -187,7 +187,23 @@ const nextConfig = {
   // Redirects configuration - 301 redirects for legacy/broken URLs
   async redirects() {
     return [
+      // ============================================
+      // Generic "puf-panel-manufacturer" redirects (short URLs → SEO pages)
+      // ============================================
+      {
+        source: '/puf-panel-manufacturer-in-india',
+        destination: '/best-puf-panel-manufacturer-in-india',
+        permanent: true,
+      },
+      {
+        source: '/puf-panel-manufacturer-in-ahmedabad',
+        destination: '/sandwich-puf-panel-in-ahmedabad',
+        permanent: true,
+      },
+
+      // ============================================
       // Blog slug redirects (short/incorrect slugs → correct slugs)
+      // ============================================
       {
         source: '/resources/blogs/sustainable-peb-structures',
         destination: '/resources/blogs/rise-of-sustainable-peb-structures',
@@ -243,7 +259,10 @@ const nextConfig = {
         destination: '/resources/blogs/puf-panels-cold-storage-pharma-applications',
         permanent: true,
       },
+
+      // ============================================
       // Industry slug redirects
+      // ============================================
       {
         source: '/industries/semiconductor',
         destination: '/industries/precision-engineering',
@@ -279,13 +298,19 @@ const nextConfig = {
         destination: '/industries/pharma-chemical',
         permanent: true,
       },
+
+      // ============================================
       // Solution redirects
+      // ============================================
       {
         source: '/solutions/false-ceiling-partition',
         destination: '/solutions/partition-solutions',
         permanent: true,
       },
+
+      // ============================================
       // Sitemap redirect
+      // ============================================
       {
         source: '/sitemap',
         destination: '/sitemap-page',
