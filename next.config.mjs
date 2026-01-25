@@ -143,7 +143,7 @@ const nextConfig = {
   // Redirects configuration - 301 redirects for legacy/broken URLs
   async redirects() {
     return [
-      // Blog slug redirects (short slugs → full slugs)
+      // Blog slug redirects (short/incorrect slugs → correct slugs)
       {
         source: '/resources/blogs/sustainable-peb-structures',
         destination: '/resources/blogs/rise-of-sustainable-peb-structures',
@@ -156,7 +156,47 @@ const nextConfig = {
       },
       {
         source: '/resources/blogs/turnkey-epc-projects',
-        destination: '/resources/blogs/future-of-prefab-construction',
+        destination: '/resources/blogs/turnkey-epc-project-delivery',
+        permanent: true,
+      },
+      {
+        source: '/resources/blogs/future-of-prefab-construction',
+        destination: '/resources/blogs/turnkey-epc-project-delivery',
+        permanent: true,
+      },
+      {
+        source: '/resources/blogs/what-is-a-puf-panel',
+        destination: '/resources/blogs/what-is-puf-panel-how-does-it-work',
+        permanent: true,
+      },
+      {
+        source: '/resources/blogs/how-puf-panels-reduce-energy-costs',
+        destination: '/resources/blogs/how-puf-panels-reduce-energy-costs-factories',
+        permanent: true,
+      },
+      {
+        source: '/resources/blogs/puf-panel-thickness-guide',
+        destination: '/resources/blogs/puf-panel-thickness-guide-industrial-buildings',
+        permanent: true,
+      },
+      {
+        source: '/resources/blogs/applications-of-puf-panels-in-cold-storage-pharma',
+        destination: '/resources/blogs/puf-panels-cold-storage-pharma-applications',
+        permanent: true,
+      },
+      {
+        source: '/resources/blogs/choosing-right-insulation-cold-storage',
+        destination: '/resources/blogs/choosing-right-insulated-panel',
+        permanent: true,
+      },
+      {
+        source: '/resources/blogs/industrial-door-solutions-guide',
+        destination: '/resources/blogs/industrial-doors-selection-guide',
+        permanent: true,
+      },
+      {
+        source: '/resources/blogs/puf-panels-food-processing',
+        destination: '/resources/blogs/puf-panels-cold-storage-pharma-applications',
         permanent: true,
       },
       // Industry slug redirects

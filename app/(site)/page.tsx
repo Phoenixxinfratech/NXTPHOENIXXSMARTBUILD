@@ -196,7 +196,7 @@ const insights = [
   { title: 'The Rise of Sustainable PEB Structures', slug: 'rise-of-sustainable-peb-structures' },
   { title: 'Optimizing Cold Storage for Energy Efficiency', slug: 'optimizing-cold-storage-energy-efficiency' },
   { title: 'Cleanroom Design Trends for Pharma Compliance', slug: 'cleanroom-design-best-practices' },
-  { title: 'Future of Prefab Construction', slug: 'future-of-prefab-construction' },
+  { title: 'Delivering Turnkey EPC Projects', slug: 'turnkey-epc-project-delivery' },
 ];
 
 // FAQs

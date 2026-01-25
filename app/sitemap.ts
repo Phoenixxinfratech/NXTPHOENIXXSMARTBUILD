@@ -76,20 +76,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/resources/brochure`, lastModified: today, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${baseUrl}/resources/faq`, lastModified: today, changeFrequency: 'monthly', priority: 0.7 },
     
-    // Blog Posts
+    // Blog Posts (all actual blog slugs)
     { url: `${baseUrl}/resources/blogs/rise-of-sustainable-peb-structures`, lastModified: today, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${baseUrl}/resources/blogs/optimizing-cold-storage-energy-efficiency`, lastModified: today, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${baseUrl}/resources/blogs/cleanroom-design-best-practices`, lastModified: today, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/resources/blogs/future-of-prefab-construction`, lastModified: today, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/resources/blogs/choosing-right-insulated-panel`, lastModified: today, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${baseUrl}/resources/blogs/fire-safety-industrial-buildings`, lastModified: today, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/resources/blogs/choosing-right-insulation-cold-storage`, lastModified: today, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/resources/blogs/puf-panels-food-processing`, lastModified: today, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/resources/blogs/industrial-door-solutions-guide`, lastModified: today, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/resources/blogs/what-is-a-puf-panel`, lastModified: today, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/resources/blogs/cold-chain-logistics-india`, lastModified: today, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/resources/blogs/turnkey-epc-project-delivery`, lastModified: today, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/resources/blogs/industrial-doors-selection-guide`, lastModified: today, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/resources/blogs/what-is-puf-panel-how-does-it-work`, lastModified: today, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${baseUrl}/resources/blogs/puf-panel-vs-traditional-roofing-sheets`, lastModified: today, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/resources/blogs/how-puf-panels-reduce-energy-costs`, lastModified: today, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/resources/blogs/puf-panel-thickness-guide`, lastModified: today, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/resources/blogs/applications-of-puf-panels-in-cold-storage-pharma`, lastModified: today, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/resources/blogs/how-puf-panels-reduce-energy-costs-factories`, lastModified: today, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/resources/blogs/puf-panel-thickness-guide-industrial-buildings`, lastModified: today, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/resources/blogs/puf-panels-cold-storage-pharma-applications`, lastModified: today, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${baseUrl}/resources/blogs/puf-vs-pir-vs-rockwool`, lastModified: today, changeFrequency: 'monthly', priority: 0.6 },
     
     // Project Gallery

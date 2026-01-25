@@ -67,20 +67,20 @@ export async function GET() {
     { loc: '/resources/brochure', changefreq: 'monthly', priority: '0.6' },
     { loc: '/resources/faq', changefreq: 'monthly', priority: '0.7' },
     
-    // Blog Posts
+    // Blog Posts (all actual blog slugs)
     { loc: '/resources/blogs/rise-of-sustainable-peb-structures', changefreq: 'monthly', priority: '0.6' },
     { loc: '/resources/blogs/optimizing-cold-storage-energy-efficiency', changefreq: 'monthly', priority: '0.6' },
     { loc: '/resources/blogs/cleanroom-design-best-practices', changefreq: 'monthly', priority: '0.6' },
-    { loc: '/resources/blogs/future-of-prefab-construction', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/blogs/choosing-right-insulated-panel', changefreq: 'monthly', priority: '0.6' },
     { loc: '/resources/blogs/fire-safety-industrial-buildings', changefreq: 'monthly', priority: '0.6' },
-    { loc: '/resources/blogs/choosing-right-insulation-cold-storage', changefreq: 'monthly', priority: '0.6' },
-    { loc: '/resources/blogs/puf-panels-food-processing', changefreq: 'monthly', priority: '0.6' },
-    { loc: '/resources/blogs/industrial-door-solutions-guide', changefreq: 'monthly', priority: '0.6' },
-    { loc: '/resources/blogs/what-is-a-puf-panel', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/blogs/cold-chain-logistics-india', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/blogs/turnkey-epc-project-delivery', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/blogs/industrial-doors-selection-guide', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/blogs/what-is-puf-panel-how-does-it-work', changefreq: 'monthly', priority: '0.6' },
     { loc: '/resources/blogs/puf-panel-vs-traditional-roofing-sheets', changefreq: 'monthly', priority: '0.6' },
-    { loc: '/resources/blogs/how-puf-panels-reduce-energy-costs', changefreq: 'monthly', priority: '0.6' },
-    { loc: '/resources/blogs/puf-panel-thickness-guide', changefreq: 'monthly', priority: '0.6' },
-    { loc: '/resources/blogs/applications-of-puf-panels-in-cold-storage-pharma', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/blogs/how-puf-panels-reduce-energy-costs-factories', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/blogs/puf-panel-thickness-guide-industrial-buildings', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/resources/blogs/puf-panels-cold-storage-pharma-applications', changefreq: 'monthly', priority: '0.6' },
     { loc: '/resources/blogs/puf-vs-pir-vs-rockwool', changefreq: 'monthly', priority: '0.6' },
     
     // Project Gallery (all project pages)
