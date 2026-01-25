@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { CareerForm } from './career-form';
+import { ApplyButton } from './apply-button';
 
 export const metadata: Metadata = {
   title: 'Careers at PHOENIXX | Join Our Team',
@@ -223,12 +224,7 @@ export default function CareerPage() {
                       </div>
                     </div>
                     <div className="flex-shrink-0">
-                      <a
-                        href={`mailto:careers@phoenixxsmartbuild.com?subject=Application for ${job.title}`}
-                        className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 px-5 py-2.5 font-semibold text-white text-sm shadow hover:shadow-lg transition-all"
-                      >
-                        Apply Now
-                      </a>
+                      <ApplyButton jobTitle={job.title} />
                     </div>
                   </div>
                 </div>
@@ -240,7 +236,7 @@ export default function CareerPage() {
                 Don&apos;t see a role that fits? We&apos;re always looking for talented people.
               </p>
               <a
-                href="mailto:careers@phoenixxsmartbuild.com?subject=General Application"
+                href="#apply"
                 className="mt-4 inline-flex items-center gap-2 text-purple-600 font-semibold hover:text-purple-700 transition-colors"
               >
                 Send us your resume
