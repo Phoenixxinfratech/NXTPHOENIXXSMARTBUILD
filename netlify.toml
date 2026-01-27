@@ -156,6 +156,87 @@
   status = 301
 
 # ============================================
+# SEO Page Redirects - Generic to specific pages
+# ============================================
+[[redirects]]
+  from = "/puf-panel-manufacturer-in-india"
+  to = "/best-puf-panel-manufacturer-in-india"
+  status = 301
+
+[[redirects]]
+  from = "/puf-panel-manufacturer-in-ahmedabad"
+  to = "/sandwich-puf-panel-in-ahmedabad"
+  status = 301
+
+# ============================================
+# Blog Redirects - Short/incorrect slugs to correct slugs
+# ============================================
+[[redirects]]
+  from = "/resources/blogs/puf-panel-thickness-guide"
+  to = "/resources/blogs/puf-panel-thickness-guide-industrial-buildings"
+  status = 301
+
+[[redirects]]
+  from = "/resources/blogs/how-puf-panels-reduce-energy-costs"
+  to = "/resources/blogs/how-puf-panels-reduce-energy-costs-factories"
+  status = 301
+
+[[redirects]]
+  from = "/resources/blogs/puf-panels-food-processing"
+  to = "/resources/blogs/puf-panels-cold-storage-pharma-applications"
+  status = 301
+
+[[redirects]]
+  from = "/resources/blogs/future-of-prefab-construction"
+  to = "/resources/blogs/turnkey-epc-project-delivery"
+  status = 301
+
+[[redirects]]
+  from = "/resources/blogs/what-is-a-puf-panel"
+  to = "/resources/blogs/what-is-puf-panel-how-does-it-work"
+  status = 301
+
+[[redirects]]
+  from = "/resources/blogs/industrial-door-solutions-guide"
+  to = "/resources/blogs/industrial-doors-selection-guide"
+  status = 301
+
+[[redirects]]
+  from = "/resources/blogs/applications-of-puf-panels-in-cold-storage-pharma"
+  to = "/resources/blogs/puf-panels-cold-storage-pharma-applications"
+  status = 301
+
+[[redirects]]
+  from = "/resources/blogs/cold-storage-pharma"
+  to = "/resources/blogs/puf-panels-cold-storage-pharma-applications"
+  status = 301
+
+[[redirects]]
+  from = "/resources/blogs/insulation-cold-storage"
+  to = "/resources/blogs/choosing-right-insulated-panel"
+  status = 301
+
+[[redirects]]
+  from = "/resources/blogs/choosing-right-insulation-cold-storage"
+  to = "/resources/blogs/choosing-right-insulated-panel"
+  status = 301
+
+[[redirects]]
+  from = "/resources/blogs/cold-storage-energy-efficiency"
+  to = "/resources/blogs/optimizing-cold-storage-energy-efficiency"
+  status = 301
+
+[[redirects]]
+  from = "/resources/blogs/sustainable-peb-structures"
+  to = "/resources/blogs/rise-of-sustainable-peb-structures"
+  status = 301
+
+[[redirects]]
+  from = "/resources/blogs/turnkey-epc-projects"
+  to = "/resources/blogs/turnkey-epc-project-delivery"
+  status = 301
+
+# ============================================
 # Sitemap Redirects - Handled by Next.js rewrites
 # ============================================
 # Note: Sitemaps are now handled via Next.js rewrites in next.config.mjs
