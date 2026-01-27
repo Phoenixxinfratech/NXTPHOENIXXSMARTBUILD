@@ -200,6 +200,21 @@ const nextConfig = {
         destination: '/sandwich-puf-panel-in-ahmedabad',
         permanent: true,
       },
+      {
+        source: '/largest-sandwich-puf-panel-manufacturer-india',
+        destination: '/best-puf-panel-manufacturer-in-india',
+        permanent: true,
+      },
+      {
+        source: '/largest-puf-panel-manufacturer-india',
+        destination: '/best-puf-panel-manufacturer-in-india',
+        permanent: true,
+      },
+      {
+        source: '/top-puf-panel-manufacturer-india',
+        destination: '/top-puf-panel-manufacturers-in-india',
+        permanent: true,
+      },
 
       // ============================================
       // Blog slug redirects (short/incorrect slugs → correct slugs)

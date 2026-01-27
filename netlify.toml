@@ -168,6 +168,21 @@
   to = "/sandwich-puf-panel-in-ahmedabad"
   status = 301
 
+[[redirects]]
+  from = "/largest-sandwich-puf-panel-manufacturer-india"
+  to = "/best-puf-panel-manufacturer-in-india"
+  status = 301
+
+[[redirects]]
+  from = "/largest-puf-panel-manufacturer-india"
+  to = "/best-puf-panel-manufacturer-in-india"
+  status = 301
+
+[[redirects]]
+  from = "/top-puf-panel-manufacturer-india"
+  to = "/top-puf-panel-manufacturers-in-india"
+  status = 301
+
 # ============================================
 # Blog Redirects - Short/incorrect slugs to correct slugs
 # ============================================
