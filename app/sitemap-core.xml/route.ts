@@ -83,6 +83,17 @@ export async function GET() {
     { loc: '/resources/blogs/puf-panels-cold-storage-pharma-applications', changefreq: 'monthly', priority: '0.6' },
     { loc: '/resources/blogs/puf-vs-pir-vs-rockwool', changefreq: 'monthly', priority: '0.6' },
     
+    // New SEO Blog Pages (Authority Content)
+    { loc: '/resources/blogs/puf-panel-installation-accessories', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/resources/blogs/puf-panel-installation-near-me', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/resources/blogs/puf-panel-manufacturers-in-ahmedabad', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/resources/blogs/puf-panel-manufacturers-in-gujarat', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/resources/blogs/jindal-puf-panel-price-list', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/resources/blogs/puf-panel-installation-contractors', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/resources/blogs/puf-panel-wall-installation', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/resources/blogs/puf-panel-installation-cost', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/resources/blogs/puf-panel-house', changefreq: 'monthly', priority: '0.7' },
+    
     // Project Gallery (all project pages)
     { loc: '/resources/project-gallery/pharma-cleanroom-pune', changefreq: 'monthly', priority: '0.6' },
     { loc: '/resources/project-gallery/cold-storage-mumbai', changefreq: 'monthly', priority: '0.6' },
