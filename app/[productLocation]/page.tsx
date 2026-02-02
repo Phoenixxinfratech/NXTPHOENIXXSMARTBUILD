@@ -663,6 +663,107 @@ export default async function ProductLocationPage({ params }: { params: Promise<
             </div>
           </div>
         </section>
+        
+        {/* Ahmedabad Hub Links - Only show for Ahmedabad location */}
+        {location.slug === 'ahmedabad' && (
+          <section className="section-padding bg-white border-t border-slate-100">
+            <div className="container-custom">
+              <div className="max-w-4xl mx-auto">
+                <div className="flex items-center gap-3 mb-6">
+                  <span className="inline-block rounded-full bg-green-500/10 px-3 py-1 text-sm font-medium text-green-600">
+                    PHOENIXX Headquarters
+                  </span>
+                </div>
+                <h2 className="text-2xl font-bold text-slate-900 mb-6">
+                  Explore More PUF Panel Solutions in Ahmedabad
+                </h2>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  {/* Product Pages */}
+                  <div className="bg-slate-50 rounded-xl p-6">
+                    <h3 className="font-bold text-lg text-slate-900 mb-4">Panel Products in Ahmedabad</h3>
+                    <ul className="space-y-3">
+                      <li>
+                        <Link href="/puf-panel-manufacturer-in-ahmedabad" className="text-primary hover:underline flex items-center gap-2">
+                          <span className="text-green-500">→</span> PUF Panel Manufacturer in Ahmedabad
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/sandwich-puf-panel-in-ahmedabad" className="text-primary hover:underline flex items-center gap-2">
+                          <span className="text-blue-500">→</span> Sandwich PUF Panel in Ahmedabad
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/roofing-puf-panel-in-ahmedabad" className="text-primary hover:underline flex items-center gap-2">
+                          <span className="text-blue-500">→</span> Roofing PUF Panel in Ahmedabad
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/pir-panel-in-ahmedabad" className="text-primary hover:underline flex items-center gap-2">
+                          <span className="text-blue-500">→</span> PIR Fire-Rated Panel in Ahmedabad
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/rockwool-panel-in-ahmedabad" className="text-primary hover:underline flex items-center gap-2">
+                          <span className="text-blue-500">→</span> Rockwool Panel in Ahmedabad
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/fm-approved-panel-in-ahmedabad" className="text-primary hover:underline flex items-center gap-2">
+                          <span className="text-blue-500">→</span> FM Approved Panel in Ahmedabad
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  {/* Blog Resources */}
+                  <div className="bg-slate-50 rounded-xl p-6">
+                    <h3 className="font-bold text-lg text-slate-900 mb-4">Ahmedabad Resources & Guides</h3>
+                    <ul className="space-y-3">
+                      <li>
+                        <Link href="/resources/blogs/puf-panel-manufacturers-in-ahmedabad" className="text-primary hover:underline flex items-center gap-2">
+                          <span className="text-orange-500">→</span> PUF Panel Manufacturers Guide
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/resources/blogs/puf-panel-price-ahmedabad-2025-guide" className="text-primary hover:underline flex items-center gap-2">
+                          <span className="text-orange-500">→</span> PUF Panel Price Guide 2025
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/resources/blogs/cold-storage-panel-manufacturers-ahmedabad" className="text-primary hover:underline flex items-center gap-2">
+                          <span className="text-orange-500">→</span> Cold Storage Panel Guide
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/resources/blogs/cleanroom-panel-solutions-ahmedabad-pharma" className="text-primary hover:underline flex items-center gap-2">
+                          <span className="text-orange-500">→</span> Pharma Cleanroom Solutions
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/resources/blogs/industrial-roofing-solutions-ahmedabad-gidc" className="text-primary hover:underline flex items-center gap-2">
+                          <span className="text-orange-500">→</span> Industrial Roofing GIDC
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/resources/blogs/puf-vs-pir-vs-rockwool-ahmedabad-climate" className="text-primary hover:underline flex items-center gap-2">
+                          <span className="text-orange-500">→</span> PUF vs PIR vs Rockwool Guide
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div className="mt-6 p-4 bg-green-50 rounded-xl border border-green-100">
+                  <p className="text-green-800 text-sm">
+                    <strong>Factory Visit:</strong> PHOENIXX headquarters is located in GIDC Naroda, Ahmedabad. 
+                    <Link href="/get-a-quote" className="underline ml-1">Contact us</Link> to schedule a factory visit and see our manufacturing process.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
       </main>
       <Footer />
     </div>

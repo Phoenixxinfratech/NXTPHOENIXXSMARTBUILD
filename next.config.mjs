@@ -195,11 +195,7 @@ const nextConfig = {
         destination: '/best-puf-panel-manufacturer-in-india',
         permanent: true,
       },
-      {
-        source: '/puf-panel-manufacturer-in-ahmedabad',
-        destination: '/sandwich-puf-panel-in-ahmedabad',
-        permanent: true,
-      },
+      // Ahmedabad redirect removed - dedicated page created at /puf-panel-manufacturer-in-ahmedabad
       {
         source: '/largest-sandwich-puf-panel-manufacturer-india',
         destination: '/best-puf-panel-manufacturer-in-india',

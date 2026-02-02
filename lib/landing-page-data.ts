@@ -351,9 +351,14 @@ export const locations: Record<string, LocationData> = {
     state: 'Gujarat',
     climate: 'Ahmedabad experiences extreme heat (up to 48°C in May), dry winters, and unpredictable monsoons. The semi-arid climate demands high-performance thermal insulation for year-round comfort and energy efficiency.',
     industries: ['Pharmaceuticals', 'Chemicals', 'Textiles', 'Engineering', 'IT Services', 'Food Processing', 'Automotive Ancillaries'],
-    industrialZones: ['GIDC Naroda', 'GIDC Odhav', 'GIDC Vatva', 'GIDC Changodar', 'GIDC Sanand', 'Bavla Industrial Area', 'Aslali Industrial Zone'],
-    nearbyAreas: ['Gandhinagar', 'Sanand', 'Kalol', 'Mehsana', 'Nadiad', 'Kheda', 'Bavla', 'Changodar'],
-  },
+    industrialZones: ['GIDC Naroda (PHOENIXX HQ)', 'GIDC Odhav', 'GIDC Vatva', 'GIDC Changodar', 'GIDC Sanand', 'Bavla Industrial Area', 'Aslali Industrial Zone', 'Kathwada GIDC'],
+    nearbyAreas: ['Gandhinagar', 'Sanand', 'Kalol', 'Mehsana', 'Nadiad', 'Kheda', 'Bavla', 'Changodar', 'GIFT City'],
+    // PHOENIXX Headquarters - Special Ahmedabad data
+    factoryLocation: 'GIDC Naroda, Phase II, Ahmedabad - 382330',
+    deliveryTime: 'Same-day delivery available for stock items, 3-5 days for custom orders',
+    localAdvantage: 'Factory-direct pricing, factory visits welcome, dedicated local support team',
+    majorClients: ['Zydus Cadila', 'Torrent Pharma', 'Intas Pharma', 'Adani Group', 'Reliance Industries'],
+  } as LocationData & { factoryLocation?: string; deliveryTime?: string; localAdvantage?: string; majorClients?: string[] },
 
   'gandhinagar': {
     slug: 'gandhinagar',

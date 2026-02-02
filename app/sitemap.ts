@@ -107,6 +107,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/puf-panels-manufacturer-india`, lastModified: today, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/sandwich-puf-panel-manufacturer-in-india`, lastModified: today, changeFrequency: 'monthly', priority: 0.8 },
     
+    // Ahmedabad Pages (Company Headquarters - High Priority)
+    { url: `${baseUrl}/puf-panel-manufacturer-in-ahmedabad`, lastModified: today, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${baseUrl}/sandwich-puf-panel-in-ahmedabad`, lastModified: today, changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${baseUrl}/roofing-puf-panel-in-ahmedabad`, lastModified: today, changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${baseUrl}/rockwool-panel-in-ahmedabad`, lastModified: today, changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${baseUrl}/pir-panel-in-ahmedabad`, lastModified: today, changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${baseUrl}/fm-approved-panel-in-ahmedabad`, lastModified: today, changeFrequency: 'weekly', priority: 0.85 },
+    
+    // Ahmedabad Blog Posts
+    { url: `${baseUrl}/resources/blogs/puf-panel-manufacturers-in-ahmedabad`, lastModified: today, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${baseUrl}/resources/blogs/cold-storage-panel-manufacturers-ahmedabad`, lastModified: today, changeFrequency: 'monthly', priority: 0.75 },
+    { url: `${baseUrl}/resources/blogs/cleanroom-panel-solutions-ahmedabad-pharma`, lastModified: today, changeFrequency: 'monthly', priority: 0.75 },
+    { url: `${baseUrl}/resources/blogs/puf-panel-price-ahmedabad-2025-guide`, lastModified: today, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${baseUrl}/resources/blogs/industrial-roofing-solutions-ahmedabad-gidc`, lastModified: today, changeFrequency: 'monthly', priority: 0.75 },
+    { url: `${baseUrl}/resources/blogs/puf-vs-pir-vs-rockwool-ahmedabad-climate`, lastModified: today, changeFrequency: 'monthly', priority: 0.75 },
+    
     // City Landing Pages
     { url: `${baseUrl}/puf-panel-manufacturer-in-surat`, lastModified: today, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/puf-panel-manufacturer-in-vadodara`, lastModified: today, changeFrequency: 'monthly', priority: 0.8 },
