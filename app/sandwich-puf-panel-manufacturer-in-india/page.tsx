@@ -5,9 +5,9 @@ import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 
 export const metadata: Metadata = {
-  title: 'Sandwich PUF Panel Manufacturer in India | PHOENIXX',
-  description: 'Leading sandwich PUF panel manufacturer in India. PHOENIXX offers high-quality composite panels for roofing, walls & cold storage applications nationwide.',
-  keywords: ['sandwich PUF panel manufacturer in India', 'sandwich panels', 'composite panels', 'insulated roof panels'],
+  title: 'Sandwich PUF Panel Manufacturer in India',
+  description: 'Top sandwich PUF panel manufacturer in India. Premium insulated panels for industrial and commercial buildings.',
+  keywords: ['sandwich PUF panel manufacturer in India', 'sandwich panels', 'composite panels'],
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/sandwich-puf-panel-manufacturer-in-india',
   },
@@ -310,5 +310,6 @@ export default function SandwichPufPanelManufacturerPage() {
     </div>
   );
 }
+
 
 

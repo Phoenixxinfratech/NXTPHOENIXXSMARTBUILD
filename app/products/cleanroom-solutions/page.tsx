@@ -7,12 +7,11 @@ import { JsonLd } from '@/components/seo/json-ld';
 import { AISummaryBlock } from '@/components/ai/ai-summary-block';
 
 export const metadata: Metadata = {
-  title: 'Cleanroom Solutions Manufacturer India | Partitions, Ceilings, Doors & Flooring | PHOENIXX',
-  description: 'PHOENIXX manufactures modular cleanroom solutions: Partitions, False Ceilings (walkable/non-walkable), Cleanroom Doors, and Flooring systems for ISO Class 5-8 environments. GMP/FDA compliant.',
+  title: 'Cleanroom Solutions – GMP Compliant Systems',
+  description: 'Complete cleanroom infrastructure: partitions, doors, ceilings, flooring. ISO Class 5-8. Get cleanroom project quote.',
   keywords: [
     'cleanroom solutions', 'cleanroom partitions', 'cleanroom ceilings', 'modular cleanroom',
     'cleanroom manufacturer india', 'pharmaceutical cleanroom', 'GMP cleanroom',
-    'cleanroom flooring', 'walkable ceiling', 'ISO cleanroom', 'cleanroom panels',
   ],
   alternates: { canonical: 'https://phoenixxsmartbuild.com/products/cleanroom-solutions' },
 };

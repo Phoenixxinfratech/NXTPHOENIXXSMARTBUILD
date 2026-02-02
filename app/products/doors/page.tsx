@@ -7,12 +7,11 @@ import { JsonLd } from '@/components/seo/json-ld';
 import { AISummaryBlock } from '@/components/ai/ai-summary-block';
 
 export const metadata: Metadata = {
-  title: 'Industrial Doors Manufacturer India | Cleanroom, Fire Rated & Cold Storage Doors | PHOENIXX',
-  description: 'PHOENIXX manufactures high-performance industrial doors including Cleanroom Doors, Fire Rated Doors (30-120 min), Cold Storage Doors, and Hermetic Doors. IS/BS/UL certified. Custom sizes available.',
+  title: 'Industrial Doors – Fire Rated & Cleanroom',
+  description: 'Fire-rated doors, cleanroom doors, and industrial specialty doors. IS/ISO compliant. Request door specifications and pricing.',
   keywords: [
     'industrial doors', 'cleanroom doors', 'fire rated doors', 'cold storage doors',
-    'hermetic doors', 'fire doors manufacturer india', 'cleanroom door supplier',
-    'pharmaceutical doors', 'IS fire rated doors', 'emergency exit doors',
+    'fire doors manufacturer india', 'cleanroom door supplier',
   ],
   alternates: { canonical: 'https://phoenixxsmartbuild.com/products/doors' },
 };

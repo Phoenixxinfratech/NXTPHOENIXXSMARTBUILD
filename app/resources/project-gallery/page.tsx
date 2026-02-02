@@ -5,9 +5,9 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 
 export const metadata: Metadata = {
-  title: 'Project Gallery | PHOENIXX SmartBuild',
+  title: 'Project Gallery – Completed Projects',
   description:
-    'Browse PHOENIXX completed projects: Industrial Roofing, Cleanrooms, PUF Panels, and Insulated Wall Systems across Gujarat, India.',
+    'View our completed projects: cold storage, cleanrooms, PEB, industrial facilities. See our work quality firsthand.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/resources/project-gallery',
   },

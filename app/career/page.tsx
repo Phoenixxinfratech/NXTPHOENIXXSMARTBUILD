@@ -6,9 +6,9 @@ import { CareerForm } from './career-form';
 import { ApplyButton } from './apply-button';
 
 export const metadata: Metadata = {
-  title: 'Careers at PHOENIXX | Join Our Team',
+  title: 'Careers at PHOENIXX – Join Our Team',
   description:
-    'Build your career with PHOENIXX SmartBuild. Join our team of engineers, project managers, and industry experts. Explore current openings and opportunities.',
+    'Build your career at PHOENIXX SmartBuild. Openings for engineers, project managers, sales. Growth opportunities await.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/career',
   },

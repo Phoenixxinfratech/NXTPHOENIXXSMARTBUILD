@@ -10,10 +10,10 @@ import { AISummaryBlock } from '@/components/ai/ai-summary-block';
 // Sandwich Panels specific data
 const sandwichPanelsData = {
   title: 'Sandwich Panels',
-  seoTitle: 'Sandwich Panels — Insulated Panels for Energy-Efficient, Fire-Safe & Durable Infrastructure | PHOENIXX India',
+  seoTitle: 'Sandwich PUF Panels – Insulated Wall & Roof',
   tagline: 'Premium Insulated Sandwich Panels Manufacturer in India',
   description: 'Leading manufacturer of high-performance Sandwich PUF Panels, PIR Panels, Rockwool Panels, and insulated panel systems in India.',
-  seoDescription: 'PHOENIXX manufactures PUF, PIR, Rockwool, Roofing, Wall & Ceiling, Cold Storage & Marine Sandwich Panels in India. ISO certified. 150+ projects. Get free quote.',
+  seoDescription: 'High-performance PUF sandwich panels for roofing and walls. Thermal insulation, fire-rated options. Get panel pricing today.',
   heroImages: [
     '/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL1.jpg',
     '/images/products/sandwich-panels/pir-panel/PIR-Sandwich-FM-approved-Panel-2.jpg',
@@ -220,10 +220,10 @@ const otherCategoriesData: Record<string, {
 }> = {
   'doors': {
     title: 'Industrial & Specialty Doors',
-    seoTitle: 'Industrial Doors Manufacturer | Cleanroom, Fire Rated, Cold Storage Doors',
+    seoTitle: 'Industrial Doors – Fire Rated & Cleanroom',
     tagline: 'Precision-Built Doors for Safety, Hygiene & Performance',
     description: 'High-performance industrial doors including cleanroom doors, fire-rated doors, and cold storage doors.',
-    seoDescription: 'PHOENIXX manufactures industrial doors - cleanroom doors, fire rated doors (30-120 min), cold storage doors. IS/BS/UL certified.',
+    seoDescription: 'Fire-rated doors, cleanroom doors, and industrial specialty doors. IS/ISO compliant. Request door specifications and pricing.',
     aiSummary: 'PHOENIXX manufactures industrial doors: Cleanroom Doors, Fire Doors (30-120 min rating), Cold Storage Doors. IS/BS/UL certified.',
     keywords: ['industrial doors', 'cleanroom doors', 'fire rated doors', 'cold storage doors'],
     gradient: 'from-orange-600 to-red-600',
@@ -250,10 +250,10 @@ const otherCategoriesData: Record<string, {
   },
   'cleanroom-solutions': {
     title: 'Cleanroom Solutions',
-    seoTitle: 'Cleanroom Solutions Manufacturer India | Partitions, Ceilings, Doors',
+    seoTitle: 'Cleanroom Solutions – GMP Compliant Systems',
     tagline: 'Complete Contamination Control Systems',
     description: 'Comprehensive cleanroom building systems for pharmaceutical, healthcare, and electronics industries.',
-    seoDescription: 'PHOENIXX manufactures modular cleanroom solutions - partitions, ceilings, doors for ISO 5-8 cleanrooms.',
+    seoDescription: 'Complete cleanroom infrastructure: partitions, doors, ceilings, flooring. ISO Class 5-8. Get cleanroom project quote.',
     aiSummary: 'PHOENIXX cleanroom solutions: Partitions, Ceilings, Doors. ISO Class 5-8 compliant. GMP/FDA suitable.',
     keywords: ['cleanroom solutions', 'cleanroom partitions', 'cleanroom ceilings', 'modular cleanroom'],
     gradient: 'from-emerald-600 to-teal-600',

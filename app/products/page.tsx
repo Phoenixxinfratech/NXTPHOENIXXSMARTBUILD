@@ -7,20 +7,16 @@ import { AISummaryBlock } from '@/components/ai/ai-summary-block';
 import { JsonLd } from '@/components/seo/json-ld';
 
 export const metadata: Metadata = {
-  title: 'High-Performance Infrastructure Products | Sandwich PUF Panels, Doors, Cold Chain & Cleanroom Solutions',
+  title: 'Industrial Products – Panels, Doors & Cleanrooms',
   description:
-    'Explore PHOENIXX\'s complete range of Sandwich PUF Panels, insulated panel systems, Cold Chain solutions, Cleanroom products, and Industrial Doors. Engineered for thermal efficiency, durability, and compliance across industrial environments.',
+    'Explore PUF panels, fire-rated doors, and cleanroom solutions. Engineered for performance, certified for quality. Request a quote now.',
   keywords: [
     'Sandwich PUF Panels',
     'PUF Sandwich Panel',
     'Insulated PUF Panel',
-    'PU Panels',
-    'Cold Storage Panels',
-    'Cleanroom Panels',
     'Industrial Doors',
     'Fire Rated Doors',
-    'Cold Chain Solutions',
-    'Insulated Panels India',
+    'Cleanroom Panels',
   ],
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/products',

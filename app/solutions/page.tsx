@@ -6,9 +6,9 @@ import { AISummaryBlock } from '@/components/ai/ai-summary-block';
 import { JsonLd } from '@/components/seo/json-ld';
 
 export const metadata: Metadata = {
-  title: 'Solutions | End-to-End EPC & Infrastructure Services',
+  title: 'EPC Solutions – PEB, Cold Storage & Cleanrooms',
   description:
-    'PHOENIXX delivers complete EPC solutions: Pre-Engineered Buildings (PEB), Cold Storage Construction, Cleanroom Systems, Ceiling & Partition Solutions, and Turnkey Industrial Projects.',
+    'Turnkey EPC solutions: Pre-Engineered Buildings, cold storage, cleanrooms, ceiling systems. Complete project delivery. Get your quote.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/solutions',
   },

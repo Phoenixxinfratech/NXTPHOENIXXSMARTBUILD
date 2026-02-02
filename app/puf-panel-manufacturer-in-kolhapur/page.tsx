@@ -5,9 +5,9 @@ import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 
 export const metadata: Metadata = {
-  title: 'PUF Panel Manufacturer in Kolhapur | PHOENIXX SmartBuild',
-  description: 'Leading PUF panel manufacturer in Kolhapur, Maharashtra. Quality insulated panels for foundries, Shiroli MIDC & Kagal industries. Get best prices!',
-  keywords: ['PUF panel manufacturer in Kolhapur', 'PUF panel Shiroli MIDC', 'insulated panel Kolhapur', 'cold storage panel Western Maharashtra'],
+  title: 'PUF Panel Manufacturer in Kolhapur | PHOENIXX',
+  description: 'Quality PUF panels in Kolhapur for industrial and cold storage projects. Fast delivery to Kolhapur region. Contact us!',
+  keywords: ['PUF panel manufacturer in Kolhapur', 'PUF panel Shiroli MIDC', 'insulated panel Kolhapur'],
   alternates: { canonical: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-kolhapur' },
 };
 
@@ -143,5 +143,6 @@ export default function KolhapurPage() {
     </div>
   );
 }
+
 
 

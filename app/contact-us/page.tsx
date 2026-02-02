@@ -7,9 +7,9 @@ import { siteConfig } from '@/lib/site-config';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | PHOENIXX SmartBuild',
+  title: 'Contact PHOENIXX – Get Expert Consultation',
   description:
-    'Get in touch with PHOENIXX for your industrial infrastructure needs. Request quotes, schedule consultations, or visit our Ahmedabad office.',
+    'Reach PHOENIXX for industrial infrastructure needs. Request quotes, schedule site visits. Based in Ahmedabad, serving all India.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/contact-us',
   },

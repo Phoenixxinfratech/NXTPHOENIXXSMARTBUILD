@@ -23,9 +23,9 @@ const homepageClients = [
 ];
 
 export const metadata: Metadata = {
-  title: 'PHOENIXX | Smart, Sustainable Infrastructure Built for Performance',
+  title: 'PUF Panels & Industrial Infrastructure | PHOENIXX',
   description:
-    'PHOENIXX designs and delivers high-performance insulated panels, industrial doors, cleanroom systems, and EPC solutions. From Pre-Engineered Buildings to cold chain and controlled environments.',
+    'Leading manufacturer of PUF panels, cleanroom systems, and industrial doors in India. ISO certified. Get a free quote for your project today.',
 };
 
 // Products data - Using high-quality images for better display

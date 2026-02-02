@@ -6,11 +6,11 @@ import { JsonLd } from '@/components/seo/json-ld';
 import { productsData, solutionsData, industriesData } from '@/lib/navigation';
 
 export const metadata: Metadata = {
-  title: 'Sitemap',
+  title: 'Sitemap | PHOENIXX SmartBuild',
   description:
-    'Complete sitemap of PHOENIXX website. Navigate to all pages including products, solutions, industries, and resources.',
+    'Navigate all pages on PHOENIXX SmartBuild. Find products, solutions, industries, and resources easily.',
   alternates: {
-    canonical: 'https://phoenixxsmartbuild.com/sitemap',
+    canonical: 'https://phoenixxsmartbuild.com/sitemap-page',
   },
 };
 

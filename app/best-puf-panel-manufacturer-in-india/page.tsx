@@ -5,9 +5,9 @@ import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 
 export const metadata: Metadata = {
-  title: 'Best PUF Panel Manufacturer in India | PHOENIXX SmartBuild',
-  description: 'PHOENIXX SmartBuild is the best PUF panel manufacturer in India. High-quality insulated panels for cold storage, warehouses & industrial buildings.',
-  keywords: ['best PUF panel manufacturer in India', 'PUF panel manufacturer', 'insulated panels India', 'PHOENIXX SmartBuild'],
+  title: 'Best PUF Panel Manufacturer in India | PHOENIXX',
+  description: 'Choose India\'s best PUF panel manufacturer. ISO certified, 10+ years experience, 500+ clients. Premium quality guaranteed.',
+  keywords: ['best PUF panel manufacturer in India', 'PUF panel manufacturer', 'insulated panels India'],
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/best-puf-panel-manufacturer-in-india',
   },
@@ -359,5 +359,6 @@ export default function BestPufPanelManufacturerPage() {
     </div>
   );
 }
+
 
 

@@ -4,9 +4,9 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 
 export const metadata: Metadata = {
-  title: 'Become a Partner | PHOENIXX SmartBuild',
+  title: 'Become a Partner – Channel Partnership',
   description:
-    'Partner with PHOENIXX for industrial infrastructure solutions. Dealers, distributors, contractors, and consultants welcome. Grow together with us.',
+    'Partner with PHOENIXX for PUF panels and industrial products. Dealer and distributor opportunities across India.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/become-partner',
   },

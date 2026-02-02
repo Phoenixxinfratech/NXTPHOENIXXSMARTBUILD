@@ -8,9 +8,9 @@ import { JsonLd } from '@/components/seo/json-ld';
 import { generateOrganizationSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'About Us | Engineering Tomorrow\'s Infrastructure, Today',
+  title: 'About PHOENIXX – India\'s EPC Infrastructure Partner',
   description:
-    'PHOENIXX delivers smart, sustainable, and future-ready EPC solutions. From Pre-Engineered Buildings to cold storage and cleanroom solutions, we are India\'s trusted industrial infrastructure partner.',
+    'PHOENIXX delivers smart EPC solutions: PEB, cold storage, cleanrooms. 10+ years experience. Trusted by 500+ clients. Contact us today.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/about-us',
   },

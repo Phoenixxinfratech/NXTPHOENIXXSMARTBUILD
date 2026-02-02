@@ -4,9 +4,9 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 
 export const metadata: Metadata = {
-  title: 'Resources | Knowledge Hub | PHOENIXX SmartBuild',
+  title: 'Resources – Guides, Gallery & Downloads',
   description:
-    'Access PHOENIXX resources: technical articles, project gallery, datasheets, brochures, and FAQs. Expert insights on industrial infrastructure.',
+    'Access technical resources: project gallery, brochures, technical sheets, FAQs. Download product specifications.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/resources',
   },

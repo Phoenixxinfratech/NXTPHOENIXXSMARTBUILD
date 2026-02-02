@@ -6,6 +6,7 @@ import { Footer } from '@/components/blocks/footer';
 import { AISummaryBlock } from '@/components/ai/ai-summary-block';
 import { JsonLd } from '@/components/seo/json-ld';
 import { generateBreadcrumbSchema } from '@/lib/schema';
+import { TableOfContents, injectHeadingIds } from '@/components/blog';
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
@@ -2725,7 +2726,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <div className="max-w-3xl">
                 <div
                   className="prose-custom prose prose-slate prose-lg prose-a:text-primary prose-a:no-underline hover:prose-a:underline"
-                  dangerouslySetInnerHTML={{ __html: post.content }}
+                  dangerouslySetInnerHTML={{ __html: injectHeadingIds(post.content) }}
                 />
                 
                 {/* FAQ Section */}
@@ -2750,6 +2751,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
               {/* Sidebar */}
               <aside className="space-y-8">
+                {/* Table of Contents */}
+                <TableOfContents content={post.content} className="sticky top-24" />
+
                 {/* Related Products */}
                 {post.relatedProducts.length > 0 && (
                   <div className="rounded-xl border border-slate-200 p-6 bg-white">

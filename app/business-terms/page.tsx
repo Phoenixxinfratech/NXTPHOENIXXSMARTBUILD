@@ -4,9 +4,9 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 
 export const metadata: Metadata = {
-  title: 'Business Terms & Conditions | PHOENIXX SmartBuild',
+  title: 'Business Terms & Conditions | PHOENIXX',
   description:
-    'Terms and Conditions for business with PHOENIXX SmartBuild. Understand our policies for quotes, orders, payments, and project execution.',
+    'Review business terms and conditions for PHOENIXX products and services. Transparent policies for all transactions.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/business-terms',
   },

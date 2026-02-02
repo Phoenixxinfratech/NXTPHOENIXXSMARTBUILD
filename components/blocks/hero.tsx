@@ -18,7 +18,7 @@ export function Hero({
   title,
   subtitle,
   ctaText,
-  ctaLink = '/contact',
+  ctaLink = '/contact-us',
   secondaryCtaText,
   secondaryCtaLink,
   backgroundImage,
@@ -148,6 +148,7 @@ export function PageHero({
     </section>
   );
 }
+
 
 
 

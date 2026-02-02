@@ -4,9 +4,9 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 
 export const metadata: Metadata = {
-  title: 'Technical Datasheets | PHOENIXX SmartBuild',
+  title: 'Technical Specifications – Product Data',
   description:
-    'Download technical specifications and datasheets for PHOENIXX products: PIR panels, PUF panels, cleanroom doors, fire doors, and more.',
+    'Download technical specifications for PUF panels, doors, cleanroom systems. Detailed product data sheets available.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/resources/technical-sheet',
   },

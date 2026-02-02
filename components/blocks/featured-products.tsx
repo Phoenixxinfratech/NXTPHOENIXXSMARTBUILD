@@ -1,28 +1,28 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
-// Placeholder featured products - will be replaced with Sanity CMS data
+// Featured products with valid routes
 const featuredProducts = [
   {
     id: '1',
-    title: 'Modular Cleanroom System',
-    description: 'Flexible, scalable cleanroom solutions for rapid deployment.',
-    category: 'Cleanrooms',
-    slug: 'modular-cleanroom-system',
+    title: 'Sandwich PUF Panel',
+    description: 'Premium polyurethane foam insulated panels for thermal efficiency and durability.',
+    category: 'Sandwich Panels',
+    slug: 'sandwich-panels/sandwich-puf-panel',
   },
   {
     id: '2',
-    title: 'HEPA Air Handling Unit',
-    description: 'High-efficiency particulate air filtration for controlled environments.',
-    category: 'HVAC',
-    slug: 'hepa-air-handling-unit',
+    title: 'Cleanroom Door',
+    description: 'GMP-compliant doors designed for controlled environment applications.',
+    category: 'Doors',
+    slug: 'doors/cleanroom-door',
   },
   {
     id: '3',
-    title: 'Pass-Through Chamber',
-    description: 'Material transfer solutions maintaining cleanroom integrity.',
-    category: 'Equipment',
-    slug: 'pass-through-chamber',
+    title: 'Cleanroom Partition',
+    description: 'Modular partition systems for cleanroom and controlled environments.',
+    category: 'Cleanroom Solutions',
+    slug: 'cleanroom-solutions/cleanroom-partition',
   },
 ];
 
@@ -97,6 +97,7 @@ export function FeaturedProducts() {
     </section>
   );
 }
+
 
 
 

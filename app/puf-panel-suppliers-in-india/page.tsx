@@ -5,9 +5,9 @@ import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 
 export const metadata: Metadata = {
-  title: 'PUF Panel Suppliers in India | PHOENIXX SmartBuild',
-  description: 'Reliable PUF panel suppliers in India. PHOENIXX SmartBuild supplies quality insulated panels with pan-India delivery for industrial & commercial projects.',
-  keywords: ['PUF panel suppliers in India', 'PUF panel supply', 'insulated panel suppliers', 'PHOENIXX'],
+  title: 'PUF Panel Suppliers in India | PHOENIXX',
+  description: 'Reliable PUF panel suppliers in India. Wide range of insulated panels for cold storage, cleanrooms, warehouses.',
+  keywords: ['PUF panel suppliers in India', 'PUF panel supply', 'insulated panel suppliers'],
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/puf-panel-suppliers-in-india',
   },
@@ -308,5 +308,6 @@ export default function PufPanelSuppliersIndiaPage() {
     </div>
   );
 }
+
 
 

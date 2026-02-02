@@ -5,9 +5,9 @@ import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 
 export const metadata: Metadata = {
-  title: 'PUF Panel Manufacturer in Nagpur | PHOENIXX SmartBuild',
-  description: 'Trusted PUF panel manufacturer in Nagpur, Maharashtra. Quality insulated panels for Butibori MIDC, MIHAN & Vidarbha industries. Get best prices!',
-  keywords: ['PUF panel manufacturer in Nagpur', 'PUF panel Butibori MIDC', 'insulated panel Vidarbha', 'cold storage panel Nagpur'],
+  title: 'PUF Panel Manufacturer in Nagpur | PHOENIXX',
+  description: 'PUF panel supplier serving Nagpur and Vidarbha. Industrial insulated panels for all applications. Get a free quote today!',
+  keywords: ['PUF panel manufacturer in Nagpur', 'PUF panel Butibori MIDC', 'insulated panel Vidarbha'],
   alternates: { canonical: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-nagpur' },
 };
 
@@ -143,5 +143,6 @@ export default function NagpurPage() {
     </div>
   );
 }
+
 
 

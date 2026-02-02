@@ -5,9 +5,9 @@ import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 
 export const metadata: Metadata = {
-  title: 'PUF Panel Manufacturer in Chhatrapati Sambhajinagar | PHOENIXX',
-  description: 'PUF panel manufacturer in Chhatrapati Sambhajinagar (Aurangabad), Maharashtra. Insulated panels for Waluj MIDC, Shendra MIDC & Chikalthana. Get quote!',
-  keywords: ['PUF panel manufacturer in Aurangabad', 'PUF panel Chhatrapati Sambhajinagar', 'insulated panel Waluj MIDC', 'cold storage panel Marathwada'],
+  title: 'PUF Panels in Chhatrapati Sambhajinagar',
+  description: 'Leading PUF panel manufacturer in Chhatrapati Sambhajinagar. Quality panels for industries and cold storage. Get quote!',
+  keywords: ['PUF panel manufacturer in Aurangabad', 'PUF panel Chhatrapati Sambhajinagar', 'insulated panel Waluj MIDC'],
   alternates: { canonical: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-chhatrapati-sambhajinagar' },
 };
 
@@ -143,5 +143,6 @@ export default function AurangabadPage() {
     </div>
   );
 }
+
 
 

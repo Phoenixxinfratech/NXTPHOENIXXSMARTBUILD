@@ -5,9 +5,9 @@ import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 
 export const metadata: Metadata = {
-  title: 'PUF Panel Company in India | PHOENIXX SmartBuild',
-  description: 'PHOENIXX SmartBuild is a trusted PUF panel company in India. Complete insulated panel solutions for industrial, cold storage & commercial buildings.',
-  keywords: ['PUF panel company in India', 'insulated panel company', 'PUF panel solutions', 'PHOENIXX SmartBuild'],
+  title: 'PUF Panel Company in India – PHOENIXX',
+  description: 'Trusted PUF panel company serving industries across India. Quality insulated panels for diverse applications.',
+  keywords: ['PUF panel company in India', 'insulated panel company', 'PUF panel solutions'],
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/puf-panel-company-in-india',
   },
@@ -321,5 +321,6 @@ export default function PufPanelCompanyIndiaPage() {
     </div>
   );
 }
+
 
 

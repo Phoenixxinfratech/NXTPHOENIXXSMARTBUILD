@@ -5,9 +5,9 @@ import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 
 export const metadata: Metadata = {
-  title: 'Premium PUF Panel Manufacturer in India | PHOENIXX',
-  description: 'Premium PUF panel manufacturer in India. PHOENIXX delivers high-quality insulated panels with superior foam density & coatings for demanding applications.',
-  keywords: ['premium PUF panel manufacturer in India', 'high-quality PUF panels', 'premium insulated panels', 'PHOENIXX'],
+  title: 'Premium PUF Panel Manufacturer in India',
+  description: 'Premium quality PUF panels with superior insulation. Fire-rated options available. Request premium panel quote.',
+  keywords: ['premium PUF panel manufacturer in India', 'high-quality PUF panels', 'premium insulated panels'],
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/premium-puf-panel-manufacturer-in-india',
   },
@@ -291,5 +291,6 @@ export default function PremiumPufPanelManufacturerPage() {
     </div>
   );
 }
+
 
 

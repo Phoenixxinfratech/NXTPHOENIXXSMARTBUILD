@@ -4,9 +4,9 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 
 export const metadata: Metadata = {
-  title: 'Company Brochure | PHOENIXX SmartBuild',
+  title: 'Product Brochures – Download Catalog',
   description:
-    'Download PHOENIXX SmartBuild company brochure. Complete overview of our products, solutions, and capabilities.',
+    'Download PHOENIXX product brochures and company catalog. Complete product range specifications and capabilities.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/resources/brochure',
   },

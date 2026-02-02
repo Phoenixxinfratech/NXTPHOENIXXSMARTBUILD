@@ -4,9 +4,9 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 
 export const metadata: Metadata = {
-  title: 'Blog & Insights | PHOENIXX SmartBuild',
+  title: 'Blog – Industry Insights & Technical Guides',
   description:
-    'Expert articles on industrial infrastructure, insulated panels, cold storage, cleanrooms, PEB, and EPC solutions. Stay informed with PHOENIXX insights.',
+    'Expert articles on PUF panels, cleanrooms, cold storage, PEB construction. Stay updated with industry trends.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/resources/blogs',
   },

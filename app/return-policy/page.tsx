@@ -4,9 +4,9 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 
 export const metadata: Metadata = {
-  title: 'Return & Refund Policy | PHOENIXX SmartBuild',
+  title: 'Return Policy | PHOENIXX SmartBuild',
   description:
-    'Return and Refund Policy for PHOENIXX SmartBuild products and services. Understand our policies for product returns and service cancellations.',
+    'Understand our return and refund policy for products. Customer satisfaction guaranteed with clear guidelines.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/return-policy',
   },

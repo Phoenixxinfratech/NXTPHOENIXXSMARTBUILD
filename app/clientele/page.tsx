@@ -7,9 +7,9 @@ import { AISummaryBlock } from '@/components/ai/ai-summary-block';
 import { JsonLd } from '@/components/seo/json-ld';
 
 export const metadata: Metadata = {
-  title: 'Our Clientele',
+  title: 'Our Clients – Trusted by Industry Leaders',
   description:
-    'Trusted by industry leaders including Coca-Cola, Amul, Torrent Pharmaceuticals, Ford Motors, and 300+ more. View our client list across Food & Beverages, Dairy, Pharma, Automotive, and Cold Chain industries.',
+    'PHOENIXX serves 500+ clients: Coca-Cola, Amul, Torrent Pharma, Cargill, and more. See our client portfolio.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/clientele',
   },

@@ -4,9 +4,9 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 
 export const metadata: Metadata = {
-  title: 'Vendor Registration | PHOENIXX SmartBuild',
+  title: 'Vendor Registration – Supplier Onboarding',
   description:
-    'Register as a vendor or supplier with PHOENIXX SmartBuild. Supply raw materials, equipment, and services for industrial infrastructure projects.',
+    'Register as a vendor with PHOENIXX. Supplier opportunities for raw materials, components, and services.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/vendor-registration',
   },

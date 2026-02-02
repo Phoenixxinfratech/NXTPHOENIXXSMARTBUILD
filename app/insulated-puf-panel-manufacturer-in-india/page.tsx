@@ -5,9 +5,9 @@ import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 
 export const metadata: Metadata = {
-  title: 'Insulated PUF Panel Manufacturer in India | PHOENIXX',
-  description: 'Insulated PUF panel manufacturer in India. PHOENIXX delivers superior thermal insulation panels for cold storage, industrial & commercial buildings.',
-  keywords: ['insulated PUF panel manufacturer in India', 'thermal insulation panels', 'insulated sandwich panels', 'PHOENIXX'],
+  title: 'Insulated PUF Panel Manufacturer in India',
+  description: 'Quality insulated PUF panels for thermal efficiency. Wall, roof, and cold storage panels. ISO certified manufacturer.',
+  keywords: ['insulated PUF panel manufacturer in India', 'thermal insulation panels', 'insulated sandwich panels'],
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/insulated-puf-panel-manufacturer-in-india',
   },
@@ -303,5 +303,6 @@ export default function InsulatedPufPanelManufacturerPage() {
     </div>
   );
 }
+
 
 

@@ -6,7 +6,7 @@ import { Footer } from '@/components/blocks/footer';
 export const metadata: Metadata = {
   title: 'Privacy Policy | PHOENIXX SmartBuild',
   description:
-    'Privacy Policy for PHOENIXX SmartBuild. Learn how we collect, use, and protect your personal information.',
+    'Read our privacy policy. Learn how PHOENIXX protects your personal data and handles information securely.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/privacy-policy',
   },

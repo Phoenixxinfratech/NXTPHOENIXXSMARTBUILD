@@ -7,16 +7,13 @@ import { JsonLd } from '@/components/seo/json-ld';
 import { fetchPricesFromSheet } from '@/lib/google-sheets';
 
 export const metadata: Metadata = {
-  title: 'Shop Industrial Products | Panels, Doors, Cleanroom Solutions | PHOENIXX',
-  description: 'Buy premium industrial infrastructure products online. PUF Panels from ₹750/sqm, Cleanroom Doors from ₹32,000, Fire Doors from ₹25,000. Direct factory pricing. PAN-India delivery.',
+  title: 'Shop – Buy PUF Panels Online | PHOENIXX',
+  description: 'Order PUF panels online with transparent pricing. Calculate project costs instantly. Fast delivery across India.',
   keywords: [
     'buy puf panels online',
     'puf panel price India',
     'cleanroom door price',
     'fire door manufacturer',
-    'cold storage door price',
-    'cleanroom partition cost',
-    'industrial panel manufacturer',
   ],
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/shop',

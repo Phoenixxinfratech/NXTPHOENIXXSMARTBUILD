@@ -6,9 +6,9 @@ import { AISummaryBlock } from '@/components/ai/ai-summary-block';
 import { JsonLd } from '@/components/seo/json-ld';
 
 export const metadata: Metadata = {
-  title: 'Industries We Serve | Specialized Infrastructure Solutions',
+  title: 'Industries Served – Pharma, Food & More',
   description:
-    'PHOENIXX delivers tailored infrastructure solutions for Pharmaceuticals, Food Processing, Dairy, Cold Chain, Automotive, Hospitality, and more. Industry-specific compliance and performance.',
+    'Industry-specific infrastructure: pharma cleanrooms, food processing, dairy, cold chain, automotive. Compliance assured.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/industries',
   },

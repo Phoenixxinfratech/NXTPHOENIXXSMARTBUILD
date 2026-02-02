@@ -5,9 +5,9 @@ import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 
 export const metadata: Metadata = {
-  title: 'PUF Panels Manufacturer India | PHOENIXX SmartBuild',
-  description: 'PUF panels manufacturer India. PHOENIXX SmartBuild delivers quality polyurethane foam panels for industrial, commercial & cold storage applications.',
-  keywords: ['PUF panels manufacturer India', 'polyurethane panels', 'PUF panel supplier', 'PHOENIXX SmartBuild'],
+  title: 'PUF Panels Manufacturer India | PHOENIXX',
+  description: 'Premier PUF panels manufacturer in India. High-quality sandwich panels for roofing, walls, cold storage applications.',
+  keywords: ['PUF panels manufacturer India', 'polyurethane panels', 'PUF panel supplier'],
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/puf-panels-manufacturer-india',
   },
@@ -297,5 +297,6 @@ export default function PufPanelsManufacturerIndiaPage() {
     </div>
   );
 }
+
 
 
