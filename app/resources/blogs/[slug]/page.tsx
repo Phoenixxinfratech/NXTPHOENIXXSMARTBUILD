@@ -6,7 +6,8 @@ import { Footer } from '@/components/blocks/footer';
 import { AISummaryBlock } from '@/components/ai/ai-summary-block';
 import { JsonLd } from '@/components/seo/json-ld';
 import { generateBreadcrumbSchema } from '@/lib/schema';
-import { TableOfContents, injectHeadingIds } from '@/components/blog';
+import { TableOfContents } from '@/components/blog';
+import { injectHeadingIds } from '@/lib/blog-utils';
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
@@ -1829,11 +1830,11 @@ const blogPosts: Record<string, {
       { name: 'Cleanroom Solutions', href: '/products/cleanroom-solutions' },
     ],
     faqs: [
-      { question: 'Why are most PUF panel manufacturers in Ahmedabad?', answer: 'Ahmedabad offers the perfect combination of raw material availability (chemicals from GIDC Vatva, steel from nearby ports), skilled workforce from local engineering colleges, excellent logistics connectivity via NH48 and NH64, and supportive GIDC industrial infrastructure. Gujarat\\'s industrial policies have also attracted significant investment in this sector.' },
+      { question: 'Why are most PUF panel manufacturers in Ahmedabad?', answer: "Ahmedabad offers the perfect combination of raw material availability (chemicals from GIDC Vatva, steel from nearby ports), skilled workforce from local engineering colleges, excellent logistics connectivity via NH48 and NH64, and supportive GIDC industrial infrastructure. Gujarat's industrial policies have also attracted significant investment in this sector." },
       { question: 'What is the typical lead time from Ahmedabad manufacturers?', answer: 'For standard panels, lead time is typically 7-15 days depending on quantity. Custom specifications or very large orders may require 3-4 weeks. PHOENIXX maintains ready stock of common specifications (50mm and 80mm PUF panels in standard colors) for faster delivery - often same-day for Ahmedabad customers.' },
-      { question: 'Can Ahmedabad manufacturers deliver pan-India?', answer: 'Yes, established manufacturers like PHOENIXX regularly deliver across India. Ahmedabad\\'s central-western location on NH48 provides excellent road connectivity to Mumbai, Delhi, Rajasthan, and South India. We deliver to 500+ locations pan-India.' },
+      { question: 'Can Ahmedabad manufacturers deliver pan-India?', answer: "Yes, established manufacturers like PHOENIXX regularly deliver across India. Ahmedabad's central-western location on NH48 provides excellent road connectivity to Mumbai, Delhi, Rajasthan, and South India. We deliver to 500+ locations pan-India." },
       { question: 'What is the price of PUF panels in Ahmedabad?', answer: 'PUF panel prices in Ahmedabad range from ₹85-200 per sq.ft depending on panel type, thickness, and specifications. Sandwich PUF (50mm) starts at ₹85/sq.ft, while FM Approved panels can go up to ₹220/sq.ft. Factory-direct pricing from PHOENIXX ensures competitive rates without middleman markup.' },
-      { question: 'Can I visit the PHOENIXX factory in Ahmedabad?', answer: 'Yes, factory visits are welcome at our GIDC Naroda facility. You can see our continuous production line, quality testing lab, and finished products. Contact us to schedule a visit - we\\'ll show you exactly how your panels are manufactured.' },
+      { question: 'Can I visit the PHOENIXX factory in Ahmedabad?', answer: "Yes, factory visits are welcome at our GIDC Naroda facility. You can see our continuous production line, quality testing lab, and finished products. Contact us to schedule a visit - we'll show you exactly how your panels are manufactured." },
       { question: 'Do Ahmedabad manufacturers provide installation support?', answer: 'Yes, established manufacturers like PHOENIXX provide comprehensive installation support. For Ahmedabad projects, we offer direct installation through our trained teams. For pan-India projects, we provide technical supervision and connect you with our network of certified installers.' },
       { question: 'Which GIDC area in Ahmedabad has the most PUF panel manufacturers?', answer: 'GIDC Naroda, Odhav, and Vatva form the traditional industrial belt with the highest concentration of panel manufacturers. PHOENIXX is headquartered in GIDC Naroda Phase II. Changodar and Sanand are newer areas with growing manufacturing presence.' },
       { question: 'What certifications should I look for in Ahmedabad manufacturers?', answer: 'Essential certifications include ISO 9001:2015 (quality management), IS 14925:2015 (sandwich panel standard), and fire rating certifications. For pharmaceutical projects, WHO-GMP compliance is important. For insurance-mandated projects, look for FM 4880 Class 1 approval. PHOENIXX holds all these certifications.' },
@@ -1848,7 +1849,7 @@ const blogPosts: Record<string, {
     title: 'Cold Storage Panel Manufacturers in Ahmedabad: Complete Guide',
     metaTitle: 'Cold Storage Panel Manufacturers in Ahmedabad | 2025 Guide',
     metaDescription: 'Find the best cold storage panel manufacturers in Ahmedabad. PIR & PUF panels for cold rooms, freezers, and pharma cold chain. PHOENIXX factory in GIDC Naroda.',
-    excerpt: 'Ahmedabad is a hub for cold storage panel manufacturing, serving Gujarat\\'s dairy, pharma, and food processing industries. This guide covers panel selection, pricing, and top manufacturers.',
+    excerpt: "Ahmedabad is a hub for cold storage panel manufacturing, serving Gujarat's dairy, pharma, and food processing industries. This guide covers panel selection, pricing, and top manufacturers.",
     content: `
       <h2>Cold Storage Industry in Ahmedabad</h2>
       <p>Gujarat's cold chain infrastructure has grown rapidly, driven by the dairy industry (Amul in Anand), pharmaceutical cold chain (Zydus, Torrent), and food processing sectors. Ahmedabad, as the commercial capital, serves as the manufacturing and supply hub for cold storage panels across Western India.</p>
@@ -1980,7 +1981,7 @@ const blogPosts: Record<string, {
     title: 'Cleanroom Panel Solutions in Ahmedabad for Pharma Industry',
     metaTitle: 'Cleanroom Panels Ahmedabad | Pharma GMP Compliant | PHOENIXX',
     metaDescription: 'WHO-GMP compliant cleanroom panels in Ahmedabad for pharmaceutical manufacturing. ISO Class 5-8 solutions. PHOENIXX factory in GIDC Naroda.',
-    excerpt: 'Ahmedabad\\'s pharmaceutical industry demands high-quality cleanroom panels. This guide covers GMP requirements, panel specifications, and trusted manufacturers.',
+    excerpt: "Ahmedabad's pharmaceutical industry demands high-quality cleanroom panels. This guide covers GMP requirements, panel specifications, and trusted manufacturers.",
     content: `
       <h2>Ahmedabad: India's Pharmaceutical Capital</h2>
       <p>Gujarat contributes 33% of India's pharmaceutical production, with Ahmedabad at its center. Major pharmaceutical companies like Zydus Cadila, Torrent Pharmaceuticals, and Intas Pharmaceuticals have manufacturing facilities in and around Ahmedabad, creating substantial demand for cleanroom infrastructure.</p>
@@ -2273,7 +2274,7 @@ const blogPosts: Record<string, {
     ],
     relatedSolutions: [],
     faqs: [
-      { question: 'What is the cheapest PUF panel available in Ahmedabad?', answer: '30mm PUF panels start at around ₹70 per sq.ft for basic specifications. However, we recommend choosing panel thickness based on thermal requirements rather than just cost. Underpowered insulation leads to higher energy costs over the building\\'s lifetime.' },
+      { question: 'What is the cheapest PUF panel available in Ahmedabad?', answer: "30mm PUF panels start at around ₹70 per sq.ft for basic specifications. However, we recommend choosing panel thickness based on thermal requirements rather than just cost. Underpowered insulation leads to higher energy costs over the building's lifetime." },
       { question: 'Why do prices vary between manufacturers?', answer: 'Price variations reflect differences in foam density (some use 35 kg/m³ vs standard 40 kg/m³), steel thickness, coating quality, and manufacturing process control. Very low prices often indicate compromised specifications.' },
       { question: 'Do you provide written quotations with specifications?', answer: 'Yes, PHOENIXX provides detailed written quotations specifying panel type, thickness, density, skin material, coating, and all inclusions. This ensures you can compare apples-to-apples with other manufacturers.' },
       { question: 'Is GST included in the prices shown?', answer: 'Prices mentioned are typically ex-factory excluding GST. GST @18% applies on PUF panels. PHOENIXX quotations clearly mention whether prices are inclusive or exclusive of GST.' },
@@ -2284,7 +2285,7 @@ const blogPosts: Record<string, {
     title: 'Industrial Roofing Solutions in Ahmedabad GIDC Areas',
     metaTitle: 'Industrial Roofing Panels Ahmedabad GIDC | PUF Roof Sheets',
     metaDescription: 'Best industrial roofing solutions for Ahmedabad GIDC factories and warehouses. Heat-resistant PUF roofing panels for 48°C summers. PHOENIXX factory in Naroda.',
-    excerpt: 'Ahmedabad\\'s extreme climate demands specialized roofing solutions. This guide covers roofing panel options, specifications, and best practices for GIDC industrial buildings.',
+    excerpt: "Ahmedabad's extreme climate demands specialized roofing solutions. This guide covers roofing panel options, specifications, and best practices for GIDC industrial buildings.",
     content: `
       <h2>Roofing Challenges in Ahmedabad's Industrial Areas</h2>
       <p>Ahmedabad's GIDC industrial zones face unique roofing challenges due to extreme weather conditions:</p>
@@ -2449,7 +2450,7 @@ const blogPosts: Record<string, {
     title: 'PUF vs PIR vs Rockwool: Best Panel for Ahmedabad Climate',
     metaTitle: 'PUF vs PIR vs Rockwool Panel | Ahmedabad Climate Guide',
     metaDescription: 'Compare PUF, PIR, and Rockwool panels for Ahmedabad climate. Thermal performance, fire safety, cost analysis. Choose the right panel for your project.',
-    excerpt: 'Confused between PUF, PIR, and Rockwool panels? This comprehensive comparison helps you choose the right insulation type for Ahmedabad\\'s extreme climate and your specific application.',
+    excerpt: "Confused between PUF, PIR, and Rockwool panels? This comprehensive comparison helps you choose the right insulation type for Ahmedabad's extreme climate and your specific application.",
     content: `
       <h2>Introduction: Choosing the Right Panel</h2>
       <p>Ahmedabad's extreme climate—with summers touching 48°C and monsoons bringing heavy humidity—demands careful panel selection. The three main insulation types each have distinct advantages:</p>
@@ -2634,9 +2635,9 @@ const blogPosts: Record<string, {
       { name: 'Cold Storage Construction', href: '/solutions/cold-storage-construction' },
     ],
     faqs: [
-      { question: 'Which panel is best for Ahmedabad summers?', answer: 'For pure thermal performance in Ahmedabad\\'s 48°C summers, PUF and PIR are nearly equal (PIR is slightly better at 0.022 vs 0.024 W/mK). Choose based on fire requirements rather than thermal performance alone.' },
+      { question: 'Which panel is best for Ahmedabad summers?', answer: "For pure thermal performance in Ahmedabad's 48°C summers, PUF and PIR are nearly equal (PIR is slightly better at 0.022 vs 0.024 W/mK). Choose based on fire requirements rather than thermal performance alone." },
       { question: 'Do I need Rockwool panels for my warehouse?', answer: 'Not necessarily. Rockwool is recommended when: (a) FM Global insurance requires it, (b) local fire codes mandate non-combustible construction, (c) you need acoustic insulation, or (d) storing high-value goods where fire risk must be minimized.' },
-      { question: 'Can I mix panel types in one building?', answer: 'Yes, it\\'s common practice. You might use Rockwool panels near fire-risk areas (boiler rooms, electrical panels) and PUF panels for general areas. Proper fire compartmentalization design is essential.' },
+      { question: 'Can I mix panel types in one building?', answer: "Yes, it's common practice. You might use Rockwool panels near fire-risk areas (boiler rooms, electrical panels) and PUF panels for general areas. Proper fire compartmentalization design is essential." },
       { question: 'Which panel type lasts longest?', answer: 'All three panel types, when properly manufactured and installed, have a 25-30 year lifespan. The limiting factor is usually the external coating, not the core material. Choose quality coatings (PVDF or SMP) for maximum durability.' },
     ],
   },
@@ -2764,8 +2765,8 @@ const blogPosts: Record<string, {
     ],
     faqs: [
       { question: 'Which Gujarat city is best for PUF panel sourcing?', answer: 'Ahmedabad has the highest concentration of quality manufacturers and offers the best combination of product range, quality, and competitive pricing. However, for very large projects, checking manufacturers in Surat or Vadodara may also be worthwhile.' },
-      { question: 'Can Gujarat manufacturers deliver to other states?', answer: 'Yes, Gujarat manufacturers regularly deliver pan-India. The state\'s central-western location provides good road connectivity. PHOENIXX, for example, has delivered projects across 20+ Indian states.' },
-      { question: 'What is the price advantage of buying from Gujarat?', answer: 'Gujarat\'s mature manufacturing ecosystem, raw material availability, and competition typically result in 10-15% better pricing compared to manufacturers in other states. Logistics costs may apply for distant locations.' },
+      { question: 'Can Gujarat manufacturers deliver to other states?', answer: "Yes, Gujarat manufacturers regularly deliver pan-India. The state's central-western location provides good road connectivity. PHOENIXX, for example, has delivered projects across 20+ Indian states." },
+      { question: 'What is the price advantage of buying from Gujarat?', answer: "Gujarat's mature manufacturing ecosystem, raw material availability, and competition typically result in 10-15% better pricing compared to manufacturers in other states. Logistics costs may apply for distant locations." },
     ],
   },
 
@@ -2894,7 +2895,7 @@ const blogPosts: Record<string, {
     ],
     faqs: [
       { question: 'Why do PUF panel prices vary so much between suppliers?', answer: 'Price variations reflect differences in foam density, metal thickness, coating quality, joint systems, and manufacturing standards. A ₹100/sqm difference often means significant quality differences that affect performance and longevity.' },
-      { question: 'Is PIR worth the extra cost over PUF?', answer: 'For fire-sensitive applications like pharma or high-value warehouses, PIR\'s enhanced fire performance (B-s1,d0 rating) and lower smoke emission justify the 15-25% premium. For general industrial use, standard PUF often suffices.' },
+      { question: 'Is PIR worth the extra cost over PUF?', answer: "For fire-sensitive applications like pharma or high-value warehouses, PIR's enhanced fire performance (B-s1,d0 rating) and lower smoke emission justify the 15-25% premium. For general industrial use, standard PUF often suffices." },
       { question: 'How can I reduce project cost without compromising quality?', answer: 'Optimize panel lengths to reduce wastage, consider standard colors instead of custom shades, order in bulk where possible, and work with the manufacturer to optimize your design. PHOENIXX engineers can help identify savings without quality compromise.' },
     ],
   },
@@ -3027,7 +3028,7 @@ const blogPosts: Record<string, {
     ],
     faqs: [
       { question: 'Should I use the same contractor for structure and panels?', answer: 'Not necessarily. Panel installation requires specialized skills different from structural steel work. Many successful projects use separate contractors. If using one contractor, ensure they have specific panel experience or will engage a specialist sub-team.' },
-      { question: 'What workmanship warranty should I expect?', answer: 'Reputable contractors provide 1-2 years workmanship warranty covering installation defects. This is separate from the panel manufacturer\'s material warranty. Get both warranties in writing.' },
+      { question: 'What workmanship warranty should I expect?', answer: "Reputable contractors provide 1-2 years workmanship warranty covering installation defects. This is separate from the panel manufacturer's material warranty. Get both warranties in writing." },
       { question: 'How do I verify contractor insurance?', answer: 'Ask for copies of insurance certificates including worker compensation and third-party liability. Verify the policies are current and coverage amounts are adequate for your project size.' },
     ],
   },
