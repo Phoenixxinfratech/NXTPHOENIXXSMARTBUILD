@@ -143,6 +143,50 @@ const applications = [
   'Clean Room Facilities',
 ];
 
+// Climate relevance for SEO
+const climateReasons = [
+  {
+    title: 'Extreme Summer Heat (48°C)',
+    description: 'Ahmedabad experiences temperatures up to 48°C. PUF panels with 0.024 W/mK thermal conductivity reduce indoor temperatures by 10-15°C without AC.',
+    icon: '☀️',
+  },
+  {
+    title: 'Monsoon Moisture Protection',
+    description: 'Gujarat\'s heavy monsoons require waterproof construction. PUF panels provide seamless, leak-proof building envelopes with proper joint sealing.',
+    icon: '🌧️',
+  },
+  {
+    title: 'Energy Cost Savings',
+    description: 'With Ahmedabad\'s 8-month summer, PUF panels reduce cooling costs by 25-30%. ROI typically achieved within 2-3 years through electricity savings.',
+    icon: '⚡',
+  },
+  {
+    title: 'Dust & Pollution Resistance',
+    description: 'Industrial areas like Odhav and Vatva have high pollution. PVDF-coated panels resist chemical corrosion and maintain appearance for 20+ years.',
+    icon: '🏭',
+  },
+];
+
+// Cross-city internal links for SEO
+const nearbyLocations = [
+  { name: 'Surat', href: '/puf-panel-manufacturer-in-surat', distance: '265 km' },
+  { name: 'Vadodara', href: '/puf-panel-manufacturer-in-vadodara', distance: '110 km' },
+  { name: 'Rajkot', href: '/puf-panel-manufacturer-in-rajkot', distance: '220 km' },
+  { name: 'Vapi', href: '/puf-panel-manufacturer-in-vapi', distance: '365 km' },
+  { name: 'Jamnagar', href: '/puf-panel-manufacturer-in-jamnagar', distance: '305 km' },
+  { name: 'Dholera', href: '/puf-panel-manufacturer-in-dholera', distance: '100 km' },
+];
+
+// Related blog posts for internal linking
+const relatedBlogs = [
+  { title: 'PUF Panel Manufacturers in Ahmedabad - Complete Guide', href: '/resources/blogs/puf-panel-manufacturers-in-ahmedabad' },
+  { title: 'PUF Panel Price Ahmedabad 2025 Guide', href: '/resources/blogs/puf-panel-price-ahmedabad-2025-guide' },
+  { title: 'Industrial Roofing Solutions Ahmedabad GIDC', href: '/resources/blogs/industrial-roofing-solutions-ahmedabad-gidc' },
+  { title: 'PUF vs PIR vs Rockwool for Ahmedabad Climate', href: '/resources/blogs/puf-vs-pir-vs-rockwool-ahmedabad-climate' },
+  { title: 'Cold Storage Panel Manufacturers Ahmedabad', href: '/resources/blogs/cold-storage-panel-manufacturers-ahmedabad' },
+  { title: 'Cleanroom Panel Solutions Ahmedabad Pharma', href: '/resources/blogs/cleanroom-panel-solutions-ahmedabad-pharma' },
+];
+
 export default function AhmedabadPage() {
   // LocalBusiness Schema
   const localBusinessSchema = {
@@ -403,6 +447,83 @@ export default function AhmedabadPage() {
                   <span className="text-green-600 text-2xl">✓</span>
                   <span className="text-lg text-slate-700 font-medium">{app}</span>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Climate Relevance Section - SEO Optimized */}
+        <section className="py-16 md:py-20 bg-gradient-to-br from-orange-50 to-amber-50">
+          <div className="container-custom">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center">
+              Why PUF Panels Are Ideal for Ahmedabad&apos;s Climate
+            </h2>
+            <p className="text-lg text-slate-600 text-center mb-12 max-w-2xl mx-auto">
+              Ahmedabad&apos;s extreme weather demands superior insulation. Here&apos;s why PUF panels are the preferred choice for Gujarat industries.
+            </p>
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              {climateReasons.map((reason, idx) => (
+                <div key={idx} className="bg-white rounded-2xl p-6 shadow-sm border border-orange-100">
+                  <span className="text-4xl block mb-4">{reason.icon}</span>
+                  <h3 className="text-xl font-bold text-slate-900 mb-2">{reason.title}</h3>
+                  <p className="text-slate-600">{reason.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Nearby Locations - Cross-City SEO Links */}
+        <section className="py-16 md:py-20 bg-white">
+          <div className="container-custom">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center">
+              PUF Panel Delivery Across Gujarat
+            </h2>
+            <p className="text-lg text-slate-600 text-center mb-12 max-w-2xl mx-auto">
+              From our Ahmedabad factory, we deliver to all major industrial cities in Gujarat. Explore our location-specific pages.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
+              {nearbyLocations.map((location, idx) => (
+                <Link
+                  key={idx}
+                  href={location.href}
+                  className="bg-slate-50 rounded-xl p-4 text-center hover:bg-blue-50 hover:shadow-md transition-all border border-slate-200"
+                >
+                  <span className="font-bold text-slate-900">{location.name}</span>
+                  <span className="block text-sm text-slate-500">{location.distance}</span>
+                </Link>
+              ))}
+            </div>
+            <div className="mt-8 text-center">
+              <Link 
+                href="/resources/blogs/puf-panel-manufacturers-in-gujarat" 
+                className="text-primary hover:underline font-medium"
+              >
+                📖 Read: Complete Guide to PUF Panel Manufacturers in Gujarat →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Related Blogs Section - Internal Linking for SEO */}
+        <section className="py-16 md:py-20 bg-slate-900 text-white">
+          <div className="container-custom">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
+              Ahmedabad PUF Panel Resources
+            </h2>
+            <p className="text-lg text-slate-300 text-center mb-12 max-w-2xl mx-auto">
+              Explore our detailed guides, pricing information, and industry insights specific to Ahmedabad and Gujarat.
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+              {relatedBlogs.map((blog, idx) => (
+                <Link
+                  key={idx}
+                  href={blog.href}
+                  className="bg-white/5 rounded-xl p-5 hover:bg-white/10 transition-colors border border-white/10"
+                >
+                  <span className="text-blue-400 text-sm font-medium">📖 Blog</span>
+                  <h3 className="mt-2 font-semibold text-white">{blog.title}</h3>
+                </Link>
               ))}
             </div>
           </div>

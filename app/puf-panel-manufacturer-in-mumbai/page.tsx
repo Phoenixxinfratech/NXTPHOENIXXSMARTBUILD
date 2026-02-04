@@ -23,6 +23,50 @@ const faqs = [
 
 const industrialAreas = ['Bhiwandi Industrial Area', 'Taloja MIDC', 'TTC Industrial Area', 'Navi Mumbai', 'Panvel Industrial Zone', 'Kalyan-Dombivli MIDC', 'Vasai-Virar Industrial Belt', 'Thane-Belapur Industrial Area'];
 
+// Climate relevance for Mumbai - SEO optimized
+const climateReasons = [
+  {
+    title: 'High Humidity (85%+)',
+    description: 'Mumbai\'s coastal location means year-round humidity above 85%. PUF panels with PVDF/PE coatings resist moisture damage and prevent corrosion in marine environments.',
+    icon: '💧',
+  },
+  {
+    title: 'Monsoon Protection (3000mm Rain)',
+    description: 'With 3000mm annual rainfall, waterproof construction is critical. PUF panels provide seamless, leak-proof building envelopes with factory-sealed joints.',
+    icon: '🌧️',
+  },
+  {
+    title: 'Salt Air Corrosion',
+    description: 'Sea salt accelerates metal corrosion. PHOENIXX panels use corrosion-resistant coatings specifically designed for coastal Maharashtra applications.',
+    icon: '🌊',
+  },
+  {
+    title: 'Energy Savings',
+    description: 'With year-round cooling needs, PUF panels reduce AC costs by 25-30%. Essential for warehouses, cold storage, and manufacturing facilities in MMR.',
+    icon: '⚡',
+  },
+];
+
+// Cross-city internal links for Maharashtra - SEO optimized
+const maharashtraLocations = [
+  { name: 'Pune', href: '/puf-panel-manufacturer-in-pune', distance: '150 km' },
+  { name: 'Thane', href: '/puf-panel-manufacturer-in-thane', distance: '25 km' },
+  { name: 'Nashik', href: '/puf-panel-manufacturer-in-nashik', distance: '165 km' },
+  { name: 'Nagpur', href: '/puf-panel-manufacturer-in-nagpur', distance: '840 km' },
+  { name: 'Kolhapur', href: '/puf-panel-manufacturer-in-kolhapur', distance: '375 km' },
+  { name: 'Aurangabad', href: '/puf-panel-manufacturer-in-chhatrapati-sambhajinagar', distance: '340 km' },
+];
+
+// Related resources for internal linking
+const relatedResources = [
+  { title: 'PUF vs PIR vs Rockwool Comparison', href: '/resources/blogs/puf-vs-pir-vs-rockwool', type: 'blog' },
+  { title: 'Cold Storage Panel Guide', href: '/resources/blogs/puf-panels-cold-storage-pharma-applications', type: 'blog' },
+  { title: 'Fire Safety in Industrial Buildings', href: '/resources/blogs/fire-safety-industrial-buildings', type: 'blog' },
+  { title: 'Industrial Doors Selection Guide', href: '/resources/blogs/industrial-doors-selection-guide', type: 'blog' },
+  { title: 'PUF Panel Installation Cost', href: '/resources/blogs/puf-panel-installation-cost', type: 'blog' },
+  { title: 'View Panel Prices Online', href: '/shop', type: 'shop' },
+];
+
 export default function MumbaiPage() {
   const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) };
 
@@ -115,6 +159,77 @@ export default function MumbaiPage() {
             <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
               {['Pharmaceutical Manufacturing Plants', 'Cold Storage & Logistics Warehouses', 'Food Processing & Packaging Units', 'IT Parks & Commercial Buildings', 'E-commerce Fulfillment Centers', 'Industrial Manufacturing Units', 'Data Centers & Server Rooms', 'Retail & Cold Chain Infrastructure'].map((app, idx) => (
                 <div key={idx} className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg"><span className="text-blue-500">✓</span><span className="text-slate-700">{app}</span></div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Climate Relevance Section - SEO Optimized for Mumbai */}
+        <section className="py-16 md:py-20 bg-gradient-to-br from-blue-50 to-cyan-50">
+          <div className="container-custom">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center">
+              Why PUF Panels Are Essential for Mumbai&apos;s Coastal Climate
+            </h2>
+            <p className="text-lg text-slate-600 text-center mb-12 max-w-2xl mx-auto">
+              Mumbai&apos;s unique coastal environment demands specialized building materials. Here&apos;s why PUF panels outperform alternatives.
+            </p>
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              {climateReasons.map((reason, idx) => (
+                <div key={idx} className="bg-white rounded-2xl p-6 shadow-sm border border-blue-100">
+                  <span className="text-4xl block mb-4">{reason.icon}</span>
+                  <h3 className="text-xl font-bold text-slate-900 mb-2">{reason.title}</h3>
+                  <p className="text-slate-600">{reason.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Maharashtra Locations - Cross-City SEO Links */}
+        <section className="py-16 md:py-20 bg-white">
+          <div className="container-custom">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center">
+              PUF Panel Delivery Across Maharashtra
+            </h2>
+            <p className="text-lg text-slate-600 text-center mb-12 max-w-2xl mx-auto">
+              We supply PUF panels throughout Maharashtra. Explore our location-specific pages for regional information.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
+              {maharashtraLocations.map((location, idx) => (
+                <Link
+                  key={idx}
+                  href={location.href}
+                  className="bg-slate-50 rounded-xl p-4 text-center hover:bg-blue-50 hover:shadow-md transition-all border border-slate-200"
+                >
+                  <span className="font-bold text-slate-900">{location.name}</span>
+                  <span className="block text-sm text-slate-500">{location.distance}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Related Resources Section - Internal Linking */}
+        <section className="py-16 md:py-20 bg-slate-900 text-white">
+          <div className="container-custom">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
+              PUF Panel Resources & Guides
+            </h2>
+            <p className="text-lg text-slate-300 text-center mb-12 max-w-2xl mx-auto">
+              Learn more about PUF panels through our detailed guides and resources.
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+              {relatedResources.map((resource, idx) => (
+                <Link
+                  key={idx}
+                  href={resource.href}
+                  className="bg-white/5 rounded-xl p-5 hover:bg-white/10 transition-colors border border-white/10"
+                >
+                  <span className={`text-sm font-medium ${resource.type === 'blog' ? 'text-blue-400' : 'text-green-400'}`}>
+                    {resource.type === 'blog' ? '📖 Blog' : '🛒 Shop'}
+                  </span>
+                  <h3 className="mt-2 font-semibold text-white">{resource.title}</h3>
+                </Link>
               ))}
             </div>
           </div>
