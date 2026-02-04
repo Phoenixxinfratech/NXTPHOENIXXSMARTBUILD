@@ -108,7 +108,7 @@ const productImages: Record<string, Record<string, string[]>> = {
   },
 };
 
-// Enhanced product data with FAQs, benefits, and internal links
+// Enhanced product data with FAQs, benefits, internal links, and SEO sections
 interface ProductData {
   name: string;
   tagline: string;
@@ -125,6 +125,11 @@ interface ProductData {
   relatedSolutions: { name: string; slug: string }[];
   relatedIndustries: { name: string; slug: string }[];
   gradient: string;
+  // NEW SEO-optimized sections
+  industryUseCases?: { industry: string; title: string; description: string; benefits: string[]; linkText: string; linkHref: string }[];
+  relatedResources?: { title: string; description: string; href: string; type: 'blog' | 'location' | 'guide' }[];
+  comparisonFacts?: { vs: string; advantage: string; metric: string }[];
+  performanceByApplication?: { application: string; metric: string; value: string; benchmark: string }[];
 }
 
 const productsData: Record<string, Record<string, ProductData>> = {
@@ -218,6 +223,63 @@ const productsData: Record<string, Record<string, ProductData>> = {
         { name: 'Cold Chain & Logistics', slug: 'dairy' },
       ],
       gradient: 'from-blue-600 to-cyan-600',
+      // SEO-optimized industry use cases
+      industryUseCases: [
+        {
+          industry: 'Cold Storage & Frozen Food',
+          title: 'PIR Panels for Cold Storage Warehouses',
+          description: 'PIR panels are the gold standard for cold storage construction, maintaining temperatures from -25°C to +15°C with minimal energy consumption. The Class B-s1,d0 fire rating meets insurance requirements for FM Global facilities.',
+          benefits: ['30% lower energy bills vs PUF', 'FM Approved options available', 'Maintains -25°C efficiently', 'Zero condensation issues'],
+          linkText: 'Cold Storage Solutions',
+          linkHref: '/solutions/cold-storage-construction',
+        },
+        {
+          industry: 'Pharmaceutical Manufacturing',
+          title: 'PIR Panels for GMP Cleanrooms',
+          description: 'PHOENIXX PIR panels meet WHO GMP and FDA requirements for pharmaceutical facilities. The smooth, non-porous surfaces and fire-safe construction make them ideal for drug manufacturing environments.',
+          benefits: ['GMP/FDA compliant', 'ISO 5-8 cleanroom compatible', 'Fire-safe construction', 'Easy to validate'],
+          linkText: 'Cleanroom Solutions',
+          linkHref: '/products/cleanroom-solutions',
+        },
+        {
+          industry: 'Food Processing',
+          title: 'PIR Panels for FSSAI-Compliant Facilities',
+          description: 'Food processing plants require both hygiene and fire safety. PIR panels provide HACCP-compliant surfaces with superior fire performance, making them ideal for FSSAI-licensed facilities.',
+          benefits: ['HACCP compliant surfaces', 'FSSAI building compliance', 'Fire-safe for oil/fat processing', 'Easy sanitization'],
+          linkText: 'Food Processing Solutions',
+          linkHref: '/industries/food-processing',
+        },
+        {
+          industry: 'Data Centers',
+          title: 'PIR Panels for Server Room Construction',
+          description: 'Data centers require non-combustible or fire-resistant construction to protect critical infrastructure. PIR panels provide the fire safety, thermal management, and clean construction needed.',
+          benefits: ['Fire protection for servers', 'Thermal stability', 'Clean construction', 'Insurance-friendly'],
+          linkText: 'Industrial Solutions',
+          linkHref: '/solutions/peb',
+        },
+      ],
+      // Related resources for internal linking
+      relatedResources: [
+        { title: 'PIR vs PUF vs Rockwool: Which Panel Is Best?', description: 'Complete comparison guide for choosing the right insulated panel for your project.', href: '/resources/blogs/puf-vs-pir-vs-rockwool', type: 'blog' },
+        { title: 'PIR Panel Price Guide 2025', description: 'Current market prices and factors affecting PIR panel costs in India.', href: '/resources/blogs/puf-panel-price-ahmedabad-2025-guide', type: 'blog' },
+        { title: 'Fire Safety in Industrial Buildings', description: 'Best practices for fire-safe construction using insulated panels.', href: '/resources/blogs/fire-safety-industrial-buildings', type: 'blog' },
+        { title: 'PIR Panel Manufacturer in Ahmedabad', description: 'Factory-direct PIR panels from PHOENIXX headquarters in Ahmedabad.', href: '/puf-panel-manufacturer-in-ahmedabad', type: 'location' },
+        { title: 'PIR Panel Supplier in Gujarat', description: 'Pan-Gujarat delivery of PIR panels from GIDC Naroda facility.', href: '/resources/blogs/puf-panel-manufacturers-in-gujarat', type: 'location' },
+      ],
+      // Comparison facts for AI extraction
+      comparisonFacts: [
+        { vs: 'PUF Panels', advantage: 'Better fire rating (B-s1,d0 vs Class E)', metric: 'Fire Safety' },
+        { vs: 'PUF Panels', advantage: 'Lower thermal conductivity (0.022 vs 0.024 W/mK)', metric: 'Insulation' },
+        { vs: 'Rockwool Panels', advantage: 'Better thermal performance at same thickness', metric: 'Energy Efficiency' },
+        { vs: 'Conventional Construction', advantage: '50% faster installation time', metric: 'Construction Speed' },
+      ],
+      // Performance by application
+      performanceByApplication: [
+        { application: 'Cold Storage (-25°C)', metric: 'Recommended Thickness', value: '100-150mm', benchmark: 'Industry standard for frozen storage' },
+        { application: 'Chilled Storage (+4°C)', metric: 'Recommended Thickness', value: '60-80mm', benchmark: 'Optimal for dairy/vegetables' },
+        { application: 'Pharmaceutical', metric: 'Fire Rating', value: 'Class B-s1,d0', benchmark: 'Meets FM Global requirements' },
+        { application: 'Industrial Buildings', metric: 'Energy Savings', value: '30%', benchmark: 'vs uninsulated construction' },
+      ],
     },
     'sandwich-puf-panel': {
       name: 'Sandwich PUF Panels',
@@ -307,6 +369,64 @@ const productsData: Record<string, Record<string, ProductData>> = {
         { name: 'Agriculture', slug: 'dairy' },
       ],
       gradient: 'from-blue-600 to-cyan-600',
+      // SEO-optimized industry use cases
+      industryUseCases: [
+        {
+          industry: 'Industrial Warehouses',
+          title: 'PUF Panels for Warehouse Construction',
+          description: 'Sandwich PUF panels are the most cost-effective solution for large warehouse construction. The excellent thermal insulation reduces cooling costs while the quick installation minimizes project timelines.',
+          benefits: ['40% faster construction', '25% energy savings', 'Best cost-per-sqm value', 'Spans up to 12 meters'],
+          linkText: 'PEB Warehouse Solutions',
+          linkHref: '/solutions/peb',
+        },
+        {
+          industry: 'Cold Rooms & Walk-in Coolers',
+          title: 'PUF Panels for Commercial Cold Rooms',
+          description: 'PUF sandwich panels are ideal for walk-in coolers, small cold rooms, and commercial refrigeration. The 0.024 W/mK thermal conductivity maintains temperatures efficiently at competitive pricing.',
+          benefits: ['Ideal for +2°C to +8°C', 'Quick modular assembly', 'Cost-effective solution', 'Food-safe surfaces'],
+          linkText: 'Cold Storage Solutions',
+          linkHref: '/solutions/cold-storage-construction',
+        },
+        {
+          industry: 'Poultry & Dairy Farms',
+          title: 'PUF Panels for Agricultural Buildings',
+          description: 'Temperature control is critical for poultry houses and dairy sheds. PUF panels provide the insulation needed to maintain optimal conditions for livestock while remaining budget-friendly.',
+          benefits: ['Maintains optimal temperature', 'Reduces heating/cooling costs', 'Durable in humid conditions', 'Easy to clean'],
+          linkText: 'Dairy Industry Solutions',
+          linkHref: '/industries/dairy',
+        },
+        {
+          industry: 'Factory & Manufacturing',
+          title: 'PUF Panels for Factory Buildings',
+          description: 'Manufacturing facilities need controlled environments for worker comfort and product quality. PUF panels create comfortable working conditions while reducing energy consumption.',
+          benefits: ['Worker comfort improved', 'Reduced energy bills', 'Quick project completion', 'Customizable lengths'],
+          linkText: 'Textile Industry Solutions',
+          linkHref: '/industries/textile',
+        },
+      ],
+      // Related resources for internal linking
+      relatedResources: [
+        { title: 'What Is a PUF Panel and How Does It Work?', description: 'Complete guide to understanding PUF panel construction, properties, and applications.', href: '/resources/blogs/what-is-puf-panel-how-does-it-work', type: 'blog' },
+        { title: 'PUF Panel Thickness Guide', description: 'How to choose the right PUF panel thickness for your industrial building project.', href: '/resources/blogs/puf-panel-thickness-guide-industrial-buildings', type: 'blog' },
+        { title: 'PUF Panel Installation Cost', description: 'Understanding the total cost of PUF panel installation including labor and accessories.', href: '/resources/blogs/puf-panel-installation-cost', type: 'blog' },
+        { title: 'PUF Panel Manufacturer in Ahmedabad', description: 'Factory-direct PUF panels from PHOENIXX headquarters with same-day delivery.', href: '/puf-panel-manufacturer-in-ahmedabad', type: 'location' },
+        { title: 'PUF Panel Supplier in Mumbai', description: 'PUF panels delivered across Mumbai and Maharashtra industrial zones.', href: '/puf-panel-manufacturer-in-mumbai', type: 'location' },
+        { title: 'PUF Panel Manufacturer in Gujarat', description: 'Comprehensive guide to PUF panel manufacturers in Gujarat state.', href: '/resources/blogs/puf-panel-manufacturers-in-gujarat', type: 'location' },
+      ],
+      // Comparison facts for AI extraction
+      comparisonFacts: [
+        { vs: 'PIR Panels', advantage: '15-20% lower cost for same thickness', metric: 'Price' },
+        { vs: 'Conventional Brick', advantage: '10x better thermal insulation', metric: 'R-Value' },
+        { vs: 'Metal Sheets', advantage: 'Built-in insulation, no secondary layer needed', metric: 'Construction' },
+        { vs: 'Rockwool Panels', advantage: 'Better thermal conductivity (0.024 vs 0.038 W/mK)', metric: 'Insulation' },
+      ],
+      // Performance by application
+      performanceByApplication: [
+        { application: 'General Industrial', metric: 'Recommended Thickness', value: '40-60mm', benchmark: 'Standard for factories' },
+        { application: 'Cold Rooms (+4°C)', metric: 'Recommended Thickness', value: '60-80mm', benchmark: 'Optimal for chilled storage' },
+        { application: 'Poultry Houses', metric: 'Recommended Thickness', value: '50mm', benchmark: 'Maintains 25-30°C' },
+        { application: 'Warehouses', metric: 'Energy Savings', value: '25%', benchmark: 'vs uninsulated sheds' },
+      ],
     },
     'roofing-puf-panel': {
       name: 'PUF Sandwich Roof Panels',
@@ -584,6 +704,63 @@ PHOENIXX PUF sandwich roof panels are specially designed to perform reliably in 
         { name: 'Oil & Gas', slug: 'pharma-chemical' },
       ],
       gradient: 'from-orange-500 to-red-600',
+      // SEO-optimized industry use cases
+      industryUseCases: [
+        {
+          industry: 'Data Centers & IT Infrastructure',
+          title: 'Rockwool Panels for Server Room Fire Protection',
+          description: 'Data centers require A1 non-combustible construction to protect critical IT infrastructure. Rockwool panels provide up to 4-hour fire resistance while maintaining thermal management for servers.',
+          benefits: ['A1 non-combustible rating', '4-hour fire resistance', 'Thermal management for servers', 'Insurance-compliant construction'],
+          linkText: 'Industrial Building Solutions',
+          linkHref: '/solutions/peb',
+        },
+        {
+          industry: 'Oil & Gas Facilities',
+          title: 'Rockwool Panels for Hazardous Area Construction',
+          description: 'Oil and gas processing facilities have strict fire safety requirements. Rockwool panels meet international fire codes and provide non-combustible barriers in high-risk areas.',
+          benefits: ['Non-combustible barrier', 'Withstands 1000°C', 'Meets NFPA standards', 'Chemical resistant facings'],
+          linkText: 'Chemical Industry Solutions',
+          linkHref: '/industries/pharma-chemical',
+        },
+        {
+          industry: 'Acoustic Studios & Broadcast',
+          title: 'Rockwool Panels for Sound Isolation',
+          description: 'Recording studios and broadcast facilities need exceptional sound isolation. Rockwool panels achieve NRC up to 0.95 with perforated facings, making them ideal for acoustic applications.',
+          benefits: ['NRC up to 0.95', 'Superior sound isolation', 'Fire-safe studios', 'Clean room compatible'],
+          linkText: 'Cleanroom Solutions',
+          linkHref: '/products/cleanroom-solutions',
+        },
+        {
+          industry: 'High-Rise Buildings',
+          title: 'Rockwool Panels for Fire Compartmentation',
+          description: 'High-rise buildings require non-combustible materials for fire barriers and compartmentation. Rockwool panels meet NBC 2016 requirements for buildings above 15 meters.',
+          benefits: ['NBC 2016 compliant', '2-4 hour fire barriers', 'Reduces insurance costs', 'Non-combustible construction'],
+          linkText: 'Fire Safety Guide',
+          linkHref: '/resources/blogs/fire-safety-industrial-buildings',
+        },
+      ],
+      // Related resources for internal linking
+      relatedResources: [
+        { title: 'PIR vs PUF vs Rockwool: Which Panel Is Best?', description: 'Comprehensive comparison of fire rating, thermal performance, and cost for all panel types.', href: '/resources/blogs/puf-vs-pir-vs-rockwool', type: 'blog' },
+        { title: 'Fire Safety in Industrial Buildings', description: 'Best practices for fire-resistant construction using insulated panels.', href: '/resources/blogs/fire-safety-industrial-buildings', type: 'blog' },
+        { title: 'Rockwool vs PIR for Ahmedabad Climate', description: 'Choosing the right fire-rated panel for Gujarat industrial facilities.', href: '/resources/blogs/puf-vs-pir-vs-rockwool-ahmedabad-climate', type: 'blog' },
+        { title: 'Rockwool Panel Manufacturer in Ahmedabad', description: 'Factory-direct Rockwool panels from PHOENIXX GIDC Naroda facility.', href: '/puf-panel-manufacturer-in-ahmedabad', type: 'location' },
+        { title: 'Fire-Rated Panels in Gujarat', description: 'A1 rated Rockwool panels delivered across Gujarat industrial zones.', href: '/resources/blogs/puf-panel-manufacturers-in-gujarat', type: 'location' },
+      ],
+      // Comparison facts for AI extraction
+      comparisonFacts: [
+        { vs: 'PIR Panels', advantage: 'A1 non-combustible vs B-s1,d0 fire rating', metric: 'Fire Safety' },
+        { vs: 'PUF Panels', advantage: 'Temperature stable to 1000°C vs 100°C', metric: 'Heat Resistance' },
+        { vs: 'PIR Panels', advantage: 'Superior acoustic insulation (NRC 0.95 vs 0.25)', metric: 'Sound Absorption' },
+        { vs: 'Gypsum Boards', advantage: 'Better fire resistance and structural strength', metric: 'Fire Barriers' },
+      ],
+      // Performance by application
+      performanceByApplication: [
+        { application: 'Fire Walls (2-hour)', metric: 'Required Thickness', value: '100mm', benchmark: 'IS 3809 compliant' },
+        { application: 'Fire Walls (4-hour)', metric: 'Required Thickness', value: '150mm', benchmark: 'Maximum fire rating' },
+        { application: 'Acoustic Studios', metric: 'Sound Reduction', value: 'NRC 0.95', benchmark: 'With perforated facing' },
+        { application: 'Data Centers', metric: 'Fire Rating', value: 'A1', benchmark: 'Non-combustible requirement' },
+      ],
     },
   },
   'doors': {
@@ -1430,6 +1607,148 @@ export default async function ProductDetailPage({ params }: Props) {
             </div>
           </div>
         </section>
+
+        {/* Industry Use Cases Section - SEO Optimized */}
+        {data.industryUseCases && data.industryUseCases.length > 0 && (
+          <section className="section-padding bg-slate-900 text-white">
+            <div className="container-custom">
+              <div className="text-center mb-12">
+                <span className="inline-block px-4 py-1 rounded-full bg-white/10 text-blue-300 text-sm font-medium mb-4">
+                  Industry Applications
+                </span>
+                <h2 className="text-3xl md:text-4xl font-bold">
+                  {data.name} Use Cases by Industry
+                </h2>
+                <p className="mt-4 text-slate-300 max-w-2xl mx-auto">
+                  Discover how leading industries leverage {data.name} for superior performance and compliance.
+                </p>
+              </div>
+              <div className="grid gap-8 md:grid-cols-2">
+                {data.industryUseCases.map((useCase, idx) => (
+                  <article key={idx} className="bg-white/5 rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-colors">
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-emerald-500 flex items-center justify-center text-white font-bold">
+                        {idx + 1}
+                      </span>
+                      <span className="text-blue-300 font-medium">{useCase.industry}</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
+                    <p className="text-slate-300 mb-4 leading-relaxed">{useCase.description}</p>
+                    <ul className="grid grid-cols-2 gap-2 mb-4">
+                      {useCase.benefits.map((benefit, bIdx) => (
+                        <li key={bIdx} className="text-sm text-slate-400 flex items-center gap-2">
+                          <span className="text-emerald-400">✓</span> {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                    <Link 
+                      href={useCase.linkHref}
+                      className="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 font-medium text-sm"
+                    >
+                      {useCase.linkText} →
+                    </Link>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Performance By Application - SEO Optimized */}
+        {data.performanceByApplication && data.performanceByApplication.length > 0 && (
+          <section className="section-padding bg-white">
+            <div className="container-custom">
+              <h2 className="text-3xl font-bold text-slate-900 mb-4">Performance Specifications by Application</h2>
+              <p className="text-lg text-slate-600 mb-8">
+                Recommended {data.name} specifications for different applications and industry standards.
+              </p>
+              <div className="bg-slate-50 rounded-2xl overflow-hidden">
+                <table className="w-full">
+                  <thead className={`bg-gradient-to-r ${data.gradient} text-white`}>
+                    <tr>
+                      <th className="px-6 py-4 text-left font-semibold">Application</th>
+                      <th className="px-6 py-4 text-left font-semibold">Metric</th>
+                      <th className="px-6 py-4 text-left font-semibold">Recommended Value</th>
+                      <th className="px-6 py-4 text-left font-semibold hidden md:table-cell">Industry Benchmark</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {data.performanceByApplication.map((perf, idx) => (
+                      <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
+                        <td className="px-6 py-4 font-medium text-slate-900">{perf.application}</td>
+                        <td className="px-6 py-4 text-slate-600">{perf.metric}</td>
+                        <td className="px-6 py-4 font-bold text-blue-600">{perf.value}</td>
+                        <td className="px-6 py-4 text-slate-500 hidden md:table-cell">{perf.benchmark}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Comparison Quick Facts - AI Extractable */}
+        {data.comparisonFacts && data.comparisonFacts.length > 0 && (
+          <section className="section-padding bg-slate-50">
+            <div className="container-custom">
+              <h2 className="text-3xl font-bold text-slate-900 mb-4">{data.name} vs Other Panels</h2>
+              <p className="text-lg text-slate-600 mb-8">
+                Quick comparison showing key advantages of {data.name} over alternatives.
+              </p>
+              <div className="grid gap-4 md:grid-cols-2">
+                {data.comparisonFacts.map((fact, idx) => (
+                  <div key={idx} className="bg-white rounded-xl p-6 border border-slate-200 hover:border-blue-300 transition-colors">
+                    <div className="flex items-center gap-2 text-sm text-slate-500 mb-2">
+                      <span className="font-medium text-slate-900">{data.name}</span>
+                      <span>vs</span>
+                      <span className="font-medium text-slate-700">{fact.vs}</span>
+                    </div>
+                    <p className="font-semibold text-slate-900 text-lg">{fact.advantage}</p>
+                    <span className={`inline-block mt-2 px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${data.gradient} text-white`}>
+                      {fact.metric}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Related Resources - Internal Linking for SEO */}
+        {data.relatedResources && data.relatedResources.length > 0 && (
+          <section className="section-padding bg-white">
+            <div className="container-custom">
+              <h2 className="text-3xl font-bold text-slate-900 mb-4">Resources & Guides</h2>
+              <p className="text-lg text-slate-600 mb-8">
+                Learn more about {data.name} through our detailed guides, comparisons, and regional information.
+              </p>
+              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                {data.relatedResources.map((resource, idx) => (
+                  <Link 
+                    key={idx}
+                    href={resource.href}
+                    className="group bg-slate-50 rounded-xl p-5 hover:bg-blue-50 hover:shadow-md transition-all"
+                  >
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className={`px-2 py-0.5 rounded text-xs font-medium ${
+                        resource.type === 'blog' ? 'bg-blue-100 text-blue-700' :
+                        resource.type === 'location' ? 'bg-green-100 text-green-700' :
+                        'bg-purple-100 text-purple-700'
+                      }`}>
+                        {resource.type === 'blog' ? '📖 Blog' : resource.type === 'location' ? '📍 Location' : '📋 Guide'}
+                      </span>
+                    </div>
+                    <h3 className="font-semibold text-slate-900 group-hover:text-blue-600 transition-colors">
+                      {resource.title}
+                    </h3>
+                    <p className="mt-1 text-sm text-slate-600">{resource.description}</p>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Related Products & Internal Links */}
         <section className="section-padding bg-slate-50">
