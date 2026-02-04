@@ -55,13 +55,13 @@
 
 # ============================================
 # Sitemap XML Headers - Ensure proper content type
+# NOTE: Removed X-Robots-Tag as sitemaps should be indexable
 # ============================================
 [[headers]]
   for = "/sitemap*.xml"
   [headers.values]
     Content-Type = "application/xml; charset=utf-8"
     Cache-Control = "public, max-age=3600, stale-while-revalidate=86400"
-    X-Robots-Tag = "noindex"
 
 [[headers]]
   for = "/sitemap-index.xml"
@@ -163,10 +163,8 @@
   to = "/best-puf-panel-manufacturer-in-india"
   status = 301
 
-[[redirects]]
-  from = "/puf-panel-manufacturer-in-ahmedabad"
-  to = "/sandwich-puf-panel-in-ahmedabad"
-  status = 301
+# REMOVED: Redirect was conflicting with dedicated Ahmedabad page
+# The page /puf-panel-manufacturer-in-ahmedabad now exists and should be indexed
 
 [[redirects]]
   from = "/largest-sandwich-puf-panel-manufacturer-india"

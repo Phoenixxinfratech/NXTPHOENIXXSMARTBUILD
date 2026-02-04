@@ -1,39 +1,44 @@
 'use client';
 
-import { useCallback } from 'react';
-
 interface ApplyButtonProps {
   jobTitle: string;
 }
 
 export function ApplyButton({ jobTitle }: ApplyButtonProps) {
-  const handleClick = useCallback(() => {
-    // Scroll to the apply section
-    const applySection = document.getElementById('apply');
-    if (applySection) {
-      applySection.scrollIntoView({ behavior: 'smooth' });
-    }
-    
-    // Set the position in the form after a short delay (to allow scroll to complete)
-    setTimeout(() => {
-      const positionSelect = document.getElementById('position') as HTMLSelectElement;
-      if (positionSelect) {
-        positionSelect.value = jobTitle;
-        // Trigger change event for any listeners
-        positionSelect.dispatchEvent(new Event('change', { bubbles: true }));
+  const handleClick = () => {
+    // Scroll to the career form section
+    const formSection = document.getElementById('career-form');
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: 'smooth' });
+      
+      // Try to pre-fill the position field if it exists
+      const positionField = document.querySelector('input[name="position"]') as HTMLInputElement;
+      if (positionField) {
+        positionField.value = jobTitle;
       }
-    }, 500);
-  }, [jobTitle]);
+      
+      // Also try select field
+      const positionSelect = document.querySelector('select[name="position"]') as HTMLSelectElement;
+      if (positionSelect) {
+        const options = Array.from(positionSelect.options);
+        const matchingOption = options.find(opt => 
+          opt.text.toLowerCase().includes(jobTitle.toLowerCase()) ||
+          opt.value.toLowerCase().includes(jobTitle.toLowerCase())
+        );
+        if (matchingOption) {
+          positionSelect.value = matchingOption.value;
+        }
+      }
+    }
+  };
 
   return (
     <button
       type="button"
       onClick={handleClick}
-      className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 px-5 py-2.5 font-semibold text-white text-sm shadow hover:shadow-lg transition-all"
+      className="rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 px-6 py-3 text-sm font-semibold text-white shadow-lg hover:shadow-xl transition-all hover:from-blue-700 hover:to-cyan-700"
     >
       Apply Now
     </button>
   );
 }
-
-

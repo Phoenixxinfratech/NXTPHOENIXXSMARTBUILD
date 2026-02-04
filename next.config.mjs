@@ -92,7 +92,7 @@ const nextConfig = {
           },
         ],
       },
-      // Image-specific headers for protection
+      // Image-specific headers for caching (removed X-Robots-Tag to allow image indexing for SEO)
       {
         source: '/images/:path*',
         headers: [
@@ -101,47 +101,14 @@ const nextConfig = {
             value: 'public, max-age=31536000, immutable',
           },
           {
-            // Prevent hotlinking from other domains
             key: 'X-Content-Type-Options',
             value: 'nosniff',
           },
-          {
-            // Discourage automated scraping tools
-            key: 'X-Robots-Tag',
-            value: 'noindex, noimageindex',
-          },
         ],
       },
-      // Product images protection
-      {
-        source: '/products/:path*',
-        headers: [
-          {
-            key: 'X-Robots-Tag',
-            value: 'noimageindex',
-          },
-        ],
-      },
-      // Industries images protection
-      {
-        source: '/industries/:path*',
-        headers: [
-          {
-            key: 'X-Robots-Tag',
-            value: 'noimageindex',
-          },
-        ],
-      },
-      // Solutions images protection
-      {
-        source: '/solutions/:path*',
-        headers: [
-          {
-            key: 'X-Robots-Tag',
-            value: 'noimageindex',
-          },
-        ],
-      },
+      // NOTE: Removed X-Robots-Tag from /products/, /industries/, /solutions/ paths
+      // These were incorrectly blocking page indexing, not just images
+      // Pages at these paths should be fully indexable for SEO
       {
         source: '/fonts/(.*)',
         headers: [
@@ -171,16 +138,8 @@ const nextConfig = {
           },
         ],
       },
-      // Next.js Image optimization route protection
-      {
-        source: '/_next/image/:path*',
-        headers: [
-          {
-            key: 'X-Robots-Tag',
-            value: 'noindex, noimageindex',
-          },
-        ],
-      },
+      // Next.js Image optimization route - allow indexing for image SEO
+      // Removed X-Robots-Tag to enable Google Images indexing
     ];
   },
 
