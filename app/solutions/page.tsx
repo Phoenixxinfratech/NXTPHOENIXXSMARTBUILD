@@ -221,7 +221,7 @@ export default function SolutionsPage() {
 
                     <div className="mt-4 pt-4 border-t border-slate-100">
                       <span className="inline-flex items-center gap-1 text-sm font-semibold text-slate-700 group-hover:text-emerald-600 transition-colors">
-                        Learn More
+                        View Solution Details
                         <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>

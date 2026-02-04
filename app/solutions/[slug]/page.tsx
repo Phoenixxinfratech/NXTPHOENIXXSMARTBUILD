@@ -582,7 +582,7 @@ export default async function SolutionDetailPage({ params }: Props) {
                 <Link key={product.name} href={product.link} className="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all">
                   <h3 className="font-bold text-slate-900 group-hover:text-primary transition-colors">{product.name}</h3>
                   <p className="mt-2 text-sm text-slate-600">{product.description}</p>
-                  <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">Learn More →</span>
+                  <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">View Product Specifications →</span>
                 </Link>
               ))}
             </div>

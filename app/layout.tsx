@@ -120,13 +120,48 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         
-        {/* Preload critical assets */}
+        {/* Preload critical assets - Logo and LCP images */}
         <link 
           rel="preload" 
           href="/images/brand/logos/logo.png" 
           as="image"
           type="image/png"
+          fetchPriority="high"
         />
+        {/* Preload LCP hero images for faster initial paint */}
+        <link 
+          rel="preload" 
+          href="/images/products/sandwich-panels/puf-panel/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp" 
+          as="image"
+          type="image/webp"
+          fetchPriority="high"
+        />
+        <link 
+          rel="preload" 
+          href="/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-2.jpg" 
+          as="image"
+          type="image/jpeg"
+          fetchPriority="high"
+        />
+        
+        {/* Critical CSS for above-the-fold content */}
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            /* Critical CSS - Inlined for faster first paint */
+            *,*::before,*::after{box-sizing:border-box}
+            html{-webkit-text-size-adjust:100%;line-height:1.5}
+            body{margin:0;font-family:var(--font-sans),system-ui,-apple-system,sans-serif}
+            .container-custom{width:100%;max-width:1280px;margin:0 auto;padding:0 1rem}
+            @media(min-width:640px){.container-custom{padding:0 1.5rem}}
+            @media(min-width:1024px){.container-custom{padding:0 2rem}}
+            .btn-primary{display:inline-flex;align-items:center;gap:0.5rem;padding:0.875rem 2rem;font-weight:600;color:#fff;background:linear-gradient(to right,#3b82f6,#10b981);border-radius:0.75rem;transition:all 0.2s}
+            .btn-secondary{display:inline-flex;align-items:center;gap:0.5rem;padding:0.875rem 2rem;font-weight:600;color:#fff;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:0.75rem}
+            .section-padding{padding:4rem 0}
+            @media(min-width:768px){.section-padding{padding:5rem 0}}
+            /* Prevent layout shift for images */
+            img{max-width:100%;height:auto;display:block}
+          `
+        }} />
         
         {/* Geo and business verification meta tags */}
         <meta name="geo.region" content="IN-GJ" />

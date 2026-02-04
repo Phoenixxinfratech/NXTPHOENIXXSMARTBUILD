@@ -67,7 +67,7 @@ export function FeaturedProducts() {
                   href={`/products/${product.slug}`}
                   className="mt-4 inline-flex items-center text-sm font-medium text-primary hover:underline"
                 >
-                  Learn more
+                  View {product.title} Details
                   <svg
                     className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1"
                     fill="none"

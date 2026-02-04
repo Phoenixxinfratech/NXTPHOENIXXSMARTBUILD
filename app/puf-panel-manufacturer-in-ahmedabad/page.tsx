@@ -332,7 +332,7 @@ export default function AhmedabadPage() {
                   </h3>
                   <p className="mt-2 text-slate-600">{product.description}</p>
                   <span className="mt-4 inline-flex items-center text-primary font-medium">
-                    Learn More →
+                    View {product.title} Details →
                   </span>
                 </Link>
               ))}

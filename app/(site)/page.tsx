@@ -239,9 +239,9 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-[0.03]" />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
         
-        {/* Animated Gradient Orbs */}
-        <div className="absolute top-1/4 -left-32 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        {/* Animated Gradient Orbs - Using GPU-accelerated transform for performance */}
+        <div className="absolute top-1/4 -left-32 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl will-change-transform animate-[pulse-opacity_3s_ease-in-out_infinite]" />
+        <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl will-change-transform animate-[pulse-opacity_3s_ease-in-out_infinite_1s]" />
 
         <div className="container-custom relative z-10 py-20">
           <div className="max-w-4xl">
@@ -327,16 +327,17 @@ export default function HomePage() {
 
           {/* Client Logos Grid */}
           <div className="grid grid-cols-3 md:grid-cols-6 gap-6 md:gap-8 items-center justify-items-center">
-            {homepageClients.map((client) => (
+            {homepageClients.map((client, idx) => (
               <div
                 key={client.name}
-                className="group w-full h-20 md:h-24 rounded-xl bg-white border border-slate-200 flex items-center justify-center p-4 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 hover:shadow-lg hover:border-blue-300"
+                className="group w-full h-20 md:h-24 rounded-xl bg-white border border-slate-200 flex items-center justify-center p-4 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-[filter,opacity] duration-300 hover:shadow-lg hover:border-blue-300"
               >
                 <Image
                   src={client.logo}
                   alt={`${client.name} logo`}
                   width={120}
                   height={60}
+                  loading={idx < 6 ? 'eager' : 'lazy'}
                   className="object-contain w-full h-full"
                 />
               </div>
@@ -370,7 +371,7 @@ export default function HomePage() {
             {products.map((product, idx) => (
               <div
                 key={product.title}
-                className="group relative rounded-2xl border border-slate-200 bg-white overflow-hidden transition-all hover:shadow-xl hover:border-blue-200 hover:-translate-y-1"
+                className="group relative rounded-2xl border border-slate-200 bg-white overflow-hidden transition-[transform,box-shadow,border-color] duration-300 hover:shadow-xl hover:border-blue-200 hover:-translate-y-1 will-change-transform"
               >
                 {/* Product Image */}
                 <div className="relative h-56 w-full overflow-hidden">
@@ -399,7 +400,7 @@ export default function HomePage() {
                     href={product.href}
                     className="mt-4 inline-flex items-center gap-1 text-blue-600 font-medium hover:gap-2 transition-all"
                   >
-                    Learn More
+                    View {product.title} Specifications
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -444,7 +445,7 @@ export default function HomePage() {
               <Link
                 key={solution.title}
                 href={solution.href}
-                className="group relative rounded-xl border border-slate-200 bg-white overflow-hidden transition-all hover:shadow-lg hover:border-emerald-200"
+                className="group relative rounded-xl border border-slate-200 bg-white overflow-hidden transition-[box-shadow,border-color] duration-300 hover:shadow-lg hover:border-emerald-200"
               >
                 {/* Solution Image */}
                 <div className="relative h-44 w-full overflow-hidden">
@@ -597,16 +598,17 @@ export default function HomePage() {
               <Link
                 key={industry.category}
                 href={industry.href}
-                className="group rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+                className="group rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-[transform,box-shadow] duration-300 hover:-translate-y-1 will-change-transform"
               >
                 {/* Industry Image Header */}
                 <div className="relative h-52 overflow-hidden">
-                  {/* Actual Image */}
+                  {/* Actual Image - lazy loaded as below-the-fold */}
                   <Image
                     src={industry.image}
                     alt={industry.category}
                     fill
-                    quality={85}
+                    loading="lazy"
+                    quality={80}
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
@@ -701,7 +703,7 @@ export default function HomePage() {
               <Link
                 key={insight.slug}
                 href={`/resources/blogs/${insight.slug}`}
-                className="group rounded-xl border border-slate-200 bg-white overflow-hidden transition-all hover:shadow-lg"
+                className="group rounded-xl border border-slate-200 bg-white overflow-hidden transition-[box-shadow] duration-300 hover:shadow-lg"
               >
                 <div className="aspect-[4/3] bg-gradient-to-br from-cyan-100 to-blue-100 flex items-center justify-center">
                   <span className="text-4xl opacity-30">📝</span>
