@@ -24,6 +24,7 @@ const solutionOptions = [
   'Pre-Engineered Buildings (PEB)',
   'Turnkey Projects',
   'Modular Construction',
+  'Soundproof Room / Acoustic Enclosure',
 ];
 
 const industryOptions = [

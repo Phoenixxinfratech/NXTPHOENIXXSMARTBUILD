@@ -725,6 +725,160 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ========== LOCATIONS WE SERVE SECTION ========== */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <span className="inline-block px-4 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-4">
+              Service Coverage
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
+              Locations We Serve Across India
+            </h2>
+            <p className="mt-4 text-lg text-slate-600">
+              PHOENIXX provides PAN-India delivery and installation services with local expertise in major industrial hubs
+            </p>
+          </div>
+
+          <div className="grid gap-8 lg:grid-cols-3 mb-12">
+            {/* Featured State 1 - Gujarat */}
+            <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-6 border border-blue-100 hover:shadow-lg transition-shadow">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-2xl">📍</span>
+                <h3 className="text-xl font-bold text-slate-900">Gujarat</h3>
+              </div>
+              <p className="text-slate-600 text-sm mb-4">
+                Home to 30% of India&apos;s pharmaceutical production and major industrial clusters
+              </p>
+              <div className="grid grid-cols-2 gap-2 mb-4">
+                {['Ahmedabad', 'Surat', 'Vadodara', 'Rajkot'].map((city) => (
+                  <Link
+                    key={city}
+                    href={`/sandwich-puf-panel-in-${city.toLowerCase()}`}
+                    className="text-sm text-blue-600 hover:underline"
+                  >
+                    {city}
+                  </Link>
+                ))}
+              </div>
+              <Link
+                href="/sandwich-puf-panel-in-gujarat"
+                className="inline-flex items-center gap-1 text-blue-600 font-medium text-sm hover:gap-2 transition-all"
+              >
+                View all Gujarat locations
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+
+            {/* Featured State 2 - Maharashtra */}
+            <div className="bg-gradient-to-br from-purple-50 to-white rounded-2xl p-6 border border-purple-100 hover:shadow-lg transition-shadow">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-2xl">📍</span>
+                <h3 className="text-xl font-bold text-slate-900">Maharashtra</h3>
+              </div>
+              <p className="text-slate-600 text-sm mb-4">
+                India&apos;s economic powerhouse with thriving manufacturing and logistics sectors
+              </p>
+              <div className="grid grid-cols-2 gap-2 mb-4">
+                {['Mumbai', 'Pune', 'Aurangabad', 'Nashik'].map((city) => (
+                  <Link
+                    key={city}
+                    href={`/sandwich-puf-panel-in-${city.toLowerCase()}`}
+                    className="text-sm text-purple-600 hover:underline"
+                  >
+                    {city}
+                  </Link>
+                ))}
+              </div>
+              <Link
+                href="/sandwich-puf-panel-in-maharashtra"
+                className="inline-flex items-center gap-1 text-purple-600 font-medium text-sm hover:gap-2 transition-all"
+              >
+                View all Maharashtra locations
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+
+            {/* Featured State 3 - Rajasthan */}
+            <div className="bg-gradient-to-br from-amber-50 to-white rounded-2xl p-6 border border-amber-100 hover:shadow-lg transition-shadow">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-2xl">📍</span>
+                <h3 className="text-xl font-bold text-slate-900">Rajasthan</h3>
+              </div>
+              <p className="text-slate-600 text-sm mb-4">
+                Rapidly growing industrial sector with cement, marble, and manufacturing facilities
+              </p>
+              <div className="grid grid-cols-2 gap-2 mb-4">
+                {['Jaipur', 'Udaipur', 'Jodhpur', 'Kota'].map((city) => (
+                  <Link
+                    key={city}
+                    href={`/sandwich-puf-panel-in-${city.toLowerCase()}`}
+                    className="text-sm text-amber-600 hover:underline"
+                  >
+                    {city}
+                  </Link>
+                ))}
+              </div>
+              <Link
+                href="/sandwich-puf-panel-in-rajasthan"
+                className="inline-flex items-center gap-1 text-amber-600 font-medium text-sm hover:gap-2 transition-all"
+              >
+                View all Rajasthan locations
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+
+          {/* Additional States Grid */}
+          <div className="bg-slate-50 rounded-2xl p-8">
+            <h3 className="text-lg font-bold text-slate-900 mb-6 text-center">
+              Other States We Serve
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+              {[
+                { state: 'Tamil Nadu', slug: 'tamil-nadu' },
+                { state: 'Karnataka', slug: 'karnataka' },
+                { state: 'Madhya Pradesh', slug: 'madhya-pradesh' },
+                { state: 'Uttar Pradesh', slug: 'uttar-pradesh' },
+                { state: 'Chhattisgarh', slug: 'chhattisgarh' },
+                { state: 'Telangana', slug: 'telangana' },
+                { state: 'Andhra Pradesh', slug: 'andhra-pradesh' },
+                { state: 'West Bengal', slug: 'west-bengal' },
+                { state: 'Kerala', slug: 'kerala' },
+                { state: 'Haryana', slug: 'haryana' },
+              ].map((location) => (
+                <Link
+                  key={location.slug}
+                  href={`/sandwich-puf-panel-in-${location.slug}`}
+                  className="flex items-center gap-2 p-3 bg-white rounded-lg hover:shadow-md transition-all border border-transparent hover:border-blue-200"
+                >
+                  <span className="text-slate-400">→</span>
+                  <span className="text-sm font-medium text-slate-900">{location.state}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-8 text-center">
+            <p className="text-slate-600 mb-4">
+              Can&apos;t find your location? We serve PAN-India including remote areas.
+            </p>
+            <Link
+              href="/get-a-quote"
+              className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-6 py-3 text-base font-semibold text-white transition-all hover:bg-blue-700"
+            >
+              Get Quote for Your Location
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ========== FAQ SECTION ========== */}
       <section className="section-padding bg-slate-50">
         <div className="container-custom">

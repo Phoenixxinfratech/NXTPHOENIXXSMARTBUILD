@@ -549,6 +549,65 @@ export default function ProductsPage() {
           </div>
         </section>
 
+        {/* ========== LOCATIONS WE SERVE ========== */}
+        <section className="section-padding bg-slate-50">
+          <div className="container-custom">
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
+                Serving Industrial Projects Across India
+              </h2>
+              <p className="mt-4 text-lg text-slate-600">
+                PHOENIXX delivers PUF Panels, PIR Panels, and Rockwool solutions to major manufacturing hubs nationwide
+              </p>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mb-8">
+              {[
+                { state: 'Gujarat', city: 'Ahmedabad' },
+                { state: 'Maharashtra', city: 'Mumbai' },
+                { state: 'Rajasthan', city: 'Jaipur' },
+                { state: 'Tamil Nadu', city: 'Chennai' },
+                { state: 'Karnataka', city: 'Bangalore' },
+                { state: 'Madhya Pradesh', city: 'Indore' },
+                { state: 'Uttar Pradesh', city: 'Noida' },
+                { state: 'Chhattisgarh', city: 'Raipur' },
+              ].map((location) => (
+                <Link
+                  key={location.state}
+                  href={`/sandwich-puf-panel-in-${location.state.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all border border-transparent hover:border-blue-200"
+                >
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="text-2xl">📍</span>
+                    <h3 className="text-lg font-bold text-slate-900">{location.state}</h3>
+                  </div>
+                  <p className="text-sm text-slate-600 mb-3">
+                    Top city: {location.city}
+                  </p>
+                  <span className="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">
+                    View locations
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </span>
+                </Link>
+              ))}
+            </div>
+
+            <div className="text-center">
+              <Link
+                href="/sandwich-puf-panel-in-india"
+                className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-3 transition-all"
+              >
+                View All India Locations
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* ========== FOLD 8: CTA SECTION ========== */}
         <section className="py-20 bg-gradient-to-r from-blue-600 via-blue-700 to-emerald-600 relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />

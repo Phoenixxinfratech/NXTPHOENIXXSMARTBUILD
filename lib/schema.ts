@@ -375,6 +375,89 @@ export function generateServiceSchema(
   };
 }
 
+/**
+ * Generate QAPage schema (for discussion-type technical Q&A)
+ * Different from FAQPage - single question with multiple answers
+ */
+export function generateQAPageSchema(
+  question: string,
+  answers: { text: string; author?: string }[]
+) {
+  const answerList = answers.map((ans) => ({
+    '@type': 'Answer',
+    text: ans.text,
+    ...(ans.author && { author: { '@type': 'Person', name: ans.author } }),
+  }));
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'QAPage',
+    mainEntity: {
+      '@type': 'Question',
+      name: question,
+      acceptedAnswer: answerList.length === 1 ? answerList[0] : answerList,
+    },
+  };
+}
+
+/**
+ * Generate ImageObject schema for rich image results
+ */
+export function generateImageObjectSchema(image: {
+  name: string;
+  description?: string;
+  contentUrl: string;
+  width?: number;
+  height?: number;
+}) {
+  const url = image.contentUrl.startsWith('http') ? image.contentUrl : `${siteConfig.url}${image.contentUrl}`;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ImageObject',
+    name: image.name,
+    description: image.description,
+    contentUrl: url,
+    url,
+    ...(image.width && { width: image.width }),
+    ...(image.height && { height: image.height }),
+  };
+}
+
+/**
+ * Generate Offer schema for pricing/availability
+ */
+export function generateOfferSchema(offer: {
+  name: string;
+  description: string;
+  priceCurrency?: string;
+  lowPrice?: number;
+  highPrice?: number;
+  priceRange?: string;
+  url?: string;
+  availability?: string;
+}) {
+  const url = offer.url
+    ? offer.url.startsWith('http')
+      ? offer.url
+      : `${siteConfig.url}${offer.url}`
+    : siteConfig.url;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Offer',
+    name: offer.name,
+    description: offer.description,
+    url,
+    priceCurrency: offer.priceCurrency || 'INR',
+    ...(offer.lowPrice !== undefined && { lowPrice: offer.lowPrice }),
+    ...(offer.highPrice !== undefined && { highPrice: offer.highPrice }),
+    ...(offer.priceRange && { priceSpecification: { '@type': 'PriceSpecification', priceRange: offer.priceRange } }),
+    availability: offer.availability || 'https://schema.org/InStock',
+    seller: {
+      '@type': 'Organization',
+      name: siteConfig.company.name,
+    },
+  };
+}
+
 
 
 

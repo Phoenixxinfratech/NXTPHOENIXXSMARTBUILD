@@ -442,8 +442,86 @@ export default async function ProductLocationPage({ params }: { params: Promise<
           </div>
         </section>
         
+        {/* Local Expertise Section - Unique Content */}
+        <section className="section-padding bg-white border-t border-slate-100">
+          <div className="container-custom">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">
+                PHOENIXX Local Expertise in {location.name}
+              </h2>
+              
+              <div className="grid gap-8 md:grid-cols-2">
+                <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border border-blue-100">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-3xl">🏗️</span>
+                    <h3 className="text-xl font-bold text-slate-900">Projects Delivered</h3>
+                  </div>
+                  <p className="text-slate-700 leading-relaxed">
+                    PHOENIXX has successfully delivered {product.shortName} installation projects across {location.name}&apos;s 
+                    {location.industrialZones && location.industrialZones.length > 0 ? ` key industrial areas including ${location.industrialZones[0]}` : ' industrial sectors'}. 
+                    Our local presence ensures quick response times, faster delivery, and better post-installation support.
+                  </p>
+                  {location.type === 'city' && (
+                    <p className="text-slate-600 mt-3 text-sm">
+                      Serving {location.industrialZones?.length || 'multiple'} industrial zones with same-day technical support.
+                    </p>
+                  )}
+                </div>
+                
+                <div className="bg-gradient-to-br from-emerald-50 to-white rounded-2xl p-8 border border-emerald-100">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-3xl">🎯</span>
+                    <h3 className="text-xl font-bold text-slate-900">Industry Understanding</h3>
+                  </div>
+                  <p className="text-slate-700 leading-relaxed">
+                    We understand {location.name}&apos;s unique industrial landscape. With experience serving 
+                    {location.industries.slice(0, 3).join(', ')} sectors in this region, we provide solutions tailored to 
+                    local regulatory requirements, climate conditions, and industry-specific needs.
+                  </p>
+                  {location.regulations && location.regulations.length > 0 && (
+                    <p className="text-slate-600 mt-3 text-sm">
+                      Compliance support: {location.regulations[0]}
+                    </p>
+                  )}
+                </div>
+              </div>
+              
+              {/* Local Advantages */}
+              <div className="mt-8 bg-slate-50 rounded-xl p-6">
+                <h3 className="font-bold text-lg text-slate-900 mb-4">Why Choose Local {location.name} Manufacturer?</h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="flex items-start gap-3">
+                    <span className="text-green-500 mt-1">✓</span>
+                    <span className="text-slate-700">
+                      <strong>Faster Delivery:</strong> Proximity means quicker turnaround on orders and emergencies
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-green-500 mt-1">✓</span>
+                    <span className="text-slate-700">
+                      <strong>Lower Logistics Cost:</strong> Reduced freight charges compared to distant suppliers
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-green-500 mt-1">✓</span>
+                    <span className="text-slate-700">
+                      <strong>On-Site Support:</strong> Our engineers can visit your {location.name} site for consultation
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-green-500 mt-1">✓</span>
+                    <span className="text-slate-700">
+                      <strong>Local References:</strong> Speak with our {location.name} clients about their experience
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
         {/* Technical Specifications */}
-        <section className="section-padding bg-white">
+        <section className="section-padding bg-slate-50">
           <div className="container-custom">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">
               Technical Specifications of {product.name}

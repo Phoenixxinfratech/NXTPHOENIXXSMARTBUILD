@@ -302,6 +302,9 @@ export interface LocationData {
   industries: string[];
   regulations?: string[];
   nearbyAreas?: string[];
+  uniqueFacts?: string[]; // Location-specific unique facts for differentiation
+  localProjects?: string[]; // Example projects completed in the area
+  testimonials?: { quote: string; client: string }[]; // Location-specific testimonials
 }
 
 export const locations: Record<string, LocationData> = {
@@ -353,6 +356,24 @@ export const locations: Record<string, LocationData> = {
     industries: ['Pharmaceuticals', 'Chemicals', 'Textiles', 'Engineering', 'IT Services', 'Food Processing', 'Automotive Ancillaries'],
     industrialZones: ['GIDC Naroda (PHOENIXX HQ)', 'GIDC Odhav', 'GIDC Vatva', 'GIDC Changodar', 'GIDC Sanand', 'Bavla Industrial Area', 'Aslali Industrial Zone', 'Kathwada GIDC'],
     nearbyAreas: ['Gandhinagar', 'Sanand', 'Kalol', 'Mehsana', 'Nadiad', 'Kheda', 'Bavla', 'Changodar', 'GIFT City'],
+    uniqueFacts: [
+      'PHOENIXX SMARTBUILD headquarters located in GIDC Naroda with 50,000+ sq.ft manufacturing facility',
+      'Ahmedabad produces 30% of India\'s pharmaceutical output with 3000+ pharma units in GIDC estates',
+      'Same-day delivery available for stock items within Ahmedabad city limits',
+      'Only manufacturer in Gujarat offering factory visits and live production demonstrations',
+      'Local technical support team available for on-site consultations within 24 hours',
+    ],
+    localProjects: [
+      'Zydus Cadila - Cold storage facility with 10,000 sq.m PUF panel installation (GIDC Sanand)',
+      'Torrent Pharma - GMP-compliant cleanroom panels (Changodar)',
+      'Adani Wilmar - Food processing plant roofing and wall systems (Mundra Port)',
+      '50+ warehouse projects across Adalaj, Narol, and Kathwada industrial areas',
+      'Multiple cold storage facilities in APMC Market and Khodiyar area',
+    ],
+    testimonials: [
+      { quote: 'PHOENIXX delivered our 8,000 sq.m cold storage project 15 days ahead of schedule. Their local presence meant immediate support during installation.', client: 'Logistics Director, Leading Cold Chain Company, GIDC Narol' },
+      { quote: 'As an Ahmedabad-based pharma company, having PHOENIXX factory nearby ensures consistent quality and eliminates logistics delays. Best decision for our cleanroom project.', client: 'Project Manager, Pharmaceutical Manufacturing Unit, GIDC Vatva' },
+    ],
     // PHOENIXX Headquarters - Special Ahmedabad data
     factoryLocation: 'GIDC Naroda, Phase II, Ahmedabad - 382330',
     deliveryTime: 'Same-day delivery available for stock items, 3-5 days for custom orders',
@@ -382,6 +403,22 @@ export const locations: Record<string, LocationData> = {
     industries: ['Diamond Processing', 'Textiles', 'Chemicals', 'Petrochemicals', 'Engineering', 'Food Processing', 'Logistics'],
     industrialZones: ['GIDC Sachin', 'GIDC Pandesara', 'GIDC Ichhapore', 'Hazira Industrial Area', 'Surat SEZ', 'Diamond Research Park'],
     nearbyAreas: ['Hazira', 'Sachin', 'Bardoli', 'Navsari', 'Valsad', 'Bharuch'],
+    uniqueFacts: [
+      'Surat is India\'s diamond cutting capital processing 90% of world\'s diamonds, requiring precise climate control',
+      'GIDC Sachin houses 1000+ textile and chemical units with high demand for insulated infrastructure',
+      'Coastal location requires corrosion-resistant coatings - PHOENIXX provides marine-grade PVDF options',
+      'Hazira port proximity enables cost-effective logistics for large-scale industrial projects',
+      '150+ km from PHOENIXX Ahmedabad factory with 24-hour delivery service',
+    ],
+    localProjects: [
+      'Diamond processing units - Temperature-controlled storage and processing areas (Diamond Research Park)',
+      'Textile manufacturing plants - Climate-controlled weaving and dyeing units (GIDC Pandesara)',
+      'Food processing facilities - Cold storage and blast freezing units (GIDC Sachin)',
+      'Petrochemical warehouses - Fire-rated PIR panel installations (Hazira Industrial Area)',
+    ],
+    testimonials: [
+      { quote: 'Our diamond processing unit requires precise 22°C temperature control year-round. PHOENIXX PUF panels reduced our cooling costs by 35% compared to our previous facility.', client: 'Operations Head, Diamond Processing Company, Surat' },
+    ],
   },
 
   'vadodara': {
@@ -637,6 +674,22 @@ export const locations: Record<string, LocationData> = {
     industries: ['Financial Services', 'IT & ITES', 'Pharmaceuticals', 'Entertainment', 'Logistics', 'Food Processing', 'Textiles'],
     industrialZones: ['MIDC Andheri', 'MIDC Taloja', 'JNPT SEZ', 'Navi Mumbai Industrial Area', 'Thane-Belapur Industrial Belt'],
     nearbyAreas: ['Thane', 'Navi Mumbai', 'Panvel', 'Vasai', 'Bhiwandi'],
+    uniqueFacts: [
+      'India\'s financial capital with 40% of India\'s pharma manufacturing concentrated in Mumbai-Thane belt',
+      'JNPT port handles 50%+ of India\'s containerized cargo - ideal logistics hub for panel supply',
+      'High humidity and salt air demand marine-grade PVDF coatings - PHOENIXX specialty',
+      'Space constraints make fast-track construction critical - PUF panels reduce project time by 40%',
+      'Regular deliveries to Navi Mumbai, Thane, and JNPT within 48 hours from Gujarat factory',
+    ],
+    localProjects: [
+      'Pharmaceutical cold chain facility - 15,000 sq.m installation (MIDC Taloja)',
+      'Food processing plant - FM Approved panel system (Panvel)',
+      'E-commerce fulfillment center - Climate-controlled warehousing (Bhiwandi)',
+      'Data center infrastructure - Precision climate control (Navi Mumbai)',
+    ],
+    testimonials: [
+      { quote: 'Mumbai\'s humidity was ruining our warehouse inventory. PHOENIXX PUF panels brought humidity under control and cut AC costs by 30%.', client: 'Warehouse Manager, Logistics Company, Bhiwandi' },
+    ],
   },
 
   'pune': {
@@ -649,6 +702,22 @@ export const locations: Record<string, LocationData> = {
     industries: ['Automobiles', 'IT & Software', 'Engineering', 'Food Processing', 'Pharmaceuticals', 'Defense', 'Education'],
     industrialZones: ['MIDC Chakan', 'MIDC Ranjangaon', 'MIDC Pimpri-Chinchwad', 'Hinjewadi IT Park', 'Talegaon Industrial Area'],
     nearbyAreas: ['Chakan', 'Talegaon', 'Lonavala', 'Satara', 'Solapur'],
+    uniqueFacts: [
+      'India\'s largest automotive manufacturing hub with 30+ OEMs and 2000+ ancillary units',
+      'Chakan-Talegaon corridor has 50+ cold storage facilities serving agriculture and pharma sectors',
+      'Hinjewadi IT Park houses 1000+ companies requiring energy-efficient data center infrastructure',
+      'Pleasant climate reduces HVAC load but monsoons demand superior waterproofing - PUF panels ideal',
+      'Strategic location on Mumbai-Bangalore corridor enables efficient logistics',
+    ],
+    localProjects: [
+      'Automotive component manufacturing - Temperature-controlled paint booths (Chakan MIDC)',
+      'Pharma API manufacturing - GMP cleanroom panels (Ranjangaon)',
+      'Food processing plant - 12,000 sq.m cold storage (Talegaon)',
+      'IT campus - Energy-efficient building envelope (Hinjewadi)',
+    ],
+    testimonials: [
+      { quote: 'Our automotive paint booth required precise temperature control. PHOENIXX panels delivered consistent performance and reduced our rejection rate by 15%.', client: 'Quality Manager, Auto Ancillary Company, Chakan' },
+    ],
   },
 
   'nagpur': {
@@ -855,6 +924,22 @@ export const locations: Record<string, LocationData> = {
     industries: ['Gems & Jewelry', 'Textiles', 'IT & Software', 'Engineering', 'Tourism', 'Handicrafts', 'Automobiles'],
     industrialZones: ['RIICO Sitapura', 'RIICO Mansarovar', 'Mahindra World City', 'Jaipur SEZ'],
     nearbyAreas: ['Ajmer', 'Alwar', 'Sikar', 'Tonk', 'Dausa'],
+    uniqueFacts: [
+      'Rajasthan\'s capital with extreme 40°C+ temperature swings - superior insulation reduces energy costs by 40%',
+      'RIICO Sitapura hosts 500+ manufacturing units including automotive, engineering, and textiles',
+      'Gems & jewelry sector requires precise humidity and temperature control for quality assurance',
+      'Growing IT/ITES sector in Mahindra World City needs modern, energy-efficient infrastructure',
+      'Direct highway connectivity to Delhi (280 km) and Ahmedabad (650 km) ensures smooth logistics',
+    ],
+    localProjects: [
+      'Automotive manufacturing facility - Climate-controlled assembly lines (RIICO Sitapura)',
+      'Gems processing unit - Humidity-controlled storage and processing areas (Sitapura)',
+      'Textile manufacturing plant - Temperature-controlled weaving units (RIICO Mansarovar)',
+      'Cold storage facility - Agricultural produce preservation (Jaipur SEZ)',
+    ],
+    testimonials: [
+      { quote: 'Jaipur summers are brutal. PHOENIXX PUF panels keep our textile facility at comfortable 25°C while cutting electricity bills by 35%.', client: 'Operations Head, Textile Manufacturing, Jaipur' },
+    ],
   },
 
   'jodhpur': {
