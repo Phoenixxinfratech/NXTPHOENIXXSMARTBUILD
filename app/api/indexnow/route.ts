@@ -6,7 +6,7 @@ import { NextRequest, NextResponse } from 'next/server';
  * POST /api/indexnow with { urls: string[] }
  */
 
-const INDEXNOW_KEY = '1e274df09718c048e4e12042b6dde8d4';
+const INDEXNOW_KEY = '2f9deb3c91c64f92b7980e9c2bd6d948';
 const HOST = 'phoenixxsmartbuild.com';
 
 export async function POST(request: NextRequest) {

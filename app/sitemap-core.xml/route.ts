@@ -14,6 +14,8 @@ export async function GET() {
     { loc: '/clientele', changefreq: 'monthly', priority: '0.7' },
     { loc: '/career', changefreq: 'monthly', priority: '0.6' },
     { loc: '/become-partner', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/vendor-registration', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/sitemap-page', changefreq: 'monthly', priority: '0.4' },
     
     // Products Main
     { loc: '/products', changefreq: 'weekly', priority: '0.9' },
@@ -48,6 +50,18 @@ export async function GET() {
     { loc: '/solutions/partition-solutions', changefreq: 'monthly', priority: '0.7' },
     { loc: '/solutions/prefab-house', changefreq: 'monthly', priority: '0.7' },
     { loc: '/sound-proof-room-ball-mill', changefreq: 'monthly', priority: '0.8' },
+    
+    // SEO Authority Pages - High-Intent Question Pages
+    { loc: '/best-puf-panel-for-industrial-shed', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/best-quality-sandwich-puf-panel', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/best-roofing-puf-panel-for-factory', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/best-puf-panel-brand-in-india', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/best-puf-panel-thickness-for-roofing', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/best-density-puf-panel-for-insulation', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/puf-panel-vs-rockwool-panel', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/best-puf-panel-for-cold-storage', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/best-puf-panel-for-clean-room', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/best-insulated-panel-for-warehouse', changefreq: 'monthly', priority: '0.8' },
     
     // Industries (only pages that exist in industriesData)
     { loc: '/industries', changefreq: 'monthly', priority: '0.8' },
@@ -95,6 +109,12 @@ export async function GET() {
     { loc: '/resources/blogs/puf-panel-installation-cost', changefreq: 'monthly', priority: '0.8' },
     { loc: '/resources/blogs/puf-panel-house', changefreq: 'monthly', priority: '0.8' },
     
+    // Ahmedabad-specific Blog Posts
+    { loc: '/resources/blogs/cold-storage-panel-manufacturers-ahmedabad', changefreq: 'monthly', priority: '0.75' },
+    { loc: '/resources/blogs/cleanroom-panel-solutions-ahmedabad-pharma', changefreq: 'monthly', priority: '0.75' },
+    { loc: '/resources/blogs/industrial-roofing-solutions-ahmedabad-gidc', changefreq: 'monthly', priority: '0.75' },
+    { loc: '/resources/blogs/puf-vs-pir-vs-rockwool-ahmedabad-climate', changefreq: 'monthly', priority: '0.75' },
+    
     // Project Gallery (all project pages)
     { loc: '/resources/project-gallery/pharma-cleanroom-pune', changefreq: 'monthly', priority: '0.6' },
     { loc: '/resources/project-gallery/cold-storage-mumbai', changefreq: 'monthly', priority: '0.6' },
@@ -120,6 +140,7 @@ export async function GET() {
     { loc: '/resources/project-gallery/agrawal-metal-vithlapur', changefreq: 'monthly', priority: '0.6' },
     
     // SEO Authority Pages
+    { loc: '/top-puf-panel-manufacturers-in-india', changefreq: 'monthly', priority: '0.8' },
     { loc: '/best-puf-panel-manufacturer-in-india', changefreq: 'monthly', priority: '0.8' },
     { loc: '/industrial-puf-panel-manufacturer-in-india', changefreq: 'monthly', priority: '0.8' },
     { loc: '/insulated-puf-panel-manufacturer-in-india', changefreq: 'monthly', priority: '0.8' },

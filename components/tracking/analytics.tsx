@@ -8,13 +8,12 @@ import { useEffect } from 'react';
  * Analytics & Tracking Scripts
  * PHOENIXX SMARTBUILD - Comprehensive Tracking
  * 
- * GA4 Stream: PHOENIXX SMARTBUILD – Official Website
- * Stream ID: 13223843241
- * Measurement ID: G-L19YN99F03
+ * GA4 Measurement ID: Set via NEXT_PUBLIC_GA_MEASUREMENT_ID in .env.local
+ * Fallback: G-L19YN99F03 (PHOENIXX SMARTBUILD – Official Website)
  */
 
-// Analytics IDs
-const GA4_ID = 'G-L19YN99F03';
+// Analytics IDs - use env variable for flexibility, fallback to default
+const GA4_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-L19YN99F03';
 const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || '';
 
 // Page category mapping for better GA4 reports
@@ -37,6 +36,9 @@ const getPageCategory = (pathname: string): string => {
   if (pathname === '/clientele') return 'clientele';
   if (pathname === '/career') return 'careers';
   if (pathname === '/thank-you') return 'conversion';
+  if (pathname === '/sound-proof-room-ball-mill') return 'solution_acoustic';
+  if (pathname.startsWith('/best-') || pathname === '/puf-panel-vs-rockwool-panel') return 'seo_authority_puf';
+  if (pathname.startsWith('/shop')) return 'shop';
   return 'other';
 };
 
@@ -54,6 +56,9 @@ const getPageType = (pathname: string): string => {
   if (pathname.startsWith('/resources')) return 'Resource Page';
   if (pathname === '/get-a-quote' || pathname === '/contact-us') return 'Lead Generation';
   if (pathname === '/thank-you') return 'Conversion Page';
+  if (pathname === '/sound-proof-room-ball-mill') return 'Solution Detail';
+  if (pathname.startsWith('/best-') || pathname === '/puf-panel-vs-rockwool-panel') return 'SEO Authority Page';
+  if (pathname.startsWith('/shop')) return 'Product Detail';
   return 'Information Page';
 };
 
@@ -65,6 +70,7 @@ const getBusinessIntent = (pathname: string): string => {
   if (pathname.includes('/products/') && pathname.split('/').length > 3) return 'consideration';
   if (pathname.startsWith('/products')) return 'awareness';
   if (pathname.startsWith('/solutions')) return 'consideration';
+  if (pathname.startsWith('/best-') || pathname === '/puf-panel-vs-rockwool-panel') return 'high_intent';
   if (pathname === '/clientele') return 'trust_building';
   if (pathname === '/about-us') return 'trust_building';
   if (pathname.startsWith('/resources')) return 'education';
@@ -76,12 +82,12 @@ export function GoogleAnalytics() {
 
   return (
     <>
-      {/* Google Analytics 4 - Load after page is interactive */}
+      {/* Google Analytics 4 - Load on all pages after interactive */}
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`}
-        strategy="lazyOnload"
+        strategy="afterInteractive"
       />
-      <Script id="google-analytics" strategy="lazyOnload">
+      <Script id="google-analytics" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}

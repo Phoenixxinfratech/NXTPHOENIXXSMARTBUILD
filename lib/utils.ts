@@ -79,7 +79,7 @@ export function debounce<T extends (...args: unknown[]) => unknown>(
  * Get absolute URL for a path
  */
 export function absoluteUrl(path: string): string {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://phoenixxsmartbuild.com';
   return `${baseUrl}${path.startsWith('/') ? path : `/${path}`}`;
 }
 
