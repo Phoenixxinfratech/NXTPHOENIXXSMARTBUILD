@@ -49,6 +49,7 @@ export async function GET() {
     { loc: '/solutions/non-walkable-ceiling-systems', changefreq: 'monthly', priority: '0.7' },
     { loc: '/solutions/partition-solutions', changefreq: 'monthly', priority: '0.7' },
     { loc: '/solutions/prefab-house', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/solutions/cleanroom-solutions', changefreq: 'monthly', priority: '0.7' },
     { loc: '/sound-proof-room-ball-mill', changefreq: 'monthly', priority: '0.8' },
     
     // SEO Authority Pages - High-Intent Question Pages
@@ -114,6 +115,7 @@ export async function GET() {
     { loc: '/resources/blogs/cleanroom-panel-solutions-ahmedabad-pharma', changefreq: 'monthly', priority: '0.75' },
     { loc: '/resources/blogs/industrial-roofing-solutions-ahmedabad-gidc', changefreq: 'monthly', priority: '0.75' },
     { loc: '/resources/blogs/puf-vs-pir-vs-rockwool-ahmedabad-climate', changefreq: 'monthly', priority: '0.75' },
+    { loc: '/resources/blogs/puf-panel-price-ahmedabad-2025-guide', changefreq: 'monthly', priority: '0.75' },
     
     // Project Gallery (all project pages)
     { loc: '/resources/project-gallery/pharma-cleanroom-pune', changefreq: 'monthly', priority: '0.6' },
@@ -152,6 +154,7 @@ export async function GET() {
     { loc: '/sandwich-puf-panel-manufacturer-in-india', changefreq: 'monthly', priority: '0.8' },
     
     // City Landing Pages
+    { loc: '/puf-panel-manufacturer-in-ahmedabad', changefreq: 'monthly', priority: '0.8' },
     { loc: '/puf-panel-manufacturer-in-surat', changefreq: 'monthly', priority: '0.8' },
     { loc: '/puf-panel-manufacturer-in-vadodara', changefreq: 'monthly', priority: '0.8' },
     { loc: '/puf-panel-manufacturer-in-rajkot', changefreq: 'monthly', priority: '0.8' },
@@ -184,8 +187,9 @@ ${coreUrls.map(url => `  <url>
 
   return new NextResponse(xml, {
     headers: {
-      'Content-Type': 'application/xml',
-      'Cache-Control': 'public, max-age=3600, stale-while-revalidate=86400',
+      'Content-Type': 'application/xml; charset=utf-8',
+      'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400',
+      'X-Robots-Tag': 'noindex',
     },
   });
 }

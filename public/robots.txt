@@ -37,8 +37,11 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-# Sitemap Index - Google discovers all sub-sitemaps automatically
+# Sitemaps - All listed for maximum search engine discoverability
 Sitemap: https://phoenixxsmartbuild.com/sitemap.xml
+Sitemap: https://phoenixxsmartbuild.com/sitemap-core.xml
+Sitemap: https://phoenixxsmartbuild.com/sitemap-shop.xml
+Sitemap: https://phoenixxsmartbuild.com/sitemap-geo.xml
 
 # Host
 Host: https://phoenixxsmartbuild.com
