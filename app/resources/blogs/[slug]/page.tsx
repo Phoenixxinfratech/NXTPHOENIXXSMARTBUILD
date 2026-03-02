@@ -243,7 +243,7 @@ const blogPosts: Record<string, {
       { name: 'Cleanroom Flooring', href: '/products/cleanroom-solutions/cleanroom-flooring' },
     ],
     relatedSolutions: [
-      { name: 'Cleanroom Construction', href: '/solutions/cleanroom-construction' },
+      { name: 'Cleanroom Solutions', href: '/solutions/cleanroom-solutions' },
     ],
   },
   'choosing-right-insulated-panel': {
@@ -1377,7 +1377,7 @@ const blogPosts: Record<string, {
     ],
     relatedSolutions: [
       { name: 'Cold Storage Construction', href: '/solutions/cold-storage-construction' },
-      { name: 'Cleanroom Construction', href: '/solutions/cleanroom-construction' },
+      { name: 'Cleanroom Solutions', href: '/solutions/cleanroom-solutions' },
     ],
     faqs: [
       { question: 'Are PUF panels suitable for GMP-compliant pharmaceutical facilities?', answer: 'Yes, PHOENIXX PUF panels meet WHO GMP, Schedule M, and US FDA requirements. They provide smooth, non-porous surfaces that are easy to clean and sanitize, making them ideal for pharmaceutical manufacturing and cleanroom applications.' },

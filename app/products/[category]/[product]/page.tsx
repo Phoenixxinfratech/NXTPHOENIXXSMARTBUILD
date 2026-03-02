@@ -215,7 +215,7 @@ const productsData: Record<string, Record<string, ProductData>> = {
       relatedSolutions: [
         { name: 'Cold Storage Construction', slug: 'cold-storage-construction' },
         { name: 'Pre-Engineered Buildings', slug: 'peb' },
-        { name: 'Cleanroom Construction', slug: 'cleanroom-construction' },
+        { name: 'Cleanroom Solutions', slug: 'cleanroom-solutions' },
       ],
       relatedIndustries: [
         { name: 'Food Processing', slug: 'food-processing' },
@@ -361,11 +361,11 @@ const productsData: Record<string, Record<string, ProductData>> = {
       relatedSolutions: [
         { name: 'Pre-Engineered Buildings', slug: 'peb' },
         { name: 'Cold Storage Construction', slug: 'cold-storage-construction' },
-        { name: 'False Ceiling Systems', slug: 'false-ceiling-partition' },
+        { name: 'False Ceiling Systems', slug: 'partition-solutions' },
       ],
       relatedIndustries: [
         { name: 'Food Processing', slug: 'food-processing' },
-        { name: 'Warehousing', slug: 'automotive' },
+        { name: 'Warehousing', slug: 'automobile' },
         { name: 'Agriculture', slug: 'dairy' },
       ],
       gradient: 'from-blue-600 to-cyan-600',
@@ -518,13 +518,13 @@ PHOENIXX PUF sandwich roof panels are specially designed to perform reliably in 
       relatedSolutions: [
         { name: 'Pre-Engineered Buildings', slug: 'peb' },
         { name: 'Cold Storage Construction', slug: 'cold-storage-construction' },
-        { name: 'Cleanroom Solutions', slug: 'cleanroom-construction' },
+        { name: 'Cleanroom Solutions', slug: 'cleanroom-solutions' },
       ],
       relatedIndustries: [
-        { name: 'Warehousing & Logistics', slug: 'automotive' },
-        { name: 'Manufacturing', slug: 'textile' },
+        { name: 'Warehousing & Logistics', slug: 'automobile' },
+        { name: 'Manufacturing', slug: 'precision-engineering' },
         { name: 'Food & Beverage', slug: 'dairy' },
-        { name: 'Pharmaceutical', slug: 'pharma' },
+        { name: 'Pharmaceutical', slug: 'pharma-chemical' },
       ],
       gradient: 'from-blue-600 to-cyan-600',
     },
@@ -606,8 +606,8 @@ PHOENIXX PUF sandwich roof panels are specially designed to perform reliably in 
         { name: 'Cleanroom Partitions', slug: 'cleanroom-partition', category: 'cleanroom-solutions' },
       ],
       relatedSolutions: [
-        { name: 'False Ceiling & Partition', slug: 'false-ceiling-partition' },
-        { name: 'Cleanroom Construction', slug: 'cleanroom-construction' },
+        { name: 'False Ceiling & Partition', slug: 'partition-solutions' },
+        { name: 'Cleanroom Solutions', slug: 'cleanroom-solutions' },
         { name: 'Cold Storage Construction', slug: 'cold-storage-construction' },
       ],
       relatedIndustries: [
@@ -696,11 +696,11 @@ PHOENIXX PUF sandwich roof panels are specially designed to perform reliably in 
       ],
       relatedSolutions: [
         { name: 'Pre-Engineered Buildings', slug: 'peb' },
-        { name: 'Cleanroom Construction', slug: 'cleanroom-construction' },
+        { name: 'Cleanroom Solutions', slug: 'cleanroom-solutions' },
       ],
       relatedIndustries: [
         { name: 'Pharmaceutical', slug: 'pharma-chemical' },
-        { name: 'Electronics', slug: 'electronics' },
+        { name: 'Electronics', slug: 'precision-engineering' },
         { name: 'Oil & Gas', slug: 'pharma-chemical' },
       ],
       gradient: 'from-orange-500 to-red-600',
@@ -833,13 +833,13 @@ PHOENIXX PUF sandwich roof panels are specially designed to perform reliably in 
         { name: 'Cleanroom False Ceiling', slug: 'cleanroom-false-ceiling', category: 'cleanroom-solutions' },
       ],
       relatedSolutions: [
-        { name: 'Cleanroom Construction', slug: 'cleanroom-construction' },
-        { name: 'Pharmaceutical Cleanrooms', slug: 'cleanroom-construction' },
+        { name: 'Cleanroom Solutions', slug: 'cleanroom-solutions' },
+        { name: 'Pharmaceutical Cleanrooms', slug: 'cleanroom-solutions' },
       ],
       relatedIndustries: [
         { name: 'Pharmaceutical', slug: 'pharma-chemical' },
-        { name: 'Electronics', slug: 'electronics' },
-        { name: 'Healthcare', slug: 'healthcare' },
+        { name: 'Electronics', slug: 'precision-engineering' },
+        { name: 'Healthcare', slug: 'pharma-chemical' },
       ],
       gradient: 'from-orange-600 to-red-600',
     },
@@ -917,8 +917,8 @@ PHOENIXX PUF sandwich roof panels are specially designed to perform reliably in 
       ],
       relatedIndustries: [
         { name: 'Commercial', slug: 'hospitality' },
-        { name: 'Healthcare', slug: 'healthcare' },
-        { name: 'Industrial', slug: 'automotive' },
+        { name: 'Healthcare', slug: 'pharma-chemical' },
+        { name: 'Industrial', slug: 'automobile' },
       ],
       gradient: 'from-orange-600 to-red-600',
     },
@@ -995,8 +995,8 @@ PHOENIXX PUF sandwich roof panels are specially designed to perform reliably in 
         { name: 'Cold Storage Construction', slug: 'cold-storage-construction' },
       ],
       relatedIndustries: [
-        { name: 'Warehousing', slug: 'automotive' },
-        { name: 'Manufacturing', slug: 'textile' },
+        { name: 'Warehousing', slug: 'automobile' },
+        { name: 'Manufacturing', slug: 'precision-engineering' },
         { name: 'Cold Chain', slug: 'dairy' },
       ],
       gradient: 'from-orange-600 to-red-600',
@@ -1072,12 +1072,12 @@ PHOENIXX PUF sandwich roof panels are specially designed to perform reliably in 
         { name: 'Cleanroom Flooring', slug: 'cleanroom-flooring', category: 'cleanroom-solutions' },
       ],
       relatedSolutions: [
-        { name: 'Cleanroom Construction', slug: 'cleanroom-construction' },
-        { name: 'Pharmaceutical Cleanrooms', slug: 'cleanroom-construction' },
+        { name: 'Cleanroom Solutions', slug: 'cleanroom-solutions' },
+        { name: 'Pharmaceutical Cleanrooms', slug: 'cleanroom-solutions' },
       ],
       relatedIndustries: [
         { name: 'Pharmaceutical', slug: 'pharma-chemical' },
-        { name: 'Electronics', slug: 'electronics' },
+        { name: 'Electronics', slug: 'precision-engineering' },
         { name: 'Food Processing', slug: 'food-processing' },
       ],
       gradient: 'from-emerald-600 to-teal-600',
@@ -1151,13 +1151,13 @@ PHOENIXX PUF sandwich roof panels are specially designed to perform reliably in 
         { name: 'Wall & Ceiling Panels', slug: 'wall-ceiling-panel', category: 'sandwich-panels' },
       ],
       relatedSolutions: [
-        { name: 'Cleanroom Construction', slug: 'cleanroom-construction' },
+        { name: 'Cleanroom Solutions', slug: 'cleanroom-solutions' },
         { name: 'Walkable Ceiling Systems', slug: 'walkable-ceiling-systems' },
       ],
       relatedIndustries: [
         { name: 'Pharmaceutical', slug: 'pharma-chemical' },
-        { name: 'Electronics', slug: 'electronics' },
-        { name: 'Healthcare', slug: 'healthcare' },
+        { name: 'Electronics', slug: 'precision-engineering' },
+        { name: 'Healthcare', slug: 'pharma-chemical' },
       ],
       gradient: 'from-emerald-600 to-teal-600',
     },
@@ -1230,13 +1230,13 @@ PHOENIXX PUF sandwich roof panels are specially designed to perform reliably in 
         { name: 'Cleanroom Door (Doors Category)', slug: 'cleanroom-door', category: 'doors' },
       ],
       relatedSolutions: [
-        { name: 'Cleanroom Construction', slug: 'cleanroom-construction' },
-        { name: 'Pharmaceutical Cleanrooms', slug: 'cleanroom-construction' },
+        { name: 'Cleanroom Solutions', slug: 'cleanroom-solutions' },
+        { name: 'Pharmaceutical Cleanrooms', slug: 'cleanroom-solutions' },
       ],
       relatedIndustries: [
         { name: 'Pharmaceutical', slug: 'pharma-chemical' },
-        { name: 'Electronics', slug: 'electronics' },
-        { name: 'Healthcare', slug: 'healthcare' },
+        { name: 'Electronics', slug: 'precision-engineering' },
+        { name: 'Healthcare', slug: 'pharma-chemical' },
       ],
       gradient: 'from-emerald-600 to-teal-600',
     },
@@ -1309,12 +1309,12 @@ PHOENIXX PUF sandwich roof panels are specially designed to perform reliably in 
         { name: 'Cleanroom Doors', slug: 'cleanroom-doors', category: 'cleanroom-solutions' },
       ],
       relatedSolutions: [
-        { name: 'Cleanroom Construction', slug: 'cleanroom-construction' },
-        { name: 'Pharmaceutical Cleanrooms', slug: 'cleanroom-construction' },
+        { name: 'Cleanroom Solutions', slug: 'cleanroom-solutions' },
+        { name: 'Pharmaceutical Cleanrooms', slug: 'cleanroom-solutions' },
       ],
       relatedIndustries: [
         { name: 'Pharmaceutical', slug: 'pharma-chemical' },
-        { name: 'Electronics', slug: 'electronics' },
+        { name: 'Electronics', slug: 'precision-engineering' },
         { name: 'Food Processing', slug: 'food-processing' },
       ],
       gradient: 'from-emerald-600 to-teal-600',

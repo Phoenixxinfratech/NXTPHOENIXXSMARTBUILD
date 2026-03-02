@@ -250,6 +250,60 @@
   status = 301
 
 # ============================================
+# Industry & Solution Redirects
+# (Mirrors next.config.mjs redirects that may not fire on Netlify)
+# ============================================
+[[redirects]]
+  from = "/industries/healthcare"
+  to = "/industries/pharma-chemical"
+  status = 301
+
+[[redirects]]
+  from = "/industries/electronics"
+  to = "/industries/precision-engineering"
+  status = 301
+
+[[redirects]]
+  from = "/industries/semiconductor"
+  to = "/industries/precision-engineering"
+  status = 301
+
+[[redirects]]
+  from = "/industries/automotive"
+  to = "/industries/automobile"
+  status = 301
+
+[[redirects]]
+  from = "/industries/textile"
+  to = "/industries/precision-engineering"
+  status = 301
+
+[[redirects]]
+  from = "/industries/pharma"
+  to = "/industries/pharma-chemical"
+  status = 301
+
+[[redirects]]
+  from = "/industries/research-development"
+  to = "/industries/pharma-chemical"
+  status = 301
+
+[[redirects]]
+  from = "/solutions/cleanroom-construction"
+  to = "/solutions/cleanroom-solutions"
+  status = 301
+
+[[redirects]]
+  from = "/solutions/false-ceiling-partition"
+  to = "/solutions/partition-solutions"
+  status = 301
+
+[[redirects]]
+  from = "/sitemap"
+  to = "/sitemap-page"
+  status = 301
+
+# ============================================
 # Sitemap Redirects - Handled by Next.js rewrites
 # ============================================
 # Note: Sitemaps are now handled via Next.js rewrites in next.config.mjs
