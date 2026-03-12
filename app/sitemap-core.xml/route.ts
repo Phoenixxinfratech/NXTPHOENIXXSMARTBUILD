@@ -52,6 +52,13 @@ export async function GET() {
     { loc: '/solutions/cleanroom-solutions', changefreq: 'monthly', priority: '0.7' },
     { loc: '/sound-proof-room-ball-mill', changefreq: 'monthly', priority: '0.8' },
     
+    // PUF Roofing Panel Core Pages (Rajasthan Geo SEO Hub)
+    { loc: '/puf-roofing-panels', changefreq: 'monthly', priority: '0.9' },
+    { loc: '/puf-roofing-panel-manufacturer', changefreq: 'monthly', priority: '0.9' },
+    { loc: '/puf-roofing-panel-supplier', changefreq: 'monthly', priority: '0.9' },
+    { loc: '/puf-roofing-panel-price', changefreq: 'monthly', priority: '0.9' },
+    { loc: '/phoenixx-puf-roofing-panels', changefreq: 'monthly', priority: '0.9' },
+
     // SEO Authority Pages - High-Intent Question Pages
     { loc: '/best-puf-panel-for-industrial-shed', changefreq: 'monthly', priority: '0.8' },
     { loc: '/best-quality-sandwich-puf-panel', changefreq: 'monthly', priority: '0.8' },

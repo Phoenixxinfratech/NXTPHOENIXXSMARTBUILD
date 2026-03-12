@@ -17,6 +17,15 @@ import {
   ProductData,
   LocationData,
 } from '@/lib/landing-page-data';
+import {
+  parseGeoSlug,
+  generateAllGeoStaticParams,
+  getGeoMetaTitle,
+  getGeoMetaDescription,
+  getGeoCanonicalSlug,
+  getGeoH1,
+} from '@/lib/rajasthan-geo-data';
+import { RajasthanGeoPage } from '@/components/geo/rajasthan-geo-page';
 
 // Parse the URL slug to extract product and location
 function parseSlug(slug: string): { productSlug: string; locationSlug: string } | null {
@@ -28,10 +37,11 @@ function parseSlug(slug: string): { productSlug: string; locationSlug: string } 
   };
 }
 
-// Generate static params for all product-location combinations
+// Generate static params for all product-location combinations + Rajasthan geo pages
 export async function generateStaticParams() {
   const params: { productLocation: string }[] = [];
   
+  // Existing product-in-location combinations
   Object.keys(products).forEach(productSlug => {
     Object.keys(locations).forEach(locationSlug => {
       params.push({
@@ -39,6 +49,11 @@ export async function generateStaticParams() {
       });
     });
   });
+
+  // Rajasthan geo SEO pages (207 URLs)
+  for (const slug of generateAllGeoStaticParams()) {
+    params.push({ productLocation: slug });
+  }
   
   return params;
 }
@@ -46,6 +61,46 @@ export async function generateStaticParams() {
 // Generate metadata
 export async function generateMetadata({ params }: { params: Promise<{ productLocation: string }> }): Promise<Metadata> {
   const { productLocation } = await params;
+
+  // Check for Rajasthan geo SEO pages first
+  const geoResult = parseGeoSlug(productLocation);
+  if (geoResult) {
+    const title = getGeoMetaTitle(geoResult);
+    const description = getGeoMetaDescription(geoResult);
+    const canonical = getGeoCanonicalSlug(geoResult);
+    const h1 = getGeoH1(geoResult);
+    return {
+      title,
+      description,
+      keywords: [
+        h1,
+        `PUF roofing panel ${geoResult.city.name}`,
+        `insulated roof panel ${geoResult.city.name}`,
+        `sandwich PUF panel ${geoResult.city.name}`,
+        `Phoenixx PUF panel ${geoResult.city.name}`,
+        'PUF roofing panel Rajasthan',
+      ],
+      alternates: { canonical: `https://phoenixxsmartbuild.com/${canonical}` },
+      openGraph: {
+        title,
+        description,
+        type: 'website',
+        locale: 'en_IN',
+        siteName: 'PHOENIXX SMARTBUILD',
+        url: `https://phoenixxsmartbuild.com/${canonical}`,
+        images: [
+          {
+            url: 'https://phoenixxsmartbuild.com/images/products/sandwich-panels/roofing-panel/PHOENIXX_ROOFING_PANEL1.png',
+            width: 1200,
+            height: 630,
+            alt: `Phoenixx PUF Roofing Panels for ${geoResult.city.name}`,
+          },
+        ],
+      },
+    };
+  }
+
+  // Existing product-in-location pattern
   const parsed = parseSlug(productLocation);
   
   if (!parsed) {
@@ -89,6 +144,14 @@ export async function generateMetadata({ params }: { params: Promise<{ productLo
 // Main Page Component
 export default async function ProductLocationPage({ params }: { params: Promise<{ productLocation: string }> }) {
   const { productLocation } = await params;
+
+  // Check for Rajasthan geo SEO pages first
+  const geoResult = parseGeoSlug(productLocation);
+  if (geoResult) {
+    return <RajasthanGeoPage result={geoResult} />;
+  }
+
+  // Existing product-in-location logic
   const parsed = parseSlug(productLocation);
   
   if (!parsed) {
