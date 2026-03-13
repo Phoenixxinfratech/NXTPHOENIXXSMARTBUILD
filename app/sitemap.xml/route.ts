@@ -22,6 +22,7 @@ export async function GET() {
     { loc: '/become-partner', changefreq: 'monthly', priority: '0.6' },
     { loc: '/vendor-registration', changefreq: 'monthly', priority: '0.6' },
     { loc: '/sitemap-page', changefreq: 'monthly', priority: '0.4' },
+    { loc: '/door-products-directory', changefreq: 'weekly', priority: '0.8' },
 
     { loc: '/products', changefreq: 'weekly', priority: '0.9' },
     { loc: '/products/sandwich-panels', changefreq: 'weekly', priority: '0.8' },
