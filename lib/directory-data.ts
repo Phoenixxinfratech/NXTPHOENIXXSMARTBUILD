@@ -5,6 +5,7 @@ import {
   geoKeywordTypes,
   coreInternalLinks,
 } from '@/lib/rajasthan-geo-data';
+import { getAllBlogSlugs } from '@/lib/blog-data';
 
 export interface DirectoryLink {
   href: string;
@@ -185,41 +186,12 @@ function buildAllSections(): DirectorySection[] {
     })),
   });
 
-  // ── Blogs ──
-  const blogSlugs = [
-    'rise-of-sustainable-peb-structures',
-    'optimizing-cold-storage-energy-efficiency',
-    'cleanroom-design-best-practices',
-    'choosing-right-insulated-panel',
-    'fire-safety-industrial-buildings',
-    'cold-chain-logistics-india',
-    'turnkey-epc-project-delivery',
-    'industrial-doors-selection-guide',
-    'what-is-puf-panel-how-does-it-work',
-    'puf-panel-vs-traditional-roofing-sheets',
-    'how-puf-panels-reduce-energy-costs-factories',
-    'puf-panel-thickness-guide-industrial-buildings',
-    'puf-panels-cold-storage-pharma-applications',
-    'puf-vs-pir-vs-rockwool',
-    'puf-panel-installation-accessories',
-    'puf-panel-installation-near-me',
-    'puf-panel-manufacturers-in-ahmedabad',
-    'puf-panel-manufacturers-in-gujarat',
-    'jindal-puf-panel-price-list',
-    'puf-panel-installation-contractors',
-    'puf-panel-wall-installation',
-    'puf-panel-installation-cost',
-    'puf-panel-house',
-    'cold-storage-panel-manufacturers-ahmedabad',
-    'cleanroom-panel-solutions-ahmedabad-pharma',
-    'industrial-roofing-solutions-ahmedabad-gidc',
-    'puf-vs-pir-vs-rockwool-ahmedabad-climate',
-    'puf-panel-price-ahmedabad-2025-guide',
-  ];
+  // ── Blogs (dynamically pulls all 78+ blogs, auto-includes future additions) ──
+  const blogSlugs = getAllBlogSlugs();
   sections.push({
     id: 'blogs',
     heading: 'Insights & Blog',
-    description: 'Technical articles, installation guides, and industry insights from Phoenixx Smart Build.',
+    description: 'Technical articles, pricing guides, comparison guides, how-to guides, and industry insights from Phoenixx Smart Build.',
     links: [
       { href: '/resources/blogs', label: 'All Blog Posts' },
       ...blogSlugs.map((slug) => ({
