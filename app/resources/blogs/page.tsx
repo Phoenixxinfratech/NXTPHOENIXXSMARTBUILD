@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
+import { getBlogListings } from '@/lib/blog-data';
 
 export const metadata: Metadata = {
   title: 'Blog – Industry Insights & Technical Guides',
@@ -12,139 +13,11 @@ export const metadata: Metadata = {
   },
 };
 
-const blogPosts = [
-  // NEW PUF PANEL SERIES - Featured
-  {
-    slug: 'what-is-puf-panel-how-does-it-work',
-    title: 'What Is a PUF Panel and How Does It Work?',
-    excerpt: 'PUF panels have become one of the most widely used construction materials in modern industrial and commercial infrastructure. Understanding what a PUF panel is and how it works helps businesses choose the right insulation solution.',
-    category: 'PUF Panels',
-    date: 'Jan 3, 2025',
-    readTime: '6 min read',
-    featured: true,
-  },
-  {
-    slug: 'puf-panel-vs-traditional-roofing-sheets',
-    title: 'PUF Panel vs Traditional Roofing Sheets: Which Is Better?',
-    excerpt: 'Traditional roofing sheets have been used for decades, but rising energy costs and modern compliance requirements have pushed industries to adopt PUF panels. This comparison explains why.',
-    category: 'PUF Panels',
-    date: 'Jan 2, 2025',
-    readTime: '5 min read',
-    featured: true,
-  },
-  {
-    slug: 'puf-vs-pir-vs-rockwool',
-    title: 'PUF vs PIR vs Rockwool: Which Insulated Panel Is Best?',
-    excerpt: 'Compare PUF, PIR, and Rockwool panels by insulation performance, fire safety, cost, and application fit to choose the right panel for your project.',
-    category: 'Panels',
-    date: 'Jan 1, 2025',
-    readTime: '7 min read',
-    featured: false,
-  },
-  {
-    slug: 'how-puf-panels-reduce-energy-costs-factories',
-    title: 'How PUF Panels Reduce Energy Costs in Factories',
-    excerpt: 'Energy costs account for a significant portion of factory operating expenses. One of the most effective ways to reduce these costs is by using PUF panels for insulation.',
-    category: 'PUF Panels',
-    date: 'Dec 27, 2024',
-    readTime: '7 min read',
-    featured: true,
-  },
-  // Other featured posts
-  {
-    slug: 'rise-of-sustainable-peb-structures',
-    title: 'The Rise of Sustainable PEB Structures in India',
-    excerpt: 'How Pre-Engineered Buildings are revolutionizing industrial construction with sustainability at the core. Discover the environmental and economic benefits driving adoption.',
-    category: 'PEB',
-    date: 'Dec 28, 2024',
-    readTime: '5 min read',
-    featured: false,
-  },
-  {
-    slug: 'optimizing-cold-storage-energy-efficiency',
-    title: 'Optimizing Cold Storage for Energy Efficiency',
-    excerpt: 'Key strategies to reduce energy costs in temperature-controlled facilities without compromising performance. From insulation to automation.',
-    category: 'Cold Storage',
-    date: 'Dec 20, 2024',
-    readTime: '7 min read',
-    featured: false,
-  },
-  // More PUF Panel blogs
-  {
-    slug: 'puf-panel-thickness-guide-industrial-buildings',
-    title: 'PUF Panel Thickness Guide for Industrial Buildings',
-    excerpt: 'Choosing the correct PUF panel thickness is critical for insulation performance, compliance, and cost optimization. This guide helps you select the right thickness.',
-    category: 'PUF Panels',
-    date: 'Dec 20, 2024',
-    readTime: '8 min read',
-    featured: false,
-  },
-  {
-    slug: 'puf-panels-cold-storage-pharma-applications',
-    title: 'Applications of PUF Panels in Cold Storage & Pharma',
-    excerpt: 'Cold storage and pharmaceutical industries demand strict temperature control and hygiene standards. PUF panels are the preferred insulation solution in these sectors.',
-    category: 'PUF Panels',
-    date: 'Dec 15, 2024',
-    readTime: '8 min read',
-    featured: false,
-  },
-  {
-    slug: 'cleanroom-design-best-practices',
-    title: 'Cleanroom Design Best Practices for Pharmaceutical Facilities',
-    excerpt: 'Essential guidelines for designing GMP-compliant cleanrooms with optimal airflow, contamination control, and regulatory compliance.',
-    category: 'Cleanroom',
-    date: 'Dec 15, 2024',
-    readTime: '8 min read',
-    featured: false,
-  },
-  {
-    slug: 'choosing-right-insulated-panel',
-    title: 'Choosing the Right Insulated Panel for Your Project',
-    excerpt: 'A comprehensive guide to selecting between PIR, PUF, Rockwool, and other insulation types based on your application requirements.',
-    category: 'Panels',
-    date: 'Dec 10, 2024',
-    readTime: '8 min read',
-    featured: false,
-  },
-  {
-    slug: 'fire-safety-industrial-buildings',
-    title: 'Fire Safety in Industrial Buildings: Best Practices',
-    excerpt: 'Understanding fire-rated materials, emergency exits, and compliance requirements for industrial facilities.',
-    category: 'Safety',
-    date: 'Dec 5, 2024',
-    readTime: '6 min read',
-    featured: false,
-  },
-  {
-    slug: 'cold-chain-logistics-india',
-    title: 'Cold Chain Logistics in India: Challenges & Solutions',
-    excerpt: 'Addressing infrastructure gaps in India\'s cold chain sector and emerging solutions for better food preservation.',
-    category: 'Cold Chain',
-    date: 'Nov 28, 2024',
-    readTime: '7 min read',
-    featured: false,
-  },
-  {
-    slug: 'turnkey-epc-project-delivery',
-    title: 'Delivering Turnkey EPC Projects Without Delays',
-    excerpt: 'Project management best practices for timely EPC delivery in industrial construction.',
-    category: 'EPC',
-    date: 'Nov 20, 2024',
-    readTime: '5 min read',
-    featured: false,
-  },
-  {
-    slug: 'industrial-doors-selection-guide',
-    title: 'Industrial Doors: A Complete Selection Guide',
-    excerpt: 'From cleanroom doors to fire exits—understanding door types, ratings, and applications for industrial facilities.',
-    category: 'Doors',
-    date: 'Nov 15, 2024',
-    readTime: '6 min read',
-    featured: false,
-  },
-];
+const blogPosts = getBlogListings().sort(
+  (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+);
 
-const categories = ['All', 'PUF Panels', 'PEB', 'Cold Storage', 'Cleanroom', 'Panels', 'Safety', 'EPC', 'Doors'];
+const categories = ['All', 'Pricing', 'Comparison', 'How-To Guide', 'Location Guide', 'Industry Guide', 'PUF Panels', 'PEB', 'Cold Storage', 'Cleanroom', 'Panels', 'Safety', 'Doors'];
 
 export default function BlogsPage() {
   const featuredPosts = blogPosts.filter((post) => post.featured);

@@ -117,16 +117,22 @@ export async function generateMetadata({ params }: { params: Promise<{ productLo
   const title = generatePageTitle(product, location);
   const description = generateMetaDescription(product, location);
   
+  const stateOrRegion = location.state || (location.type === 'state' ? location.name : 'India');
+
   return {
     title,
     description,
     keywords: [
-      `${product.name} in ${location.name}`,
-      `${product.shortName} manufacturer ${location.name}`,
-      `${product.shortName} supplier ${location.name}`,
-      `insulated panels ${location.name}`,
-      `PHOENIXX SMARTBUILD ${location.name}`,
-      ...product.idealFor.map(i => `${i.toLowerCase()} ${product.shortName.toLowerCase()}`),
+      `PUF panel manufacturer in ${location.name}`,
+      `PUF panel supplier in ${location.name}`,
+      `PIR panel ${location.name}`,
+      `sandwich panel ${location.name}`,
+      `insulated sandwich panels ${location.name}`,
+      `PUF panel installation ${location.name}`,
+      `cold storage construction ${location.name}`,
+      `PUF panel manufacturer ${stateOrRegion}`,
+      `PUF insulated roofing panel ${location.name}`,
+      `PUF insulated wall panel ${location.name}`,
     ],
     alternates: {
       canonical: `https://phoenixxsmartbuild.com/${productLocation}`,
@@ -137,6 +143,15 @@ export async function generateMetadata({ params }: { params: Promise<{ productLo
       type: 'website',
       locale: 'en_IN',
       siteName: 'PHOENIXX SMARTBUILD',
+      url: `https://phoenixxsmartbuild.com/${productLocation}`,
+      images: [
+        {
+          url: 'https://phoenixxsmartbuild.com/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
+          width: 1200,
+          height: 630,
+          alt: `PUF Panel Manufacturer in ${location.name} - PHOENIXX SMARTBUILD`,
+        },
+      ],
     },
   };
 }
@@ -176,8 +191,8 @@ export default async function ProductLocationPage({ params }: { params: Promise<
   const productSchema = {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: `${product.name} in ${location.name}`,
-    description: product.description,
+    name: `PUF Panel & ${product.name} in ${location.name}`,
+    description: `Top PUF & PIR panel manufacturer in ${location.name} offering sandwich panels, insulated roofing & wall panels, cold storage construction & PUF panel installation services.`,
     image: 'https://phoenixxsmartbuild.com/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
     brand: {
       '@type': 'Brand',
@@ -270,12 +285,13 @@ export default async function ProductLocationPage({ params }: { params: Promise<
             
             <div className="max-w-4xl">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                {product.name} Manufacturer & Supplier in {location.name}
+                PUF &amp; PIR Panel Manufacturer in {location.name} &ndash; Sandwich, Roofing &amp; Wall Panels
               </h1>
               <p className="mt-6 text-lg md:text-xl text-white/90 leading-relaxed">
-                PHOENIXX SMARTBUILD is a leading manufacturer and supplier of premium {product.name}s in {location.name}. 
-                We provide complete solutions including manufacturing, supply, installation, and compliance support 
-                for industrial and commercial projects across {location.type === 'city' ? location.state : location.name} and PAN-India.
+                PHOENIXX SMARTBUILD is a trusted PUF panel manufacturer and supplier in {location.name}, 
+                delivering high-performance sandwich panels, PIR panels, insulated roofing panels, and wall panels 
+                for industrial and commercial projects. We offer end-to-end PUF panel installation and cold storage 
+                construction services across {location.type === 'city' ? location.state : location.name} and PAN-India.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
                 <Link
@@ -303,43 +319,86 @@ export default async function ProductLocationPage({ params }: { params: Promise<
           <div className="container-custom">
             <div className="prose prose-lg max-w-4xl">
               <p className="text-slate-700 leading-relaxed text-lg">
-                {product.description} In {location.name}, where {location.climate.toLowerCase()}, 
-                PHOENIXX {product.shortName}s provide the ideal building envelope solution. 
-                Our panels deliver thermal conductivity of {product.specifications.thermalConductivity}, 
-                ensuring optimal energy efficiency and indoor comfort for {product.idealFor.slice(0, 3).join(', ')}, and more applications.
+                {generateIntroContent(product, location)}
               </p>
+              <div className="mt-6 flex flex-wrap gap-3 not-prose">
+                <Link href="/puf-roofing-panels" className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-800 hover:underline">
+                  → PUF Roofing Panels
+                </Link>
+                <Link href={`/products/sandwich-panels/${product.slug}`} className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-800 hover:underline">
+                  → {product.name} Details
+                </Link>
+                <Link href="/puf-roofing-panel-manufacturer" className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-800 hover:underline">
+                  → PUF Panel Manufacturer
+                </Link>
+                <Link href="/puf-roofing-panel-supplier" className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-800 hover:underline">
+                  → PUF Panel Supplier
+                </Link>
+                {location.nearbyAreas && location.nearbyAreas.slice(0, 3).map((area) => {
+                  const areaSlug = area.toLowerCase().replace(/\s+/g, '-');
+                  const areaExists = locations[areaSlug];
+                  return areaExists ? (
+                    <Link key={areaSlug} href={`/${product.slug}-in-${areaSlug}`} className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-800 hover:underline">
+                      → {product.shortName} in {area}
+                    </Link>
+                  ) : null;
+                })}
+              </div>
             </div>
           </div>
         </section>
         
-        {/* What is & How it Works */}
+        {/* Products & Solutions */}
         <section className="section-padding bg-slate-50">
           <div className="container-custom">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">
-              What is a {product.name} and How Does It Work?
+              PUF Panel, PIR Panel &amp; Sandwich Panel Solutions in {location.name}
             </h2>
             
             <div className="grid gap-8 lg:grid-cols-3">
               <div className="bg-white rounded-2xl p-8 shadow-lg">
-                <h3 className="text-xl font-bold text-slate-900 mb-4">Composition & Technology</h3>
-                <p className="text-slate-600 leading-relaxed">{product.composition}</p>
-                <p className="text-slate-600 leading-relaxed mt-4">{product.technology}</p>
+                <h3 className="text-xl font-bold text-slate-900 mb-4">PUF Sandwich Panel &amp; Insulated Panels</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  PHOENIXX PUF sandwich panels in {location.name} are engineered with a rigid polyurethane foam core
+                  between pre-painted metal sheets. These insulated sandwich panels deliver thermal conductivity
+                  of {product.specifications.thermalConductivity}, making them ideal for temperature-sensitive facilities
+                  across {location.name}.
+                </p>
+                <p className="text-slate-600 leading-relaxed mt-4">
+                  Available in PUF insulated roofing panels and PUF insulated wall panels, our range covers
+                  thicknesses from {product.specifications.thickness[0]} to {product.specifications.thickness[product.specifications.thickness.length - 1]} to
+                  suit every industrial application.
+                </p>
               </div>
               
               <div className="bg-white rounded-2xl p-8 shadow-lg">
-                <h3 className="text-xl font-bold text-slate-900 mb-4">Key Performance Characteristics</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-4">Technical Advantages</h3>
                 <ul className="space-y-3">
-                  {product.characteristics.map((char, idx) => (
-                    <li key={idx} className="flex items-start gap-2 text-slate-600">
-                      <span className="text-green-500 mt-1">✓</span>
-                      <span>{char}</span>
-                    </li>
-                  ))}
+                  <li className="flex items-start gap-2 text-slate-600">
+                    <span className="text-green-500 mt-1">✓</span>
+                    <span><strong>Thermal Insulation:</strong> Industry-leading {product.specifications.thermalConductivity} conductivity</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-slate-600">
+                    <span className="text-green-500 mt-1">✓</span>
+                    <span><strong>Fire Resistance:</strong> PIR panels offer B-s1,d0 rating with minimal smoke</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-slate-600">
+                    <span className="text-green-500 mt-1">✓</span>
+                    <span><strong>Energy Efficiency:</strong> 25-30% reduction in HVAC operating costs</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-slate-600">
+                    <span className="text-green-500 mt-1">✓</span>
+                    <span><strong>Durability:</strong> 25-30 year lifespan with proper installation</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-slate-600">
+                    <span className="text-green-500 mt-1">✓</span>
+                    <span><strong>Lightweight Structure:</strong> 8-15 kg/m&sup2; reduces structural steel needs by up to 30%</span>
+                  </li>
                 </ul>
               </div>
               
               <div className="bg-white rounded-2xl p-8 shadow-lg">
-                <h3 className="text-xl font-bold text-slate-900 mb-4">Compliance & Certifications</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-4">Certifications &amp; Compliance</h3>
                 <ul className="space-y-3">
                   {product.certifications.map((cert, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-slate-600">
@@ -353,20 +412,20 @@ export default async function ProductLocationPage({ params }: { params: Promise<
           </div>
         </section>
         
-        {/* Why Ideal for Location */}
+        {/* Why Ideal + Services */}
         <section className="section-padding bg-white">
           <div className="container-custom">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">
-              Why {product.name} is Ideal for Projects in {location.name}
+              Why PUF &amp; PIR Panels Are Ideal for {location.name} &ndash; Installation &amp; Services
             </h2>
             
             <div className="grid gap-8 lg:grid-cols-2">
               <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-8">
-                <h3 className="text-xl font-bold text-slate-900 mb-4">🌡️ Climate & Environmental Suitability</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-4">🌡️ Climate &amp; Environmental Suitability</h3>
                 <p className="text-slate-600 leading-relaxed">{location.climate}</p>
                 <p className="text-slate-600 leading-relaxed mt-4">
-                  PHOENIXX {product.shortName}s with thermal conductivity of {product.specifications.thermalConductivity} and 
-                  service temperature range of {product.characteristics.find(c => c.includes('temperature'))?.split(': ')[1] || '-40°C to +80°C'} 
+                  PHOENIXX PUF and PIR panels with thermal conductivity of {product.specifications.thermalConductivity} and
+                  service temperature range of {product.characteristics.find(c => c.includes('temperature'))?.split(': ')[1] || '-40\u00B0C to +80\u00B0C'}
                   are engineered to perform optimally in {location.name}&apos;s conditions.
                 </p>
               </div>
@@ -384,8 +443,29 @@ export default async function ProductLocationPage({ params }: { params: Promise<
                   ))}
                 </div>
                 <p className="text-slate-600 mt-4">
-                  Each of these sectors benefits from PHOENIXX {product.shortName}s for temperature control, 
+                  Each of these sectors benefits from PHOENIXX PUF and PIR panels for temperature control,
                   energy efficiency, and regulatory compliance.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid gap-8 lg:grid-cols-2 mt-8">
+              <div className="bg-gradient-to-br from-emerald-50 to-white rounded-2xl p-8 border border-emerald-100">
+                <h3 className="text-xl font-bold text-slate-900 mb-4">🔧 PUF Panel Installation in {location.name}</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  PHOENIXX provides professional PUF panel installation services across {location.name} and surrounding areas.
+                  Our trained crews handle complete panel erection, sealing, flashing, and finishing &mdash; ensuring leak-proof,
+                  thermally efficient building envelopes that comply with IS 14925:2015 standards. From roofing panels to wall
+                  cladding, we deliver turnkey installation for factories, warehouses, cold storage facilities, and cleanrooms.
+                </p>
+              </div>
+              <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border border-blue-100">
+                <h3 className="text-xl font-bold text-slate-900 mb-4">❄️ Cold Storage Construction in {location.name}</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  PHOENIXX offers complete cold storage construction services in {location.name}, from design consultation
+                  to panel supply and installation. Our insulated sandwich panels maintain chamber temperatures from +15&deg;C
+                  to -40&deg;C, serving agriculture, dairy, pharmaceutical cold chain, and frozen food industries across
+                  {location.type === 'city' ? location.state : location.name}.
                 </p>
               </div>
             </div>
@@ -396,7 +476,7 @@ export default async function ProductLocationPage({ params }: { params: Promise<
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                   {location.industrialZones.map((zone, idx) => (
                     <div key={idx} className="flex items-center gap-2 text-slate-700">
-                      <span className="text-blue-500">•</span>
+                      <span className="text-blue-500">&bull;</span>
                       <span>{zone}</span>
                     </div>
                   ))}
@@ -410,29 +490,22 @@ export default async function ProductLocationPage({ params }: { params: Promise<
         <section className="section-padding bg-slate-50">
           <div className="container-custom">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">
-              Applications of {product.name} in {location.name}
+              PUF Panel Applications in {location.name} &ndash; Industrial &amp; Commercial
             </h2>
             
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {Object.entries(product.applications).map(([key, value]) => (
-                <div key={key} className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="text-3xl mb-4">
-                    {key === 'pharma' && '💊'}
-                    {key === 'coldStorage' && '❄️'}
-                    {key === 'foodProcessing' && '🍕'}
-                    {key === 'warehouse' && '🏭'}
-                    {key === 'manufacturing' && '⚙️'}
-                    {key === 'dataCenter' && '🖥️'}
-                  </div>
-                  <h3 className="text-lg font-bold text-slate-900 mb-3">
-                    {key === 'pharma' && 'Pharmaceutical & GMP Facilities'}
-                    {key === 'coldStorage' && 'Cold Storage & Cold Chain'}
-                    {key === 'foodProcessing' && 'Food Processing & Dairy'}
-                    {key === 'warehouse' && 'Warehouses & Logistics Parks'}
-                    {key === 'manufacturing' && 'Manufacturing & Industrial Plants'}
-                    {key === 'dataCenter' && 'Data Centers & Utility Buildings'}
-                  </h3>
-                  <p className="text-slate-600 text-sm leading-relaxed">{value}</p>
+              {[
+                { key: 'warehouse', icon: '🏭', title: `Warehouses & Factories in ${location.name}`, desc: `PUF insulated wall panels and roofing panels reduce structural steel by up to 30% in ${location.name} warehouses and factories. Lightweight, fast to install, and energy-efficient for large-span industrial buildings.` },
+                { key: 'coldStorage', icon: '❄️', title: `Cold Storage in ${location.name}`, desc: `PHOENIXX insulated sandwich panels maintain temperatures from +15°C to -40°C for cold storage and cold chain facilities in ${location.name}. Zero moisture absorption ensures long-term performance for dairy, pharma, and frozen food storage.` },
+                { key: 'pharma', icon: '💊', title: `Cleanrooms & Pharma in ${location.name}`, desc: `WHO-GMP compliant PUF panels for pharmaceutical cleanrooms in ${location.name}. Smooth, non-porous surfaces prevent bacterial growth while maintaining controlled temperature and humidity environments.` },
+                { key: 'manufacturing', icon: '⚙️', title: `Industrial Buildings in ${location.name}`, desc: `PUF and PIR panels provide dust-free, temperature-controlled environments for manufacturing plants in ${location.name}. Quick installation minimizes production downtime during facility expansion or renovation.` },
+                { key: 'foodProcessing', icon: '🍕', title: `Food Processing in ${location.name}`, desc: `Food-safe coated insulated sandwich panels for dairy plants, beverage facilities, and FSSAI-compliant food manufacturing units in ${location.name}. Resistant to mould growth and easy to sanitise.` },
+                { key: 'dataCenter', icon: '🖥️', title: `Data Centres & Utilities in ${location.name}`, desc: `Precision climate control with PUF and PIR panels for data centres in ${location.name}. Maintain server room temperatures within ±1°C tolerance while reducing cooling costs by 20-30%.` },
+              ].map((item) => (
+                <div key={item.key} className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="text-3xl mb-4">{item.icon}</div>
+                  <h3 className="text-lg font-bold text-slate-900 mb-3">{item.title}</h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -443,11 +516,12 @@ export default async function ProductLocationPage({ params }: { params: Promise<
         <section className="section-padding bg-white">
           <div className="container-custom">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">
-              {product.name} Gallery – Real Projects & Installations
+              PUF Panel &amp; Insulated Panel Gallery &ndash; Real Projects in {location.name}
             </h2>
             <p className="text-slate-600 mb-8 max-w-3xl">
-              Explore our {product.shortName} installations across industrial facilities in {location.name} and India. 
-              Each project showcases PHOENIXX SMARTBUILD&apos;s commitment to quality and precision.
+              Explore our PUF panel, PIR panel, and sandwich panel installations across industrial facilities
+              in {location.name} and India. Each project showcases PHOENIXX SMARTBUILD&apos;s commitment to quality
+              and precision in insulated panel manufacturing.
             </p>
             
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -483,17 +557,17 @@ export default async function ProductLocationPage({ params }: { params: Promise<
         <section className={`section-padding bg-gradient-to-br ${product.gradient} text-white`}>
           <div className="container-custom">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
-              Why Choose PHOENIXX SMARTBUILD for {product.name} in {location.name}
+              Why Choose PHOENIXX &ndash; Trusted PUF Panel Manufacturer in {location.name}
             </h2>
             
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {[
-                { icon: '🏭', title: 'In-House Manufacturing', desc: 'State-of-the-art production facility with continuous lamination technology ensures consistent quality and competitive pricing.' },
-                { icon: '📐', title: 'Engineering & Customization', desc: 'Our engineering team provides custom panel designs, thickness calculations, and project-specific solutions.' },
-                { icon: '✅', title: 'Quality Assurance & Testing', desc: 'ISO 9001:2015 certified processes with rigorous testing for density, thermal conductivity, and fire performance.' },
-                { icon: '🇮🇳', title: 'PAN-India Execution Capability', desc: `From ${location.name} to any corner of India, our logistics and installation teams ensure seamless project delivery.` },
-                { icon: '🔧', title: 'Turnkey Supply & Installation', desc: 'Complete solutions from design to installation, including accessories, flashings, and technical support.' },
-                { icon: '⏱️', title: 'Fast Turnaround', desc: 'Quick production and delivery schedules with project-specific timelines to meet your construction milestones.' },
+                { icon: '🏭', title: `Trusted PUF Panel Manufacturer in ${location.name}`, desc: `PHOENIXX is a trusted PUF panel manufacturer in ${location.name} with in-house continuous lamination technology, ensuring consistent quality and competitive factory-direct pricing for every project.` },
+                { icon: '📐', title: 'Custom Solutions & Engineering', desc: `Our engineering team provides custom PUF and PIR panel designs, thickness calculations, and project-specific solutions tailored to ${location.name}'s climate and industry requirements.` },
+                { icon: '✅', title: 'ISO-Certified Quality Assurance', desc: 'ISO 9001:2015 certified processes with rigorous testing for density, thermal conductivity, and fire performance on every batch of PUF, PIR, and sandwich panels.' },
+                { icon: '🇮🇳', title: `Leading PUF Panel Manufacturer in ${location.state || 'India'}`, desc: `From ${location.name} to any corner of India, PHOENIXX is a leading PUF panel manufacturer in ${location.state || 'India'} with proven logistics and installation capabilities across the region.` },
+                { icon: '🔧', title: 'PUF Panel Installation Support', desc: `Complete turnkey PUF panel installation services in ${location.name} \u2014 from design and supply to erection, sealing, and finishing, including accessories, flashings, and technical support.` },
+                { icon: '⏱️', title: 'Fast Delivery & Turnaround', desc: `Quick production and delivery schedules to ${location.name} with project-specific timelines. Same-day dispatch available for standard specifications to meet your construction milestones.` },
               ].map((item, idx) => (
                 <div key={idx} className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                   <span className="text-3xl">{item.icon}</span>
@@ -505,24 +579,25 @@ export default async function ProductLocationPage({ params }: { params: Promise<
           </div>
         </section>
         
-        {/* Local Expertise Section - Unique Content */}
+        {/* Local Expertise Section */}
         <section className="section-padding bg-white border-t border-slate-100">
           <div className="container-custom">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">
-                PHOENIXX Local Expertise in {location.name}
+                PHOENIXX PUF Panel Expertise in {location.name}
               </h2>
               
               <div className="grid gap-8 md:grid-cols-2">
                 <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border border-blue-100">
                   <div className="flex items-center gap-3 mb-4">
                     <span className="text-3xl">🏗️</span>
-                    <h3 className="text-xl font-bold text-slate-900">Projects Delivered</h3>
+                    <h3 className="text-xl font-bold text-slate-900">PUF Panel Projects Delivered</h3>
                   </div>
                   <p className="text-slate-700 leading-relaxed">
-                    PHOENIXX has successfully delivered {product.shortName} installation projects across {location.name}&apos;s 
-                    {location.industrialZones && location.industrialZones.length > 0 ? ` key industrial areas including ${location.industrialZones[0]}` : ' industrial sectors'}. 
-                    Our local presence ensures quick response times, faster delivery, and better post-installation support.
+                    PHOENIXX has successfully delivered PUF panel installation projects across {location.name}&apos;s
+                    {location.industrialZones && location.industrialZones.length > 0 ? ` key industrial areas including ${location.industrialZones[0]}` : ' industrial sectors'}.
+                    Our local presence as a PUF panel supplier in {location.name} ensures quick response times, faster delivery,
+                    and better post-installation support.
                   </p>
                   {location.type === 'city' && (
                     <p className="text-slate-600 mt-3 text-sm">
@@ -537,9 +612,10 @@ export default async function ProductLocationPage({ params }: { params: Promise<
                     <h3 className="text-xl font-bold text-slate-900">Industry Understanding</h3>
                   </div>
                   <p className="text-slate-700 leading-relaxed">
-                    We understand {location.name}&apos;s unique industrial landscape. With experience serving 
-                    {location.industries.slice(0, 3).join(', ')} sectors in this region, we provide solutions tailored to 
-                    local regulatory requirements, climate conditions, and industry-specific needs.
+                    We understand {location.name}&apos;s unique industrial landscape. With experience serving
+                    {location.industries.slice(0, 3).join(', ')} sectors in this region, PHOENIXX provides PUF panels,
+                    PIR panels, and sandwich panel solutions tailored to local regulatory requirements, climate conditions,
+                    and industry-specific needs.
                   </p>
                   {location.regulations && location.regulations.length > 0 && (
                     <p className="text-slate-600 mt-3 text-sm">
@@ -551,30 +627,30 @@ export default async function ProductLocationPage({ params }: { params: Promise<
               
               {/* Local Advantages */}
               <div className="mt-8 bg-slate-50 rounded-xl p-6">
-                <h3 className="font-bold text-lg text-slate-900 mb-4">Why Choose Local {location.name} Manufacturer?</h3>
+                <h3 className="font-bold text-lg text-slate-900 mb-4">Why Choose a Local PUF Panel Manufacturer in {location.name}?</h3>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="flex items-start gap-3">
                     <span className="text-green-500 mt-1">✓</span>
                     <span className="text-slate-700">
-                      <strong>Faster Delivery:</strong> Proximity means quicker turnaround on orders and emergencies
+                      <strong>Faster Delivery:</strong> Proximity means quicker turnaround on PUF panel orders and emergencies
                     </span>
                   </div>
                   <div className="flex items-start gap-3">
                     <span className="text-green-500 mt-1">✓</span>
                     <span className="text-slate-700">
-                      <strong>Lower Logistics Cost:</strong> Reduced freight charges compared to distant suppliers
+                      <strong>Lower Logistics Cost:</strong> Reduced freight charges for sandwich panel shipments to {location.name}
                     </span>
                   </div>
                   <div className="flex items-start gap-3">
                     <span className="text-green-500 mt-1">✓</span>
                     <span className="text-slate-700">
-                      <strong>On-Site Support:</strong> Our engineers can visit your {location.name} site for consultation
+                      <strong>On-Site Support:</strong> Our PUF panel installation engineers can visit your {location.name} site
                     </span>
                   </div>
                   <div className="flex items-start gap-3">
                     <span className="text-green-500 mt-1">✓</span>
                     <span className="text-slate-700">
-                      <strong>Local References:</strong> Speak with our {location.name} clients about their experience
+                      <strong>Local References:</strong> Speak with our {location.name} clients about their PUF panel projects
                     </span>
                   </div>
                 </div>
@@ -587,7 +663,7 @@ export default async function ProductLocationPage({ params }: { params: Promise<
         <section className="section-padding bg-slate-50">
           <div className="container-custom">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">
-              Technical Specifications of {product.name}
+              Technical Specifications &ndash; PUF &amp; Insulated Sandwich Panels
             </h2>
             
             <div className="overflow-x-auto">
@@ -637,7 +713,7 @@ export default async function ProductLocationPage({ params }: { params: Promise<
         <section className="section-padding bg-slate-50">
           <div className="container-custom">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">
-              Areas We Serve {location.type === 'city' ? 'Near' : 'in'} {location.name}
+              PUF Panel Supply &amp; Installation Areas {location.type === 'city' ? 'Near' : 'in'} {location.name}
             </h2>
             
             {/* Child locations or nearby areas */}
@@ -702,7 +778,7 @@ export default async function ProductLocationPage({ params }: { params: Promise<
         <section className="section-padding bg-white">
           <div className="container-custom">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">
-              Frequently Asked Questions – {product.name} in {location.name}
+              Frequently Asked Questions &ndash; PUF Panels in {location.name}
             </h2>
             
             <div className="max-w-4xl space-y-4">
@@ -727,11 +803,12 @@ export default async function ProductLocationPage({ params }: { params: Promise<
         <section className={`py-20 bg-gradient-to-r ${product.gradient}`}>
           <div className="container-custom text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Get a Quote for {product.name} in {location.name}
+              Get Best PUF Panel Price in {location.name} &ndash; Request a Free Quote
             </h2>
             <p className="text-white/90 max-w-2xl mx-auto mb-8">
-              Ready to discuss your project requirements? Our technical team is here to help you 
-              choose the right {product.shortName} specifications for your {location.name} project.
+              Looking for the best PUF panel, PIR panel, or sandwich panel price in {location.name}? Our technical team
+              is ready to help you choose the right insulated panel specifications for your project &mdash; whether
+              it&apos;s cold storage construction, PUF panel installation, or a complete building envelope solution.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -782,7 +859,7 @@ export default async function ProductLocationPage({ params }: { params: Promise<
         <section className="section-padding bg-slate-50">
           <div className="container-custom">
             <h2 className="text-2xl font-bold text-slate-900 mb-6">
-              Other PHOENIXX Products Available in {location.name}
+              Other PUF &amp; Insulated Panel Products in {location.name}
             </h2>
             
             <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
@@ -911,40 +988,64 @@ export default async function ProductLocationPage({ params }: { params: Promise<
   );
 }
 
-// Generate location-specific FAQs
+function generateIntroContent(product: ProductData, location: LocationData): string {
+  const topIndustries = location.industries.slice(0, 3).join(', ');
+  const zone = location.industrialZones?.[0] || '';
+  const stateOrRegion = location.state || (location.type === 'state' ? location.name : 'India');
+  const thermalValue = product.specifications.thermalConductivity;
+
+  if (location.type === 'city') {
+    return `PHOENIXX SMARTBUILD is a leading PUF panel manufacturer in ${location.name}, ${stateOrRegion}, providing premium insulated sandwich panels with ${thermalValue} thermal conductivity for industrial and commercial applications. As a trusted PUF panel supplier in ${location.name}, we deliver PUF insulated roofing panels, PUF insulated wall panels, and advanced PIR panels to sectors including ${topIndustries}.${zone ? ` We serve key industrial areas such as ${zone} and beyond.` : ''} Our services include professional PUF panel installation and turnkey cold storage construction for businesses that demand energy efficiency, thermal insulation, and fire resistance. Whether you need sandwich panels for a new warehouse or insulated panels for a cleanroom, PHOENIXX delivers quality, speed, and reliability across ${location.name}.`;
+  }
+
+  if (location.type === 'state') {
+    return `PHOENIXX SMARTBUILD is a top-rated PUF panel manufacturer and PUF panel supplier across ${location.name}, offering a complete range of sandwich panels, PIR panels, and insulated sandwich panels with thermal conductivity as low as ${thermalValue}. Industries across ${location.name} \u2014 including ${topIndustries} \u2014 rely on our PUF insulated roofing panels and wall panels for thermal insulation, fire safety, and energy efficiency. We provide end-to-end PUF panel installation and cold storage construction services throughout the state, backed by ISO-certified manufacturing and a dedicated engineering team. From warehouses and factories to cleanrooms and cold chain facilities, PHOENIXX is ${location.name}\u2019s preferred partner for high-performance building envelope solutions.`;
+  }
+
+  return `PHOENIXX SMARTBUILD is a nationally recognised PUF panel manufacturer and PUF panel supplier in ${location.name}, delivering premium sandwich panels, PIR panels, and insulated sandwich panels with industry-leading ${thermalValue} thermal conductivity to industries spanning ${topIndustries}, and more. Our product range includes PUF insulated roofing panels and PUF insulated wall panels engineered for superior thermal insulation, fire resistance, and durability. With comprehensive PUF panel installation and cold storage construction services, PHOENIXX serves warehouses, factories, cleanrooms, and industrial facilities across the country. Choose PHOENIXX for quality manufacturing, fast delivery, and turnkey execution.`;
+}
+
 function generateFAQs(product: ProductData, location: LocationData) {
   return [
     {
-      question: `What is the price of ${product.name} in ${location.name}?`,
-      answer: `${product.name} prices in ${location.name} vary based on thickness (${product.specifications.thickness.slice(0, 3).join(', ')}, etc.), skin material, coating type, and order quantity. PHOENIXX SMARTBUILD offers competitive pricing with typical ranges from ₹80-180/sq.ft for wall panels and ₹100-220/sq.ft for roof panels. Contact us for a project-specific quotation.`,
+      question: `What is the PUF panel price in ${location.name}?`,
+      answer: `PUF panel prices in ${location.name} vary based on thickness (${product.specifications.thickness.slice(0, 3).join(', ')}, etc.), skin material, coating type, and order quantity. PHOENIXX SMARTBUILD offers competitive factory-direct pricing with typical ranges from \u20B980-180/sq.ft for PUF insulated wall panels and \u20B9100-220/sq.ft for PUF insulated roofing panels. Contact us for a project-specific quotation for ${location.name}.`,
     },
     {
-      question: `What is the difference between ${product.name} and other insulated panels?`,
-      answer: `${product.name} offers ${product.specifications.thermalConductivity} thermal conductivity and ${product.specifications.fireRating} fire rating. Compared to other options: PUF offers best thermal value, PIR provides superior fire safety, Rockwool is fully non-combustible (A1), and FM Approved panels meet insurance requirements. PHOENIXX can recommend the best option for your ${location.name} project.`,
+      question: `What is the difference between PUF panel and PIR panel?`,
+      answer: `PUF (Polyurethane Foam) panels offer excellent thermal insulation at 0.024 W/mK with B2/B3 fire rating, making them cost-effective for most applications. PIR (Polyisocyanurate) panels provide superior fire performance at B-s1,d0 with even better thermal conductivity of 0.022 W/mK and minimal smoke emission. PIR panels are preferred for fire-sensitive projects in ${location.name} such as pharmaceutical plants, data centres, and high-value warehouses. PHOENIXX manufactures both PUF and PIR panels.`,
     },
     {
-      question: `Are ${product.name}s fire rated?`,
-      answer: `Yes, PHOENIXX ${product.name}s meet ${product.specifications.fireRating} fire rating requirements. For projects requiring higher fire safety, we offer PIR panels (B-s1,d0) and Rockwool panels (A1/A2 non-combustible). Our technical team can advise on the appropriate fire rating for your ${location.name} facility.`,
+      question: `Are PUF and PIR panels fire rated?`,
+      answer: `Yes, PHOENIXX PUF panels meet B2/B3 (self-extinguishing) fire rating requirements. PIR panels offer enhanced B-s1,d0 fire rating with very low smoke and no burning droplets. For maximum fire safety, we also offer Rockwool panels with A1/A2 non-combustible rating. Our technical team can advise on the appropriate fire-rated panel for your ${location.name} facility.`,
     },
     {
-      question: `What is the delivery time for ${product.name} in ${location.name}?`,
-      answer: `Standard delivery time for ${product.name} in ${location.name} is 7-15 working days from order confirmation, depending on panel specifications and quantity. Expedited delivery is available for urgent projects. PHOENIXX maintains ready stock of common specifications for faster turnaround.`,
+      question: `What is the delivery time for PUF panels in ${location.name}?`,
+      answer: `Standard delivery time for PUF panels and sandwich panels in ${location.name} is 7-15 working days from order confirmation, depending on panel specifications and quantity. Expedited delivery is available for urgent projects. PHOENIXX maintains ready stock of common PUF and PIR panel specifications for faster turnaround to ${location.name}.`,
     },
     {
-      question: `Does PHOENIXX provide installation services in ${location.name}?`,
-      answer: `Yes, PHOENIXX SMARTBUILD provides complete turnkey solutions including supply and installation of ${product.name}s in ${location.name}. Our trained installation teams ensure proper panel fitting, sealing, and finishing as per manufacturer guidelines. We also offer installation supervision and training for contractor teams.`,
+      question: `Do you provide PUF panel installation in ${location.name}?`,
+      answer: `Yes, PHOENIXX SMARTBUILD provides professional PUF panel installation services in ${location.name}. Our trained installation crews handle complete panel erection, sealing, flashing, and finishing as per IS 14925:2015 standards. We also offer installation supervision and training for contractor teams working on your ${location.name} project.`,
     },
     {
-      question: `Which industries use ${product.name} most in ${location.name}?`,
-      answer: `In ${location.name}, ${product.name}s are widely used in ${location.industries.slice(0, 4).join(', ')} industries. Key applications include cold storage facilities, pharmaceutical cleanrooms, food processing plants, warehouses, and industrial manufacturing units requiring temperature control and energy efficiency.`,
+      question: `Which industries use PUF panels most in ${location.name}?`,
+      answer: `In ${location.name}, PUF panels and insulated sandwich panels are widely used in ${location.industries.slice(0, 4).join(', ')} industries. Key applications include cold storage facilities, pharmaceutical cleanrooms, food processing plants, warehouses, factories, and industrial buildings requiring thermal insulation and energy efficiency.`,
     },
     {
-      question: `What thickness of ${product.name} do I need for my project?`,
-      answer: `${product.name} thickness depends on your application: 30-50mm for standard wall partitions, 50-80mm for temperature-controlled environments, 80-120mm for cold storage (0°C to -25°C), and 120-150mm for deep freeze applications. PHOENIXX engineers provide free thickness calculations based on your ${location.name} project requirements.`,
+      question: `What thickness of PUF panel do I need for my project?`,
+      answer: `PUF panel thickness depends on your application: 30-50mm for standard wall partitions, 50-80mm for temperature-controlled environments, 80-120mm for cold storage (0\u00B0C to -25\u00B0C), and 120-150mm for deep freeze applications. PHOENIXX engineers provide free thickness calculations based on your ${location.name} project requirements.`,
     },
     {
-      question: `Can ${product.name} be used for both walls and roofs?`,
-      answer: `PHOENIXX offers specialized panels for different applications. ${product.slug.includes('roof') ? 'Roofing panels have trapezoidal profiles for drainage and spanning capability.' : 'Wall panels have flat or micro-ribbed profiles for aesthetics.'} We recommend using purpose-designed panels for optimal performance. Contact us for guidance on your ${location.name} project.`,
+      question: `What is a sandwich panel used for?`,
+      answer: `Sandwich panels (also called insulated sandwich panels) are composite building materials with an insulating core between two metal skins. They are used for walls, roofs, ceilings, and partitions in warehouses, factories, cold storage, cleanrooms, food processing plants, and commercial buildings. In ${location.name}, PHOENIXX sandwich panels are widely used for rapid construction with built-in thermal insulation.`,
+    },
+    {
+      question: `Do you construct cold storage in ${location.name}?`,
+      answer: `Yes, PHOENIXX provides complete cold storage construction services in ${location.name} \u2014 from design consultation and panel supply to installation and commissioning. Our insulated sandwich panels maintain temperatures from +15\u00B0C to -40\u00B0C for agriculture, dairy, pharma cold chain, frozen food, and logistics cold storage facilities across ${location.name} and ${location.state || 'India'}.`,
+    },
+    {
+      question: `Can PUF panels be used for both walls and roofs?`,
+      answer: `Yes, PHOENIXX offers specialised PUF insulated roofing panels with trapezoidal profiles for drainage and spanning, and PUF insulated wall panels with flat or micro-ribbed profiles for aesthetics. We recommend using purpose-designed panels for optimal performance. Contact us for guidance on your ${location.name} project.`,
     },
   ];
 }

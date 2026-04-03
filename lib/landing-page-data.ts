@@ -1029,14 +1029,12 @@ export function getLocation(slug: string): LocationData | undefined {
   return locations[slug];
 }
 
-// Generate page title
-export function generatePageTitle(product: ProductData, location: LocationData): string {
-  return `${product.name} Manufacturer & Supplier in ${location.name} | PHOENIXX SMARTBUILD`;
+export function generatePageTitle(_product: ProductData, location: LocationData): string {
+  return `PUF Panel Manufacturer in ${location.name} | PIR, Sandwich & Insulated Panels`;
 }
 
-// Generate meta description
-export function generateMetaDescription(product: ProductData, location: LocationData): string {
-  return `Leading ${product.name} manufacturer in ${location.name}. PHOENIXX SMARTBUILD offers premium insulated panels with ${product.specifications.fireRating} fire rating, ${product.specifications.thermalConductivity} thermal conductivity. Get quote now!`;
+export function generateMetaDescription(_product: ProductData, location: LocationData): string {
+  return `Top PUF & PIR panel manufacturer in ${location.name}. Sandwich panels, insulated roofing & wall panels, cold storage & PUF panel installation. Enquire now.`;
 }
 
 // Get parent location

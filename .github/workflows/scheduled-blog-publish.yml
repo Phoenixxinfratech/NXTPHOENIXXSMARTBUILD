@@ -1,0 +1,33 @@
+name: Scheduled Blog Publisher
+
+on:
+  schedule:
+    # Runs at 5:30 AM IST (00:00 UTC) on Monday, Wednesday, Friday
+    - cron: '0 0 * * 1,3,5'
+  workflow_dispatch:
+    # Allow manual trigger from GitHub Actions tab
+
+jobs:
+  trigger-rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if blogs are due
+        id: check
+        run: |
+          TODAY=$(date -u +%Y-%m-%d)
+          echo "Today is $TODAY"
+          echo "today=$TODAY" >> $GITHUB_OUTPUT
+
+      - name: Trigger Netlify Build
+        run: |
+          echo "Triggering Netlify rebuild to publish scheduled blogs..."
+          curl -X POST -d '{}' "${{ secrets.NETLIFY_BUILD_HOOK }}"
+          echo "Build triggered successfully at $(date -u)"
+
+      - name: Log publish event
+        run: |
+          echo "=== Blog Autopilot Log ==="
+          echo "Date: $(date -u +%Y-%m-%d)"
+          echo "Day: $(date -u +%A)"
+          echo "Netlify rebuild triggered to publish any blogs scheduled for today."
+          echo "========================="

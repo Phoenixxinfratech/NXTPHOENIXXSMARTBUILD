@@ -23,9 +23,9 @@ const homepageClients = [
 ];
 
 export const metadata: Metadata = {
-  title: 'PUF Panels & Industrial Infrastructure | PHOENIXX',
+  title: 'PUF Panel Manufacturer & Supplier India | Roofing, Wall & Sandwich Panels',
   description:
-    'Leading manufacturer of PUF panels, cleanroom systems, and industrial doors in India. ISO certified. Get a free quote for your project today.',
+    'Phoenixx SmartBuild is a trusted PUF panel manufacturer in India delivering insulated roofing panels, wall panels & sandwich panels for industrial and commercial projects.',
 };
 
 // Products data - Using high-quality images for better display
@@ -256,9 +256,9 @@ export default function HomePage() {
 
             {/* Main Heading */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1]">
-              Smart, Sustainable Infrastructure{' '}
+              PUF Panel, Insulated Roofing &amp;{' '}
               <span className="bg-gradient-to-r from-blue-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent">
-                Built for Performance
+                Wall Panel Manufacturer in India
               </span>
             </h1>
 
