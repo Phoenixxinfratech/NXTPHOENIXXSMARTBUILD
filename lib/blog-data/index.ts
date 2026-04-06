@@ -6,6 +6,9 @@ import { comparisonBlogs } from './comparison-blogs';
 import { problemSolvingBlogs } from './problem-solving-blogs';
 import { locationBlogs } from './location-blogs';
 import { authorityBlogs } from './authority-blogs';
+import { serpBlogsPart1 } from './serp-blogs-part1';
+import { serpBlogsPart2 } from './serp-blogs-part2';
+import { serpBlogsPart3 } from './serp-blogs-part3';
 
 export type { BlogPost, BlogListing };
 
@@ -75,6 +78,9 @@ const allBlogsRaw: Record<string, BlogPost> = {
   ...problemSolvingBlogs,
   ...locationBlogs,
   ...authorityBlogs,
+  ...serpBlogsPart1,
+  ...serpBlogsPart2,
+  ...serpBlogsPart3,
 };
 
 // Apply scheduled dates to blog records
