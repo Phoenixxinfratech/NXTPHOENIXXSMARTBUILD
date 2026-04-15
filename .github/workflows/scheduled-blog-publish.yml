@@ -10,18 +10,36 @@ on:
 jobs:
   trigger-rebuild:
     runs-on: ubuntu-latest
+    env:
+      NETLIFY_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
     steps:
       - name: Check if blogs are due
         id: check
         run: |
           TODAY=$(date -u +%Y-%m-%d)
-          echo "Today is $TODAY"
+          DAY=$(date -u +%A)
+          echo "Today is $TODAY ($DAY)"
           echo "today=$TODAY" >> $GITHUB_OUTPUT
+
+      - name: Validate build hook secret
+        run: |
+          HOOK_URL=$(echo "$NETLIFY_HOOK" | tr -d '[:space:]')
+          if [ -z "$HOOK_URL" ]; then
+            echo "::error::NETLIFY_BUILD_HOOK secret is not set. Go to repo Settings > Secrets > Actions and add it."
+            exit 1
+          fi
+          echo "Build hook secret is configured."
 
       - name: Trigger Netlify Build
         run: |
+          HOOK_URL=$(echo "$NETLIFY_HOOK" | tr -d '[:space:]')
           echo "Triggering Netlify rebuild to publish scheduled blogs..."
-          curl -X POST -d '{}' "${{ secrets.NETLIFY_BUILD_HOOK }}"
+          HTTP_CODE=$(curl -sf -o /dev/null -w "%{http_code}" -X POST -d '{}' "$HOOK_URL")
+          echo "Netlify responded with HTTP $HTTP_CODE"
+          if [ "$HTTP_CODE" -lt 200 ] || [ "$HTTP_CODE" -ge 300 ]; then
+            echo "::error::Netlify build hook returned HTTP $HTTP_CODE. Verify the URL is correct."
+            exit 1
+          fi
           echo "Build triggered successfully at $(date -u)"
 
       - name: Log publish event
