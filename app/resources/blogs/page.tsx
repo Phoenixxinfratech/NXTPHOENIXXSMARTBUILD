@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { getBlogListings } from '@/lib/blog-data';
@@ -83,10 +84,16 @@ export default function BlogsPage() {
                     idx === 0 ? 'lg:col-span-2 lg:row-span-2' : ''
                   }`}
                 >
-                  <div className={`bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center ${
+                  <div className={`relative overflow-hidden bg-slate-100 ${
                     idx === 0 ? 'h-64 lg:h-80' : 'h-48'
                   }`}>
-                    <span className={`opacity-20 ${idx === 0 ? 'text-8xl' : 'text-5xl'}`}>📝</span>
+                    <Image
+                      src={post.coverImage || '/images/products/sandwich-panels/puf-panel/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp'}
+                      alt={post.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      sizes={idx === 0 ? '(max-width: 1024px) 100vw, 66vw' : '(max-width: 1024px) 100vw, 33vw'}
+                    />
                   </div>
                   <div className="p-6">
                     <div className="flex items-center gap-3 mb-3">
@@ -123,26 +130,33 @@ export default function BlogsPage() {
             <h2 className="text-2xl font-bold text-slate-900 mb-8">Recent Articles</h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               {recentPosts.map((post) => (
-                <article
-                  key={post.slug}
-                  className="group rounded-xl border border-slate-200 bg-white overflow-hidden hover:border-blue-200 hover:shadow-md transition-all"
-                >
-                  <div className="h-40 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center">
-                    <span className="text-4xl opacity-20">📝</span>
-                  </div>
-                  <div className="p-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 text-xs">
-                        {post.category}
-                      </span>
-                      <span className="text-xs text-slate-400">{post.readTime}</span>
+                <Link key={post.slug} href={`/resources/blogs/${post.slug}`}>
+                  <article
+                    className="group rounded-xl border border-slate-200 bg-white overflow-hidden hover:border-blue-200 hover:shadow-md transition-all h-full"
+                  >
+                    <div className="relative h-40 overflow-hidden bg-slate-100">
+                      <Image
+                        src={post.coverImage || '/images/products/sandwich-panels/puf-panel/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp'}
+                        alt={post.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      />
                     </div>
-                    <h3 className="font-bold text-slate-900 group-hover:text-blue-600 transition-colors line-clamp-2">
-                      {post.title}
-                    </h3>
-                    <p className="mt-2 text-sm text-slate-500">{post.date}</p>
-                  </div>
-                </article>
+                    <div className="p-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 text-xs">
+                          {post.category}
+                        </span>
+                        <span className="text-xs text-slate-400">{post.readTime}</span>
+                      </div>
+                      <h3 className="font-bold text-slate-900 group-hover:text-blue-600 transition-colors line-clamp-2">
+                        {post.title}
+                      </h3>
+                      <p className="mt-2 text-sm text-slate-500">{post.date}</p>
+                    </div>
+                  </article>
+                </Link>
               ))}
             </div>
           </div>

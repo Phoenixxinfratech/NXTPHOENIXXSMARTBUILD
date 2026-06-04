@@ -371,7 +371,7 @@ const commercialFAQs: FAQ[] = [
   {
     id: 'price-1',
     question: 'How do I request a quotation for PUF panels and what information is needed?',
-    answer: 'Submit requirements via website form, email (projects@phoenixxsmartbuild.com), or call (+91 97277 00442). Provide: project type, area (sq.m/sq.ft), panel type, thickness, specific requirements (fire rating, color), location, and timeline. Quotations typically delivered within 24-48 hours.',
+    answer: 'Submit requirements via website form, email (projects@phoenixxsmartbuild.com), or call (+91 88665 56879). Provide: project type, area (sq.m/sq.ft), panel type, thickness, specific requirements (fire rating, color), location, and timeline. Quotations typically delivered within 24-48 hours.',
     linkText: 'Request quote now',
     linkHref: '/get-a-quote',
   },
@@ -646,7 +646,7 @@ export default function FAQPage() {
                 </Link>
               </div>
               <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-slate-400">
-                <a href="tel:+919727700442" className="hover:text-white transition-colors">+91 97277 00442</a>
+                <a href="tel:+918866556879" className="hover:text-white transition-colors">+91 88665 56879</a>
                 <a href="mailto:projects@phoenixxsmartbuild.com" className="hover:text-white transition-colors">projects@phoenixxsmartbuild.com</a>
               </div>
             </div>

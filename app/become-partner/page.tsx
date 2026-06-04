@@ -315,7 +315,7 @@ export default function BecomePartnerPage() {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+919727700442"
+                href="tel:+918866556879"
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-8 py-4 font-semibold text-emerald-600 shadow-lg hover:shadow-xl transition-all"
               >
                 📞 Call Us

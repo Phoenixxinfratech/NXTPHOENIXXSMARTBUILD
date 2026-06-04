@@ -40,7 +40,7 @@ export default function NashikPage() {
               <p className="mt-6 text-xl text-slate-300 max-w-3xl">PHOENIXX SmartBuild delivers premium PUF panels to Nashik&apos;s diverse industrial landscape. From wine cellars to automotive plants, we serve Maharashtra&apos;s wine capital with quality insulation solutions.</p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link href="/get-a-quote" className="rounded-xl bg-gradient-to-r from-purple-500 to-fuchsia-600 px-8 py-4 font-semibold text-white shadow-lg hover:shadow-xl transition-all">Get Nashik Quote</Link>
-                <a href="tel:+919328915237" className="rounded-xl border-2 border-white/20 bg-white/5 px-8 py-4 font-semibold text-white backdrop-blur hover:bg-white/10 transition-all">📞 Call: +91 93289 15237</a>
+                <a href="tel:+918866556879" className="rounded-xl border-2 border-white/20 bg-white/5 px-8 py-4 font-semibold text-white backdrop-blur hover:bg-white/10 transition-all">📞 Call: +91 88665 56879</a>
               </div>
             </div>
           </div>
@@ -134,7 +134,7 @@ export default function NashikPage() {
             <p className="text-xl text-purple-100 mb-10 max-w-2xl mx-auto">Quality panels for wine country&apos;s diverse industries.</p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/get-a-quote" className="rounded-xl bg-white px-8 py-4 font-semibold text-purple-700 shadow-lg hover:shadow-xl transition-all">Request Nashik Quote</Link>
-              <a href="https://wa.me/919328915237?text=Hi%20PHOENIXX,%20I%20need%20PUF%20panels%20in%20Nashik" target="_blank" rel="noopener noreferrer" className="rounded-xl border-2 border-white px-8 py-4 font-semibold text-white hover:bg-white/10 transition-all">💬 WhatsApp Enquiry</a>
+              <a href="https://wa.me/918866556879?text=Hi%20PHOENIXX,%20I%20need%20PUF%20panels%20in%20Nashik" target="_blank" rel="noopener noreferrer" className="rounded-xl border-2 border-white px-8 py-4 font-semibold text-white hover:bg-white/10 transition-all">💬 WhatsApp Enquiry</a>
             </div>
           </div>
         </section>

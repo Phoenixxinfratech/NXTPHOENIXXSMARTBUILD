@@ -304,10 +304,10 @@ export default async function ProductLocationPage({ params }: { params: Promise<
                   </svg>
                 </Link>
                 <a
-                  href="tel:+919727700442"
+                  href="tel:+918866556879"
                   className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white px-8 py-4 font-semibold text-white hover:bg-white/10 transition-all"
                 >
-                  📞 Call: +91 97277 00442
+                  📞 Call: +91 88665 56879
                 </a>
               </div>
             </div>
@@ -819,7 +819,7 @@ export default async function ProductLocationPage({ params }: { params: Promise<
                 Request Free Quote
               </Link>
               <a
-                href="https://wa.me/919727700442"
+                href="https://wa.me/918866556879"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white px-8 py-4 font-semibold text-white hover:bg-white/10 transition-all"
@@ -827,7 +827,7 @@ export default async function ProductLocationPage({ params }: { params: Promise<
                 💬 WhatsApp Us
               </a>
               <a
-                href="tel:+919727700442"
+                href="tel:+918866556879"
                 className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white px-8 py-4 font-semibold text-white hover:bg-white/10 transition-all"
               >
                 📞 Talk to an Engineer
@@ -836,8 +836,8 @@ export default async function ProductLocationPage({ params }: { params: Promise<
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center text-white/80 text-sm">
               <span>📧 sales@phoenixxsmartbuild.com</span>
-              <span>📞 +91 97277 00442</span>
-              <span>📞 +91 93289 15237</span>
+              <span>📞 +91 88665 56879</span>
+              <span>📞 +91 88665 56879</span>
             </div>
             
             {/* Link to Shop Page for Pricing */}

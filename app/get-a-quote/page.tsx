@@ -377,14 +377,14 @@ export default function GetAQuotePage() {
                   <h3 className="text-lg font-bold mb-4">Need Immediate Help?</h3>
                   <div className="space-y-4">
                     <a
-                      href="tel:+919727700442"
+                      href="tel:+918866556879"
                       className="flex items-center gap-3 text-white/90 hover:text-white transition-colors"
                     >
                       <span className="text-xl">📞</span>
-                      <span>+91 97277 00442</span>
+                      <span>+91 88665 56879</span>
                     </a>
                     <a
-                      href="https://wa.me/919727700442"
+                      href="https://wa.me/918866556879"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-3 text-white/90 hover:text-white transition-colors"

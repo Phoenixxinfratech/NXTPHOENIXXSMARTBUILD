@@ -14,7 +14,7 @@ import { useEffect } from 'react';
 
 // Analytics IDs - use env variable for flexibility, fallback to default
 const GA4_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-L19YN99F03';
-const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || '';
+const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || '1576698293651690';
 
 // Page category mapping for better GA4 reports
 const getPageCategory = (pathname: string): string => {
@@ -203,7 +203,7 @@ export function MetaPixel() {
 
   return (
     <>
-      <Script id="meta-pixel" strategy="lazyOnload">
+      <Script id="meta-pixel" strategy="afterInteractive">
         {`
           !function(f,b,e,v,n,t,s)
           {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -232,6 +232,21 @@ export function MetaPixel() {
 }
 
 /**
+ * Meta Pixel route-change tracker for SPA navigation.
+ * Fires fbq('track', 'PageView') on every client-side route change.
+ */
+export function MetaPixelPageTracker() {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || !window.fbq) return;
+    window.fbq('track', 'PageView');
+  }, [pathname]);
+
+  return null;
+}
+
+/**
  * Combined Analytics Provider
  */
 export function AnalyticsProvider() {
@@ -240,6 +255,7 @@ export function AnalyticsProvider() {
       <GoogleAnalytics />
       <MetaPixel />
       <PageViewTracker />
+      <MetaPixelPageTracker />
     </>
   );
 }

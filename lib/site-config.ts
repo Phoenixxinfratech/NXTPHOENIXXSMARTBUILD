@@ -40,8 +40,8 @@ export const siteConfig = {
   },
   contact: {
     // Primary contact
-    phone: '+91 93289 15237',
-    phoneAlt: '+91 9727700442',
+    phone: '+91 88665 56879',
+    phoneAlt: '+91 88665 56879',
     // Official email IDs
     email: 'info@phoenixxsmartbuild.com',
     sales: 'sales@phoenixxsmartbuild.com',
@@ -58,7 +58,7 @@ export const siteConfig = {
     foundingDate: '2013',
   },
   // WhatsApp number for floating button (use without + for wa.me link)
-  whatsapp: '919328915237',
+  whatsapp: '918866556879',
 } as const;
 
 export type SiteConfig = typeof siteConfig;

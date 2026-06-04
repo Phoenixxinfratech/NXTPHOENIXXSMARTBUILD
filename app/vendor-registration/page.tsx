@@ -469,10 +469,10 @@ export default function VendorRegistrationPage() {
                 📧 procurement@phoenixxsmartbuild.com
               </a>
               <a
-                href="tel:+919727700442"
+                href="tel:+918866556879"
                 className="inline-flex items-center justify-center gap-2 text-amber-400 hover:text-amber-300 transition-colors"
               >
-                📞 +91 97277 00442
+                📞 +91 88665 56879
               </a>
             </div>
           </div>

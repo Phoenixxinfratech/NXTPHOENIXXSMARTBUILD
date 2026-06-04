@@ -255,9 +255,12 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
     return { title: 'Project Not Found' };
   }
 
+  const fullDesc = `${project.title} – ${project.scope} in ${project.location}. ${project.description} Built by PHOENIXX SmartBuild.`;
+  const metaDesc = fullDesc.length > 160 ? fullDesc.slice(0, 157) + '...' : fullDesc;
+
   return {
     title: `${project.title} | Project Gallery`,
-    description: project.description,
+    description: metaDesc,
     alternates: { canonical: `https://phoenixxsmartbuild.com/resources/project-gallery/${slug}` },
   };
 }

@@ -1009,13 +1009,13 @@ export default function PufPanelVsRockwoolPanelPage() {
                 Get Expert Panel Recommendation
               </Link>
               <a
-                href="tel:+919328915237"
+                href="tel:+918866556879"
                 className="rounded-xl border-2 border-white/30 px-8 py-4 font-semibold text-white hover:bg-white/10 transition-all"
               >
-                Call: +91 93289 15237
+                Call: +91 88665 56879
               </a>
               <a
-                href="https://wa.me/919328915237?text=Hi%20PHOENIXX,%20I%20need%20help%20choosing%20between%20PUF%20and%20Rockwool%20panels"
+                href="https://wa.me/918866556879?text=Hi%20PHOENIXX,%20I%20need%20help%20choosing%20between%20PUF%20and%20Rockwool%20panels"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-xl border-2 border-white/30 px-8 py-4 font-semibold text-white hover:bg-white/10 transition-all"
@@ -1026,7 +1026,7 @@ export default function PufPanelVsRockwoolPanelPage() {
             <div className="grid md:grid-cols-3 gap-6 max-w-2xl mx-auto text-sm text-slate-300">
               <div>
                 <div className="font-semibold text-white">Call Us</div>
-                <a href="tel:+919328915237" className="hover:text-white transition-colors">+91 93289 15237</a>
+                <a href="tel:+918866556879" className="hover:text-white transition-colors">+91 88665 56879</a>
               </div>
               <div>
                 <div className="font-semibold text-white">Email</div>

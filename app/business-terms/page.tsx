@@ -153,7 +153,7 @@ export default function BusinessTermsPage() {
               <p>For questions regarding these terms:</p>
               <ul>
                 <li><strong>Email:</strong> legal@phoenixxsmartbuild.com</li>
-                <li><strong>Phone:</strong> +91 97277 00442</li>
+                <li><strong>Phone:</strong> +91 88665 56879</li>
               </ul>
             </div>
           </div>

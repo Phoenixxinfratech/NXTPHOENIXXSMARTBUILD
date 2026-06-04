@@ -702,7 +702,7 @@ export default function SoundProofRoomBallMillPage() {
                   Request Free Noise Assessment & Quotation
                 </Link>
                 <a
-                  href="https://wa.me/919328915237"
+                  href="https://wa.me/918866556879"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-xl border-2 border-white px-8 py-4 font-semibold text-white hover:bg-white/10 transition-all"
@@ -710,10 +710,10 @@ export default function SoundProofRoomBallMillPage() {
                   Contact on WhatsApp
                 </a>
                 <a
-                  href="tel:+919328915237"
+                  href="tel:+918866556879"
                   className="rounded-xl border-2 border-white px-8 py-4 font-semibold text-white hover:bg-white/10 transition-all"
                 >
-                  Call: +91 93289 15237
+                  Call: +91 88665 56879
                 </a>
               </div>
               <p className="mt-8 text-emerald-200 text-sm">

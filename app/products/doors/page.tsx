@@ -362,7 +362,7 @@ export default function DoorsPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-white">Need Industrial Doors for Your Project?</h2>
             <p className="mt-4 text-orange-100 max-w-2xl mx-auto">Contact our team for technical consultation, custom specifications, or competitive quotations.</p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/919727700442" target="_blank" className="inline-flex items-center justify-center gap-2 rounded-xl bg-green-500 px-8 py-4 font-semibold text-white hover:bg-green-600">💬 WhatsApp Us</Link>
+              <Link href="https://wa.me/918866556879" target="_blank" className="inline-flex items-center justify-center gap-2 rounded-xl bg-green-500 px-8 py-4 font-semibold text-white hover:bg-green-600">💬 WhatsApp Us</Link>
               <Link href="/get-a-quote" className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-4 font-semibold text-slate-900 hover:shadow-xl">📩 Request Quote</Link>
               <Link href="/contact-us" className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white/30 px-8 py-4 font-semibold text-white hover:bg-white/10">Talk to Expert</Link>
             </div>

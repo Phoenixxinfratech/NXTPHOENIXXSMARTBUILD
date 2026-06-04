@@ -866,7 +866,7 @@ export default async function ShopProductPage({ params }: { params: Promise<{ pr
                     Request Final Quote
                   </Link>
                   <a
-                    href="https://wa.me/919727700442"
+                    href="https://wa.me/918866556879"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 inline-flex items-center justify-center gap-2 rounded-xl border-2 border-slate-200 px-6 py-4 font-semibold text-slate-700 hover:bg-slate-50 transition-all"
@@ -1044,10 +1044,10 @@ export default async function ShopProductPage({ params }: { params: Promise<{ pr
                 Request Quotation
               </Link>
               <a
-                href="tel:+919727700442"
+                href="tel:+918866556879"
                 className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white px-8 py-4 font-semibold text-white hover:bg-white/10 transition-all"
               >
-                📞 Call: +91 97277 00442
+                📞 Call: +91 88665 56879
               </a>
             </div>
           </div>

@@ -12,6 +12,7 @@ export interface BlogPost {
   relatedProducts: { name: string; href: string }[];
   relatedSolutions: { name: string; href: string }[];
   faqs?: { question: string; answer: string }[];
+  coverImage?: string;
 }
 
 export interface BlogListing {
@@ -22,4 +23,5 @@ export interface BlogListing {
   date: string;
   readTime: string;
   featured: boolean;
+  coverImage?: string;
 }

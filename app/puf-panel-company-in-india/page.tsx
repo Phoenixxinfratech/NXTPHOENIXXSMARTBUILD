@@ -36,7 +36,7 @@ const faqs = [
   },
   {
     question: 'How can I get a quote from PHOENIXX?',
-    answer: 'Request a quote by: visiting our website contact form, calling our sales team at +91 93289 15237, emailing sales@phoenixxsmartbuild.com, or using our WhatsApp support. Our team responds within 24 hours with detailed quotations.',
+    answer: 'Request a quote by: visiting our website contact form, calling our sales team at +91 88665 56879, emailing sales@phoenixxsmartbuild.com, or using our WhatsApp support. Our team responds within 24 hours with detailed quotations.',
   },
 ];
 
@@ -60,7 +60,7 @@ export default function PufPanelCompanyIndiaPage() {
     name: 'PHOENIXX SmartBuild',
     description: 'Leading PUF panel company in India providing insulated panel solutions for industrial and commercial buildings.',
     url: 'https://phoenixxsmartbuild.com',
-    telephone: '+91-93289-15237',
+    telephone: '+91-88665-56879',
     email: 'info@phoenixxsmartbuild.com',
     address: {
       '@type': 'PostalAddress',

@@ -70,6 +70,7 @@ const industriesData: Record<string, {
   title: string;
   tagline: string;
   description: string;
+  metaDescription?: string;
   longDescription: string;
   requirements: { title: string; description: string }[];
   solutions: { name: string; description: string }[];
@@ -100,6 +101,7 @@ const industriesData: Record<string, {
     title: 'Food & Beverage Processing',
     tagline: 'Hygienic Infrastructure for Food Safety',
     description: 'Food-grade facilities for processing, packaging, and storage.',
+    metaDescription: 'FSSAI-compliant food processing infrastructure by PHOENIXX SmartBuild. Hygienic PUF panel facilities for packaging, cold storage, and production.',
     longDescription: 'PHOENIXX provides hygienic infrastructure solutions for the food and beverage industry. Our facilities meet FSSAI standards and international food safety requirements, ensuring product integrity throughout the supply chain.',
     requirements: [
       { title: 'FSSAI Compliance', description: 'All facilities designed to meet Food Safety and Standards Authority requirements.' },
@@ -120,6 +122,7 @@ const industriesData: Record<string, {
     title: 'Dairy Industries',
     tagline: 'Processing & Cold Chain Solutions',
     description: 'Specialized infrastructure for dairy processing and storage.',
+    metaDescription: 'Dairy processing and cold chain infrastructure by PHOENIXX SmartBuild. HACCP-compliant insulated panels, cold rooms, and hygienic dairy plant facilities.',
     longDescription: 'PHOENIXX serves the dairy industry with specialized processing and cold chain infrastructure. From milk collection centers to processing plants and cold storage, our solutions maintain product quality and safety.',
     requirements: [
       { title: 'Temperature Control (+4°C)', description: 'Maintaining optimal temperatures for milk and dairy products.' },
@@ -160,6 +163,7 @@ const industriesData: Record<string, {
     title: 'Manufacturing & Engineering',
     tagline: 'Controlled Production Environments',
     description: 'Facilities for precision manufacturing with contamination control.',
+    metaDescription: 'Controlled production environments for precision manufacturing by PHOENIXX SmartBuild. Cleanrooms, ESD-safe flooring, and climate-managed facilities.',
     longDescription: 'PHOENIXX serves precision manufacturing with controlled environments for electronics, automotive, and aerospace industries. Our facilities provide particle control, ESD protection, and climate management.',
     requirements: [
       { title: 'Particle Control', description: 'Cleanroom environments for sensitive manufacturing.' },
@@ -200,6 +204,7 @@ const industriesData: Record<string, {
     title: 'Automotive Industry',
     tagline: 'Large-Scale Industrial Infrastructure',
     description: 'Manufacturing facilities and warehouses for automotive sector.',
+    metaDescription: 'Large-scale automotive manufacturing infrastructure by PHOENIXX SmartBuild. PEB structures, paint shops, warehouses, and fire-rated solutions.',
     longDescription: 'PHOENIXX serves the automotive industry with large-scale infrastructure solutions. From manufacturing plants to paint shops and warehouses, our facilities support automotive production and logistics.',
     requirements: [
       { title: 'Large Spans', description: 'Clear-span buildings for assembly lines.' },
@@ -248,7 +253,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!data) return {};
   return {
     title: `${data.title} | PHOENIXX Industries`,
-    description: data.description,
+    description: data.metaDescription || data.description,
     alternates: { canonical: `https://phoenixxsmartbuild.com/industries/${slug}` },
   };
 }

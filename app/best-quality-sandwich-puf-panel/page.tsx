@@ -208,10 +208,10 @@ export default function BestQualitySandwichPufPanelPage() {
                   Get Free Quote
                 </Link>
                 <Link
-                  href="tel:+919328915237"
+                  href="tel:+918866556879"
                   className="rounded-xl border-2 border-white/20 bg-white/5 px-8 py-4 font-semibold text-white backdrop-blur hover:bg-white/10 transition-all"
                 >
-                  Call Now: +91 93289 15237
+                  Call Now: +91 88665 56879
                 </Link>
               </div>
             </div>
@@ -817,13 +817,13 @@ export default function BestQualitySandwichPufPanelPage() {
                   Get Free Project Quote
                 </Link>
                 <Link
-                  href="tel:+919328915237"
+                  href="tel:+918866556879"
                   className="rounded-xl border-2 border-white px-8 py-4 font-semibold text-white hover:bg-white/10 transition-all"
                 >
-                  Call: +91 93289 15237
+                  Call: +91 88665 56879
                 </Link>
                 <Link
-                  href="https://wa.me/919328915237?text=Hi%2C%20I%20need%20premium%20quality%20PUF%20panels.%20Please%20share%20details."
+                  href="https://wa.me/918866556879?text=Hi%2C%20I%20need%20premium%20quality%20PUF%20panels.%20Please%20share%20details."
                   className="rounded-xl border-2 border-white/60 bg-white/10 px-8 py-4 font-semibold text-white hover:bg-white/20 transition-all"
                 >
                   WhatsApp Us

@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { AISummaryBlock } from '@/components/ai/ai-summary-block';
@@ -34,6 +35,14 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       type: 'article',
       publishedTime: post.date,
       authors: [post.author.name],
+      ...(post.coverImage ? {
+        images: [{
+          url: `https://phoenixxsmartbuild.com${post.coverImage}`,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        }],
+      } : {}),
     },
   };
 }
@@ -63,6 +72,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     headline: post.title,
     description: post.excerpt,
     datePublished: post.date,
+    ...(post.coverImage ? { image: `https://phoenixxsmartbuild.com${post.coverImage}` } : {}),
     author: { '@type': 'Person', name: post.author.name },
     publisher: {
       '@type': 'Organization',
@@ -134,6 +144,22 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
           </div>
         </section>
+
+        {/* Cover Image */}
+        {post.coverImage && (
+          <div className="container-custom max-w-4xl py-8">
+            <div className="relative aspect-[16/7] w-full overflow-hidden rounded-2xl">
+              <Image
+                src={post.coverImage}
+                alt={post.title}
+                fill
+                priority
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 896px"
+              />
+            </div>
+          </div>
+        )}
 
         {/* Article Content */}
         <section className="section-padding">

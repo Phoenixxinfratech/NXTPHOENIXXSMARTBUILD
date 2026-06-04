@@ -9,6 +9,7 @@ import { authorityBlogs } from './authority-blogs';
 import { serpBlogsPart1 } from './serp-blogs-part1';
 import { serpBlogsPart2 } from './serp-blogs-part2';
 import { serpBlogsPart3 } from './serp-blogs-part3';
+import { getBlogCoverImage } from './blog-images';
 
 export type { BlogPost, BlogListing };
 
@@ -83,11 +84,15 @@ const allBlogsRaw: Record<string, BlogPost> = {
   ...serpBlogsPart3,
 };
 
-// Apply scheduled dates to blog records
+// Apply scheduled dates and cover images to blog records
 export const blogPosts: Record<string, BlogPost> = Object.fromEntries(
   Object.entries(allBlogsRaw).map(([slug, post]) => [
     slug,
-    publishSchedule[slug] ? { ...post, date: publishSchedule[slug] } : post,
+    {
+      ...post,
+      ...(publishSchedule[slug] ? { date: publishSchedule[slug] } : {}),
+      coverImage: post.coverImage || getBlogCoverImage(slug),
+    },
   ])
 );
 
@@ -123,5 +128,6 @@ export function getBlogListings(): BlogListing[] {
       date: post.date,
       readTime: post.readTime,
       featured: featuredSlugs.has(slug),
+      coverImage: post.coverImage,
     }));
 }

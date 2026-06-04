@@ -510,6 +510,7 @@ export const existingBlogs: Record<string, BlogPost> = {
   },
   'turnkey-epc-project-delivery': {
     title: 'Delivering Turnkey EPC Projects Without Delays',
+    metaDescription: 'Proven strategies for on-time turnkey EPC project delivery in industrial construction. Expert tips on planning, procurement, and execution by PHOENIXX SmartBuild.',
     excerpt: 'Project management best practices for timely EPC delivery in industrial construction.',
     content: `
       <h2>The EPC Project Challenge</h2>
@@ -1783,7 +1784,7 @@ export const existingBlogs: Record<string, BlogPost> = {
       
       <p>As a manufacturer headquartered in Ahmedabad since 2012, PHOENIXX understands the local market better than anyone. Whether you need panels for a small warehouse or a large pharmaceutical facility, we have the capacity and expertise to deliver.</p>
       
-      <p><strong>Looking for a reliable Ahmedabad manufacturer?</strong> <a href="/get-a-quote">Request a quote from PHOENIXX</a>—we'll provide technical guidance along with competitive factory-direct pricing. Or call us directly at +91 93289 15237.</p>
+      <p><strong>Looking for a reliable Ahmedabad manufacturer?</strong> <a href="/get-a-quote">Request a quote from PHOENIXX</a>—we'll provide technical guidance along with competitive factory-direct pricing. Or call us directly at +91 88665 56879.</p>
     `,
     category: 'Industry Guide',
     date: '2025-02-01',

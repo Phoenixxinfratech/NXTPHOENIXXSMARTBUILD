@@ -119,6 +119,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://cdn.sanity.io" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://connect.facebook.net" />
         
         {/* Preload critical assets - Logo and LCP images */}
         <link 

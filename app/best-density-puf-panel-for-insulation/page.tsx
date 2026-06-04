@@ -813,7 +813,7 @@ export default function BestDensityPufPanelForInsulationPage() {
                 Contact Insulation Engineer
               </Link>
               <a
-                href="https://wa.me/919328915237?text=Hi%2C%20I%20need%2040%20kg/m³%20PUF%20panels%20for%20my%20project"
+                href="https://wa.me/918866556879?text=Hi%2C%20I%20need%2040%20kg/m³%20PUF%20panels%20for%20my%20project"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-xl bg-green-500 px-8 py-4 font-semibold text-white shadow-lg hover:bg-green-600 transition-all"
@@ -824,7 +824,7 @@ export default function BestDensityPufPanelForInsulationPage() {
             <div className="grid md:grid-cols-3 gap-6 max-w-2xl mx-auto text-sm text-emerald-100">
               <div>
                 <div className="font-semibold text-white">Call Us</div>
-                <a href="tel:+919328915237" className="hover:text-white transition-colors">+91 93289 15237</a>
+                <a href="tel:+918866556879" className="hover:text-white transition-colors">+91 88665 56879</a>
               </div>
               <div>
                 <div className="font-semibold text-white">Email</div>

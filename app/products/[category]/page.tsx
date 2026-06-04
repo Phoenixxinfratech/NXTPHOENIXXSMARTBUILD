@@ -812,7 +812,7 @@ function SandwichPanelsPage() {
               Contact our team for technical consultation, custom specifications, or a competitive quotation for your sandwich panel requirements.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="https://wa.me/919727700442" target="_blank" className="inline-flex items-center justify-center gap-2 rounded-xl bg-green-500 px-8 py-4 font-semibold text-white shadow-lg hover:bg-green-600 transition-all">
+              <Link href="https://wa.me/918866556879" target="_blank" className="inline-flex items-center justify-center gap-2 rounded-xl bg-green-500 px-8 py-4 font-semibold text-white shadow-lg hover:bg-green-600 transition-all">
                 💬 WhatsApp Us
               </Link>
               <Link href="/get-a-quote" className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-8 py-4 font-semibold text-slate-900 shadow-lg hover:shadow-xl transition-all">

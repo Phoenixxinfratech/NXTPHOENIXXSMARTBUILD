@@ -118,7 +118,7 @@ export default function ReturnPolicyPage() {
               <p>For return inquiries, contact our customer service team:</p>
               <ul>
                 <li><strong>Email:</strong> returns@phoenixxsmartbuild.com</li>
-                <li><strong>Phone:</strong> +91 97277 00442</li>
+                <li><strong>Phone:</strong> +91 88665 56879</li>
                 <li><strong>Hours:</strong> Monday-Saturday, 9:00 AM - 6:00 PM IST</li>
               </ul>
 

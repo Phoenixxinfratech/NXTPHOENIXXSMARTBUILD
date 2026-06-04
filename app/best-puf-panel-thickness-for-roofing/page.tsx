@@ -279,10 +279,10 @@ export default function BestPufPanelThicknessForRoofingPage() {
                   Get Free Thickness Recommendation
                 </Link>
                 <a
-                  href="tel:+919328915237"
+                  href="tel:+918866556879"
                   className="rounded-xl border-2 border-white/20 bg-white/5 px-8 py-4 font-semibold text-white backdrop-blur hover:bg-white/10 transition-all"
                 >
-                  Call Now: +91 93289 15237
+                  Call Now: +91 88665 56879
                 </a>
               </div>
             </div>
@@ -772,13 +772,13 @@ export default function BestPufPanelThicknessForRoofingPage() {
                 Request Free Thickness Recommendation
               </Link>
               <a
-                href="tel:+919328915237"
+                href="tel:+918866556879"
                 className="rounded-xl border-2 border-white/30 px-8 py-4 font-semibold text-white hover:bg-white/10 transition-all"
               >
-                Call: +91 93289 15237
+                Call: +91 88665 56879
               </a>
               <a
-                href="https://wa.me/919328915237?text=Hi%20PHOENIXX,%20I%20need%20help%20selecting%20the%20right%20PUF%20panel%20thickness%20for%20my%20roofing%20project"
+                href="https://wa.me/918866556879?text=Hi%20PHOENIXX,%20I%20need%20help%20selecting%20the%20right%20PUF%20panel%20thickness%20for%20my%20roofing%20project"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-xl border-2 border-white/30 px-8 py-4 font-semibold text-white hover:bg-white/10 transition-all"

@@ -59,7 +59,7 @@ export default function ContactUsPage() {
     contactPoint: [
       {
         '@type': 'ContactPoint',
-        telephone: '+91-97277-00442',
+        telephone: '+91-88665-56879',
         contactType: 'sales',
         areaServed: 'IN',
         availableLanguage: ['English', 'Hindi', 'Gujarati'],

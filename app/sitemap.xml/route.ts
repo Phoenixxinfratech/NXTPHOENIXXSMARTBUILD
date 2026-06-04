@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { products, locations } from '@/lib/landing-page-data';
+import { getAllBlogSlugs } from '@/lib/blog-data';
 
 const baseUrl = 'https://phoenixxsmartbuild.com';
 
@@ -23,6 +24,7 @@ export async function GET() {
     { loc: '/vendor-registration', changefreq: 'monthly', priority: '0.6' },
     { loc: '/sitemap-page', changefreq: 'monthly', priority: '0.4' },
     { loc: '/door-products-directory', changefreq: 'weekly', priority: '0.8' },
+    { loc: '/lp/puf-panel-manufacturer-ahmedabad', changefreq: 'monthly', priority: '0.9' },
 
     { loc: '/products', changefreq: 'weekly', priority: '0.9' },
     { loc: '/products/sandwich-panels', changefreq: 'weekly', priority: '0.8' },
@@ -78,35 +80,6 @@ export async function GET() {
     { loc: '/resources/technical-sheet', changefreq: 'monthly', priority: '0.6' },
     { loc: '/resources/brochure', changefreq: 'monthly', priority: '0.6' },
     { loc: '/resources/faq', changefreq: 'monthly', priority: '0.7' },
-
-    { loc: '/resources/blogs/rise-of-sustainable-peb-structures', changefreq: 'monthly', priority: '0.7' },
-    { loc: '/resources/blogs/optimizing-cold-storage-energy-efficiency', changefreq: 'monthly', priority: '0.7' },
-    { loc: '/resources/blogs/cleanroom-design-best-practices', changefreq: 'monthly', priority: '0.7' },
-    { loc: '/resources/blogs/choosing-right-insulated-panel', changefreq: 'monthly', priority: '0.7' },
-    { loc: '/resources/blogs/fire-safety-industrial-buildings', changefreq: 'monthly', priority: '0.7' },
-    { loc: '/resources/blogs/cold-chain-logistics-india', changefreq: 'monthly', priority: '0.7' },
-    { loc: '/resources/blogs/turnkey-epc-project-delivery', changefreq: 'monthly', priority: '0.7' },
-    { loc: '/resources/blogs/industrial-doors-selection-guide', changefreq: 'monthly', priority: '0.7' },
-    { loc: '/resources/blogs/what-is-puf-panel-how-does-it-work', changefreq: 'monthly', priority: '0.8' },
-    { loc: '/resources/blogs/puf-panel-vs-traditional-roofing-sheets', changefreq: 'monthly', priority: '0.8' },
-    { loc: '/resources/blogs/how-puf-panels-reduce-energy-costs-factories', changefreq: 'monthly', priority: '0.8' },
-    { loc: '/resources/blogs/puf-panel-thickness-guide-industrial-buildings', changefreq: 'monthly', priority: '0.8' },
-    { loc: '/resources/blogs/puf-panels-cold-storage-pharma-applications', changefreq: 'monthly', priority: '0.8' },
-    { loc: '/resources/blogs/puf-vs-pir-vs-rockwool', changefreq: 'monthly', priority: '0.8' },
-    { loc: '/resources/blogs/puf-panel-installation-accessories', changefreq: 'monthly', priority: '0.8' },
-    { loc: '/resources/blogs/puf-panel-installation-near-me', changefreq: 'monthly', priority: '0.8' },
-    { loc: '/resources/blogs/puf-panel-manufacturers-in-ahmedabad', changefreq: 'monthly', priority: '0.8' },
-    { loc: '/resources/blogs/puf-panel-manufacturers-in-gujarat', changefreq: 'monthly', priority: '0.8' },
-    { loc: '/resources/blogs/jindal-puf-panel-price-list', changefreq: 'monthly', priority: '0.8' },
-    { loc: '/resources/blogs/puf-panel-installation-contractors', changefreq: 'monthly', priority: '0.8' },
-    { loc: '/resources/blogs/puf-panel-wall-installation', changefreq: 'monthly', priority: '0.8' },
-    { loc: '/resources/blogs/puf-panel-installation-cost', changefreq: 'monthly', priority: '0.8' },
-    { loc: '/resources/blogs/puf-panel-house', changefreq: 'monthly', priority: '0.8' },
-    { loc: '/resources/blogs/cold-storage-panel-manufacturers-ahmedabad', changefreq: 'monthly', priority: '0.75' },
-    { loc: '/resources/blogs/cleanroom-panel-solutions-ahmedabad-pharma', changefreq: 'monthly', priority: '0.75' },
-    { loc: '/resources/blogs/industrial-roofing-solutions-ahmedabad-gidc', changefreq: 'monthly', priority: '0.75' },
-    { loc: '/resources/blogs/puf-vs-pir-vs-rockwool-ahmedabad-climate', changefreq: 'monthly', priority: '0.75' },
-    { loc: '/resources/blogs/puf-panel-price-ahmedabad-2025-guide', changefreq: 'monthly', priority: '0.75' },
 
     { loc: '/resources/project-gallery/pharma-cleanroom-pune', changefreq: 'monthly', priority: '0.6' },
     { loc: '/resources/project-gallery/cold-storage-mumbai', changefreq: 'monthly', priority: '0.6' },
@@ -213,7 +186,13 @@ export async function GET() {
     });
   });
 
-  const allUrls = [...coreUrls, ...shopUrls, ...geoUrls];
+  const blogUrls: SitemapUrl[] = getAllBlogSlugs().map(slug => ({
+    loc: `/resources/blogs/${slug}`,
+    changefreq: 'monthly',
+    priority: '0.8',
+  }));
+
+  const allUrls = [...coreUrls, ...shopUrls, ...blogUrls, ...geoUrls];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
