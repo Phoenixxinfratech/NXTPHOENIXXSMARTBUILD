@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
+import { CityManufacturerAeo } from '@/components/seo/city-manufacturer-aeo';
 
 export const metadata: Metadata = {
   title: 'PUF Panel Manufacturer in Vapi | PHOENIXX',
@@ -37,7 +38,7 @@ export default function VapiPage() {
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-teal-500/10 px-4 py-2 text-sm font-medium text-teal-400 mb-6">📍 Serving Vapi & South Gujarat Chemical Belt</span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">PUF Panel Manufacturer in Vapi</h1>
-              <p className="mt-6 text-xl text-slate-300 max-w-3xl">PHOENIXX SmartBuild delivers specialized PUF panels to Vapi&apos;s pharmaceutical and chemical industries. From Vapi GIDC to Silvassa, we serve South Gujarat&apos;s industrial hub with quality insulation solutions.</p>
+              <p className="mt-6 text-xl text-slate-300 max-w-3xl">Chemical atmospheres around Vapi GIDC and Sarigam attack ordinary coatings. PHOENIXX supplies PUF and fire-rated PIR panels with corrosion-resistant finishes so process buildings keep thermal performance without premature skin failure.</p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link href="/get-a-quote" className="rounded-xl bg-gradient-to-r from-teal-500 to-cyan-600 px-8 py-4 font-semibold text-white shadow-lg hover:shadow-xl transition-all">Get Vapi Quote</Link>
                 <a href="tel:+918866556879" className="rounded-xl border-2 border-white/20 bg-white/5 px-8 py-4 font-semibold text-white backdrop-blur hover:bg-white/10 transition-all">📞 Call: +91 88665 56879</a>
@@ -138,6 +139,8 @@ export default function VapiPage() {
             </div>
           </div>
         </section>
+        <CityManufacturerAeo cityName="Vapi" />
+
       </main>
       <Footer />
     </div>

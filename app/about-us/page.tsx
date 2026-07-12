@@ -6,6 +6,7 @@ import { Footer } from '@/components/blocks/footer';
 import { AISummaryBlock } from '@/components/ai/ai-summary-block';
 import { JsonLd } from '@/components/seo/json-ld';
 import { generateOrganizationSchema } from '@/lib/schema';
+import { AeoContentBlocks, DEFAULT_PUF_SPECS } from '@/components/seo/aeo-content-blocks';
 
 export const metadata: Metadata = {
   title: 'About PHOENIXX – India\'s EPC Infrastructure Partner',
@@ -439,6 +440,36 @@ export default function AboutPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Brand Positioning — AEO */}
+        <section className="section-padding bg-slate-50">
+          <div className="container-custom max-w-4xl">
+            <AeoContentBlocks
+              voiceSearchHeading="What makes PHOENIXX SMARTBUILD a premium industrial manufacturer?"
+              definition="PHOENIXX SMARTBUILD manufactures sandwich PUF panels, PIR panels, cleanroom and cold-room panels, roofing and wall systems, industrial doors, and PEB envelopes from Ahmedabad. The work is specification-led: density, fire class, coating, and joint detail are chosen against the building duty — warehouse heat load, pharma hygiene, or export cold chain — then documented for installation and audit."
+              specs={DEFAULT_PUF_SPECS}
+              pros={[
+                'High-precision, ISO-certified panel manufacturing',
+                'Engineering-driven specifications for industrial applications',
+                'Trusted by 500+ industrial clients across sectors',
+                'Export-ready packaging, documentation, and logistics support',
+                'End-to-end capability from panel supply to turnkey EPC delivery',
+              ]}
+              cons={[
+                'Custom engineered projects require detailed site and load data',
+                'Lead times vary by thickness, coating, and order volume',
+              ]}
+            />
+            <p className="mt-4 text-sm text-slate-500">
+              Explore our{' '}
+              <Link href="/certifications" className="text-blue-600 hover:underline">certifications</Link>
+              {', '}
+              <Link href="/resources/glossary" className="text-blue-600 hover:underline">technical glossary</Link>
+              {', and '}
+              <Link href="/resources/project-gallery" className="text-blue-600 hover:underline">case studies</Link>.
+            </p>
           </div>
         </section>
 

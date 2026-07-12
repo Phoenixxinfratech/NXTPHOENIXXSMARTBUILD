@@ -1842,6 +1842,41 @@ export default async function ProductDetailPage({ params }: Props) {
           </div>
         </section>
 
+        {/* Buying & Maintenance Guide */}
+        <section className="section-padding bg-slate-50">
+          <div className="container-custom max-w-4xl">
+            <h2 className="text-2xl font-bold text-slate-900">How to specify {data.name} without overbuying</h2>
+            <p className="mt-3 text-slate-600 leading-relaxed">
+              Most specification mistakes happen early: wrong thickness for the temperature delta, the wrong fire class for occupancy, or a coastal coating grade used inland. Use the guidance below as an engineering checklist before you freeze the BOQ.
+            </p>
+            <div className="mt-6 grid gap-6 md:grid-cols-2">
+              <div className="rounded-xl border border-slate-200 bg-white p-6">
+                <h3 className="font-semibold text-slate-900">What to lock before you order</h3>
+                <ul className="mt-3 space-y-2 text-sm text-slate-600">
+                  <li>• Match thickness to duty: partitions 30–50mm, controlled spaces 50–80mm, cold storage 80–150mm</li>
+                  <li>• Choose skin for hygiene risk: PPGI for standard industrial; SS 304/316 where washdown or food contact applies</li>
+                  <li>• Pick coating by exposure: PE inland, SMP for durability, PVDF for coastal or chemical atmospheres</li>
+                  <li>• Confirm fire class against occupancy/insurance: PUF (B2/B3), PIR (B-s1,d0), Rockwool (A1/A2)</li>
+                  <li>• Ask for thermal conductivity test data and IS 14925 compliance documents with the quote</li>
+                </ul>
+              </div>
+              <div className="rounded-xl border border-slate-200 bg-white p-6">
+                <h3 className="font-semibold text-slate-900">Keep panels performing after handover</h3>
+                <ul className="mt-3 space-y-2 text-sm text-slate-600">
+                  <li>• Walk joint lines and flashings every monsoon season — sealant failure is the usual leak path</li>
+                  <li>• Wash skins with mild detergent; abrasive cleaners cut coating life</li>
+                  <li>• Re-check fastener torque and washers every two years on exposed roofing</li>
+                  <li>• Watch for condensation on the inner skin in humid plants — often a vapour-detail issue, not foam failure</li>
+                  <li>• After cyclones or extreme wind events, inspect edge flashings before the next rain cycle</li>
+                </ul>
+              </div>
+            </div>
+            <p className="mt-4 text-sm text-slate-500">
+              Need a thickness or fire-class recommendation for your site? <Link href="/get-a-quote" className="text-blue-600 font-medium hover:underline">Request an engineering consultation</Link> or read the <Link href="/resources/glossary" className="text-blue-600 font-medium hover:underline">technical glossary</Link>.
+            </p>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className={`py-20 bg-gradient-to-r ${data.gradient}`}>
           <div className="container-custom text-center">

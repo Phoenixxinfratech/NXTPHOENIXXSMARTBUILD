@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
+import { CityManufacturerAeo } from '@/components/seo/city-manufacturer-aeo';
 
 export const metadata: Metadata = {
   title: 'PUF Panel Manufacturer in Vadodara | PHOENIXX',
@@ -80,9 +81,7 @@ export default function VadodaraPage() {
                 PUF Panel Manufacturer in Vadodara
               </h1>
               <p className="mt-6 text-xl text-slate-300 max-w-3xl">
-                PHOENIXX SmartBuild delivers premium PUF panels to Vadodara&apos;s thriving industrial sector. 
-                From Makarpura GIDC to Halol corridor, we serve Central Gujarat&apos;s pharmaceutical, chemical, 
-                and manufacturing industries with superior insulation solutions.
+                Nandesari and the Halol–Savli corridor run process plants that need fire-rated envelopes as much as thermal control. PHOENIXX supplies PUF and PIR panels to Vadodara projects with thickness and fire-class guidance matched to pharma, chemical, and engineering facilities — not one-size catalogue stock.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link href="/get-a-quote" className="rounded-xl bg-gradient-to-r from-red-500 to-rose-600 px-8 py-4 font-semibold text-white shadow-lg hover:shadow-xl transition-all">
@@ -245,6 +244,8 @@ export default function VadodaraPage() {
             </div>
           </div>
         </section>
+        <CityManufacturerAeo cityName="Vadodara" />
+
       </main>
       <Footer />
     </div>

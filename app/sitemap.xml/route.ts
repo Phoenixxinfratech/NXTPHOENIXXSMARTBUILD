@@ -24,6 +24,8 @@ export async function GET() {
     { loc: '/vendor-registration', changefreq: 'monthly', priority: '0.6' },
     { loc: '/sitemap-page', changefreq: 'monthly', priority: '0.4' },
     { loc: '/door-products-directory', changefreq: 'weekly', priority: '0.8' },
+    { loc: '/certifications', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/resources/glossary', changefreq: 'monthly', priority: '0.7' },
     { loc: '/lp/puf-panel-manufacturer-ahmedabad', changefreq: 'monthly', priority: '0.9' },
 
     { loc: '/products', changefreq: 'weekly', priority: '0.9' },
@@ -192,7 +194,14 @@ export async function GET() {
     priority: '0.8',
   }));
 
-  const allUrls = [...coreUrls, ...shopUrls, ...blogUrls, ...geoUrls];
+  const exportSlugs = ['kenya', 'tanzania', 'uganda', 'rwanda', 'ghana', 'zambia', 'botswana', 'namibia', 'mozambique', 'angola'];
+  const exportUrls: SitemapUrl[] = exportSlugs.map(slug => ({
+    loc: `/export/${slug}`,
+    changefreq: 'monthly',
+    priority: '0.7',
+  }));
+
+  const allUrls = [...coreUrls, ...shopUrls, ...blogUrls, ...exportUrls, ...geoUrls];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

@@ -302,9 +302,11 @@ export interface LocationData {
   industries: string[];
   regulations?: string[];
   nearbyAreas?: string[];
-  uniqueFacts?: string[]; // Location-specific unique facts for differentiation
-  localProjects?: string[]; // Example projects completed in the area
-  testimonials?: { quote: string; client: string }[]; // Location-specific testimonials
+  uniqueFacts?: string[];
+  localProjects?: string[];
+  testimonials?: { quote: string; client: string }[];
+  primaryIndustrialEstate?: string;
+  localPainPoint?: string;
 }
 
 export const locations: Record<string, LocationData> = {
@@ -355,6 +357,8 @@ export const locations: Record<string, LocationData> = {
     climate: 'Ahmedabad experiences extreme heat (up to 48°C in May), dry winters, and unpredictable monsoons. The semi-arid climate demands high-performance thermal insulation for year-round comfort and energy efficiency.',
     industries: ['Pharmaceuticals', 'Chemicals', 'Textiles', 'Engineering', 'IT Services', 'Food Processing', 'Automotive Ancillaries'],
     industrialZones: ['GIDC Naroda (PHOENIXX HQ)', 'GIDC Odhav', 'GIDC Vatva', 'GIDC Changodar', 'GIDC Sanand', 'Bavla Industrial Area', 'Aslali Industrial Zone', 'Kathwada GIDC'],
+    primaryIndustrialEstate: 'GIDC Naroda & GIDC Vatva',
+    localPainPoint: 'Extreme summer heat (48°C+) drives high HVAC costs in uninsulated industrial sheds across Ahmedabad GIDC estates — PUF panels reduce cooling loads by 25–35%.',
     nearbyAreas: ['Gandhinagar', 'Sanand', 'Kalol', 'Mehsana', 'Nadiad', 'Kheda', 'Bavla', 'Changodar', 'GIFT City'],
     uniqueFacts: [
       'PHOENIXX SMARTBUILD headquarters located in GIDC Naroda with 50,000+ sq.ft manufacturing facility',
@@ -390,6 +394,8 @@ export const locations: Record<string, LocationData> = {
     climate: 'As Gujarat\'s capital, Gandhinagar has similar climate to Ahmedabad with planned green spaces providing slightly milder summers. GIFT City\'s high-rise developments demand premium building envelope solutions.',
     industries: ['IT & ITES', 'Government Facilities', 'Financial Services (GIFT City)', 'Education', 'Healthcare', 'Data Centers'],
     industrialZones: ['GIFT City SEZ', 'Infocity', 'GIDC Gandhinagar', 'Electronics Park'],
+    primaryIndustrialEstate: 'GIFT City SEZ & Infocity',
+    localPainPoint: 'Data centres and financial facilities in GIFT City require precise temperature control and clean, high-performance building envelopes with reliable insulation.',
     nearbyAreas: ['Ahmedabad', 'Kalol', 'Mehsana', 'Sector-based Industrial Pockets'],
   },
 
@@ -402,6 +408,8 @@ export const locations: Record<string, LocationData> = {
     climate: 'Surat\'s coastal location brings hot, humid summers and significant monsoon rainfall. Industrial facilities need protection from humidity, salt air, and flooding risks.',
     industries: ['Diamond Processing', 'Textiles', 'Chemicals', 'Petrochemicals', 'Engineering', 'Food Processing', 'Logistics'],
     industrialZones: ['GIDC Sachin', 'GIDC Pandesara', 'GIDC Ichhapore', 'Hazira Industrial Area', 'Surat SEZ', 'Diamond Research Park'],
+    primaryIndustrialEstate: 'GIDC Sachin & Hazira Industrial Area',
+    localPainPoint: 'Coastal humidity and salt-laden air accelerate corrosion on bare metal roofing — marine-grade PVDF-coated PUF panels extend roof life in Surat\'s chemical and textile belt.',
     nearbyAreas: ['Hazira', 'Sachin', 'Bardoli', 'Navsari', 'Valsad', 'Bharuch'],
     uniqueFacts: [
       'Surat is India\'s diamond cutting capital processing 90% of world\'s diamonds, requiring precise climate control',
@@ -430,6 +438,8 @@ export const locations: Record<string, LocationData> = {
     climate: 'Vadodara has hot semi-arid climate with temperatures reaching 45°C. The industrial hub hosts major chemical and pharmaceutical companies requiring controlled environment facilities.',
     industries: ['Chemicals', 'Pharmaceuticals', 'Engineering', 'Steel', 'Plastics', 'IT Services', 'Food Processing'],
     industrialZones: ['GIDC Makarpura', 'GIDC Nandesari', 'GIDC Savli', 'PCPIR (Petroleum, Chemicals)', 'Waghodia Industrial Area'],
+    primaryIndustrialEstate: 'GIDC Nandesari & PCPIR Dahej corridor',
+    localPainPoint: 'Chemical and pharma units in Nandesari and Dahej require fire-rated PIR panels and corrosion-resistant coatings for process-adjacent buildings.',
     nearbyAreas: ['Anand', 'Bharuch', 'Dahej', 'Savli', 'Halol', 'Padra'],
   },
 
@@ -442,6 +452,8 @@ export const locations: Record<string, LocationData> = {
     climate: 'Rajkot experiences hot, dry summers and mild winters. The Saurashtra region\'s industrial growth demands quality infrastructure with thermal efficiency.',
     industries: ['Engineering', 'Auto Components', 'Ceramics', 'Food Processing', 'Casting & Forging', 'Diesel Engines'],
     industrialZones: ['GIDC Metoda', 'GIDC Lodhika', 'GIDC Shapar-Veraval', 'Bhaktinagar Industrial Area', 'Aji Industrial Area'],
+    primaryIndustrialEstate: 'GIDC Metoda & GIDC Lodhika',
+    localPainPoint: 'Engineering and auto-component units in Metoda and Lodhika need large-span insulated roofing to cut summer heat gain and protect precision machining environments.',
     nearbyAreas: ['Morbi', 'Jamnagar', 'Junagadh', 'Surendranagar', 'Gondal'],
   },
 
@@ -550,6 +562,8 @@ export const locations: Record<string, LocationData> = {
     climate: 'Vapi has humid subtropical climate influenced by Arabian Sea proximity. The industrial belt requires humidity-resistant and chemical-grade building solutions.',
     industries: ['Chemicals', 'Pharmaceuticals', 'Textiles', 'Paper', 'Engineering', 'Dyes & Pigments'],
     industrialZones: ['GIDC Vapi', 'GIDC Sarigam', 'GIDC Umbergaon', 'Vapi SEZ', 'Silvassa Industrial Area'],
+    primaryIndustrialEstate: 'GIDC Vapi & GIDC Sarigam',
+    localPainPoint: 'Chemical and dye units in Vapi need corrosion-resistant PVDF-coated panels and fire-rated PIR options for process buildings exposed to humidity and aggressive atmospheres.',
     nearbyAreas: ['Daman', 'Silvassa', 'Valsad', 'Sarigam', 'Umbergaon', 'Pardi'],
   },
 
@@ -673,6 +687,8 @@ export const locations: Record<string, LocationData> = {
     climate: 'Mumbai has tropical monsoon climate with high humidity year-round. Coastal salt air and heavy monsoons demand corrosion-resistant building solutions.',
     industries: ['Financial Services', 'IT & ITES', 'Pharmaceuticals', 'Entertainment', 'Logistics', 'Food Processing', 'Textiles'],
     industrialZones: ['MIDC Andheri', 'MIDC Taloja', 'JNPT SEZ', 'Navi Mumbai Industrial Area', 'Thane-Belapur Industrial Belt'],
+    primaryIndustrialEstate: 'MIDC Taloja & Thane-Belapur Industrial Belt',
+    localPainPoint: 'High humidity and salt air in Mumbai\'s coastal industrial belt demand corrosion-resistant PVDF coatings and proper vapour barrier detailing on insulated panels.',
     nearbyAreas: ['Thane', 'Navi Mumbai', 'Panvel', 'Vasai', 'Bhiwandi'],
     uniqueFacts: [
       'India\'s financial capital with 40% of India\'s pharma manufacturing concentrated in Mumbai-Thane belt',
@@ -701,6 +717,8 @@ export const locations: Record<string, LocationData> = {
     climate: 'Pune has tropical wet and dry climate with pleasant winters and moderate summers. The automotive and IT hub requires modern industrial infrastructure.',
     industries: ['Automobiles', 'IT & Software', 'Engineering', 'Food Processing', 'Pharmaceuticals', 'Defense', 'Education'],
     industrialZones: ['MIDC Chakan', 'MIDC Ranjangaon', 'MIDC Pimpri-Chinchwad', 'Hinjewadi IT Park', 'Talegaon Industrial Area'],
+    primaryIndustrialEstate: 'MIDC Chakan & MIDC Ranjangaon',
+    localPainPoint: 'Automotive manufacturing in Chakan and Ranjangaon requires large-span insulated roofing with precision temperature control for paint shops and assembly halls.',
     nearbyAreas: ['Chakan', 'Talegaon', 'Lonavala', 'Satara', 'Solapur'],
     uniqueFacts: [
       'India\'s largest automotive manufacturing hub with 30+ OEMs and 2000+ ancillary units',
@@ -729,6 +747,8 @@ export const locations: Record<string, LocationData> = {
     climate: 'Nagpur has tropical savanna climate with extreme summers (up to 48°C). Central India\'s logistics hub requires heat-resistant building solutions.',
     industries: ['Logistics', 'Textiles', 'Food Processing', 'Engineering', 'Mining', 'Power', 'IT Services'],
     industrialZones: ['MIDC Hingna', 'MIDC Butibori', 'MIHAN SEZ', 'Nagpur Dry Port'],
+    primaryIndustrialEstate: 'MIDC Butibori & MIHAN SEZ',
+    localPainPoint: 'Logistics warehouses around MIHAN and Butibori face 48°C summers — insulated PUF roofing cuts heat gain and reduces cooling demand for temperature-sensitive goods.',
     nearbyAreas: ['Wardha', 'Chandrapur', 'Amravati', 'Gondia', 'Bhandara'],
   },
 
@@ -741,6 +761,8 @@ export const locations: Record<string, LocationData> = {
     climate: 'Nashik has semi-arid climate with moderate temperatures. The wine capital and industrial hub requires controlled environment facilities.',
     industries: ['Wine & Beverages', 'Food Processing', 'Engineering', 'Pharmaceuticals', 'Defense', 'Textiles'],
     industrialZones: ['MIDC Ambad', 'MIDC Satpur', 'MIDC Sinnar', 'Defense Industrial Corridor'],
+    primaryIndustrialEstate: 'MIDC Ambad & MIDC Sinnar',
+    localPainPoint: 'Wine, beverage, and food units in Nashik need hygienic insulated panels for processing halls and cold rooms that hold stable temperatures through harvest peaks.',
     nearbyAreas: ['Sinnar', 'Igatpuri', 'Trimbakeshwar', 'Malegaon', 'Dhule'],
   },
 
@@ -813,6 +835,8 @@ export const locations: Record<string, LocationData> = {
     climate: 'Gandhidham has hot desert climate with extreme summers. The port city requires durable industrial building solutions.',
     industries: ['Port & Logistics', 'Warehousing', 'Trading', 'Salt', 'Wind Energy', 'Food Processing'],
     industrialZones: ['GIDC Gandhidham', 'Kandla Port Zone', 'Free Trade Zone', 'Adipur Industrial Area'],
+    primaryIndustrialEstate: 'Kandla Port Zone & GIDC Gandhidham',
+    localPainPoint: 'Port warehouses and cold chain hubs near Kandla need UV-stable, corrosion-resistant insulated cladding that survives salt air and extreme summer heat.',
     nearbyAreas: ['Bhuj', 'Kandla', 'Adipur', 'Anjar', 'Mundra'],
   },
 
@@ -850,6 +874,8 @@ export const locations: Record<string, LocationData> = {
     climate: 'Indore has subtropical climate with hot summers and mild winters. The commercial capital requires modern industrial infrastructure.',
     industries: ['Automobiles', 'IT & Software', 'Pharmaceuticals', 'Food Processing', 'Textiles', 'Engineering'],
     industrialZones: ['Pithampur Industrial Area', 'Indore SEZ', 'Crystal IT Park', 'Sanwer Road Industrial Area'],
+    primaryIndustrialEstate: 'Pithampur Auto Cluster',
+    localPainPoint: 'Pithampur\'s auto component cluster needs energy-efficient insulated sheds to offset rising electricity costs during Madhya Pradesh\'s 42°C+ summer peaks.',
     nearbyAreas: ['Dewas', 'Ujjain', 'Ratlam', 'Mhow', 'Pithampur'],
   },
 
@@ -862,6 +888,8 @@ export const locations: Record<string, LocationData> = {
     climate: 'Bhopal has subtropical climate with hot summers and pleasant winters. The state capital requires diverse industrial solutions.',
     industries: ['IT & ITES', 'Heavy Electrical', 'Textiles', 'Food Processing', 'Pharmaceuticals', 'Engineering'],
     industrialZones: ['Mandideep Industrial Area', 'Govindpura Industrial Area', 'Bhopal SEZ', 'BHEL Township'],
+    primaryIndustrialEstate: 'Mandideep Industrial Area',
+    localPainPoint: 'Food processing and pharma units in Mandideep need hygienic insulated envelopes and cold rooms that stay stable through Bhopal\'s hot summers and monsoon humidity.',
     nearbyAreas: ['Vidisha', 'Raisen', 'Sehore', 'Hoshangabad', 'Mandideep'],
   },
 
@@ -923,6 +951,8 @@ export const locations: Record<string, LocationData> = {
     climate: 'Jaipur has semi-arid climate with extreme temperatures - hot summers (up to 45°C) and cold winters. Superior thermal insulation is essential.',
     industries: ['Gems & Jewelry', 'Textiles', 'IT & Software', 'Engineering', 'Tourism', 'Handicrafts', 'Automobiles'],
     industrialZones: ['RIICO Sitapura', 'RIICO Mansarovar', 'Mahindra World City', 'Jaipur SEZ'],
+    primaryIndustrialEstate: 'RIICO Sitapura Industrial Area',
+    localPainPoint: 'Jaipur\'s extreme temperature swings — 45°C summers and near-freezing winters — make high-R-value PUF panels essential for year-round energy efficiency in Sitapura and Mansarovar estates.',
     nearbyAreas: ['Ajmer', 'Alwar', 'Sikar', 'Tonk', 'Dausa'],
     uniqueFacts: [
       'Rajasthan\'s capital with extreme 40°C+ temperature swings - superior insulation reduces energy costs by 40%',
@@ -963,6 +993,8 @@ export const locations: Record<string, LocationData> = {
     climate: 'Udaipur has semi-arid climate with moderate temperatures compared to other Rajasthan cities. The tourism and mining hub requires quality infrastructure.',
     industries: ['Mining & Minerals', 'Tourism', 'Handicrafts', 'Food Processing', 'Engineering'],
     industrialZones: ['RIICO Udaipur', 'RIICO Debari', 'Zinc Smelter Industrial Zone'],
+    primaryIndustrialEstate: 'RIICO Debari & Zinc Smelter Industrial Zone',
+    localPainPoint: 'Mining support buildings and mineral processing sheds around Debari need durable insulated roofing that handles dust, heat, and long operating hours.',
     nearbyAreas: ['Chittorgarh', 'Rajsamand', 'Dungarpur', 'Banswara'],
   },
 

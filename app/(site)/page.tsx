@@ -5,6 +5,7 @@ import { AISummaryBlock } from '@/components/ai/ai-summary-block';
 import { JsonLd } from '@/components/seo/json-ld';
 import { generateOrganizationSchema, generateFAQSchema } from '@/lib/schema';
 import { FAQBlock } from '@/components/blocks/faq-block';
+import { AeoContentBlocks, DEFAULT_PUF_SPECS } from '@/components/seo/aeo-content-blocks';
 
 // Homepage client logos
 const homepageClients = [
@@ -876,6 +877,29 @@ export default function HomePage() {
               Get Quote for Your Location
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* ========== TECHNICAL INSIGHTS — AI/AEO Optimized ========== */}
+      <section className="section-padding bg-white">
+        <div className="container-custom max-w-4xl">
+          <AeoContentBlocks
+            voiceSearchHeading="Which PUF panel thickness is best for industrial buildings in India?"
+            definition="If a shed roof runs hot through Indian summers, HVAC never catches up. PHOENIXX manufactures sandwich PUF, PIR, cleanroom, and cold-room panels in Ahmedabad so warehouses, factories, and PEB projects can specify thickness and fire class against real heat load — then install a documented envelope, not bare sheeting."
+            specs={DEFAULT_PUF_SPECS}
+            pros={[
+              '40–60% faster envelope build than brick-and-mortar programmes',
+              'Measurable thermal conductivity (≈0.024 W/mK) that cuts cooling demand',
+              'Factory density control — fewer soft spots than site-sprayed insulation',
+              'Lighter cladding reduces secondary steel compared with masonry walls',
+              'Thickness range 30–150mm for walls, roofs, and cold storage chambers',
+            ]}
+            cons={[
+              'Needs trained crews for airtight joints and flashings',
+              'Not a structural wall system on its own — pair with proper steel framing',
+              'Fire class must match occupancy: PUF, PIR, or Rockwool are not interchangeable',
+            ]}
+          />
         </div>
       </section>
 

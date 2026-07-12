@@ -68,6 +68,9 @@ export function generateOrganizationSchema() {
       siteConfig.links.twitter,
       siteConfig.links.linkedin,
       siteConfig.links.facebook,
+      siteConfig.links.instagram,
+      'https://en.wikipedia.org/wiki/Structural_insulated_panel',
+      'https://www.wikidata.org/wiki/Q1068049',
     ],
   };
 }

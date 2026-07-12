@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
+import { CityManufacturerAeo } from '@/components/seo/city-manufacturer-aeo';
 
 export const metadata: Metadata = {
   title: 'PUF Panel Manufacturer in Thane | PHOENIXX',
@@ -138,6 +139,8 @@ export default function ThanePage() {
             </div>
           </div>
         </section>
+        <CityManufacturerAeo cityName="Thane" />
+
       </main>
       <Footer />
     </div>

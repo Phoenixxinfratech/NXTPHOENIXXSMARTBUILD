@@ -4,6 +4,8 @@ import dynamic from 'next/dynamic';
 import '@/styles/globals.css';
 import { cn } from '@/lib/utils';
 import { siteConfig } from '@/lib/site-config';
+import { JsonLdMultiple } from '@/components/seo/json-ld';
+import { generateOrganizationSchema, generateWebsiteSchema } from '@/lib/schema';
 
 // Lazy load non-critical components to improve initial load time
 const AnalyticsProvider = dynamic(
@@ -176,6 +178,9 @@ export default function RootLayout({
           inter.variable
         )}
       >
+        {/* Global entity schema — Organization + WebSite on every page */}
+        <JsonLdMultiple schemas={[generateOrganizationSchema(), generateWebsiteSchema()]} />
+
         {/* Analytics & Tracking */}
         <AnalyticsProvider />
         

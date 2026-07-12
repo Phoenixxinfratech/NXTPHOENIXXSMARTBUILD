@@ -223,6 +223,21 @@ export function Footer() {
                     </Link>
                   </li>
                   <li>
+                    <Link href="/resources/glossary" className="text-sm text-slate-400 hover:text-white transition-colors">
+                      Glossary
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/certifications" className="text-sm text-slate-400 hover:text-white transition-colors">
+                      Certifications
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/export/kenya" className="text-sm text-slate-400 hover:text-white transition-colors">
+                      Export Markets
+                    </Link>
+                  </li>
+                  <li>
                     <Link href="/get-a-quote" className="text-sm text-emerald-400 hover:text-emerald-300 transition-colors font-medium">
                       Get a Quote →
                     </Link>

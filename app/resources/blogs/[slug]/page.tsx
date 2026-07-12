@@ -10,6 +10,8 @@ import { generateBreadcrumbSchema } from '@/lib/schema';
 import { TableOfContents } from '@/components/blog';
 import { injectHeadingIds } from '@/lib/blog-utils';
 import { blogPosts, getBlogPost } from '@/lib/blog-data';
+import { RelatedResources } from '@/components/blocks/related-resources';
+import { getRelatedLinksForBlog } from '@/lib/internal-links';
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
@@ -262,6 +264,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
           </div>
         </section>
+        <RelatedResources links={getRelatedLinksForBlog(slug, post.relatedProducts)} />
       </main>
       <Footer />
     </div>

@@ -5,9 +5,9 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 
 export const metadata: Metadata = {
-  title: 'Project Gallery – Completed Projects',
+  title: 'Case Studies & Project Gallery | PHOENIXX SMARTBUILD',
   description:
-    'View our completed projects: cold storage, cleanrooms, PEB, industrial facilities. See our work quality firsthand.',
+    'Real-world case studies: cold storage, cleanrooms, PEB buildings, and industrial facilities delivered by PHOENIXX SMARTBUILD across India. Challenge, solution, and results.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/resources/project-gallery',
   },
@@ -310,8 +310,12 @@ export default function ProjectGalleryPage() {
 
             <div className="max-w-3xl">
               <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
-                Project Gallery
+                Case Studies &amp; Project Gallery
               </h1>
+              <p className="mt-4 text-lg text-white/80 max-w-2xl">
+                Real projects. Measurable results. Explore how PHOENIXX SMARTBUILD delivers
+                insulated panel solutions across pharma, cold chain, food processing, and industrial sectors.
+              </p>
               <p className="mt-6 text-lg text-slate-300">
                 Explore our portfolio of completed projects across industrial roofing, cleanrooms, 
                 cold storage, and insulated panel systems throughout Gujarat.
@@ -394,6 +398,12 @@ export default function ProjectGalleryPage() {
                     </h3>
                     <p className="mt-1 text-sm text-emerald-600 font-medium">{project.projectType}</p>
                     <p className="mt-3 text-sm text-slate-600 line-clamp-2">{project.scope}</p>
+
+                    <div className="mt-4 space-y-2 text-xs text-slate-600">
+                      <p><span className="font-semibold text-slate-800">Challenge:</span> Deliver durable insulated infrastructure for {project.industry.toLowerCase()} operations in {project.location}.</p>
+                      <p><span className="font-semibold text-slate-800">Solution:</span> {project.projectType} using PHOENIXX sandwich panel systems ({project.area}).</p>
+                      <p><span className="font-semibold text-slate-800">Result:</span> Completed installation supporting energy efficiency, hygiene, and faster project handover.</p>
+                    </div>
                     
                     <div className="mt-4 pt-4 border-t border-slate-100 grid grid-cols-2 gap-3 text-sm">
                       <div>

@@ -6,6 +6,9 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 import { AISummaryBlock } from '@/components/ai/ai-summary-block';
+import { RelatedResources } from '@/components/blocks/related-resources';
+import { getRelatedLinksForSolution } from '@/lib/internal-links';
+import { AeoContentBlocks, DEFAULT_PUF_SPECS } from '@/components/seo/aeo-content-blocks';
 
 // Solution images mapping
 const solutionImages: Record<string, string[]> = {
@@ -747,6 +750,37 @@ export default async function SolutionDetailPage({ params }: Props) {
           </div>
         </section>
 
+        {/* Technical Insights — AEO / Voice Search */}
+        <section className="section-padding bg-white border-t border-slate-100">
+          <div className="container-custom max-w-4xl">
+            <AeoContentBlocks
+              voiceSearchHeading={`When does ${data.title} actually make sense for a project?`}
+              definition={`${data.longDescription.split('. ').slice(0, 2).join('. ')}. PHOENIXX builds these systems with documented panel specs, installation detailing, and compliance support — so the decision is engineering-led, not brochure-led.`}
+              specs={DEFAULT_PUF_SPECS}
+              pros={[
+                'Faster envelope delivery than conventional brick-and-mortar build programmes',
+                'Thermal performance you can model against HVAC load, not guess from sheet metal',
+                'Compatible with PEB frames, cold rooms, and cleanroom partition layouts',
+                'Factory documentation available for audits, insurers, and EPC tender packages',
+              ]}
+              cons={[
+                'Wrong thickness or fire class creates expensive mid-project change orders',
+                'Joint sealing quality decides airtightness — installation craft matters',
+              ]}
+            />
+            <p className="mt-4 text-sm text-slate-500">
+              Related terms:{' '}
+              <Link href="/resources/glossary#sandwich-panel" className="text-blue-600 hover:underline">Sandwich Panel</Link>
+              {' · '}
+              <Link href="/resources/glossary#peb" className="text-blue-600 hover:underline">PEB</Link>
+              {' · '}
+              <Link href="/resources/glossary#cold-room" className="text-blue-600 hover:underline">Cold Room</Link>
+              {' · '}
+              <Link href="/certifications" className="text-blue-600 hover:underline">Certifications</Link>
+            </p>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className={`py-20 bg-gradient-to-r ${data.gradient}`}>
           <div className="container-custom text-center">
@@ -759,6 +793,7 @@ export default async function SolutionDetailPage({ params }: Props) {
             </div>
           </div>
         </section>
+        <RelatedResources links={getRelatedLinksForSolution(slug)} />
       </main>
       <Footer />
     </div>

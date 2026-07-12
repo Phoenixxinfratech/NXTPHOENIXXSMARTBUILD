@@ -26,6 +26,8 @@ import {
   getGeoH1,
 } from '@/lib/rajasthan-geo-data';
 import { RajasthanGeoPage } from '@/components/geo/rajasthan-geo-page';
+import { RelatedResources } from '@/components/blocks/related-resources';
+import { getRelatedLinksForGeoPage } from '@/lib/internal-links';
 
 // Parse the URL slug to extract product and location
 function parseSlug(slug: string): { productSlug: string; locationSlug: string } | null {
@@ -982,6 +984,9 @@ export default async function ProductLocationPage({ params }: { params: Promise<
             </div>
           </section>
         )}
+        <RelatedResources
+          links={getRelatedLinksForGeoPage(product.slug, location.slug)}
+        />
       </main>
       <Footer />
     </div>
@@ -990,23 +995,33 @@ export default async function ProductLocationPage({ params }: { params: Promise<
 
 function generateIntroContent(product: ProductData, location: LocationData): string {
   const topIndustries = location.industries.slice(0, 3).join(', ');
-  const zone = location.industrialZones?.[0] || '';
+  const zone = location.primaryIndustrialEstate || location.industrialZones?.[0] || '';
   const stateOrRegion = location.state || (location.type === 'state' ? location.name : 'India');
   const thermalValue = product.specifications.thermalConductivity;
+  const painPoint = location.localPainPoint || '';
+  const variation = location.slug.length % 3;
+
+  const openings = [
+    `PHOENIXX SMARTBUILD is a leading ${product.shortName} manufacturer in ${location.name}, ${stateOrRegion}, delivering premium insulated sandwich panels with ${thermalValue} thermal conductivity for industrial and commercial applications.`,
+    `For businesses in ${location.name} seeking a trusted ${product.shortName} supplier, PHOENIXX SMARTBUILD offers factory-engineered sandwich panels with ${thermalValue} thermal performance and ISO-certified manufacturing.`,
+    `Industrial projects across ${location.name} rely on PHOENIXX SMARTBUILD for ${product.name} systems that combine structural strength, thermal insulation, and rapid installation — backed by ${thermalValue} conductivity ratings.`,
+  ];
+
+  const base = openings[variation];
 
   if (location.type === 'city') {
-    return `PHOENIXX SMARTBUILD is a leading PUF panel manufacturer in ${location.name}, ${stateOrRegion}, providing premium insulated sandwich panels with ${thermalValue} thermal conductivity for industrial and commercial applications. As a trusted PUF panel supplier in ${location.name}, we deliver PUF insulated roofing panels, PUF insulated wall panels, and advanced PIR panels to sectors including ${topIndustries}.${zone ? ` We serve key industrial areas such as ${zone} and beyond.` : ''} Our services include professional PUF panel installation and turnkey cold storage construction for businesses that demand energy efficiency, thermal insulation, and fire resistance. Whether you need sandwich panels for a new warehouse or insulated panels for a cleanroom, PHOENIXX delivers quality, speed, and reliability across ${location.name}.`;
+    return `${base} As a trusted PUF panel supplier in ${location.name}, we deliver PUF insulated roofing panels, PUF insulated wall panels, and advanced PIR panels to sectors including ${topIndustries}.${zone ? ` We serve key industrial areas such as ${zone} and beyond.` : ''}${painPoint ? ` ${painPoint}` : ''} Our services include professional PUF panel installation and turnkey cold storage construction for businesses that demand energy efficiency, thermal insulation, and fire resistance. Whether you need sandwich panels for a new warehouse or insulated panels for a cleanroom, PHOENIXX delivers quality, speed, and reliability across ${location.name}.`;
   }
 
   if (location.type === 'state') {
-    return `PHOENIXX SMARTBUILD is a top-rated PUF panel manufacturer and PUF panel supplier across ${location.name}, offering a complete range of sandwich panels, PIR panels, and insulated sandwich panels with thermal conductivity as low as ${thermalValue}. Industries across ${location.name} \u2014 including ${topIndustries} \u2014 rely on our PUF insulated roofing panels and wall panels for thermal insulation, fire safety, and energy efficiency. We provide end-to-end PUF panel installation and cold storage construction services throughout the state, backed by ISO-certified manufacturing and a dedicated engineering team. From warehouses and factories to cleanrooms and cold chain facilities, PHOENIXX is ${location.name}\u2019s preferred partner for high-performance building envelope solutions.`;
+    return `${base} Industries across ${location.name} — including ${topIndustries} — rely on our PUF insulated roofing panels and wall panels for thermal insulation, fire safety, and energy efficiency.${painPoint ? ` ${painPoint}` : ''} We provide end-to-end PUF panel installation and cold storage construction services throughout the state, backed by ISO-certified manufacturing and a dedicated engineering team. From warehouses and factories to cleanrooms and cold chain facilities, PHOENIXX is ${location.name}'s preferred partner for high-performance building envelope solutions.`;
   }
 
-  return `PHOENIXX SMARTBUILD is a nationally recognised PUF panel manufacturer and PUF panel supplier in ${location.name}, delivering premium sandwich panels, PIR panels, and insulated sandwich panels with industry-leading ${thermalValue} thermal conductivity to industries spanning ${topIndustries}, and more. Our product range includes PUF insulated roofing panels and PUF insulated wall panels engineered for superior thermal insulation, fire resistance, and durability. With comprehensive PUF panel installation and cold storage construction services, PHOENIXX serves warehouses, factories, cleanrooms, and industrial facilities across the country. Choose PHOENIXX for quality manufacturing, fast delivery, and turnkey execution.`;
+  return `${base} Our product range includes PUF insulated roofing panels and PUF insulated wall panels engineered for superior thermal insulation, fire resistance, and durability across industries spanning ${topIndustries}. With comprehensive PUF panel installation and cold storage construction services, PHOENIXX serves warehouses, factories, cleanrooms, and industrial facilities across the country. Choose PHOENIXX for quality manufacturing, fast delivery, and turnkey execution.`;
 }
 
 function generateFAQs(product: ProductData, location: LocationData) {
-  return [
+  const baseFaqs = [
     {
       question: `What is the PUF panel price in ${location.name}?`,
       answer: `PUF panel prices in ${location.name} vary based on thickness (${product.specifications.thickness.slice(0, 3).join(', ')}, etc.), skin material, coating type, and order quantity. PHOENIXX SMARTBUILD offers competitive factory-direct pricing with typical ranges from \u20B980-180/sq.ft for PUF insulated wall panels and \u20B9100-220/sq.ft for PUF insulated roofing panels. Contact us for a project-specific quotation for ${location.name}.`,
@@ -1048,5 +1063,18 @@ function generateFAQs(product: ProductData, location: LocationData) {
       answer: `Yes, PHOENIXX offers specialised PUF insulated roofing panels with trapezoidal profiles for drainage and spanning, and PUF insulated wall panels with flat or micro-ribbed profiles for aesthetics. We recommend using purpose-designed panels for optimal performance. Contact us for guidance on your ${location.name} project.`,
     },
   ];
+
+  const voiceFaqs = [
+    {
+      question: `Which ${product.shortName} is best for warehouses in ${location.name}?`,
+      answer: `For warehouses in ${location.name}, 50–80mm PUF roofing panels with trapezoidal profiles are typically optimal. They span 3–4 metres between purlins, reduce heat gain by 60–70% compared to bare metal sheeting, and install at 400–600 sqm per day. PHOENIXX engineers assess your warehouse size, goods sensitivity, and budget to recommend the right specification.`,
+    },
+    {
+      question: `How do I choose the right panel thickness for my ${location.name} project?`,
+      answer: `Panel thickness depends on three factors: target internal temperature, ambient conditions in ${location.name}, and energy cost targets. Standard partitions need 30–50mm; temperature-controlled areas need 50–80mm; cold storage needs 80–150mm. PHOENIXX provides free thickness calculations — share your project brief for a recommendation.`,
+    },
+  ];
+
+  return [...baseFaqs, ...voiceFaqs];
 }
 

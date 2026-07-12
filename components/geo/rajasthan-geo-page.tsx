@@ -13,6 +13,9 @@ import {
   generateGeoFAQs,
   getCrossCityLinks,
 } from '@/lib/rajasthan-geo-data';
+import { AeoContentBlocks, DEFAULT_PUF_SPECS } from '@/components/seo/aeo-content-blocks';
+import { RelatedResources } from '@/components/blocks/related-resources';
+import { getRelatedLinksForGeoPage } from '@/lib/internal-links';
 
 // ---------------------------------------------------------------------------
 // Content generation helpers — produce varied prose per city + page type
@@ -513,6 +516,34 @@ export function RajasthanGeoPage({ result }: Props) {
           </div>
         </section>
 
+        {/* ── Specs / AEO ── */}
+        <section className="py-16 md:py-20 bg-white">
+          <div className="container-custom max-w-4xl">
+            <AeoContentBlocks
+              voiceSearchHeading={`What thickness of PUF roofing panel should I choose in ${city.name}?`}
+              definition={`Phoenixx Smart Build supplies PUF roofing panels to ${city.name} from Beawar (${city.distanceFromBeawar} km). ${city.cityIntro}${city.localPainPoint ? ` ${city.localPainPoint}` : ''} Panels serve ${city.keyIndustries.slice(0, 3).join(', ')} and other industrial applications across ${city.industrialZones.slice(0, 2).join(' and ')}.`}
+              specs={DEFAULT_PUF_SPECS}
+              pros={[
+                `Fast logistics from Beawar warehouse to ${city.name}`,
+                'High R-value insulation for Rajasthan heat loads',
+                'Trapezoidal and standing seam profiles for industrial roofs',
+                'UV-resistant coatings suitable for semi-arid climate',
+              ]}
+              cons={[
+                'Longer custom lengths may need special transport planning',
+                'Fire-rated cores (PIR/Rockwool) should be specified when required by occupancy',
+              ]}
+            />
+            <p className="mt-4 text-sm text-slate-500">
+              <Link href="/resources/glossary#puf-panel" className="text-blue-600 hover:underline">PUF Panel</Link>
+              {' · '}
+              <Link href="/resources/glossary#industrial-shed" className="text-blue-600 hover:underline">Industrial Shed</Link>
+              {' · '}
+              <Link href="/certifications" className="text-blue-600 hover:underline">Certifications</Link>
+            </p>
+          </div>
+        </section>
+
         {/* ── FAQs ── */}
         <section className="py-16 md:py-20 bg-slate-50">
           <div className="container-custom">
@@ -559,6 +590,7 @@ export function RajasthanGeoPage({ result }: Props) {
           </div>
         </section>
       </main>
+      <RelatedResources links={getRelatedLinksForGeoPage('roofing-puf-panel', city.slug)} />
       <Footer />
     </div>
   );

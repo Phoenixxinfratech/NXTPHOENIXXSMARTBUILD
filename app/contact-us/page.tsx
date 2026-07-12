@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
+import { generateContactPageSchema } from '@/lib/schema';
 import { ContactForm } from './contact-form';
 import { siteConfig } from '@/lib/site-config';
 import type { Metadata } from 'next';
@@ -50,6 +51,8 @@ const quickLinks = [
 ];
 
 export default function ContactUsPage() {
+  const contactPageSchema = generateContactPageSchema();
+
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -82,6 +85,7 @@ export default function ContactUsPage() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
+        <JsonLd data={contactPageSchema} />
         <JsonLd data={organizationSchema} />
 
         {/* Hero Section */}

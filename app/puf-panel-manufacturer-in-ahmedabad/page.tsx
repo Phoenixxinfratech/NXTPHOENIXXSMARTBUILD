@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
+import { CityManufacturerAeo } from '@/components/seo/city-manufacturer-aeo';
 
 export const metadata: Metadata = {
   title: 'PUF Panel Manufacturer in Ahmedabad | PHOENIXX',
@@ -308,7 +309,7 @@ export default function AhmedabadPage() {
                 PUF Panel Manufacturer in Ahmedabad
               </h1>
               <p className="mt-6 text-xl text-slate-300 max-w-3xl">
-                PHOENIXX SmartBuild is Ahmedabad&apos;s leading PUF panel manufacturer with our factory located in GIDC Naroda. Serving Gujarat&apos;s pharmaceutical, chemical, and industrial sectors with premium insulated panels since 2012.
+                Uninsulated sheds in Ahmedabad routinely hit roof-skin temperatures above 70°C in May. PHOENIXX manufactures PUF panels at our GIDC Naroda factory so pharma, chemical, and warehouse projects get factory-direct panels, same-day stock dispatch, and thickness guidance matched to Gujarat heat loads.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link
@@ -333,21 +334,25 @@ export default function AhmedabadPage() {
           <div className="container-custom">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-                Ahmedabad&apos;s Trusted PUF Panel Manufacturer Since 2012
+                Why Ahmedabad projects specify factory-made PUF panels
               </h2>
               <div className="prose prose-lg prose-slate max-w-none">
                 <p>
-                  Ahmedabad, Gujarat&apos;s commercial capital and a thriving industrial hub, is home to <strong>PHOENIXX SmartBuild&apos;s headquarters and manufacturing facility</strong>. Our factory in GIDC Naroda produces high-quality PUF panels that serve the diverse needs of Gujarat&apos;s pharmaceutical, chemical, textile, and food processing industries.
+                  Most GIDC projects in Ahmedabad fail first on heat, not structure. When shed roofs run hot through an 8-month summer, HVAC bills climb and process areas drift out of tolerance. PHOENIXX builds <strong>sandwich PUF panels</strong> at GIDC Naroda so you can specify thickness, coating, and fire rating against the actual load — not a catalogue average.
                 </p>
                 <p>
-                  As a local manufacturer, we understand Ahmedabad&apos;s extreme climate challenges – scorching summers reaching 48°C and unpredictable monsoons. Our{' '}
+                  Our{' '}
                   <Link href="/products/sandwich-panels/sandwich-puf-panel" className="text-primary hover:underline">
                     PUF sandwich panels
                   </Link>{' '}
-                  are engineered specifically for these conditions, featuring superior thermal insulation (0.024 W/mK) and corrosion-resistant coatings.
+                  deliver 0.024 W/mK thermal conductivity with closed-cell foam that resists monsoon moisture. For Odhav and Vatva chemical belts, PVDF coatings add corrosion resistance where salt and process fumes attack ordinary paint systems.
                 </p>
                 <p>
-                  Being headquartered in Ahmedabad means <strong>same-day delivery</strong> to all GIDC industrial zones, factory visits for quality assurance, and dedicated local support. We&apos;ve served 500+ clients across Gujarat, including pharmaceutical giants, FMCG companies, and logistics operators.
+                  Because manufacturing sits inside Ahmedabad, stock panels can move same-day to Naroda, Vatva, Changodar, Sanand, and Bavla. Factory visits are open for buyers who want density checks and joint samples before placing bulk orders. See our{' '}
+                  <Link href="/resources/glossary#puf-panel" className="text-primary hover:underline">PUF panel definition</Link>
+                  {' '}and{' '}
+                  <Link href="/certifications" className="text-primary hover:underline">certifications</Link>
+                  {' '}for standards documentation.
                 </p>
               </div>
             </div>
@@ -655,6 +660,8 @@ export default function AhmedabadPage() {
             </div>
           </div>
         </section>
+        <CityManufacturerAeo cityName="Ahmedabad" />
+
       </main>
       <Footer />
     </div>

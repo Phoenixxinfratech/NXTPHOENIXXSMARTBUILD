@@ -1,0 +1,1335 @@
+{
+  "generatedAt": "2026-07-12T11:48:06.218Z",
+  "summary": {
+    "totalUrls": 692,
+    "totalFilesScanned": 153,
+    "orphanPages": 606,
+    "duplicateTitles": 0,
+    "duplicateDescriptions": 0,
+    "thinPages": 27,
+    "missingH1": 1,
+    "multipleH1": 75,
+    "headingSkips": 7,
+    "imagesMissingAlt": 0,
+    "rawImgTags": 0,
+    "jsonLdIssues": 0
+  },
+  "urls": [
+    "/",
+    "/about-us",
+    "/become-partner",
+    "/best-density-puf-panel-for-insulation",
+    "/best-insulated-panel-for-warehouse",
+    "/best-puf-panel-brand-in-india",
+    "/best-puf-panel-for-clean-room",
+    "/best-puf-panel-for-cold-storage",
+    "/best-puf-panel-for-industrial-shed",
+    "/best-puf-panel-manufacturer-in-india",
+    "/best-puf-panel-thickness-for-roofing",
+    "/best-quality-sandwich-puf-panel",
+    "/best-roofing-puf-panel-for-factory",
+    "/business-terms",
+    "/career",
+    "/clientele",
+    "/contact-us",
+    "/door-products-directory",
+    "/fm-approved-panel-in-ahmedabad",
+    "/fm-approved-panel-in-ajmer",
+    "/fm-approved-panel-in-anand",
+    "/fm-approved-panel-in-aurangabad",
+    "/fm-approved-panel-in-bharuch",
+    "/fm-approved-panel-in-bhavnagar",
+    "/fm-approved-panel-in-bhilai",
+    "/fm-approved-panel-in-bhilwara",
+    "/fm-approved-panel-in-bhopal",
+    "/fm-approved-panel-in-bhuj",
+    "/fm-approved-panel-in-bilaspur",
+    "/fm-approved-panel-in-chhattisgarh",
+    "/fm-approved-panel-in-dahod",
+    "/fm-approved-panel-in-gandhidham",
+    "/fm-approved-panel-in-gandhinagar",
+    "/fm-approved-panel-in-godhra",
+    "/fm-approved-panel-in-gujarat",
+    "/fm-approved-panel-in-gwalior",
+    "/fm-approved-panel-in-himmatnagar",
+    "/fm-approved-panel-in-india",
+    "/fm-approved-panel-in-indore",
+    "/fm-approved-panel-in-jabalpur",
+    "/fm-approved-panel-in-jaipur",
+    "/fm-approved-panel-in-jamnagar",
+    "/fm-approved-panel-in-jodhpur",
+    "/fm-approved-panel-in-junagadh",
+    "/fm-approved-panel-in-kolhapur",
+    "/fm-approved-panel-in-kota",
+    "/fm-approved-panel-in-madhya-pradesh",
+    "/fm-approved-panel-in-maharashtra",
+    "/fm-approved-panel-in-mehsana",
+    "/fm-approved-panel-in-morbi",
+    "/fm-approved-panel-in-mumbai",
+    "/fm-approved-panel-in-nadiad",
+    "/fm-approved-panel-in-nagpur",
+    "/fm-approved-panel-in-nashik",
+    "/fm-approved-panel-in-navsari",
+    "/fm-approved-panel-in-palanpur",
+    "/fm-approved-panel-in-porbandar",
+    "/fm-approved-panel-in-pune",
+    "/fm-approved-panel-in-raipur",
+    "/fm-approved-panel-in-rajasthan",
+    "/fm-approved-panel-in-rajkot",
+    "/fm-approved-panel-in-surat",
+    "/fm-approved-panel-in-thane",
+    "/fm-approved-panel-in-udaipur",
+    "/fm-approved-panel-in-ujjain",
+    "/fm-approved-panel-in-vadodara",
+    "/fm-approved-panel-in-valsad",
+    "/fm-approved-panel-in-vapi",
+    "/get-a-quote",
+    "/industrial-puf-panel-manufacturer-in-india",
+    "/industries",
+    "/industries/agri-processing",
+    "/industries/automobile",
+    "/industries/cold-chain",
+    "/industries/dairy",
+    "/industries/food-processing",
+    "/industries/hospitality",
+    "/industries/pharma-chemical",
+    "/industries/precision-engineering",
+    "/insulated-puf-panel-manufacturer-in-india",
+    "/insulated-roof-panel-abu-road",
+    "/insulated-roof-panel-ajmer",
+    "/insulated-roof-panel-alwar",
+    "/insulated-roof-panel-barmer",
+    "/insulated-roof-panel-bhilwara",
+    "/insulated-roof-panel-bikaner",
+    "/insulated-roof-panel-bundi",
+    "/insulated-roof-panel-chittorgarh",
+    "/insulated-roof-panel-jhalawar",
+    "/insulated-roof-panel-jhunjhunu",
+    "/insulated-roof-panel-jodhpur",
+    "/insulated-roof-panel-kishangarh",
+    "/insulated-roof-panel-kota",
+    "/insulated-roof-panel-nagaur",
+    "/insulated-roof-panel-neemrana",
+    "/insulated-roof-panel-pali",
+    "/insulated-roof-panel-pratapgarh",
+    "/insulated-roof-panel-rajsamand",
+    "/insulated-roof-panel-sikar",
+    "/insulated-roof-panel-sirohi",
+    "/insulated-roof-panel-sri-ganganagar",
+    "/insulated-roof-panel-tonk",
+    "/insulated-roof-panel-udaipur",
+    "/leading-puf-panel-company-in-india",
+    "/lp/puf-panel-manufacturer-ahmedabad",
+    "/phoenixx-puf-roofing-panel-abu-road",
+    "/phoenixx-puf-roofing-panel-ajmer",
+    "/phoenixx-puf-roofing-panel-alwar",
+    "/phoenixx-puf-roofing-panel-barmer",
+    "/phoenixx-puf-roofing-panel-bhilwara",
+    "/phoenixx-puf-roofing-panel-bikaner",
+    "/phoenixx-puf-roofing-panel-bundi",
+    "/phoenixx-puf-roofing-panel-chittorgarh",
+    "/phoenixx-puf-roofing-panel-jhalawar",
+    "/phoenixx-puf-roofing-panel-jhunjhunu",
+    "/phoenixx-puf-roofing-panel-jodhpur",
+    "/phoenixx-puf-roofing-panel-kishangarh",
+    "/phoenixx-puf-roofing-panel-kota",
+    "/phoenixx-puf-roofing-panel-nagaur",
+    "/phoenixx-puf-roofing-panel-neemrana",
+    "/phoenixx-puf-roofing-panel-pali",
+    "/phoenixx-puf-roofing-panel-pratapgarh",
+    "/phoenixx-puf-roofing-panel-rajsamand",
+    "/phoenixx-puf-roofing-panel-sikar",
+    "/phoenixx-puf-roofing-panel-sirohi",
+    "/phoenixx-puf-roofing-panel-sri-ganganagar",
+    "/phoenixx-puf-roofing-panel-tonk",
+    "/phoenixx-puf-roofing-panel-udaipur",
+    "/phoenixx-puf-roofing-panels",
+    "/pir-panel-in-ahmedabad",
+    "/pir-panel-in-ajmer",
+    "/pir-panel-in-anand",
+    "/pir-panel-in-aurangabad",
+    "/pir-panel-in-bharuch",
+    "/pir-panel-in-bhavnagar",
+    "/pir-panel-in-bhilai",
+    "/pir-panel-in-bhilwara",
+    "/pir-panel-in-bhopal",
+    "/pir-panel-in-bhuj",
+    "/pir-panel-in-bilaspur",
+    "/pir-panel-in-chhattisgarh",
+    "/pir-panel-in-dahod",
+    "/pir-panel-in-gandhidham",
+    "/pir-panel-in-gandhinagar",
+    "/pir-panel-in-godhra",
+    "/pir-panel-in-gujarat",
+    "/pir-panel-in-gwalior",
+    "/pir-panel-in-himmatnagar",
+    "/pir-panel-in-india",
+    "/pir-panel-in-indore",
+    "/pir-panel-in-jabalpur",
+    "/pir-panel-in-jaipur",
+    "/pir-panel-in-jamnagar",
+    "/pir-panel-in-jodhpur",
+    "/pir-panel-in-junagadh",
+    "/pir-panel-in-kolhapur",
+    "/pir-panel-in-kota",
+    "/pir-panel-in-madhya-pradesh",
+    "/pir-panel-in-maharashtra",
+    "/pir-panel-in-mehsana",
+    "/pir-panel-in-morbi",
+    "/pir-panel-in-mumbai",
+    "/pir-panel-in-nadiad",
+    "/pir-panel-in-nagpur",
+    "/pir-panel-in-nashik",
+    "/pir-panel-in-navsari",
+    "/pir-panel-in-palanpur",
+    "/pir-panel-in-porbandar",
+    "/pir-panel-in-pune",
+    "/pir-panel-in-raipur",
+    "/pir-panel-in-rajasthan",
+    "/pir-panel-in-rajkot",
+    "/pir-panel-in-surat",
+    "/pir-panel-in-thane",
+    "/pir-panel-in-udaipur",
+    "/pir-panel-in-ujjain",
+    "/pir-panel-in-vadodara",
+    "/pir-panel-in-valsad",
+    "/pir-panel-in-vapi",
+    "/polyurethane-roof-panel-abu-road",
+    "/polyurethane-roof-panel-ajmer",
+    "/polyurethane-roof-panel-alwar",
+    "/polyurethane-roof-panel-barmer",
+    "/polyurethane-roof-panel-bhilwara",
+    "/polyurethane-roof-panel-bikaner",
+    "/polyurethane-roof-panel-bundi",
+    "/polyurethane-roof-panel-chittorgarh",
+    "/polyurethane-roof-panel-jhalawar",
+    "/polyurethane-roof-panel-jhunjhunu",
+    "/polyurethane-roof-panel-jodhpur",
+    "/polyurethane-roof-panel-kishangarh",
+    "/polyurethane-roof-panel-kota",
+    "/polyurethane-roof-panel-nagaur",
+    "/polyurethane-roof-panel-neemrana",
+    "/polyurethane-roof-panel-pali",
+    "/polyurethane-roof-panel-pratapgarh",
+    "/polyurethane-roof-panel-rajsamand",
+    "/polyurethane-roof-panel-sikar",
+    "/polyurethane-roof-panel-sirohi",
+    "/polyurethane-roof-panel-sri-ganganagar",
+    "/polyurethane-roof-panel-tonk",
+    "/polyurethane-roof-panel-udaipur",
+    "/premium-puf-panel-manufacturer-in-india",
+    "/privacy-policy",
+    "/products",
+    "/products/cleanroom-solutions",
+    "/products/cleanroom-solutions/cleanroom-doors",
+    "/products/cleanroom-solutions/cleanroom-false-ceiling",
+    "/products/cleanroom-solutions/cleanroom-flooring",
+    "/products/cleanroom-solutions/cleanroom-partition",
+    "/products/doors",
+    "/products/doors/cleanroom-door",
+    "/products/doors/fire-door-emergency-exit",
+    "/products/doors/fire-rated-multipurpose-door",
+    "/products/sandwich-panels",
+    "/products/sandwich-panels/pir-panel",
+    "/products/sandwich-panels/rockwool-panel",
+    "/products/sandwich-panels/roofing-puf-panel",
+    "/products/sandwich-panels/sandwich-puf-panel",
+    "/products/sandwich-panels/wall-ceiling-panel",
+    "/puf-panel-company-in-india",
+    "/puf-panel-manufacturer-in-ahmedabad",
+    "/puf-panel-manufacturer-in-chhatrapati-sambhajinagar",
+    "/puf-panel-manufacturer-in-dholera",
+    "/puf-panel-manufacturer-in-jamnagar",
+    "/puf-panel-manufacturer-in-kolhapur",
+    "/puf-panel-manufacturer-in-mumbai",
+    "/puf-panel-manufacturer-in-nagpur",
+    "/puf-panel-manufacturer-in-nashik",
+    "/puf-panel-manufacturer-in-pune",
+    "/puf-panel-manufacturer-in-rajkot",
+    "/puf-panel-manufacturer-in-surat",
+    "/puf-panel-manufacturer-in-thane",
+    "/puf-panel-manufacturer-in-vadodara",
+    "/puf-panel-manufacturer-in-vapi",
+    "/puf-panel-suppliers-in-india",
+    "/puf-panel-vs-rockwool-panel",
+    "/puf-panels-manufacturer-india",
+    "/puf-roofing-panel-abu-road",
+    "/puf-roofing-panel-ajmer",
+    "/puf-roofing-panel-alwar",
+    "/puf-roofing-panel-barmer",
+    "/puf-roofing-panel-bhilwara",
+    "/puf-roofing-panel-bikaner",
+    "/puf-roofing-panel-bundi",
+    "/puf-roofing-panel-chittorgarh",
+    "/puf-roofing-panel-jhalawar",
+    "/puf-roofing-panel-jhunjhunu",
+    "/puf-roofing-panel-jodhpur",
+    "/puf-roofing-panel-kishangarh",
+    "/puf-roofing-panel-kota",
+    "/puf-roofing-panel-manufacturer",
+    "/puf-roofing-panel-manufacturer-abu-road",
+    "/puf-roofing-panel-manufacturer-ajmer",
+    "/puf-roofing-panel-manufacturer-alwar",
+    "/puf-roofing-panel-manufacturer-barmer",
+    "/puf-roofing-panel-manufacturer-bhilwara",
+    "/puf-roofing-panel-manufacturer-bikaner",
+    "/puf-roofing-panel-manufacturer-bundi",
+    "/puf-roofing-panel-manufacturer-chittorgarh",
+    "/puf-roofing-panel-manufacturer-jhalawar",
+    "/puf-roofing-panel-manufacturer-jhunjhunu",
+    "/puf-roofing-panel-manufacturer-jodhpur",
+    "/puf-roofing-panel-manufacturer-kishangarh",
+    "/puf-roofing-panel-manufacturer-kota",
+    "/puf-roofing-panel-manufacturer-nagaur",
+    "/puf-roofing-panel-manufacturer-neemrana",
+    "/puf-roofing-panel-manufacturer-pali",
+    "/puf-roofing-panel-manufacturer-pratapgarh",
+    "/puf-roofing-panel-manufacturer-rajsamand",
+    "/puf-roofing-panel-manufacturer-sikar",
+    "/puf-roofing-panel-manufacturer-sirohi",
+    "/puf-roofing-panel-manufacturer-sri-ganganagar",
+    "/puf-roofing-panel-manufacturer-tonk",
+    "/puf-roofing-panel-manufacturer-udaipur",
+    "/puf-roofing-panel-nagaur",
+    "/puf-roofing-panel-neemrana",
+    "/puf-roofing-panel-pali",
+    "/puf-roofing-panel-pratapgarh",
+    "/puf-roofing-panel-price",
+    "/puf-roofing-panel-price-abu-road",
+    "/puf-roofing-panel-price-ajmer",
+    "/puf-roofing-panel-price-alwar",
+    "/puf-roofing-panel-price-barmer",
+    "/puf-roofing-panel-price-bhilwara",
+    "/puf-roofing-panel-price-bikaner",
+    "/puf-roofing-panel-price-bundi",
+    "/puf-roofing-panel-price-chittorgarh",
+    "/puf-roofing-panel-price-jhalawar",
+    "/puf-roofing-panel-price-jhunjhunu",
+    "/puf-roofing-panel-price-jodhpur",
+    "/puf-roofing-panel-price-kishangarh",
+    "/puf-roofing-panel-price-kota",
+    "/puf-roofing-panel-price-nagaur",
+    "/puf-roofing-panel-price-neemrana",
+    "/puf-roofing-panel-price-pali",
+    "/puf-roofing-panel-price-pratapgarh",
+    "/puf-roofing-panel-price-rajsamand",
+    "/puf-roofing-panel-price-sikar",
+    "/puf-roofing-panel-price-sirohi",
+    "/puf-roofing-panel-price-sri-ganganagar",
+    "/puf-roofing-panel-price-tonk",
+    "/puf-roofing-panel-price-udaipur",
+    "/puf-roofing-panel-rajsamand",
+    "/puf-roofing-panel-sikar",
+    "/puf-roofing-panel-sirohi",
+    "/puf-roofing-panel-sri-ganganagar",
+    "/puf-roofing-panel-supplier",
+    "/puf-roofing-panel-supplier-abu-road",
+    "/puf-roofing-panel-supplier-ajmer",
+    "/puf-roofing-panel-supplier-alwar",
+    "/puf-roofing-panel-supplier-barmer",
+    "/puf-roofing-panel-supplier-bhilwara",
+    "/puf-roofing-panel-supplier-bikaner",
+    "/puf-roofing-panel-supplier-bundi",
+    "/puf-roofing-panel-supplier-chittorgarh",
+    "/puf-roofing-panel-supplier-jhalawar",
+    "/puf-roofing-panel-supplier-jhunjhunu",
+    "/puf-roofing-panel-supplier-jodhpur",
+    "/puf-roofing-panel-supplier-kishangarh",
+    "/puf-roofing-panel-supplier-kota",
+    "/puf-roofing-panel-supplier-nagaur",
+    "/puf-roofing-panel-supplier-neemrana",
+    "/puf-roofing-panel-supplier-pali",
+    "/puf-roofing-panel-supplier-pratapgarh",
+    "/puf-roofing-panel-supplier-rajsamand",
+    "/puf-roofing-panel-supplier-sikar",
+    "/puf-roofing-panel-supplier-sirohi",
+    "/puf-roofing-panel-supplier-sri-ganganagar",
+    "/puf-roofing-panel-supplier-tonk",
+    "/puf-roofing-panel-supplier-udaipur",
+    "/puf-roofing-panel-tonk",
+    "/puf-roofing-panel-udaipur",
+    "/puf-roofing-panels",
+    "/puf-sandwich-panel-abu-road",
+    "/puf-sandwich-panel-ajmer",
+    "/puf-sandwich-panel-alwar",
+    "/puf-sandwich-panel-barmer",
+    "/puf-sandwich-panel-bhilwara",
+    "/puf-sandwich-panel-bikaner",
+    "/puf-sandwich-panel-bundi",
+    "/puf-sandwich-panel-chittorgarh",
+    "/puf-sandwich-panel-jhalawar",
+    "/puf-sandwich-panel-jhunjhunu",
+    "/puf-sandwich-panel-jodhpur",
+    "/puf-sandwich-panel-kishangarh",
+    "/puf-sandwich-panel-kota",
+    "/puf-sandwich-panel-nagaur",
+    "/puf-sandwich-panel-neemrana",
+    "/puf-sandwich-panel-pali",
+    "/puf-sandwich-panel-pratapgarh",
+    "/puf-sandwich-panel-rajsamand",
+    "/puf-sandwich-panel-sikar",
+    "/puf-sandwich-panel-sirohi",
+    "/puf-sandwich-panel-sri-ganganagar",
+    "/puf-sandwich-panel-tonk",
+    "/puf-sandwich-panel-udaipur",
+    "/resources",
+    "/resources/blogs",
+    "/resources/blogs/advantages-of-prefabricated-buildings",
+    "/resources/blogs/benefits-of-insulated-panels",
+    "/resources/blogs/benefits-of-puf-wall-panels",
+    "/resources/blogs/best-insulated-panel-for-cold-storage",
+    "/resources/blogs/best-puf-panel-brand",
+    "/resources/blogs/best-puf-panel-supplier-dahej",
+    "/resources/blogs/best-roofing-solution-factory-india",
+    "/resources/blogs/best-wall-material-for-warehouse",
+    "/resources/blogs/choosing-right-insulated-panel",
+    "/resources/blogs/cleanroom-construction-cost-india",
+    "/resources/blogs/cleanroom-contractor-ahmedabad",
+    "/resources/blogs/cleanroom-design-best-practices",
+    "/resources/blogs/cleanroom-panel-solutions-ahmedabad-pharma",
+    "/resources/blogs/cold-chain-logistics-india",
+    "/resources/blogs/cold-storage-construction-cost-india",
+    "/resources/blogs/cold-storage-construction-gujarat",
+    "/resources/blogs/cold-storage-cost-per-mt-india",
+    "/resources/blogs/cold-storage-panel-manufacturers-ahmedabad",
+    "/resources/blogs/factory-roofing-problems-solutions",
+    "/resources/blogs/fire-resistant-panel-pir-vs-puf",
+    "/resources/blogs/fire-safety-industrial-buildings",
+    "/resources/blogs/future-of-industrial-construction-india",
+    "/resources/blogs/future-of-puf-panels",
+    "/resources/blogs/how-puf-panels-reduce-energy-costs-factories",
+    "/resources/blogs/how-to-build-cleanroom-india",
+    "/resources/blogs/how-to-build-cold-storage-step-by-step",
+    "/resources/blogs/how-to-choose-right-insulated-panel",
+    "/resources/blogs/how-to-reduce-electricity-cost-cold-storage",
+    "/resources/blogs/how-to-reduce-heat-in-industrial-shed",
+    "/resources/blogs/industrial-doors-selection-guide",
+    "/resources/blogs/industrial-insulation-guide-beginners",
+    "/resources/blogs/industrial-panel-supplier-vapi",
+    "/resources/blogs/industrial-roofing-solutions-ahmedabad-gidc",
+    "/resources/blogs/industrial-shed-cost-puf-panels",
+    "/resources/blogs/jindal-puf-panel-price-list",
+    "/resources/blogs/lifespan-of-puf-panels",
+    "/resources/blogs/optimizing-cold-storage-energy-efficiency",
+    "/resources/blogs/pir-panel-price-vs-puf-panel",
+    "/resources/blogs/pir-panel-supplier-rajkot",
+    "/resources/blogs/pir-panel-vs-mineral-wool-panel",
+    "/resources/blogs/prefabricated-vs-conventional-construction",
+    "/resources/blogs/puf-ceiling-panels-commercial",
+    "/resources/blogs/puf-panel-ahmedabad",
+    "/resources/blogs/puf-panel-ankleshwar-industrial-guide",
+    "/resources/blogs/puf-panel-contact-ahmedabad",
+    "/resources/blogs/puf-panel-house",
+    "/resources/blogs/puf-panel-india",
+    "/resources/blogs/puf-panel-installation-accessories",
+    "/resources/blogs/puf-panel-installation-contractors",
+    "/resources/blogs/puf-panel-installation-cost",
+    "/resources/blogs/puf-panel-installation-cost-ahmedabad",
+    "/resources/blogs/puf-panel-installation-near-me",
+    "/resources/blogs/puf-panel-manufacturer-vadodara",
+    "/resources/blogs/puf-panel-manufacturers-gujarat",
+    "/resources/blogs/puf-panel-manufacturers-in-ahmedabad",
+    "/resources/blogs/puf-panel-manufacturers-in-gujarat",
+    "/resources/blogs/puf-panel-near-me",
+    "/resources/blogs/puf-panel-price-ahmedabad",
+    "/resources/blogs/puf-panel-price-ahmedabad-2025-guide",
+    "/resources/blogs/puf-panel-price-ahmedabad-2026-guide",
+    "/resources/blogs/puf-panel-price-india-cost-per-sq-ft",
+    "/resources/blogs/puf-panel-price-list-ahmedabad",
+    "/resources/blogs/puf-panel-supplier-ahmedabad-guide",
+    "/resources/blogs/puf-panel-thickness-guide-industrial-buildings",
+    "/resources/blogs/puf-panel-vadodara",
+    "/resources/blogs/puf-panel-vs-eps-panel",
+    "/resources/blogs/puf-panel-vs-glass-wool-insulation",
+    "/resources/blogs/puf-panel-vs-pir-panel-comparison",
+    "/resources/blogs/puf-panel-vs-rcc-construction",
+    "/resources/blogs/puf-panel-vs-rockwool-panel",
+    "/resources/blogs/puf-panel-vs-traditional-roofing-sheets",
+    "/resources/blogs/puf-panel-wall-installation",
+    "/resources/blogs/puf-panels-agriculture-mp",
+    "/resources/blogs/puf-panels-cold-storage",
+    "/resources/blogs/puf-panels-cold-storage-pharma-applications",
+    "/resources/blogs/puf-panels-education-sector",
+    "/resources/blogs/puf-panels-gujarat-case-study",
+    "/resources/blogs/puf-panels-hospitality-industry",
+    "/resources/blogs/puf-panels-maharashtra-industrial",
+    "/resources/blogs/puf-panels-rajasthan-energy-efficiency",
+    "/resources/blogs/puf-panels-soundproofing",
+    "/resources/blogs/puf-panels-sustainable-construction",
+    "/resources/blogs/puf-roofing-panels-india-climate",
+    "/resources/blogs/puf-vs-pir-vs-rockwool",
+    "/resources/blogs/puf-vs-pir-vs-rockwool-ahmedabad-climate",
+    "/resources/blogs/puf-vs-traditional-material-cost",
+    "/resources/blogs/rise-of-sustainable-peb-structures",
+    "/resources/blogs/sandwich-panel-price-india-breakdown",
+    "/resources/blogs/sandwich-panel-supplier-surat",
+    "/resources/blogs/sandwich-panel-vs-brick-wall-construction",
+    "/resources/blogs/top-puf-manufacturers-ahmedabad",
+    "/resources/blogs/turnkey-epc-project-delivery",
+    "/resources/blogs/types-of-sandwich-panels-explained",
+    "/resources/blogs/understanding-puf-sandwich-panels",
+    "/resources/blogs/warehouse-construction-company-gujarat",
+    "/resources/blogs/warehouse-construction-cost-puf-panels",
+    "/resources/blogs/warehouse-construction-guide-india",
+    "/resources/blogs/what-is-cleanroom-how-it-works",
+    "/resources/blogs/what-is-cold-storage-construction",
+    "/resources/blogs/what-is-peb-structure",
+    "/resources/blogs/what-is-pir-panel-benefits-uses",
+    "/resources/blogs/what-is-puf-panel-complete-guide",
+    "/resources/blogs/what-is-puf-panel-how-does-it-work",
+    "/resources/blogs/why-puf-panels-best-for-india-climate",
+    "/resources/brochure",
+    "/resources/faq",
+    "/resources/project-gallery",
+    "/resources/project-gallery/agrawal-metal-vithlapur",
+    "/resources/project-gallery/agro-tech-ankleshwar",
+    "/resources/project-gallery/aishwarya-dyeing-surat",
+    "/resources/project-gallery/bc-foods-mahua",
+    "/resources/project-gallery/bunge-gandhidham",
+    "/resources/project-gallery/cargill-gandhidham",
+    "/resources/project-gallery/cold-storage-mumbai",
+    "/resources/project-gallery/edkem-pharma-ahmedabad",
+    "/resources/project-gallery/fuji-silvertech-ahmedabad",
+    "/resources/project-gallery/infocity-club-gandhinagar",
+    "/resources/project-gallery/makson-pharma-surendranagar",
+    "/resources/project-gallery/motherson-marelli-sanand",
+    "/resources/project-gallery/narmada-biochem-dahej",
+    "/resources/project-gallery/pgp-glass-dahej",
+    "/resources/project-gallery/pharma-cleanroom-pune",
+    "/resources/project-gallery/rajhans-nutriments-surat",
+    "/resources/project-gallery/reliance-industries-jamnagar",
+    "/resources/project-gallery/rotomotive-anand",
+    "/resources/project-gallery/sarhad-dairy-bhuj",
+    "/resources/project-gallery/skf-ahmedabad",
+    "/resources/project-gallery/uflex-sanand",
+    "/resources/project-gallery/vyara-tiles-gangad",
+    "/resources/technical-sheet",
+    "/return-policy",
+    "/rockwool-panel-in-ahmedabad",
+    "/rockwool-panel-in-ajmer",
+    "/rockwool-panel-in-anand",
+    "/rockwool-panel-in-aurangabad",
+    "/rockwool-panel-in-bharuch",
+    "/rockwool-panel-in-bhavnagar",
+    "/rockwool-panel-in-bhilai",
+    "/rockwool-panel-in-bhilwara",
+    "/rockwool-panel-in-bhopal",
+    "/rockwool-panel-in-bhuj",
+    "/rockwool-panel-in-bilaspur",
+    "/rockwool-panel-in-chhattisgarh",
+    "/rockwool-panel-in-dahod",
+    "/rockwool-panel-in-gandhidham",
+    "/rockwool-panel-in-gandhinagar",
+    "/rockwool-panel-in-godhra",
+    "/rockwool-panel-in-gujarat",
+    "/rockwool-panel-in-gwalior",
+    "/rockwool-panel-in-himmatnagar",
+    "/rockwool-panel-in-india",
+    "/rockwool-panel-in-indore",
+    "/rockwool-panel-in-jabalpur",
+    "/rockwool-panel-in-jaipur",
+    "/rockwool-panel-in-jamnagar",
+    "/rockwool-panel-in-jodhpur",
+    "/rockwool-panel-in-junagadh",
+    "/rockwool-panel-in-kolhapur",
+    "/rockwool-panel-in-kota",
+    "/rockwool-panel-in-madhya-pradesh",
+    "/rockwool-panel-in-maharashtra",
+    "/rockwool-panel-in-mehsana",
+    "/rockwool-panel-in-morbi",
+    "/rockwool-panel-in-mumbai",
+    "/rockwool-panel-in-nadiad",
+    "/rockwool-panel-in-nagpur",
+    "/rockwool-panel-in-nashik",
+    "/rockwool-panel-in-navsari",
+    "/rockwool-panel-in-palanpur",
+    "/rockwool-panel-in-porbandar",
+    "/rockwool-panel-in-pune",
+    "/rockwool-panel-in-raipur",
+    "/rockwool-panel-in-rajasthan",
+    "/rockwool-panel-in-rajkot",
+    "/rockwool-panel-in-surat",
+    "/rockwool-panel-in-thane",
+    "/rockwool-panel-in-udaipur",
+    "/rockwool-panel-in-ujjain",
+    "/rockwool-panel-in-vadodara",
+    "/rockwool-panel-in-valsad",
+    "/rockwool-panel-in-vapi",
+    "/roofing-puf-panel-in-ahmedabad",
+    "/roofing-puf-panel-in-ajmer",
+    "/roofing-puf-panel-in-anand",
+    "/roofing-puf-panel-in-aurangabad",
+    "/roofing-puf-panel-in-bharuch",
+    "/roofing-puf-panel-in-bhavnagar",
+    "/roofing-puf-panel-in-bhilai",
+    "/roofing-puf-panel-in-bhilwara",
+    "/roofing-puf-panel-in-bhopal",
+    "/roofing-puf-panel-in-bhuj",
+    "/roofing-puf-panel-in-bilaspur",
+    "/roofing-puf-panel-in-chhattisgarh",
+    "/roofing-puf-panel-in-dahod",
+    "/roofing-puf-panel-in-gandhidham",
+    "/roofing-puf-panel-in-gandhinagar",
+    "/roofing-puf-panel-in-godhra",
+    "/roofing-puf-panel-in-gujarat",
+    "/roofing-puf-panel-in-gwalior",
+    "/roofing-puf-panel-in-himmatnagar",
+    "/roofing-puf-panel-in-india",
+    "/roofing-puf-panel-in-indore",
+    "/roofing-puf-panel-in-jabalpur",
+    "/roofing-puf-panel-in-jaipur",
+    "/roofing-puf-panel-in-jamnagar",
+    "/roofing-puf-panel-in-jodhpur",
+    "/roofing-puf-panel-in-junagadh",
+    "/roofing-puf-panel-in-kolhapur",
+    "/roofing-puf-panel-in-kota",
+    "/roofing-puf-panel-in-madhya-pradesh",
+    "/roofing-puf-panel-in-maharashtra",
+    "/roofing-puf-panel-in-mehsana",
+    "/roofing-puf-panel-in-morbi",
+    "/roofing-puf-panel-in-mumbai",
+    "/roofing-puf-panel-in-nadiad",
+    "/roofing-puf-panel-in-nagpur",
+    "/roofing-puf-panel-in-nashik",
+    "/roofing-puf-panel-in-navsari",
+    "/roofing-puf-panel-in-palanpur",
+    "/roofing-puf-panel-in-porbandar",
+    "/roofing-puf-panel-in-pune",
+    "/roofing-puf-panel-in-raipur",
+    "/roofing-puf-panel-in-rajasthan",
+    "/roofing-puf-panel-in-rajkot",
+    "/roofing-puf-panel-in-surat",
+    "/roofing-puf-panel-in-thane",
+    "/roofing-puf-panel-in-udaipur",
+    "/roofing-puf-panel-in-ujjain",
+    "/roofing-puf-panel-in-vadodara",
+    "/roofing-puf-panel-in-valsad",
+    "/roofing-puf-panel-in-vapi",
+    "/sandwich-puf-panel-in-ahmedabad",
+    "/sandwich-puf-panel-in-ajmer",
+    "/sandwich-puf-panel-in-anand",
+    "/sandwich-puf-panel-in-aurangabad",
+    "/sandwich-puf-panel-in-bharuch",
+    "/sandwich-puf-panel-in-bhavnagar",
+    "/sandwich-puf-panel-in-bhilai",
+    "/sandwich-puf-panel-in-bhilwara",
+    "/sandwich-puf-panel-in-bhopal",
+    "/sandwich-puf-panel-in-bhuj",
+    "/sandwich-puf-panel-in-bilaspur",
+    "/sandwich-puf-panel-in-chhattisgarh",
+    "/sandwich-puf-panel-in-dahod",
+    "/sandwich-puf-panel-in-gandhidham",
+    "/sandwich-puf-panel-in-gandhinagar",
+    "/sandwich-puf-panel-in-godhra",
+    "/sandwich-puf-panel-in-gujarat",
+    "/sandwich-puf-panel-in-gwalior",
+    "/sandwich-puf-panel-in-himmatnagar",
+    "/sandwich-puf-panel-in-india",
+    "/sandwich-puf-panel-in-indore",
+    "/sandwich-puf-panel-in-jabalpur",
+    "/sandwich-puf-panel-in-jaipur",
+    "/sandwich-puf-panel-in-jamnagar",
+    "/sandwich-puf-panel-in-jodhpur",
+    "/sandwich-puf-panel-in-junagadh",
+    "/sandwich-puf-panel-in-kolhapur",
+    "/sandwich-puf-panel-in-kota",
+    "/sandwich-puf-panel-in-madhya-pradesh",
+    "/sandwich-puf-panel-in-maharashtra",
+    "/sandwich-puf-panel-in-mehsana",
+    "/sandwich-puf-panel-in-morbi",
+    "/sandwich-puf-panel-in-mumbai",
+    "/sandwich-puf-panel-in-nadiad",
+    "/sandwich-puf-panel-in-nagpur",
+    "/sandwich-puf-panel-in-nashik",
+    "/sandwich-puf-panel-in-navsari",
+    "/sandwich-puf-panel-in-palanpur",
+    "/sandwich-puf-panel-in-porbandar",
+    "/sandwich-puf-panel-in-pune",
+    "/sandwich-puf-panel-in-raipur",
+    "/sandwich-puf-panel-in-rajasthan",
+    "/sandwich-puf-panel-in-rajkot",
+    "/sandwich-puf-panel-in-surat",
+    "/sandwich-puf-panel-in-thane",
+    "/sandwich-puf-panel-in-udaipur",
+    "/sandwich-puf-panel-in-ujjain",
+    "/sandwich-puf-panel-in-vadodara",
+    "/sandwich-puf-panel-in-valsad",
+    "/sandwich-puf-panel-in-vapi",
+    "/sandwich-puf-panel-manufacturer-in-india",
+    "/sandwich-puf-roofing-panel-abu-road",
+    "/sandwich-puf-roofing-panel-ajmer",
+    "/sandwich-puf-roofing-panel-alwar",
+    "/sandwich-puf-roofing-panel-barmer",
+    "/sandwich-puf-roofing-panel-bhilwara",
+    "/sandwich-puf-roofing-panel-bikaner",
+    "/sandwich-puf-roofing-panel-bundi",
+    "/sandwich-puf-roofing-panel-chittorgarh",
+    "/sandwich-puf-roofing-panel-jhalawar",
+    "/sandwich-puf-roofing-panel-jhunjhunu",
+    "/sandwich-puf-roofing-panel-jodhpur",
+    "/sandwich-puf-roofing-panel-kishangarh",
+    "/sandwich-puf-roofing-panel-kota",
+    "/sandwich-puf-roofing-panel-nagaur",
+    "/sandwich-puf-roofing-panel-neemrana",
+    "/sandwich-puf-roofing-panel-pali",
+    "/sandwich-puf-roofing-panel-pratapgarh",
+    "/sandwich-puf-roofing-panel-rajsamand",
+    "/sandwich-puf-roofing-panel-sikar",
+    "/sandwich-puf-roofing-panel-sirohi",
+    "/sandwich-puf-roofing-panel-sri-ganganagar",
+    "/sandwich-puf-roofing-panel-tonk",
+    "/sandwich-puf-roofing-panel-udaipur",
+    "/shop",
+    "/shop/cleanroom-door",
+    "/shop/cleanroom-doors",
+    "/shop/cleanroom-false-ceiling",
+    "/shop/cleanroom-flooring",
+    "/shop/cleanroom-partition",
+    "/shop/cold-storage-door",
+    "/shop/fire-door-emergency-exit",
+    "/shop/fire-rated-multipurpose-door",
+    "/shop/fm-approved-panel",
+    "/shop/hermetic-door",
+    "/shop/pir-panel",
+    "/shop/rockwool-panel",
+    "/shop/roofing-puf-panel",
+    "/shop/sandwich-puf-panel",
+    "/shop/wall-ceiling-panel",
+    "/sitemap-page",
+    "/solutions",
+    "/solutions/cleanroom-solutions",
+    "/solutions/cold-storage-construction",
+    "/solutions/non-walkable-ceiling-systems",
+    "/solutions/partition-solutions",
+    "/solutions/peb",
+    "/solutions/prefab-house",
+    "/solutions/walkable-ceiling-systems",
+    "/sound-proof-room-ball-mill",
+    "/top-puf-panel-manufacturers-in-india",
+    "/vendor-registration"
+  ],
+  "orphanPages": [
+    "/become-partner",
+    "/best-insulated-panel-for-warehouse",
+    "/door-products-directory",
+    "/fm-approved-panel-in-ajmer",
+    "/fm-approved-panel-in-anand",
+    "/fm-approved-panel-in-aurangabad",
+    "/fm-approved-panel-in-bharuch",
+    "/fm-approved-panel-in-bhavnagar",
+    "/fm-approved-panel-in-bhilai",
+    "/fm-approved-panel-in-bhilwara",
+    "/fm-approved-panel-in-bhopal",
+    "/fm-approved-panel-in-bhuj",
+    "/fm-approved-panel-in-bilaspur",
+    "/fm-approved-panel-in-chhattisgarh",
+    "/fm-approved-panel-in-dahod",
+    "/fm-approved-panel-in-gandhidham",
+    "/fm-approved-panel-in-gandhinagar",
+    "/fm-approved-panel-in-godhra",
+    "/fm-approved-panel-in-gujarat",
+    "/fm-approved-panel-in-gwalior",
+    "/fm-approved-panel-in-himmatnagar",
+    "/fm-approved-panel-in-india",
+    "/fm-approved-panel-in-indore",
+    "/fm-approved-panel-in-jabalpur",
+    "/fm-approved-panel-in-jaipur",
+    "/fm-approved-panel-in-jamnagar",
+    "/fm-approved-panel-in-jodhpur",
+    "/fm-approved-panel-in-junagadh",
+    "/fm-approved-panel-in-kolhapur",
+    "/fm-approved-panel-in-kota",
+    "/fm-approved-panel-in-madhya-pradesh",
+    "/fm-approved-panel-in-maharashtra",
+    "/fm-approved-panel-in-mehsana",
+    "/fm-approved-panel-in-morbi",
+    "/fm-approved-panel-in-mumbai",
+    "/fm-approved-panel-in-nadiad",
+    "/fm-approved-panel-in-nagpur",
+    "/fm-approved-panel-in-nashik",
+    "/fm-approved-panel-in-navsari",
+    "/fm-approved-panel-in-palanpur",
+    "/fm-approved-panel-in-porbandar",
+    "/fm-approved-panel-in-pune",
+    "/fm-approved-panel-in-raipur",
+    "/fm-approved-panel-in-rajasthan",
+    "/fm-approved-panel-in-rajkot",
+    "/fm-approved-panel-in-surat",
+    "/fm-approved-panel-in-thane",
+    "/fm-approved-panel-in-udaipur",
+    "/fm-approved-panel-in-ujjain",
+    "/fm-approved-panel-in-vadodara",
+    "/fm-approved-panel-in-valsad",
+    "/fm-approved-panel-in-vapi",
+    "/industrial-puf-panel-manufacturer-in-india",
+    "/industries/agri-processing",
+    "/industries/automobile",
+    "/industries/cold-chain",
+    "/industries/dairy",
+    "/industries/hospitality",
+    "/industries/precision-engineering",
+    "/insulated-puf-panel-manufacturer-in-india",
+    "/insulated-roof-panel-abu-road",
+    "/insulated-roof-panel-ajmer",
+    "/insulated-roof-panel-alwar",
+    "/insulated-roof-panel-barmer",
+    "/insulated-roof-panel-bhilwara",
+    "/insulated-roof-panel-bikaner",
+    "/insulated-roof-panel-bundi",
+    "/insulated-roof-panel-chittorgarh",
+    "/insulated-roof-panel-jhalawar",
+    "/insulated-roof-panel-jhunjhunu",
+    "/insulated-roof-panel-jodhpur",
+    "/insulated-roof-panel-kishangarh",
+    "/insulated-roof-panel-kota",
+    "/insulated-roof-panel-nagaur",
+    "/insulated-roof-panel-neemrana",
+    "/insulated-roof-panel-pali",
+    "/insulated-roof-panel-pratapgarh",
+    "/insulated-roof-panel-rajsamand",
+    "/insulated-roof-panel-sikar",
+    "/insulated-roof-panel-sirohi",
+    "/insulated-roof-panel-sri-ganganagar",
+    "/insulated-roof-panel-tonk",
+    "/insulated-roof-panel-udaipur",
+    "/leading-puf-panel-company-in-india",
+    "/lp/puf-panel-manufacturer-ahmedabad",
+    "/phoenixx-puf-roofing-panel-abu-road",
+    "/phoenixx-puf-roofing-panel-ajmer",
+    "/phoenixx-puf-roofing-panel-alwar",
+    "/phoenixx-puf-roofing-panel-barmer",
+    "/phoenixx-puf-roofing-panel-bhilwara",
+    "/phoenixx-puf-roofing-panel-bikaner",
+    "/phoenixx-puf-roofing-panel-bundi",
+    "/phoenixx-puf-roofing-panel-chittorgarh",
+    "/phoenixx-puf-roofing-panel-jhalawar",
+    "/phoenixx-puf-roofing-panel-jhunjhunu",
+    "/phoenixx-puf-roofing-panel-jodhpur",
+    "/phoenixx-puf-roofing-panel-kishangarh",
+    "/phoenixx-puf-roofing-panel-kota",
+    "/phoenixx-puf-roofing-panel-nagaur",
+    "/phoenixx-puf-roofing-panel-neemrana"
+  ],
+  "duplicateTitles": [],
+  "duplicateDescriptions": [],
+  "thinPages": [
+    {
+      "file": "app/become-partner/page.tsx",
+      "wordCount": 205
+    },
+    {
+      "file": "app/career/page.tsx",
+      "wordCount": 261
+    },
+    {
+      "file": "app/clientele/page.tsx",
+      "wordCount": 296
+    },
+    {
+      "file": "app/contact-us/page.tsx",
+      "wordCount": 168
+    },
+    {
+      "file": "app/door-products-directory/page.tsx",
+      "wordCount": 124
+    },
+    {
+      "file": "app/get-a-quote/page.tsx",
+      "wordCount": 280
+    },
+    {
+      "file": "app/industrial-puf-panel-manufacturer-in-india/page.tsx",
+      "wordCount": 269
+    },
+    {
+      "file": "app/industries/page.tsx",
+      "wordCount": 160
+    },
+    {
+      "file": "app/insulated-puf-panel-manufacturer-in-india/page.tsx",
+      "wordCount": 273
+    },
+    {
+      "file": "app/leading-puf-panel-company-in-india/page.tsx",
+      "wordCount": 296
+    },
+    {
+      "file": "app/lp/puf-panel-manufacturer-ahmedabad/page.tsx",
+      "wordCount": 21
+    },
+    {
+      "file": "app/premium-puf-panel-manufacturer-in-india/page.tsx",
+      "wordCount": 279
+    },
+    {
+      "file": "app/products/cleanroom-solutions/page.tsx",
+      "wordCount": 270
+    },
+    {
+      "file": "app/products/doors/page.tsx",
+      "wordCount": 268
+    },
+    {
+      "file": "app/puf-panel-company-in-india/page.tsx",
+      "wordCount": 281
+    },
+    {
+      "file": "app/puf-panels-manufacturer-india/page.tsx",
+      "wordCount": 282
+    },
+    {
+      "file": "app/resources/blogs/page.tsx",
+      "wordCount": 113
+    },
+    {
+      "file": "app/resources/brochure/page.tsx",
+      "wordCount": 92
+    },
+    {
+      "file": "app/resources/page.tsx",
+      "wordCount": 136
+    },
+    {
+      "file": "app/resources/project-gallery/page.tsx",
+      "wordCount": 157
+    },
+    {
+      "file": "app/resources/technical-sheet/page.tsx",
+      "wordCount": 96
+    },
+    {
+      "file": "app/sandwich-puf-panel-manufacturer-in-india/page.tsx",
+      "wordCount": 285
+    },
+    {
+      "file": "app/shop/page.tsx",
+      "wordCount": 211
+    },
+    {
+      "file": "app/sitemap-page/page.tsx",
+      "wordCount": 94
+    },
+    {
+      "file": "app/solutions/page.tsx",
+      "wordCount": 178
+    },
+    {
+      "file": "app/thank-you/page.tsx",
+      "wordCount": 176
+    },
+    {
+      "file": "app/vendor-registration/page.tsx",
+      "wordCount": 267
+    }
+  ],
+  "headingIssues": [
+    {
+      "file": "app/(site)/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/[productLocation]/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/about-us/page.tsx",
+      "issues": [
+        "multiple_h1:2",
+        "heading_skip:h2_to_h4"
+      ]
+    },
+    {
+      "file": "app/become-partner/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/best-density-puf-panel-for-insulation/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/best-insulated-panel-for-warehouse/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/best-puf-panel-brand-in-india/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/best-puf-panel-for-clean-room/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/best-puf-panel-for-cold-storage/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/best-puf-panel-for-industrial-shed/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/best-puf-panel-manufacturer-in-india/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/best-puf-panel-thickness-for-roofing/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/best-quality-sandwich-puf-panel/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/best-roofing-puf-panel-for-factory/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/business-terms/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/career/page.tsx",
+      "issues": [
+        "multiple_h1:2",
+        "heading_skip:h2_to_h4"
+      ]
+    },
+    {
+      "file": "app/clientele/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/contact-us/page.tsx",
+      "issues": [
+        "multiple_h1:2",
+        "heading_skip:h1_to_h3"
+      ]
+    },
+    {
+      "file": "app/door-products-directory/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/get-a-quote/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/industrial-puf-panel-manufacturer-in-india/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/industries/[slug]/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/industries/page.tsx",
+      "issues": [
+        "multiple_h1:2",
+        "heading_skip:h1_to_h3"
+      ]
+    },
+    {
+      "file": "app/insulated-puf-panel-manufacturer-in-india/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/leading-puf-panel-company-in-india/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/lp/puf-panel-manufacturer-ahmedabad/page.tsx",
+      "issues": [
+        "missing_h1"
+      ]
+    },
+    {
+      "file": "app/phoenixx-puf-roofing-panels/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/premium-puf-panel-manufacturer-in-india/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/privacy-policy/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/products/[category]/[product]/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/products/[category]/page.tsx",
+      "issues": [
+        "multiple_h1:4"
+      ]
+    },
+    {
+      "file": "app/products/cleanroom-solutions/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/products/doors/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/products/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/puf-panel-company-in-india/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/puf-panel-manufacturer-in-ahmedabad/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/puf-panel-manufacturer-in-chhatrapati-sambhajinagar/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/puf-panel-manufacturer-in-dholera/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/puf-panel-manufacturer-in-jamnagar/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/puf-panel-manufacturer-in-kolhapur/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/puf-panel-manufacturer-in-mumbai/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/puf-panel-manufacturer-in-nagpur/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/puf-panel-manufacturer-in-nashik/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/puf-panel-manufacturer-in-pune/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/puf-panel-manufacturer-in-rajkot/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/puf-panel-manufacturer-in-surat/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/puf-panel-manufacturer-in-thane/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/puf-panel-manufacturer-in-vadodara/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/puf-panel-manufacturer-in-vapi/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/puf-panel-suppliers-in-india/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    }
+  ],
+  "imageIssues": [],
+  "jsonLdIssues": [],
+  "inboundLinkCounts": {
+    "/become-partner": 1,
+    "/best-insulated-panel-for-warehouse": 1,
+    "/door-products-directory": 1,
+    "/fm-approved-panel-in-ajmer": 0,
+    "/fm-approved-panel-in-anand": 0,
+    "/fm-approved-panel-in-aurangabad": 0,
+    "/fm-approved-panel-in-bharuch": 0,
+    "/fm-approved-panel-in-bhavnagar": 0,
+    "/fm-approved-panel-in-bhilai": 0,
+    "/fm-approved-panel-in-bhilwara": 0,
+    "/fm-approved-panel-in-bhopal": 0,
+    "/fm-approved-panel-in-bhuj": 0,
+    "/fm-approved-panel-in-bilaspur": 0,
+    "/fm-approved-panel-in-chhattisgarh": 0,
+    "/fm-approved-panel-in-dahod": 0,
+    "/fm-approved-panel-in-gandhidham": 0,
+    "/fm-approved-panel-in-gandhinagar": 0,
+    "/fm-approved-panel-in-godhra": 0,
+    "/fm-approved-panel-in-gujarat": 0,
+    "/fm-approved-panel-in-gwalior": 0,
+    "/fm-approved-panel-in-himmatnagar": 0,
+    "/fm-approved-panel-in-india": 0,
+    "/fm-approved-panel-in-indore": 0,
+    "/fm-approved-panel-in-jabalpur": 0,
+    "/fm-approved-panel-in-jaipur": 0,
+    "/fm-approved-panel-in-jamnagar": 0,
+    "/fm-approved-panel-in-jodhpur": 0,
+    "/fm-approved-panel-in-junagadh": 0,
+    "/fm-approved-panel-in-kolhapur": 0,
+    "/fm-approved-panel-in-kota": 0,
+    "/fm-approved-panel-in-madhya-pradesh": 0,
+    "/fm-approved-panel-in-maharashtra": 0,
+    "/fm-approved-panel-in-mehsana": 0,
+    "/fm-approved-panel-in-morbi": 0,
+    "/fm-approved-panel-in-mumbai": 0,
+    "/fm-approved-panel-in-nadiad": 0,
+    "/fm-approved-panel-in-nagpur": 0,
+    "/fm-approved-panel-in-nashik": 0,
+    "/fm-approved-panel-in-navsari": 0,
+    "/fm-approved-panel-in-palanpur": 0,
+    "/fm-approved-panel-in-porbandar": 0,
+    "/fm-approved-panel-in-pune": 0,
+    "/fm-approved-panel-in-raipur": 0,
+    "/fm-approved-panel-in-rajasthan": 0,
+    "/fm-approved-panel-in-rajkot": 0,
+    "/fm-approved-panel-in-surat": 0,
+    "/fm-approved-panel-in-thane": 0,
+    "/fm-approved-panel-in-udaipur": 0,
+    "/fm-approved-panel-in-ujjain": 0,
+    "/fm-approved-panel-in-vadodara": 0,
+    "/fm-approved-panel-in-valsad": 0,
+    "/fm-approved-panel-in-vapi": 0,
+    "/industrial-puf-panel-manufacturer-in-india": 0,
+    "/industries/agri-processing": 0,
+    "/industries/automobile": 0,
+    "/industries/cold-chain": 1,
+    "/industries/dairy": 0,
+    "/industries/hospitality": 1,
+    "/industries/precision-engineering": 0,
+    "/insulated-puf-panel-manufacturer-in-india": 0,
+    "/insulated-roof-panel-abu-road": 0,
+    "/insulated-roof-panel-ajmer": 0,
+    "/insulated-roof-panel-alwar": 0,
+    "/insulated-roof-panel-barmer": 0,
+    "/insulated-roof-panel-bhilwara": 0,
+    "/insulated-roof-panel-bikaner": 0,
+    "/insulated-roof-panel-bundi": 0,
+    "/insulated-roof-panel-chittorgarh": 0,
+    "/insulated-roof-panel-jhalawar": 0,
+    "/insulated-roof-panel-jhunjhunu": 0,
+    "/insulated-roof-panel-jodhpur": 0,
+    "/insulated-roof-panel-kishangarh": 0,
+    "/insulated-roof-panel-kota": 0,
+    "/insulated-roof-panel-nagaur": 0,
+    "/insulated-roof-panel-neemrana": 0,
+    "/insulated-roof-panel-pali": 0,
+    "/insulated-roof-panel-pratapgarh": 0,
+    "/insulated-roof-panel-rajsamand": 0,
+    "/insulated-roof-panel-sikar": 0,
+    "/insulated-roof-panel-sirohi": 0,
+    "/insulated-roof-panel-sri-ganganagar": 0,
+    "/insulated-roof-panel-tonk": 0,
+    "/insulated-roof-panel-udaipur": 0,
+    "/leading-puf-panel-company-in-india": 0,
+    "/lp/puf-panel-manufacturer-ahmedabad": 0,
+    "/phoenixx-puf-roofing-panel-abu-road": 0,
+    "/phoenixx-puf-roofing-panel-ajmer": 0,
+    "/phoenixx-puf-roofing-panel-alwar": 0,
+    "/phoenixx-puf-roofing-panel-barmer": 0,
+    "/phoenixx-puf-roofing-panel-bhilwara": 0,
+    "/phoenixx-puf-roofing-panel-bikaner": 0,
+    "/phoenixx-puf-roofing-panel-bundi": 0,
+    "/phoenixx-puf-roofing-panel-chittorgarh": 0,
+    "/phoenixx-puf-roofing-panel-jhalawar": 0,
+    "/phoenixx-puf-roofing-panel-jhunjhunu": 0,
+    "/phoenixx-puf-roofing-panel-jodhpur": 0,
+    "/phoenixx-puf-roofing-panel-kishangarh": 0,
+    "/phoenixx-puf-roofing-panel-kota": 0,
+    "/phoenixx-puf-roofing-panel-nagaur": 0,
+    "/phoenixx-puf-roofing-panel-neemrana": 0
+  }
+}

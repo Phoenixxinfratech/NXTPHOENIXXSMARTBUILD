@@ -21,6 +21,8 @@ export interface GeoCity {
   climate: string;
   /** Short paragraph unique to this city for intro variation */
   cityIntro: string;
+  /** Locally relevant buyer pain point for content variation */
+  localPainPoint?: string;
 }
 
 export type GeoPageTypeId =
@@ -123,6 +125,7 @@ export const geoCities: Record<string, GeoCity> = {
     logisticsNote: 'Just 30 km from the Beawar warehouse via NH-48, Ajmer receives same-day delivery with minimal transport cost.',
     climate: 'Hot semi-arid climate with summer temperatures exceeding 45°C and significant monsoon rainfall, demanding robust thermal insulation for industrial roofing.',
     cityIntro: 'Ajmer, a major industrial and cultural centre in central Rajasthan, hosts a growing industrial base along the Delhi-Ahmedabad industrial corridor. Its proximity to Beawar — just 30 km — makes it the most accessible city for Phoenixx PUF roofing panel supply.',
+    localPainPoint: 'Textile and marble processing units in Ajmer face 45°C+ summer roof temperatures — insulated PUF roofing reduces internal heat by 8–12°C without additional HVAC load.',
   },
   kishangarh: {
     slug: 'kishangarh',
@@ -137,6 +140,7 @@ export const geoCities: Record<string, GeoCity> = {
     logisticsNote: 'Located 40 km from Beawar on NH-48, Kishangarh benefits from rapid same-day panel dispatch.',
     climate: 'Semi-arid conditions with intense summer heat and dust storms; industrial facilities need insulated roofing to maintain product quality in marble and ceramic factories.',
     cityIntro: 'Known as India\'s marble city, Kishangarh has hundreds of processing units and warehouses that require durable, heat-resistant roofing. Phoenixx PUF roofing panels from Beawar reach Kishangarh within an hour.',
+    localPainPoint: 'Marble polishing and ceramic units generate high process heat — insulated roofing keeps shed temperatures workable and protects finished stone inventory.',
   },
   bhilwara: {
     slug: 'bhilwara',
@@ -151,6 +155,7 @@ export const geoCities: Record<string, GeoCity> = {
     logisticsNote: 'Approximately 85 km south-east of Beawar, connected via NH-58. Delivery within 3-4 hours.',
     climate: 'Extreme heat in summer reaching 46°C; textile mills and warehouses require insulated roof panels to protect temperature-sensitive manufacturing processes.',
     cityIntro: 'Bhilwara, the textile capital of Rajasthan, houses over 800 textile units and a growing steel re-rolling sector. The city\'s industrial scale creates sustained demand for premium insulated roofing systems.',
+    localPainPoint: 'Textile mills lose productivity when shed temperatures spike past 40°C — 60–80mm PUF roofing panels cut radiant heat and stabilise weaving hall conditions.',
   },
   pali: {
     slug: 'pali',
@@ -165,6 +170,7 @@ export const geoCities: Record<string, GeoCity> = {
     logisticsNote: 'Connected to Beawar via NH-62 at 65 km distance. Direct highway access enables half-day delivery.',
     climate: 'Hot arid climate with summer peaks above 47°C. Industrial sheds without insulated roofing face extreme heat gain, impacting worker safety and product quality.',
     cityIntro: 'Pali is a thriving textile dyeing and industrial hub west of Beawar. Its chemical and textile units require corrosion-resistant, insulated roofing panels to withstand harsh processing environments.',
+    localPainPoint: 'Dyeing and chemical units in Pali need insulated, corrosion-resistant roofing that holds up against heat and process humidity.',
   },
   jodhpur: {
     slug: 'jodhpur',
@@ -179,6 +185,7 @@ export const geoCities: Record<string, GeoCity> = {
     logisticsNote: 'Major industrial city 185 km west of Beawar via NH-62. Full-truckload deliveries complete within a single day.',
     climate: 'Extremely hot desert climate with temperatures above 48°C in summer and wide diurnal temperature swings; insulated PUF roofing is critical for energy-efficient industrial operations.',
     cityIntro: 'Jodhpur, the largest city in western Rajasthan, has a rapidly expanding industrial sector with multiple RIICO zones. Its extreme desert heat makes insulated PUF roofing an operational necessity for factories, warehouses, and cold storage units.',
+    localPainPoint: 'Engineering and handicraft warehouses in Jodhpur face extreme daytime heat — insulated PUF roofing keeps workspaces usable without oversized HVAC.',
   },
   udaipur: {
     slug: 'udaipur',
@@ -207,6 +214,7 @@ export const geoCities: Record<string, GeoCity> = {
     logisticsNote: '155 km from Beawar via NH-79. Regular panel supply possible with next-day delivery guarantee.',
     climate: 'Hot semi-arid region with monsoon variability. Cement plants and mining facilities need durable, weather-resistant roofing that withstands high particulate environments.',
     cityIntro: 'Chittorgarh is a prominent cement and mining district in southern Rajasthan. Major cement plants and limestone quarries here rely on heavy-duty industrial roofing, making it a key market for Phoenixx PUF panels.',
+    localPainPoint: 'Mining and mineral processing sheds around Udaipur need dust-tolerant insulated cladding with reliable thermal performance.',
   },
   rajsamand: {
     slug: 'rajsamand',
@@ -221,6 +229,7 @@ export const geoCities: Record<string, GeoCity> = {
     logisticsNote: '110 km from Beawar via state highways. Delivery within 4-5 hours through established transport routes.',
     climate: 'Semi-arid climate with significant summer heat; marble and mining operations generate heat internally, compounding the need for insulated roofing.',
     cityIntro: 'Rajsamand is a marble and mineral processing powerhouse between Beawar and Udaipur. Its stone processing sheds and warehouses require robust, heat-reflective PUF roofing panels.',
+    localPainPoint: 'Cement and mining support buildings around Chittorgarh require durable insulated roofs that resist heat and abrasive dust.',
   },
   nagaur: {
     slug: 'nagaur',
@@ -235,6 +244,7 @@ export const geoCities: Record<string, GeoCity> = {
     logisticsNote: '135 km north-west of Beawar. Connected via state highway network with reliable transport availability.',
     climate: 'Hot arid climate with extreme summer temperatures. Salt processing and food storage facilities require insulated roofing to maintain stable internal conditions.',
     cityIntro: 'Nagaur district, known for its salt industry and agri-processing units, presents growing opportunities for industrial roofing upgrades. Phoenixx PUF panels deliver the thermal protection these facilities require.',
+    localPainPoint: 'Marble and mineral units in Rajsamand lose efficiency in peak summer — insulated panels reduce shed heat load substantially.',
   },
   sikar: {
     slug: 'sikar',
@@ -249,6 +259,7 @@ export const geoCities: Record<string, GeoCity> = {
     logisticsNote: '195 km north-east of Beawar via NH-48 and state highways. Delivery within one business day.',
     climate: 'Semi-arid with hot summers exceeding 45°C. Electronics manufacturing and automotive component plants need temperature-controlled environments under insulated roofing.',
     cityIntro: 'Sikar is part of the Shekhawati industrial belt with expanding electronics and automotive manufacturing. Its modern factories demand energy-efficient insulated roofing solutions from trusted suppliers like Phoenixx.',
+    localPainPoint: 'Agro warehouses and gypsum units near Nagaur need insulated roofs that protect stored goods from Rajasthan heat spikes.',
   },
   jhunjhunu: {
     slug: 'jhunjhunu',
@@ -277,6 +288,7 @@ export const geoCities: Record<string, GeoCity> = {
     logisticsNote: '290 km from Beawar near the Delhi-NCR corridor. Larger projects served via dedicated transport.',
     climate: 'Semi-arid with hot summers and cold winters. Major automobile plants and electronics facilities need year-round climate control under insulated roofing.',
     cityIntro: 'Alwar anchors the Delhi-Mumbai Industrial Corridor in Rajasthan. Its automobile, electronics, and pharmaceutical plants operate at national scale, creating sustained demand for premium insulated roofing panels.',
+    localPainPoint: 'Food processing and warehouse operators in Sikar specify insulated panels to cut cooling costs during 45°C summers.',
   },
   neemrana: {
     slug: 'neemrana',
@@ -305,6 +317,7 @@ export const geoCities: Record<string, GeoCity> = {
     logisticsNote: '240 km south-east of Beawar via NH-76. Regular deliveries for power plant and industrial projects.',
     climate: 'Hot and humid summers with temperatures above 45°C; power plants and chemical industries need corrosion-resistant, thermally insulated roofing.',
     cityIntro: 'Kota is Rajasthan\'s industrial powerhouse on the Chambal river, with major thermal power stations and chemical complexes. These heavy industries require high-performance PUF roofing panels for both roofing and cladding.',
+    localPainPoint: 'Education campuses and industrial sheds in Kota need energy-efficient insulated roofing to control summer heat and electricity costs.',
   },
   bundi: {
     slug: 'bundi',
@@ -319,6 +332,7 @@ export const geoCities: Record<string, GeoCity> = {
     logisticsNote: '200 km from Beawar via state highways. Deliveries coordinated through Kota logistics hub.',
     climate: 'Semi-arid with intense summer heat and monsoon variability. Agricultural processing and food storage need temperature-stable roofing solutions.',
     cityIntro: 'Bundi\'s emerging industrial sector focuses on agri-processing and stone quarrying. As the district modernises its industrial infrastructure, demand for quality insulated roofing is growing steadily.',
+    localPainPoint: 'Agro-processing units near Bundi benefit from insulated roofing that protects grain and food stocks from heat damage.',
   },
   barmer: {
     slug: 'barmer',
@@ -347,6 +361,7 @@ export const geoCities: Record<string, GeoCity> = {
     logisticsNote: '210 km south-west of Beawar on the Gujarat border route. Strategic location for cross-border industrial supply.',
     climate: 'Semi-arid with slightly milder temperatures due to Aravalli proximity. Marble processing units need insulated roofing for dust and heat management.',
     cityIntro: 'Abu Road serves as a key industrial gateway between Rajasthan and Gujarat. Its marble processing and warehousing sector benefits from Phoenixx PUF roofing panels shipped from the nearby Beawar hub.',
+    localPainPoint: 'Pharmaceutical and engineering units around Abu Road require insulated panels that handle summer heat and monsoon humidity.',
   },
   bikaner: {
     slug: 'bikaner',
@@ -361,6 +376,7 @@ export const geoCities: Record<string, GeoCity> = {
     logisticsNote: '250 km north-west of Beawar via NH-89. Regular supply route established for desert region projects.',
     climate: 'Extreme desert climate with summer temperatures above 48°C and freezing winter nights. Cold storage and food processing demand high-performance insulated roofing.',
     cityIntro: 'Bikaner is a food processing hub famous for its snack industry and growing cold storage infrastructure. The extreme desert climate makes insulated PUF roofing panels essential for virtually every industrial facility.',
+    localPainPoint: 'Auto and engineering units in Alwar/Bhiwadi corridor need insulated PEB roofing for paint shops and assembly halls.',
   },
   'sri-ganganagar': {
     slug: 'sri-ganganagar',
@@ -375,6 +391,7 @@ export const geoCities: Record<string, GeoCity> = {
     logisticsNote: '300 km north of Beawar, at the edge of the supply radius. Projects served via Bikaner logistics route.',
     climate: 'Extreme continental climate — scorching summers above 48°C and cold winters below 2°C. Sugar mills and agri-processing need year-round thermal insulation.',
     cityIntro: 'Sri Ganganagar, Rajasthan\'s northernmost industrial district, is an agricultural powerhouse with sugar mills and food processing plants that require reliable insulated roofing for extreme temperature swings.',
+    localPainPoint: 'Cold storage and agro warehouses in Sri Ganganagar rely on high-thickness PUF panels for produce preservation through extreme summer–winter swings.',
   },
   tonk: {
     slug: 'tonk',
@@ -389,6 +406,7 @@ export const geoCities: Record<string, GeoCity> = {
     logisticsNote: '140 km east of Beawar. Connected via state highways with reliable transport within 5-6 hours.',
     climate: 'Semi-arid with hot summers; leather processing and agri-units need ventilated, insulated roofing to manage heat and odour control.',
     cityIntro: 'Tonk\'s diverse small-scale manufacturing and agri-processing sector is upgrading to modern insulated roofing as the district develops its industrial infrastructure.',
+    localPainPoint: 'Agro and light industrial sheds in Tonk need affordable insulated roofing that cuts summer heat gain.',
   },
   jhalawar: {
     slug: 'jhalawar',
@@ -403,6 +421,7 @@ export const geoCities: Record<string, GeoCity> = {
     logisticsNote: '280 km south-east of Beawar. Deliveries coordinated via the Kota supply corridor.',
     climate: 'Sub-humid to semi-arid; receives higher rainfall than western Rajasthan, requiring weatherproof roofing with superior sealing.',
     cityIntro: 'Jhalawar, known for its citrus orchards and agri-processing, is developing modern cold storage and processing facilities that benefit from Phoenixx insulated PUF roofing panels.',
+    localPainPoint: 'Japanese Zone units in Neemrana demand precise temperature control — insulated sandwich panels reduce HVAC load in PEB sheds.',
   },
   pratapgarh: {
     slug: 'pratapgarh',
@@ -417,6 +436,7 @@ export const geoCities: Record<string, GeoCity> = {
     logisticsNote: '230 km south of Beawar. Supply routed through Udaipur-Chittorgarh corridor.',
     climate: 'Semi-arid transitioning to sub-humid with moderate monsoons. Mining facilities need weather-resistant, durable roofing.',
     cityIntro: 'Pratapgarh\'s mining and herbal processing industries present niche opportunities for industrial roofing. Phoenixx PUF panels provide the durability and insulation these facilities demand.',
+    localPainPoint: 'Mining and small industrial units in Pratapgarh need durable insulated roofs for hot, dusty site conditions.',
   },
   sirohi: {
     slug: 'sirohi',
@@ -431,6 +451,7 @@ export const geoCities: Record<string, GeoCity> = {
     logisticsNote: '175 km south-west of Beawar. Well-connected via NH-14 for regular panel supply.',
     climate: 'Semi-arid with Aravalli influence; marble processing and cement plants produce high internal heat requiring effective roof insulation.',
     cityIntro: 'Sirohi district\'s marble and cement industries create consistent demand for industrial roofing solutions. Phoenixx PUF roofing panels from Beawar provide the thermal performance and durability these heavy industries require.',
+    localPainPoint: 'Marble and engineering units near Sirohi require insulated roofing that reduces heat stress inside processing sheds.',
   },
 };
 
@@ -630,6 +651,14 @@ export function generateGeoFAQs(result: GeoSlugResult): GeoFAQ[] {
 
   const faqs: GeoFAQ[] = [
     {
+      question: `Which PUF roofing panel is best for factories in ${city.name}?`,
+      answer: `For most factories in ${city.name}, 50–80mm trapezoidal PUF roofing panels with PPGI/PPGL skins provide the best balance of thermal performance, span capability, and cost. Fire-sensitive processes may require PIR or Rockwool cores. Phoenixx engineers recommend thickness based on heat load and building use.`,
+    },
+    {
+      question: `How much do PUF roofing panels cost in ${city.name}?`,
+      answer: `Delivered pricing for ${city.name} typically ranges from ₹90–220 per sq.ft depending on thickness, coating, and quantity. Distance from Beawar (${city.distanceFromBeawar} km) is included in logistics planning. Request a project-specific quotation for accurate costing.`,
+    },
+    {
       question: `Where can I buy PUF roofing panels in ${city.name}?`,
       answer: `Phoenixx Smart Build supplies premium PUF roofing panels to ${city.name} from its Beawar warehouse, just ${city.distanceFromBeawar} km away. Contact us for same-day dispatch and competitive project pricing.`,
     },
@@ -643,7 +672,7 @@ export function generateGeoFAQs(result: GeoSlugResult): GeoFAQ[] {
     },
     {
       question: `What industries in ${city.name} use PUF roofing panels?`,
-      answer: `Key industries in ${city.name} using Phoenixx PUF roofing panels include ${city.keyIndustries.slice(0, 4).join(', ')}. These panels provide thermal insulation, weather protection, and energy efficiency for industrial roofing.`,
+      answer: `Key industries in ${city.name} using Phoenixx PUF roofing panels include ${city.keyIndustries.slice(0, 4).join(', ')}. These panels provide thermal insulation, weather protection, and energy efficiency for industrial roofing.${city.localPainPoint ? ` ${city.localPainPoint}` : ''}`,
     },
     {
       question: `Are Phoenixx PUF roofing panels suitable for the ${city.name} climate?`,

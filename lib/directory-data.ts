@@ -228,13 +228,27 @@ function buildAllSections(): DirectorySection[] {
   sections.push({
     id: 'resources',
     heading: 'Resources',
-    description: 'Technical sheets, brochures, FAQs, and reference materials.',
+    description: 'Technical sheets, brochures, FAQs, glossary, and reference materials.',
     links: [
       { href: '/resources', label: 'Resources Hub' },
       { href: '/resources/technical-sheet', label: 'Technical Sheets' },
       { href: '/resources/brochure', label: 'Brochures' },
       { href: '/resources/faq', label: 'FAQ' },
+      { href: '/resources/glossary', label: 'Industrial Glossary' },
+      { href: '/certifications', label: 'Certifications & Standards' },
     ],
+  });
+
+  // ── Export Markets ──
+  const exportSlugs = ['kenya', 'tanzania', 'uganda', 'rwanda', 'ghana', 'zambia', 'botswana', 'namibia', 'mozambique', 'angola'];
+  sections.push({
+    id: 'export',
+    heading: 'Export Markets — Africa',
+    description: 'PHOENIXX SMARTBUILD exports PUF panels and insulated building solutions to African markets.',
+    links: exportSlugs.map((slug) => ({
+      href: `/export/${slug}`,
+      label: `PUF Panel Export to ${slug.charAt(0).toUpperCase() + slug.slice(1)}`,
+    })),
   });
 
   // ── Product-in-Location Pages (5 products x 48 locations = 240) ──

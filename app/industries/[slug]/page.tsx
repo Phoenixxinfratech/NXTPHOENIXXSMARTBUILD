@@ -5,6 +5,9 @@ import { notFound } from 'next/navigation';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
+import { RelatedResources } from '@/components/blocks/related-resources';
+import { getRelatedLinksForIndustry } from '@/lib/internal-links';
+import { AeoContentBlocks, DEFAULT_PUF_SPECS } from '@/components/seo/aeo-content-blocks';
 
 // Industry images mapping
 const industryImages: Record<string, string[]> = {
@@ -397,6 +400,37 @@ export default async function IndustryDetailPage({ params }: Props) {
           </section>
         )}
 
+        {/* Technical Insights — AEO */}
+        <section className="section-padding bg-slate-50">
+          <div className="container-custom max-w-4xl">
+            <AeoContentBlocks
+              voiceSearchHeading={`What panel system fits ${data.title} facilities?`}
+              definition={`${data.longDescription.split('. ').slice(0, 2).join('. ')}. Buyers in this sector usually choose between hygiene finish, fire class, and temperature control first — PHOENIXX maps those constraints to PUF, PIR, Rockwool, or cleanroom panel systems before quoting.`}
+              specs={DEFAULT_PUF_SPECS}
+              pros={[
+                'Application-led thickness and fire-rating recommendations, not generic SKUs',
+                'Smooth, cleanable finishes for regulated production and washdown zones',
+                'Faster expansion of halls and cold rooms using prefabricated panel modules',
+                'Standards documentation to support audits and project approvals',
+              ]}
+              cons={[
+                'Process and regulatory requirements differ by product line and facility grade',
+                'Food/pharma skins and coatings can raise material cost versus standard PPGI',
+              ]}
+            />
+            <p className="mt-4 text-sm text-slate-500">
+              Glossary:{' '}
+              <Link href="/resources/glossary#puf-panel" className="text-blue-600 hover:underline">PUF Panel</Link>
+              {' · '}
+              <Link href="/resources/glossary#cleanroom" className="text-blue-600 hover:underline">Cleanroom</Link>
+              {' · '}
+              <Link href="/resources/glossary#cold-chain" className="text-blue-600 hover:underline">Cold Chain</Link>
+              {' · '}
+              <Link href="/resources/glossary#hvac" className="text-blue-600 hover:underline">HVAC</Link>
+            </p>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className={`py-20 bg-gradient-to-r ${data.gradient}`}>
           <div className="container-custom text-center">
@@ -422,6 +456,7 @@ export default async function IndustryDetailPage({ params }: Props) {
             </div>
           </div>
         </section>
+        <RelatedResources links={getRelatedLinksForIndustry(slug)} />
       </main>
       <Footer />
     </div>

@@ -9,7 +9,9 @@ import { authorityBlogs } from './authority-blogs';
 import { serpBlogsPart1 } from './serp-blogs-part1';
 import { serpBlogsPart2 } from './serp-blogs-part2';
 import { serpBlogsPart3 } from './serp-blogs-part3';
+import { seoMissionBlogs } from './seo-mission-blogs';
 import { getBlogCoverImage } from './blog-images';
+import { getAuthorForBlog } from '@/lib/blog-authors';
 
 export type { BlogPost, BlogListing };
 
@@ -82,18 +84,25 @@ const allBlogsRaw: Record<string, BlogPost> = {
   ...serpBlogsPart1,
   ...serpBlogsPart2,
   ...serpBlogsPart3,
+  ...seoMissionBlogs,
 };
 
 // Apply scheduled dates and cover images to blog records
 export const blogPosts: Record<string, BlogPost> = Object.fromEntries(
-  Object.entries(allBlogsRaw).map(([slug, post]) => [
-    slug,
-    {
-      ...post,
-      ...(publishSchedule[slug] ? { date: publishSchedule[slug] } : {}),
-      coverImage: post.coverImage || getBlogCoverImage(slug),
-    },
-  ])
+  Object.entries(allBlogsRaw).map(([slug, post]) => {
+    const authorInfo = getAuthorForBlog(slug);
+    return [
+      slug,
+      {
+        ...post,
+        author: post.author.name === 'Engineering Team'
+          ? { name: authorInfo.name, role: authorInfo.role }
+          : post.author,
+        ...(publishSchedule[slug] ? { date: publishSchedule[slug] } : {}),
+        coverImage: post.coverImage || getBlogCoverImage(slug),
+      },
+    ];
+  })
 );
 
 export function getBlogPost(slug: string): BlogPost | undefined {

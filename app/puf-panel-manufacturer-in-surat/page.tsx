@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
+import { CityManufacturerAeo } from '@/components/seo/city-manufacturer-aeo';
 
 export const metadata: Metadata = {
   title: 'PUF Panel Manufacturer in Surat | PHOENIXX',
@@ -101,9 +102,7 @@ export default function SuratPage() {
                 PUF Panel Manufacturer in Surat
               </h1>
               <p className="mt-6 text-xl text-slate-300 max-w-3xl">
-                PHOENIXX SmartBuild is your trusted PUF panel manufacturer in Surat, delivering 
-                high-performance insulated panels to the textile capital of India. We serve industries 
-                across Sachin GIDC, Pandesara GIDC, Hazira, and all major industrial zones in South Gujarat.
+                Coastal humidity and salt air around Sachin, Pandesara, and Hazira wear bare metal roofs fast. PHOENIXX supplies PUF panels to Surat with marine-grade coating options, so textile, diamond, and chemical units get insulation that holds through monsoon seasons — not just summer heat.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link
@@ -324,6 +323,8 @@ export default function SuratPage() {
             </div>
           </div>
         </section>
+        <CityManufacturerAeo cityName="Surat" />
+
       </main>
       <Footer />
     </div>
