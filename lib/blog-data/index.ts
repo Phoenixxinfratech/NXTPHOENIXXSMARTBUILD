@@ -10,6 +10,7 @@ import { serpBlogsPart1 } from './serp-blogs-part1';
 import { serpBlogsPart2 } from './serp-blogs-part2';
 import { serpBlogsPart3 } from './serp-blogs-part3';
 import { seoMissionBlogs } from './seo-mission-blogs';
+import { exportBlogs } from './export-blogs';
 import { getBlogCoverImage } from './blog-images';
 import { getAuthorForBlog } from '@/lib/blog-authors';
 
@@ -85,6 +86,7 @@ const allBlogsRaw: Record<string, BlogPost> = {
   ...serpBlogsPart2,
   ...serpBlogsPart3,
   ...seoMissionBlogs,
+  ...exportBlogs,
 };
 
 // Apply scheduled dates and cover images to blog records

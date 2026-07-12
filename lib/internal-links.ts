@@ -3,6 +3,13 @@
  */
 import { products, locations, getLocation } from '@/lib/landing-page-data';
 import { getAllBlogSlugs } from '@/lib/blog-data';
+import {
+  getExportCountry,
+  getAllExportCountrySlugs,
+  getCitiesForCountry,
+  getIndustriesForCountry,
+  getExportIndustry,
+} from '@/lib/export-data';
 
 export interface RelatedLink {
   href: string;
@@ -165,4 +172,116 @@ export function getRelatedLinksForBlog(blogSlug: string, relatedProducts?: { hre
   links.push({ href: '/get-a-quote', label: 'Get a Quote', category: 'resource' });
 
   return links.slice(0, 10);
+}
+
+const EXPORT_BLOG_SLUGS = [
+  'export-puf-panels-africa-guide',
+  'importing-puf-panels-east-africa',
+  'cold-chain-panels-kenya-guide',
+  'container-loading-puf-panels-guide',
+  'mining-camp-panels-africa',
+];
+
+export function getRelatedLinksForExport(
+  countrySlug: string,
+  sub?: string,
+  subType?: 'city' | 'industry'
+): RelatedLink[] {
+  const country = getExportCountry(countrySlug);
+  if (!country) return [];
+
+  const links: RelatedLink[] = [
+    { href: '/export', label: 'Global Export Hub', category: 'resource' },
+    { href: `/export/${countrySlug}`, label: `Export to ${country.name}`, category: 'resource' },
+    ...PRODUCT_LINKS.slice(0, 2),
+    { href: '/solutions/cold-storage-construction', label: 'Cold Storage Construction', category: 'solution' },
+    { href: '/solutions/peb', label: 'PEB Buildings', category: 'solution' },
+  ];
+
+  if (sub && subType === 'city') {
+    const siblings = getCitiesForCountry(countrySlug)
+      .filter((c) => c.slug !== sub)
+      .slice(0, 3);
+    links.push(
+      ...siblings.map((c) => ({
+        href: `/export/${countrySlug}/${c.slug}`,
+        label: `PUF Panels in ${c.name}`,
+        category: 'city' as const,
+      }))
+    );
+    links.push(
+      ...country.industrySlugs.slice(0, 2).map((s) => {
+        const ind = getExportIndustry(s);
+        return {
+          href: `/export/${countrySlug}/${s}`,
+          label: ind?.name ?? s,
+          category: 'industry' as const,
+        };
+      })
+    );
+  } else if (sub && subType === 'industry') {
+    const siblings = getIndustriesForCountry(countrySlug)
+      .filter((i) => i.slug !== sub)
+      .slice(0, 2);
+    links.push(
+      ...siblings.map((i) => ({
+        href: `/export/${countrySlug}/${i.slug}`,
+        label: i.name,
+        category: 'industry' as const,
+      }))
+    );
+    links.push(
+      ...getCitiesForCountry(countrySlug)
+        .filter((c) => c.priority === 'tier1')
+        .slice(0, 2)
+        .map((c) => ({
+          href: `/export/${countrySlug}/${c.slug}`,
+          label: `PUF Panels in ${c.name}`,
+          category: 'city' as const,
+        }))
+    );
+  } else {
+    links.push(
+      ...getCitiesForCountry(countrySlug)
+        .filter((c) => c.priority === 'tier1')
+        .slice(0, 3)
+        .map((c) => ({
+          href: `/export/${countrySlug}/${c.slug}`,
+          label: `PUF Panels in ${c.name}`,
+          category: 'city' as const,
+        }))
+    );
+    links.push(
+      ...country.industrySlugs.slice(0, 2).map((s) => {
+        const ind = getExportIndustry(s);
+        return {
+          href: `/export/${countrySlug}/${s}`,
+          label: ind?.name ?? s,
+          category: 'industry' as const,
+        };
+      })
+    );
+    const otherCountries = getAllExportCountrySlugs()
+      .filter((s) => s !== countrySlug && getExportCountry(s)?.region === country.region)
+      .slice(0, 2);
+    links.push(
+      ...otherCountries.map((s) => ({
+        href: `/export/${s}`,
+        label: `Export to ${getExportCountry(s)?.name ?? s}`,
+        category: 'resource' as const,
+      }))
+    );
+  }
+
+  links.push(
+    ...EXPORT_BLOG_SLUGS.slice(0, 1).map((s) => ({
+      href: `/resources/blogs/${s}`,
+      label: 'Africa Export Guide',
+      category: 'blog' as const,
+    }))
+  );
+  links.push({ href: '/certifications', label: 'Certifications', category: 'resource' });
+  links.push({ href: '/get-a-quote', label: 'Request Export Quote', category: 'resource' });
+
+  return links.slice(0, 12);
 }

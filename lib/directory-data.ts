@@ -6,6 +6,7 @@ import {
   coreInternalLinks,
 } from '@/lib/rajasthan-geo-data';
 import { getAllBlogSlugs } from '@/lib/blog-data';
+import { getAllExportCountrySlugs } from '@/lib/export-data';
 
 export interface DirectoryLink {
   href: string;
@@ -240,15 +241,18 @@ function buildAllSections(): DirectorySection[] {
   });
 
   // ── Export Markets ──
-  const exportSlugs = ['kenya', 'tanzania', 'uganda', 'rwanda', 'ghana', 'zambia', 'botswana', 'namibia', 'mozambique', 'angola'];
+  const exportSlugs = getAllExportCountrySlugs();
   sections.push({
     id: 'export',
     heading: 'Export Markets — Africa',
     description: 'PHOENIXX SMARTBUILD exports PUF panels and insulated building solutions to African markets.',
-    links: exportSlugs.map((slug) => ({
-      href: `/export/${slug}`,
-      label: `PUF Panel Export to ${slug.charAt(0).toUpperCase() + slug.slice(1)}`,
-    })),
+    links: [
+      { href: '/export', label: 'Global Export Hub' },
+      ...exportSlugs.map((slug) => ({
+        href: `/export/${slug}`,
+        label: `PUF Panel Export to ${slug.split('-').map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}`,
+      })),
+    ],
   });
 
   // ── Product-in-Location Pages (5 products x 48 locations = 240) ──

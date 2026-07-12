@@ -358,8 +358,15 @@ export function generateItemListSchema(items: { name: string; url: string; image
 export function generateServiceSchema(
   serviceName: string,
   description: string,
-  url: string
+  url: string,
+  areaServed?: { type: 'Country' | 'City' | 'AdministrativeArea'; name: string } | { type: 'Country' | 'City' | 'AdministrativeArea'; name: string }[]
 ) {
+  const served = areaServed
+    ? Array.isArray(areaServed)
+      ? areaServed.map((a) => ({ '@type': a.type, name: a.name }))
+      : { '@type': areaServed.type, name: areaServed.name }
+    : undefined;
+
   return {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -369,7 +376,9 @@ export function generateServiceSchema(
     provider: {
       '@type': 'Organization',
       name: siteConfig.company.name,
+      url: siteConfig.url,
     },
+    ...(served && { areaServed: served }),
   };
 }
 

@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { products, locations } from '@/lib/landing-page-data';
 import { getAllBlogSlugs } from '@/lib/blog-data';
-import { getAllExportCountrySlugs } from '@/lib/export-data';
+import { getAllExportUrls } from '@/lib/export-data';
 
 const baseUrl = 'https://phoenixxsmartbuild.com';
 
@@ -195,10 +195,10 @@ export async function GET() {
     priority: '0.8',
   }));
 
-  const exportUrls: SitemapUrl[] = getAllExportCountrySlugs().map(slug => ({
-    loc: `/export/${slug}`,
-    changefreq: 'monthly',
-    priority: '0.7',
+  const exportUrls: SitemapUrl[] = getAllExportUrls().map((loc) => ({
+    loc,
+    changefreq: 'monthly' as const,
+    priority: loc === '/export' ? '0.9' : loc.split('/').length <= 3 ? '0.8' : '0.7',
   }));
 
   const allUrls = [...coreUrls, ...shopUrls, ...blogUrls, ...exportUrls, ...geoUrls];

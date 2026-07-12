@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-07-12T12:07:15.351Z",
+  "generatedAt": "2026-07-12T16:45:54.644Z",
   "summary": {
-    "totalUrls": 719,
-    "totalFilesScanned": 164,
-    "orphanPages": 631,
+    "totalUrls": 735,
+    "totalFilesScanned": 173,
+    "orphanPages": 645,
     "duplicateTitles": 0,
     "duplicateDescriptions": 0,
-    "thinPages": 30,
+    "thinPages": 31,
     "missingH1": 1,
-    "multipleH1": 78,
+    "multipleH1": 80,
     "headingSkips": 7,
     "imagesMissingAlt": 0,
     "rawImgTags": 0,
@@ -34,16 +34,23 @@
     "/clientele",
     "/contact-us",
     "/door-products-directory",
+    "/export",
     "/export/angola",
     "/export/botswana",
+    "/export/drc",
+    "/export/ethiopia",
     "/export/ghana",
     "/export/kenya",
+    "/export/mauritius",
     "/export/mozambique",
     "/export/namibia",
+    "/export/nigeria",
     "/export/rwanda",
+    "/export/south-africa",
     "/export/tanzania",
     "/export/uganda",
     "/export/zambia",
+    "/export/zimbabwe",
     "/fm-approved-panel-in-ahmedabad",
     "/fm-approved-panel-in-ajmer",
     "/fm-approved-panel-in-anand",
@@ -393,6 +400,7 @@
     "/resources/blogs/best-puf-panel-supplier-dahej",
     "/resources/blogs/best-roofing-solution-factory-india",
     "/resources/blogs/best-wall-material-for-warehouse",
+    "/resources/blogs/choosing-puf-panel-supplier-africa-export",
     "/resources/blogs/choosing-right-insulated-panel",
     "/resources/blogs/cleanroom-construction-cost-india",
     "/resources/blogs/cleanroom-contractor-ahmedabad",
@@ -400,11 +408,13 @@
     "/resources/blogs/cleanroom-panel-solutions-ahmedabad-pharma",
     "/resources/blogs/cleanroom-panel-standards-iso-14644",
     "/resources/blogs/cold-chain-logistics-india",
+    "/resources/blogs/cold-chain-panels-kenya-guide",
     "/resources/blogs/cold-storage-construction-cost-india",
     "/resources/blogs/cold-storage-construction-gujarat",
     "/resources/blogs/cold-storage-cost-per-mt-india",
     "/resources/blogs/cold-storage-panel-manufacturers-ahmedabad",
     "/resources/blogs/cold-storage-panel-selection-guide",
+    "/resources/blogs/container-loading-puf-panels-guide",
     "/resources/blogs/export-puf-panels-africa-guide",
     "/resources/blogs/factory-roofing-problems-solutions",
     "/resources/blogs/fire-resistant-panel-pir-vs-puf",
@@ -419,6 +429,8 @@
     "/resources/blogs/how-to-reduce-electricity-cost-cold-storage",
     "/resources/blogs/how-to-reduce-heat-in-industrial-shed",
     "/resources/blogs/how-to-select-puf-panel-thickness",
+    "/resources/blogs/importing-puf-panels-east-africa",
+    "/resources/blogs/incoterms-panel-export-explained",
     "/resources/blogs/industrial-doors-selection-guide",
     "/resources/blogs/industrial-insulation-guide-beginners",
     "/resources/blogs/industrial-panel-supplier-vapi",
@@ -427,9 +439,11 @@
     "/resources/blogs/industrial-shed-cost-puf-panels",
     "/resources/blogs/jindal-puf-panel-price-list",
     "/resources/blogs/lifespan-of-puf-panels",
+    "/resources/blogs/mining-camp-panels-africa",
     "/resources/blogs/optimizing-cold-storage-energy-efficiency",
     "/resources/blogs/peb-vs-conventional-construction-cost",
     "/resources/blogs/pharma-cleanroom-construction-checklist",
+    "/resources/blogs/pharma-cleanroom-panels-africa-export",
     "/resources/blogs/pir-panel-buying-guide-india",
     "/resources/blogs/pir-panel-price-vs-puf-panel",
     "/resources/blogs/pir-panel-supplier-rajkot",
@@ -440,6 +454,7 @@
     "/resources/blogs/puf-panel-ankleshwar-industrial-guide",
     "/resources/blogs/puf-panel-contact-ahmedabad",
     "/resources/blogs/puf-panel-energy-savings-calculator-guide",
+    "/resources/blogs/puf-panel-export-west-africa-ghana-nigeria",
     "/resources/blogs/puf-panel-house",
     "/resources/blogs/puf-panel-india",
     "/resources/blogs/puf-panel-installation-accessories",
@@ -496,6 +511,7 @@
     "/resources/blogs/warehouse-construction-company-gujarat",
     "/resources/blogs/warehouse-construction-cost-puf-panels",
     "/resources/blogs/warehouse-construction-guide-india",
+    "/resources/blogs/warehouse-insulated-panels-southern-africa",
     "/resources/blogs/warehouse-insulation-gujarat-guide",
     "/resources/blogs/what-is-cleanroom-how-it-works",
     "/resources/blogs/what-is-cold-storage-construction",
@@ -741,14 +757,19 @@
     "/door-products-directory",
     "/export/angola",
     "/export/botswana",
+    "/export/drc",
+    "/export/ethiopia",
     "/export/ghana",
-    "/export/kenya",
+    "/export/mauritius",
     "/export/mozambique",
     "/export/namibia",
+    "/export/nigeria",
     "/export/rwanda",
+    "/export/south-africa",
     "/export/tanzania",
     "/export/uganda",
     "/export/zambia",
+    "/export/zimbabwe",
     "/fm-approved-panel-in-ajmer",
     "/fm-approved-panel-in-anand",
     "/fm-approved-panel-in-aurangabad",
@@ -830,12 +851,7 @@
     "/insulated-roof-panel-tonk",
     "/insulated-roof-panel-udaipur",
     "/leading-puf-panel-company-in-india",
-    "/lp/puf-panel-manufacturer-ahmedabad",
-    "/phoenixx-puf-roofing-panel-abu-road",
-    "/phoenixx-puf-roofing-panel-ajmer",
-    "/phoenixx-puf-roofing-panel-alwar",
-    "/phoenixx-puf-roofing-panel-barmer",
-    "/phoenixx-puf-roofing-panel-bhilwara"
+    "/lp/puf-panel-manufacturer-ahmedabad"
   ],
   "duplicateTitles": [],
   "duplicateDescriptions": [],
@@ -866,7 +882,11 @@
     },
     {
       "file": "app/export/[country]/page.tsx",
-      "wordCount": 203
+      "wordCount": 262
+    },
+    {
+      "file": "app/export/page.tsx",
+      "wordCount": 223
     },
     {
       "file": "app/get-a-quote/page.tsx",
@@ -1086,7 +1106,19 @@
       ]
     },
     {
+      "file": "app/export/[country]/[sub]/page.tsx",
+      "issues": [
+        "multiple_h1:4"
+      ]
+    },
+    {
       "file": "app/export/[country]/page.tsx",
+      "issues": [
+        "multiple_h1:2"
+      ]
+    },
+    {
+      "file": "app/export/page.tsx",
       "issues": [
         "multiple_h1:2"
       ]
@@ -1253,18 +1285,6 @@
       "issues": [
         "multiple_h1:2"
       ]
-    },
-    {
-      "file": "app/puf-panel-manufacturer-in-thane/page.tsx",
-      "issues": [
-        "multiple_h1:2"
-      ]
-    },
-    {
-      "file": "app/puf-panel-manufacturer-in-vadodara/page.tsx",
-      "issues": [
-        "multiple_h1:2"
-      ]
     }
   ],
   "imageIssues": [],
@@ -1275,14 +1295,19 @@
     "/door-products-directory": 1,
     "/export/angola": 0,
     "/export/botswana": 0,
+    "/export/drc": 1,
+    "/export/ethiopia": 0,
     "/export/ghana": 0,
-    "/export/kenya": 1,
+    "/export/mauritius": 0,
     "/export/mozambique": 0,
-    "/export/namibia": 0,
+    "/export/namibia": 1,
+    "/export/nigeria": 1,
     "/export/rwanda": 0,
+    "/export/south-africa": 0,
     "/export/tanzania": 0,
     "/export/uganda": 0,
-    "/export/zambia": 0,
+    "/export/zambia": 1,
+    "/export/zimbabwe": 0,
     "/fm-approved-panel-in-ajmer": 0,
     "/fm-approved-panel-in-anand": 0,
     "/fm-approved-panel-in-aurangabad": 0,
@@ -1364,11 +1389,6 @@
     "/insulated-roof-panel-tonk": 0,
     "/insulated-roof-panel-udaipur": 0,
     "/leading-puf-panel-company-in-india": 0,
-    "/lp/puf-panel-manufacturer-ahmedabad": 0,
-    "/phoenixx-puf-roofing-panel-abu-road": 0,
-    "/phoenixx-puf-roofing-panel-ajmer": 0,
-    "/phoenixx-puf-roofing-panel-alwar": 0,
-    "/phoenixx-puf-roofing-panel-barmer": 0,
-    "/phoenixx-puf-roofing-panel-bhilwara": 0
+    "/lp/puf-panel-manufacturer-ahmedabad": 0
   }
 }

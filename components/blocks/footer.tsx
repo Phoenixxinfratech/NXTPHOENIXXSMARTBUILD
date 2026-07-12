@@ -233,8 +233,18 @@ export function Footer() {
                     </Link>
                   </li>
                   <li>
+                    <Link href="/export" className="text-sm text-slate-400 hover:text-white transition-colors">
+                      Global Export Hub
+                    </Link>
+                  </li>
+                  <li>
                     <Link href="/export/kenya" className="text-sm text-slate-400 hover:text-white transition-colors">
-                      Export Markets
+                      Export to Kenya
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/export/nigeria" className="text-sm text-slate-400 hover:text-white transition-colors">
+                      Export to Nigeria
                     </Link>
                   </li>
                   <li>
