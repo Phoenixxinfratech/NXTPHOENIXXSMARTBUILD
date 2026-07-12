@@ -45,8 +45,7 @@ export default async function ExportCountryPage({ params }: ExportPageProps) {
 
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: 'Home', url: '/' },
-    { name: 'Export', url: '/export/kenya' },
-    { name: data.name, url: `/export/${country}` },
+    { name: `PUF Panel Export to ${data.name}`, url: `/export/${country}` },
   ]);
 
   const serviceSchema = {

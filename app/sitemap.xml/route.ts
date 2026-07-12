@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { products, locations } from '@/lib/landing-page-data';
 import { getAllBlogSlugs } from '@/lib/blog-data';
+import { getAllExportCountrySlugs } from '@/lib/export-data';
 
 const baseUrl = 'https://phoenixxsmartbuild.com';
 
@@ -194,8 +195,7 @@ export async function GET() {
     priority: '0.8',
   }));
 
-  const exportSlugs = ['kenya', 'tanzania', 'uganda', 'rwanda', 'ghana', 'zambia', 'botswana', 'namibia', 'mozambique', 'angola'];
-  const exportUrls: SitemapUrl[] = exportSlugs.map(slug => ({
+  const exportUrls: SitemapUrl[] = getAllExportCountrySlugs().map(slug => ({
     loc: `/export/${slug}`,
     changefreq: 'monthly',
     priority: '0.7',

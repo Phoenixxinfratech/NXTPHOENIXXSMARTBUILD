@@ -89,11 +89,6 @@ export function generateWebsiteSchema() {
     publisher: {
       '@id': `${siteConfig.url}/#organization`,
     },
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: `${siteConfig.url}/search?q={search_term_string}`,
-      'query-input': 'required name=search_term_string',
-    },
   };
 }
 

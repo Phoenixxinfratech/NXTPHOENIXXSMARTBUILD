@@ -28,7 +28,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     relatedTerms: ['puf-panel', 'sandwich-panel', 'fire-rating'],
     relatedLinks: [
       { href: '/products/sandwich-panels/pir-panel', label: 'PIR Panel Product Page' },
-      { href: '/puf-panel-vs-pir-panel-comparison', label: 'PUF vs PIR Comparison' },
+      { href: '/resources/blogs/puf-panel-vs-pir-panel-comparison', label: 'PUF vs PIR Comparison' },
     ],
   },
   {
@@ -108,7 +108,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     relatedTerms: ['pir-panel', 'rockwool-panel', 'puf-panel'],
     relatedLinks: [
       { href: '/products/sandwich-panels/rockwool-panel', label: 'Rockwool Panel' },
-      { href: '/fire-resistant-panel-pir-vs-puf', label: 'Fire Resistant Panel: PIR vs PUF' },
+      { href: '/resources/blogs/fire-resistant-panel-pir-vs-puf', label: 'Fire Resistant Panel: PIR vs PUF' },
     ],
   },
   {
@@ -128,7 +128,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     relatedTerms: ['cold-room', 'cold-storage', 'puf-panel'],
     relatedLinks: [
       { href: '/industries/cold-chain', label: 'Cold Chain Industry' },
-      { href: '/puf-panels-cold-storage', label: 'PUF Panels for Cold Storage' },
+      { href: '/resources/blogs/puf-panels-cold-storage', label: 'PUF Panels for Cold Storage' },
     ],
   },
 ];

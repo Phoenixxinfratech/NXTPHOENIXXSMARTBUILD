@@ -29,11 +29,22 @@ const INDUSTRY_LINKS: RelatedLink[] = [
   { href: '/industries/automobile', label: 'Automobile', category: 'industry' },
 ];
 
-const PRODUCT_LINKS: RelatedLink[] = Object.values(products).map((p) => ({
-  href: `/products/sandwich-panels/${p.slug}`,
-  label: p.name,
-  category: 'product' as const,
-}));
+// Product slugs that have a /products/sandwich-panels/{slug} detail route
+const PRODUCT_DETAIL_SLUGS = new Set([
+  'sandwich-puf-panel',
+  'roofing-puf-panel',
+  'pir-panel',
+  'rockwool-panel',
+  'wall-ceiling-panel',
+]);
+
+const PRODUCT_LINKS: RelatedLink[] = Object.values(products)
+  .filter((p) => PRODUCT_DETAIL_SLUGS.has(p.slug))
+  .map((p) => ({
+    href: `/products/sandwich-panels/${p.slug}`,
+    label: p.name,
+    category: 'product' as const,
+  }));
 
 function hashSlug(slug: string): number {
   let h = 0;
@@ -41,17 +52,31 @@ function hashSlug(slug: string): number {
   return Math.abs(h);
 }
 
-function pickNearbyCities(locationSlug: string, count = 4): RelatedLink[] {
+function productDetailHref(productSlug: string): string {
+  if (PRODUCT_DETAIL_SLUGS.has(productSlug)) {
+    return `/products/sandwich-panels/${productSlug}`;
+  }
+  // Products without a detail route (e.g. fm-approved-panel) live under /shop
+  return `/shop/${productSlug}`;
+}
+
+function pickNearbyCities(locationSlug: string, productSlug = 'sandwich-puf-panel', count = 4): RelatedLink[] {
   const loc = getLocation(locationSlug);
   if (!loc) return [];
-  const state = loc.state || loc.slug;
-  const sameState = Object.values(locations).filter(
-    (l) => l.type === 'city' && (l.state === state || l.parent === loc.parent) && l.slug !== locationSlug
-  );
-  const sorted = sameState.sort((a, b) => hashSlug(a.slug + locationSlug) - hashSlug(b.slug + locationSlug));
+
+  const cities = Object.values(locations).filter((l) => l.type === 'city' && l.slug !== locationSlug);
+  const matched = cities.filter((l) => {
+    if (loc.type === 'city') return l.state === loc.state;
+    if (loc.type === 'state') return l.parent === loc.slug;
+    return true; // country level — any city
+  });
+  const pool = matched.length > 0 ? matched : cities;
+
+  const sorted = pool.sort((a, b) => hashSlug(a.slug + locationSlug) - hashSlug(b.slug + locationSlug));
+  const productLabel = products[productSlug]?.name || 'PUF Panel';
   return sorted.slice(0, count).map((c) => ({
-    href: `/sandwich-puf-panel-in-${c.slug}`,
-    label: `PUF Panel in ${c.name}`,
+    href: `/${productSlug}-in-${c.slug}`,
+    label: `${productLabel} in ${c.name}`,
     category: 'city' as const,
   }));
 }
@@ -81,13 +106,13 @@ export function getRelatedLinksForGeoPage(productSlug: string, locationSlug: str
 
   if (product) {
     links.push({
-      href: `/products/sandwich-panels/${productSlug}`,
+      href: productDetailHref(productSlug),
       label: product.name,
       category: 'product',
     });
   }
 
-  links.push(...pickNearbyCities(locationSlug, 3));
+  links.push(...pickNearbyCities(locationSlug, productSlug, 3));
   links.push(...pickBlogs(`${productSlug}-${locationSlug}`, 2));
   links.push(pickProject(locationSlug));
   links.push({ href: '/get-a-quote', label: 'Get a Quote', category: 'resource' });
