@@ -64,11 +64,13 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: [
+      `${baseUrl}/sitemap-index.xml`,
       `${baseUrl}/sitemap.xml`,
       `${baseUrl}/sitemap-core.xml`,
       `${baseUrl}/sitemap-shop.xml`,
       `${baseUrl}/sitemap-geo.xml`,
       `${baseUrl}/sitemap-export.xml`,
+      `${baseUrl}/sitemap-rajasthan-geo.xml`,
     ],
     host: baseUrl,
   };

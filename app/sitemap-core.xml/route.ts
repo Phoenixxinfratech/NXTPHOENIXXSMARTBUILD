@@ -92,6 +92,9 @@ export async function GET() {
     { loc: '/resources/technical-sheet', changefreq: 'monthly', priority: '0.6' },
     { loc: '/resources/brochure', changefreq: 'monthly', priority: '0.6' },
     { loc: '/resources/faq', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/resources/glossary', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/certifications', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/export', changefreq: 'weekly', priority: '0.9' },
     
     // Project Gallery (all project pages)
     { loc: '/resources/project-gallery/pharma-cleanroom-pune', changefreq: 'monthly', priority: '0.6' },

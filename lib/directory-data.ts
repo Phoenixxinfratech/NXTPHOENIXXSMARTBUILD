@@ -6,7 +6,7 @@ import {
   coreInternalLinks,
 } from '@/lib/rajasthan-geo-data';
 import { getAllBlogSlugs } from '@/lib/blog-data';
-import { getAllExportCountrySlugs } from '@/lib/export-data';
+import { getAllExportCountrySlugs, getExportCountry, getCitiesForCountry, getIndustriesForCountry } from '@/lib/export-data';
 
 export interface DirectoryLink {
   href: string;
@@ -240,20 +240,37 @@ function buildAllSections(): DirectorySection[] {
     ],
   });
 
-  // ── Export Markets ──
-  const exportSlugs = getAllExportCountrySlugs();
+  // ── Export Markets — full URL index (hub + countries + cities + industries) ──
   sections.push({
-    id: 'export',
-    heading: 'Export Markets — Africa',
-    description: 'PHOENIXX SMARTBUILD exports PUF panels and insulated building solutions to African markets.',
-    links: [
-      { href: '/export', label: 'Global Export Hub' },
-      ...exportSlugs.map((slug) => ({
-        href: `/export/${slug}`,
-        label: `PUF Panel Export to ${slug.split('-').map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}`,
-      })),
-    ],
+    id: 'export-hub',
+    heading: 'Global Export Hub — Africa',
+    description: 'PHOENIXX SMARTBUILD exports PUF panels and insulated building solutions to 16 African markets.',
+    links: [{ href: '/export', label: 'Global Export Hub — Africa' }],
   });
+
+  for (const countrySlug of getAllExportCountrySlugs()) {
+    const country = getExportCountry(countrySlug);
+    if (!country) continue;
+
+    const links: DirectoryLink[] = [
+      { href: `/export/${countrySlug}`, label: `PUF Panel Export to ${country.name}` },
+      ...getCitiesForCountry(countrySlug).map((city) => ({
+        href: `/export/${countrySlug}/${city.slug}`,
+        label: `PUF Panels in ${city.name}, ${country.name}`,
+      })),
+      ...getIndustriesForCountry(countrySlug).map((ind) => ({
+        href: `/export/${countrySlug}/${ind.slug}`,
+        label: `${ind.name} — ${country.name}`,
+      })),
+    ];
+
+    sections.push({
+      id: `export-${countrySlug}`,
+      heading: `Export — ${country.name}`,
+      description: `Sandwich PUF panel export to ${country.name}: ${country.capital}, industrial cities, SEZs, and key industry sectors.`,
+      links,
+    });
+  }
 
   // ── Product-in-Location Pages (5 products x 48 locations = 240) ──
   const productKeys = Object.keys(products);
