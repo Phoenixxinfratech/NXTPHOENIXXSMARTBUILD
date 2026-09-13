@@ -90,6 +90,21 @@ const formTypes: Record<string, {
       { label: 'Contact Us', href: '/contact-us' },
     ],
   },
+  ads: {
+    title: 'Enquiry Received!',
+    subtitle: 'We have your panel requirement and will send pricing shortly.',
+    icon: '📐',
+    nextSteps: [
+      { title: 'Requirement Check', description: 'Our team reviews your product interest and project details.' },
+      { title: 'Price Calculation', description: 'We work out panel thickness, sheet options, and quantity for your job.' },
+      { title: 'Call Back', description: 'Expect a call within 30 minutes during working hours.' },
+    ],
+    relatedLinks: [
+      { label: 'View Our Products', href: '/products' },
+      { label: 'Panel Specifications', href: '/products/sandwich-panels' },
+      { label: 'Project Gallery', href: '/resources/project-gallery' },
+    ],
+  },
   newsletter: {
     title: 'Subscribed Successfully!',
     subtitle: 'You\'ll receive our latest insights and industry updates.',
@@ -124,9 +139,10 @@ const formTypes: Record<string, {
 
 function ThankYouContent() {
   const searchParams = useSearchParams();
-  const type = searchParams.get('type') || 'default';
+  // Forms redirect with `formType`; `type` is kept as a fallback for older links.
+  const type = searchParams.get('formType') || searchParams.get('type') || 'default';
   const source = searchParams.get('source') || 'Website';
-  
+
   const config = formTypes[type] || formTypes.default;
 
   return (

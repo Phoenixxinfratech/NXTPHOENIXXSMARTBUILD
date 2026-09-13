@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
+import { PartnerForm } from './partner-form';
 
 export const metadata: Metadata = {
   title: 'Become a Partner – Channel Partnership',
@@ -186,119 +187,7 @@ export default function BecomePartnerPage() {
               </div>
 
               <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10">
-                <form className="space-y-6">
-                  <div className="grid gap-6 sm:grid-cols-2">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
-                        Full Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        required
-                        className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
-                        placeholder="Your name"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-slate-700 mb-2">
-                        Company Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="company"
-                        name="company"
-                        required
-                        className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
-                        placeholder="Company name"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid gap-6 sm:grid-cols-2">
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                        className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
-                        placeholder="you@company.com"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-2">
-                        Phone Number *
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        required
-                        className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
-                        placeholder="+91 XXXXX XXXXX"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid gap-6 sm:grid-cols-2">
-                    <div>
-                      <label htmlFor="location" className="block text-sm font-medium text-slate-700 mb-2">
-                        Location / Territory *
-                      </label>
-                      <input
-                        type="text"
-                        id="location"
-                        name="location"
-                        required
-                        className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
-                        placeholder="City, State"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="partnerType" className="block text-sm font-medium text-slate-700 mb-2">
-                        Partnership Type *
-                      </label>
-                      <select
-                        id="partnerType"
-                        name="partnerType"
-                        required
-                        className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
-                      >
-                        <option value="">Select type</option>
-                        <option value="dealer">Dealer / Distributor</option>
-                        <option value="contractor">Project Contractor</option>
-                        <option value="consultant">Consultant / Architect</option>
-                        <option value="channel">Channel Partner</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="experience" className="block text-sm font-medium text-slate-700 mb-2">
-                      Business Experience *
-                    </label>
-                    <textarea
-                      id="experience"
-                      name="experience"
-                      required
-                      rows={4}
-                      className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all resize-none"
-                      placeholder="Tell us about your business, experience, and why you want to partner with PHOENIXX..."
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full rounded-lg bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-4 font-semibold text-white shadow-lg hover:shadow-xl transition-all"
-                  >
-                    Submit Partnership Application
-                  </button>
-                </form>
+                <PartnerForm />
               </div>
             </div>
           </div>

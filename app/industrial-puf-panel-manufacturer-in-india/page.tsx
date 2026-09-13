@@ -113,7 +113,7 @@ export default function IndustrialPufPanelManufacturerPage() {
                   performance, and deliver the durability that industrial operations require.
                 </p>
                 <p>
-                  From sprawling manufacturing facilities in <Link href="/industries/warehousing" className="text-primary hover:underline">Gujarat&apos;s industrial corridors</Link> to 
+                  From sprawling manufacturing facilities in <Link href="/sandwich-puf-panel-in-gujarat" className="text-primary hover:underline">Gujarat&apos;s industrial corridors</Link> to 
                   processing plants in Maharashtra, our industrial PUF panels have proven their worth in 
                   some of India&apos;s most demanding environments. We combine heavy-duty construction with 
                   advanced insulation technology to deliver panels that perform reliably for decades.

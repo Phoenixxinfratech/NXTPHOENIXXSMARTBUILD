@@ -554,7 +554,7 @@ export default function BestPufPanelThicknessForRoofingPage() {
                   </div>
                   <p className="mt-3 text-slate-600 text-sm leading-relaxed">{project.detail}</p>
                   <Link
-                    href="/projects"
+                    href="/resources/project-gallery"
                     className="mt-4 inline-flex items-center text-primary text-sm font-medium hover:underline"
                   >
                     View Project Gallery →

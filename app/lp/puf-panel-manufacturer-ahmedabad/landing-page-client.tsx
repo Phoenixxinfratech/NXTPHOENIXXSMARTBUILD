@@ -681,7 +681,7 @@ export default function LandingPageClient() {
                 Privacy Policy
               </Link>
               {' \u00B7 '}
-              <Link href="/terms-and-conditions" className="hover:text-slate-700 transition-colors">
+              <Link href="/business-terms" className="hover:text-slate-700 transition-colors">
                 Terms &amp; Conditions
               </Link>
             </p>

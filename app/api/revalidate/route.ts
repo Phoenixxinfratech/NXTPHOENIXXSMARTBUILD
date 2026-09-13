@@ -20,10 +20,10 @@ const typeToPath: Record<string, (slug?: string) => string[]> = {
   product: (slug) => ['/products', slug ? `/products/${slug}` : ''],
   solution: (slug) => ['/solutions', slug ? `/solutions/${slug}` : ''],
   industry: (slug) => ['/industries', slug ? `/industries/${slug}` : ''],
-  cleanroom: (slug) => ['/cleanroom-solutions', slug ? `/cleanroom-solutions/${slug}` : ''],
-  post: (slug) => ['/blog', slug ? `/blog/${slug}` : ''],
+  cleanroom: (slug) => ['/products/cleanroom-solutions', slug ? `/products/cleanroom-solutions/${slug}` : ''],
+  post: (slug) => ['/resources/blogs', slug ? `/resources/blogs/${slug}` : ''],
   resource: (slug) => ['/resources', slug ? `/resources/${slug}` : ''],
-  faq: () => ['/faqs'],
+  faq: () => ['/resources/faq'],
   page: (slug) => [slug === 'home' ? '/' : `/${slug}`],
   siteSettings: () => ['/'],
 };
