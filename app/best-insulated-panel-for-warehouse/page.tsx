@@ -197,7 +197,7 @@ export default function BestInsulatedPanelForWarehousePage() {
     generateVideoSchema({
       name: 'PHOENIXX Warehouse PUF Panel Installation',
       description:
-        'Watch a complete warehouse insulated panel installation by PHOENIXX SMARTBUILD — from PEB erection to final PUF panel cladding on a 5,000 sq.m logistics warehouse.',
+        'Watch a complete warehouse insulated panel installation by PHOENIXX SMARTBUILD, from PEB erection to final PUF panel cladding on a 5,000 sq.m logistics warehouse.',
       thumbnailUrl: 'https://phoenixxsmartbuild.com/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
       uploadDate: '2025-06-01',
       duration: 'PT7M20S',
@@ -360,7 +360,7 @@ export default function BestInsulatedPanelForWarehousePage() {
                   PUF (Polyurethane Foam) insulated sandwich panels address every one of these problems in a
                   single engineered building component. A rigid closed-cell PUF core bonded between two
                   pre-painted steel skins delivers thermal insulation, structural spanning, weather protection,
-                  and acoustic dampening — all without secondary layers, separate waterproofing, or additional
+                  and acoustic dampening, all without secondary layers, separate waterproofing, or additional
                   cladding. When combined with a{' '}
                   <Link href="/solutions/peb" className="text-primary hover:underline">
                     Pre-Engineered Building (PEB) structure
@@ -397,7 +397,7 @@ export default function BestInsulatedPanelForWarehousePage() {
                     Sandwich PUF wall panels
                   </Link>{' '}
                   use flat or micro-ribbed steel facings for clean vertical installation. At 50mm thickness,
-                  they deliver an R-value of 2.08 m²K/W — sufficient for most general warehousing in Indian
+                  they deliver an R-value of 2.08 m²K/W, sufficient for most general warehousing in Indian
                   climates. The panels weigh just 8-12 kg/m², making them easy to handle and fast to install
                   even on tall warehouse walls up to 12-15 metres. Tongue-and-groove joints create an airtight,
                   moisture-proof barrier that eliminates the need for separate waterproofing membranes.
@@ -437,7 +437,7 @@ export default function BestInsulatedPanelForWarehousePage() {
                     title: 'Temperature-Controlled',
                     wall: '80-100mm PUF Wall',
                     roof: '80-100mm PUF Roof',
-                    desc: 'FMCG, pharma, chemicals — maintaining 15-25°C year-round for product integrity.',
+                    desc: 'FMCG, pharma, chemicals, maintaining 15-25°C year-round for product integrity.',
                   },
                   {
                     icon: '🛒',
@@ -521,8 +521,7 @@ export default function BestInsulatedPanelForWarehousePage() {
                 <Link href="/solutions/peb" className="text-primary hover:underline font-medium">
                   Pre-Engineered Building (PEB) steel structure
                 </Link>{' '}
-                with PUF insulated panel cladding. The PEB frame provides column-free spans up to 90 metres —
-                ideal for warehouse racking layouts — while PUF panels form the complete thermal envelope. This
+                with PUF insulated panel cladding. The PEB frame provides column-free spans up to 90 metres, ideal for warehouse racking layouts, while PUF panels form the complete thermal envelope. This
                 combination eliminates brick walls, separate insulation, and waterproofing layers, reducing total
                 construction time by 40-60% and structural weight by 30-40% compared to conventional RCC framed
                 warehouses. PHOENIXX delivers both PEB structures and PUF panels as a turnkey solution.
@@ -550,7 +549,7 @@ export default function BestInsulatedPanelForWarehousePage() {
                   {
                     num: '01',
                     title: '40-60% Faster Construction',
-                    desc: 'Pre-fabricated PUF panels install directly onto the PEB frame — no bricklaying, no plastering, no curing time. A 5,000 sq.m warehouse envelope completes in 20-30 days versus 10-16 weeks for conventional construction.',
+                    desc: 'Pre-fabricated PUF panels install directly onto the PEB frame: no bricklaying, no plastering, no curing time. A 5,000 sq.m warehouse envelope completes in 20-30 days versus 10-16 weeks for conventional construction.',
                   },
                   {
                     num: '02',
@@ -560,7 +559,7 @@ export default function BestInsulatedPanelForWarehousePage() {
                   {
                     num: '03',
                     title: '30-40% Less Structural Steel',
-                    desc: 'Roofing PUF panels span 3-4m between purlins — twice the span of single-skin sheets. Fewer purlins and girts mean 30-40% less secondary steel, directly reducing material cost and foundation loading.',
+                    desc: 'Roofing PUF panels span 3-4m between purlins, twice the span of single-skin sheets. Fewer purlins and girts mean 30-40% less secondary steel, directly reducing material cost and foundation loading.',
                   },
                   {
                     num: '04',
@@ -575,7 +574,7 @@ export default function BestInsulatedPanelForWarehousePage() {
                   {
                     num: '06',
                     title: 'Modular Expansion Ready',
-                    desc: 'Warehouse expansion is as simple as extending the PEB frame and adding more panels. No demolition, no wet work — just bolt on additional bays and clad with matching PUF panels.',
+                    desc: 'Warehouse expansion is as simple as extending the PEB frame and adding more panels. No demolition, no wet work: just bolt on additional bays and clad with matching PUF panels.',
                   },
                   {
                     num: '07',

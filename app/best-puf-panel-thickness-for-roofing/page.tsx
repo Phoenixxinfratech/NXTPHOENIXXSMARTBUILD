@@ -150,7 +150,7 @@ export default function BestPufPanelThicknessForRoofingPage() {
     ]),
     generateHowToSchema(
       'How to Determine the Right PUF Panel Thickness for Roofing',
-      'A step-by-step engineering guide to selecting the optimal PUF panel thickness for your roofing application — from climate zone identification through R-value calculation to final specification.',
+      'A step-by-step engineering guide to selecting the optimal PUF panel thickness for your roofing application, from climate zone identification through R-value calculation to final specification.',
       howToSteps
     ),
     generateArticleSchema({
@@ -175,7 +175,7 @@ export default function BestPufPanelThicknessForRoofingPage() {
     generateSpeakableSchema(['h1', '.ai-summary', '.faq-answer']),
     generateQAPageSchema('What is the best thickness of PUF panel for roofing?', [
       {
-        text: '50-80mm is optimal for most factory roofing in India. At 0.024 W/mK thermal conductivity, a 50mm panel delivers R2.08 m²K/W and an 80mm panel delivers R3.33 m²K/W — sufficient for 20-30% HVAC cost reduction in tropical climates. For cold storage roofing, 100-150mm is required. The ideal thickness depends on your climate zone, target internal temperature, and energy cost model. Over-specifying thickness wastes budget; under-specifying wastes energy.',
+        text: '50-80mm is optimal for most factory roofing in India. At 0.024 W/mK thermal conductivity, a 50mm panel delivers R2.08 m²K/W and an 80mm panel delivers R3.33 m²K/W, sufficient for 20-30% HVAC cost reduction in tropical climates. For cold storage roofing, 100-150mm is required. The ideal thickness depends on your climate zone, target internal temperature, and energy cost model. Over-specifying thickness wastes budget; under-specifying wastes energy.',
         author: 'PHOENIXX SMARTBUILD Engineering Team',
       },
     ]),
@@ -190,7 +190,7 @@ export default function BestPufPanelThicknessForRoofingPage() {
     generateVideoSchema({
       name: 'PHOENIXX PUF Panel Thickness Selection Guide',
       description:
-        'Watch our engineering team explain how to choose the right PUF panel thickness for your roofing project — with live R-value calculations and climate zone mapping.',
+        'Watch our engineering team explain how to choose the right PUF panel thickness for your roofing project, with live R-value calculations and climate zone mapping.',
       thumbnailUrl: 'https://phoenixxsmartbuild.com/images/video-thumb-thickness-guide.jpg',
       uploadDate: '2025-02-01',
       duration: 'PT8M30S',
@@ -286,7 +286,7 @@ export default function BestPufPanelThicknessForRoofingPage() {
               <div className="prose prose-lg prose-slate max-w-none">
                 <p>
                   Every year, thousands of factory owners across India either over-specify or under-specify their
-                  roofing PUF panel thickness — and both mistakes are expensive. The problem is that most buyers
+                  roofing PUF panel thickness, and both mistakes are expensive. The problem is that most buyers
                   treat thickness as a simple &quot;thicker is better&quot; decision when, in reality, it&apos;s an
                   engineering calculation that depends on climate, building use, energy costs, and structural
                   constraints.
@@ -489,7 +489,7 @@ export default function BestPufPanelThicknessForRoofingPage() {
                   {
                     num: '06',
                     title: 'Future-Proofed Investment',
-                    desc: 'Slightly over-engineering by one standard step (e.g., 60mm instead of 50mm) adds 5-8% cost but provides a buffer for climate warming, production changes, or energy price increases — a smart long-term hedge.',
+                    desc: 'Slightly over-engineering by one standard step (e.g., 60mm instead of 50mm) adds 5-8% cost but provides a buffer for climate warming, production changes, or energy price increases: a smart long-term hedge.',
                   },
                   {
                     num: '07',
@@ -584,7 +584,7 @@ export default function BestPufPanelThicknessForRoofingPage() {
                     { label: 'Profile Types', value: 'Trapezoidal, Standing Seam, Concealed Fix' },
                     { label: 'Coating Options', value: 'SMP (standard), PVDF (coastal/harsh), SDP' },
                     { label: 'Panel Weight', value: '8 kg/sq.m (30mm) to 16 kg/sq.m (150mm)' },
-                    { label: 'Wind Load Rating', value: 'Tested as per IS 875 — up to 150 km/h' },
+                    { label: 'Wind Load Rating', value: 'Tested as per IS 875, up to 150 km/h' },
                     { label: 'Fire Rating', value: 'B2 standard, B1 / PIR options available' },
                     { label: 'Compliance', value: 'IS 14925:2015, ISO 9001:2015, ISO 14001:2015, ECBC' },
                   ].map((row, idx) => (

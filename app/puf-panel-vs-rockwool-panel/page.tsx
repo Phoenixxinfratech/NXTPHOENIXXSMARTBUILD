@@ -91,7 +91,7 @@ const howToSteps = [
   },
   {
     name: 'Compare Installed Cost',
-    text: 'Get quotes for both panel types at the required R-value — not just the same thickness. Factor in structural savings from PUF\'s lighter weight and thinner profile, or Rockwool\'s insurance premium reductions.',
+    text: 'Get quotes for both panel types at the required R-value, not just the same thickness. Factor in structural savings from PUF\'s lighter weight and thinner profile, or Rockwool\'s insurance premium reductions.',
   },
   {
     name: 'Check Acoustic Requirements',
@@ -178,7 +178,7 @@ export default function PufPanelVsRockwoolPanelPage() {
       'When should I choose PUF panel vs Rockwool panel?',
       [
         {
-          text: 'Choose PUF panels when thermal insulation efficiency, moisture resistance, lightweight construction, and cost-effectiveness are priorities — ideal for cold storage, warehouses, and general industrial buildings. Choose Rockwool panels when fire safety, acoustic insulation, and high-temperature resistance are critical — essential for chemical plants, electrical rooms, and fire-rated facilities. Many projects benefit from using both: Rockwool in fire-critical zones and PUF for general walls and roofing.',
+          text: 'Choose PUF panels when thermal insulation efficiency, moisture resistance, lightweight construction, and cost-effectiveness are priorities, ideal for cold storage, warehouses, and general industrial buildings. Choose Rockwool panels when fire safety, acoustic insulation, and high-temperature resistance are critical — essential for chemical plants, electrical rooms, and fire-rated facilities. Many projects benefit from using both: Rockwool in fire-critical zones and PUF for general walls and roofing.',
           author: 'PHOENIXX SMARTBUILD Engineering Team',
         },
       ]
@@ -307,7 +307,7 @@ export default function PufPanelVsRockwoolPanelPage() {
                 <p>
                   Every week, project managers, architects, and procurement teams face the same dilemma: should we use{' '}
                   <strong>PUF panels</strong> or <strong>Rockwool panels</strong> for our building envelope? The answer
-                  is rarely straightforward because both panel types have genuine strengths — and choosing the wrong one
+                  is rarely straightforward because both panel types have genuine strengths, and choosing the wrong one
                   can cost you significantly in terms of safety, performance, and budget.
                 </p>
                 <p>
@@ -323,7 +323,7 @@ export default function PufPanelVsRockwoolPanelPage() {
                   your structure, and getting less thermal efficiency per millimeter of thickness.
                 </p>
                 <p>
-                  <strong>PHOENIXX SMARTBUILD manufactures both PUF and Rockwool panels in-house</strong> — which means
+                  <strong>PHOENIXX SMARTBUILD manufactures both PUF and Rockwool panels in-house</strong>, which means
                   we have no incentive to push one over the other. This guide presents an honest, data-backed comparison
                   to help you select the right panel for your specific application.
                 </p>
@@ -613,7 +613,7 @@ export default function PufPanelVsRockwoolPanelPage() {
                   terms — it is about which panel is better <em>for your specific application</em>. PUF delivers
                   unmatched thermal efficiency at 0.024 W/mK, making it the clear winner for cold storage, clean
                   rooms, and general industrial buildings where standard fire ratings suffice. Its closed-cell
-                  structure means zero moisture absorption — a critical advantage in humid climates and refrigerated
+                  structure means zero moisture absorption: a critical advantage in humid climates and refrigerated
                   environments where Rockwool&apos;s open-fibre structure can absorb water and lose insulating
                   capacity over time.
                 </p>

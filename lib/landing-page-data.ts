@@ -90,7 +90,7 @@ export const products: Record<string, ProductData> = {
     slug: 'roofing-puf-panel',
     name: 'Roofing PUF Panel',
     shortName: 'Roof Panel',
-    description: 'PHOENIXX Roofing PUF Panels are purpose-engineered insulated roof systems combining weather protection, thermal insulation, and structural performance in a single component. The trapezoidal or standing seam profiles ensure water drainage while the PUF core delivers industry-leading R-values.',
+    description: 'PHOENIXX Roofing PUF Panels are purpose-engineered insulated roof systems combining weather protection, thermal insulation, and structural performance in a single component. The trapezoidal or standing seam profiles ensure water drainage while the PUF core delivers R-values.',
     composition: 'Our roofing panels feature a profiled outer skin (trapezoidal ribs) for strength and drainage, a CFC-free PUF core for insulation, and a flat or micro-ribbed inner skin for aesthetics. The outer profile can span 3-4 meters between purlins, reducing structural steel.',
     technology: 'Continuous double-belt lamination ensures perfect bonding between metal skins and foam core. The trapezoidal profile is roll-formed before foam injection, creating a monolithic panel with superior load-bearing capacity.',
     characteristics: [
@@ -573,7 +573,7 @@ export const locations: Record<string, LocationData> = {
     type: 'city',
     parent: 'gujarat',
     state: 'Gujarat',
-    climate: 'Navsari has tropical monsoon climate with high humidity and rainfall. Agricultural processing and textiles dominate the industrial landscape.',
+    climate: 'Navsari has tropical monsoon climate with high humidity and rainfall. Agricultural processing and textiles dominate the industrial sector.',
     industries: ['Textiles', 'Sugar', 'Food Processing', 'Agriculture', 'Diamond Processing'],
     industrialZones: ['GIDC Navsari', 'GIDC Bilimora', 'Agro-Processing Zone'],
     nearbyAreas: ['Surat', 'Valsad', 'Bilimora', 'Gandevi', 'Chikhli'],

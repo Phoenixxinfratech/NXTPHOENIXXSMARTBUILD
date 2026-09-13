@@ -29,7 +29,7 @@ function introBlock(r: GeoSlugResult): string {
   const base = city.cityIntro;
 
   if (pt === 'manufacturer') {
-    return `${base} As a manufacturer supplying from Beawar — just ${city.distanceFromBeawar} km away — Phoenixx Smart Build delivers factory-direct PUF roofing panels to ${city.name} with consistent quality and no intermediary markups. Industrial contractors, PEB fabricators, and warehouse developers across ${city.name} rely on Phoenixx panels for projects ranging from modest sheds to large-scale logistics facilities.`;
+    return `${base} As a manufacturer supplying from Beawar: just ${city.distanceFromBeawar} km away — Phoenixx Smart Build delivers factory-direct PUF roofing panels to ${city.name} with consistent quality and no intermediary markups. Industrial contractors, PEB fabricators, and warehouse developers across ${city.name} rely on Phoenixx panels for projects ranging from modest sheds to large-scale logistics facilities.`;
   }
   if (pt === 'supplier') {
     return `${base} Phoenixx maintains ready stock of PUF roofing panels at its Beawar warehouse for fast dispatch to ${city.name}. ${city.logisticsNote} Whether your project needs 500 sq. ft. or 50,000 sq. ft., the Phoenixx supply chain is built to deliver reliably and on schedule.`;
@@ -60,10 +60,10 @@ function introBlock(r: GeoSlugResult): string {
 function technicalParagraph(r: GeoSlugResult): string {
   const kw = r.keywordType?.id;
   if (kw === 'sandwich-puf-roofing-panel') {
-    return 'The sandwich construction bonds two steel skins to a rigid PUF core through continuous lamination. This creates a composite panel where each layer contributes distinct properties — the outer skin provides weather resistance and structural profile, the PUF core delivers insulation and rigidity, and the inner skin offers a clean, flush finish. The result is a roofing panel that outperforms conventional multi-layer assemblies in thermal efficiency, installation speed, and long-term durability.';
+    return 'The sandwich construction bonds two steel skins to a rigid PUF core through continuous lamination. This creates a composite panel where each layer contributes distinct properties: the outer skin provides weather resistance and structural profile, the PUF core delivers insulation and rigidity, and the inner skin offers a clean, flush finish. The result is a roofing panel that outperforms conventional multi-layer assemblies in thermal efficiency, installation speed, and long-term durability.';
   }
   if (kw === 'insulated-roof-panel') {
-    return 'Insulation performance is measured by R-value — the thermal resistance per unit thickness. Phoenixx PUF-core roof panels deliver an R-value of approximately 2.08 m²K/W at 50 mm thickness, significantly outperforming mineral wool (1.28 m²K/W at 50 mm) and EPS (1.39 m²K/W at 50 mm). This superior R-value means thinner Phoenixx panels achieve the same or better insulation as thicker alternatives, reducing structural load and cost.';
+    return 'Insulation performance is measured by R-value: the thermal resistance per unit thickness. Phoenixx PUF-core roof panels deliver an R-value of approximately 2.08 m²K/W at 50 mm thickness, significantly outperforming mineral wool (1.28 m²K/W at 50 mm) and EPS (1.39 m²K/W at 50 mm). This superior R-value means thinner Phoenixx panels achieve the same or better insulation as thicker alternatives, reducing structural load and cost.';
   }
   if (kw === 'puf-sandwich-panel') {
     return 'PUF sandwich panels are available in wall and roof configurations. Roof panels feature trapezoidal or standing-seam outer profiles for water drainage and structural spanning, while wall panels use flat or micro-ribbed surfaces for clean aesthetics. Both types share the same PUF core technology, ensuring uniform insulation performance across the building envelope.';

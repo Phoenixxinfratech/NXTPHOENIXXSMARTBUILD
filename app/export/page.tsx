@@ -32,7 +32,7 @@ const exportProcess = [
 const trustAssets = [
   { title: 'ISO 9001 Manufacturing', desc: 'Certified quality management processes for consistent panel performance.' },
   { title: 'Export Documentation', desc: 'Commercial invoice, packing list, COO, test certificates, and MSDS where applicable.' },
-  { title: 'Container Optimisation', desc: 'Loading drawings maximise sqm per container — reducing landed cost per square metre.' },
+  { title: 'Container Optimisation', desc: 'Loading drawings maximise sqm per container, reducing landed cost per square metre.' },
   { title: 'Engineering Support', desc: 'Thickness selection, profile matching, and installation guidance from our technical team.' },
   { title: 'Certifications Hub', desc: 'IS 14925, fire test reports, and optional FM-approved specifications.', href: '/certifications' },
   { title: 'Case Studies', desc: 'Real-world cold storage, cleanroom, and industrial projects across India.', href: '/resources/project-gallery' },
@@ -70,8 +70,7 @@ export default function ExportHubPage() {
             </h1>
             <p className="mt-4 text-lg text-emerald-100 max-w-3xl leading-relaxed">
               PHOENIXX SMARTBUILD LLP exports premium sandwich PUF panels, PIR panels, Rockwool panels,
-              cold storage systems, cleanroom partitions, and pre-engineered buildings to 16 African markets —
-              with factory-direct manufacturing from Gujarat, India and engineering support at every stage.
+              cold storage systems, cleanroom partitions, and pre-engineered buildings to 16 African markets, with factory-direct manufacturing from Gujarat, India and engineering support at every stage.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link href="/get-a-quote" className="btn-primary">Request Export Quote</Link>

@@ -102,11 +102,11 @@ export default function LeadingPufPanelCompanyPage() {
                   As a <strong>leading PUF panel company in India</strong>, PHOENIXX SmartBuild has been at the 
                   forefront of the insulated panel industry, driving innovation and setting quality benchmarks 
                   that others aspire to match. Our journey began with a vision to provide Indian industries with 
-                  world-class insulation solutions, and today we serve as trusted partners to some of the country&apos;s 
+                  insulation solutions, and today we serve as trusted partners to some of the country&apos;s 
                   most prominent corporations.
                 </p>
                 <p>
-                  What distinguishes PHOENIXX from other companies is our holistic approach to industrial infrastructure. 
+                  What distinguishes PHOENIXX from other companies is our end-to-end approach to industrial infrastructure. 
                   We don&apos;t just manufacture panels – we provide complete solutions encompassing design consultation, 
                   technical engineering, manufacturing, delivery, and installation support. This end-to-end capability 
                   makes us the preferred choice for <Link href="/solutions/cold-storage-construction" className="text-primary hover:underline">cold storage projects</Link>, 
@@ -261,7 +261,7 @@ export default function LeadingPufPanelCompanyPage() {
               Partner with India&apos;s Leading PUF Panel Company
             </h2>
             <p className="text-xl text-emerald-100 mb-10 max-w-2xl mx-auto">
-              Experience industry-leading quality, innovation, and service for your next project.
+              Consistent quality, engineering support, and service for your next project.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link

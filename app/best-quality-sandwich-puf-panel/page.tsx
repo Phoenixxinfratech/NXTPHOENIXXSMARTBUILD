@@ -287,7 +287,7 @@ export default function BestQualitySandwichPufPanelPage() {
               </h2>
               <p className="text-lg text-slate-600 mb-10 max-w-3xl">
                 Quality in a sandwich PUF panel is determined by five measurable parameters. Understanding each one
-                empowers you to make informed purchasing decisions and avoid costly mistakes.
+                helps you make informed purchasing decisions and avoid costly mistakes.
               </p>
 
               <div className="space-y-8">
@@ -301,7 +301,7 @@ export default function BestQualitySandwichPufPanelPage() {
                   {
                     number: '02',
                     title: 'Thermal Conductivity — Insulation Efficiency',
-                    description: 'Thermal conductivity (k-value) measures how readily heat passes through the foam core. Lower values mean better insulation. Premium PUF panels achieve 0.024 W/mK or below — the lowest k-value among common insulation materials. For context, mineral wool has a k-value of 0.035-0.040 W/mK, meaning PUF provides 40-50% better insulation in the same thickness. This translates directly to energy savings: a 80mm premium PUF panel can replace a 120mm mineral wool panel while delivering identical or superior thermal resistance.',
+                    description: 'Thermal conductivity (k-value) measures how readily heat passes through the foam core. Lower values mean better insulation. Premium PUF panels achieve 0.024 W/mK or below: the lowest k-value among common insulation materials. For context, mineral wool has a k-value of 0.035-0.040 W/mK, meaning PUF provides 40-50% better insulation in the same thickness. This translates directly to energy savings: a 80mm premium PUF panel can replace a 120mm mineral wool panel while delivering identical or superior thermal resistance.',
                     metric: '≤ 0.024 W/mK',
                   },
                   {
@@ -313,7 +313,7 @@ export default function BestQualitySandwichPufPanelPage() {
                   {
                     number: '04',
                     title: 'Coating Quality — Weather & UV Protection',
-                    description: 'The exterior coating determines color retention, chalking resistance, and long-term aesthetics. Three tiers exist: PE (Polyester) is the most economical but only suitable for indoor or sheltered applications with a 5-8 year color life. SMP (Silicon Modified Polyester) offers the best value for standard outdoor use with a 15-20 year performance window. PVDF (Polyvinylidene Fluoride) is the premium choice with 25+ year color retention, maximum UV resistance, and the lowest chalking index — ideal for architectural and long-service-life applications.',
+                    description: 'The exterior coating determines color retention, chalking resistance, and long-term aesthetics. Three tiers exist: PE (Polyester) is the most economical but only suitable for indoor or sheltered applications with a 5-8 year color life. SMP (Silicon Modified Polyester) offers the best value for standard outdoor use with a 15-20 year performance window. PVDF (Polyvinylidene Fluoride) is the premium choice with 25+ year color retention, maximum UV resistance, and the lowest chalking index, ideal for architectural and long-service-life applications.',
                     metric: 'PVDF / SMP / PE',
                   },
                   {
@@ -699,7 +699,7 @@ export default function BestQualitySandwichPufPanelPage() {
               <div className="mt-10 prose prose-lg prose-slate max-w-3xl mx-auto">
                 <h3>Factors That Affect PUF Panel Pricing</h3>
                 <p>
-                  Panel thickness is the primary cost driver — a 100mm panel costs roughly 60% more than a 50mm panel
+                  Panel thickness is the primary cost driver: a 100mm panel costs roughly 60% more than a 50mm panel
                   due to increased foam volume. Steel grade and thickness add 10-25% depending on specification. Coating
                   type (PE vs SMP vs PVDF) impacts cost by 5-15%. Order volume, custom profiling, and delivery distance
                   also influence final pricing. For accurate project-specific pricing, we recommend requesting a detailed

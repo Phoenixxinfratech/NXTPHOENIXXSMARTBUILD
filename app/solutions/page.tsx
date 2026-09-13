@@ -246,8 +246,7 @@ export default function SolutionsPage() {
                   Complete EPC Project Execution
                 </h2>
                 <p className="mt-4 text-slate-300 leading-relaxed">
-                  End-to-end project delivery—from concept and engineering to construction and commissioning—
-                  ensuring seamless coordination, cost control, and predictable outcomes.
+                  End-to-end project delivery, from concept and engineering to construction and commissioning, with coordination, cost control, and delivery dates held in one place.
                 </p>
 
                 <div className="mt-8 grid gap-4 sm:grid-cols-2">

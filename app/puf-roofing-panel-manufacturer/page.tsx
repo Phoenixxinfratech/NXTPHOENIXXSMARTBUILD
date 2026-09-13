@@ -124,7 +124,7 @@ export default function PufRoofingPanelManufacturerPage() {
                   Phoenixx Smart Build operates a continuous lamination line that injects
                   CFC-free polyurethane foam at controlled temperature and pressure between
                   pre-painted galvanised steel skins. This process achieves a consistent
-                  density of 40±2 kg/m³ across every panel — eliminating the air pockets
+                  density of 40±2 kg/m³ across every panel, eliminating the air pockets
                   and density variations common in batch-produced alternatives.
                 </p>
                 <p>

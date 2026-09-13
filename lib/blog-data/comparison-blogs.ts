@@ -17,7 +17,7 @@ export const comparisonBlogs: Record<string, BlogPost> = {
 
       <h2>What Is a PIR Panel?</h2>
       <p>A <a href="/products/sandwich-panels/pir-panel">PIR panel</a> uses a polyisocyanurate foam core, which is chemically similar to PUF but manufactured with a higher proportion of isocyanate. This produces a more cross-linked polymer structure that offers improved fire resistance and slightly better thermal performance at elevated temperatures.</p>
-      <p>PIR panels are increasingly specified for projects where <strong>fire safety compliance</strong> is critical\u2014including pharmaceutical plants, food processing units, IT server rooms, and buildings that require <a href="/products/sandwich-panels/fm-approved-panel">FM Global approval</a>.</p>
+      <p>PIR panels are increasingly specified for projects where <strong>fire safety compliance</strong> is critical, including pharmaceutical plants, food processing units, IT server rooms, and buildings that require <a href="/products/sandwich-panels/fm-approved-panel">FM Global approval</a>.</p>
 
       <h2>PUF Panel vs PIR Panel \u2013 Detailed Comparison Table</h2>
       <table>
@@ -118,7 +118,7 @@ export const comparisonBlogs: Record<string, BlogPost> = {
       </ul>
 
       <h2>Phoenixx SmartBuild \u2013 Manufacturer of Both PUF &amp; PIR Panels</h2>
-      <p>At <strong>Phoenixx SmartBuild</strong>, we manufacture both <a href="/products/sandwich-panels/sandwich-puf-panel">PUF sandwich panels</a> and <a href="/products/sandwich-panels/pir-panel">PIR panels</a> at our state-of-the-art facility. Our engineering team works with every client to identify the optimal panel type based on project requirements, budget, and regulatory compliance. With CSD density up to 40\u201345&nbsp;kg/m\u00b3 and thicknesses from 30&nbsp;mm to 200&nbsp;mm, we ensure your building meets performance expectations and Indian construction standards.</p>
+      <p>At <strong>Phoenixx SmartBuild</strong>, we manufacture both <a href="/products/sandwich-panels/sandwich-puf-panel">PUF sandwich panels</a> and <a href="/products/sandwich-panels/pir-panel">PIR panels</a> at our production facility. Our engineering team works with every client to identify the optimal panel type based on project requirements, budget, and regulatory compliance. With CSD density up to 40\u201345&nbsp;kg/m\u00b3 and thicknesses from 30&nbsp;mm to 200&nbsp;mm, we ensure your building meets performance expectations and Indian construction standards.</p>
       <p>Ready to choose the right panel? <a href="/get-a-quote">Get a free quote</a> from our team today.</p>
     `,
     category: 'Comparison',
@@ -346,7 +346,7 @@ export const comparisonBlogs: Record<string, BlogPost> = {
     excerpt: 'A comprehensive comparison between modern insulated sandwich panels and traditional brick wall construction for industrial buildings, covering cost, construction speed, insulation, maintenance, and long-term value.',
     content: `
       <h2>Sandwich Panel vs Brick Wall \u2013 The Modern vs Traditional Construction Debate</h2>
-      <p>India\u2019s industrial construction landscape is undergoing a major shift. While <strong>traditional brick-and-mortar construction</strong> has served the country for decades, modern <a href="/products/sandwich-panels">insulated sandwich panels</a> are rapidly becoming the preferred choice for factories, warehouses, cold storage facilities, and commercial buildings.</p>
+      <p>India\u2019s industrial construction sector is undergoing a major shift. While <strong>traditional brick-and-mortar construction</strong> has served the country for decades, modern <a href="/products/sandwich-panels">insulated sandwich panels</a> are rapidly becoming the preferred choice for factories, warehouses, cold storage facilities, and commercial buildings.</p>
       <p>But is this shift justified? In this guide, we compare sandwich panel construction with traditional brick wall construction across every parameter that matters to builders, architects, and project owners in India.</p>
 
       <h2>Construction Cost Comparison</h2>
@@ -404,7 +404,7 @@ export const comparisonBlogs: Record<string, BlogPost> = {
 
       <h2>Thermal Insulation Performance</h2>
       <p>A standard 50&nbsp;mm PUF sandwich panel provides an R-value of approximately <strong>2.27 m\u00b2K/W</strong>, equivalent to a 230&nbsp;mm (9-inch) brick wall with additional 50&nbsp;mm EPS insulation. For air-conditioned factories, cold storage rooms, and IT facilities in India\u2019s hot climate, PUF panels reduce cooling energy consumption by <strong>25\u201340%</strong> compared to uninsulated brick walls.</p>
-      <p>Brick walls without separate insulation have poor thermal performance\u2014a 230&nbsp;mm brick wall has an R-value of only about <strong>0.45 m\u00b2K/W</strong>, which is grossly inadequate for temperature-controlled environments.</p>
+      <p>Brick walls without separate insulation have poor thermal performance: a 230&nbsp;mm brick wall has an R-value of only about <strong>0.45 m\u00b2K/W</strong>, which is grossly inadequate for temperature-controlled environments.</p>
 
       <h2>Structural Strength &amp; Durability</h2>
       <p>Brick walls are load-bearing and can support multi-storey structures without a steel frame. Sandwich panels, however, are non-load-bearing cladding elements that require a <a href="/solutions/peb">steel frame (PEB structure)</a> for support.</p>
@@ -421,7 +421,7 @@ export const comparisonBlogs: Record<string, BlogPost> = {
       <p>Over a 20-year lifecycle, sandwich panel buildings typically cost <strong>20\u201330% less to maintain</strong> than equivalent brick structures, making them more economical in the long run despite potentially similar upfront costs.</p>
 
       <h2>Flexibility and Expansion</h2>
-      <p>One of the most underrated advantages of sandwich panel construction is flexibility. Need to expand your warehouse by 5,000&nbsp;sq ft? With sandwich panels, you simply extend the steel frame and add more panels\u2014a process that takes 1\u20132 weeks. With brick walls, expansion means new foundation work, brick laying, curing, plastering, and painting\u2014taking 6\u20138 weeks or more.</p>
+      <p>One of the most underrated advantages of sandwich panel construction is flexibility. Need to expand your warehouse by 5,000&nbsp;sq ft? With sandwich panels, you simply extend the steel frame and add more panels: a process that takes 1\u20132 weeks. With brick walls, expansion means new foundation work, brick laying, curing, plastering, and painting\u2014taking 6\u20138 weeks or more.</p>
       <p>Similarly, if you need to relocate, sandwich panels can be dismantled and reassembled at a new location. Brick walls offer no such flexibility.</p>
 
       <h2>When Brick Walls Make Sense</h2>
@@ -505,7 +505,7 @@ export const comparisonBlogs: Record<string, BlogPost> = {
       <p><a href="/products/sandwich-panels/sandwich-puf-panel">PUF sandwich panels</a> use a rigid closed-cell polyurethane foam core with a density of 38\u201342&nbsp;kg/m\u00b3. The foam is formed through an exothermic reaction between polyol and isocyanate, creating a dense, uniform cellular structure with exceptional thermal resistance. PUF has one of the lowest thermal conductivity values among commercially available insulation materials.</p>
 
       <h3>EPS (Expanded Polystyrene) Panel</h3>
-      <p>EPS panels use expanded polystyrene\u2014the same material found in disposable packaging\u2014as the core insulator. EPS beads are expanded with steam and moulded into blocks, which are then cut to size and laminated between metal facings. EPS has a density of 12\u201325&nbsp;kg/m\u00b3, making it very lightweight but less thermally efficient per unit thickness compared to PUF.</p>
+      <p>EPS panels use expanded polystyrene: the same material found in disposable packaging\u2014as the core insulator. EPS beads are expanded with steam and moulded into blocks, which are then cut to size and laminated between metal facings. EPS has a density of 12\u201325&nbsp;kg/m\u00b3, making it very lightweight but less thermally efficient per unit thickness compared to PUF.</p>
 
       <h2>PUF vs EPS \u2013 Detailed Comparison Table</h2>
       <table>
@@ -683,7 +683,7 @@ export const comparisonBlogs: Record<string, BlogPost> = {
 
       <h2>Material Overview</h2>
       <h3>PIR (Polyisocyanurate) Panel</h3>
-      <p>The <a href="/products/sandwich-panels/pir-panel">PIR panel</a> uses a polyisocyanurate foam core\u2014a modified version of polyurethane with a higher isocyanate-to-polyol ratio. This chemical composition creates a highly cross-linked polymer that forms a stable char barrier when exposed to fire, significantly limiting flame spread and heat release. PIR panels are widely available with <a href="/products/sandwich-panels/fm-approved-panel">FM Global approval</a>.</p>
+      <p>The <a href="/products/sandwich-panels/pir-panel">PIR panel</a> uses a polyisocyanurate foam core: a modified version of polyurethane with a higher isocyanate-to-polyol ratio. This chemical composition creates a highly cross-linked polymer that forms a stable char barrier when exposed to fire, significantly limiting flame spread and heat release. PIR panels are widely available with <a href="/products/sandwich-panels/fm-approved-panel">FM Global approval</a>.</p>
 
       <h3>Mineral Wool (Rockwool) Panel</h3>
       <p>The <a href="/products/sandwich-panels/rockwool-panel">Rockwool panel</a> uses stone wool fibres made from molten basalt rock. Mineral wool is naturally non-combustible and can withstand temperatures exceeding 1,000\u00b0C. It also provides excellent acoustic absorption, making it a dual-purpose insulation material.</p>
@@ -832,7 +832,7 @@ export const comparisonBlogs: Record<string, BlogPost> = {
     content: `
       <h2>Choosing the Best Insulated Panel for Cold Storage in India</h2>
       <p>India\u2019s cold storage industry is expanding rapidly\u2014driven by growth in frozen food, dairy, pharmaceuticals, agricultural produce, and e-commerce. The insulated panel you choose for your cold storage facility directly impacts <strong>energy consumption, temperature stability, food safety compliance, and long-term operational cost</strong>.</p>
-      <p>In this expert guide, the engineering team at <strong>Phoenixx SmartBuild</strong> compares the three most common panel types used for <a href="/solutions/cold-storage-construction">cold storage construction</a> in India\u2014PUF, PIR, and EPS\u2014and provides clear recommendations based on your operating temperature, budget, and regulatory requirements.</p>
+      <p>In this expert guide, the engineering team at <strong>Phoenixx SmartBuild</strong> compares the three most common panel types used for <a href="/solutions/cold-storage-construction">cold storage construction</a> in India\u2014PUF, PIR, and EPS, and provides clear recommendations based on your operating temperature, budget, and regulatory requirements.</p>
 
       <h2>Cold Storage Temperature Classification</h2>
       <p>Before selecting a panel, it\u2019s important to understand the temperature zone your cold storage will operate in:</p>
@@ -1046,7 +1046,7 @@ export const comparisonBlogs: Record<string, BlogPost> = {
       <p>A <a href="/products/sandwich-panels/sandwich-puf-panel">PUF sandwich panel</a> is a factory-manufactured composite panel where rigid polyurethane foam is chemically bonded to two metal facings. The insulation is integral to the panel\u2014there are no gaps, joints, or compression points. It serves simultaneously as <strong>structural cladding, weather barrier, vapour barrier, and thermal insulation</strong>.</p>
 
       <h3>Glass Wool Insulation</h3>
-      <p>Glass wool is a fibrous insulation material made from molten glass spun into fine fibres. In industrial buildings, glass wool blankets or batts are typically installed between purlins/girts under a single-skin metal sheet. This is a <strong>two-component system</strong>\u2014the metal sheet provides weather protection while the glass wool provides insulation.</p>
+      <p>Glass wool is a fibrous insulation material made from molten glass spun into fine fibres. In industrial buildings, glass wool blankets or batts are typically installed between purlins/girts under a single-skin metal sheet. This is a <strong>two-component system</strong>: the metal sheet provides weather protection while the glass wool provides insulation.</p>
 
       <h2>Performance Comparison Table</h2>
       <table>
@@ -1215,7 +1215,7 @@ export const comparisonBlogs: Record<string, BlogPost> = {
     faqs: [
       {
         question: 'Is PUF panel better than glass wool for insulation?',
-        answer: 'Yes, for most applications. PUF panels provide 60\u201380% higher R-value per inch compared to glass wool. Additionally, PUF maintains its insulation value over decades, while glass wool degrades due to moisture absorption, compression, and sagging\u2014especially in India\u2019s humid climate.',
+        answer: 'Yes, for most applications. PUF panels provide 60\u201380% higher R-value per inch compared to glass wool. Additionally, PUF maintains its insulation value over decades, while glass wool degrades due to moisture absorption, compression, and sagging, especially in India\u2019s humid climate.',
       },
       {
         question: 'How much energy does PUF panel save compared to glass wool?',
@@ -1227,7 +1227,7 @@ export const comparisonBlogs: Record<string, BlogPost> = {
       },
       {
         question: 'Is glass wool cheaper than PUF panel?',
-        answer: 'Yes, the upfront installed cost of glass wool with a metal sheet (\u20b975\u2013\u20b9110 per sq ft) is approximately 40\u201350% lower than a PUF sandwich panel (\u20b9135\u2013\u20b9180 per sq ft). However, the 10-year total cost of ownership\u2014including energy costs, maintenance, and replacement\u2014is significantly higher for glass wool.',
+        answer: 'Yes, the upfront installed cost of glass wool with a metal sheet (\u20b975\u2013\u20b9110 per sq ft) is approximately 40\u201350% lower than a PUF sandwich panel (\u20b9135\u2013\u20b9180 per sq ft). However, the 10-year total cost of ownership, including energy costs, maintenance, and replacement\u2014is significantly higher for glass wool.',
       },
       {
         question: 'When should I use glass wool instead of PUF panels?',
@@ -1441,7 +1441,7 @@ export const comparisonBlogs: Record<string, BlogPost> = {
     excerpt: 'A detailed comparison of PUF panel-based construction and traditional RCC (Reinforced Cement Concrete) construction for industrial buildings in India, covering cost per square foot, construction timeline, thermal performance, flexibility, and maintenance costs.',
     content: `
       <h2>PUF Panel vs RCC Construction \u2013 The Modern Industrial Building Dilemma</h2>
-      <p>India\u2019s industrial sector is at a crossroads. Traditional <strong>RCC (Reinforced Cement Concrete) construction</strong>\u2014the backbone of Indian infrastructure for decades\u2014is being challenged by modern <strong>PUF panel-based PEB (Pre-Engineered Building) construction</strong> that promises faster timelines, better insulation, and lower lifecycle costs.</p>
+      <p>India\u2019s industrial sector is at a crossroads. Traditional <strong>RCC (Reinforced Cement Concrete) construction</strong>: the backbone of Indian infrastructure for decades\u2014is being challenged by modern <strong>PUF panel-based PEB (Pre-Engineered Building) construction</strong> that promises faster timelines, better insulation, and lower lifecycle costs.</p>
       <p>But is the shift always justified? In this comprehensive comparison, we analyse both construction methods across every parameter that matters to factory owners, warehouse developers, and industrial project managers in India.</p>
 
       <h2>Construction Cost Comparison (Per Sq Ft)</h2>
@@ -1532,7 +1532,7 @@ export const comparisonBlogs: Record<string, BlogPost> = {
           </tr>
         </tbody>
       </table>
-      <p>PUF panel + PEB construction is <strong>2.5\u20133x faster</strong> than RCC. For a business that generates \u20b950 lakhs per month in revenue, completing construction 3\u20134 months earlier translates to <strong>\u20b91.5\u20132 crore in additional revenue</strong>\u2014a massive financial advantage that often overshadows any material cost differences.</p>
+      <p>PUF panel + PEB construction is <strong>2.5\u20133x faster</strong> than RCC. For a business that generates \u20b950 lakhs per month in revenue, completing construction 3\u20134 months earlier translates to <strong>\u20b91.5\u20132 crore in additional revenue</strong>: a massive financial advantage that often overshadows any material cost differences.</p>
 
       <h2>Thermal Performance</h2>
       <p>RCC structures have inherently poor thermal insulation. Concrete has a thermal conductivity of approximately <strong>1.0\u20131.5 W/mK</strong>\u2014about 50x worse than PUF foam (0.022\u20130.024 W/mK). A standard 150&nbsp;mm RCC slab roof is a massive thermal bridge that transmits heat directly into the building.</p>
@@ -1561,7 +1561,7 @@ export const comparisonBlogs: Record<string, BlogPost> = {
 
       <h2>Expansion and Modification</h2>
       <p>Need to add a bay to your warehouse or extend the factory floor? With PUF panel + PEB construction, expansion is straightforward\u2014extend the steel frame and add more panels. The process takes 2\u20134 weeks for a typical 5,000&nbsp;sq ft expansion.</p>
-      <p>With RCC, expansion involves new foundation excavation, concrete pouring, curing, brick work, plastering, and painting\u2014a 2\u20133 month process that significantly disrupts ongoing operations.</p>
+      <p>With RCC, expansion involves new foundation excavation, concrete pouring, curing, brick work, plastering, and painting: a 2\u20133 month process that significantly disrupts ongoing operations.</p>
 
       <h2>When RCC Construction Is Appropriate</h2>
       <ul>
@@ -1616,7 +1616,7 @@ export const comparisonBlogs: Record<string, BlogPost> = {
       },
       {
         question: 'What are the energy savings of PUF panel buildings over RCC?',
-        answer: 'PUF panel buildings offer 25\u201340% lower cooling energy costs compared to uninsulated RCC buildings in Indian climatic conditions. For a 20,000 sq ft air-conditioned factory, this can mean savings of \u20b93\u20135 lakhs per year in electricity bills\u2014a significant operational cost advantage.',
+        answer: 'PUF panel buildings offer 25\u201340% lower cooling energy costs compared to uninsulated RCC buildings in Indian climatic conditions. For a 20,000 sq ft air-conditioned factory, this can mean savings of \u20b93\u20135 lakhs per year in electricity bills: a significant operational cost advantage.',
       },
     ],
   },
@@ -1633,7 +1633,7 @@ export const comparisonBlogs: Record<string, BlogPost> = {
 
       <h2>What Is Prefabricated Building Construction?</h2>
       <p>Prefabricated construction (also called <a href="/solutions/peb">Pre-Engineered Building or PEB</a>) involves manufacturing building components\u2014steel frames, columns, rafters, purlins, and <a href="/products/sandwich-panels">insulated sandwich panels</a>\u2014in a controlled factory environment. These components are then transported to the site and assembled using bolted connections and mechanical fasteners.</p>
-      <p>The result is a high-quality, thermally insulated building constructed in a fraction of the time required for conventional methods\u2014with less waste, better quality control, and predictable costs.</p>
+      <p>The result is a high-quality, thermally insulated building constructed in a fraction of the time required for conventional methods, with less waste, better quality control, and predictable costs.</p>
 
       <h2>What Is Conventional Construction?</h2>
       <p>Conventional construction in India typically involves cast-in-situ RCC (Reinforced Cement Concrete) structural frames with brick masonry infill walls, plastering, painting, and separate insulation. Materials are assembled on site by skilled and semi-skilled workers, with quality dependent on workmanship, weather conditions, and supervision.</p>
@@ -1726,7 +1726,7 @@ export const comparisonBlogs: Record<string, BlogPost> = {
       <ul>
         <li>Foundation work on site proceeds simultaneously with structural steel fabrication and panel manufacturing in the factory</li>
         <li>Steel erection begins immediately after foundation curing (no multi-week concrete curing delays)</li>
-        <li>Panel installation is rapid\u2014a skilled crew can install 200\u2013300 sq metres of sandwich panels per day</li>
+        <li>Panel installation is rapid: a skilled crew can install 200\u2013300 sq metres of sandwich panels per day</li>
         <li>No weather-dependent curing or drying processes</li>
       </ul>
       <p>For Indian businesses, where monsoon season can halt conventional construction for 2\u20133 months, prefabricated construction\u2019s weather independence is a significant practical advantage.</p>
@@ -1744,7 +1744,7 @@ export const comparisonBlogs: Record<string, BlogPost> = {
       <h2>Environmental Impact and Sustainability</h2>
       <p>Prefabricated construction has a substantially lower environmental footprint:</p>
       <ul>
-        <li><strong>Material waste:</strong> 2\u20135% for PEB vs 15\u201325% for conventional\u2014up to 80% less construction waste</li>
+        <li><strong>Material waste:</strong> 2\u20135% for PEB vs 15\u201325% for conventional, up to 80% less construction waste</li>
         <li><strong>Water consumption:</strong> Minimal water needed for assembly vs thousands of litres for concrete curing and masonry</li>
         <li><strong>Cement reduction:</strong> Steel and panel-based construction dramatically reduces cement usage\u2014important because cement production accounts for approximately 7% of global CO\u2082 emissions</li>
         <li><strong>Recyclability:</strong> Steel and metal components are 100% recyclable at end of life. Brick and concrete debris has limited reuse value</li>
@@ -1806,7 +1806,7 @@ export const comparisonBlogs: Record<string, BlogPost> = {
     faqs: [
       {
         question: 'Is prefabricated construction cheaper than conventional in India?',
-        answer: 'Yes, for industrial and commercial buildings. Prefabricated PEB construction typically costs \u20b9800\u2013\u20b91,200 per sq ft compared to \u20b91,100\u2013\u20b91,600 for conventional RCC construction\u2014a saving of 20\u201335%. Savings come from lighter foundations, less labour, faster timelines, and elimination of plastering, painting, and separate insulation.',
+        answer: 'Yes, for industrial and commercial buildings. Prefabricated PEB construction typically costs \u20b9800\u2013\u20b91,200 per sq ft compared to \u20b91,100\u2013\u20b91,600 for conventional RCC construction: a saving of 20\u201335%. Savings come from lighter foundations, less labour, faster timelines, and elimination of plastering, painting, and separate insulation.',
       },
       {
         question: 'How long does a prefabricated building last?',

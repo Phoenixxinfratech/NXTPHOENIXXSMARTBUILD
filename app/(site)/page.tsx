@@ -34,7 +34,7 @@ const products = [
   {
     title: 'Wall & Roof Panels',
     description: 'High-performance insulated panels engineered for thermal efficiency, structural strength, and long service life.',
-    details: 'Includes PIR Panels, Sandwich PUF Panels, Roofing PUF Panels, and Wall & Ceiling Panels—ideal for energy-efficient industrial and commercial buildings.',
+    details: 'Includes PIR Panels, Sandwich PUF Panels, Roofing PUF Panels, and Wall & Ceiling Panels, ideal for energy-efficient industrial and commercial buildings.',
     href: '/products/sandwich-panels',
     icon: '🧱',
     image: '/images/products/sandwich-panels/puf-panel/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
@@ -76,14 +76,14 @@ const solutions = [
   },
   {
     title: 'Ceiling Systems',
-    description: 'Walkable and non-walkable ceiling systems designed for accessibility, acoustic control, and clean aesthetics—suitable for offices, industries, and cleanrooms.',
+    description: 'Walkable and non-walkable ceiling systems designed for accessibility, acoustic control, and clean aesthetics, suitable for offices, industries, and cleanrooms.',
     href: '/solutions/walkable-ceiling-systems',
     icon: '📐',
     image: '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-2.jpg',
   },
   {
     title: 'Partition Solutions',
-    description: 'Modular and insulated partition systems for cleanrooms, offices, and industrial spaces—offering flexibility, thermal control, and fast installation.',
+    description: 'Modular and insulated partition systems for cleanrooms, offices, and industrial spaces, offering flexibility, thermal control, and fast installation.',
     href: '/solutions/partition-solutions',
     icon: '🧱',
     image: '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat2.jpg',
@@ -97,7 +97,7 @@ const solutions = [
   },
   {
     title: 'Turnkey Industrial EPC Projects',
-    description: 'End-to-end project delivery—from concept and engineering to construction and commissioning—ensuring seamless coordination, cost control, and predictable outcomes.',
+    description: 'End-to-end project delivery, from concept and engineering to construction and commissioning, with coordination, cost control, and delivery dates held in one place.',
     href: '/contact-us',
     icon: '🔧',
     image: '/images/solutions/peb/Pre-Engineering-Building-Ahmedabad-Phoenixx-infratech-projects17.jpg',
@@ -108,7 +108,7 @@ const solutions = [
 const valueProps = [
   {
     title: 'Engineering-Driven Execution',
-    description: 'Every solution is engineered for performance, compliance, and durability—reducing lifecycle costs and operational risks.',
+    description: 'Every solution is engineered for performance, compliance, and durability, reducing lifecycle costs and operational risks.',
     icon: '⚙️',
   },
   {
@@ -204,7 +204,7 @@ const insights = [
 const faqs = [
   {
     question: 'What makes PHOENIXX solutions different?',
-    answer: 'Our solutions combine engineering precision, compliant materials, and on-ground execution experience—ensuring predictable performance.',
+    answer: 'Our solutions combine engineering precision, compliant materials, and on-ground execution experience, ensuring predictable performance.',
   },
   {
     question: 'Do you deliver turnkey EPC projects?',

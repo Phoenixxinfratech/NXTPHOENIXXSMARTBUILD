@@ -590,7 +590,7 @@ export const serpBlogsPart1: Record<string, BlogPost> = {
       <h2>Detailed Brand Analysis</h2>
 
       <h3>1. Phoenixx SmartBuild \u2013 Best Value for Money</h3>
-      <p><a href="/products/sandwich-panels/sandwich-puf-panel">Phoenixx SmartBuild</a> stands out as the <strong>best PUF panel brand in India</strong> for buyers seeking premium quality at factory-direct prices. Based in Ahmedabad \u2013 the PUF panel capital of India \u2013 Phoenixx operates a state-of-the-art continuous production line with automated density control and real-time quality monitoring.</p>
+      <p><a href="/products/sandwich-panels/sandwich-puf-panel">Phoenixx SmartBuild</a> stands out as the <strong>best PUF panel brand in India</strong> for buyers seeking premium quality at factory-direct prices. Based in Ahmedabad \u2013 the PUF panel capital of India \u2013 Phoenixx operates a continuous production line with automated density control and real-time quality monitoring.</p>
       <ul>
         <li><strong>Product Range:</strong> Wall PUF, Roof PUF, Cold Room, PIR, Cleanroom, Acoustic panels</li>
         <li><strong>Steel Sources:</strong> JSW, Tata BlueScope, POSCO-certified coils</li>
@@ -607,7 +607,7 @@ export const serpBlogsPart1: Record<string, BlogPost> = {
       <p>Backed by the Tata Group, BlueScope offers excellent steel quality (Colorbond technology). Their PUF panels are premium-priced and primarily favoured by MNC projects with LEED/green building requirements.</p>
 
       <h3>4. Kingspan India</h3>
-      <p>The global leader\u2019s India operations offer world-class panels with FM and UL certifications. Best suited for projects with international compliance requirements. Pricing is the highest in this comparison but justified for fire-critical applications.</p>
+      <p>The global leader\u2019s India operations offer panels with FM and UL certifications. Best suited for projects with international compliance requirements. Pricing is the highest in this comparison but justified for fire-critical applications.</p>
 
       <h2>How to Choose the Right PUF Panel Brand for Your Project</h2>
       <p>Consider these factors when making your final decision:</p>

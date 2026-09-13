@@ -102,7 +102,7 @@ export default function SuratPage() {
                 PUF Panel Manufacturer in Surat
               </h1>
               <p className="mt-6 text-xl text-slate-300 max-w-3xl">
-                Coastal humidity and salt air around Sachin, Pandesara, and Hazira wear bare metal roofs fast. PHOENIXX supplies PUF panels to Surat with marine-grade coating options, so textile, diamond, and chemical units get insulation that holds through monsoon seasons — not just summer heat.
+                Coastal humidity and salt air around Sachin, Pandesara, and Hazira wear bare metal roofs fast. PHOENIXX supplies PUF panels to Surat with marine-grade coating options, so textile, diamond, and chemical units get insulation that holds through monsoon seasons, not just summer heat.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link

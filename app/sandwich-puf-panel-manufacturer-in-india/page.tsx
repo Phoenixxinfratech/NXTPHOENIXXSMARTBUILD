@@ -110,7 +110,7 @@ export default function SandwichPufPanelManufacturerPage() {
                   As a specialized <strong>sandwich PUF panel manufacturer in India</strong>, PHOENIXX 
                   SmartBuild produces advanced composite building panels that combine thermal insulation, 
                   structural integrity, and aesthetic finish in a single factory-made component. Our 
-                  sandwich panels revolutionize building construction by eliminating the need for separate 
+                  sandwich panels transform building construction by eliminating the need for separate 
                   insulation layers and finish materials.
                 </p>
                 <p>

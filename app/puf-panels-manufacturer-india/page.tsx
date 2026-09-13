@@ -109,7 +109,7 @@ export default function PufPanelsManufacturerIndiaPage() {
                   panels that meet international quality standards while being optimized for Indian conditions.
                 </p>
                 <p>
-                  With over 18 years of industry experience, we have developed deep expertise in understanding 
+                  With 13+ years of industry experience, we have developed deep expertise in understanding 
                   the unique requirements of Indian industries – from the extreme heat of Rajasthan to the 
                   humidity of coastal regions. Our <Link href="/products/sandwich-panels/sandwich-puf-panel" className="text-primary hover:underline">PUF panels</Link> are 
                   engineered to perform reliably across all Indian climate zones, delivering consistent thermal 

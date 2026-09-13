@@ -108,13 +108,13 @@ export default function TopPufPanelManufacturersPage() {
               <div className="prose prose-lg prose-slate max-w-none">
                 <p>
                   When searching for <strong>top PUF panel manufacturers in India</strong>, industry professionals 
-                  consistently recognize PHOENIXX SmartBuild for our unwavering commitment to quality, innovation, 
+                  consistently recognize PHOENIXX SmartBuild for our consistency on quality, innovation, 
                   and customer service. With advanced manufacturing infrastructure and a dedicated team of engineers, 
                   we have earned the trust of leading companies across pharmaceuticals, food processing, logistics, 
                   and industrial sectors.
                 </p>
                 <p>
-                  Our manufacturing facility utilizes state-of-the-art continuous lamination technology, ensuring 
+                  Our manufacturing facility utilizes modern continuous lamination technology, ensuring 
                   uniform foam distribution, precise thickness control, and consistent panel quality across every 
                   production batch. This technological edge, combined with our extensive experience across 150+ 
                   successful projects, positions us among the most reliable <Link href="/products/sandwich-panels" className="text-primary hover:underline">insulated panel suppliers</Link> in India.

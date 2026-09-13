@@ -84,7 +84,7 @@ export const exportIndustries: Record<string, ExportIndustry> = {
     metaDescription:
       'Export insulated panels for mining camps, processing plants, and resource-sector infrastructure in Africa — PIR, Rockwool, and PUF systems from PHOENIXX SMARTBUILD.',
     definition:
-      'Mining and extractive industries need durable, rapidly deployable buildings — accommodation, processing plants, and support facilities — often with elevated fire-safety requirements.',
+      'Mining and extractive industries need durable, rapidly deployable buildings — accommodation, processing plants, and support facilities, often with elevated fire-safety requirements.',
     panelFit:
       'Rockwool panels (A1/A2) and PIR for process areas; standard PUF for accommodation and warehouses; prefab modular compatibility.',
     applications: [

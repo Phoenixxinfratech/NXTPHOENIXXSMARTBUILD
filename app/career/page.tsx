@@ -63,7 +63,7 @@ const benefits = [
   { icon: '🏥', title: 'Health Benefits', desc: 'Medical insurance for employees and family' },
   { icon: '📚', title: 'Learning & Development', desc: 'Training programs and certification support' },
   { icon: '🏠', title: 'Work-Life Balance', desc: 'Flexible policies and leave benefits' },
-  { icon: '🎯', title: 'Challenging Projects', desc: 'Work on diverse, cutting-edge infrastructure projects' },
+  { icon: '🎯', title: 'Challenging Projects', desc: 'Work on diverse, infrastructure projects' },
 ];
 
 const values = [

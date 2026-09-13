@@ -1018,7 +1018,7 @@ export const serpBlogsPart3: Record<string, BlogPost> = {
       <p><em>Rajasthan projects benefit from lower freight costs due to proximity to our Beawar manufacturing facility. Delivery within the state is typically 1\u20133 days.</em></p>
 
       <h2>The Beawar Advantage: Local Manufacturing for Rajasthan</h2>
-      <p>Phoenixx SmartBuild\u2019s <strong>state-of-the-art manufacturing facility in Beawar, Rajasthan</strong> provides a significant competitive advantage for projects across the state:</p>
+      <p>Phoenixx SmartBuild\u2019s <strong>manufacturing facility in Beawar, Rajasthan</strong> provides a significant competitive advantage for projects across the state:</p>
       <ul>
         <li><strong>Minimal freight cost:</strong> \u20b9 3\u20138/sq ft within Rajasthan vs \u20b9 12\u201320/sq ft from distant manufacturers</li>
         <li><strong>Fastest delivery:</strong> 1\u20133 days for ready stock; 7\u201310 days for custom orders</li>
@@ -1051,7 +1051,7 @@ export const serpBlogsPart3: Record<string, BlogPost> = {
       },
       {
         question: 'Is Phoenixx SmartBuild based in Rajasthan?',
-        answer: 'Yes. Phoenixx SmartBuild operates a state-of-the-art PUF panel manufacturing facility in Beawar, Rajasthan. This provides Rajasthan-based projects with the fastest delivery (1\u20133 days), lowest freight costs (\u20b9 3\u20138/sq ft within the state), and local technical support for installation supervision.',
+        answer: 'Yes. Phoenixx SmartBuild operates a modern PUF panel manufacturing facility in Beawar, Rajasthan. This provides Rajasthan-based projects with the fastest delivery (1\u20133 days), lowest freight costs (\u20b9 3\u20138/sq ft within the state), and local technical support for installation supervision.',
       },
       {
         question: 'What PUF panel thickness is recommended for Rajasthan?',

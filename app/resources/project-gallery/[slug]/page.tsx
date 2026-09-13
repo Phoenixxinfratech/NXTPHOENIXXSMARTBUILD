@@ -57,7 +57,7 @@ const projectDetails: Record<string, {
     industry: 'Manufacturing',
     scope: 'Industrial Warehouse & Cleanroom',
     area: '35,000 sq.ft',
-    description: 'State-of-the-art packaging facility with controlled environment areas for flexible packaging production.',
+    description: 'Packaging facility with controlled environment areas for flexible packaging production.',
     highlights: ['ISO Class 8 Cleanroom', 'Temperature Controlled', 'Modular Design', 'Quick Installation'],
     products: ['Cleanroom Partition', 'Sandwich PUF Panel', 'Cleanroom Doors'],
   },

@@ -193,7 +193,7 @@ export default function BestPufPanelBrandInIndiaPage() {
               <p className="mt-6 text-xl text-slate-300 max-w-3xl ai-summary">
                 PHOENIXX SMARTBUILD has earned its reputation as one of India&apos;s most trusted PUF panel brands 
                 through 13+ years of continuous manufacturing, 500+ successfully delivered projects, and an 
-                unwavering commitment to quality backed by ISO 9001:2015 and IS 14925 certifications. Every panel 
+                consistent commitment to quality backed by ISO 9001:2015 and IS 14925 certifications. Every panel 
                 is produced in-house at our Ahmedabad facility using continuous lamination technology — not 
                 assembled from third-party components.
               </p>
@@ -384,7 +384,7 @@ export default function BestPufPanelBrandInIndiaPage() {
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
                 {[
                   { icon: '🔬', title: 'Continuous Lamination', description: 'In-house production line ensures uniform bonding and consistent panel quality across every batch.' },
-                  { icon: '📊', title: '40 ± 2 kg/m³ Density', description: 'Strict density control guarantees specified thermal performance — no shortcuts, no compromises.' },
+                  { icon: '📊', title: '40 ± 2 kg/m³ Density', description: 'Strict density control guarantees specified thermal performance: no shortcuts, no compromises.' },
                   { icon: '🌿', title: 'CFC/HFC-Free', description: 'Environmentally responsible production using zero-ODP blowing agents for a sustainable future.' },
                   { icon: '📏', title: '30-150mm Thickness', description: 'Custom thickness options to match your exact thermal and structural requirements.' },
                   { icon: '🛡️', title: 'ISO & IS Certified', description: 'ISO 9001:2015, ISO 14001:2015, and IS 14925 certified quality management systems.' },

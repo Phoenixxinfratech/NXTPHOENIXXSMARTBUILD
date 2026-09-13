@@ -115,12 +115,12 @@ export default function BestPufPanelManufacturerPage() {
               <div className="prose prose-lg prose-slate max-w-none">
                 <p>
                   PHOENIXX SmartBuild has established itself as the <strong>best PUF panel manufacturer in India</strong> through 
-                  a relentless commitment to quality, innovation, and customer satisfaction. With state-of-the-art manufacturing 
+                  a relentless commitment to quality, innovation, and customer satisfaction. With modern manufacturing 
                   facilities and a team of experienced engineers, we produce high-performance insulated sandwich panels that meet 
                   the demanding requirements of modern industrial infrastructure.
                 </p>
                 <p>
-                  Our manufacturing expertise spans over 18 years, during which we have successfully delivered more than 150 projects 
+                  Our manufacturing expertise spans 13+ years, during which we have successfully delivered more than 500 projects 
                   across diverse industries including pharmaceuticals, food processing, cold chain logistics, and commercial construction. 
                   With a strong <strong>pan-India presence</strong>, PHOENIXX serves clients from <Link href="/industries/pharma-chemical" className="text-primary hover:underline">Gujarat</Link> to 
                   Tamil Nadu, Maharashtra to West Bengal, ensuring consistent quality and timely delivery nationwide.

@@ -39,7 +39,7 @@ export function WhyChooseUs() {
         <div className="text-center">
           <h2 className="text-3xl font-bold md:text-4xl">Why Choose Us</h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-            We combine decades of experience with cutting-edge technology to
+            We combine decades of experience with current technology to
             deliver exceptional results for every project.
           </p>
         </div>

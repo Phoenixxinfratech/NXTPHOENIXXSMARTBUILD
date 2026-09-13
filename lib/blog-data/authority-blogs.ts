@@ -8,7 +8,7 @@ export const authorityBlogs: Record<string, BlogPost> = {
     excerpt: 'A comprehensive guide explaining what PUF panels are, their manufacturing process, key properties, industrial applications, and why they dominate modern Indian construction.',
     content: `
       <h2>What is a PUF Panel? Definition &amp; Overview</h2>
-      <p>A <strong>PUF panel</strong> (Polyurethane Foam panel) is a composite building material consisting of an insulating core of rigid polyurethane foam sandwiched between two metal facings\u2014typically pre-painted galvanised iron (PPGI) or pre-painted galvalume (PPGL) steel sheets. Often called a <strong>sandwich PUF panel</strong>, this product serves simultaneously as a structural element, thermal insulator, and weather barrier, making it one of the most versatile materials in modern construction.</p>
+      <p>A <strong>PUF panel</strong> (Polyurethane Foam panel) is a composite building material consisting of an insulating core of rigid polyurethane foam sandwiched between two metal facings, typically pre-painted galvanised iron (PPGI) or pre-painted galvalume (PPGL) steel sheets. Often called a <strong>sandwich PUF panel</strong>, this product serves simultaneously as a structural element, thermal insulator, and weather barrier, making it one of the most versatile materials in modern construction.</p>
       <p>In India, <a href="/products/sandwich-panels/sandwich-puf-panel">PUF sandwich panels</a> have become the go-to cladding and roofing solution for factories, warehouses, cold storage facilities, cleanrooms, and commercial buildings. Their rapid adoption is driven by superior insulation performance, fast installation speed, and competitive lifecycle cost compared to conventional brick-and-mortar or bare metal sheet construction.</p>
 
       <h2>How PUF Panels Are Manufactured</h2>
@@ -21,7 +21,7 @@ export const authorityBlogs: Record<string, BlogPost> = {
         <li><strong>Curing in Double-Belt Laminator:</strong> The panel assembly passes through a heated double-belt press where the foam cures under controlled temperature and pressure, bonding firmly to both steel skins.</li>
         <li><strong>Cutting &amp; Stacking:</strong> A flying saw cuts the continuous panel to the customer\u2019s specified length. Finished panels are stacked, labelled, and packed for dispatch.</li>
       </ol>
-      <p>At <strong>Phoenixx SmartBuild</strong>, our state-of-the-art continuous line can produce panels ranging from 30&nbsp;mm to 200&nbsp;mm thickness, with output speeds exceeding 8 metres per minute\u2014ensuring timely delivery even for large-scale projects.</p>
+      <p>At <strong>Phoenixx SmartBuild</strong>, our modern continuous line can produce panels ranging from 30&nbsp;mm to 200&nbsp;mm thickness, with output speeds exceeding 8 metres per minute, ensuring timely delivery even for large-scale projects.</p>
 
       <h2>Components of a PUF Panel</h2>
       <h3>1. Metal Facings (Steel Skins)</h3>
@@ -29,7 +29,7 @@ export const authorityBlogs: Record<string, BlogPost> = {
       <h3>2. Polyurethane Foam Core</h3>
       <p>The rigid PUF core is the heart of the panel. With a density of 38\u201345&nbsp;kg/m&sup3; and a thermal conductivity of just 0.020\u20130.024&nbsp;W/mK, it offers one of the best insulation-to-thickness ratios among all building materials. The closed-cell structure also makes it inherently moisture-resistant.</p>
       <h3>3. Adhesive Bond</h3>
-      <p>The chemical bond between the foam core and the metal skins is integral\u2014formed during the foam expansion process itself\u2014eliminating the need for separate adhesives and ensuring long-term delamination resistance.</p>
+      <p>The chemical bond between the foam core and the metal skins is integral\u2014formed during the foam expansion process itself, eliminating the need for separate adhesives and ensuring long-term delamination resistance.</p>
 
       <h2>Key Properties of PUF Panels</h2>
       <table>
@@ -44,7 +44,7 @@ export const authorityBlogs: Record<string, BlogPost> = {
           <tr>
             <td>Thermal Conductivity</td>
             <td>0.020\u20130.024 W/mK</td>
-            <td>Best-in-class insulation; reduces HVAC energy by 30\u201340%</td>
+            <td>Continuous insulation; reduces HVAC energy by 30\u201340%</td>
           </tr>
           <tr>
             <td>Density</td>
@@ -90,13 +90,13 @@ export const authorityBlogs: Record<string, BlogPost> = {
         <li><strong>Fast Installation:</strong> Large-format panels (up to 15&nbsp;m length) with interlocking joints can be erected 5\u20137 times faster than conventional brick walls, compressing project timelines dramatically.</li>
         <li><strong>Lightweight:</strong> At roughly 10\u201315&nbsp;kg/m&sup2; for a 50&nbsp;mm panel, PUF panels impose minimal load on the supporting structure, reducing steel consumption in the framework.</li>
         <li><strong>Cost-Effective Lifecycle:</strong> Although the upfront <a href="/resources/blogs/puf-panel-price-india-cost-per-sq-ft">PUF panel price per sq ft</a> may be higher than bare metal sheets, the energy savings, lower maintenance, and faster construction repay the investment within 2\u20133 years.</li>
-        <li><strong>Weather Resistance:</strong> Closed-cell foam and coated steel facings make the panel resistant to rain, humidity, and UV degradation\u2014ideal for India\u2019s tropical and monsoon-prone climates.</li>
+        <li><strong>Weather Resistance:</strong> Closed-cell foam and coated steel facings make the panel resistant to rain, humidity, and UV degradation, ideal for India\u2019s tropical and monsoon-prone climates.</li>
         <li><strong>Hygienic Surface:</strong> Smooth, washable inner surfaces meet the hygiene standards required by food processing, dairy, and pharmaceutical industries.</li>
       </ul>
 
       <h2>PUF Panels in the Indian Market</h2>
       <p>India\u2019s PUF panel market has grown at a CAGR of over 9% in recent years, driven by the expansion of organised cold chain infrastructure, the rise of Pre-Engineered Buildings (PEB), and government initiatives such as the Pradhan Mantri Kisan SAMPADA Yojana that incentivise modern food storage. The Bureau of Indian Standards (BIS) has established IS 14925 for sandwich panels, and compliance with National Building Code (NBC) fire-safety norms is a key consideration for specifiers.</p>
-      <p>Leading manufacturers like <strong>Phoenixx SmartBuild</strong> offer a comprehensive range\u2014from standard <a href="/products/sandwich-panels/sandwich-puf-panel">sandwich PUF panels</a> to customised solutions for cold rooms and cleanrooms\u2014backed by in-house engineering, pan-India logistics, and <a href="/get-a-quote">dedicated project support</a>.</p>
+      <p>Leading manufacturers like <strong>Phoenixx SmartBuild</strong> offer a comprehensive range, from standard <a href="/products/sandwich-panels/sandwich-puf-panel">sandwich PUF panels</a> to customised solutions for cold rooms and cleanrooms, backed by in-house engineering, pan-India logistics, and <a href="/get-a-quote">dedicated project support</a>.</p>
 
       <h2>Frequently Asked Questions</h2>
     `,
@@ -301,7 +301,7 @@ export const authorityBlogs: Record<string, BlogPost> = {
 
       <h2>1. PUF (Polyurethane Foam) Sandwich Panels</h2>
       <h3>Overview</h3>
-      <p><a href="/products/sandwich-panels/sandwich-puf-panel">PUF sandwich panels</a> feature a rigid polyurethane foam core with a thermal conductivity of 0.020\u20130.024&nbsp;W/mK\u2014the lowest among common insulation materials. This makes them the most thermally efficient option per unit thickness.</p>
+      <p><a href="/products/sandwich-panels/sandwich-puf-panel">PUF sandwich panels</a> feature a rigid polyurethane foam core with a thermal conductivity of 0.020\u20130.024&nbsp;W/mK: the lowest among common insulation materials. This makes them the most thermally efficient option per unit thickness.</p>
       <h3>Properties</h3>
       <ul>
         <li>Thermal conductivity: 0.020\u20130.024 W/mK</li>
@@ -358,7 +358,7 @@ export const authorityBlogs: Record<string, BlogPost> = {
       <h3>Best For</h3>
       <p>Non-critical partitions, temporary structures, site offices, and budget-sensitive projects where fire safety is managed through other means (sprinklers, fire barriers).</p>
       <h3>Price Range</h3>
-      <p>\u20b960\u2013\u20b9120 per sq ft\u2014the lowest cost option among sandwich panels.</p>
+      <p>\u20b960\u2013\u20b9120 per sq ft: the lowest cost option among sandwich panels.</p>
 
       <h2>5. XPS (Extruded Polystyrene) Sandwich Panels</h2>
       <h3>Overview</h3>
@@ -480,7 +480,7 @@ export const authorityBlogs: Record<string, BlogPost> = {
       },
       {
         question: 'Which sandwich panel is the most fire-resistant?',
-        answer: 'Rockwool (mineral wool) panels are non-combustible and carry an A1/A2 fire rating\u2014the highest possible. Among organic-core panels, PIR panels with Bs1d0 classification offer the best fire performance, significantly outperforming PUF and EPS panels.',
+        answer: 'Rockwool (mineral wool) panels are non-combustible and carry an A1/A2 fire rating: the highest possible. Among organic-core panels, PIR panels with Bs1d0 classification offer the best fire performance, significantly outperforming PUF and EPS panels.',
       },
       {
         question: 'Can different sandwich panel types be combined in one building?',
@@ -504,7 +504,7 @@ export const authorityBlogs: Record<string, BlogPost> = {
     excerpt: 'Everything you need to know about cold storage construction in India\u2014types of cold storage, construction process, panel selection, refrigeration systems, costs, and government subsidies.',
     content: `
       <h2>What is Cold Storage Construction?</h2>
-      <p><strong>Cold storage construction</strong> refers to the design and building of temperature-controlled facilities that maintain perishable goods at specific low temperatures throughout their shelf life. These facilities are critical components of the <strong>cold chain</strong>\u2014the unbroken series of refrigerated production, storage, and distribution activities that maintain product quality from farm or factory to the end consumer.</p>
+      <p><strong>Cold storage construction</strong> refers to the design and building of temperature-controlled facilities that maintain perishable goods at specific low temperatures throughout their shelf life. These facilities are critical components of the <strong>cold chain</strong>: the unbroken series of refrigerated production, storage, and distribution activities that maintain product quality from farm or factory to the end consumer.</p>
       <p>In India, cold storage infrastructure is vital for preserving fruits, vegetables, dairy products, meat, seafood, pharmaceuticals, and chemicals. With over 35% of India\u2019s agricultural produce lost to post-harvest spoilage, the demand for modern <a href="/solutions/cold-storage-construction">cold storage construction</a> has never been higher.</p>
 
       <h2>Types of Cold Storage Facilities</h2>
@@ -693,7 +693,7 @@ export const authorityBlogs: Record<string, BlogPost> = {
         <li><strong>ULPA filters (U15/U16):</strong> Remove 99.999% of particles at 0.12 microns. Required for ISO 5 and ISO 6 environments.</li>
       </ul>
       <h3>2. Air Change Rate</h3>
-      <p>Cleanrooms maintain a high air change rate\u2014the number of times the entire room volume of air is replaced per hour. ISO 7 cleanrooms typically require 30\u201360 air changes per hour (ACH), while ISO 5 environments may need 240\u2013600 ACH with unidirectional (laminar) airflow.</p>
+      <p>Cleanrooms maintain a high air change rate: the number of times the entire room volume of air is replaced per hour. ISO 7 cleanrooms typically require 30\u201360 air changes per hour (ACH), while ISO 5 environments may need 240\u2013600 ACH with unidirectional (laminar) airflow.</p>
       <h3>3. Pressure Differential</h3>
       <p>Cleanrooms are maintained at <strong>positive pressure</strong> relative to surrounding areas (typically 10\u201315 Pa per stage). This ensures that when a door opens, clean air flows outward rather than contaminated air flowing in. In containment applications (handling hazardous substances), negative pressure is used instead.</p>
       <h3>4. Temperature &amp; Humidity Control</h3>
@@ -720,7 +720,7 @@ export const authorityBlogs: Record<string, BlogPost> = {
 
       <h2>Industries That Use Cleanrooms</h2>
       <ul>
-        <li><strong>Pharmaceutical &amp; Biotech:</strong> Tablet manufacturing, injectable filling, API synthesis, vaccine production. India\u2019s pharma industry\u2014the world\u2019s largest generic drug supplier\u2014drives massive cleanroom demand.</li>
+        <li><strong>Pharmaceutical &amp; Biotech:</strong> Tablet manufacturing, injectable filling, API synthesis, vaccine production. India\u2019s pharma industry: the world\u2019s largest generic drug supplier\u2014drives massive cleanroom demand.</li>
         <li><strong>Semiconductor &amp; Electronics:</strong> Chip fabrication, LED manufacturing, display panel assembly. India\u2019s emerging semiconductor policy is spurring new fab construction.</li>
         <li><strong>Medical Devices:</strong> Assembly and packaging of implants, surgical instruments, and diagnostic kits under controlled conditions.</li>
         <li><strong>Food &amp; Beverage:</strong> Aseptic packaging, dairy processing, and nutraceutical manufacturing use ISO 8 cleanrooms for product safety.</li>
@@ -766,7 +766,7 @@ export const authorityBlogs: Record<string, BlogPost> = {
       },
       {
         question: 'How often should a cleanroom be validated?',
-        answer: 'Cleanrooms should undergo annual re-qualification at minimum, with environmental monitoring (particle counts, microbial sampling) performed routinely\u2014often weekly or even continuously for critical ISO 5 zones. Re-validation is also required after any significant modification, such as HVAC changes, panel repairs, or equipment additions.',
+        answer: 'Cleanrooms should undergo annual re-qualification at minimum, with environmental monitoring (particle counts, microbial sampling) performed routinely, often weekly or even continuously for critical ISO 5 zones. Re-validation is also required after any significant modification, such as HVAC changes, panel repairs, or equipment additions.',
       },
       {
         question: 'What type of panels are used for cleanroom walls?',
@@ -774,7 +774,7 @@ export const authorityBlogs: Record<string, BlogPost> = {
       },
       {
         question: 'Can Phoenixx SmartBuild handle turnkey cleanroom projects?',
-        answer: 'Yes, Phoenixx SmartBuild offers end-to-end turnkey cleanroom solutions covering design consultancy, panel manufacturing, HVAC system integration, epoxy or vinyl flooring, electrical works, and IQ/OQ/PQ validation\u2014delivered as a single-source project to ensure seamless coordination and compliance.',
+        answer: 'Yes, Phoenixx SmartBuild offers end-to-end turnkey cleanroom solutions covering design consultancy, panel manufacturing, HVAC system integration, epoxy or vinyl flooring, electrical works, and IQ/OQ/PQ validation\u2014delivered as a single-source project to keep coordination tight and compliance.',
       },
     ],
   },
@@ -807,7 +807,7 @@ export const authorityBlogs: Record<string, BlogPost> = {
       <h3>3. Cladding (Panels)</h3>
       <p>The building envelope is formed by cladding panels that provide weather protection, thermal insulation, and aesthetics. Options include:</p>
       <ul>
-        <li><a href="/products/sandwich-panels/sandwich-puf-panel">PUF sandwich panels</a>\u2014the most popular choice for insulated roofing and wall cladding in PEB structures.</li>
+        <li><a href="/products/sandwich-panels/sandwich-puf-panel">PUF sandwich panels</a>: the most popular choice for insulated roofing and wall cladding in PEB structures.</li>
         <li>Single-skin profiled steel sheets\u2014for budget-conscious projects without insulation requirements.</li>
         <li>Double-skin systems with fibre-glass or rockwool insulation\u2014for projects requiring fire-rated or acoustic solutions.</li>
       </ul>
@@ -956,7 +956,7 @@ export const authorityBlogs: Record<string, BlogPost> = {
     excerpt: 'Explore the top 10 advantages of prefabricated buildings in India, from faster construction timelines and cost savings to superior quality control and environmental sustainability.',
     content: `
       <h2>Why Prefabricated Buildings Are Transforming Indian Construction</h2>
-      <p>India\u2019s construction industry is undergoing a fundamental shift. Rising labour costs, tighter project deadlines, quality expectations, and sustainability mandates are pushing developers, industrialists, and government agencies towards <strong>prefabricated construction</strong>\u2014a method where building components are manufactured in a controlled factory environment and assembled on site. <a href="/solutions/peb">Pre-Engineered Buildings (PEB)</a> with insulated <a href="/products/sandwich-panels">sandwich panel</a> cladding represent the most mature and widely adopted form of prefabrication in India today.</p>
+      <p>India\u2019s construction industry is undergoing a fundamental shift. Rising labour costs, tighter project deadlines, quality expectations, and sustainability mandates are pushing developers, industrialists, and government agencies towards <strong>prefabricated construction</strong>: a method where building components are manufactured in a controlled factory environment and assembled on site. <a href="/solutions/peb">Pre-Engineered Buildings (PEB)</a> with insulated <a href="/products/sandwich-panels">sandwich panel</a> cladding represent the most mature and widely adopted form of prefabrication in India today.</p>
       <p>Here are 10 compelling advantages that make prefabricated buildings the smart choice for industrial, commercial, and institutional projects across India.</p>
 
       <h2>1. Dramatically Faster Construction</h2>
@@ -988,16 +988,16 @@ export const authorityBlogs: Record<string, BlogPost> = {
       <p>Prefabricated buildings are not \u201ccookie-cutter\u201d boxes. Modern PEB design software allows architects and engineers to create varied building shapes, clear spans up to 90 metres, variable eave heights, mezzanine floors, curved roofs, and architecturally appealing fa\u00e7ades. Panels are available in numerous colours, profiles, and finishes to match any aesthetic requirement.</p>
 
       <h2>6. Minimal Construction Waste</h2>
-      <p>India generates an estimated 150 million tonnes of construction and demolition (C&amp;D) waste annually\u2014a major environmental and logistical challenge. Prefabricated construction drastically reduces waste by cutting and shaping materials to precise dimensions in the factory. Off-cuts are recycled, and packaging is minimal. This aligns with India\u2019s Construction and Demolition Waste Management Rules, 2016.</p>
+      <p>India generates an estimated 150 million tonnes of construction and demolition (C&amp;D) waste annually: a major environmental and logistical challenge. Prefabricated construction drastically reduces waste by cutting and shaping materials to precise dimensions in the factory. Off-cuts are recycled, and packaging is minimal. This aligns with India\u2019s Construction and Demolition Waste Management Rules, 2016.</p>
 
       <h2>7. Enhanced Worker Safety</h2>
-      <p>Factory manufacturing environments are safer than construction sites. Workers operate with proper PPE, ergonomic workstations, and safety protocols. On-site erection of prefabricated components involves trained crews using cranes and mechanical fastening rather than extensive scaffolding, hot welding, and manual material handling\u2014reducing accident rates significantly.</p>
+      <p>Factory manufacturing environments are safer than construction sites. Workers operate with proper PPE, ergonomic workstations, and safety protocols. On-site erection of prefabricated components involves trained crews using cranes and mechanical fastening rather than extensive scaffolding, hot welding, and manual material handling, reducing accident rates significantly.</p>
 
       <h2>8. Weather Independence</h2>
       <p>Conventional construction in India faces significant disruptions during the 4\u20135 month monsoon season and extreme summer heat. Prefabricated components are manufactured indoors regardless of weather. Site erection, involving primarily bolted connections and panel clipping, can continue in light rain and is far less weather-sensitive than concrete pouring, plastering, or bricklaying.</p>
 
       <h2>9. Easy Expansion &amp; Relocation</h2>
-      <p>Prefabricated buildings are inherently modular. Need to add a bay to your warehouse or extend your production line? Additional bays can be designed and added with minimal disruption to ongoing operations. In some cases, prefab structures can even be partially dismantled and relocated to a new site\u2014an impossibility with conventional RCC construction.</p>
+      <p>Prefabricated buildings are inherently modular. Need to add a bay to your warehouse or extend your production line? Additional bays can be designed and added with minimal disruption to ongoing operations. In some cases, prefab structures can even be partially dismantled and relocated to a new site: an impossibility with conventional RCC construction.</p>
 
       <h2>10. Strong Resale &amp; Residual Value</h2>
       <p>Steel prefabricated buildings retain significant residual value. The structural steel can be resold or repurposed, and insulated panels can be reused if carefully dismantled. This contrasts with conventional buildings where demolition yields only rubble and scrap. For investors and industrialists, this translates to better return on investment and lower write-off risk.</p>
@@ -1050,7 +1050,7 @@ export const authorityBlogs: Record<string, BlogPost> = {
       },
       {
         question: 'Can prefabricated buildings be customised?',
-        answer: 'Absolutely. Modern prefabricated buildings are fully customisable\u2014from building dimensions, roof slope, and eave height to cladding colour, fa\u00e7ade design, mezzanine layout, and service integration (cranes, ventilation, lighting). They are not standard boxes but tailored engineering solutions.',
+        answer: 'Absolutely. Modern prefabricated buildings are fully customisable, from building dimensions, roof slope, and eave height to cladding colour, fa\u00e7ade design, mezzanine layout, and service integration (cranes, ventilation, lighting). They are not standard boxes but tailored engineering solutions.',
       },
       {
         question: 'Are prefabricated buildings suitable for India\u2019s climate?',
@@ -1063,7 +1063,7 @@ export const authorityBlogs: Record<string, BlogPost> = {
     title: 'Future of Industrial Construction in India \u2013 Trends 2026 & Beyond',
     metaTitle: 'Future of Industrial Construction India: 2026 Trends',
     metaDescription: 'Explore the future of industrial construction in India\u2014PEB adoption, smart factories, green buildings, cold chain growth & government initiatives driving change.',
-    excerpt: 'Discover the key trends shaping the future of industrial construction in India\u2014from PEB adoption and smart factories to green building mandates, cold chain expansion, and government initiatives like Make in India and PLI.',
+    excerpt: 'Discover the key trends shaping the future of industrial construction in India, from PEB adoption and smart factories to green building mandates, cold chain expansion, and government initiatives like Make in India and PLI.',
     content: `
       <h2>Industrial Construction in India: A Sector in Transformation</h2>
       <p>India\u2019s industrial construction sector is at an inflection point. Fuelled by government initiatives, global supply chain realignment, and technological adoption, the way India builds its factories, warehouses, cold storage facilities, and commercial buildings is undergoing a fundamental transformation. The shift from conventional brick-and-mortar methods to modern, technology-driven construction systems is not a distant possibility\u2014it is happening now.</p>
@@ -1078,11 +1078,11 @@ export const authorityBlogs: Record<string, BlogPost> = {
       <ul>
         <li><strong>IGBC &amp; GRIHA Certifications:</strong> The Indian Green Building Council (IGBC) has certified over 10 billion sq ft of green building space. Industrial facilities are increasingly pursuing IGBC Gold or Platinum ratings for brand value and operational savings.</li>
         <li><strong>Energy Conservation Building Code (ECBC):</strong> India\u2019s ECBC mandates minimum energy performance standards for commercial buildings, including insulation requirements that favour <a href="/products/sandwich-panels/sandwich-puf-panel">insulated sandwich panels</a> over bare metal sheets.</li>
-        <li><strong>Embodied Carbon Awareness:</strong> Specifiers are evaluating materials not just on operational energy savings but on total lifecycle carbon\u2014from raw material extraction through manufacturing, use, and end-of-life recycling.</li>
+        <li><strong>Embodied Carbon Awareness:</strong> Specifiers are evaluating materials not just on operational energy savings but on total lifecycle carbon, from raw material extraction through manufacturing, use, and end-of-life recycling.</li>
       </ul>
 
       <h2>3. Smart Factories &amp; Industry 4.0</h2>
-      <p>India\u2019s manufacturing sector is embracing Industry 4.0\u2014the integration of IoT, automation, AI, and data analytics into production processes. This has direct implications for building design:</p>
+      <p>India\u2019s manufacturing sector is embracing Industry 4.0: the integration of IoT, automation, AI, and data analytics into production processes. This has direct implications for building design:</p>
       <ul>
         <li><strong>Climate-Controlled Environments:</strong> Automated production lines with robotic systems require precise temperature and humidity control, driving demand for insulated panel enclosures.</li>
         <li><strong>Flexible Layouts:</strong> Modular PEB structures allow factories to reconfigure production lines without structural modifications.</li>
@@ -1115,7 +1115,7 @@ export const authorityBlogs: Record<string, BlogPost> = {
       </ul>
 
       <h2>7. Government Initiatives Driving Growth</h2>
-      <p>Several landmark government programmes are shaping India\u2019s industrial construction landscape:</p>
+      <p>Several landmark government programmes are shaping India\u2019s industrial construction sector:</p>
       <ul>
         <li><strong>Make in India 2.0:</strong> The renewed push for domestic manufacturing across 27 sectors is creating massive demand for factory and warehouse construction.</li>
         <li><strong>Production-Linked Incentive (PLI) Scheme:</strong> PLI incentives across 14 sectors (electronics, pharma, food processing, textiles, etc.) are attracting \u20b94+ lakh crore in committed manufacturing investment, each requiring new or expanded industrial buildings.</li>
@@ -1126,7 +1126,7 @@ export const authorityBlogs: Record<string, BlogPost> = {
       <h2>8. PHOENIXX SmartBuild\u2019s Role in the Future</h2>
       <p>Phoenixx SmartBuild is committed to leading India\u2019s industrial construction transformation through:</p>
       <ul>
-        <li>State-of-the-art continuous panel production lines with capacity for PUF, PIR, and Rockwool core panels.</li>
+        <li>Continuous panel production lines with capacity for PUF, PIR, and Rockwool core panels.</li>
         <li>In-house engineering for <a href="/solutions/peb">PEB design</a>, thermal calculations, and project management.</li>
         <li>Pan-India logistics network for timely delivery to project sites across the country.</li>
         <li>End-to-end solutions from concept to commissioning\u2014panels, structures, cold rooms, and cleanrooms.</li>
@@ -1164,7 +1164,7 @@ export const authorityBlogs: Record<string, BlogPost> = {
       },
       {
         question: 'What is the PLI scheme\u2019s impact on industrial construction?',
-        answer: 'The Production-Linked Incentive (PLI) scheme across 14 sectors has attracted over \u20b94 lakh crore in committed investments. Each new manufacturing facility requires factory buildings, warehouses, and utility structures\u2014creating a massive pipeline of industrial construction projects that favour modern PEB and insulated panel solutions.',
+        answer: 'The Production-Linked Incentive (PLI) scheme across 14 sectors has attracted over \u20b94 lakh crore in committed investments. Each new manufacturing facility requires factory buildings, warehouses, and utility structures, creating a massive pipeline of industrial construction projects that favour modern PEB and insulated panel solutions.',
       },
       {
         question: 'Are green buildings mandatory in India?',
@@ -1185,7 +1185,7 @@ export const authorityBlogs: Record<string, BlogPost> = {
     title: '10 Benefits of Insulated Panels for Industrial & Commercial Buildings',
     metaTitle: '10 Benefits of Insulated Panels for Buildings',
     metaDescription: 'Discover 10 key benefits of insulated sandwich panels\u2014thermal insulation, energy savings, fast installation, fire resistance & more. Guide for Indian builders.',
-    excerpt: 'Explore the top 10 benefits of insulated sandwich panels for industrial and commercial buildings\u2014from thermal insulation and energy savings to fire resistance, hygiene, and sustainability.',
+    excerpt: 'Explore the top 10 benefits of insulated sandwich panels for industrial and commercial buildings, from thermal insulation and energy savings to fire resistance, hygiene, and sustainability.',
     content: `
       <h2>Why Insulated Panels Are the Modern Builder\u2019s Best Ally</h2>
       <p><strong>Insulated panels</strong> (also known as sandwich panels or composite panels) have become the dominant cladding and roofing solution for industrial and commercial construction worldwide. In India, the shift from conventional building materials to <a href="/products/sandwich-panels">insulated sandwich panels</a> is accelerating as builders, architects, and facility owners recognise the comprehensive performance advantages these panels deliver.</p>
@@ -1214,7 +1214,7 @@ export const authorityBlogs: Record<string, BlogPost> = {
       <ul>
         <li><strong>Large format:</strong> Panels up to 15 metres long cover vast areas in a single piece.</li>
         <li><strong>Interlocking joints:</strong> Tongue-and-groove or cam-lock systems ensure rapid, airtight assembly without wet trades.</li>
-        <li><strong>Dry construction:</strong> No curing time, no plastering, no painting\u2014the panel surface is the finished surface.</li>
+        <li><strong>Dry construction:</strong> No curing time, no plastering, no painting: the panel surface is the finished surface.</li>
       </ul>
 
       <h2>4. Lightweight Construction</h2>
@@ -1230,7 +1230,7 @@ export const authorityBlogs: Record<string, BlogPost> = {
       <p>Insulated panels are available in a spectrum of fire performance ratings to match project requirements:</p>
       <ul>
         <li><strong>PUF panels (B2):</strong> Self-extinguishing, suitable for general industrial and commercial use.</li>
-        <li><strong>PIR panels (Bs1d0):</strong> Limited combustibility with low smoke and no flaming droplets\u2014ideal for cold storage and insured warehouses.</li>
+        <li><strong>PIR panels (Bs1d0):</strong> Limited combustibility with low smoke and no flaming droplets, ideal for cold storage and insured warehouses.</li>
         <li><strong>Rockwool panels (A1/A2):</strong> Non-combustible core for the highest fire safety requirements\u2014fire walls, escape corridors, and buildings in high-density urban areas.</li>
       </ul>
       <p>This range allows engineers to specify the right panel for each zone within a building, optimising both fire safety and cost.</p>
@@ -1275,7 +1275,7 @@ export const authorityBlogs: Record<string, BlogPost> = {
       </ul>
 
       <h2>Choosing the Right Insulated Panel</h2>
-      <p>The best panel for your project depends on your specific requirements for insulation, fire rating, budget, and application. Phoenixx SmartBuild manufactures the full range\u2014PUF, PIR, and Rockwool\u2014and our engineering team helps you select the optimal solution. <a href="/get-a-quote">Get in touch</a> for a no-obligation consultation.</p>
+      <p>The best panel for your project depends on your specific requirements for insulation, fire rating, budget, and application. Phoenixx SmartBuild manufactures the full range\u2014PUF, PIR, and Rockwool, and our engineering team helps you select the optimal solution. <a href="/get-a-quote">Get in touch</a> for a no-obligation consultation.</p>
 
       <h2>Frequently Asked Questions</h2>
     `,
@@ -1336,7 +1336,7 @@ export const authorityBlogs: Record<string, BlogPost> = {
 
       <h2>Challenge 1: Extreme Summer Heat</h2>
       <h3>The Problem</h3>
-      <p>India experiences some of the most intense solar radiation on earth. In the industrial heartlands of Gujarat, Rajasthan, Maharashtra, and Telangana, roof surface temperatures of bare metal sheet buildings routinely reach 65\u201375&deg;C during summer. Inside uninsulated sheds, air temperatures can soar to 50\u201355&deg;C\u2014making working conditions dangerous and machinery performance unreliable.</p>
+      <p>India experiences some of the most intense solar radiation on earth. In the industrial heartlands of Gujarat, Rajasthan, Maharashtra, and Telangana, roof surface temperatures of bare metal sheet buildings routinely reach 65\u201375&deg;C during summer. Inside uninsulated sheds, air temperatures can soar to 50\u201355&deg;C, making working conditions dangerous and machinery performance unreliable.</p>
       <h3>How PUF Panels Solve It</h3>
       <p>PUF panels with a thermal conductivity of just 0.020\u20130.024&nbsp;W/mK provide an insulation barrier that dramatically reduces heat transfer from the hot exterior to the building interior. Comparative performance data:</p>
       <table>
@@ -1393,12 +1393,12 @@ export const authorityBlogs: Record<string, BlogPost> = {
         <li><strong>Continuous interlocking joints</strong> with sealant channels that prevent water ingress along panel edges.</li>
         <li><strong>Concealed-fix fastening systems</strong> that eliminate exposed screw holes on the roof surface.</li>
         <li><strong>Pre-painted galvalume (PPGL) facings</strong> with superior corrosion resistance in coastal and humid environments.</li>
-        <li><strong>Built-in vapour barrier</strong>\u2014the impervious foam core itself acts as a vapour retarder, preventing interstitial condensation.</li>
+        <li><strong>Built-in vapour barrier</strong>: the impervious foam core itself acts as a vapour retarder, preventing interstitial condensation.</li>
       </ul>
 
       <h2>Challenge 3: Dramatic Temperature Swings</h2>
       <h3>The Problem</h3>
-      <p>Many Indian regions experience dramatic daily and seasonal temperature variations. Ahmedabad, for example, sees summer highs of 45&deg;C and winter lows of 8&deg;C\u2014a swing of 37&deg;C. Nagpur\u2019s diurnal variation (day vs night) can reach 20&deg;C within a single 24-hour period. These temperature swings cause:</p>
+      <p>Many Indian regions experience dramatic daily and seasonal temperature variations. Ahmedabad, for example, sees summer highs of 45&deg;C and winter lows of 8&deg;C: a swing of 37&deg;C. Nagpur\u2019s diurnal variation (day vs night) can reach 20&deg;C within a single 24-hour period. These temperature swings cause:</p>
       <ul>
         <li>Thermal expansion and contraction of metal sheets, leading to joint failure and water leakage</li>
         <li>Internal condensation as warm moist air contacts cold surfaces</li>
@@ -1495,7 +1495,7 @@ export const authorityBlogs: Record<string, BlogPost> = {
     faqs: [
       {
         question: 'How much cooler can PUF panels make an industrial shed?',
-        answer: 'A 50 mm PUF roofing panel typically reduces indoor temperatures by 15\u201318\u00b0C compared to bare metal sheet roofing in peak Indian summer conditions. For an uninsulated shed at 52\u00b0C, this brings the interior down to 34\u201337\u00b0C\u2014a significant improvement in worker comfort and productivity.',
+        answer: 'A 50 mm PUF roofing panel typically reduces indoor temperatures by 15\u201318\u00b0C compared to bare metal sheet roofing in peak Indian summer conditions. For an uninsulated shed at 52\u00b0C, this brings the interior down to 34\u201337\u00b0C: a significant improvement in worker comfort and productivity.',
       },
       {
         question: 'Are PUF panels resistant to monsoon rain and humidity?',

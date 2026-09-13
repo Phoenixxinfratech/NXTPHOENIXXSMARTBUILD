@@ -27,7 +27,7 @@ const doorsData = {
   ],
   benefits: [
     { icon: '🔥', title: 'Fire Safety', description: 'Doors rated 30 to 120 minutes fire resistance, IS/BS/UL certified for life safety compliance.' },
-    { icon: '🧹', title: 'Hygienic Design', description: 'Flush surfaces, no ledges, easy to clean—ideal for GMP, FDA, and cleanroom environments.' },
+    { icon: '🧹', title: 'Hygienic Design', description: 'Flush surfaces, no ledges, easy to clean, ideal for GMP, FDA, and cleanroom environments.' },
     { icon: '❄️', title: 'Thermal Performance', description: 'Insulated doors maintaining temperature integrity for cold storage (-40°C to +15°C).' },
     { icon: '🔒', title: 'Security & Access', description: 'Compatible with access control, interlocks, and emergency panic hardware.' },
     { icon: '⚙️', title: 'Automation Ready', description: 'Integrate with automatic openers, sensors, and building management systems.' },

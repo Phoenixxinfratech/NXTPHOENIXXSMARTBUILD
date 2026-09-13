@@ -58,7 +58,7 @@ const resources = [
 const featuredInsights = [
   {
     title: 'The Rise of Sustainable PEB Structures in India',
-    excerpt: 'How Pre-Engineered Buildings are revolutionizing industrial construction with sustainability at the core.',
+    excerpt: 'How Pre-Engineered Buildings are reshaping industrial construction with sustainability at the core.',
     category: 'PEB',
     readTime: '5 min read',
   },

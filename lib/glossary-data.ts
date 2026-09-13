@@ -84,7 +84,7 @@ export const glossaryTerms: GlossaryTerm[] = [
   {
     slug: 'sez',
     term: 'SEZ (Special Economic Zone)',
-    definition: 'A Special Economic Zone (SEZ) is a designated area offering tax incentives, simplified customs procedures, and world-class infrastructure to promote export-oriented manufacturing. India has major SEZs in Dahej, Sanand, Mundra, and Sri City. Industrial buildings in SEZs commonly use sandwich PUF panels for rapid construction and energy-efficient operation.',
+    definition: 'A Special Economic Zone (SEZ) is a designated area offering tax incentives, simplified customs procedures, and infrastructure to promote export-oriented manufacturing. India has major SEZs in Dahej, Sanand, Mundra, and Sri City. Industrial buildings in SEZs commonly use sandwich PUF panels for rapid construction and energy-efficient operation.',
     relatedTerms: ['gidc', 'export', 'industrial-estate'],
     relatedLinks: [
       { href: '/export/kenya', label: 'Export to Kenya' },

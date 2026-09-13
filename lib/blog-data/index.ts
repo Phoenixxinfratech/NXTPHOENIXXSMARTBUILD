@@ -92,7 +92,7 @@ const allBlogsRaw: Record<string, BlogPost> = {
 // Apply scheduled dates and cover images to blog records
 export const blogPosts: Record<string, BlogPost> = Object.fromEntries(
   Object.entries(allBlogsRaw).map(([slug, post]) => {
-    const authorInfo = getAuthorForBlog(slug);
+    const authorInfo = getAuthorForBlog(slug, post.content);
     return [
       slug,
       {

@@ -15,7 +15,7 @@ export const serpBlogsPart2: Record<string, BlogPost> = {
       <h2>What to Look for in a PUF Panel Supplier Near You</h2>
       <p>Not all PUF panel suppliers are created equal. Before you place an order, evaluate your shortlisted vendors against these critical criteria:</p>
       <h3>1. Manufacturing Capability</h3>
-      <p>Choose a supplier who manufactures their own <a href="/products/sandwich-panels/sandwich-puf-panel">PUF panels</a> rather than a reseller. Factory-direct suppliers offer better pricing, customization, and quality control. PHOENIXX SmartBuild operates a state-of-the-art continuous line manufacturing facility near Ahmedabad, Gujarat, ensuring every panel meets strict tolerances.</p>
+      <p>Choose a supplier who manufactures their own <a href="/products/sandwich-panels/sandwich-puf-panel">PUF panels</a> rather than a reseller. Factory-direct suppliers offer better pricing, customization, and quality control. PHOENIXX SmartBuild operates a modern continuous line manufacturing facility near Ahmedabad, Gujarat, ensuring every panel meets strict tolerances.</p>
       <h3>2. Ready Stock Availability</h3>
       <p>Industrial projects run on tight timelines. A supplier with ready stock of standard panels (40mm, 50mm, 60mm, 80mm, 100mm thicknesses) can ship within 24\u201348 hours, saving your project weeks of waiting time.</p>
       <h3>3. Delivery Network & Freight Cost</h3>
@@ -203,7 +203,7 @@ export const serpBlogsPart2: Record<string, BlogPost> = {
       <h3>2. Warehousing & Logistics Boom</h3>
       <p>The e-commerce revolution and GST-driven logistics consolidation have created massive demand for modern warehouses. Over 350 million sq ft of warehousing space is expected to be added by 2028, with a significant portion using PUF panel construction for speed and insulation.</p>
       <h3>3. Energy Efficiency Mandates</h3>
-      <p>The Bureau of Energy Efficiency (BEE) and state-level building codes increasingly require thermal insulation in commercial and industrial buildings. PUF panels, with their industry-leading thermal conductivity of 0.020\u20130.024 W/mK, are the natural choice for compliance.</p>
+      <p>The Bureau of Energy Efficiency (BEE) and state-level building codes increasingly require thermal insulation in commercial and industrial buildings. PUF panels, with their thermal conductivity of 0.020\u20130.024 W/mK, are the natural choice for compliance.</p>
       <h3>4. Make in India & PLI Schemes</h3>
       <p>Government incentives for domestic manufacturing have encouraged the setup of new factories, pharma plants, and food processing units \u2013 all of which require insulated panel construction for temperature control and hygiene.</p>
       <h3>5. Speed of Construction</h3>
@@ -297,7 +297,7 @@ export const serpBlogsPart2: Record<string, BlogPost> = {
       <h2>Major PUF Panel Manufacturers in India</h2>
       <p>India has several established PUF panel manufacturers. Here are the key players in the market:</p>
       <ul>
-        <li><strong>PHOENIXX SmartBuild (Gujarat):</strong> One of India\u2019s leading insulated panel manufacturers with a state-of-the-art continuous line facility. Known for consistent quality, competitive pricing, and a pan-India delivery network covering Gujarat, Maharashtra, Rajasthan, MP, and Chhattisgarh.</li>
+        <li><strong>PHOENIXX SmartBuild (Gujarat):</strong> One of India\u2019s leading insulated panel manufacturers with a continuous lamination line. Known for consistent quality, competitive pricing, and a pan-India delivery network covering Gujarat, Maharashtra, Rajasthan, MP, and Chhattisgarh.</li>
         <li><strong>Jindal Mectec (Haryana):</strong> One of the oldest players in the insulated panel space with a wide product range.</li>
         <li><strong>Tata BlueScope (Maharashtra):</strong> A well-known brand in the steel building solutions space with insulated panels under their product portfolio.</li>
         <li><strong>BRDECO (Gujarat):</strong> Focused on PUF and PIR panels for cold storage and industrial applications.</li>
@@ -522,7 +522,7 @@ export const serpBlogsPart2: Record<string, BlogPost> = {
       <img src="/images/products/sandwich-panels/wall-ceiling-panel/PUF-Panel-False-Ceiling-4.jpg" alt="PUF sandwich panel ceiling installation in cleanroom facility" loading="lazy" />
 
       <h2>Why Choose PHOENIXX PUF Sandwich Panels</h2>
-      <p>PHOENIXX SmartBuild manufactures PUF sandwich panels on a state-of-the-art continuous production line with automated density control, ensuring every panel meets the highest quality standards. Our panels are trusted by 500+ projects across India, from cold storage facilities in Gujarat to pharmaceutical cleanrooms in Maharashtra.</p>
+      <p>PHOENIXX SmartBuild manufactures PUF sandwich panels on a continuous production line with automated density control, ensuring every panel meets the highest quality standards. Our panels are trusted by 500+ projects across India, from cold storage facilities in Gujarat to pharmaceutical cleanrooms in Maharashtra.</p>
       <p><strong>Get a quote in 24 hours.</strong> Share your project requirements and receive a detailed quotation with specifications, pricing, and delivery timeline. <a href="/get-a-quote">Get technical datasheet \u2192</a></p>
       <img src="/images/products/sandwich-panels/pir-panel/PIR-Sandwich-FM-approved-Panel-1.png" alt="PIR sandwich panel for high fire-rated applications" loading="lazy" />
     `,

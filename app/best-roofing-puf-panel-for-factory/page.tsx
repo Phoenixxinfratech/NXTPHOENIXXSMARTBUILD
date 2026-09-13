@@ -62,7 +62,7 @@ const faqs = [
   {
     question: 'Do roofing PUF panels prevent condensation in factories?',
     answer:
-      'Yes. The insulated PUF core creates a thermal barrier that prevents condensation forming on the underside of the roof — a common problem with bare metal roofing sheets. Anti-condensation fleece can be added for high-humidity environments.',
+      'Yes. The insulated PUF core creates a thermal barrier that prevents condensation forming on the underside of the roof, a common problem with bare metal roofing sheets. Anti-condensation fleece can be added for high-humidity environments.',
   },
   {
     question: 'How long do factory roofing PUF panels last?',
@@ -190,7 +190,7 @@ export default function BestRoofingPufPanelForFactoryPage() {
     generateVideoSchema({
       name: 'PHOENIXX Factory Roofing Installation',
       description:
-        'Watch a complete factory roofing PUF panel installation by PHOENIXX SMARTBUILD — from purlin layout to ridge cap finishing on a 5,000 sq.m industrial facility.',
+        'Watch a complete factory roofing PUF panel installation by PHOENIXX SMARTBUILD, from purlin layout to ridge cap finishing on a 5,000 sq.m industrial facility.',
       thumbnailUrl: 'https://phoenixxsmartbuild.com/images/video-thumb-roofing.jpg',
       uploadDate: '2025-01-01',
       duration: 'PT6M15S',
@@ -252,7 +252,7 @@ export default function BestRoofingPufPanelForFactoryPage() {
               <p className="ai-summary mt-6 text-xl text-slate-300 max-w-3xl">
                 The right roofing PUF panel can cut your factory&apos;s cooling costs by up to 30%, eliminate roof
                 condensation, and slash construction time in half. This guide helps you choose the ideal profile,
-                thickness, and coating for your factory — backed by 500+ roofing projects delivered across India.
+                thickness, and coating for your factory, backed by 500+ roofing projects delivered across India.
               </p>
               <p className="mt-4 text-slate-400 text-sm">
                 Trusted by factory owners in Gujarat, Maharashtra, Rajasthan &amp; Tamil Nadu
@@ -285,7 +285,7 @@ export default function BestRoofingPufPanelForFactoryPage() {
               <div className="prose prose-lg prose-slate max-w-none">
                 <p>
                   Most factory owners don&apos;t realize that their roof is the single largest source of heat gain in an
-                  industrial building. Bare metal roofing sheets — the default choice in most Indian factories — absorb
+                  industrial building. Bare metal roofing sheets: the default choice in most Indian factories — absorb
                   solar radiation all day long, turning the factory floor into an oven by mid-afternoon. The
                   consequences are far-reaching: workers become less productive in temperatures exceeding 38°C, machinery
                   runs hotter and requires more frequent maintenance, and air conditioning systems work overtime trying
@@ -300,7 +300,7 @@ export default function BestRoofingPufPanelForFactoryPage() {
                 </p>
                 <p>
                   <strong>Insulated roofing PUF panels solve every one of these problems in a single product.</strong>{' '}
-                  A roofing PUF panel is a factory-engineered sandwich — a rigid polyurethane foam core bonded between
+                  A roofing PUF panel is a factory-engineered sandwich: a rigid polyurethane foam core bonded between
                   two profiled metal sheets. The PUF core provides outstanding thermal insulation (thermal conductivity
                   as low as 0.024 W/mK), the profiled outer sheet sheds water efficiently, and the inner lining creates
                   a clean, condensation-free ceiling. The result is a factory that stays 8-12°C cooler in summer,
@@ -328,7 +328,7 @@ export default function BestRoofingPufPanelForFactoryPage() {
               </h2>
               <div className="prose prose-lg prose-slate max-w-none">
                 <p>
-                  Not all roofing PUF panels are the same. The <strong>profile type</strong> — the shape pressed into the
+                  Not all roofing PUF panels are the same. The <strong>profile type</strong>: the shape pressed into the
                   outer metal sheet — determines how the panel drains water, how far it can span between purlins, and how
                   it handles wind uplift. Choosing the correct profile is just as important as choosing the right
                   thickness or coating.
@@ -429,7 +429,7 @@ export default function BestRoofingPufPanelForFactoryPage() {
                   {
                     num: '03',
                     title: '40% Less Structural Steel',
-                    desc: 'Trapezoidal PUF panels span 3-4 meters between purlins, reducing the number of secondary steel members by up to 40% — a significant cost saving on large factory roofs.',
+                    desc: 'Trapezoidal PUF panels span 3-4 meters between purlins, reducing the number of secondary steel members by up to 40%: a significant cost saving on large factory roofs.',
                   },
                   {
                     num: '04',
@@ -559,7 +559,7 @@ export default function BestRoofingPufPanelForFactoryPage() {
                     { label: 'Panel Length', value: 'Up to 16 meters (custom lengths available)' },
                     { label: 'Steel Thickness', value: '0.45mm – 0.60mm (PPGI / PPGL / SS)' },
                     { label: 'Coating Options', value: 'SMP (standard), PVDF (coastal/harsh), SDP' },
-                    { label: 'Wind Load Rating', value: 'Tested as per IS 875 — up to 150 km/h' },
+                    { label: 'Wind Load Rating', value: 'Tested as per IS 875, up to 150 km/h' },
                     { label: 'Purlin Span', value: '3-4m (trapezoidal), 2.5-3.5m (standing seam)' },
                     { label: 'Fire Rating', value: 'B2 standard, B1 / PIR options available' },
                     { label: 'Accessories', value: 'Ridge caps, valley gutters, flashing, skylights, ventilators' },

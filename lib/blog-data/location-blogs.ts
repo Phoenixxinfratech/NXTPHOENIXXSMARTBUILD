@@ -83,7 +83,7 @@ export const locationBlogs: Record<string, BlogPost> = {
 <p>Timely delivery is critical in construction. Check whether the supplier has a dedicated fleet, warehousing capacity, and the ability to handle bulk dispatches to GIDC locations across Gujarat.</p>
 
 <h2>PHOENIXX SmartBuild \u2013 Your Trusted PUF Panel Partner in Ahmedabad</h2>
-<p><strong>PHOENIXX SmartBuild</strong> operates a state-of-the-art manufacturing facility in the Ahmedabad region equipped with a continuous production line capable of producing panels from 30 mm to 200 mm thickness. Our plant runs on automated PLC-controlled foaming systems that ensure uniform density (38\u201342 kg/m\u00B3) and excellent adhesion between the PUF core and metal face sheets.</p>
+<p><strong>PHOENIXX SmartBuild</strong> operates a manufacturing facility in the Ahmedabad region equipped with a continuous production line capable of producing panels from 30 mm to 200 mm thickness. Our plant runs on automated PLC-controlled foaming systems that ensure uniform density (38\u201342 kg/m\u00B3) and excellent adhesion between the PUF core and metal face sheets.</p>
 <p>We serve clients across Ahmedabad, Gandhinagar, Mehsana, and the broader North Gujarat belt. Our project portfolio includes 200+ cold storages, 100+ pharma cleanrooms, and 150+ industrial warehouses \u2013 making us one of the most experienced panel partners in the region.</p>
 
 <h2>PUF Panel Pricing Overview \u2013 Ahmedabad 2026</h2>
@@ -222,7 +222,7 @@ export const locationBlogs: Record<string, BlogPost> = {
 <p><em>Costs vary based on temperature zone, automation level, and site conditions. <a href="/get-a-quote">Contact PHOENIXX SmartBuild</a> for a detailed project estimate.</em></p>
 
 <h2>PUF Panel Options for Cold Storage</h2>
-<p>The insulation system is the heart of any cold storage. <a href="/sandwich-puf-panel-in-ahmedabad">PUF panels from PHOENIXX SmartBuild</a> deliver best-in-class thermal insulation with a lambda value of 0.020\u20130.024 W/mK. Key panel options include:</p>
+<p>The insulation system is the heart of any cold storage. <a href="/sandwich-puf-panel-in-ahmedabad">PUF panels from PHOENIXX SmartBuild</a> deliver thermal insulation with a lambda value of 0.020\u20130.024 W/mK. Key panel options include:</p>
 <ul>
   <li><strong>80 mm PUF panels</strong> \u2013 for chiller rooms (0\u00B0C to 5\u00B0C), dairy cold storage.</li>
   <li><strong>100 mm PUF panels</strong> \u2013 for multi-commodity cold rooms (\u22125\u00B0C to 5\u00B0C).</li>

@@ -322,7 +322,7 @@ export default function BestPufPanelForIndustrialShedPage() {
                   <li>
                     <strong>Skyrocketing Energy Costs:</strong> Without insulation, industrial HVAC
                     systems work overtime. A 5,000 sq.m factory shed can spend ₹8-12 lakh annually on
-                    cooling alone — an expense that proper insulation can cut by 25-30%.
+                    cooling alone: an expense that proper insulation can cut by 25-30%.
                   </li>
                   <li>
                     <strong>Worker Discomfort &amp; Safety:</strong> High temperatures and condensation
@@ -349,7 +349,7 @@ export default function BestPufPanelForIndustrialShedPage() {
                   PUF (Polyurethane Foam) sandwich panels solve every one of these problems in a
                   single building component. By combining a rigid closed-cell insulation core with
                   durable pre-painted steel facings, PUF panels deliver thermal protection, weather
-                  resistance, acoustic dampening, and structural strength — all without the need for
+                  resistance, acoustic dampening, and structural strength, all without the need for
                   secondary insulation layers, waterproofing membranes, or additional cladding. The
                   result is faster construction, lower lifetime costs, and a dramatically better
                   working environment inside your industrial shed.
@@ -371,8 +371,7 @@ export default function BestPufPanelForIndustrialShedPage() {
 
               <div className="prose prose-lg prose-slate max-w-none">
                 <p>
-                  A PUF panel is an engineered sandwich structure consisting of two metal skins —
-                  typically pre-painted galvanized steel (PPGI) or galvalume (PPGL) — bonded to a
+                  A PUF panel is an engineered sandwich structure consisting of two metal skins, typically pre-painted galvanized steel (PPGI) or galvalume (PPGL) — bonded to a
                   rigid polyurethane foam core. The foam is injected at high pressure between the
                   metal faces and expands to form a monolithic bond, creating a composite panel with
                   exceptional strength-to-weight ratio. With a thermal conductivity of just 0.024
@@ -527,7 +526,7 @@ export default function BestPufPanelForIndustrialShedPage() {
                   {
                     num: '01',
                     title: 'Superior Thermal Insulation',
-                    desc: 'PUF panels deliver an R-value of up to 6.25 m²K/W at 150mm thickness — the highest per-millimetre insulation of any commercial panel. This keeps indoor temperatures stable, reducing HVAC load by 25-30% compared to uninsulated sheds.',
+                    desc: 'PUF panels deliver an R-value of up to 6.25 m²K/W at 150mm thickness: the highest per-millimetre insulation of any commercial panel. This keeps indoor temperatures stable, reducing HVAC load by 25-30% compared to uninsulated sheds.',
                   },
                   {
                     num: '02',
@@ -763,7 +762,7 @@ export default function BestPufPanelForIndustrialShedPage() {
                       { label: 'Steel Facing Thickness', value: '0.40mm, 0.45mm, 0.50mm, 0.60mm (PPGI/PPGL)' },
                       { label: 'Coating Options', value: 'PE (Polyester), SMP (Silicone Modified Polyester), PVDF (Polyvinylidene Fluoride)' },
                       { label: 'Panel Width', value: '1000mm (effective coverage)' },
-                      { label: 'Panel Length', value: 'Custom — up to 20 metres' },
+                      { label: 'Panel Length', value: 'Custom, up to 20 metres' },
                       { label: 'Temperature Range', value: '-40°C to +80°C' },
                       { label: 'Water Absorption', value: '< 1.5% by volume (closed-cell structure)' },
                       { label: 'Compressive Strength', value: '≥ 0.15 MPa' },

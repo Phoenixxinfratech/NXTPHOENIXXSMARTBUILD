@@ -265,11 +265,11 @@ export default function BestPufPanelForColdStoragePage() {
               <p className="mt-6 text-xl text-slate-300 max-w-3xl leading-relaxed">
                 Building a cold storage facility is one of the most technically demanding construction
                 projects in India&apos;s food, pharmaceutical, and logistics sectors. The insulation
-                panel you select determines everything — from energy consumption and product safety to
+                panel you select determines everything, from energy consumption and product safety to
                 long-term operational costs and regulatory compliance. A wrong choice means condensation
                 on walls, temperature fluctuations that spoil inventory, skyrocketing electricity bills,
                 and a cold room that fails its first FSSAI or WHO-GMP audit. In this guide, our
-                engineering team — with 200+ cold room projects delivered — breaks down every factor you
+                engineering team, with 200+ cold room projects delivered — breaks down every factor you
                 need to choose the right PUF panel for your cold storage application.
               </p>
 
@@ -328,7 +328,7 @@ export default function BestPufPanelForColdStoragePage() {
                   </li>
                   <li>
                     <strong>Thermal Bridges at Joints:</strong> Cold storage panels operate under extreme
-                    temperature differentials — often 50-70°C between the warm exterior and the
+                    temperature differentials, often 50-70°C between the warm exterior and the
                     freezer interior. Any gap or poorly sealed joint becomes a thermal bridge where
                     warm, humid air penetrates, causing ice formation on interior surfaces and energy
                     loss that compounds over the building&apos;s lifetime.
@@ -364,7 +364,7 @@ export default function BestPufPanelForColdStoragePage() {
                   moisture absorption, while precision cam-lock joints create airtight, vapor-tight
                   seals at every panel connection. Combined with the right thickness for your
                   temperature zone and a properly designed vapor barrier system, PHOENIXX panels
-                  deliver cold rooms that maintain their insulation performance for 25-30 years — with
+                  deliver cold rooms that maintain their insulation performance for 25-30 years, with
                   energy consumption exactly as designed from day one.
                 </p>
               </div>
@@ -387,8 +387,8 @@ export default function BestPufPanelForColdStoragePage() {
                   Every cold storage application has unique temperature requirements that directly
                   dictate panel specifications. The table below maps common cold storage types to their
                   required PUF panel thickness, ensuring you specify the correct insulation for your
-                  facility. PHOENIXX panels feature a thermal conductivity of 0.024 W/mK — the
-                  industry&apos;s best — which means you get maximum insulation in minimum thickness,
+                  facility. PHOENIXX panels feature a thermal conductivity of 0.024 W/mK: the
+                  industry&apos;s best, which means you get maximum insulation in minimum thickness,
                   preserving valuable interior storage space.
                 </p>
               </div>
@@ -472,7 +472,7 @@ export default function BestPufPanelForColdStoragePage() {
               <div className="prose prose-lg prose-slate max-w-none">
                 <p>
                   Unlike standard tongue-and-groove joints used in industrial sheds, cold storage
-                  demands cam-lock joints — a precision mechanical fastening system where a rotating cam
+                  demands cam-lock joints: a precision mechanical fastening system where a rotating cam
                   mechanism draws adjacent panels together with controlled force, creating a compression
                   seal that is both airtight and vapor-tight. This eliminates the thermal bridges and
                   moisture ingress paths that plague conventional joint systems in sub-zero environments.
@@ -833,7 +833,7 @@ export default function BestPufPanelForColdStoragePage() {
                       { label: 'Water Absorption', value: 'Zero (closed-cell structure)' },
                       { label: 'Compressive Strength', value: '≥ 0.15 MPa' },
                       { label: 'Panel Width', value: '1000mm effective coverage (1200mm on request)' },
-                      { label: 'Panel Length', value: 'Custom — up to 12 metres' },
+                      { label: 'Panel Length', value: 'Custom, up to 12 metres' },
                       { label: 'Service Life', value: '25-30 years (95%+ insulation retention)' },
                     ].map((row, idx) => (
                       <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>

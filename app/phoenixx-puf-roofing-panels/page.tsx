@@ -106,7 +106,7 @@ export default function PhoenixxPufRoofingPanelsPage() {
                 <p>
                   In a market where PUF roofing panels are often treated as commodities,
                   Phoenixx stands apart. Every Phoenixx insulated panel is manufactured with
-                  a commitment to consistent quality — from raw material selection through
+                  a commitment to consistent quality, from raw material selection through
                   final dispatch. The brand represents a promise: that the panel installed on
                   your roof today will perform at its rated specification for 25+ years.
                 </p>
@@ -187,7 +187,7 @@ export default function PhoenixxPufRoofingPanelsPage() {
                 { title: 'IS 14925 Compliant', desc: 'Full compliance with Indian Standard for insulated sandwich panels' },
                 { title: 'Premium Coatings', desc: 'Polyester, SMP, and PVDF coating options for UV and corrosion protection' },
                 { title: 'Project Support', desc: 'Technical guidance from specification through installation for every Phoenixx project' },
-                { title: 'Competitive Pricing', desc: 'Factory-direct Phoenixx pricing — no distributor or dealer margins' },
+                { title: 'Competitive Pricing', desc: 'Factory-direct Phoenixx pricing: no distributor or dealer margins' },
                 { title: '25+ Year Life', desc: 'Engineered for decades of performance in Rajasthan extreme heat and monsoon conditions' },
               ].map((item, idx) => (
                 <div key={idx} className="text-center">

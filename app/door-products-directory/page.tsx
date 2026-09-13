@@ -88,7 +88,7 @@ export default function ProductDirectoryPage() {
             </h1>
             <p className="mt-4 max-w-3xl text-muted-foreground">
               This page lists every product, solution, and location page available on
-              the Phoenixx Smart Build website &mdash; including industrial door solutions,
+              the Phoenixx Smart Build website, including industrial door solutions,
               fire rated doors, cleanroom doors, multipurpose doors, PUF insulated
               sandwich panels, and building material products. Use this directory to
               quickly find what you need.

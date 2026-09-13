@@ -267,7 +267,7 @@ export default function BestPufPanelForCleanRoomPage() {
                 industrial specifications. A single particle on a surface, an improperly sealed
                 joint, or a panel that off-gasses volatile compounds can contaminate an entire batch,
                 trigger regulatory shutdown, and cost crores in lost production. In this
-                comprehensive guide, our cleanroom engineering team — with 100+ validated cleanroom
+                comprehensive guide, our cleanroom engineering team, with 100+ validated cleanroom
                 projects — explains exactly how to select the right insulated panel for your ISO
                 class, GMP tier, and industry requirements.
               </p>
@@ -359,7 +359,7 @@ export default function BestPufPanelForCleanRoomPage() {
 
                 <p>
                   PHOENIXX cleanroom panels are engineered from the ground up for controlled
-                  environments. Every aspect — from the PIR/PUF core formulation that minimizes
+                  environments. Every aspect, from the PIR/PUF core formulation that minimizes
                   outgassing, to the concealed-fix flush-mount joint system that eliminates particle
                   traps, to the antimicrobial surface coatings that resist biofilm formation — is
                   designed to meet the demands of ISO 14644 classified cleanrooms. Combined with
@@ -559,7 +559,7 @@ export default function BestPufPanelForCleanRoomPage() {
                   When your facility&apos;s regulatory approval, product quality, and patient safety
                   depend on the cleanroom envelope, every panel specification matters. PHOENIXX
                   cleanroom panels are purpose-built to deliver the controlled environment your
-                  process demands — and the documentation your auditors require.
+                  process demands, and the documentation your auditors require.
                 </p>
               </div>
 
@@ -806,7 +806,7 @@ export default function BestPufPanelForCleanRoomPage() {
                       { label: 'VOC Emission', value: 'Low outgassing certified (pharma-grade PIR)' },
                       { label: 'Cleanroom Compatibility', value: 'ISO Class 5 to ISO Class 8 (ISO 14644-1)' },
                       { label: 'Panel Width', value: '1000mm effective coverage (1200mm on request)' },
-                      { label: 'Panel Length', value: 'Custom — up to 12 metres' },
+                      { label: 'Panel Length', value: 'Custom, up to 12 metres' },
                       { label: 'Integrated Accessories', value: 'HEPA modules, pass-boxes, doors, viewing windows, returns' },
                       { label: 'Service Life', value: '25+ years (with proper maintenance)' },
                     ].map((row, idx) => (

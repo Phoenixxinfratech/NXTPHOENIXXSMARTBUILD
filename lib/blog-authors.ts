@@ -35,10 +35,24 @@ export const blogAuthors: Record<string, BlogAuthorProfile> = {
 
 const authorRotation = ['piyush-gupta', 'harshad-gupta', 'engineering-team'] as const;
 
-export function getAuthorForBlog(slug: string): { name: string; role: string; profile?: BlogAuthorProfile } {
+// Posts written in the first person cannot be credited to the collective
+// Engineering Team profile, which has no "I" to speak with.
+const individualAuthors = ['piyush-gupta', 'harshad-gupta'] as const;
+
+const FIRST_PERSON_SINGULAR = /\b(I['\u2019]ve|I['\u2019]m|I have|I've|\bI\b(?=\s+(?:have|had|see|seen|learned|watched|recommend|know|think|would|usually))|my team|in my experience)/i;
+
+function hashSlug(slug: string): number {
   let hash = 0;
   for (let i = 0; i < slug.length; i++) hash = (hash * 31 + slug.charCodeAt(i)) | 0;
-  const key = authorRotation[Math.abs(hash) % authorRotation.length];
+  return Math.abs(hash);
+}
+
+export function getAuthorForBlog(
+  slug: string,
+  content?: string
+): { name: string; role: string; profile?: BlogAuthorProfile } {
+  const rotation = content && FIRST_PERSON_SINGULAR.test(content) ? individualAuthors : authorRotation;
+  const key = rotation[hashSlug(slug) % rotation.length];
   const profile = blogAuthors[key];
   return { name: profile.name, role: profile.role, profile };
 }

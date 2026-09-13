@@ -124,7 +124,7 @@ export default function PufPanelCompanyIndiaPage() {
                   When you partner with a <strong>PUF panel company in India</strong> like PHOENIXX SmartBuild, 
                   you gain access to more than just a product supplier – you get a comprehensive infrastructure 
                   solutions partner. Our company is built on the foundation of engineering excellence, quality 
-                  manufacturing, and unwavering commitment to customer success.
+                  manufacturing, and consistent follow-through with customers.
                 </p>
                 <p>
                   Since our inception, we have been dedicated to building the next-generation industrial 

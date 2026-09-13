@@ -306,7 +306,7 @@ export default function PufRoofingPanelsPage() {
                   Energy Efficiency
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  By reducing heat transfer through the roof — the largest heat-gain surface
+                  By reducing heat transfer through the roof: the largest heat-gain surface
                   in any industrial building — PUF panels cut HVAC operating costs by
                   25–30%. In Rajasthan&apos;s 8-month summer, this translates to substantial
                   electricity savings. Most industrial projects achieve insulation ROI

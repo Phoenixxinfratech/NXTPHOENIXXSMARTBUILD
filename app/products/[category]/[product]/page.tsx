@@ -1503,7 +1503,7 @@ export default async function ProductDetailPage({ params }: Props) {
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Why Choose PHOENIXX {data.name}?</h2>
               <p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
-                Industry-leading quality backed by engineering excellence and customer trust.
+                Consistent quality backed by engineering excellence and customer trust.
               </p>
             </div>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -1608,7 +1608,7 @@ export default async function ProductDetailPage({ params }: Props) {
                   {data.name} Use Cases by Industry
                 </h2>
                 <p className="mt-4 text-slate-300 max-w-2xl mx-auto">
-                  Discover how leading industries leverage {data.name} for superior performance and compliance.
+                  Discover how leading industries use {data.name} for superior performance and compliance.
                 </p>
               </div>
               <div className="grid gap-8 md:grid-cols-2">
@@ -1854,7 +1854,7 @@ export default async function ProductDetailPage({ params }: Props) {
                   <li>• Walk joint lines and flashings every monsoon season — sealant failure is the usual leak path</li>
                   <li>• Wash skins with mild detergent; abrasive cleaners cut coating life</li>
                   <li>• Re-check fastener torque and washers every two years on exposed roofing</li>
-                  <li>• Watch for condensation on the inner skin in humid plants — often a vapour-detail issue, not foam failure</li>
+                  <li>• Watch for condensation on the inner skin in humid plants, often a vapour-detail issue, not foam failure</li>
                   <li>• After cyclones or extreme wind events, inspect edge flashings before the next rain cycle</li>
                 </ul>
               </div>

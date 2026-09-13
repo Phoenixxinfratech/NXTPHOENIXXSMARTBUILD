@@ -397,7 +397,7 @@ const solutionsData: Record<string, {
       { value: '25+', label: 'Year Lifespan' },
     ],
     benefits: [
-      { icon: '⚡', title: 'Assembly in Days', description: 'Pre-fabricated components enable rapid on-site assembly—typically 3-7 days for standard units.' },
+      { icon: '⚡', title: 'Assembly in Days', description: 'Pre-fabricated components enable rapid on-site assembly, typically 3-7 days for standard units.' },
       { icon: '✅', title: 'Consistent Quality', description: 'Factory manufacturing ensures uniform quality regardless of site conditions or weather.' },
       { icon: '🚚', title: 'Relocatable', description: 'Can be disassembled and moved to new locations with 70%+ material reuse.' },
       { icon: '💰', title: 'Cost-Effective', description: 'Lower construction costs, faster occupancy, and reduced site labor requirements.' },
@@ -408,7 +408,7 @@ const solutionsData: Record<string, {
     ],
     process: [
       { step: 1, title: 'Design', description: 'Layout and specification finalization based on requirements.' },
-      { step: 2, title: 'Foundation', description: 'Simple foundation preparation—often just leveled ground with blocks.' },
+      { step: 2, title: 'Foundation', description: 'Simple foundation preparation, often just leveled ground with blocks.' },
       { step: 3, title: 'Manufacturing', description: 'Factory production of wall, roof, and floor modules.' },
       { step: 4, title: 'Transport', description: 'Delivery to site on standard trucks.' },
       { step: 5, title: 'Assembly', description: 'On-site assembly by our trained team.' },
