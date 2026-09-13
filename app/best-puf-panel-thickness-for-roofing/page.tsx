@@ -210,19 +210,6 @@ export default function BestPufPanelThicknessForRoofingPage() {
       address: { '@type': 'PostalAddress', addressLocality: 'Ahmedabad', addressRegion: 'Gujarat', addressCountry: 'IN' },
     },
     image: 'https://phoenixxsmartbuild.com/images/puf-panel-thickness-roofing.jpg',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '178',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: {
-      '@type': 'Review',
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      author: { '@type': 'Organization', name: 'Verified Industrial Client' },
-      reviewBody: 'PHOENIXX team recommended 80mm for our factory roof based on thermal analysis. Perfect thickness — cool interiors and excellent cost-to-performance ratio.',
-    },
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'INR',

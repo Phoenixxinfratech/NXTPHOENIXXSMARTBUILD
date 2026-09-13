@@ -116,26 +116,6 @@ const productSchema = {
   },
   category: 'Cleanroom Insulated Panels',
   material: 'PIR/PUF Core + Pre-painted / Stainless Steel Facings + Flush-Mount Joints',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '156',
-    bestRating: '5',
-  },
-  review: {
-    '@type': 'Review',
-    reviewRating: {
-      '@type': 'Rating',
-      ratingValue: '5',
-      bestRating: '5',
-    },
-    author: {
-      '@type': 'Organization',
-      name: 'Pharmaceutical Facility Consultants India',
-    },
-    reviewBody:
-      'Outstanding cleanroom panel quality for our WHO-GMP pharmaceutical facility. Flush joints passed particle count validation on the first attempt. Complete documentation package simplified our regulatory audit.',
-  },
   offers: {
     '@type': 'AggregateOffer',
     priceCurrency: 'INR',

@@ -737,13 +737,6 @@ export default async function ShopProductPage({ params }: { params: Promise<{ pr
       },
       url: `https://phoenixxsmartbuild.com/shop/${productSlug}`,
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '127',
-      bestRating: '5',
-      worstRating: '1',
-    },
     review: [
       {
         '@type': 'Review',

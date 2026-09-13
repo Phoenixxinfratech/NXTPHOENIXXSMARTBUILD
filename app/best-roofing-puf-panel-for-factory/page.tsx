@@ -210,19 +210,6 @@ export default function BestRoofingPufPanelForFactoryPage() {
       address: { '@type': 'PostalAddress', addressLocality: 'Ahmedabad', addressRegion: 'Gujarat', addressCountry: 'IN' },
     },
     image: 'https://phoenixxsmartbuild.com/images/roofing-puf-panel-factory.jpg',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '142',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: {
-      '@type': 'Review',
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      author: { '@type': 'Organization', name: 'Verified Industrial Client' },
-      reviewBody: 'Excellent roofing PUF panels — zero leakage after two monsoon seasons and noticeable drop in factory temperature.',
-    },
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'INR',

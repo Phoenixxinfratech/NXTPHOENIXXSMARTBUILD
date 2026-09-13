@@ -1,8 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const INDEXNOW_KEY = '2f9deb3c91c64f92b7980e9c2bd6d948';
+// The IndexNow key is public by design: it is published at /{key}.txt so search
+// engines can verify domain ownership. Keeping it in env only so it can be
+// rotated without a code change.
+const INDEXNOW_KEY = process.env.INDEXNOW_KEY || '2f9deb3c91c64f92b7980e9c2bd6d948';
 const HOST = 'phoenixxsmartbuild.com';
 const KEY_LOCATION = `https://${HOST}/${INDEXNOW_KEY}.txt`;
+
+// Submitting URLs on our behalf affects how search engines crawl the domain, so
+// the trigger itself must be authenticated even though the key is not secret.
+const TRIGGER_SECRET = process.env.INDEXNOW_TRIGGER_SECRET || process.env.REVALIDATION_SECRET;
+
+const MAX_URLS_PER_REQUEST = 100;
 
 const SEARCH_ENGINES = [
   'https://www.bing.com/indexnow',
@@ -14,6 +23,18 @@ const SEARCH_ENGINES = [
 
 export async function POST(request: NextRequest) {
   try {
+    if (!TRIGGER_SECRET) {
+      return NextResponse.json(
+        { error: 'IndexNow submission is not configured' },
+        { status: 503 }
+      );
+    }
+
+    const token = request.headers.get('authorization')?.replace('Bearer ', '');
+    if (token !== TRIGGER_SECRET) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
     const body = await request.json();
     const { urls } = body;
 
@@ -24,9 +45,35 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const fullUrls = urls.map((url: string) =>
-      url.startsWith('http') ? url : `https://${HOST}${url}`
-    );
+    if (urls.length > MAX_URLS_PER_REQUEST) {
+      return NextResponse.json(
+        { error: `A maximum of ${MAX_URLS_PER_REQUEST} URLs may be submitted per request` },
+        { status: 400 }
+      );
+    }
+
+    // IndexNow rejects mixed hosts, and accepting arbitrary URLs would let a
+    // caller submit someone else's pages under our key.
+    const fullUrls: string[] = [];
+    for (const url of urls) {
+      if (typeof url !== 'string') {
+        return NextResponse.json({ error: 'Each URL must be a string' }, { status: 400 });
+      }
+      const absolute = url.startsWith('http') ? url : `https://${HOST}${url.startsWith('/') ? url : `/${url}`}`;
+      let parsed: URL;
+      try {
+        parsed = new URL(absolute);
+      } catch {
+        return NextResponse.json({ error: `Invalid URL: ${url}` }, { status: 400 });
+      }
+      if (parsed.hostname !== HOST) {
+        return NextResponse.json(
+          { error: `URL must belong to ${HOST}: ${url}` },
+          { status: 400 }
+        );
+      }
+      fullUrls.push(parsed.toString());
+    }
 
     const payload = {
       host: HOST,
@@ -72,9 +119,8 @@ export async function POST(request: NextRequest) {
 export async function GET() {
   return NextResponse.json({
     service: 'IndexNow API',
-    key: INDEXNOW_KEY,
-    keyLocation: KEY_LOCATION,
+    configured: Boolean(TRIGGER_SECRET),
     engines: SEARCH_ENGINES,
-    usage: 'POST /api/indexnow with { "urls": ["/path1", "/path2"] }',
+    usage: 'POST /api/indexnow with { "urls": ["/path1", "/path2"] } and an Authorization: Bearer <secret> header',
   });
 }

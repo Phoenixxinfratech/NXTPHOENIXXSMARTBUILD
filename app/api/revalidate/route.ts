@@ -34,9 +34,16 @@ export async function POST(request: NextRequest) {
     const authHeader = request.headers.get('authorization');
     const token = authHeader?.replace('Bearer ', '');
 
+    // Fail closed: without a configured secret there is no way to tell a Sanity
+    // webhook from an anonymous caller, and revalidation is a write operation.
     if (!REVALIDATION_SECRET) {
-      console.warn('REVALIDATION_SECRET not set - skipping auth check');
-    } else if (token !== REVALIDATION_SECRET) {
+      return NextResponse.json(
+        { error: 'Revalidation is not configured' },
+        { status: 503 }
+      );
+    }
+
+    if (token !== REVALIDATION_SECRET) {
       return NextResponse.json(
         { error: 'Invalid revalidation token' },
         { status: 401 }

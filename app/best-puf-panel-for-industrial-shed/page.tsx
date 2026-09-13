@@ -116,26 +116,6 @@ const productSchema = {
   },
   category: 'Insulated Panels',
   material: 'Polyurethane Foam (PUF) + Pre-painted Steel',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.8',
-    reviewCount: '156',
-    bestRating: '5',
-  },
-  review: {
-    '@type': 'Review',
-    reviewRating: {
-      '@type': 'Rating',
-      ratingValue: '5',
-      bestRating: '5',
-    },
-    author: {
-      '@type': 'Organization',
-      name: 'Industrial Project Consultants',
-    },
-    reviewBody:
-      'Excellent quality PUF panels for our 5,000 sq.m industrial shed project. On-time delivery and superior insulation performance.',
-  },
   offers: {
     '@type': 'AggregateOffer',
     priceCurrency: 'INR',

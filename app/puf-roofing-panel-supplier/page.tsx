@@ -50,7 +50,6 @@ export default function PufRoofingPanelSupplierPage() {
     brand: { '@type': 'Brand', name: 'PHOENIXX' },
     manufacturer: { '@type': 'Organization', name: 'Phoenixx Smart Build', url: 'https://phoenixxsmartbuild.com' },
     category: 'Industrial Insulated Roofing Panels',
-    aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.8', reviewCount: '142', bestRating: '5', worstRating: '1' },
   };
 
   return (

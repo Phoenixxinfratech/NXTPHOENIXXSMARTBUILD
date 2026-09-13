@@ -252,27 +252,6 @@ export default async function ShopPage() {
         description: product.description,
         image: `https://phoenixxsmartbuild.com${product.image}`,
         url: `https://phoenixxsmartbuild.com/shop/${product.slug}`,
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: '4.8',
-          reviewCount: '127',
-          bestRating: '5',
-          worstRating: '1',
-        },
-        review: {
-          '@type': 'Review',
-          reviewRating: {
-            '@type': 'Rating',
-            ratingValue: '5',
-            bestRating: '5',
-          },
-          author: {
-            '@type': 'Organization',
-            name: 'Industrial Client',
-          },
-          reviewBody: `Excellent quality ${product.name} with great insulation.`,
-          datePublished: '2024-01-15',
-        },
       },
     })),
   };

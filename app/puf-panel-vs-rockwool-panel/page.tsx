@@ -216,20 +216,6 @@ export default function PufPanelVsRockwoolPanelPage() {
     },
     url: 'https://phoenixxsmartbuild.com/puf-panel-vs-rockwool-panel',
     image: 'https://phoenixxsmartbuild.com/images/comparison/puf-vs-rockwool-panel.jpg',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      bestRating: '5',
-      worstRating: '1',
-      reviewCount: '267',
-    },
-    review: {
-      '@type': 'Review',
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      author: { '@type': 'Organization', name: 'Verified Industrial Client' },
-      reviewBody:
-        'PHOENIXX helped us select the right combination of PUF and Rockwool panels for our facility. Their unbiased advice saved us cost on general walls while ensuring fire compliance in critical zones.',
-    },
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'INR',
@@ -297,7 +283,7 @@ export default function PufPanelVsRockwoolPanelPage() {
                 {[
                   { metric: '2 Core Types', label: 'PUF & Rockwool' },
                   { metric: '500+', label: 'Projects Delivered' },
-                  { metric: '4.8/5', label: 'Client Rating' },
+                  { metric: 'ISO 9001', label: 'Certified Quality' },
                   { metric: '14+', label: 'Parameters Compared' },
                 ].map((stat, idx) => (
                   <div key={idx} className="text-center">

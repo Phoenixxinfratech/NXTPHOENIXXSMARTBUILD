@@ -160,19 +160,6 @@ export default function BestDensityPufPanelForInsulationPage() {
       manufacturer: { '@type': 'Organization', name: 'PHOENIXX SMARTBUILD' },
       url: 'https://phoenixxsmartbuild.com/best-density-puf-panel-for-insulation',
       image: 'https://phoenixxsmartbuild.com/images/products/puf-panel-density-40kg.jpg',
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.8',
-        bestRating: '5',
-        worstRating: '1',
-        reviewCount: '189',
-      },
-      review: {
-        '@type': 'Review',
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        author: { '@type': 'Organization', name: 'Verified Industrial Client' },
-        reviewBody: 'PHOENIXX panels consistently delivered 40 kg/m³ density across our entire cold storage project. Thermal performance matched specifications perfectly — no hot spots or condensation issues even after 18 months.',
-      },
       offers: {
         '@type': 'AggregateOffer',
         priceCurrency: 'INR',

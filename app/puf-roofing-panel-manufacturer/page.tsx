@@ -57,7 +57,6 @@ export default function PufRoofingPanelManufacturerPage() {
     manufacturer: { '@type': 'Organization', name: 'Phoenixx Smart Build', url: 'https://phoenixxsmartbuild.com' },
     category: 'Industrial Insulated Roofing Panels',
     material: 'Polyurethane Foam',
-    aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.8', reviewCount: '142', bestRating: '5', worstRating: '1' },
   };
 
   return (

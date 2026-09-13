@@ -160,19 +160,6 @@ export default function BestPufPanelBrandInIndiaPage() {
       manufacturer: { '@type': 'Organization', name: 'PHOENIXX SMARTBUILD' },
       url: 'https://phoenixxsmartbuild.com/best-puf-panel-brand-in-india',
       image: 'https://phoenixxsmartbuild.com/images/products/puf-panel-hero.jpg',
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        bestRating: '5',
-        worstRating: '1',
-        reviewCount: '312',
-      },
-      review: {
-        '@type': 'Review',
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        author: { '@type': 'Organization', name: 'Verified Industrial Client' },
-        reviewBody: 'PHOENIXX PUF Panels have delivered consistent thermal performance across our cold storage facility. Quality, delivery, and support are outstanding.',
-      },
       offers: {
         '@type': 'AggregateOffer',
         priceCurrency: 'INR',
@@ -231,7 +218,7 @@ export default function BestPufPanelBrandInIndiaPage() {
                 {[
                   { metric: '13+', label: 'Years Experience' },
                   { metric: '500+', label: 'Projects Delivered' },
-                  { metric: '4.9/5', label: 'Client Rating' },
+                  { metric: 'ISO 9001', label: 'Certified Quality' },
                   { metric: 'Pan-India', label: 'Delivery Network' },
                 ].map((stat, idx) => (
                   <div key={idx} className="text-center">
@@ -403,7 +390,7 @@ export default function BestPufPanelBrandInIndiaPage() {
                   { icon: '🛡️', title: 'ISO & IS Certified', description: 'ISO 9001:2015, ISO 14001:2015, and IS 14925 certified quality management systems.' },
                   { icon: '🚚', title: 'Pan-India Delivery', description: 'Established logistics network serving all states with 7-15 day standard delivery schedules.' },
                   { icon: '👨‍🔧', title: 'Technical Support', description: 'Dedicated engineering team for design consultation, thermal calculations, and installation guidance.' },
-                  { icon: '⭐', title: '4.9/5 Client Rating', description: 'Rated 4.9 out of 5 by 312 verified clients across industrial, commercial, and cold storage segments.' },
+                  { icon: '🏭', title: 'In-House Manufacturing', description: 'Panels produced on our own continuous line, so thickness, density, and finish stay consistent batch to batch.' },
                 ].map((item, idx) => (
                   <div key={idx} className="text-center bg-slate-50 rounded-2xl p-6 hover:shadow-md transition-shadow">
                     <span className="text-3xl">{item.icon}</span>

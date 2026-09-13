@@ -78,19 +78,6 @@ export default function BestQualitySandwichPufPanelPage() {
     image: 'https://phoenixxsmartbuild.com/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
     brand: { '@type': 'Brand', name: 'PHOENIXX SMARTBUILD' },
     manufacturer: { '@type': 'Organization', name: 'PHOENIXX SMARTBUILD' },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '203',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: {
-      '@type': 'Review',
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      author: { '@type': 'Organization', name: 'SKF India Ltd.' },
-      reviewBody: 'Exceptional PUF panel quality with consistent 40 kg/m³ density and excellent thermal performance. PHOENIXX delivered on time with full documentation.',
-    },
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'INR',

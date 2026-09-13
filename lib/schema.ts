@@ -109,8 +109,11 @@ export function generateBreadcrumbSchema(items: BreadcrumbItem[]) {
 }
 
 /**
- * Generate Product schema
- * Includes aggregateRating and review to satisfy Google's requirements
+ * Generate Product schema.
+ *
+ * Google requires at least one of offers, review, or aggregateRating. We use
+ * offers: review markup must reflect reviews genuinely collected and displayed
+ * on the page, and inventing ratings risks a structured-data manual action.
  */
 export function generateProductSchema(product: ProductData) {
   return {
@@ -129,26 +132,14 @@ export function generateProductSchema(product: ProductData) {
       '@type': 'Organization',
       name: siteConfig.company.name,
     },
-    // Required by Google: at least one of offers, review, or aggregateRating
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '127',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: {
-      '@type': 'Review',
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: '5',
-        bestRating: '5',
-      },
-      author: {
+    offers: {
+      '@type': 'AggregateOffer',
+      priceCurrency: 'INR',
+      availability: 'https://schema.org/InStock',
+      seller: {
         '@type': 'Organization',
-        name: 'Verified Industrial Client',
+        name: siteConfig.company.name,
       },
-      reviewBody: `Excellent quality ${product.name} with professional support from PHOENIXX SMARTBUILD.`,
     },
   };
 }

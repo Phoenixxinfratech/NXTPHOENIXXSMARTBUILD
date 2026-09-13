@@ -1362,7 +1362,8 @@ export default async function ProductDetailPage({ params }: Props) {
 
   const categoryName = category.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
 
-  // Enhanced Schema Markup - Using aggregateRating + review (no offers without price)
+  // Product schema uses offers rather than ratings: pricing is quoted per project
+  // and we do not collect on-page reviews, so review markup would be fabricated.
   const productSchema = {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -1371,25 +1372,12 @@ export default async function ProductDetailPage({ params }: Props) {
     image: `https://phoenixxsmartbuild.com/images/products/sandwich-panels/puf-panel/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp`,
     brand: { '@type': 'Brand', name: 'PHOENIXX SMARTBUILD' },
     manufacturer: { '@type': 'Organization', name: 'NXT PHOENIXX SMARTBUILD LLP', url: 'https://phoenixxsmartbuild.com' },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '127',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: {
-      '@type': 'Review',
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: '5',
-        bestRating: '5',
-      },
-      author: {
-        '@type': 'Organization',
-        name: 'Industrial Client',
-      },
-      reviewBody: `Excellent quality ${data.name} with superior thermal insulation. Professional installation and support from PHOENIXX SMARTBUILD.`,
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'INR',
+      availability: 'https://schema.org/InStock',
+      url: `${siteConfig.url}/products/${category}/${product}`,
+      seller: { '@type': 'Organization', name: 'NXT PHOENIXX SMARTBUILD LLP' },
     },
   };
 

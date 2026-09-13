@@ -90,7 +90,7 @@ const solutionsData: Record<string, {
   process: { step: number; title: string; description: string }[];
   applications: { question: string; answer: string }[];
   industries: string[];
-  testimonial: { quote: string; author: string; company: string; rating: number; reviews: number };
+  testimonial: { quote: string; author: string; company: string };
   faqs: { question: string; answer: string }[];
 }> = {
   'peb': {
@@ -141,8 +141,6 @@ const solutionsData: Record<string, {
       quote: 'PHOENIXX delivered our 25,000 sq.ft warehouse in just 12 weeks from design to handover. The quality and professionalism were outstanding. Already planning our next expansion with them.',
       author: 'Operations Director',
       company: 'Logistics Company, Gujarat',
-      rating: 4.9,
-      reviews: 35,
     },
     faqs: [
       { question: 'What is the lifespan of a PEB building?', answer: 'Well-designed and maintained PEB buildings last 25-50 years. Galvanized or painted steel with proper maintenance (periodic repainting every 5-7 years) ensures long service life.' },
@@ -205,8 +203,6 @@ const solutionsData: Record<string, {
       quote: 'PHOENIXX built our 5000 MT frozen food facility with excellent attention to detail. Energy costs are 25% lower than our older facility. The temperature uniformity is exceptional.',
       author: 'CEO',
       company: 'Frozen Food Company, Gujarat',
-      rating: 4.9,
-      reviews: 28,
     },
     faqs: [
       { question: 'How long does cold storage construction take?', answer: 'Small cold rooms (100-500 sq.ft): 4-6 weeks. Medium facilities (500-5000 sq.ft): 8-12 weeks. Large cold storage (5000+ sq.ft): 12-20 weeks. Timelines include design, civil, panels, and MEP.' },
@@ -267,8 +263,6 @@ const solutionsData: Record<string, {
       quote: 'The walkable ceiling system from PHOENIXX made our HVAC maintenance so much easier. Filter changes that took 4 hours now take 45 minutes. Excellent investment.',
       author: 'Maintenance Manager',
       company: 'Pharmaceutical Company, Gujarat',
-      rating: 4.8,
-      reviews: 22,
     },
     faqs: [
       { question: 'What load can walkable ceilings support?', answer: 'Our walkable ceilings support distributed loads up to 200 kg/m² and point loads of 100 kg on any tile. This accommodates maintenance personnel with tools and equipment.' },
@@ -322,8 +316,6 @@ const solutionsData: Record<string, {
       quote: 'The non-walkable ceiling system was perfect for our office renovation. Clean finish, good acoustics, and completed in just 2 weeks. Great value for money.',
       author: 'Facility Manager',
       company: 'IT Company, Ahmedabad',
-      rating: 4.7,
-      reviews: 18,
     },
     faqs: [
       { question: 'What is the load capacity?', answer: 'Non-walkable ceilings are not designed for personnel access. They support their own weight plus integrated services (lights, diffusers) typically under 20 kg/m².' },
@@ -378,8 +370,6 @@ const solutionsData: Record<string, {
       quote: 'We reconfigured our entire production floor using PHOENIXX partitions over a weekend. Zero downtime and excellent finish quality. Already planning our R&D expansion with same system.',
       author: 'Plant Head',
       company: 'Electronics Manufacturer, Gujarat',
-      rating: 4.7,
-      reviews: 18,
     },
     faqs: [
       { question: 'How long does partition installation take?', answer: 'Installation rates: 100-200 sq.ft/day depending on complexity. A 5000 sq.ft office partition project typically takes 2-3 weeks including doors and electrical integration.' },
@@ -435,8 +425,6 @@ const solutionsData: Record<string, {
       quote: 'Delivered 20 site office units across 3 project sites in just 6 weeks. Quality is excellent and our teams are comfortable even in summer heat. Great value for money.',
       author: 'Project Manager',
       company: 'Construction Company, Maharashtra',
-      rating: 4.6,
-      reviews: 15,
     },
     faqs: [
       { question: 'What is the cost of a prefab cabin?', answer: 'Standard site office (10x12 ft): ₹1.5-2.5 lakhs. Labor accommodation (20x40 ft): ₹4-6 lakhs. Prices depend on size, specifications, and accessories included.' },
@@ -493,8 +481,6 @@ const solutionsData: Record<string, {
       quote: 'PHOENIXX delivered our ISO Class 7 cleanroom for API manufacturing ahead of schedule. The quality and GMP compliance documentation were excellent. Highly recommended.',
       author: 'Plant Head',
       company: 'Pharmaceutical Company, Gujarat',
-      rating: 4.9,
-      reviews: 45,
     },
     faqs: [
       { question: 'What is the cost of cleanroom construction?', answer: 'Cleanroom costs vary based on classification, size, and specifications. ISO Class 8: ₹2,500-4,000/sq.ft, ISO Class 7: ₹4,000-6,000/sq.ft, ISO Class 5-6: ₹6,000-10,000/sq.ft. Contact us for project-specific quotation.' },
@@ -562,7 +548,6 @@ export default async function SolutionDetailPage({ params }: Props) {
       name: 'PHOENIXX Infratech Projects',
       address: { '@type': 'PostalAddress', addressLocality: 'Ahmedabad', addressCountry: 'IN' },
     },
-    aggregateRating: { '@type': 'AggregateRating', ratingValue: data.testimonial.rating.toString(), reviewCount: data.testimonial.reviews.toString() },
   };
 
   const images = solutionImages[slug] || [];
@@ -710,11 +695,7 @@ export default async function SolutionDetailPage({ params }: Props) {
         {/* Testimonials */}
         <section className="section-padding bg-slate-50">
           <div className="container-custom text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">What Our Clients Say</h2>
-            <div className="flex items-center justify-center gap-2 mb-8">
-              <div className="flex">{[1,2,3,4,5].map((s) => <span key={s} className="text-yellow-500 text-xl">★</span>)}</div>
-              <span className="text-slate-600">{data.testimonial.rating}/5 from {data.testimonial.reviews}+ projects</span>
-            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">What Our Clients Say</h2>
             <blockquote className="max-w-3xl mx-auto">
               <p className="text-xl text-slate-700 italic">&ldquo;{data.testimonial.quote}&rdquo;</p>
               <footer className="mt-4">

@@ -116,26 +116,6 @@ const productSchema = {
   },
   category: 'Cold Storage Insulated Panels',
   material: 'Polyurethane Foam (PUF) + Pre-painted Steel + Cam-Lock Joints',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '198',
-    bestRating: '5',
-  },
-  review: {
-    '@type': 'Review',
-    reviewRating: {
-      '@type': 'Rating',
-      ratingValue: '5',
-      bestRating: '5',
-    },
-    author: {
-      '@type': 'Organization',
-      name: 'Cold Chain Infrastructure Consultants',
-    },
-    reviewBody:
-      'Exceptional cold storage panels for our multi-temperature facility. Cam-lock joints provided perfect seal integrity at -25°C. Zero energy loss after 3 years of operation.',
-  },
   offers: {
     '@type': 'AggregateOffer',
     priceCurrency: 'INR',

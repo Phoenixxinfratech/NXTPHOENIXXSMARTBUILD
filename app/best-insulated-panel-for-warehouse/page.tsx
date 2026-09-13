@@ -217,19 +217,6 @@ export default function BestInsulatedPanelForWarehousePage() {
       address: { '@type': 'PostalAddress', addressLocality: 'Ahmedabad', addressRegion: 'Gujarat', addressCountry: 'IN' },
     },
     image: 'https://phoenixxsmartbuild.com/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '214',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: {
-      '@type': 'Review',
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      author: { '@type': 'Organization', name: 'Verified Warehouse Client' },
-      reviewBody: 'Outstanding quality PUF panels for our 6,000 sq.m warehouse project. On-time delivery, professional installation, and noticeable temperature improvement from day one.',
-    },
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'INR',
