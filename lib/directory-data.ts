@@ -1,9 +1,11 @@
 import { products, locations } from '@/lib/landing-page-data';
+import { getPublishedCombos } from '@/lib/geo-strategy';
 import {
   geoCities,
   geoPageTypes,
-  geoKeywordTypes,
   coreInternalLinks,
+  generateAllGeoStaticParams,
+  parseGeoSlug,
 } from '@/lib/rajasthan-geo-data';
 import { getAllBlogSlugs } from '@/lib/blog-data';
 import { getAllExportCountrySlugs, getExportCountry, getCitiesForCountry, getIndustriesForCountry } from '@/lib/export-data';
@@ -272,24 +274,22 @@ function buildAllSections(): DirectorySection[] {
     });
   }
 
-  // ── Product-in-Location Pages (5 products x 48 locations = 240) ──
-  const productKeys = Object.keys(products);
-  const locationKeys = Object.keys(locations);
-
-  for (const productSlug of productKeys) {
+  // ── Product-in-Location Pages (only the combinations we publish) ──
+  const combosByProduct = new Map<string, DirectoryLink[]>();
+  for (const { productSlug, locationSlug, slug } of getPublishedCombos()) {
     const product = products[productSlug];
-    const links: DirectoryLink[] = locationKeys.map((locSlug) => {
-      const loc = locations[locSlug];
-      return {
-        href: `/${productSlug}-in-${locSlug}`,
-        label: `${product.name} in ${loc.name}`,
-      };
-    });
+    const loc = locations[locationSlug];
+    const links = combosByProduct.get(productSlug) ?? [];
+    links.push({ href: `/${slug}`, label: `${product.name} in ${loc.name}` });
+    combosByProduct.set(productSlug, links);
+  }
 
+  for (const [productSlug, links] of Array.from(combosByProduct.entries())) {
+    const product = products[productSlug];
     sections.push({
       id: `geo-${productSlug}`,
       heading: `${product.name} by Location`,
-      description: `Find ${product.name} availability, pricing, and supply details for ${locationKeys.length} cities and states across India.`,
+      description: `Find ${product.name} availability, pricing, and supply details for ${links.length} cities and states across India.`,
       links,
     });
   }
@@ -302,37 +302,23 @@ function buildAllSections(): DirectorySection[] {
     links: coreInternalLinks.map((l) => ({ href: l.href, label: l.label })),
   });
 
-  // ── PUF Roofing Panel City Pages (5 types x 23 cities = 115) ──
+  // ── PUF Roofing Panel City Pages (published variants only) ──
   const cityKeys = Object.keys(geoCities);
-  for (const [, pt] of Object.entries(geoPageTypes)) {
-    const links: DirectoryLink[] = cityKeys.map((citySlug) => {
-      const city = geoCities[citySlug];
-      return {
-        href: `/${pt.urlPrefix}-${citySlug}`,
-        label: pt.h1Template.replace('{city}', city.name),
-      };
-    });
+  const geoLinksByType = new Map<string, DirectoryLink[]>();
+  for (const slug of generateAllGeoStaticParams()) {
+    const parsed = parseGeoSlug(slug);
+    if (!parsed?.pageType) continue;
+    const links = geoLinksByType.get(parsed.pageType.id) ?? [];
+    links.push({ href: `/${slug}`, label: parsed.pageType.h1Template.replace('{city}', parsed.city.name) });
+    geoLinksByType.set(parsed.pageType.id, links);
+  }
+
+  for (const [typeId, links] of Array.from(geoLinksByType.entries())) {
+    const pt = geoPageTypes[typeId as keyof typeof geoPageTypes];
     sections.push({
       id: `rajasthan-${pt.id}`,
       heading: pt.h1Template.replace(' in {city}', ' by City'),
-      description: `${pt.focusDescription} Covers 23 Rajasthan cities.`,
-      links,
-    });
-  }
-
-  // ── PUF Roofing Keyword Expansion (4 types x 23 cities = 92) ──
-  for (const [, kt] of Object.entries(geoKeywordTypes)) {
-    const links: DirectoryLink[] = cityKeys.map((citySlug) => {
-      const city = geoCities[citySlug];
-      return {
-        href: `/${kt.urlPrefix}-${citySlug}`,
-        label: kt.h1Template.replace('{city}', city.name),
-      };
-    });
-    sections.push({
-      id: `rajasthan-kw-${kt.id}`,
-      heading: kt.h1Template.replace(' in {city}', ' by City'),
-      description: `${kt.focusDescription} Covers 23 Rajasthan cities.`,
+      description: `${pt.focusDescription} Covers ${cityKeys.length} Rajasthan cities.`,
       links,
     });
   }

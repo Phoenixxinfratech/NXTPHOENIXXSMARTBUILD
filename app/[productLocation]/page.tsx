@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { notFound } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
@@ -24,7 +24,15 @@ import {
   getGeoMetaDescription,
   getGeoCanonicalSlug,
   getGeoH1,
+  isPublishedGeoPage,
 } from '@/lib/rajasthan-geo-data';
+import {
+  canonicalComboSlug,
+  getPublishedCombos,
+  getPublishedProductsFor,
+  isPublishedCombo,
+  FLAGSHIP_PRODUCT_SLUG,
+} from '@/lib/geo-strategy';
 import { RajasthanGeoPage } from '@/components/geo/rajasthan-geo-page';
 import { RelatedResources } from '@/components/blocks/related-resources';
 import { getRelatedLinksForGeoPage } from '@/lib/internal-links';
@@ -39,18 +47,13 @@ function parseSlug(slug: string): { productSlug: string; locationSlug: string } 
   };
 }
 
-// Generate static params for all product-location combinations + Rajasthan geo pages
+// Generate static params for every published product-location page + Rajasthan geo pages
 export async function generateStaticParams() {
   const params: { productLocation: string }[] = [];
-  
-  // Existing product-in-location combinations
-  Object.keys(products).forEach(productSlug => {
-    Object.keys(locations).forEach(locationSlug => {
-      params.push({
-        productLocation: `${productSlug}-in-${locationSlug}`,
-      });
-    });
-  });
+
+  for (const combo of getPublishedCombos()) {
+    params.push({ productLocation: combo.slug });
+  }
 
   // Rajasthan geo SEO pages (207 URLs)
   for (const slug of generateAllGeoStaticParams()) {
@@ -67,6 +70,9 @@ export async function generateMetadata({ params }: { params: Promise<{ productLo
   // Check for Rajasthan geo SEO pages first
   const geoResult = parseGeoSlug(productLocation);
   if (geoResult) {
+    if (!isPublishedGeoPage(geoResult)) {
+      return { title: getGeoH1(geoResult), robots: { index: false, follow: true } };
+    }
     const title = getGeoMetaTitle(geoResult);
     const description = getGeoMetaDescription(geoResult);
     const canonical = getGeoCanonicalSlug(geoResult);
@@ -114,6 +120,11 @@ export async function generateMetadata({ params }: { params: Promise<{ productLo
   
   if (!product || !location) {
     return { title: 'Page Not Found' };
+  }
+
+  // Collapsed combinations redirect in the page body; keep them out of the index.
+  if (!isPublishedCombo(parsed.productSlug, parsed.locationSlug)) {
+    return { title: product.name, robots: { index: false, follow: true } };
   }
   
   const title = generatePageTitle(product, location);
@@ -165,6 +176,10 @@ export default async function ProductLocationPage({ params }: { params: Promise<
   // Check for Rajasthan geo SEO pages first
   const geoResult = parseGeoSlug(productLocation);
   if (geoResult) {
+    // Synonym and near-duplicate variants fold into the page they duplicate.
+    if (!isPublishedGeoPage(geoResult)) {
+      permanentRedirect(`/${getGeoCanonicalSlug(geoResult)}`);
+    }
     return <RajasthanGeoPage result={geoResult} />;
   }
 
@@ -181,9 +196,30 @@ export default async function ProductLocationPage({ params }: { params: Promise<
   if (!product || !location) {
     notFound();
   }
+
+  // Only locations with real local material carry a page per product. Everywhere
+  // else the four secondary panels fold into the flagship page for that location.
+  if (!isPublishedCombo(parsed.productSlug, parsed.locationSlug)) {
+    permanentRedirect(`/${canonicalComboSlug(parsed.productSlug, parsed.locationSlug)}`);
+  }
   
   const parentLocation = getParentLocation(location);
   const childLocations = getChildLocations(location.slug);
+
+  // Cross-location links have to respect the same collapsing rule, otherwise
+  // they point at URLs that only exist to redirect.
+  const comboFor = (targetLocationSlug: string) => {
+    const targetProductSlug = isPublishedCombo(parsed.productSlug, targetLocationSlug)
+      ? parsed.productSlug
+      : FLAGSHIP_PRODUCT_SLUG;
+    return {
+      href: `/${targetProductSlug}-in-${targetLocationSlug}`,
+      shortName: products[targetProductSlug].shortName,
+    };
+  };
+  const siblingProducts = getPublishedProductsFor(location.slug)
+    .filter((slug) => slug !== product.slug)
+    .map((slug) => products[slug]);
   
   // Generate FAQs
   const faqs = generateFAQs(product, location);
@@ -324,12 +360,13 @@ export default async function ProductLocationPage({ params }: { params: Promise<
                 </Link>
                 {location.nearbyAreas && location.nearbyAreas.slice(0, 3).map((area) => {
                   const areaSlug = area.toLowerCase().replace(/\s+/g, '-');
-                  const areaExists = locations[areaSlug];
-                  return areaExists ? (
-                    <Link key={areaSlug} href={`/${product.slug}-in-${areaSlug}`} className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-800 hover:underline">
-                      → {product.shortName} in {area}
+                  if (!locations[areaSlug]) return null;
+                  const combo = comboFor(areaSlug);
+                  return (
+                    <Link key={areaSlug} href={combo.href} className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-800 hover:underline">
+                      → {combo.shortName} in {area}
                     </Link>
-                  ) : null;
+                  );
                 })}
               </div>
             </div>
@@ -736,30 +773,34 @@ export default async function ProductLocationPage({ params }: { params: Promise<
             {/* Child locations or nearby areas */}
             {childLocations.length > 0 ? (
               <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                {childLocations.map((child) => (
-                  <Link
-                    key={child.slug}
-                    href={`/${parsed.productSlug}-in-${child.slug}`}
-                    className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all hover:border-blue-300 border border-transparent"
-                  >
-                    <span className="text-blue-500" aria-hidden="true">📍</span>
-                    <span className="font-medium text-slate-900">{product.shortName} in {child.name}</span>
-                  </Link>
-                ))}
+                {childLocations.map((child) => {
+                  const combo = comboFor(child.slug);
+                  return (
+                    <Link
+                      key={child.slug}
+                      href={combo.href}
+                      className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all hover:border-blue-300 border border-transparent"
+                    >
+                      <span className="text-blue-500" aria-hidden="true">📍</span>
+                      <span className="font-medium text-slate-900">{combo.shortName} in {child.name}</span>
+                    </Link>
+                  );
+                })}
               </div>
             ) : location.nearbyAreas ? (
               <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 {location.nearbyAreas.map((area, idx) => {
                   const areaSlug = area.toLowerCase().replace(/\s+/g, '-');
                   const areaExists = locations[areaSlug];
-                  return areaExists ? (
+                  const combo = areaExists ? comboFor(areaSlug) : null;
+                  return combo ? (
                     <Link
                       key={idx}
-                      href={`/${parsed.productSlug}-in-${areaSlug}`}
+                      href={combo.href}
                       className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all hover:border-blue-300 border border-transparent"
                     >
                       <span className="text-blue-500" aria-hidden="true">📍</span>
-                      <span className="font-medium text-slate-900">{product.shortName} in {area}</span>
+                      <span className="font-medium text-slate-900">{combo.shortName} in {area}</span>
                     </Link>
                   ) : (
                     <div key={idx} className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm border border-transparent">
@@ -778,10 +819,10 @@ export default async function ProductLocationPage({ params }: { params: Promise<
                   Looking for {product.name} in other parts of {parentLocation.name}?
                 </p>
                 <Link
-                  href={`/${parsed.productSlug}-in-${parentLocation.slug}`}
+                  href={comboFor(parentLocation.slug).href}
                   className="inline-flex items-center gap-2 mt-3 text-blue-600 font-semibold hover:underline"
                 >
-                  View {product.shortName} in {parentLocation.name}
+                  View {comboFor(parentLocation.slug).shortName} in {parentLocation.name}
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
@@ -876,25 +917,33 @@ export default async function ProductLocationPage({ params }: { params: Promise<
         <section className="section-padding bg-slate-50">
           <div className="container-custom">
             <h2 className="text-2xl font-bold text-slate-900 mb-6">
-              Other PUF &amp; Insulated Panel Products in {location.name}
+              {siblingProducts.length > 0
+                ? `Other PUF & Insulated Panel Products in ${location.name}`
+                : `Other Panels We Supply to ${location.name}`}
             </h2>
             
             <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
-              {Object.values(products)
-                .filter(p => p.slug !== product.slug)
-                .map((p) => (
+              {(siblingProducts.length > 0
+                ? siblingProducts
+                : Object.values(products).filter(p => p.slug !== product.slug)
+              ).map((p) => {
+                const local = siblingProducts.length > 0;
+                return (
                   <Link
                     key={p.slug}
-                    href={`/${p.slug}-in-${location.slug}`}
+                    href={local ? `/${p.slug}-in-${location.slug}` : `/products/sandwich-panels/${p.slug}`}
                     className="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all"
                   >
                     <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${p.gradient} mb-3 flex items-center justify-center text-white text-lg`}>
                       {p.slug.includes('roof') ? '🏠' : p.slug.includes('rock') ? '🪨' : p.slug.includes('pir') ? '🔥' : p.slug.includes('fm') ? '🏆' : '🧱'}
                     </div>
                     <h3 className="font-semibold text-slate-900">{p.name}</h3>
-                    <p className="text-sm text-slate-500 mt-1">in {location.name}</p>
+                    <p className="text-sm text-slate-500 mt-1">
+                      {local ? `in ${location.name}` : 'Specs & datasheet'}
+                    </p>
                   </Link>
-                ))}
+                );
+              })}
             </div>
           </div>
         </section>

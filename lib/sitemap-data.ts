@@ -8,10 +8,11 @@
  * section sitemaps rather than a fourth, overlapping copy of the URLs.
  */
 
-import { products, locations } from '@/lib/landing-page-data';
+import { locations } from '@/lib/landing-page-data';
+import { getPublishedCombos } from '@/lib/geo-strategy';
 import { getAllBlogSlugs } from '@/lib/blog-data';
 import { getAllExportUrls } from '@/lib/export-data';
-import { geoCities, geoPageTypes, geoKeywordTypes } from '@/lib/rajasthan-geo-data';
+import { generateAllGeoStaticParams } from '@/lib/rajasthan-geo-data';
 import { siteConfig } from '@/lib/site-config';
 
 export const baseUrl = siteConfig.url;
@@ -255,39 +256,27 @@ export function getExportEntries(): SitemapEntry[] {
 }
 
 export function getGeoEntries(): SitemapEntry[] {
-  const entries: SitemapEntry[] = [];
-  for (const productSlug of Object.keys(products)) {
-    for (const locationSlug of Object.keys(locations)) {
-      const priority = highPriorityLocations.has(locationSlug)
-        ? '0.7'
-        : mediumPriorityLocations.has(locationSlug)
-          ? '0.6'
-          : '0.5';
-      entries.push({
-        loc: `/${productSlug}-in-${locationSlug}`,
-        changefreq: 'monthly',
-        priority,
-      });
-    }
-  }
+  // Only the combinations we actually publish; the rest redirect and must not
+  // be advertised. See lib/geo-strategy.ts.
+  const entries = getPublishedCombos().map<SitemapEntry>(({ slug, locationSlug }) => ({
+    loc: `/${slug}`,
+    changefreq: 'monthly',
+    priority: highPriorityLocations.has(locationSlug)
+      ? '0.7'
+      : mediumPriorityLocations.has(locationSlug)
+        ? '0.6'
+        : '0.5',
+  }));
   return entries.sort((a, b) => Number(b.priority) - Number(a.priority));
 }
 
 export function getRajasthanGeoEntries(): SitemapEntry[] {
-  const citySlugs = Object.keys(geoCities);
-  const entries: SitemapEntry[] = [];
-
-  for (const pageType of Object.values(geoPageTypes)) {
-    for (const city of citySlugs) {
-      entries.push({ loc: `/${pageType.urlPrefix}-${city}`, changefreq: 'monthly', priority: '0.8' });
-    }
-  }
-  for (const keywordType of Object.values(geoKeywordTypes)) {
-    for (const city of citySlugs) {
-      entries.push({ loc: `/${keywordType.urlPrefix}-${city}`, changefreq: 'monthly', priority: '0.7' });
-    }
-  }
-  return entries;
+  // Same rule as the product pages: advertise only the variants we publish.
+  return generateAllGeoStaticParams().map<SitemapEntry>((slug) => ({
+    loc: `/${slug}`,
+    changefreq: 'monthly',
+    priority: '0.8',
+  }));
 }
 
 const XML_ESCAPES: Record<string, string> = {

@@ -256,7 +256,7 @@ export default function PhoenixxPufRoofingPanelsPage() {
                 return (
                   <Link
                     key={slug}
-                    href={`/phoenixx-puf-roofing-panel-${slug}/`}
+                    href={`/puf-roofing-panel-manufacturer-${slug}`}
                     className="bg-white rounded-xl p-4 text-center hover:bg-blue-50 hover:shadow-md transition-all border border-slate-200"
                   >
                     <span className="font-bold text-slate-900">{city}</span>

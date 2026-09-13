@@ -589,20 +589,42 @@ export function getAllGeoCitySlugs(): string[] {
 }
 
 /**
- * Build all static param slugs for geo pages (207 total)
+ * Nine variants per city is nine ways of saying the same thing. The keyword
+ * types are pure synonyms of the general page ("insulated roof panel" is the
+ * same query as "PUF roofing panel"), and "supplier" and "brand" answer the
+ * same question as "manufacturer" for a company that makes what it sells.
+ *
+ * We publish the three that a buyer actually searches separately — what the
+ * product is, who makes it, what it costs — and fold the rest into them.
+ */
+const PUBLISHED_GEO_PAGE_TYPES: GeoPageTypeId[] = ['general', 'manufacturer', 'price'];
+
+const COLLAPSED_PAGE_TYPE_TARGET: Partial<Record<GeoPageTypeId, GeoPageTypeId>> = {
+  supplier: 'manufacturer',
+  brand: 'manufacturer',
+};
+
+export function isPublishedGeoPage(result: GeoSlugResult): boolean {
+  return Boolean(result.pageType && PUBLISHED_GEO_PAGE_TYPES.includes(result.pageType.id));
+}
+
+/** The published page a collapsed variant folds into. */
+export function resolvePublishedGeoPage(result: GeoSlugResult): GeoSlugResult {
+  if (isPublishedGeoPage(result)) return result;
+  const target = result.pageType ? COLLAPSED_PAGE_TYPE_TARGET[result.pageType.id] : undefined;
+  return { city: result.city, pageType: geoPageTypes[target ?? 'general'] };
+}
+
+/**
+ * Build the static param slugs for the geo pages we publish.
  */
 export function generateAllGeoStaticParams(): string[] {
   const params: string[] = [];
   const citySlugs = getAllGeoCitySlugs();
 
-  for (const pt of Object.values(geoPageTypes)) {
+  for (const id of PUBLISHED_GEO_PAGE_TYPES) {
     for (const cs of citySlugs) {
-      params.push(`${pt.urlPrefix}-${cs}`);
-    }
-  }
-  for (const kt of Object.values(geoKeywordTypes)) {
-    for (const cs of citySlugs) {
-      params.push(`${kt.urlPrefix}-${cs}`);
+      params.push(`${geoPageTypes[id].urlPrefix}-${cs}`);
     }
   }
   return params;
@@ -629,8 +651,8 @@ export function getGeoH1(result: GeoSlugResult): string {
 }
 
 export function getGeoCanonicalSlug(result: GeoSlugResult): string {
-  const prefix = result.pageType?.urlPrefix ?? result.keywordType!.urlPrefix;
-  return `${prefix}-${result.city.slug}`;
+  const published = resolvePublishedGeoPage(result);
+  return `${published.pageType!.urlPrefix}-${published.city.slug}`;
 }
 
 // ---------------------------------------------------------------------------

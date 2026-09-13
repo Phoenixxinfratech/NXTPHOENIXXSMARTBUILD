@@ -2,6 +2,7 @@
  * Rule-based internal link selection for Related Resources blocks.
  */
 import { products, locations, getLocation } from '@/lib/landing-page-data';
+import { canonicalComboSlug } from '@/lib/geo-strategy';
 import { getAllBlogSlugs } from '@/lib/blog-data';
 import {
   getExportCountry,
@@ -80,12 +81,15 @@ function pickNearbyCities(locationSlug: string, productSlug = 'sandwich-puf-pane
   const pool = matched.length > 0 ? matched : cities;
 
   const sorted = pool.sort((a, b) => hashSlug(a.slug + locationSlug) - hashSlug(b.slug + locationSlug));
-  const productLabel = products[productSlug]?.name || 'PUF Panel';
-  return sorted.slice(0, count).map((c) => ({
-    href: `/${productSlug}-in-${c.slug}`,
-    label: `${productLabel} in ${c.name}`,
-    category: 'city' as const,
-  }));
+  return sorted.slice(0, count).map((c) => {
+    const slug = canonicalComboSlug(productSlug, c.slug);
+    const targetProduct = products[slug.slice(0, slug.lastIndexOf(`-in-${c.slug}`))];
+    return {
+      href: `/${slug}`,
+      label: `${targetProduct?.name || 'PUF Panel'} in ${c.name}`,
+      category: 'city' as const,
+    };
+  });
 }
 
 function pickBlogs(seed: string, count = 2): RelatedLink[] {

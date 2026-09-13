@@ -7,6 +7,7 @@ import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 import { fetchPricesFromSheet } from '@/lib/google-sheets';
 import { getProductPricing } from '@/lib/shop-prices';
+import { canonicalComboSlug } from '@/lib/geo-strategy';
 
 // Presentation copy for shop pages. Prices live in lib/shop-prices.ts.
 const shopProducts: Record<string, {
@@ -823,7 +824,7 @@ export default async function ShopProductPage({ params }: { params: Promise<{ pr
               {['india', 'gujarat', 'ahmedabad', 'surat', 'vadodara', 'rajkot', 'raipur', 'bhilai'].map((loc) => (
                 <Link
                   key={loc}
-                  href={`/${productSlug}-in-${loc}`}
+                  href={`/${canonicalComboSlug(productSlug, loc)}`}
                   className="inline-flex items-center gap-1 px-4 py-2 rounded-lg bg-white border border-slate-200 text-slate-700 hover:border-blue-300 hover:text-blue-600 transition-colors"
                 >
                   📍 {loc.charAt(0).toUpperCase() + loc.slice(1)}
