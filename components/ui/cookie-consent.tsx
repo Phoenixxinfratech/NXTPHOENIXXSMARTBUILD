@@ -1,7 +1,8 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { useBottomBarOffset } from './use-bottom-bar-offset';
 
 /**
  * Cookie Consent Banner
@@ -18,6 +19,8 @@ type ConsentStatus = 'pending' | 'accepted' | 'rejected';
 export function CookieConsent() {
   const [showBanner, setShowBanner] = useState(false);
   const [consentStatus, setConsentStatus] = useState<ConsentStatus>('pending');
+  const bannerRef = useRef<HTMLDivElement>(null);
+  useBottomBarOffset(bannerRef, '--cookie-banner-height', showBanner && consentStatus === 'pending');
 
   useEffect(() => {
     // Check for existing consent
@@ -88,12 +91,19 @@ export function CookieConsent() {
     }
   };
 
-  if (!showBanner || consentStatus !== 'pending') {
+  const isVisible = showBanner && consentStatus === 'pending';
+
+  if (!isVisible) {
     return null;
   }
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-[100] p-4 md:p-6 animate-slide-up">
+    <div
+      ref={bannerRef}
+      role="dialog"
+      aria-label="Cookie consent"
+      className="fixed bottom-stack-base left-0 right-0 z-[100] p-4 md:p-6 animate-slide-up"
+    >
       <div className="max-w-6xl mx-auto bg-slate-900 rounded-2xl shadow-2xl border border-slate-700 p-6 md:p-8">
         <div className="flex flex-col md:flex-row md:items-center gap-6">
           {/* Cookie Icon */}

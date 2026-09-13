@@ -1,10 +1,11 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { siteConfig } from '@/lib/site-config';
+import { useBottomBarOffset } from '@/components/ui/use-bottom-bar-offset';
 
 const PHONE = siteConfig.whatsapp.replace(/^91/, '');
 const PHONE_DISPLAY = siteConfig.contact.phone.replace(/^\+91\s*/, '');
@@ -74,6 +75,8 @@ export default function LandingPageClient() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const stickyBarRef = useRef<HTMLDivElement>(null);
+  useBottomBarOffset(stickyBarRef, '--sticky-cta-height');
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -700,7 +703,10 @@ export default function LandingPageClient() {
         </footer>
 
         {/* Sticky Mobile CTA */}
-        <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-slate-200 bg-white p-3 shadow-[0_-4px_20px_rgba(0,0,0,0.1)] md:hidden">
+        <div
+          ref={stickyBarRef}
+          className="safe-area-pb fixed bottom-0 left-0 right-0 z-50 border-t border-slate-200 bg-white px-3 pt-3 shadow-[0_-4px_20px_rgba(0,0,0,0.1)] md:hidden"
+        >
           <div className="flex gap-3">
             <a
               href={`tel:+91${PHONE}`}

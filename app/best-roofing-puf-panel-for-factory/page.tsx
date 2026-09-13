@@ -548,31 +548,33 @@ export default function BestRoofingPufPanelForFactoryPage() {
               Complete engineering data for architects, structural consultants, and procurement teams.
             </p>
             <div className="max-w-4xl mx-auto bg-slate-50 rounded-2xl overflow-hidden border border-slate-200">
-              <table className="w-full">
-                <tbody className="divide-y divide-slate-200">
-                  {[
-                    { label: 'Profile Types', value: 'Trapezoidal, Standing Seam, Concealed Fix' },
-                    { label: 'Panel Thickness', value: '40mm, 50mm, 60mm, 80mm, 100mm, 120mm' },
-                    { label: 'PUF Density', value: '40 ± 2 kg/m³ (CFC & HFC Free)' },
-                    { label: 'Thermal Conductivity', value: '0.024 W/mK @ 25°C' },
-                    { label: 'Panel Width (effective)', value: '1000mm standard' },
-                    { label: 'Panel Length', value: 'Up to 16 meters (custom lengths available)' },
-                    { label: 'Steel Thickness', value: '0.45mm – 0.60mm (PPGI / PPGL / SS)' },
-                    { label: 'Coating Options', value: 'SMP (standard), PVDF (coastal/harsh), SDP' },
-                    { label: 'Wind Load Rating', value: 'Tested as per IS 875, up to 150 km/h' },
-                    { label: 'Purlin Span', value: '3-4m (trapezoidal), 2.5-3.5m (standing seam)' },
-                    { label: 'Fire Rating', value: 'B2 standard, B1 / PIR options available' },
-                    { label: 'Accessories', value: 'Ridge caps, valley gutters, flashing, skylights, ventilators' },
-                    { label: 'Service Life', value: '25+ years with proper installation' },
-                    { label: 'Compliance', value: 'IS 14925:2015, ISO 9001:2015, ISO 14001:2015' },
-                  ].map((row, idx) => (
-                    <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
-                      <td className="px-6 py-4 font-semibold text-slate-900 w-2/5">{row.label}</td>
-                      <td className="px-6 py-4 text-slate-600">{row.value}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <tbody className="divide-y divide-slate-200">
+                    {[
+                      { label: 'Profile Types', value: 'Trapezoidal, Standing Seam, Concealed Fix' },
+                      { label: 'Panel Thickness', value: '40mm, 50mm, 60mm, 80mm, 100mm, 120mm' },
+                      { label: 'PUF Density', value: '40 ± 2 kg/m³ (CFC & HFC Free)' },
+                      { label: 'Thermal Conductivity', value: '0.024 W/mK @ 25°C' },
+                      { label: 'Panel Width (effective)', value: '1000mm standard' },
+                      { label: 'Panel Length', value: 'Up to 16 meters (custom lengths available)' },
+                      { label: 'Steel Thickness', value: '0.45mm – 0.60mm (PPGI / PPGL / SS)' },
+                      { label: 'Coating Options', value: 'SMP (standard), PVDF (coastal/harsh), SDP' },
+                      { label: 'Wind Load Rating', value: 'Tested as per IS 875, up to 150 km/h' },
+                      { label: 'Purlin Span', value: '3-4m (trapezoidal), 2.5-3.5m (standing seam)' },
+                      { label: 'Fire Rating', value: 'B2 standard, B1 / PIR options available' },
+                      { label: 'Accessories', value: 'Ridge caps, valley gutters, flashing, skylights, ventilators' },
+                      { label: 'Service Life', value: '25+ years with proper installation' },
+                      { label: 'Compliance', value: 'IS 14925:2015, ISO 9001:2015, ISO 14001:2015' },
+                    ].map((row, idx) => (
+                      <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
+                        <td className="px-6 py-4 font-semibold text-slate-900 w-2/5">{row.label}</td>
+                        <td className="px-6 py-4 text-slate-600">{row.value}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
             <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm">
               <Link

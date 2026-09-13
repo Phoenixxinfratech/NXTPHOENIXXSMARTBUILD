@@ -1651,26 +1651,28 @@ export default async function ProductDetailPage({ params }: Props) {
                 Recommended {data.name} specifications for different applications and industry standards.
               </p>
               <div className="bg-slate-50 rounded-2xl overflow-hidden">
-                <table className="w-full">
-                  <thead className={`bg-gradient-to-r ${data.gradient} text-white`}>
-                    <tr>
-                      <th className="px-6 py-4 text-left font-semibold">Application</th>
-                      <th className="px-6 py-4 text-left font-semibold">Metric</th>
-                      <th className="px-6 py-4 text-left font-semibold">Recommended Value</th>
-                      <th className="px-6 py-4 text-left font-semibold hidden md:table-cell">Industry Benchmark</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {data.performanceByApplication.map((perf, idx) => (
-                      <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
-                        <td className="px-6 py-4 font-medium text-slate-900">{perf.application}</td>
-                        <td className="px-6 py-4 text-slate-600">{perf.metric}</td>
-                        <td className="px-6 py-4 font-bold text-blue-600">{perf.value}</td>
-                        <td className="px-6 py-4 text-slate-500 hidden md:table-cell">{perf.benchmark}</td>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead className={`bg-gradient-to-r ${data.gradient} text-white`}>
+                      <tr>
+                        <th className="px-6 py-4 text-left font-semibold">Application</th>
+                        <th className="px-6 py-4 text-left font-semibold">Metric</th>
+                        <th className="px-6 py-4 text-left font-semibold">Recommended Value</th>
+                        <th className="px-6 py-4 text-left font-semibold hidden md:table-cell">Industry Benchmark</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody>
+                      {data.performanceByApplication.map((perf, idx) => (
+                        <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
+                          <td className="px-6 py-4 font-medium text-slate-900">{perf.application}</td>
+                          <td className="px-6 py-4 text-slate-600">{perf.metric}</td>
+                          <td className="px-6 py-4 font-bold text-blue-600">{perf.value}</td>
+                          <td className="px-6 py-4 text-slate-500 hidden md:table-cell">{perf.benchmark}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </section>

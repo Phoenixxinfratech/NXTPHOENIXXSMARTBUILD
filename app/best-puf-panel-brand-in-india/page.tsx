@@ -590,31 +590,33 @@ export default function BestPufPanelBrandInIndiaPage() {
                 compromising on density, coatings, or manufacturing standards.
               </p>
               <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
-                <table className="w-full">
-                  <thead>
-                    <tr className="bg-emerald-700 text-white">
-                      <th className="px-6 py-4 text-left font-semibold">Product Type</th>
-                      <th className="px-6 py-4 text-left font-semibold">Price Range (per sq.m)</th>
-                      <th className="px-6 py-4 text-left font-semibold">Key Feature</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-200">
-                    {[
-                      { type: 'PUF Wall Panels (30-50mm)', range: '₹800 – ₹1,200', feature: 'Standard insulation, SMP coating' },
-                      { type: 'PUF Wall Panels (60-100mm)', range: '₹1,200 – ₹1,800', feature: 'Enhanced thermal, SDP coating' },
-                      { type: 'PUF Cold Storage Panels (100-150mm)', range: '₹1,800 – ₹2,500', feature: 'Maximum insulation, PVDF coating' },
-                      { type: 'PUF Roofing Panels', range: '₹900 – ₹1,500', feature: 'Weather-resistant profiles' },
-                      { type: 'PIR / FM Approved Panels', range: '₹1,400 – ₹2,500', feature: 'Enhanced fire resistance' },
-                      { type: 'Rockwool Panels', range: '₹1,200 – ₹2,200', feature: 'Non-combustible core' },
-                    ].map((row, idx) => (
-                      <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
-                        <td className="px-6 py-4 font-medium text-slate-900">{row.type}</td>
-                        <td className="px-6 py-4 font-semibold text-emerald-700">{row.range}</td>
-                        <td className="px-6 py-4 text-slate-600">{row.feature}</td>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="bg-emerald-700 text-white">
+                        <th className="px-6 py-4 text-left font-semibold">Product Type</th>
+                        <th className="px-6 py-4 text-left font-semibold">Price Range (per sq.m)</th>
+                        <th className="px-6 py-4 text-left font-semibold">Key Feature</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody className="divide-y divide-slate-200">
+                      {[
+                        { type: 'PUF Wall Panels (30-50mm)', range: '₹800 – ₹1,200', feature: 'Standard insulation, SMP coating' },
+                        { type: 'PUF Wall Panels (60-100mm)', range: '₹1,200 – ₹1,800', feature: 'Enhanced thermal, SDP coating' },
+                        { type: 'PUF Cold Storage Panels (100-150mm)', range: '₹1,800 – ₹2,500', feature: 'Maximum insulation, PVDF coating' },
+                        { type: 'PUF Roofing Panels', range: '₹900 – ₹1,500', feature: 'Weather-resistant profiles' },
+                        { type: 'PIR / FM Approved Panels', range: '₹1,400 – ₹2,500', feature: 'Enhanced fire resistance' },
+                        { type: 'Rockwool Panels', range: '₹1,200 – ₹2,200', feature: 'Non-combustible core' },
+                      ].map((row, idx) => (
+                        <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
+                          <td className="px-6 py-4 font-medium text-slate-900">{row.type}</td>
+                          <td className="px-6 py-4 font-semibold text-emerald-700">{row.range}</td>
+                          <td className="px-6 py-4 text-slate-600">{row.feature}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
               <p className="mt-6 text-sm text-slate-500 text-center">
                 Prices vary by thickness, coating type, order volume, and delivery location. Contact our sales 

@@ -27,34 +27,36 @@ export function SpecificationsTable({
       {title && <h2 className="mb-6 text-2xl font-bold">{title}</h2>}
 
       <div className="overflow-hidden rounded-lg border">
-        <table className="w-full">
-          <thead className="bg-muted">
-            <tr>
-              <th className="px-4 py-3 text-left text-sm font-semibold">
-                Specification
-              </th>
-              <th className="px-4 py-3 text-left text-sm font-semibold">
-                Value
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {specifications.map((spec, index) => (
-              <tr
-                key={index}
-                className={cn(
-                  variant === 'striped' && index % 2 === 0 && 'bg-muted/50',
-                  variant === 'bordered' && 'border-t'
-                )}
-              >
-                <td className="px-4 py-3 text-sm font-medium">{spec.label}</td>
-                <td className="px-4 py-3 text-sm text-muted-foreground">
-                  {spec.value}
-                </td>
+        <div className="overflow-x-auto">
+          <table className="w-full">
+            <thead className="bg-muted">
+              <tr>
+                <th className="px-4 py-3 text-left text-sm font-semibold">
+                  Specification
+                </th>
+                <th className="px-4 py-3 text-left text-sm font-semibold">
+                  Value
+                </th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {specifications.map((spec, index) => (
+                <tr
+                  key={index}
+                  className={cn(
+                    variant === 'striped' && index % 2 === 0 && 'bg-muted/50',
+                    variant === 'bordered' && 'border-t'
+                  )}
+                >
+                  <td className="px-4 py-3 text-sm font-medium">{spec.label}</td>
+                  <td className="px-4 py-3 text-sm text-muted-foreground">
+                    {spec.value}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
   );

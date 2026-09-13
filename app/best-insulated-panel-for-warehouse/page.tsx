@@ -698,40 +698,42 @@ export default function BestInsulatedPanelForWarehousePage() {
             </p>
 
             <div className="max-w-4xl mx-auto bg-slate-50 rounded-2xl overflow-hidden border border-slate-200">
-              <table className="w-full">
-                <thead>
-                  <tr className="bg-slate-900 text-white">
-                    <th className="px-6 py-4 text-left font-semibold">Specification</th>
-                    <th className="px-6 py-4 text-left font-semibold">Wall Panels</th>
-                    <th className="px-6 py-4 text-left font-semibold">Roofing Panels</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-200">
-                  {[
-                    { label: 'Profile', wall: 'Flat / Micro-ribbed', roof: 'Trapezoidal / Standing Seam' },
-                    { label: 'Thickness Options', wall: '30-150mm', roof: '40-120mm' },
-                    { label: 'Recommended Thickness', wall: '50mm (general), 80-100mm (cold chain)', roof: '50-80mm (general), 100mm+ (cold chain)' },
-                    { label: 'PUF Density', wall: '40 ± 2 kg/m³', roof: '40 ± 2 kg/m³' },
-                    { label: 'Thermal Conductivity', wall: '0.024 W/mK', roof: '0.024 W/mK' },
-                    { label: 'R-Value (at 50mm)', wall: '2.08 m²K/W', roof: '2.08 m²K/W' },
-                    { label: 'Panel Width', wall: '1000mm effective', roof: '1000mm effective' },
-                    { label: 'Max Length', wall: 'Up to 20 metres', roof: 'Up to 16 metres' },
-                    { label: 'Weight (50mm)', wall: '8-12 kg/m²', roof: '10-14 kg/m²' },
-                    { label: 'Steel Thickness', wall: '0.40-0.60mm PPGI/PPGL', roof: '0.45-0.60mm PPGI/PPGL' },
-                    { label: 'Coating', wall: 'PE, SMP, PVDF', roof: 'SMP, PVDF' },
-                    { label: 'Max Span', wall: 'N/A (supported by girts)', roof: '3-4m between purlins' },
-                    { label: 'Fire Rating', wall: 'B1, B2, B3; PIR option', roof: 'B2 standard; B1/PIR option' },
-                    { label: 'Service Life', wall: '25-30 years', roof: '25-30 years' },
-                    { label: 'Compliance', wall: 'IS 14925, ISO 9001', roof: 'IS 14925, ISO 9001, IS 875 (wind)' },
-                  ].map((row, idx) => (
-                    <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
-                      <td className="px-6 py-3 font-semibold text-slate-900 text-sm">{row.label}</td>
-                      <td className="px-6 py-3 text-slate-600 text-sm">{row.wall}</td>
-                      <td className="px-6 py-3 text-slate-600 text-sm">{row.roof}</td>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className="bg-slate-900 text-white">
+                      <th className="px-6 py-4 text-left font-semibold">Specification</th>
+                      <th className="px-6 py-4 text-left font-semibold">Wall Panels</th>
+                      <th className="px-6 py-4 text-left font-semibold">Roofing Panels</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody className="divide-y divide-slate-200">
+                    {[
+                      { label: 'Profile', wall: 'Flat / Micro-ribbed', roof: 'Trapezoidal / Standing Seam' },
+                      { label: 'Thickness Options', wall: '30-150mm', roof: '40-120mm' },
+                      { label: 'Recommended Thickness', wall: '50mm (general), 80-100mm (cold chain)', roof: '50-80mm (general), 100mm+ (cold chain)' },
+                      { label: 'PUF Density', wall: '40 ± 2 kg/m³', roof: '40 ± 2 kg/m³' },
+                      { label: 'Thermal Conductivity', wall: '0.024 W/mK', roof: '0.024 W/mK' },
+                      { label: 'R-Value (at 50mm)', wall: '2.08 m²K/W', roof: '2.08 m²K/W' },
+                      { label: 'Panel Width', wall: '1000mm effective', roof: '1000mm effective' },
+                      { label: 'Max Length', wall: 'Up to 20 metres', roof: 'Up to 16 metres' },
+                      { label: 'Weight (50mm)', wall: '8-12 kg/m²', roof: '10-14 kg/m²' },
+                      { label: 'Steel Thickness', wall: '0.40-0.60mm PPGI/PPGL', roof: '0.45-0.60mm PPGI/PPGL' },
+                      { label: 'Coating', wall: 'PE, SMP, PVDF', roof: 'SMP, PVDF' },
+                      { label: 'Max Span', wall: 'N/A (supported by girts)', roof: '3-4m between purlins' },
+                      { label: 'Fire Rating', wall: 'B1, B2, B3; PIR option', roof: 'B2 standard; B1/PIR option' },
+                      { label: 'Service Life', wall: '25-30 years', roof: '25-30 years' },
+                      { label: 'Compliance', wall: 'IS 14925, ISO 9001', roof: 'IS 14925, ISO 9001, IS 875 (wind)' },
+                    ].map((row, idx) => (
+                      <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
+                        <td className="px-6 py-3 font-semibold text-slate-900 text-sm">{row.label}</td>
+                        <td className="px-6 py-3 text-slate-600 text-sm">{row.wall}</td>
+                        <td className="px-6 py-3 text-slate-600 text-sm">{row.roof}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
 
             <div className="mt-8 flex flex-wrap justify-center gap-4">

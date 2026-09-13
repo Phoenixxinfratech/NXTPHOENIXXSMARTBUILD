@@ -738,29 +738,31 @@ export default function PufPanelVsRockwoolPanelPage() {
                 <div className="px-6 py-4 bg-blue-700 text-white">
                   <h3 className="font-bold text-lg">PUF Panel Specifications</h3>
                 </div>
-                <table className="w-full text-sm">
-                  <tbody className="divide-y divide-blue-100">
-                    {[
-                      { label: 'Core Material', value: 'Polyurethane Foam (PUF)' },
-                      { label: 'Density', value: '40 ± 2 kg/m³' },
-                      { label: 'Thermal Conductivity', value: '0.024 W/mK @ 25°C' },
-                      { label: 'Fire Class', value: 'B2/B3 (B1 with PIR)' },
-                      { label: 'Thickness Range', value: '30–150mm' },
-                      { label: 'Panel Weight (50mm)', value: '~10 kg/m²' },
-                      { label: 'Water Absorption', value: '< 1%' },
-                      { label: 'NRC Value', value: '0.25–0.35' },
-                      { label: 'Max Temp Resistance', value: '120–150°C' },
-                      { label: 'Steel Options', value: '0.35–0.60mm PPGI/PPGL/SS' },
-                      { label: 'Coatings', value: 'SMP, SDP, PVDF' },
-                      { label: 'Blowing Agent', value: 'CFC/HFC-free (Zero ODP)' },
-                    ].map((row, idx) => (
-                      <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-blue-50/50'}>
-                        <td className="px-4 py-2.5 font-semibold text-slate-900">{row.label}</td>
-                        <td className="px-4 py-2.5 text-slate-600">{row.value}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <tbody className="divide-y divide-blue-100">
+                      {[
+                        { label: 'Core Material', value: 'Polyurethane Foam (PUF)' },
+                        { label: 'Density', value: '40 ± 2 kg/m³' },
+                        { label: 'Thermal Conductivity', value: '0.024 W/mK @ 25°C' },
+                        { label: 'Fire Class', value: 'B2/B3 (B1 with PIR)' },
+                        { label: 'Thickness Range', value: '30–150mm' },
+                        { label: 'Panel Weight (50mm)', value: '~10 kg/m²' },
+                        { label: 'Water Absorption', value: '< 1%' },
+                        { label: 'NRC Value', value: '0.25–0.35' },
+                        { label: 'Max Temp Resistance', value: '120–150°C' },
+                        { label: 'Steel Options', value: '0.35–0.60mm PPGI/PPGL/SS' },
+                        { label: 'Coatings', value: 'SMP, SDP, PVDF' },
+                        { label: 'Blowing Agent', value: 'CFC/HFC-free (Zero ODP)' },
+                      ].map((row, idx) => (
+                        <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-blue-50/50'}>
+                          <td className="px-4 py-2.5 font-semibold text-slate-900">{row.label}</td>
+                          <td className="px-4 py-2.5 text-slate-600">{row.value}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
                 <div className="p-4 text-center">
                   <Link
                     href="/products/sandwich-panels/sandwich-puf-panel"
@@ -776,29 +778,31 @@ export default function PufPanelVsRockwoolPanelPage() {
                 <div className="px-6 py-4 bg-orange-700 text-white">
                   <h3 className="font-bold text-lg">Rockwool Panel Specifications</h3>
                 </div>
-                <table className="w-full text-sm">
-                  <tbody className="divide-y divide-orange-100">
-                    {[
-                      { label: 'Core Material', value: 'Mineral Wool (Basalt Rock)' },
-                      { label: 'Density', value: '100–150 kg/m³' },
-                      { label: 'Thermal Conductivity', value: '0.035–0.040 W/mK' },
-                      { label: 'Fire Class', value: 'A1/A2 (Non-combustible)' },
-                      { label: 'Thickness Range', value: '50–150mm' },
-                      { label: 'Panel Weight (50mm)', value: '~18–20 kg/m²' },
-                      { label: 'Water Absorption', value: '1–5%' },
-                      { label: 'NRC Value', value: '0.90–0.95' },
-                      { label: 'Max Temp Resistance', value: 'Up to 1000°C' },
-                      { label: 'Steel Options', value: '0.40–0.60mm PPGI/PPGL/SS' },
-                      { label: 'Coatings', value: 'SMP, SDP, PVDF' },
-                      { label: 'Core Material Origin', value: 'Natural Basalt Rock Fibre' },
-                    ].map((row, idx) => (
-                      <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-orange-50/50'}>
-                        <td className="px-4 py-2.5 font-semibold text-slate-900">{row.label}</td>
-                        <td className="px-4 py-2.5 text-slate-600">{row.value}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <tbody className="divide-y divide-orange-100">
+                      {[
+                        { label: 'Core Material', value: 'Mineral Wool (Basalt Rock)' },
+                        { label: 'Density', value: '100–150 kg/m³' },
+                        { label: 'Thermal Conductivity', value: '0.035–0.040 W/mK' },
+                        { label: 'Fire Class', value: 'A1/A2 (Non-combustible)' },
+                        { label: 'Thickness Range', value: '50–150mm' },
+                        { label: 'Panel Weight (50mm)', value: '~18–20 kg/m²' },
+                        { label: 'Water Absorption', value: '1–5%' },
+                        { label: 'NRC Value', value: '0.90–0.95' },
+                        { label: 'Max Temp Resistance', value: 'Up to 1000°C' },
+                        { label: 'Steel Options', value: '0.40–0.60mm PPGI/PPGL/SS' },
+                        { label: 'Coatings', value: 'SMP, SDP, PVDF' },
+                        { label: 'Core Material Origin', value: 'Natural Basalt Rock Fibre' },
+                      ].map((row, idx) => (
+                        <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-orange-50/50'}>
+                          <td className="px-4 py-2.5 font-semibold text-slate-900">{row.label}</td>
+                          <td className="px-4 py-2.5 text-slate-600">{row.value}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
                 <div className="p-4 text-center">
                   <Link
                     href="/products/sandwich-panels/rockwool-panel"

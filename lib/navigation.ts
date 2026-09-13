@@ -31,6 +31,7 @@ export const mainNavigation: NavItem[] = [
         children: [
           { label: 'PIR Panel', href: '/products/sandwich-panels/pir-panel' },
           { label: 'Sandwich PUF Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
+          { label: 'Rockwool Panel', href: '/products/sandwich-panels/rockwool-panel' },
           { label: 'Roofing PUF Panel', href: '/products/sandwich-panels/roofing-puf-panel' },
           { label: 'Wall & Ceiling Panel', href: '/products/sandwich-panels/wall-ceiling-panel' },
         ],
@@ -53,7 +54,13 @@ export const mainNavigation: NavItem[] = [
           { label: 'Cleanroom Partition', href: '/products/cleanroom-solutions/cleanroom-partition' },
           { label: 'Cleanroom Doors', href: '/products/cleanroom-solutions/cleanroom-doors' },
           { label: 'Cleanroom False Ceiling', href: '/products/cleanroom-solutions/cleanroom-false-ceiling' },
+          { label: 'Cleanroom Flooring', href: '/products/cleanroom-solutions/cleanroom-flooring' },
         ],
+      },
+      {
+        label: 'Shop – Buy Online',
+        href: '/shop',
+        description: 'Indicative pricing and direct enquiry',
       },
     ],
   },
@@ -66,6 +73,7 @@ export const mainNavigation: NavItem[] = [
       { label: 'Non-Walkable Ceiling Systems', href: '/solutions/non-walkable-ceiling-systems' },
       { label: 'Partition Solutions', href: '/solutions/partition-solutions' },
       { label: 'Cold Storage Construction', href: '/solutions/cold-storage-construction' },
+      { label: 'Cleanroom Solutions', href: '/solutions/cleanroom-solutions' },
       { label: 'Prefab House', href: '/solutions/prefab-house' },
     ],
   },
@@ -129,6 +137,7 @@ export const footerNavigation = {
     { label: 'Sandwich Panels', href: '/products/sandwich-panels' },
     { label: 'Doors', href: '/products/doors' },
     { label: 'Cleanroom Solutions', href: '/products/cleanroom-solutions' },
+    { label: 'Shop – Buy Online', href: '/shop' },
   ],
   solutions: [
     { label: 'PEB', href: '/solutions/peb' },
@@ -162,6 +171,7 @@ export const footerNavigation = {
   ],
   quickLinks: [
     { label: 'Get a Quote', href: '/get-a-quote' },
+    { label: 'Shop – Buy Online', href: '/shop' },
     { label: 'Global Export Hub', href: '/export' },
     { label: 'Become Partner', href: '/become-partner' },
     { label: 'Vendor Registration', href: '/vendor-registration' },
@@ -193,6 +203,11 @@ export const productsData = {
         slug: 'sandwich-puf-panel',
         title: 'Sandwich PUF Panel',
         description: 'Polyurethane foam sandwich panels for thermal insulation',
+      },
+      {
+        slug: 'rockwool-panel',
+        title: 'Rockwool Panel',
+        description: 'Non-combustible mineral wool panels for fire-critical and acoustic use',
       },
       {
         slug: 'roofing-puf-panel',
@@ -246,6 +261,11 @@ export const productsData = {
         title: 'Cleanroom False Ceiling',
         description: 'False ceiling systems for cleanroom facilities',
       },
+      {
+        slug: 'cleanroom-flooring',
+        title: 'Cleanroom Flooring',
+        description: 'Seamless epoxy, PU, and ESD flooring systems',
+      },
     ],
   },
 };
@@ -281,6 +301,12 @@ export const solutionsData = [
     title: 'Cold Storage Construction',
     description: 'Complete cold storage facility construction and solutions',
     icon: '❄️',
+  },
+  {
+    slug: 'cleanroom-solutions',
+    title: 'Cleanroom Solutions',
+    description: 'Turnkey controlled-environment build-outs from partition to validation',
+    icon: '🧪',
   },
   {
     slug: 'prefab-house',

@@ -67,6 +67,7 @@ export default function SitemapPage() {
                 <h2 className="text-lg font-semibold mb-4">Products</h2>
                 <ul className="space-y-2 text-sm">
                   <li><Link href="/products" className="text-muted-foreground hover:text-primary">All Products</Link></li>
+                  <li><Link href="/shop" className="text-muted-foreground hover:text-primary">Shop – Buy Online</Link></li>
                   {Object.entries(productsData).map(([slug, category]) => (
                     <li key={slug}>
                       <Link href={`/products/${slug}`} className="text-muted-foreground hover:text-primary">

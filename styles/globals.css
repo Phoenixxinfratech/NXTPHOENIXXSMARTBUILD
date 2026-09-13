@@ -306,12 +306,53 @@
   .prose-custom blockquote {
     @apply border-l-4 border-border pl-4 italic text-muted-foreground my-4;
   }
+
+  /* Article bodies are authored HTML, so the tables cannot be wrapped in a
+     scroll container at the markup level. display:block lets the table itself
+     take the overflow instead of pushing the page wider than the viewport. */
+  .prose-custom table {
+    @apply block w-full max-w-full overflow-x-auto my-6 text-sm;
+    border-collapse: collapse;
+  }
+
+  .prose-custom th,
+  .prose-custom td {
+    @apply border border-border px-3 py-2 align-top;
+    white-space: nowrap;
+  }
+
+  .prose-custom th {
+    @apply bg-muted text-left font-semibold;
+  }
+
+  .prose-custom td:last-child,
+  .prose-custom th:last-child {
+    white-space: normal;
+    min-width: 12rem;
+  }
 }
 
 /* ============================================
    UTILITY CLASSES
    ============================================ */
 @layer utilities {
+  /* Bottom-anchored fixed elements stack on top of each other, measured at
+     runtime by useBottomBarOffset. See components/ui/use-bottom-bar-offset.ts. */
+  .bottom-stack-base {
+    bottom: calc(var(--sticky-cta-height, 0px) + env(safe-area-inset-bottom, 0px));
+  }
+
+  .bottom-stack-float {
+    bottom: calc(
+      1.5rem + var(--sticky-cta-height, 0px) + var(--cookie-banner-height, 0px) +
+        env(safe-area-inset-bottom, 0px)
+    );
+  }
+
+  .safe-area-pb {
+    padding-bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
+  }
+
   /* Hide scrollbar but keep functionality */
   .scrollbar-hide {
     -ms-overflow-style: none;

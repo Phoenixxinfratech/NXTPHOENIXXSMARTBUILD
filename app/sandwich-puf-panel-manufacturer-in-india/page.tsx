@@ -234,25 +234,27 @@ export default function SandwichPufPanelManufacturerPage() {
             </h2>
             <div className="max-w-4xl mx-auto">
               <div className="bg-slate-50 rounded-2xl overflow-hidden">
-                <table className="w-full">
-                  <tbody className="divide-y divide-slate-200">
-                    {[
-                      { label: 'Panel Thickness', value: '30, 40, 50, 60, 80, 100, 120, 150 mm' },
-                      { label: 'Panel Width', value: '1000mm (effective), 1070mm (total)' },
-                      { label: 'Panel Length', value: 'Up to 20,000mm' },
-                      { label: 'Core Density', value: '40 ± 2 kg/m³' },
-                      { label: 'Thermal Conductivity', value: '0.024 W/mK' },
-                      { label: 'Steel Facing', value: '0.40mm - 0.60mm PPGI/PPGL' },
-                      { label: 'Coatings Available', value: 'SMP, SDP, PVDF' },
-                      { label: 'Fire Rating', value: 'B1, B2, B3 (PIR available)' },
-                    ].map((spec, idx) => (
-                      <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
-                        <td className="px-6 py-4 font-semibold text-slate-900">{spec.label}</td>
-                        <td className="px-6 py-4 text-slate-600">{spec.value}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <tbody className="divide-y divide-slate-200">
+                      {[
+                        { label: 'Panel Thickness', value: '30, 40, 50, 60, 80, 100, 120, 150 mm' },
+                        { label: 'Panel Width', value: '1000mm (effective), 1070mm (total)' },
+                        { label: 'Panel Length', value: 'Up to 20,000mm' },
+                        { label: 'Core Density', value: '40 ± 2 kg/m³' },
+                        { label: 'Thermal Conductivity', value: '0.024 W/mK' },
+                        { label: 'Steel Facing', value: '0.40mm - 0.60mm PPGI/PPGL' },
+                        { label: 'Coatings Available', value: 'SMP, SDP, PVDF' },
+                        { label: 'Fire Rating', value: 'B1, B2, B3 (PIR available)' },
+                      ].map((spec, idx) => (
+                        <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
+                          <td className="px-6 py-4 font-semibold text-slate-900">{spec.label}</td>
+                          <td className="px-6 py-4 text-slate-600">{spec.value}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
               <p className="mt-6 text-center">
                 <Link href="/products/sandwich-panels/sandwich-puf-panel" className="text-primary hover:underline font-medium">

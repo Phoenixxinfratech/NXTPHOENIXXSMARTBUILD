@@ -456,30 +456,32 @@ export default function BestPufPanelForIndustrialShedPage() {
                 PUF Panel Specifications at a Glance
               </h3>
               <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
-                <table className="w-full">
-                  <thead>
-                    <tr className="bg-slate-900 text-white">
-                      <th className="px-6 py-4 text-left font-semibold">Parameter</th>
-                      <th className="px-6 py-4 text-left font-semibold">Specification</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-200">
-                    {[
-                      { label: 'Thickness Options', value: '30mm, 40mm, 50mm, 60mm, 80mm, 100mm, 120mm, 150mm' },
-                      { label: 'Foam Density', value: '40 ± 2 kg/m³' },
-                      { label: 'Thermal Conductivity', value: '0.024 W/mK (λ)' },
-                      { label: 'Fire Rating', value: 'B1, B2, B3 (PIR option available)' },
-                      { label: 'Max Span (Roof)', value: 'Up to 6-8 metres without purlins' },
-                      { label: 'Steel Thickness', value: '0.40mm – 0.60mm PPGI/PPGL' },
-                      { label: 'Coating Options', value: 'PE, SMP, PVDF' },
-                    ].map((row, idx) => (
-                      <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
-                        <td className="px-6 py-4 font-semibold text-slate-900">{row.label}</td>
-                        <td className="px-6 py-4 text-slate-600">{row.value}</td>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="bg-slate-900 text-white">
+                        <th className="px-6 py-4 text-left font-semibold">Parameter</th>
+                        <th className="px-6 py-4 text-left font-semibold">Specification</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody className="divide-y divide-slate-200">
+                      {[
+                        { label: 'Thickness Options', value: '30mm, 40mm, 50mm, 60mm, 80mm, 100mm, 120mm, 150mm' },
+                        { label: 'Foam Density', value: '40 ± 2 kg/m³' },
+                        { label: 'Thermal Conductivity', value: '0.024 W/mK (λ)' },
+                        { label: 'Fire Rating', value: 'B1, B2, B3 (PIR option available)' },
+                        { label: 'Max Span (Roof)', value: 'Up to 6-8 metres without purlins' },
+                        { label: 'Steel Thickness', value: '0.40mm – 0.60mm PPGI/PPGL' },
+                        { label: 'Coating Options', value: 'PE, SMP, PVDF' },
+                      ].map((row, idx) => (
+                        <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
+                          <td className="px-6 py-4 font-semibold text-slate-900">{row.label}</td>
+                          <td className="px-6 py-4 text-slate-600">{row.value}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
               <p className="mt-4 text-center text-sm text-slate-500">
                 Also explore:{' '}
@@ -744,39 +746,41 @@ export default function BestPufPanelForIndustrialShedPage() {
               </p>
 
               <div className="bg-slate-50 rounded-2xl overflow-hidden shadow-sm">
-                <table className="w-full">
-                  <thead>
-                    <tr className="bg-slate-900 text-white">
-                      <th className="px-6 py-4 text-left font-semibold">Specification</th>
-                      <th className="px-6 py-4 text-left font-semibold">Value / Range</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-200">
-                    {[
-                      { label: 'Panel Thickness', value: '30mm, 40mm, 50mm, 60mm, 80mm, 100mm, 120mm, 150mm' },
-                      { label: 'Foam Core Density', value: '40 ± 2 kg/m³ (high-density rigid PUF)' },
-                      { label: 'Thermal Conductivity (λ)', value: '0.024 W/mK' },
-                      { label: 'R-Value (at 50mm)', value: '2.08 m²K/W' },
-                      { label: 'R-Value (at 100mm)', value: '4.17 m²K/W' },
-                      { label: 'Fire Classification', value: 'B1 (self-extinguishing), B2, B3; PIR option available' },
-                      { label: 'Steel Facing Thickness', value: '0.40mm, 0.45mm, 0.50mm, 0.60mm (PPGI/PPGL)' },
-                      { label: 'Coating Options', value: 'PE (Polyester), SMP (Silicone Modified Polyester), PVDF (Polyvinylidene Fluoride)' },
-                      { label: 'Panel Width', value: '1000mm (effective coverage)' },
-                      { label: 'Panel Length', value: 'Custom, up to 20 metres' },
-                      { label: 'Temperature Range', value: '-40°C to +80°C' },
-                      { label: 'Water Absorption', value: '< 1.5% by volume (closed-cell structure)' },
-                      { label: 'Compressive Strength', value: '≥ 0.15 MPa' },
-                      { label: 'Service Life', value: '25-30 years with proper installation' },
-                    ].map((row, idx) => (
-                      <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
-                        <td className="px-6 py-3 font-semibold text-slate-900 text-sm">
-                          {row.label}
-                        </td>
-                        <td className="px-6 py-3 text-slate-600 text-sm">{row.value}</td>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="bg-slate-900 text-white">
+                        <th className="px-6 py-4 text-left font-semibold">Specification</th>
+                        <th className="px-6 py-4 text-left font-semibold">Value / Range</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody className="divide-y divide-slate-200">
+                      {[
+                        { label: 'Panel Thickness', value: '30mm, 40mm, 50mm, 60mm, 80mm, 100mm, 120mm, 150mm' },
+                        { label: 'Foam Core Density', value: '40 ± 2 kg/m³ (high-density rigid PUF)' },
+                        { label: 'Thermal Conductivity (λ)', value: '0.024 W/mK' },
+                        { label: 'R-Value (at 50mm)', value: '2.08 m²K/W' },
+                        { label: 'R-Value (at 100mm)', value: '4.17 m²K/W' },
+                        { label: 'Fire Classification', value: 'B1 (self-extinguishing), B2, B3; PIR option available' },
+                        { label: 'Steel Facing Thickness', value: '0.40mm, 0.45mm, 0.50mm, 0.60mm (PPGI/PPGL)' },
+                        { label: 'Coating Options', value: 'PE (Polyester), SMP (Silicone Modified Polyester), PVDF (Polyvinylidene Fluoride)' },
+                        { label: 'Panel Width', value: '1000mm (effective coverage)' },
+                        { label: 'Panel Length', value: 'Custom, up to 20 metres' },
+                        { label: 'Temperature Range', value: '-40°C to +80°C' },
+                        { label: 'Water Absorption', value: '< 1.5% by volume (closed-cell structure)' },
+                        { label: 'Compressive Strength', value: '≥ 0.15 MPa' },
+                        { label: 'Service Life', value: '25-30 years with proper installation' },
+                      ].map((row, idx) => (
+                        <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
+                          <td className="px-6 py-3 font-semibold text-slate-900 text-sm">
+                            {row.label}
+                          </td>
+                          <td className="px-6 py-3 text-slate-600 text-sm">{row.value}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
 
               {/* Compliance */}
@@ -857,40 +861,42 @@ export default function BestPufPanelForIndustrialShedPage() {
 
               {/* Price Table */}
               <div className="mt-10 bg-white rounded-2xl overflow-hidden shadow-sm">
-                <table className="w-full">
-                  <thead>
-                    <tr className="bg-emerald-700 text-white">
-                      <th className="px-6 py-4 text-left font-semibold">Thickness Range</th>
-                      <th className="px-6 py-4 text-left font-semibold">
-                        Price Range (per sq.m)
-                      </th>
-                      <th className="px-6 py-4 text-left font-semibold">Best For</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-200">
-                    <tr className="bg-white">
-                      <td className="px-6 py-4 font-semibold text-slate-900">30-50mm</td>
-                      <td className="px-6 py-4 text-emerald-700 font-bold">₹800 – ₹1,200</td>
-                      <td className="px-6 py-4 text-slate-600 text-sm">
-                        Standard walls, partitions, mild climates
-                      </td>
-                    </tr>
-                    <tr className="bg-slate-50">
-                      <td className="px-6 py-4 font-semibold text-slate-900">50-80mm</td>
-                      <td className="px-6 py-4 text-emerald-700 font-bold">₹1,200 – ₹1,800</td>
-                      <td className="px-6 py-4 text-slate-600 text-sm">
-                        Roofing, temperature-sensitive sheds, hot climates
-                      </td>
-                    </tr>
-                    <tr className="bg-white">
-                      <td className="px-6 py-4 font-semibold text-slate-900">80-150mm</td>
-                      <td className="px-6 py-4 text-emerald-700 font-bold">₹1,800 – ₹2,500</td>
-                      <td className="px-6 py-4 text-slate-600 text-sm">
-                        Cold storage, controlled environments, extreme climates
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="bg-emerald-700 text-white">
+                        <th className="px-6 py-4 text-left font-semibold">Thickness Range</th>
+                        <th className="px-6 py-4 text-left font-semibold">
+                          Price Range (per sq.m)
+                        </th>
+                        <th className="px-6 py-4 text-left font-semibold">Best For</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-200">
+                      <tr className="bg-white">
+                        <td className="px-6 py-4 font-semibold text-slate-900">30-50mm</td>
+                        <td className="px-6 py-4 text-emerald-700 font-bold">₹800 – ₹1,200</td>
+                        <td className="px-6 py-4 text-slate-600 text-sm">
+                          Standard walls, partitions, mild climates
+                        </td>
+                      </tr>
+                      <tr className="bg-slate-50">
+                        <td className="px-6 py-4 font-semibold text-slate-900">50-80mm</td>
+                        <td className="px-6 py-4 text-emerald-700 font-bold">₹1,200 – ₹1,800</td>
+                        <td className="px-6 py-4 text-slate-600 text-sm">
+                          Roofing, temperature-sensitive sheds, hot climates
+                        </td>
+                      </tr>
+                      <tr className="bg-white">
+                        <td className="px-6 py-4 font-semibold text-slate-900">80-150mm</td>
+                        <td className="px-6 py-4 text-emerald-700 font-bold">₹1,800 – ₹2,500</td>
+                        <td className="px-6 py-4 text-slate-600 text-sm">
+                          Cold storage, controlled environments, extreme climates
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
 
               <div className="mt-10">

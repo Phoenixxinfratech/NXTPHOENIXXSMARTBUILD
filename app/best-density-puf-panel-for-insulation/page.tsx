@@ -667,32 +667,34 @@ export default function BestDensityPufPanelForInsulationPage() {
               </div>
 
               <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
-                <table className="w-full">
-                  <thead>
-                    <tr className="bg-emerald-700 text-white">
-                      <th className="px-6 py-4 text-left font-semibold">PHOENIXX Panel Type</th>
-                      <th className="px-6 py-4 text-left font-semibold">Density</th>
-                      <th className="px-6 py-4 text-left font-semibold">Price Range (per sq.m)</th>
-                      <th className="px-6 py-4 text-left font-semibold">Application</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-200">
-                    {[
-                      { type: 'PUF Wall Panel 30-50mm', density: '40 ± 2 kg/m³', range: '₹800 – ₹1,200', app: 'Standard wall insulation' },
-                      { type: 'PUF Wall Panel 60-100mm', density: '40 ± 2 kg/m³', range: '₹1,200 – ₹1,800', app: 'Enhanced thermal, industrial' },
-                      { type: 'PUF Cold Storage 100-150mm', density: '40 ± 2 kg/m³', range: '₹1,800 – ₹2,500', app: 'Cold storage, freezer rooms' },
-                      { type: 'PUF Roofing Panel', density: '40 ± 2 kg/m³', range: '₹900 – ₹1,500', app: 'Industrial roofing' },
-                      { type: 'PIR / FM Approved Panel', density: '40 ± 2 kg/m³', range: '₹1,400 – ₹2,500', app: 'Fire-rated applications' },
-                    ].map((row, idx) => (
-                      <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
-                        <td className="px-6 py-4 font-medium text-slate-900">{row.type}</td>
-                        <td className="px-6 py-4 text-emerald-700 font-semibold">{row.density}</td>
-                        <td className="px-6 py-4 font-semibold text-emerald-700">{row.range}</td>
-                        <td className="px-6 py-4 text-slate-600">{row.app}</td>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="bg-emerald-700 text-white">
+                        <th className="px-6 py-4 text-left font-semibold">PHOENIXX Panel Type</th>
+                        <th className="px-6 py-4 text-left font-semibold">Density</th>
+                        <th className="px-6 py-4 text-left font-semibold">Price Range (per sq.m)</th>
+                        <th className="px-6 py-4 text-left font-semibold">Application</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody className="divide-y divide-slate-200">
+                      {[
+                        { type: 'PUF Wall Panel 30-50mm', density: '40 ± 2 kg/m³', range: '₹800 – ₹1,200', app: 'Standard wall insulation' },
+                        { type: 'PUF Wall Panel 60-100mm', density: '40 ± 2 kg/m³', range: '₹1,200 – ₹1,800', app: 'Enhanced thermal, industrial' },
+                        { type: 'PUF Cold Storage 100-150mm', density: '40 ± 2 kg/m³', range: '₹1,800 – ₹2,500', app: 'Cold storage, freezer rooms' },
+                        { type: 'PUF Roofing Panel', density: '40 ± 2 kg/m³', range: '₹900 – ₹1,500', app: 'Industrial roofing' },
+                        { type: 'PIR / FM Approved Panel', density: '40 ± 2 kg/m³', range: '₹1,400 – ₹2,500', app: 'Fire-rated applications' },
+                      ].map((row, idx) => (
+                        <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
+                          <td className="px-6 py-4 font-medium text-slate-900">{row.type}</td>
+                          <td className="px-6 py-4 text-emerald-700 font-semibold">{row.density}</td>
+                          <td className="px-6 py-4 font-semibold text-emerald-700">{row.range}</td>
+                          <td className="px-6 py-4 text-slate-600">{row.app}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
               <p className="mt-6 text-sm text-slate-500 text-center">
                 All PHOENIXX panels are manufactured at guaranteed 40 ± 2 kg/m³ density. Prices vary by thickness,

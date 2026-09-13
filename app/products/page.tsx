@@ -5,6 +5,7 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { AISummaryBlock } from '@/components/ai/ai-summary-block';
 import { JsonLd } from '@/components/seo/json-ld';
+import { ProductFinder } from './product-finder';
 
 export const metadata: Metadata = {
   title: 'Industrial Products – Panels, Doors & Cleanrooms',
@@ -284,79 +285,11 @@ export default function ProductsPage() {
                 Find the Right Product in Seconds
               </h2>
               <p className="mt-4 text-slate-600 leading-relaxed">
-                Our intelligent product finder helps you quickly discover the most suitable solution from our complete portfolio of <strong>Sandwich PUF Panels</strong>, insulated panels, cold storage systems, cleanroom products, and industrial doors. Whether you&apos;re planning a cold storage facility, pharma cleanroom, warehouse, or industrial shed, we help you match the right product to your exact requirement.
+                Search or filter across our <strong>Sandwich PUF Panels</strong>, insulated panels, cold storage systems, cleanroom products, and industrial doors. Whether you&apos;re planning a cold storage facility, pharma cleanroom, warehouse, or industrial shed, this narrows the portfolio down to what fits your requirement.
               </p>
             </div>
 
-            {/* Search & Filters */}
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 border border-slate-200">
-                {/* Search Input */}
-                <div className="relative">
-                  <input
-                    type="text"
-                    placeholder="Search by product name, category, thickness, or feature..."
-                    className="w-full px-5 py-4 pl-12 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all text-slate-900"
-                  />
-                  <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
-                </div>
-
-                {/* Filter Tags */}
-                <div className="mt-6 space-y-4">
-                  <div>
-                    <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">By Category</p>
-                    <div className="flex flex-wrap gap-2">
-                      {['Sandwich Panels', 'Doors', 'Cold Chain Solutions', 'Cleanroom Products'].map((filter) => (
-                        <button
-                          key={filter}
-                          type="button"
-                          aria-label={`Filter by ${filter}`}
-                          className="px-4 py-2 rounded-full bg-slate-100 text-slate-700 text-sm font-medium hover:bg-blue-100 hover:text-blue-700 transition-colors"
-                        >
-                          {filter}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                  <div>
-                    <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">By Feature</p>
-                    <div className="flex flex-wrap gap-2">
-                      {['Fire-Rated', 'Energy-Efficient', 'Acoustic', 'Hygienic', 'Custom Sizes'].map((filter) => (
-                        <button
-                          key={filter}
-                          type="button"
-                          aria-label={`Filter by ${filter} feature`}
-                          className="px-4 py-2 rounded-full bg-slate-100 text-slate-700 text-sm font-medium hover:bg-emerald-100 hover:text-emerald-700 transition-colors"
-                        >
-                          {filter}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                  <div>
-                    <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">By Industry</p>
-                    <div className="flex flex-wrap gap-2">
-                      {['Pharma', 'Food Processing', 'Dairy', 'Healthcare', 'Manufacturing', 'Logistics'].map((filter) => (
-                        <button
-                          key={filter}
-                          type="button"
-                          aria-label={`Filter by ${filter} industry`}
-                          className="px-4 py-2 rounded-full bg-slate-100 text-slate-700 text-sm font-medium hover:bg-orange-100 hover:text-orange-700 transition-colors"
-                        >
-                          {filter}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                <p className="mt-6 text-center text-sm text-slate-500">
-                  Start typing or apply filters to explore our most in-demand insulated infrastructure products.
-                </p>
-              </div>
-            </div>
+            <ProductFinder />
           </div>
         </section>
 

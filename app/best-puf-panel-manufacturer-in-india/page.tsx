@@ -283,27 +283,29 @@ export default function BestPufPanelManufacturerPage() {
             </h2>
             <div className="max-w-4xl mx-auto">
               <div className="bg-slate-50 rounded-2xl overflow-hidden">
-                <table className="w-full">
-                  <tbody className="divide-y divide-slate-200">
-                    {[
-                      { label: 'Panel Thickness Range', value: '30mm, 40mm, 50mm, 60mm, 80mm, 100mm, 120mm, 150mm' },
-                      { label: 'Foam Density', value: '40 ± 2 kg/m³' },
-                      { label: 'Thermal Conductivity', value: '0.024 W/mK' },
-                      { label: 'Panel Length', value: 'Up to 20 meters (custom lengths available)' },
-                      { label: 'Steel Thickness', value: '0.40mm to 0.60mm (PPGI/PPGL)' },
-                      { label: 'Coating Options', value: 'SMP, SDP, PVDF' },
-                      { label: 'Fire Rating Options', value: 'B1, B2, B3, PIR (enhanced fire resistance)' },
-                      { label: 'Temperature Range', value: '-40°C to +80°C' },
-                      { label: 'Service Life', value: '25-30 years with proper installation' },
-                      { label: 'Environmental', value: 'CFC & HFC Free' },
-                    ].map((row, idx) => (
-                      <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
-                        <td className="px-6 py-4 font-semibold text-slate-900">{row.label}</td>
-                        <td className="px-6 py-4 text-slate-600">{row.value}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <tbody className="divide-y divide-slate-200">
+                      {[
+                        { label: 'Panel Thickness Range', value: '30mm, 40mm, 50mm, 60mm, 80mm, 100mm, 120mm, 150mm' },
+                        { label: 'Foam Density', value: '40 ± 2 kg/m³' },
+                        { label: 'Thermal Conductivity', value: '0.024 W/mK' },
+                        { label: 'Panel Length', value: 'Up to 20 meters (custom lengths available)' },
+                        { label: 'Steel Thickness', value: '0.40mm to 0.60mm (PPGI/PPGL)' },
+                        { label: 'Coating Options', value: 'SMP, SDP, PVDF' },
+                        { label: 'Fire Rating Options', value: 'B1, B2, B3, PIR (enhanced fire resistance)' },
+                        { label: 'Temperature Range', value: '-40°C to +80°C' },
+                        { label: 'Service Life', value: '25-30 years with proper installation' },
+                        { label: 'Environmental', value: 'CFC & HFC Free' },
+                      ].map((row, idx) => (
+                        <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
+                          <td className="px-6 py-4 font-semibold text-slate-900">{row.label}</td>
+                          <td className="px-6 py-4 text-slate-600">{row.value}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
               <p className="mt-6 text-center text-slate-600">
                 View complete specifications: <Link href="/products/sandwich-panels/sandwich-puf-panel" className="text-primary hover:underline font-medium">PUF Panel Product Page</Link>

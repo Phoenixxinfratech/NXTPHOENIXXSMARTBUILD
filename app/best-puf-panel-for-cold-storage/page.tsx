@@ -400,63 +400,65 @@ export default function BestPufPanelForColdStoragePage() {
                 Temperature Zone × Panel Thickness Matrix
               </h3>
               <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
-                <table className="w-full">
-                  <thead>
-                    <tr className="bg-slate-900 text-white">
-                      <th className="px-4 py-4 text-left font-semibold">Cold Storage Type</th>
-                      <th className="px-4 py-4 text-left font-semibold">Temp Range</th>
-                      <th className="px-4 py-4 text-left font-semibold">Panel Thickness</th>
-                      <th className="px-4 py-4 text-left font-semibold">Energy Saving vs Under-Spec</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-200">
-                    {[
-                      {
-                        type: 'Dairy / Vegetable Cool Room',
-                        temp: '+2°C to +8°C',
-                        thickness: '80 – 100mm',
-                        saving: '15-20% vs 50mm panels',
-                      },
-                      {
-                        type: 'Meat / Seafood Chiller',
-                        temp: '0°C to -5°C',
-                        thickness: '100mm',
-                        saving: '20-25% vs 80mm panels',
-                      },
-                      {
-                        type: 'Frozen Food Storage',
-                        temp: '-15°C to -25°C',
-                        thickness: '120 – 150mm',
-                        saving: '25-30% vs 100mm panels',
-                      },
-                      {
-                        type: 'Blast Freezer',
-                        temp: '-25°C to -40°C',
-                        thickness: '150 – 200mm',
-                        saving: '30-40% vs 120mm panels',
-                      },
-                      {
-                        type: 'Pharma Cold Chain (2-8°C)',
-                        temp: '+2°C to +8°C',
-                        thickness: '100mm (WHO-GMP)',
-                        saving: '18-22% vs 80mm panels',
-                      },
-                      {
-                        type: 'Ice Cream Hardening',
-                        temp: '-28°C to -35°C',
-                        thickness: '150 – 180mm',
-                        saving: '28-35% vs 120mm panels',
-                      },
-                    ].map((row, idx) => (
-                      <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
-                        <td className="px-4 py-3 font-semibold text-slate-900 text-sm">{row.type}</td>
-                        <td className="px-4 py-3 text-blue-700 font-bold text-sm">{row.temp}</td>
-                        <td className="px-4 py-3 text-emerald-700 font-bold text-sm">{row.thickness}</td>
-                        <td className="px-4 py-3 text-slate-600 text-sm">{row.saving}</td>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="bg-slate-900 text-white">
+                        <th className="px-4 py-4 text-left font-semibold">Cold Storage Type</th>
+                        <th className="px-4 py-4 text-left font-semibold">Temp Range</th>
+                        <th className="px-4 py-4 text-left font-semibold">Panel Thickness</th>
+                        <th className="px-4 py-4 text-left font-semibold">Energy Saving vs Under-Spec</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody className="divide-y divide-slate-200">
+                      {[
+                        {
+                          type: 'Dairy / Vegetable Cool Room',
+                          temp: '+2°C to +8°C',
+                          thickness: '80 – 100mm',
+                          saving: '15-20% vs 50mm panels',
+                        },
+                        {
+                          type: 'Meat / Seafood Chiller',
+                          temp: '0°C to -5°C',
+                          thickness: '100mm',
+                          saving: '20-25% vs 80mm panels',
+                        },
+                        {
+                          type: 'Frozen Food Storage',
+                          temp: '-15°C to -25°C',
+                          thickness: '120 – 150mm',
+                          saving: '25-30% vs 100mm panels',
+                        },
+                        {
+                          type: 'Blast Freezer',
+                          temp: '-25°C to -40°C',
+                          thickness: '150 – 200mm',
+                          saving: '30-40% vs 120mm panels',
+                        },
+                        {
+                          type: 'Pharma Cold Chain (2-8°C)',
+                          temp: '+2°C to +8°C',
+                          thickness: '100mm (WHO-GMP)',
+                          saving: '18-22% vs 80mm panels',
+                        },
+                        {
+                          type: 'Ice Cream Hardening',
+                          temp: '-28°C to -35°C',
+                          thickness: '150 – 180mm',
+                          saving: '28-35% vs 120mm panels',
+                        },
+                      ].map((row, idx) => (
+                        <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
+                          <td className="px-4 py-3 font-semibold text-slate-900 text-sm">{row.type}</td>
+                          <td className="px-4 py-3 text-blue-700 font-bold text-sm">{row.temp}</td>
+                          <td className="px-4 py-3 text-emerald-700 font-bold text-sm">{row.thickness}</td>
+                          <td className="px-4 py-3 text-slate-600 text-sm">{row.saving}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
               <p className="mt-3 text-center text-sm text-slate-500">
                 All thickness recommendations based on PHOENIXX PUF panels with λ = 0.024 W/mK and
@@ -522,32 +524,34 @@ export default function BestPufPanelForColdStoragePage() {
                 Why PUF Outperforms Rockwool in Cold Storage Applications
               </h3>
               <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
-                <table className="w-full">
-                  <thead>
-                    <tr className="bg-slate-900 text-white">
-                      <th className="px-6 py-4 text-left font-semibold">Property</th>
-                      <th className="px-6 py-4 text-left font-semibold">PUF Panel</th>
-                      <th className="px-6 py-4 text-left font-semibold">Rockwool Panel</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-200">
-                    {[
-                      { property: 'Thermal Conductivity', puf: '0.024 W/mK', rockwool: '0.035 W/mK' },
-                      { property: 'Water Absorption', puf: 'Zero (closed-cell)', rockwool: 'Up to 5% by volume' },
-                      { property: 'Thickness for -25°C', puf: '120-150mm', rockwool: '180-200mm' },
-                      { property: 'Space Lost to Walls', puf: 'Minimal', rockwool: '20-30% more wall thickness' },
-                      { property: 'Joint System', puf: 'Cam-lock (airtight)', rockwool: 'Standard T&G' },
-                      { property: 'Long-Term Performance', puf: '95%+ after 25 years', rockwool: 'Degrades with moisture' },
-                      { property: 'Cold Storage Suitability', puf: '★★★★★', rockwool: '★★★☆☆' },
-                    ].map((row, idx) => (
-                      <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
-                        <td className="px-6 py-3 font-semibold text-slate-900 text-sm">{row.property}</td>
-                        <td className="px-6 py-3 text-emerald-700 font-medium text-sm">{row.puf}</td>
-                        <td className="px-6 py-3 text-slate-500 text-sm">{row.rockwool}</td>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="bg-slate-900 text-white">
+                        <th className="px-6 py-4 text-left font-semibold">Property</th>
+                        <th className="px-6 py-4 text-left font-semibold">PUF Panel</th>
+                        <th className="px-6 py-4 text-left font-semibold">Rockwool Panel</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody className="divide-y divide-slate-200">
+                      {[
+                        { property: 'Thermal Conductivity', puf: '0.024 W/mK', rockwool: '0.035 W/mK' },
+                        { property: 'Water Absorption', puf: 'Zero (closed-cell)', rockwool: 'Up to 5% by volume' },
+                        { property: 'Thickness for -25°C', puf: '120-150mm', rockwool: '180-200mm' },
+                        { property: 'Space Lost to Walls', puf: 'Minimal', rockwool: '20-30% more wall thickness' },
+                        { property: 'Joint System', puf: 'Cam-lock (airtight)', rockwool: 'Standard T&G' },
+                        { property: 'Long-Term Performance', puf: '95%+ after 25 years', rockwool: 'Degrades with moisture' },
+                        { property: 'Cold Storage Suitability', puf: '★★★★★', rockwool: '★★★☆☆' },
+                      ].map((row, idx) => (
+                        <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
+                          <td className="px-6 py-3 font-semibold text-slate-900 text-sm">{row.property}</td>
+                          <td className="px-6 py-3 text-emerald-700 font-medium text-sm">{row.puf}</td>
+                          <td className="px-6 py-3 text-slate-500 text-sm">{row.rockwool}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
               <p className="mt-4 text-center text-sm text-slate-500">
                 For a detailed side-by-side analysis:{' '}
@@ -810,41 +814,43 @@ export default function BestPufPanelForColdStoragePage() {
               </p>
 
               <div className="bg-slate-50 rounded-2xl overflow-hidden shadow-sm">
-                <table className="w-full">
-                  <thead>
-                    <tr className="bg-slate-900 text-white">
-                      <th className="px-6 py-4 text-left font-semibold">Specification</th>
-                      <th className="px-6 py-4 text-left font-semibold">Value / Range</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-200">
-                    {[
-                      { label: 'Panel Thickness', value: '80mm, 100mm, 120mm, 150mm, 180mm, 200mm' },
-                      { label: 'Foam Core Density', value: '40 ± 2 kg/m³ (high-density rigid PUF)' },
-                      { label: 'Thermal Conductivity (λ)', value: '0.024 W/mK' },
-                      { label: 'R-Value (at 100mm)', value: '4.17 m²K/W' },
-                      { label: 'R-Value (at 150mm)', value: '6.25 m²K/W' },
-                      { label: 'R-Value (at 200mm)', value: '8.33 m²K/W' },
-                      { label: 'Joint System', value: 'Cam-Lock (tongue & groove with cam mechanism)' },
-                      { label: 'Temperature Range', value: '-40°C to +15°C (operating)' },
-                      { label: 'Fire Classification', value: 'B1 (self-extinguishing), B2; PIR option available' },
-                      { label: 'Steel Facing Thickness', value: '0.45mm, 0.50mm, 0.60mm (PPGI/PPGL/Stainless)' },
-                      { label: 'Interior Finish', value: 'Food-grade PPGI / Stainless Steel 304 option' },
-                      { label: 'Water Absorption', value: 'Zero (closed-cell structure)' },
-                      { label: 'Compressive Strength', value: '≥ 0.15 MPa' },
-                      { label: 'Panel Width', value: '1000mm effective coverage (1200mm on request)' },
-                      { label: 'Panel Length', value: 'Custom, up to 12 metres' },
-                      { label: 'Service Life', value: '25-30 years (95%+ insulation retention)' },
-                    ].map((row, idx) => (
-                      <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
-                        <td className="px-6 py-3 font-semibold text-slate-900 text-sm">
-                          {row.label}
-                        </td>
-                        <td className="px-6 py-3 text-slate-600 text-sm">{row.value}</td>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="bg-slate-900 text-white">
+                        <th className="px-6 py-4 text-left font-semibold">Specification</th>
+                        <th className="px-6 py-4 text-left font-semibold">Value / Range</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody className="divide-y divide-slate-200">
+                      {[
+                        { label: 'Panel Thickness', value: '80mm, 100mm, 120mm, 150mm, 180mm, 200mm' },
+                        { label: 'Foam Core Density', value: '40 ± 2 kg/m³ (high-density rigid PUF)' },
+                        { label: 'Thermal Conductivity (λ)', value: '0.024 W/mK' },
+                        { label: 'R-Value (at 100mm)', value: '4.17 m²K/W' },
+                        { label: 'R-Value (at 150mm)', value: '6.25 m²K/W' },
+                        { label: 'R-Value (at 200mm)', value: '8.33 m²K/W' },
+                        { label: 'Joint System', value: 'Cam-Lock (tongue & groove with cam mechanism)' },
+                        { label: 'Temperature Range', value: '-40°C to +15°C (operating)' },
+                        { label: 'Fire Classification', value: 'B1 (self-extinguishing), B2; PIR option available' },
+                        { label: 'Steel Facing Thickness', value: '0.45mm, 0.50mm, 0.60mm (PPGI/PPGL/Stainless)' },
+                        { label: 'Interior Finish', value: 'Food-grade PPGI / Stainless Steel 304 option' },
+                        { label: 'Water Absorption', value: 'Zero (closed-cell structure)' },
+                        { label: 'Compressive Strength', value: '≥ 0.15 MPa' },
+                        { label: 'Panel Width', value: '1000mm effective coverage (1200mm on request)' },
+                        { label: 'Panel Length', value: 'Custom, up to 12 metres' },
+                        { label: 'Service Life', value: '25-30 years (95%+ insulation retention)' },
+                      ].map((row, idx) => (
+                        <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
+                          <td className="px-6 py-3 font-semibold text-slate-900 text-sm">
+                            {row.label}
+                          </td>
+                          <td className="px-6 py-3 text-slate-600 text-sm">{row.value}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
 
               {/* Compliance */}
@@ -927,37 +933,39 @@ export default function BestPufPanelForColdStoragePage() {
 
               {/* Price Table by Temperature Zone */}
               <div className="mt-10 bg-white rounded-2xl overflow-hidden shadow-sm">
-                <table className="w-full">
-                  <thead>
-                    <tr className="bg-emerald-700 text-white">
-                      <th className="px-5 py-4 text-left font-semibold">Temperature Zone</th>
-                      <th className="px-5 py-4 text-left font-semibold">Thickness</th>
-                      <th className="px-5 py-4 text-left font-semibold">Price (per sq.m)</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-200">
-                    <tr className="bg-white">
-                      <td className="px-5 py-4 font-semibold text-slate-900">Cool Room (+2°C to +8°C)</td>
-                      <td className="px-5 py-4 text-slate-600">80 – 100mm</td>
-                      <td className="px-5 py-4 text-emerald-700 font-bold">₹1,200 – ₹1,600</td>
-                    </tr>
-                    <tr className="bg-slate-50">
-                      <td className="px-5 py-4 font-semibold text-slate-900">Chiller (0°C to -5°C)</td>
-                      <td className="px-5 py-4 text-slate-600">100mm</td>
-                      <td className="px-5 py-4 text-emerald-700 font-bold">₹1,500 – ₹1,800</td>
-                    </tr>
-                    <tr className="bg-white">
-                      <td className="px-5 py-4 font-semibold text-slate-900">Frozen Storage (-15°C to -25°C)</td>
-                      <td className="px-5 py-4 text-slate-600">120 – 150mm</td>
-                      <td className="px-5 py-4 text-emerald-700 font-bold">₹1,800 – ₹2,400</td>
-                    </tr>
-                    <tr className="bg-slate-50">
-                      <td className="px-5 py-4 font-semibold text-slate-900">Blast Freezer (-25°C to -40°C)</td>
-                      <td className="px-5 py-4 text-slate-600">150 – 200mm</td>
-                      <td className="px-5 py-4 text-emerald-700 font-bold">₹2,400 – ₹3,000</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="bg-emerald-700 text-white">
+                        <th className="px-5 py-4 text-left font-semibold">Temperature Zone</th>
+                        <th className="px-5 py-4 text-left font-semibold">Thickness</th>
+                        <th className="px-5 py-4 text-left font-semibold">Price (per sq.m)</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-200">
+                      <tr className="bg-white">
+                        <td className="px-5 py-4 font-semibold text-slate-900">Cool Room (+2°C to +8°C)</td>
+                        <td className="px-5 py-4 text-slate-600">80 – 100mm</td>
+                        <td className="px-5 py-4 text-emerald-700 font-bold">₹1,200 – ₹1,600</td>
+                      </tr>
+                      <tr className="bg-slate-50">
+                        <td className="px-5 py-4 font-semibold text-slate-900">Chiller (0°C to -5°C)</td>
+                        <td className="px-5 py-4 text-slate-600">100mm</td>
+                        <td className="px-5 py-4 text-emerald-700 font-bold">₹1,500 – ₹1,800</td>
+                      </tr>
+                      <tr className="bg-white">
+                        <td className="px-5 py-4 font-semibold text-slate-900">Frozen Storage (-15°C to -25°C)</td>
+                        <td className="px-5 py-4 text-slate-600">120 – 150mm</td>
+                        <td className="px-5 py-4 text-emerald-700 font-bold">₹1,800 – ₹2,400</td>
+                      </tr>
+                      <tr className="bg-slate-50">
+                        <td className="px-5 py-4 font-semibold text-slate-900">Blast Freezer (-25°C to -40°C)</td>
+                        <td className="px-5 py-4 text-slate-600">150 – 200mm</td>
+                        <td className="px-5 py-4 text-emerald-700 font-bold">₹2,400 – ₹3,000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
               <p className="mt-3 text-center text-sm text-slate-500">
                 Prices include cam-lock joint system. Stainless steel interior finish, vapor

@@ -128,42 +128,44 @@ export default function InsulatedPufPanelManufacturerPage() {
             </h2>
             <div className="max-w-4xl mx-auto">
               <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
-                <table className="w-full">
-                  <thead className="bg-slate-100">
-                    <tr>
-                      <th className="px-6 py-4 text-left font-semibold text-slate-900">Material</th>
-                      <th className="px-6 py-4 text-left font-semibold text-slate-900">Thermal Conductivity</th>
-                      <th className="px-6 py-4 text-left font-semibold text-slate-900">Thickness for R-20</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-100">
-                    <tr className="bg-cyan-50">
-                      <td className="px-6 py-4 font-semibold text-cyan-700">PUF Foam (PHOENIXX)</td>
-                      <td className="px-6 py-4 text-cyan-700">0.024 W/mK</td>
-                      <td className="px-6 py-4 text-cyan-700">80mm</td>
-                    </tr>
-                    <tr>
-                      <td className="px-6 py-4">PIR Foam</td>
-                      <td className="px-6 py-4 text-slate-600">0.022 W/mK</td>
-                      <td className="px-6 py-4 text-slate-600">75mm</td>
-                    </tr>
-                    <tr>
-                      <td className="px-6 py-4">Mineral Wool</td>
-                      <td className="px-6 py-4 text-slate-600">0.035-0.040 W/mK</td>
-                      <td className="px-6 py-4 text-slate-600">130mm</td>
-                    </tr>
-                    <tr>
-                      <td className="px-6 py-4">Fiberglass</td>
-                      <td className="px-6 py-4 text-slate-600">0.040-0.045 W/mK</td>
-                      <td className="px-6 py-4 text-slate-600">150mm</td>
-                    </tr>
-                    <tr>
-                      <td className="px-6 py-4">EPS (Thermocol)</td>
-                      <td className="px-6 py-4 text-slate-600">0.035-0.038 W/mK</td>
-                      <td className="px-6 py-4 text-slate-600">125mm</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead className="bg-slate-100">
+                      <tr>
+                        <th className="px-6 py-4 text-left font-semibold text-slate-900">Material</th>
+                        <th className="px-6 py-4 text-left font-semibold text-slate-900">Thermal Conductivity</th>
+                        <th className="px-6 py-4 text-left font-semibold text-slate-900">Thickness for R-20</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-100">
+                      <tr className="bg-cyan-50">
+                        <td className="px-6 py-4 font-semibold text-cyan-700">PUF Foam (PHOENIXX)</td>
+                        <td className="px-6 py-4 text-cyan-700">0.024 W/mK</td>
+                        <td className="px-6 py-4 text-cyan-700">80mm</td>
+                      </tr>
+                      <tr>
+                        <td className="px-6 py-4">PIR Foam</td>
+                        <td className="px-6 py-4 text-slate-600">0.022 W/mK</td>
+                        <td className="px-6 py-4 text-slate-600">75mm</td>
+                      </tr>
+                      <tr>
+                        <td className="px-6 py-4">Mineral Wool</td>
+                        <td className="px-6 py-4 text-slate-600">0.035-0.040 W/mK</td>
+                        <td className="px-6 py-4 text-slate-600">130mm</td>
+                      </tr>
+                      <tr>
+                        <td className="px-6 py-4">Fiberglass</td>
+                        <td className="px-6 py-4 text-slate-600">0.040-0.045 W/mK</td>
+                        <td className="px-6 py-4 text-slate-600">150mm</td>
+                      </tr>
+                      <tr>
+                        <td className="px-6 py-4">EPS (Thermocol)</td>
+                        <td className="px-6 py-4 text-slate-600">0.035-0.038 W/mK</td>
+                        <td className="px-6 py-4 text-slate-600">125mm</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>
