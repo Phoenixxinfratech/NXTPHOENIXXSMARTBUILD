@@ -11,6 +11,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/insulated-puf-panel-manufacturer-in-india',
   },
+  openGraph: {
+    title: 'Insulated PUF Panel Manufacturer in India | PHOENIXX SMARTBUILD',
+    description: 'Quality insulated PUF panels for thermal efficiency. Wall, roof, and cold storage panels. ISO certified manufacturer.',
+    url: 'https://phoenixxsmartbuild.com/insulated-puf-panel-manufacturer-in-india',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Insulated PUF Panel Manufacturer in India | PHOENIXX SMARTBUILD',
+    description: 'Quality insulated PUF panels for thermal efficiency. Wall, roof, and cold storage panels. ISO certified manufacturer.',
+  },
 };
 
 const faqs = [

@@ -4,11 +4,24 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 
 export const metadata: Metadata = {
-  title: 'Return Policy | PHOENIXX SmartBuild',
+  title: 'Return Policy',
   description:
     'Understand our return and refund policy for products. Customer satisfaction guaranteed with clear guidelines.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/return-policy',
+  },
+  openGraph: {
+    title: 'Return Policy | PHOENIXX SMARTBUILD',
+    description: 'Understand our return and refund policy for products. Customer satisfaction guaranteed with clear guidelines.',
+    url: 'https://phoenixxsmartbuild.com/return-policy',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Return Policy | PHOENIXX SMARTBUILD',
+    description: 'Understand our return and refund policy for products. Customer satisfaction guaranteed with clear guidelines.',
   },
 };
 

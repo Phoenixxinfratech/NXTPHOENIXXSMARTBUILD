@@ -8,6 +8,8 @@ import { JsonLd } from '@/components/seo/json-ld';
 import { RelatedResources } from '@/components/blocks/related-resources';
 import { getRelatedLinksForIndustry } from '@/lib/internal-links';
 import { AeoContentBlocks, DEFAULT_PUF_SPECS } from '@/components/seo/aeo-content-blocks';
+import { buildSocialMetadata } from '@/lib/seo';
+import { siteConfig } from '@/lib/site-config';
 
 // Industry images mapping
 const industryImages: Record<string, string[]> = {
@@ -254,10 +256,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const data = industriesData[slug];
   if (!data) return {};
+  const title = `${data.title} Infrastructure Solutions`;
+  const description = data.metaDescription || data.description;
   return {
-    title: `${data.title} | PHOENIXX Industries`,
-    description: data.metaDescription || data.description,
+    title,
+    description,
     alternates: { canonical: `https://phoenixxsmartbuild.com/industries/${slug}` },
+    ...buildSocialMetadata({
+      title: `${title} | ${siteConfig.name}`,
+      description,
+      path: `/industries/${slug}`,
+      image: industryImages[slug]?.[0],
+    }),
   };
 }
 

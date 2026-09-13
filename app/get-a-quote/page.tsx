@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
+import { encodeFormData } from '@/lib/forms';
 
 const productOptions = [
   'PUF Panels',
@@ -56,7 +57,7 @@ export default function GetAQuotePage() {
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as any).toString(),
+        body: encodeFormData(formData),
       });
 
       if (response.ok) {

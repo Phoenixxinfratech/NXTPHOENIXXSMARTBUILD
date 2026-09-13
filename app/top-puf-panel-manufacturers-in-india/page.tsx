@@ -11,6 +11,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/top-puf-panel-manufacturers-in-india',
   },
+  openGraph: {
+    title: 'Top PUF Panel Manufacturers in India | PHOENIXX SMARTBUILD',
+    description: 'PHOENIXX ranks among top PUF panel manufacturers in India. Quality products, competitive pricing, nationwide delivery.',
+    url: 'https://phoenixxsmartbuild.com/top-puf-panel-manufacturers-in-india',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Top PUF Panel Manufacturers in India | PHOENIXX SMARTBUILD',
+    description: 'PHOENIXX ranks among top PUF panel manufacturers in India. Quality products, competitive pricing, nationwide delivery.',
+  },
 };
 
 const faqs = [

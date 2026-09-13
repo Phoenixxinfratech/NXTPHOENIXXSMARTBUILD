@@ -6,10 +6,23 @@ import { JsonLd } from '@/components/seo/json-ld';
 import { CityManufacturerAeo } from '@/components/seo/city-manufacturer-aeo';
 
 export const metadata: Metadata = {
-  title: 'PUF Panel Manufacturer in Jamnagar | PHOENIXX',
+  title: 'PUF Panel Manufacturer in Jamnagar',
   description: 'PUF panels for Jamnagar industries. Quality insulated panels for industrial and cold storage. Request pricing today!',
   keywords: ['PUF panel manufacturer in Jamnagar', 'PUF panel Jamnagar', 'insulated panel refinery'],
   alternates: { canonical: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-jamnagar' },
+  openGraph: {
+    title: 'PUF Panel Manufacturer in Jamnagar | PHOENIXX SMARTBUILD',
+    description: 'PUF panels for Jamnagar industries. Quality insulated panels for industrial and cold storage. Request pricing today!',
+    url: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-jamnagar',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PUF Panel Manufacturer in Jamnagar | PHOENIXX SMARTBUILD',
+    description: 'PUF panels for Jamnagar industries. Quality insulated panels for industrial and cold storage. Request pricing today!',
+  },
 };
 
 const faqs = [

@@ -6,11 +6,24 @@ import { JsonLd } from '@/components/seo/json-ld';
 import { productsData, solutionsData, industriesData } from '@/lib/navigation';
 
 export const metadata: Metadata = {
-  title: 'Sitemap | PHOENIXX SmartBuild',
+  title: 'Sitemap',
   description:
     'Navigate all pages on PHOENIXX SmartBuild. Find products, solutions, industries, and resources easily.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/sitemap-page',
+  },
+  openGraph: {
+    title: 'Sitemap | PHOENIXX SMARTBUILD',
+    description: 'Navigate all pages on PHOENIXX SmartBuild. Find products, solutions, industries, and resources easily.',
+    url: 'https://phoenixxsmartbuild.com/sitemap-page',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Sitemap | PHOENIXX SMARTBUILD',
+    description: 'Navigate all pages on PHOENIXX SmartBuild. Find products, solutions, industries, and resources easily.',
   },
 };
 

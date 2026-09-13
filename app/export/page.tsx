@@ -19,6 +19,17 @@ export const metadata: Metadata = {
   description:
     'PHOENIXX SMARTBUILD exports sandwich PUF panels, PIR panels, cold storage systems, and PEB solutions to 16 African markets. Africa\'s trusted engineering partner for industrial building infrastructure.',
   alternates: { canonical: 'https://phoenixxsmartbuild.com/export' },
+  openGraph: {
+    title: 'Global Export to Africa | PUF Panels & Industrial Building Systems | PHOENIXX SMARTBUILD',
+    url: 'https://phoenixxsmartbuild.com/export',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Global Export to Africa | PUF Panels & Industrial Building Systems | PHOENIXX SMARTBUILD',
+  },
 };
 
 const exportProcess = [

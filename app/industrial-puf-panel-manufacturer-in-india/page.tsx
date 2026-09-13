@@ -11,6 +11,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/industrial-puf-panel-manufacturer-in-india',
   },
+  openGraph: {
+    title: 'Industrial PUF Panel Manufacturer in India | PHOENIXX SMARTBUILD',
+    description: 'Industrial-grade PUF panels for factories, warehouses, cold storage. Durable, energy-efficient solutions.',
+    url: 'https://phoenixxsmartbuild.com/industrial-puf-panel-manufacturer-in-india',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Industrial PUF Panel Manufacturer in India | PHOENIXX SMARTBUILD',
+    description: 'Industrial-grade PUF panels for factories, warehouses, cold storage. Durable, energy-efficient solutions.',
+  },
 };
 
 const faqs = [

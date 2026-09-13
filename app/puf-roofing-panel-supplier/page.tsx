@@ -6,7 +6,7 @@ import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 
 export const metadata: Metadata = {
-  title: 'PUF Roofing Panel Supplier in Rajasthan | Phoenixx',
+  title: 'PUF Roofing Panel Supplier in Rajasthan',
   description:
     'Reliable PUF roofing panel supplier in Rajasthan. Phoenixx delivers insulated sandwich roof panels from Beawar with ready stock and fast dispatch to 23 cities.',
   keywords: [

@@ -6,10 +6,23 @@ import { JsonLd } from '@/components/seo/json-ld';
 import { CityManufacturerAeo } from '@/components/seo/city-manufacturer-aeo';
 
 export const metadata: Metadata = {
-  title: 'PUF Panel Manufacturer in Rajkot | PHOENIXX',
+  title: 'PUF Panel Manufacturer in Rajkot',
   description: 'Top PUF panel supplier in Rajkot, Gujarat. Industrial insulated panels for warehouses and cold storage. Get quote!',
   keywords: ['PUF panel manufacturer in Rajkot', 'PUF sandwich panel Rajkot', 'insulated panel Rajkot'],
   alternates: { canonical: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-rajkot' },
+  openGraph: {
+    title: 'PUF Panel Manufacturer in Rajkot | PHOENIXX SMARTBUILD',
+    description: 'Top PUF panel supplier in Rajkot, Gujarat. Industrial insulated panels for warehouses and cold storage. Get quote!',
+    url: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-rajkot',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PUF Panel Manufacturer in Rajkot | PHOENIXX SMARTBUILD',
+    description: 'Top PUF panel supplier in Rajkot, Gujarat. Industrial insulated panels for warehouses and cold storage. Get quote!',
+  },
 };
 
 const faqs = [

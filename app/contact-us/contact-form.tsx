@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { encodeFormData } from '@/lib/forms';
 
 export function ContactForm() {
   const router = useRouter();
@@ -22,7 +23,7 @@ export function ContactForm() {
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as any).toString(),
+        body: encodeFormData(formData),
       });
 
       if (response.ok) {

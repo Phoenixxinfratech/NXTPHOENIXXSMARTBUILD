@@ -12,6 +12,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/solutions',
   },
+  openGraph: {
+    title: 'EPC Solutions – PEB, Cold Storage & Cleanrooms | PHOENIXX SMARTBUILD',
+    description: 'Turnkey EPC solutions: Pre-Engineered Buildings, cold storage, cleanrooms, ceiling systems. Complete project delivery. Get your quote.',
+    url: 'https://phoenixxsmartbuild.com/solutions',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'EPC Solutions – PEB, Cold Storage & Cleanrooms | PHOENIXX SMARTBUILD',
+    description: 'Turnkey EPC solutions: Pre-Engineered Buildings, cold storage, cleanrooms, ceiling systems. Complete project delivery. Get your quote.',
+  },
 };
 
 const solutions = [

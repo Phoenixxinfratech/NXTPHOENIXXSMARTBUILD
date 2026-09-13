@@ -9,6 +9,7 @@ import { AISummaryBlock } from '@/components/ai/ai-summary-block';
 import { RelatedResources } from '@/components/blocks/related-resources';
 import { getRelatedLinksForSolution } from '@/lib/internal-links';
 import { AeoContentBlocks, DEFAULT_PUF_SPECS } from '@/components/seo/aeo-content-blocks';
+import { buildSocialMetadata } from '@/lib/seo';
 
 // Solution images mapping
 const solutionImages: Record<string, string[]> = {
@@ -506,6 +507,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: data.seoDescription,
     keywords: data.keywords,
     alternates: { canonical: `https://phoenixxsmartbuild.com/solutions/${slug}` },
+    ...buildSocialMetadata({
+      title: data.seoTitle,
+      description: data.seoDescription,
+      path: `/solutions/${slug}`,
+      image: solutionImages[slug]?.[0],
+    }),
   };
 }
 

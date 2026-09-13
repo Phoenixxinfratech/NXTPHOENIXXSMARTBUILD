@@ -14,6 +14,19 @@ export const metadata: Metadata = {
     'fire doors manufacturer india', 'cleanroom door supplier',
   ],
   alternates: { canonical: 'https://phoenixxsmartbuild.com/products/doors' },
+  openGraph: {
+    title: 'Industrial Doors – Fire Rated & Cleanroom | PHOENIXX SMARTBUILD',
+    description: 'Fire-rated doors, cleanroom doors, and industrial specialty doors. IS/ISO compliant. Request door specifications and pricing.',
+    url: 'https://phoenixxsmartbuild.com/products/doors',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Industrial Doors – Fire Rated & Cleanroom | PHOENIXX SMARTBUILD',
+    description: 'Fire-rated doors, cleanroom doors, and industrial specialty doors. IS/ISO compliant. Request door specifications and pricing.',
+  },
 };
 
 const doorsData = {

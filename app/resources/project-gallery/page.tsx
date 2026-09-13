@@ -5,11 +5,24 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 
 export const metadata: Metadata = {
-  title: 'Case Studies & Project Gallery | PHOENIXX SMARTBUILD',
+  title: 'Case Studies & Project Gallery',
   description:
     'Real-world case studies: cold storage, cleanrooms, PEB buildings, and industrial facilities delivered by PHOENIXX SMARTBUILD across India. Challenge, solution, and results.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/resources/project-gallery',
+  },
+  openGraph: {
+    title: 'Case Studies & Project Gallery | PHOENIXX SMARTBUILD',
+    description: 'Real-world case studies: cold storage, cleanrooms, PEB buildings, and industrial facilities delivered by PHOENIXX SMARTBUILD across India. Challenge, solution, and results.',
+    url: 'https://phoenixxsmartbuild.com/resources/project-gallery',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Case Studies & Project Gallery | PHOENIXX SMARTBUILD',
+    description: 'Real-world case studies: cold storage, cleanrooms, PEB buildings, and industrial facilities delivered by PHOENIXX SMARTBUILD across India. Challenge, solution, and results.',
   },
 };
 

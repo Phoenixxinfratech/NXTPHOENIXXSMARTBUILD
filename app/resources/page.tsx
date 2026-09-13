@@ -10,6 +10,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/resources',
   },
+  openGraph: {
+    title: 'Resources – Guides, Gallery & Downloads | PHOENIXX SMARTBUILD',
+    description: 'Access technical resources: project gallery, brochures, technical sheets, FAQs. Download product specifications.',
+    url: 'https://phoenixxsmartbuild.com/resources',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Resources – Guides, Gallery & Downloads | PHOENIXX SMARTBUILD',
+    description: 'Access technical resources: project gallery, brochures, technical sheets, FAQs. Download product specifications.',
+  },
 };
 
 const resources = [

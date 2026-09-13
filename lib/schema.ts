@@ -10,15 +10,6 @@ interface BreadcrumbItem {
   url: string;
 }
 
-interface ProductData {
-  name: string;
-  description: string;
-  url: string;
-  image?: string;
-  sku?: string;
-  brand?: string;
-}
-
 interface FAQItem {
   question: string;
   answer: string;
@@ -105,42 +96,6 @@ export function generateBreadcrumbSchema(items: BreadcrumbItem[]) {
       name: item.name,
       item: item.url.startsWith('http') ? item.url : `${siteConfig.url}${item.url}`,
     })),
-  };
-}
-
-/**
- * Generate Product schema.
- *
- * Google requires at least one of offers, review, or aggregateRating. We use
- * offers: review markup must reflect reviews genuinely collected and displayed
- * on the page, and inventing ratings risks a structured-data manual action.
- */
-export function generateProductSchema(product: ProductData) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Product',
-    name: product.name,
-    description: product.description,
-    url: product.url.startsWith('http') ? product.url : `${siteConfig.url}${product.url}`,
-    image: product.image,
-    sku: product.sku,
-    brand: {
-      '@type': 'Brand',
-      name: product.brand || siteConfig.company.name,
-    },
-    manufacturer: {
-      '@type': 'Organization',
-      name: siteConfig.company.name,
-    },
-    offers: {
-      '@type': 'AggregateOffer',
-      priceCurrency: 'INR',
-      availability: 'https://schema.org/InStock',
-      seller: {
-        '@type': 'Organization',
-        name: siteConfig.company.name,
-      },
-    },
   };
 }
 
@@ -268,39 +223,6 @@ export function generateSpeakableSchema(cssSelectors: string[] = ['h1', '.ai-sum
 }
 
 /**
- * Generate VideoObject schema (for future video content)
- */
-export function generateVideoSchema(video: {
-  name: string;
-  description: string;
-  thumbnailUrl: string;
-  uploadDate: string;
-  duration?: string;
-  contentUrl?: string;
-  embedUrl?: string;
-}) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'VideoObject',
-    name: video.name,
-    description: video.description,
-    thumbnailUrl: video.thumbnailUrl,
-    uploadDate: video.uploadDate,
-    duration: video.duration,
-    contentUrl: video.contentUrl,
-    embedUrl: video.embedUrl,
-    publisher: {
-      '@type': 'Organization',
-      name: siteConfig.company.name,
-      logo: {
-        '@type': 'ImageObject',
-        url: `${siteConfig.url}/images/brand/logos/logo.png`,
-      },
-    },
-  };
-}
-
-/**
  * Generate ContactPage schema
  */
 export function generateContactPageSchema() {
@@ -323,23 +245,6 @@ export function generateContactPageSchema() {
         addressCountry: 'IN',
       },
     },
-  };
-}
-
-/**
- * Generate ItemList schema for product listings
- */
-export function generateItemListSchema(items: { name: string; url: string; image?: string; position: number }[]) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    itemListElement: items.map((item) => ({
-      '@type': 'ListItem',
-      position: item.position,
-      name: item.name,
-      url: item.url.startsWith('http') ? item.url : `${siteConfig.url}${item.url}`,
-      ...(item.image && { image: item.image }),
-    })),
   };
 }
 

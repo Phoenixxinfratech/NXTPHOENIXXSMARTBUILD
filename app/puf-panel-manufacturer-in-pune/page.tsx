@@ -6,10 +6,23 @@ import { JsonLd } from '@/components/seo/json-ld';
 import { CityManufacturerAeo } from '@/components/seo/city-manufacturer-aeo';
 
 export const metadata: Metadata = {
-  title: 'PUF Panel Manufacturer in Pune | PHOENIXX',
+  title: 'PUF Panel Manufacturer in Pune',
   description: 'Top PUF panel supplier in Pune, Maharashtra. Industrial panels for warehouses, cold storage. Competitive pricing. Get quote!',
   keywords: ['PUF panel manufacturer in Pune', 'PUF panel Chakan MIDC', 'insulated panel Pune'],
   alternates: { canonical: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-pune' },
+  openGraph: {
+    title: 'PUF Panel Manufacturer in Pune | PHOENIXX SMARTBUILD',
+    description: 'Top PUF panel supplier in Pune, Maharashtra. Industrial panels for warehouses, cold storage. Competitive pricing. Get quote!',
+    url: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-pune',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PUF Panel Manufacturer in Pune | PHOENIXX SMARTBUILD',
+    description: 'Top PUF panel supplier in Pune, Maharashtra. Industrial panels for warehouses, cold storage. Competitive pricing. Get quote!',
+  },
 };
 
 const faqs = [

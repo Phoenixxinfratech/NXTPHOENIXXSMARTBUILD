@@ -11,6 +11,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/vendor-registration',
   },
+  openGraph: {
+    title: 'Vendor Registration – Supplier Onboarding | PHOENIXX SMARTBUILD',
+    description: 'Register as a vendor with PHOENIXX. Supplier opportunities for raw materials, components, and services.',
+    url: 'https://phoenixxsmartbuild.com/vendor-registration',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Vendor Registration – Supplier Onboarding | PHOENIXX SMARTBUILD',
+    description: 'Register as a vendor with PHOENIXX. Supplier opportunities for raw materials, components, and services.',
+  },
 };
 
 const requirements = [

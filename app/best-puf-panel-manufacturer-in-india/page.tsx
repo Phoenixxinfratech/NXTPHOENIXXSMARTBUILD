@@ -5,11 +5,22 @@ import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 
 export const metadata: Metadata = {
-  title: 'Best PUF Panel Manufacturer in India | PHOENIXX',
+  title: 'Best PUF Panel Manufacturer in India',
   description: 'Choose India\'s best PUF panel manufacturer. ISO certified, 13+ years experience, 500+ clients. Premium quality guaranteed.',
   keywords: ['best PUF panel manufacturer in India', 'PUF panel manufacturer', 'insulated panels India'],
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/best-puf-panel-manufacturer-in-india',
+  },
+  openGraph: {
+    title: 'Best PUF Panel Manufacturer in India | PHOENIXX SMARTBUILD',
+    url: 'https://phoenixxsmartbuild.com/best-puf-panel-manufacturer-in-india',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best PUF Panel Manufacturer in India | PHOENIXX SMARTBUILD',
   },
 };
 

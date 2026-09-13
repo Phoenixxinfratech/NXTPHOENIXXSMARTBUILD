@@ -10,6 +10,19 @@ export const metadata: Metadata = {
   title: 'Industrial Construction Glossary | PUF Panels, Cleanroom & PEB Terms',
   description: 'Comprehensive glossary of industrial construction terms: PUF panels, PIR panels, sandwich panels, cleanrooms, cold rooms, PEB, GIDC, SEZ, and HVAC explained by PHOENIXX engineers.',
   alternates: { canonical: 'https://phoenixxsmartbuild.com/resources/glossary' },
+  openGraph: {
+    title: 'Industrial Construction Glossary | PUF Panels, Cleanroom & PEB Terms | PHOENIXX SMARTBUILD',
+    description: 'Comprehensive glossary of industrial construction terms: PUF panels, PIR panels, sandwich panels, cleanrooms, cold rooms, PEB, GIDC, SEZ, and HVAC explained by PHOENIXX engineers.',
+    url: 'https://phoenixxsmartbuild.com/resources/glossary',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Industrial Construction Glossary | PUF Panels, Cleanroom & PEB Terms | PHOENIXX SMARTBUILD',
+    description: 'Comprehensive glossary of industrial construction terms: PUF panels, PIR panels, sandwich panels, cleanrooms, cold rooms, PEB, GIDC, SEZ, and HVAC explained by PHOENIXX engineers.',
+  },
 };
 
 export default function GlossaryPage() {

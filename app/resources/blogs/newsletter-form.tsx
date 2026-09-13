@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { encodeFormData } from '@/lib/forms';
 
 export function NewsletterForm() {
   const router = useRouter();
@@ -19,7 +20,7 @@ export function NewsletterForm() {
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
+        body: encodeFormData(formData),
       });
 
       if (response.ok) {

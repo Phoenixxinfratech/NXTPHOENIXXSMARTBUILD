@@ -5,11 +5,24 @@ import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 
 export const metadata: Metadata = {
-  title: 'PUF Panel Suppliers in India | PHOENIXX',
+  title: 'PUF Panel Suppliers in India',
   description: 'Reliable PUF panel suppliers in India. Wide range of insulated panels for cold storage, cleanrooms, warehouses.',
   keywords: ['PUF panel suppliers in India', 'PUF panel supply', 'insulated panel suppliers'],
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/puf-panel-suppliers-in-india',
+  },
+  openGraph: {
+    title: 'PUF Panel Suppliers in India | PHOENIXX SMARTBUILD',
+    description: 'Reliable PUF panel suppliers in India. Wide range of insulated panels for cold storage, cleanrooms, warehouses.',
+    url: 'https://phoenixxsmartbuild.com/puf-panel-suppliers-in-india',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PUF Panel Suppliers in India | PHOENIXX SMARTBUILD',
+    description: 'Reliable PUF panel suppliers in India. Wide range of insulated panels for cold storage, cleanrooms, warehouses.',
   },
 };
 

@@ -6,10 +6,23 @@ import { JsonLd } from '@/components/seo/json-ld';
 import { CityManufacturerAeo } from '@/components/seo/city-manufacturer-aeo';
 
 export const metadata: Metadata = {
-  title: 'PUF Panel Manufacturer in Nashik | PHOENIXX',
+  title: 'PUF Panel Manufacturer in Nashik',
   description: 'Quality PUF panels in Nashik for industrial and cold storage applications. Fast delivery to Nashik MIDC. Contact now!',
   keywords: ['PUF panel manufacturer in Nashik', 'PUF panel Ambad MIDC', 'cold storage panel Nashik'],
   alternates: { canonical: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-nashik' },
+  openGraph: {
+    title: 'PUF Panel Manufacturer in Nashik | PHOENIXX SMARTBUILD',
+    description: 'Quality PUF panels in Nashik for industrial and cold storage applications. Fast delivery to Nashik MIDC. Contact now!',
+    url: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-nashik',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PUF Panel Manufacturer in Nashik | PHOENIXX SMARTBUILD',
+    description: 'Quality PUF panels in Nashik for industrial and cold storage applications. Fast delivery to Nashik MIDC. Contact now!',
+  },
 };
 
 const faqs = [

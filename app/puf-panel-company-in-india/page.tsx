@@ -5,11 +5,24 @@ import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 
 export const metadata: Metadata = {
-  title: 'PUF Panel Company in India – PHOENIXX',
+  title: 'PUF Panel Company in India',
   description: 'Trusted PUF panel company serving industries across India. Quality insulated panels for diverse applications.',
   keywords: ['PUF panel company in India', 'insulated panel company', 'PUF panel solutions'],
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/puf-panel-company-in-india',
+  },
+  openGraph: {
+    title: 'PUF Panel Company in India | PHOENIXX SMARTBUILD',
+    description: 'Trusted PUF panel company serving industries across India. Quality insulated panels for diverse applications.',
+    url: 'https://phoenixxsmartbuild.com/puf-panel-company-in-india',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PUF Panel Company in India | PHOENIXX SMARTBUILD',
+    description: 'Trusted PUF panel company serving industries across India. Quality insulated panels for diverse applications.',
   },
 };
 

@@ -11,6 +11,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/sandwich-puf-panel-manufacturer-in-india',
   },
+  openGraph: {
+    title: 'Sandwich PUF Panel Manufacturer in India | PHOENIXX SMARTBUILD',
+    description: 'Top sandwich PUF panel manufacturer in India. Premium insulated panels for industrial and commercial buildings.',
+    url: 'https://phoenixxsmartbuild.com/sandwich-puf-panel-manufacturer-in-india',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Sandwich PUF Panel Manufacturer in India | PHOENIXX SMARTBUILD',
+    description: 'Top sandwich PUF panel manufacturer in India. Premium insulated panels for industrial and commercial buildings.',
+  },
 };
 
 const faqs = [

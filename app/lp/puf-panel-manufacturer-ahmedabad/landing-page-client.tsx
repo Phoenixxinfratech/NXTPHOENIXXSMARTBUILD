@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { siteConfig } from '@/lib/site-config';
 import { useBottomBarOffset } from '@/components/ui/use-bottom-bar-offset';
+import { encodeFormData } from '@/lib/forms';
 
 const PHONE = siteConfig.whatsapp.replace(/^91/, '');
 const PHONE_DISPLAY = siteConfig.contact.phone.replace(/^\+91\s*/, '');
@@ -90,7 +91,7 @@ export default function LandingPageClient() {
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
+        body: encodeFormData(formData),
       });
 
       if (response.ok) {

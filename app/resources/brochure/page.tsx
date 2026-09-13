@@ -10,6 +10,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/resources/brochure',
   },
+  openGraph: {
+    title: 'Product Brochures – Download Catalog | PHOENIXX SMARTBUILD',
+    description: 'Download PHOENIXX product brochures and company catalog. Complete product range specifications and capabilities.',
+    url: 'https://phoenixxsmartbuild.com/resources/brochure',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Product Brochures – Download Catalog | PHOENIXX SMARTBUILD',
+    description: 'Download PHOENIXX product brochures and company catalog. Complete product range specifications and capabilities.',
+  },
 };
 
 const brochures = [

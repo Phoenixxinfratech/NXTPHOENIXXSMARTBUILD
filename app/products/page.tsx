@@ -22,6 +22,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/products',
   },
+  openGraph: {
+    title: 'Industrial Products – Panels, Doors & Cleanrooms | PHOENIXX SMARTBUILD',
+    description: 'Explore PUF panels, fire-rated doors, and cleanroom solutions. Engineered for performance, certified for quality. Request a quote now.',
+    url: 'https://phoenixxsmartbuild.com/products',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Industrial Products – Panels, Doors & Cleanrooms | PHOENIXX SMARTBUILD',
+    description: 'Explore PUF panels, fire-rated doors, and cleanroom solutions. Engineered for performance, certified for quality. Request a quote now.',
+  },
 };
 
 // Client logos for trust section

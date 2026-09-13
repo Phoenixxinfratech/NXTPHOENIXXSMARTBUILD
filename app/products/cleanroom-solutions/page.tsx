@@ -14,6 +14,19 @@ export const metadata: Metadata = {
     'cleanroom manufacturer india', 'pharmaceutical cleanroom', 'GMP cleanroom',
   ],
   alternates: { canonical: 'https://phoenixxsmartbuild.com/products/cleanroom-solutions' },
+  openGraph: {
+    title: 'Cleanroom Solutions – GMP Compliant Systems | PHOENIXX SMARTBUILD',
+    description: 'Complete cleanroom infrastructure: partitions, doors, ceilings, flooring. ISO Class 5-8. Get cleanroom project quote.',
+    url: 'https://phoenixxsmartbuild.com/products/cleanroom-solutions',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Cleanroom Solutions – GMP Compliant Systems | PHOENIXX SMARTBUILD',
+    description: 'Complete cleanroom infrastructure: partitions, doors, ceilings, flooring. ISO Class 5-8. Get cleanroom project quote.',
+  },
 };
 
 const cleanroomData = {

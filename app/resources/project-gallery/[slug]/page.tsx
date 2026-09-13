@@ -6,6 +6,7 @@ import { Footer } from '@/components/blocks/footer';
 import { AISummaryBlock } from '@/components/ai/ai-summary-block';
 import { JsonLd } from '@/components/seo/json-ld';
 import { generateBreadcrumbSchema } from '@/lib/schema';
+import { buildSocialMetadata } from '@/lib/seo';
 
 interface ProjectPageProps {
   params: Promise<{ slug: string }>;
@@ -258,10 +259,17 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
   const fullDesc = `${project.title} – ${project.scope} in ${project.location}. ${project.description} Built by PHOENIXX SmartBuild.`;
   const metaDesc = fullDesc.length > 160 ? fullDesc.slice(0, 157) + '...' : fullDesc;
 
+  const title = `${project.title} | Project Gallery`;
   return {
-    title: `${project.title} | Project Gallery`,
+    title,
     description: metaDesc,
     alternates: { canonical: `https://phoenixxsmartbuild.com/resources/project-gallery/${slug}` },
+    ...buildSocialMetadata({
+      title: `${title} | PHOENIXX SMARTBUILD`,
+      description: metaDesc,
+      path: `/resources/project-gallery/${slug}`,
+      type: 'article',
+    }),
   };
 }
 

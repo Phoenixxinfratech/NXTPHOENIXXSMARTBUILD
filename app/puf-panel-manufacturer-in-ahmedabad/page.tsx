@@ -6,7 +6,7 @@ import { JsonLd } from '@/components/seo/json-ld';
 import { CityManufacturerAeo } from '@/components/seo/city-manufacturer-aeo';
 
 export const metadata: Metadata = {
-  title: 'PUF Panel Manufacturer in Ahmedabad | PHOENIXX',
+  title: 'PUF Panel Manufacturer in Ahmedabad',
   description: 'Leading PUF panel manufacturer in Ahmedabad, Gujarat. Factory in GIDC Naroda. Same-day delivery across Ahmedabad. Get free quote!',
   keywords: [
     'PUF panel manufacturer in Ahmedabad',

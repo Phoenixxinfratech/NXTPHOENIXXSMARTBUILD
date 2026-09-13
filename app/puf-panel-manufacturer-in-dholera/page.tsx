@@ -6,10 +6,23 @@ import { JsonLd } from '@/components/seo/json-ld';
 import { CityManufacturerAeo } from '@/components/seo/city-manufacturer-aeo';
 
 export const metadata: Metadata = {
-  title: 'PUF Panel Manufacturer in Dholera | PHOENIXX',
+  title: 'PUF Panel Manufacturer in Dholera',
   description: 'PUF panels for Dholera SIR industrial projects. Premium insulated panels for modern infrastructure. Get quote!',
   keywords: ['PUF panel manufacturer in Dholera', 'PUF panel Dholera SIR', 'insulated panel smart city'],
   alternates: { canonical: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-dholera' },
+  openGraph: {
+    title: 'PUF Panel Manufacturer in Dholera | PHOENIXX SMARTBUILD',
+    description: 'PUF panels for Dholera SIR industrial projects. Premium insulated panels for modern infrastructure. Get quote!',
+    url: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-dholera',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PUF Panel Manufacturer in Dholera | PHOENIXX SMARTBUILD',
+    description: 'PUF panels for Dholera SIR industrial projects. Premium insulated panels for modern infrastructure. Get quote!',
+  },
 };
 
 const faqs = [

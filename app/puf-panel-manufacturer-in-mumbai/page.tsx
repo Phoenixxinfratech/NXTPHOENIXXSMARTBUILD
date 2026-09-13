@@ -6,10 +6,23 @@ import { JsonLd } from '@/components/seo/json-ld';
 import { CityManufacturerAeo } from '@/components/seo/city-manufacturer-aeo';
 
 export const metadata: Metadata = {
-  title: 'PUF Panel Manufacturer in Mumbai | PHOENIXX',
+  title: 'PUF Panel Manufacturer in Mumbai',
   description: 'Leading PUF panel manufacturer in Mumbai. Quality insulated panels for cold storage, warehouses & industries. Get free quote!',
   keywords: ['PUF panel manufacturer in Mumbai', 'PUF sandwich panel Mumbai', 'cold storage panel Mumbai'],
   alternates: { canonical: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-mumbai' },
+  openGraph: {
+    title: 'PUF Panel Manufacturer in Mumbai | PHOENIXX SMARTBUILD',
+    description: 'Leading PUF panel manufacturer in Mumbai. Quality insulated panels for cold storage, warehouses & industries. Get free quote!',
+    url: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-mumbai',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PUF Panel Manufacturer in Mumbai | PHOENIXX SMARTBUILD',
+    description: 'Leading PUF panel manufacturer in Mumbai. Quality insulated panels for cold storage, warehouses & industries. Get free quote!',
+  },
 };
 
 const faqs = [

@@ -14,6 +14,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/contact-us',
   },
+  openGraph: {
+    title: 'Contact PHOENIXX – Get Expert Consultation | PHOENIXX SMARTBUILD',
+    description: 'Reach PHOENIXX for industrial infrastructure needs. Request quotes, schedule site visits. Based in Ahmedabad, serving all India.',
+    url: 'https://phoenixxsmartbuild.com/contact-us',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact PHOENIXX – Get Expert Consultation | PHOENIXX SMARTBUILD',
+    description: 'Reach PHOENIXX for industrial infrastructure needs. Request quotes, schedule site visits. Based in Ahmedabad, serving all India.',
+  },
 };
 
 const contactInfo = [

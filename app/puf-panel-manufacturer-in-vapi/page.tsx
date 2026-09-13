@@ -6,10 +6,23 @@ import { JsonLd } from '@/components/seo/json-ld';
 import { CityManufacturerAeo } from '@/components/seo/city-manufacturer-aeo';
 
 export const metadata: Metadata = {
-  title: 'PUF Panel Manufacturer in Vapi | PHOENIXX',
+  title: 'PUF Panel Manufacturer in Vapi',
   description: 'Premium PUF panels in Vapi for chemical and industrial applications. Serving Vapi GIDC industries. Get quote!',
   keywords: ['PUF panel manufacturer in Vapi', 'PUF panel Vapi GIDC', 'insulated panel Vapi'],
   alternates: { canonical: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-vapi' },
+  openGraph: {
+    title: 'PUF Panel Manufacturer in Vapi | PHOENIXX SMARTBUILD',
+    description: 'Premium PUF panels in Vapi for chemical and industrial applications. Serving Vapi GIDC industries. Get quote!',
+    url: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-vapi',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PUF Panel Manufacturer in Vapi | PHOENIXX SMARTBUILD',
+    description: 'Premium PUF panels in Vapi for chemical and industrial applications. Serving Vapi GIDC industries. Get quote!',
+  },
 };
 
 const faqs = [

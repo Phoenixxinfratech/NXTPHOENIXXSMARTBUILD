@@ -13,6 +13,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/clientele',
   },
+  openGraph: {
+    title: 'Our Clients – Trusted by Industry Leaders | PHOENIXX SMARTBUILD',
+    description: 'PHOENIXX serves 500+ clients: Coca-Cola, Amul, Torrent Pharma, Cargill, and more. See our client portfolio.',
+    url: 'https://phoenixxsmartbuild.com/clientele',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Our Clients – Trusted by Industry Leaders | PHOENIXX SMARTBUILD',
+    description: 'PHOENIXX serves 500+ clients: Coca-Cola, Amul, Torrent Pharma, Cargill, and more. See our client portfolio.',
+  },
 };
 
 // Client data organized by industry with logos

@@ -8,6 +8,7 @@ import { RelatedResources } from '@/components/blocks/related-resources';
 import { AeoContentBlocks, DEFAULT_PUF_SPECS } from '@/components/seo/aeo-content-blocks';
 import { generateBreadcrumbSchema, generateFAQSchema, generateServiceSchema } from '@/lib/schema';
 import { getRelatedLinksForExport } from '@/lib/internal-links';
+import { buildSocialMetadata } from '@/lib/seo';
 import {
   getExportCountry,
   getExportCity,
@@ -40,16 +41,28 @@ export async function generateMetadata({ params }: ExportSubPageProps): Promise<
       title: city.metaTitle,
       description: city.metaDescription,
       alternates: { canonical: `https://phoenixxsmartbuild.com/export/${country}/${sub}` },
+      ...buildSocialMetadata({
+        title: city.metaTitle,
+        description: city.metaDescription,
+        path: `/export/${country}/${sub}`,
+      }),
     };
   }
 
   const industry = getExportIndustry(sub);
   const countryData = getExportCountry(country);
   if (!industry || !countryData) return { title: 'Industry Not Found' };
+  const title = `${industry.name} Panel Export to ${countryData.name}`;
+  const description = `${industry.metaDescription} Focused on ${countryData.name} export projects.`;
   return {
-    title: `${industry.name} Panel Export to ${countryData.name} | PHOENIXX SMARTBUILD`,
-    description: `${industry.metaDescription} Focused on ${countryData.name} export projects.`,
+    title,
+    description,
     alternates: { canonical: `https://phoenixxsmartbuild.com/export/${country}/${sub}` },
+    ...buildSocialMetadata({
+      title: `${title} | PHOENIXX SMARTBUILD`,
+      description,
+      path: `/export/${country}/${sub}`,
+    }),
   };
 }
 

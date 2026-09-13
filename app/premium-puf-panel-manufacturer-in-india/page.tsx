@@ -11,6 +11,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/premium-puf-panel-manufacturer-in-india',
   },
+  openGraph: {
+    title: 'Premium PUF Panel Manufacturer in India | PHOENIXX SMARTBUILD',
+    description: 'Premium quality PUF panels with superior insulation. Fire-rated options available. Request premium panel quote.',
+    url: 'https://phoenixxsmartbuild.com/premium-puf-panel-manufacturer-in-india',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Premium PUF Panel Manufacturer in India | PHOENIXX SMARTBUILD',
+    description: 'Premium quality PUF panels with superior insulation. Fire-rated options available. Request premium panel quote.',
+  },
 };
 
 const faqs = [

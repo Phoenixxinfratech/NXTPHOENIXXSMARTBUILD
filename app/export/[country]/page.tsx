@@ -8,6 +8,7 @@ import { RelatedResources } from '@/components/blocks/related-resources';
 import { AeoContentBlocks, DEFAULT_PUF_SPECS } from '@/components/seo/aeo-content-blocks';
 import { generateBreadcrumbSchema, generateFAQSchema, generateServiceSchema } from '@/lib/schema';
 import { getRelatedLinksForExport } from '@/lib/internal-links';
+import { buildSocialMetadata } from '@/lib/seo';
 import {
   getExportCountry,
   getAllExportCountrySlugs,
@@ -34,6 +35,11 @@ export async function generateMetadata({ params }: ExportPageProps): Promise<Met
     title: data.metaTitle,
     description: data.metaDescription,
     alternates: { canonical: `https://phoenixxsmartbuild.com/export/${country}` },
+    ...buildSocialMetadata({
+      title: data.metaTitle,
+      description: data.metaDescription,
+      path: `/export/${country}`,
+    }),
   };
 }
 

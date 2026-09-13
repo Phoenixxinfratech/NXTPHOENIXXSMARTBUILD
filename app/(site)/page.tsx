@@ -27,6 +27,19 @@ export const metadata: Metadata = {
   title: 'PUF Panel Manufacturer & Supplier India | Roofing, Wall & Sandwich Panels',
   description:
     'Phoenixx SmartBuild is a trusted PUF panel manufacturer in India delivering insulated roofing panels, wall panels & sandwich panels for industrial and commercial projects.',
+  openGraph: {
+    title: 'PUF Panel Manufacturer & Supplier India | Roofing, Wall & Sandwich Panels | PHOENIXX SMARTBUILD',
+    description: 'Phoenixx SmartBuild is a trusted PUF panel manufacturer in India delivering insulated roofing panels, wall panels & sandwich panels for industrial and commercial projects.',
+    url: 'https://phoenixxsmartbuild.com/',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PUF Panel Manufacturer & Supplier India | Roofing, Wall & Sandwich Panels | PHOENIXX SMARTBUILD',
+    description: 'Phoenixx SmartBuild is a trusted PUF panel manufacturer in India delivering insulated roofing panels, wall panels & sandwich panels for industrial and commercial projects.',
+  },
 };
 
 // Products data - Using high-quality images for better display

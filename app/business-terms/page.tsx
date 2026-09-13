@@ -4,11 +4,24 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 
 export const metadata: Metadata = {
-  title: 'Business Terms & Conditions | PHOENIXX',
+  title: 'Business Terms & Conditions',
   description:
     'Review business terms and conditions for PHOENIXX products and services. Transparent policies for all transactions.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/business-terms',
+  },
+  openGraph: {
+    title: 'Business Terms & Conditions | PHOENIXX SMARTBUILD',
+    description: 'Review business terms and conditions for PHOENIXX products and services. Transparent policies for all transactions.',
+    url: 'https://phoenixxsmartbuild.com/business-terms',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Business Terms & Conditions | PHOENIXX SMARTBUILD',
+    description: 'Review business terms and conditions for PHOENIXX products and services. Transparent policies for all transactions.',
   },
 };
 

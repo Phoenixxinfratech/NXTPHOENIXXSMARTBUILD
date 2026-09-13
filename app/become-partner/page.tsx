@@ -11,6 +11,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/become-partner',
   },
+  openGraph: {
+    title: 'Become a Partner – Channel Partnership | PHOENIXX SMARTBUILD',
+    description: 'Partner with PHOENIXX for PUF panels and industrial products. Dealer and distributor opportunities across India.',
+    url: 'https://phoenixxsmartbuild.com/become-partner',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Become a Partner – Channel Partnership | PHOENIXX SMARTBUILD',
+    description: 'Partner with PHOENIXX for PUF panels and industrial products. Dealer and distributor opportunities across India.',
+  },
 };
 
 const partnerTypes = [

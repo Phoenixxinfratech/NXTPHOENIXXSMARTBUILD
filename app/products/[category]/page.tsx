@@ -6,6 +6,8 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 import { AISummaryBlock } from '@/components/ai/ai-summary-block';
+import { buildSocialMetadata } from '@/lib/seo';
+import { siteConfig } from '@/lib/site-config';
 
 // Sandwich Panels specific data
 const sandwichPanelsData = {
@@ -287,21 +289,19 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { category } = await params;
-  if (category === 'sandwich-panels') {
-    return {
-      title: sandwichPanelsData.seoTitle,
-      description: sandwichPanelsData.seoDescription,
-      keywords: sandwichPanelsData.keywords,
-      alternates: { canonical: `https://phoenixxsmartbuild.com/products/${category}` },
-    };
-  }
-  const data = otherCategoriesData[category];
+  const data = category === 'sandwich-panels' ? sandwichPanelsData : otherCategoriesData[category];
   if (!data) return {};
   return {
     title: data.seoTitle,
     description: data.seoDescription,
     keywords: data.keywords,
-    alternates: { canonical: `/products/${category}` },
+    alternates: { canonical: `${siteConfig.url}/products/${category}` },
+    ...buildSocialMetadata({
+      title: data.seoTitle,
+      description: data.seoDescription,
+      path: `/products/${category}`,
+      image: data.products?.[0]?.image,
+    }),
   };
 }
 

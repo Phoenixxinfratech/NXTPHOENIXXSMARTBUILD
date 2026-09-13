@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { encodeFormData } from '@/lib/forms';
 
 interface CareerFormProps {
   position?: string;
@@ -25,7 +26,7 @@ export function CareerForm({ position = '' }: CareerFormProps) {
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as any).toString(),
+        body: encodeFormData(formData),
       });
 
       if (response.ok) {

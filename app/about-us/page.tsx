@@ -15,6 +15,21 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/about-us',
   },
+  openGraph: {
+    title: 'About PHOENIXX SMARTBUILD – India\'s EPC Infrastructure Partner',
+    description:
+      'PHOENIXX delivers smart EPC solutions: PEB, cold storage, cleanrooms. 13+ years experience. Trusted by 500+ clients.',
+    url: 'https://phoenixxsmartbuild.com/about-us',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About PHOENIXX SMARTBUILD – India\'s EPC Infrastructure Partner',
+    description:
+      'PHOENIXX delivers smart EPC solutions: PEB, cold storage, cleanrooms. 13+ years experience. Trusted by 500+ clients.',
+  },
 };
 
 // Timeline milestones

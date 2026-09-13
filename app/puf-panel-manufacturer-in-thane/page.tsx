@@ -6,10 +6,23 @@ import { JsonLd } from '@/components/seo/json-ld';
 import { CityManufacturerAeo } from '@/components/seo/city-manufacturer-aeo';
 
 export const metadata: Metadata = {
-  title: 'PUF Panel Manufacturer in Thane | PHOENIXX',
+  title: 'PUF Panel Manufacturer in Thane',
   description: 'Premium PUF panels in Thane for cold storage and industrial use. Serving Thane-Belapur industrial belt. Request quote!',
   keywords: ['PUF panel manufacturer in Thane', 'PUF panel Wagle Estate', 'insulated panel Bhiwandi'],
   alternates: { canonical: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-thane' },
+  openGraph: {
+    title: 'PUF Panel Manufacturer in Thane | PHOENIXX SMARTBUILD',
+    description: 'Premium PUF panels in Thane for cold storage and industrial use. Serving Thane-Belapur industrial belt. Request quote!',
+    url: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-thane',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PUF Panel Manufacturer in Thane | PHOENIXX SMARTBUILD',
+    description: 'Premium PUF panels in Thane for cold storage and industrial use. Serving Thane-Belapur industrial belt. Request quote!',
+  },
 };
 
 const faqs = [

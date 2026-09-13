@@ -12,6 +12,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/industries',
   },
+  openGraph: {
+    title: 'Industries Served – Pharma, Food & More | PHOENIXX SMARTBUILD',
+    description: 'Industry-specific infrastructure: pharma cleanrooms, food processing, dairy, cold chain, automotive. Compliance assured.',
+    url: 'https://phoenixxsmartbuild.com/industries',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Industries Served – Pharma, Food & More | PHOENIXX SMARTBUILD',
+    description: 'Industry-specific infrastructure: pharma cleanrooms, food processing, dairy, cold chain, automotive. Compliance assured.',
+  },
 };
 
 const industries = [

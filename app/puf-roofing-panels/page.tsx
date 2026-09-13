@@ -6,7 +6,7 @@ import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 
 export const metadata: Metadata = {
-  title: 'PUF Roofing Panels for Industrial Roofing | Phoenixx',
+  title: 'PUF Roofing Panels for Industrial Roofing',
   description:
     'Premium PUF roofing panels for factories, warehouses & cold storage. Phoenixx Smart Build supplies insulated sandwich roof panels across Rajasthan from Beawar.',
   keywords: [

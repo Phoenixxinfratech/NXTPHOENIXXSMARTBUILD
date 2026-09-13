@@ -10,6 +10,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/resources/technical-sheet',
   },
+  openGraph: {
+    title: 'Technical Specifications – Product Data | PHOENIXX SMARTBUILD',
+    description: 'Download technical specifications for PUF panels, doors, cleanroom systems. Detailed product data sheets available.',
+    url: 'https://phoenixxsmartbuild.com/resources/technical-sheet',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Technical Specifications – Product Data | PHOENIXX SMARTBUILD',
+    description: 'Download technical specifications for PUF panels, doors, cleanroom systems. Detailed product data sheets available.',
+  },
 };
 
 const datasheets = [

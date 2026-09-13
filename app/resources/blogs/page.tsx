@@ -13,6 +13,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/resources/blogs',
   },
+  openGraph: {
+    title: 'Blog – Industry Insights & Technical Guides | PHOENIXX SMARTBUILD',
+    description: 'Expert articles on PUF panels, cleanrooms, cold storage, PEB construction. Stay updated with industry trends.',
+    url: 'https://phoenixxsmartbuild.com/resources/blogs',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Blog – Industry Insights & Technical Guides | PHOENIXX SMARTBUILD',
+    description: 'Expert articles on PUF panels, cleanrooms, cold storage, PEB construction. Stay updated with industry trends.',
+  },
 };
 
 const blogPosts = getBlogListings().sort(

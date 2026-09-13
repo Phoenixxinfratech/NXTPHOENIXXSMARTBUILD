@@ -12,6 +12,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/career',
   },
+  openGraph: {
+    title: 'Careers at PHOENIXX – Join Our Team | PHOENIXX SMARTBUILD',
+    description: 'Build your career at PHOENIXX SmartBuild. Openings for engineers, project managers, sales. Growth opportunities await.',
+    url: 'https://phoenixxsmartbuild.com/career',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Careers at PHOENIXX – Join Our Team | PHOENIXX SMARTBUILD',
+    description: 'Build your career at PHOENIXX SmartBuild. Openings for engineers, project managers, sales. Growth opportunities await.',
+  },
 };
 
 const openings = [

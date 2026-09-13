@@ -4,11 +4,24 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | PHOENIXX SmartBuild',
+  title: 'Privacy Policy',
   description:
     'Read our privacy policy. Learn how PHOENIXX protects your personal data and handles information securely.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/privacy-policy',
+  },
+  openGraph: {
+    title: 'Privacy Policy | PHOENIXX SMARTBUILD',
+    description: 'Read our privacy policy. Learn how PHOENIXX protects your personal data and handles information securely.',
+    url: 'https://phoenixxsmartbuild.com/privacy-policy',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Privacy Policy | PHOENIXX SMARTBUILD',
+    description: 'Read our privacy policy. Learn how PHOENIXX protects your personal data and handles information securely.',
   },
 };
 

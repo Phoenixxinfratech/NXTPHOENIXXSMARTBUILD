@@ -6,11 +6,24 @@ import { JsonLd } from '@/components/seo/json-ld';
 import { CityManufacturerAeo } from '@/components/seo/city-manufacturer-aeo';
 
 export const metadata: Metadata = {
-  title: 'PUF Panel Manufacturer in Vadodara | PHOENIXX',
+  title: 'PUF Panel Manufacturer in Vadodara',
   description: 'Quality PUF panels in Vadodara for industrial and commercial projects. Serving Vadodara GIDC. Contact for quote!',
   keywords: ['PUF panel manufacturer in Vadodara', 'PUF sandwich panel Vadodara', 'insulated panel Baroda'],
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-vadodara',
+  },
+  openGraph: {
+    title: 'PUF Panel Manufacturer in Vadodara | PHOENIXX SMARTBUILD',
+    description: 'Quality PUF panels in Vadodara for industrial and commercial projects. Serving Vadodara GIDC. Contact for quote!',
+    url: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-vadodara',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PUF Panel Manufacturer in Vadodara | PHOENIXX SMARTBUILD',
+    description: 'Quality PUF panels in Vadodara for industrial and commercial projects. Serving Vadodara GIDC. Contact for quote!',
   },
 };
 

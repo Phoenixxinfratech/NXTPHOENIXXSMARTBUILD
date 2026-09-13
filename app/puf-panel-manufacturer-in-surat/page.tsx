@@ -6,11 +6,24 @@ import { JsonLd } from '@/components/seo/json-ld';
 import { CityManufacturerAeo } from '@/components/seo/city-manufacturer-aeo';
 
 export const metadata: Metadata = {
-  title: 'PUF Panel Manufacturer in Surat | PHOENIXX',
+  title: 'PUF Panel Manufacturer in Surat',
   description: 'Leading PUF panel manufacturer in Surat, Gujarat. High-quality insulated panels for industries. Get competitive pricing!',
   keywords: ['PUF panel manufacturer in Surat', 'PUF sandwich panel Surat', 'cold storage panel Surat'],
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-surat',
+  },
+  openGraph: {
+    title: 'PUF Panel Manufacturer in Surat | PHOENIXX SMARTBUILD',
+    description: 'Leading PUF panel manufacturer in Surat, Gujarat. High-quality insulated panels for industries. Get competitive pricing!',
+    url: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-surat',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PUF Panel Manufacturer in Surat | PHOENIXX SMARTBUILD',
+    description: 'Leading PUF panel manufacturer in Surat, Gujarat. High-quality insulated panels for industries. Get competitive pricing!',
   },
 };
 
