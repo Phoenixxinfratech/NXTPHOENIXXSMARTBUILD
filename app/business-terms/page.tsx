@@ -16,7 +16,7 @@ export default function BusinessTermsPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* Hero */}
         <section className="bg-slate-900 py-16">
           <div className="container-custom">

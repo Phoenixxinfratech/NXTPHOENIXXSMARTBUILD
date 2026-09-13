@@ -98,7 +98,7 @@ export function CookieConsent() {
         <div className="flex flex-col md:flex-row md:items-center gap-6">
           {/* Cookie Icon */}
           <div className="hidden md:flex flex-shrink-0 w-16 h-16 rounded-full bg-amber-500/20 items-center justify-center">
-            <span className="text-3xl">🍪</span>
+            <span className="text-3xl" aria-hidden="true">🍪</span>
           </div>
 
           {/* Content */}

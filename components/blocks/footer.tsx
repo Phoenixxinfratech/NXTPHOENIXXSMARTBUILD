@@ -78,7 +78,7 @@ export function Footer() {
                 href={`mailto:${siteConfig.contact.email}`}
                 className="flex items-center gap-3 text-sm text-slate-400 hover:text-white transition-colors"
               >
-                <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center">
+                <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center" aria-hidden="true">
                   📧
                 </span>
                 {siteConfig.contact.email}
@@ -87,13 +87,13 @@ export function Footer() {
                 href={`tel:${siteConfig.contact.phone.replace(/\s/g, '')}`}
                 className="flex items-center gap-3 text-sm text-slate-400 hover:text-white transition-colors"
               >
-                <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center">
+                <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center" aria-hidden="true">
                   📞
                 </span>
                 {siteConfig.contact.phone} | {siteConfig.contact.phoneAlt}
               </a>
               <div className="flex items-start gap-3 text-sm text-slate-400">
-                <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center">
+                <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center" aria-hidden="true">
                   📍
                 </span>
                 <span>{siteConfig.contact.address}</span>

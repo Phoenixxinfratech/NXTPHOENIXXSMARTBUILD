@@ -56,7 +56,7 @@ export default function PhoenixxPufRoofingPanelsPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={localBusinessSchema} />
         <JsonLd data={productSchema} />
 

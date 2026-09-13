@@ -251,7 +251,7 @@ export default async function ProductLocationPage({ params }: { params: Promise<
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={productSchema} />
         <JsonLd data={faqSchema} />
         <JsonLd data={breadcrumbSchema} />
@@ -362,23 +362,23 @@ export default async function ProductLocationPage({ params }: { params: Promise<
                 <h3 className="text-xl font-bold text-slate-900 mb-4">Technical Advantages</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-2 text-slate-600">
-                    <span className="text-green-500 mt-1">✓</span>
+                    <span className="text-green-500 mt-1" aria-hidden="true">✓</span>
                     <span><strong>Thermal Insulation:</strong> {product.specifications.thermalConductivity} conductivity</span>
                   </li>
                   <li className="flex items-start gap-2 text-slate-600">
-                    <span className="text-green-500 mt-1">✓</span>
+                    <span className="text-green-500 mt-1" aria-hidden="true">✓</span>
                     <span><strong>Fire Resistance:</strong> PIR panels offer B-s1,d0 rating with minimal smoke</span>
                   </li>
                   <li className="flex items-start gap-2 text-slate-600">
-                    <span className="text-green-500 mt-1">✓</span>
+                    <span className="text-green-500 mt-1" aria-hidden="true">✓</span>
                     <span><strong>Energy Efficiency:</strong> 25-30% reduction in HVAC operating costs</span>
                   </li>
                   <li className="flex items-start gap-2 text-slate-600">
-                    <span className="text-green-500 mt-1">✓</span>
+                    <span className="text-green-500 mt-1" aria-hidden="true">✓</span>
                     <span><strong>Durability:</strong> 25-30 year lifespan with proper installation</span>
                   </li>
                   <li className="flex items-start gap-2 text-slate-600">
-                    <span className="text-green-500 mt-1">✓</span>
+                    <span className="text-green-500 mt-1" aria-hidden="true">✓</span>
                     <span><strong>Lightweight Structure:</strong> 8-15 kg/m&sup2; reduces structural steel needs by up to 30%</span>
                   </li>
                 </ul>
@@ -389,7 +389,7 @@ export default async function ProductLocationPage({ params }: { params: Promise<
                 <ul className="space-y-3">
                   {product.certifications.map((cert, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-slate-600">
-                      <span className="text-blue-500">🏆</span>
+                      <span className="text-blue-500" aria-hidden="true">🏆</span>
                       <span>{cert}</span>
                     </li>
                   ))}
@@ -607,7 +607,7 @@ export default async function ProductLocationPage({ params }: { params: Promise<
               <div className="grid gap-8 md:grid-cols-2">
                 <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border border-blue-100">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="text-3xl">🏗️</span>
+                    <span className="text-3xl" aria-hidden="true">🏗️</span>
                     <h3 className="text-xl font-bold text-slate-900">PUF Panel Projects Delivered</h3>
                   </div>
                   <p className="text-slate-700 leading-relaxed">
@@ -625,7 +625,7 @@ export default async function ProductLocationPage({ params }: { params: Promise<
                 
                 <div className="bg-gradient-to-br from-emerald-50 to-white rounded-2xl p-8 border border-emerald-100">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="text-3xl">🎯</span>
+                    <span className="text-3xl" aria-hidden="true">🎯</span>
                     <h3 className="text-xl font-bold text-slate-900">Industry Understanding</h3>
                   </div>
                   <p className="text-slate-700 leading-relaxed">
@@ -647,25 +647,25 @@ export default async function ProductLocationPage({ params }: { params: Promise<
                 <h3 className="font-bold text-lg text-slate-900 mb-4">Why Choose a Local PUF Panel Manufacturer in {location.name}?</h3>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="flex items-start gap-3">
-                    <span className="text-green-500 mt-1">✓</span>
+                    <span className="text-green-500 mt-1" aria-hidden="true">✓</span>
                     <span className="text-slate-700">
                       <strong>Faster Delivery:</strong> Proximity means quicker turnaround on PUF panel orders and emergencies
                     </span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <span className="text-green-500 mt-1">✓</span>
+                    <span className="text-green-500 mt-1" aria-hidden="true">✓</span>
                     <span className="text-slate-700">
                       <strong>Lower Logistics Cost:</strong> Reduced freight charges for sandwich panel shipments to {location.name}
                     </span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <span className="text-green-500 mt-1">✓</span>
+                    <span className="text-green-500 mt-1" aria-hidden="true">✓</span>
                     <span className="text-slate-700">
                       <strong>On-Site Support:</strong> Our PUF panel installation engineers can visit your {location.name} site
                     </span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <span className="text-green-500 mt-1">✓</span>
+                    <span className="text-green-500 mt-1" aria-hidden="true">✓</span>
                     <span className="text-slate-700">
                       <strong>Local References:</strong> Speak with our {location.name} clients about their PUF panel projects
                     </span>
@@ -742,7 +742,7 @@ export default async function ProductLocationPage({ params }: { params: Promise<
                     href={`/${parsed.productSlug}-in-${child.slug}`}
                     className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all hover:border-blue-300 border border-transparent"
                   >
-                    <span className="text-blue-500">📍</span>
+                    <span className="text-blue-500" aria-hidden="true">📍</span>
                     <span className="font-medium text-slate-900">{product.shortName} in {child.name}</span>
                   </Link>
                 ))}
@@ -758,12 +758,12 @@ export default async function ProductLocationPage({ params }: { params: Promise<
                       href={`/${parsed.productSlug}-in-${areaSlug}`}
                       className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all hover:border-blue-300 border border-transparent"
                     >
-                      <span className="text-blue-500">📍</span>
+                      <span className="text-blue-500" aria-hidden="true">📍</span>
                       <span className="font-medium text-slate-900">{product.shortName} in {area}</span>
                     </Link>
                   ) : (
                     <div key={idx} className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm border border-transparent">
-                      <span className="text-slate-400">📍</span>
+                      <span className="text-slate-500" aria-hidden="true">📍</span>
                       <span className="text-slate-600">{area}</span>
                     </div>
                   );

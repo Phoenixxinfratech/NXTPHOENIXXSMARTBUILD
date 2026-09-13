@@ -86,7 +86,7 @@ export default function SuratPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={faqSchema} />
         <JsonLd data={localBusinessSchema} />
 
@@ -271,7 +271,7 @@ export default function SuratPage() {
                 'Commercial & Office Buildings',
               ].map((app, idx) => (
                 <div key={idx} className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg">
-                  <span className="text-orange-500">✓</span>
+                  <span className="text-orange-500" aria-hidden="true">✓</span>
                   <span className="text-slate-700">{app}</span>
                 </div>
               ))}

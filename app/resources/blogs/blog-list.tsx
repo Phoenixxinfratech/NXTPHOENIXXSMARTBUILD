@@ -102,8 +102,8 @@ export function BlogList({ posts }: { posts: BlogListing[] }) {
                       <span className="px-2 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-medium">
                         {post.category}
                       </span>
-                      <span className="text-xs text-slate-400">{post.date}</span>
-                      <span className="text-xs text-slate-400">&bull; {post.readTime}</span>
+                      <span className="text-xs text-slate-500">{post.date}</span>
+                      <span className="text-xs text-slate-500">&bull; {post.readTime}</span>
                     </div>
                     <h3 className={`font-bold text-slate-900 group-hover:text-blue-600 transition-colors ${idx === 0 ? 'text-2xl' : 'text-lg'}`}>
                       {post.title}
@@ -151,7 +151,7 @@ export function BlogList({ posts }: { posts: BlogListing[] }) {
                       <span className="px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 text-xs">
                         {post.category}
                       </span>
-                      <span className="text-xs text-slate-400">{post.readTime}</span>
+                      <span className="text-xs text-slate-500">{post.readTime}</span>
                     </div>
                     <h3 className="font-bold text-slate-900 group-hover:text-blue-600 transition-colors line-clamp-2">
                       {post.title}

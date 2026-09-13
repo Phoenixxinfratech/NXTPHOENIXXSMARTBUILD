@@ -259,7 +259,7 @@ export default async function ShopPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={itemListSchema} />
         
         {/* Hero */}
@@ -281,13 +281,13 @@ export default async function ShopPage() {
               </p>
               <div className="mt-6 flex flex-wrap gap-4 text-sm text-slate-300">
                 <span className="flex items-center gap-2">
-                  <span className="text-green-400">✓</span> Direct from Manufacturer
+                  <span className="text-green-400" aria-hidden="true">✓</span> Direct from Manufacturer
                 </span>
                 <span className="flex items-center gap-2">
-                  <span className="text-green-400">✓</span> ISO 9001 Certified
+                  <span className="text-green-400" aria-hidden="true">✓</span> ISO 9001 Certified
                 </span>
                 <span className="flex items-center gap-2">
-                  <span className="text-green-400">✓</span> Bulk Discounts Available
+                  <span className="text-green-400" aria-hidden="true">✓</span> Bulk Discounts Available
                 </span>
               </div>
               

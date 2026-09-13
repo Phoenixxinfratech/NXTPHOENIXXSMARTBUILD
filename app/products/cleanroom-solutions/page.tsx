@@ -131,7 +131,7 @@ export default function CleanroomSolutionsPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={breadcrumbSchema} />
         <JsonLd data={faqSchema} />
         <AISummaryBlock summary={cleanroomData.aiSummary} keywords={cleanroomData.keywords} />
@@ -312,7 +312,7 @@ export default function CleanroomSolutionsPage() {
           <div className="container-custom text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Trusted by Pharma & Biotech Leaders</h2>
             <div className="flex items-center justify-center gap-2 mb-8">
-              <div className="flex">{[1,2,3,4,5].map((s) => <span key={s} className="text-yellow-500 text-xl">★</span>)}</div>
+              <div className="flex">{[1,2,3,4,5].map((s) => <span key={s} className="text-yellow-500 text-xl" aria-hidden="true">★</span>)}</div>
               <span className="text-slate-600">{cleanroomData.testimonial.rating}/5 from {cleanroomData.testimonial.reviews}+ projects</span>
             </div>
             <blockquote className="max-w-3xl mx-auto">

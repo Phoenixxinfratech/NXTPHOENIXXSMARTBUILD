@@ -61,7 +61,7 @@ export default function ExportHubPage() {
       <JsonLd data={serviceSchema} />
       <JsonLd data={faqSchema} />
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <section className="bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 text-white section-padding">
           <div className="container-custom">
             <p className="text-sm font-medium text-emerald-300 uppercase tracking-wider">Global Export</p>

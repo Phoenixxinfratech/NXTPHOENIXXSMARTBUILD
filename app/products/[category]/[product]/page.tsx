@@ -1405,7 +1405,7 @@ export default async function ProductDetailPage({ params }: Props) {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={productSchema} />
         <JsonLd data={breadcrumbSchema} />
         <JsonLd data={faqSchema} />
@@ -1625,7 +1625,7 @@ export default async function ProductDetailPage({ params }: Props) {
                     <ul className="grid grid-cols-2 gap-2 mb-4">
                       {useCase.benefits.map((benefit, bIdx) => (
                         <li key={bIdx} className="text-sm text-slate-400 flex items-center gap-2">
-                          <span className="text-emerald-400">✓</span> {benefit}
+                          <span className="text-emerald-400" aria-hidden="true">✓</span> {benefit}
                         </li>
                       ))}
                     </ul>
@@ -1818,7 +1818,7 @@ export default async function ProductDetailPage({ params }: Props) {
                   <details key={idx} className="group bg-slate-50 rounded-xl overflow-hidden">
                     <summary className="flex justify-between items-center cursor-pointer p-6 font-semibold text-slate-900 hover:bg-slate-100 transition-colors">
                       <span className="pr-4">{faq.question}</span>
-                      <span className="text-2xl text-slate-400 group-open:rotate-45 transition-transform">+</span>
+                      <span className="text-2xl text-slate-500 group-open:rotate-45 transition-transform">+</span>
                     </summary>
                     <div className="px-6 pb-6 text-slate-600 leading-relaxed">
                       {faq.answer}

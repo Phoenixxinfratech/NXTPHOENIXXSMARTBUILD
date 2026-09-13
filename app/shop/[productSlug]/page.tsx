@@ -780,7 +780,7 @@ export default async function ShopProductPage({ params }: { params: Promise<{ pr
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={productSchema} />
         <JsonLd data={breadcrumbSchema} />
         
@@ -871,15 +871,15 @@ export default async function ShopProductPage({ params }: { params: Promise<{ pr
                 {/* Trust Signals */}
                 <div className="mt-6 grid grid-cols-3 gap-4 text-center">
                   <div className="p-3 bg-slate-50 rounded-lg">
-                    <span className="text-2xl">🚚</span>
+                    <span className="text-2xl" aria-hidden="true">🚚</span>
                     <p className="text-xs text-slate-600 mt-1">PAN-India Delivery</p>
                   </div>
                   <div className="p-3 bg-slate-50 rounded-lg">
-                    <span className="text-2xl">🏭</span>
+                    <span className="text-2xl" aria-hidden="true">🏭</span>
                     <p className="text-xs text-slate-600 mt-1">Direct from Factory</p>
                   </div>
                   <div className="p-3 bg-slate-50 rounded-lg">
-                    <span className="text-2xl">✓</span>
+                    <span className="text-2xl" aria-hidden="true">✓</span>
                     <p className="text-xs text-slate-600 mt-1">ISO Certified</p>
                   </div>
                 </div>
@@ -963,7 +963,7 @@ export default async function ShopProductPage({ params }: { params: Promise<{ pr
                 <ul className="space-y-3">
                   {product.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-slate-600">
-                      <span className="text-green-500 mt-1">✓</span>
+                      <span className="text-green-500 mt-1" aria-hidden="true">✓</span>
                       <span>{feature}</span>
                     </li>
                   ))}

@@ -84,6 +84,7 @@ export function VendorForm() {
               type="text"
               id="companyName"
               name="companyName"
+              autoComplete="organization"
               required
               className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
               placeholder="Legal company name"
@@ -145,6 +146,7 @@ export function VendorForm() {
               type="text"
               id="contactPerson"
               name="contactPerson"
+              autoComplete="name"
               required
               className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
               placeholder="Primary contact name"
@@ -158,6 +160,7 @@ export function VendorForm() {
               type="text"
               id="designation"
               name="designation"
+              autoComplete="organization-title"
               className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
               placeholder="Job title"
             />
@@ -170,6 +173,8 @@ export function VendorForm() {
               type="email"
               id="email"
               name="email"
+              autoComplete="email"
+              inputMode="email"
               required
               className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
               placeholder="company@email.com"
@@ -183,6 +188,8 @@ export function VendorForm() {
               type="tel"
               id="phone"
               name="phone"
+              autoComplete="tel"
+              inputMode="tel"
               required
               className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
               placeholder="+91 XXXXX XXXXX"
@@ -285,7 +292,7 @@ export function VendorForm() {
       </div>
 
       {error && (
-        <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
+        <div role="alert" className="p-4 bg-red-50 border border-red-200 rounded-lg">
           <p className="text-red-600 text-center">{error}</p>
         </div>
       )}

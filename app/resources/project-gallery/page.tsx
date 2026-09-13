@@ -295,7 +295,7 @@ export default function ProjectGalleryPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* Hero */}
         <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 md:py-24">
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-[0.03]" />
@@ -407,11 +407,11 @@ export default function ProjectGalleryPage() {
                     
                     <div className="mt-4 pt-4 border-t border-slate-100 grid grid-cols-2 gap-3 text-sm">
                       <div>
-                        <p className="text-slate-400 text-xs">Location</p>
+                        <p className="text-slate-500 text-xs">Location</p>
                         <p className="font-medium text-slate-700">{project.location}</p>
                       </div>
                       <div>
-                        <p className="text-slate-400 text-xs">Industry</p>
+                        <p className="text-slate-500 text-xs">Industry</p>
                         <p className="font-medium text-slate-700">{project.industry}</p>
                       </div>
                     </div>

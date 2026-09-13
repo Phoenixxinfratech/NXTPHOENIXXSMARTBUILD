@@ -26,7 +26,7 @@ export default function VendorRegistrationPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 md:py-24">
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-[0.05]" />

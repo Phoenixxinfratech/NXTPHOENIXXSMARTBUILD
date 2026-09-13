@@ -171,7 +171,7 @@ function ThankYouContent() {
         {/* What Happens Next */}
         <div className="bg-white rounded-2xl shadow-xl border border-slate-100 p-8 mb-8">
           <h2 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-            <span className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+            <span className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600" aria-hidden="true">
               📌
             </span>
             What Happens Next?
@@ -263,15 +263,15 @@ function ThankYouContent() {
           <p className="text-sm text-slate-500 mb-4">Trusted by 300+ Companies Across India</p>
           <div className="flex flex-wrap justify-center gap-6 text-sm text-slate-600">
             <span className="flex items-center gap-1.5">
-              <span className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-600 text-xs">✓</span>
+              <span className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-600 text-xs" aria-hidden="true">✓</span>
               13+ Years Experience
             </span>
             <span className="flex items-center gap-1.5">
-              <span className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-600 text-xs">✓</span>
+              <span className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-600 text-xs" aria-hidden="true">✓</span>
               500+ Projects Delivered
             </span>
             <span className="flex items-center gap-1.5">
-              <span className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-600 text-xs">✓</span>
+              <span className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-600 text-xs" aria-hidden="true">✓</span>
               Pan-India Service
             </span>
           </div>
@@ -285,7 +285,7 @@ export default function ThankYouPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1 bg-gradient-to-b from-slate-50 to-white">
+      <main id="main-content" className="flex-1 bg-gradient-to-b from-slate-50 to-white">
         <Suspense fallback={
           <div className="container-custom py-24 text-center">
             <div className="animate-pulse">

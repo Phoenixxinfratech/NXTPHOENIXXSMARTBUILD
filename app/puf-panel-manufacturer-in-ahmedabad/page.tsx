@@ -287,7 +287,7 @@ export default function AhmedabadPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={localBusinessSchema} />
         <JsonLd data={faqSchema} />
         <JsonLd data={productSchema} />
@@ -449,7 +449,7 @@ export default function AhmedabadPage() {
                   key={idx}
                   className="flex items-center gap-4 p-5 bg-gradient-to-r from-slate-50 to-white rounded-xl border border-slate-100"
                 >
-                  <span className="text-green-600 text-2xl">✓</span>
+                  <span className="text-green-600 text-2xl" aria-hidden="true">✓</span>
                   <span className="text-lg text-slate-700 font-medium">{app}</span>
                 </div>
               ))}

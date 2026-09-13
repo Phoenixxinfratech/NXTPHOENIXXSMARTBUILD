@@ -77,7 +77,7 @@ export default function CareerPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-violet-900 via-purple-800 to-indigo-900 py-20 md:py-28">
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-[0.05]" />
@@ -150,7 +150,7 @@ export default function CareerPage() {
               <div className="relative">
                 <div className="aspect-square rounded-2xl bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center">
                   <div className="text-center p-8">
-                    <span className="text-9xl opacity-30">👥</span>
+                    <span className="text-9xl opacity-30" aria-hidden="true">👥</span>
                     <p className="mt-4 text-slate-500">Team Photo</p>
                   </div>
                 </div>

@@ -84,7 +84,7 @@ export function ContactForm() {
   if (status === 'success') {
     return (
       <div className="rounded-lg border border-green-200 bg-green-50 p-6 text-center dark:border-green-900 dark:bg-green-950">
-        <div className="text-4xl mb-4">✓</div>
+        <div className="text-4xl mb-4" aria-hidden="true">✓</div>
         <h3 className="text-lg font-semibold text-green-800 dark:text-green-200">
           Thank You!
         </h3>

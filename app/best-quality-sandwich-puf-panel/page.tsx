@@ -91,7 +91,7 @@ export default function BestQualitySandwichPufPanelPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* JSON-LD Schemas */}
         <JsonLd data={generateOrganizationSchema()} />
         <JsonLd data={generateLocalBusinessSchema()} />
@@ -742,7 +742,7 @@ export default function BestQualitySandwichPufPanelPage() {
                     <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-lg font-semibold text-slate-900 hover:bg-slate-50 transition-colors">
                       {faq.question}
                       <svg
-                        className="h-5 w-5 flex-shrink-0 text-slate-400 transition-transform group-open:rotate-180"
+                        className="h-5 w-5 flex-shrink-0 text-slate-500 transition-transform group-open:rotate-180"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"

@@ -446,7 +446,7 @@ export default function FAQPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-16 md:py-24 overflow-hidden">
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-[0.03]" />
@@ -498,7 +498,7 @@ export default function FAQPage() {
                     {section.title.replace(' FAQs', '')}
                   </a>
                 ))}
-                <span className="px-3 py-1.5 text-sm text-slate-400">+{faqSections.length - 6} more</span>
+                <span className="px-3 py-1.5 text-sm text-slate-500">+{faqSections.length - 6} more</span>
               </div>
               <div className="flex gap-2">
                 <button
@@ -540,7 +540,10 @@ export default function FAQPage() {
                         className="rounded-xl border border-slate-200 bg-white overflow-hidden hover:border-slate-300 hover:shadow-md transition-all"
                       >
                         <button
+                          type="button"
                           onClick={() => toggleFAQ(faq.id)}
+                          aria-expanded={expandedFAQs.has(faq.id)}
+                          aria-controls={`faq-answer-${faq.id}`}
                           className="w-full flex items-start justify-between cursor-pointer p-5 md:p-6 text-left"
                         >
                           <h3 className="font-semibold text-slate-900 pr-4 text-base md:text-lg leading-snug">
@@ -557,7 +560,7 @@ export default function FAQPage() {
                           </span>
                         </button>
                         {expandedFAQs.has(faq.id) && (
-                          <div className="px-5 md:px-6 pb-5 md:pb-6 -mt-2">
+                          <div id={`faq-answer-${faq.id}`} className="px-5 md:px-6 pb-5 md:pb-6 -mt-2">
                             <div className="pt-4 border-t border-slate-100">
                               <p className="text-slate-600 leading-relaxed">
                                 {faq.answer}

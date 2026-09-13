@@ -287,7 +287,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={breadcrumbSchema} />
 
         <AISummaryBlock
@@ -322,7 +322,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               <div className="lg:col-span-2">
                 {/* Image Placeholder */}
                 <div className="aspect-video rounded-lg bg-muted mb-8 flex items-center justify-center">
-                  <span className="text-8xl opacity-20">🏗️</span>
+                  <span className="text-8xl opacity-20" aria-hidden="true">🏗️</span>
                 </div>
 
                 <div className="prose-custom">
@@ -335,7 +335,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   <ul className="grid gap-3 sm:grid-cols-2">
                     {project.highlights.map((highlight, idx) => (
                       <li key={idx} className="flex items-center gap-2">
-                        <span className="text-primary">✓</span>
+                        <span className="text-primary" aria-hidden="true">✓</span>
                         {highlight}
                       </li>
                     ))}

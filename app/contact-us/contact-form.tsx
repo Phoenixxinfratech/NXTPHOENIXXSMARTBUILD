@@ -65,6 +65,7 @@ export function ContactForm() {
             type="text"
             id="name"
             name="name"
+            autoComplete="name"
             required
             className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
             placeholder="Your name"
@@ -78,6 +79,7 @@ export function ContactForm() {
             type="text"
             id="company"
             name="company"
+            autoComplete="organization"
             className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
             placeholder="Your company"
           />
@@ -93,6 +95,8 @@ export function ContactForm() {
             type="email"
             id="email"
             name="email"
+            autoComplete="email"
+            inputMode="email"
             required
             className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
             placeholder="you@example.com"
@@ -106,6 +110,8 @@ export function ContactForm() {
             type="tel"
             id="phone"
             name="phone"
+            autoComplete="tel"
+            inputMode="tel"
             className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
             placeholder="+91 XXXXX XXXXX"
           />
@@ -147,7 +153,7 @@ export function ContactForm() {
       </div>
 
       {error && (
-        <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
+        <div role="alert" className="p-4 bg-red-50 border border-red-200 rounded-lg">
           <p className="text-red-600 text-center">{error}</p>
         </div>
       )}

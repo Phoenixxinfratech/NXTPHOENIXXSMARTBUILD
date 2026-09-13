@@ -183,7 +183,7 @@ export default function ProductsPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={breadcrumbSchema} />
         <JsonLd data={productSchema} />
 
@@ -298,7 +298,7 @@ export default function ProductsPage() {
                     placeholder="Search by product name, category, thickness, or feature..."
                     className="w-full px-5 py-4 pl-12 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all text-slate-900"
                   />
-                  <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
                 </div>
@@ -578,7 +578,7 @@ export default function ProductsPage() {
                   className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all border border-transparent hover:border-blue-200"
                 >
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="text-2xl">📍</span>
+                    <span className="text-2xl" aria-hidden="true">📍</span>
                     <h3 className="text-lg font-bold text-slate-900">{location.state}</h3>
                   </div>
                   <p className="text-sm text-slate-600 mb-3">

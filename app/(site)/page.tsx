@@ -707,7 +707,7 @@ export default function HomePage() {
                 className="group rounded-xl border border-slate-200 bg-white overflow-hidden transition-[box-shadow] duration-300 hover:shadow-lg"
               >
                 <div className="aspect-[4/3] bg-gradient-to-br from-cyan-100 to-blue-100 flex items-center justify-center">
-                  <span className="text-4xl opacity-30">📝</span>
+                  <span className="text-4xl opacity-30" aria-hidden="true">📝</span>
                 </div>
                 <div className="p-5">
                   <h3 className="text-base font-semibold text-slate-900 group-hover:text-cyan-600 transition-colors line-clamp-2">
@@ -745,7 +745,7 @@ export default function HomePage() {
             {/* Featured State 1 - Gujarat */}
             <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-6 border border-blue-100 hover:shadow-lg transition-shadow">
               <div className="flex items-center gap-3 mb-4">
-                <span className="text-2xl">📍</span>
+                <span className="text-2xl" aria-hidden="true">📍</span>
                 <h3 className="text-xl font-bold text-slate-900">Gujarat</h3>
               </div>
               <p className="text-slate-600 text-sm mb-4">
@@ -776,7 +776,7 @@ export default function HomePage() {
             {/* Featured State 2 - Maharashtra */}
             <div className="bg-gradient-to-br from-purple-50 to-white rounded-2xl p-6 border border-purple-100 hover:shadow-lg transition-shadow">
               <div className="flex items-center gap-3 mb-4">
-                <span className="text-2xl">📍</span>
+                <span className="text-2xl" aria-hidden="true">📍</span>
                 <h3 className="text-xl font-bold text-slate-900">Maharashtra</h3>
               </div>
               <p className="text-slate-600 text-sm mb-4">
@@ -807,7 +807,7 @@ export default function HomePage() {
             {/* Featured State 3 - Rajasthan */}
             <div className="bg-gradient-to-br from-amber-50 to-white rounded-2xl p-6 border border-amber-100 hover:shadow-lg transition-shadow">
               <div className="flex items-center gap-3 mb-4">
-                <span className="text-2xl">📍</span>
+                <span className="text-2xl" aria-hidden="true">📍</span>
                 <h3 className="text-xl font-bold text-slate-900">Rajasthan</h3>
               </div>
               <p className="text-slate-600 text-sm mb-4">
@@ -859,7 +859,7 @@ export default function HomePage() {
                   href={`/sandwich-puf-panel-in-${location.slug}`}
                   className="flex items-center gap-2 p-3 bg-white rounded-lg hover:shadow-md transition-all border border-transparent hover:border-blue-200"
                 >
-                  <span className="text-slate-400">→</span>
+                  <span className="text-slate-500">→</span>
                   <span className="text-sm font-medium text-slate-900">{location.state}</span>
                 </Link>
               ))}

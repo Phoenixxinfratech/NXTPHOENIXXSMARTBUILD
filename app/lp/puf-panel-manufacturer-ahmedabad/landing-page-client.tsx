@@ -143,7 +143,7 @@ export default function LandingPageClient() {
           </div>
         </header>
 
-        <main className="flex-1">
+        <main id="main-content" className="flex-1">
           {/* Hero Section */}
           <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-16 md:py-24">
             <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-[0.03]" />
@@ -425,6 +425,7 @@ export default function LandingPageClient() {
                             type="text"
                             id="lp-name"
                             name="name"
+                            autoComplete="name"
                             required
                             className="w-full rounded-lg border border-slate-300 px-4 py-3 transition-all focus:border-transparent focus:ring-2 focus:ring-blue-500"
                             placeholder="Your name"
@@ -438,6 +439,8 @@ export default function LandingPageClient() {
                             type="tel"
                             id="lp-phone"
                             name="phone"
+                            autoComplete="tel"
+                            inputMode="tel"
                             required
                             className="w-full rounded-lg border border-slate-300 px-4 py-3 transition-all focus:border-transparent focus:ring-2 focus:ring-blue-500"
                             placeholder="+91 XXXXX XXXXX"
@@ -453,6 +456,8 @@ export default function LandingPageClient() {
                           type="email"
                           id="lp-email"
                           name="email"
+                          autoComplete="email"
+                          inputMode="email"
                           className="w-full rounded-lg border border-slate-300 px-4 py-3 transition-all focus:border-transparent focus:ring-2 focus:ring-blue-500"
                           placeholder="you@company.com"
                         />
@@ -491,7 +496,7 @@ export default function LandingPageClient() {
                       </div>
 
                       {error && (
-                        <div className="rounded-lg border border-red-200 bg-red-50 p-3">
+                        <div role="alert" className="rounded-lg border border-red-200 bg-red-50 p-3">
                           <p className="text-center text-sm text-red-600">{error}</p>
                         </div>
                       )}
@@ -611,12 +616,15 @@ export default function LandingPageClient() {
                     className="overflow-hidden rounded-xl border border-slate-200 bg-white transition-all"
                   >
                     <button
+                      type="button"
                       onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                      aria-expanded={openFaq === idx}
+                      aria-controls={`lp-faq-answer-${idx}`}
                       className="flex w-full items-center justify-between px-6 py-5 text-left"
                     >
                       <span className="pr-4 font-semibold text-slate-900">{faq.q}</span>
                       <svg
-                        className={`h-5 w-5 shrink-0 text-slate-400 transition-transform duration-200 ${openFaq === idx ? 'rotate-180' : ''}`}
+                        className={`h-5 w-5 shrink-0 text-slate-500 transition-transform duration-200 ${openFaq === idx ? 'rotate-180' : ''}`}
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -626,6 +634,8 @@ export default function LandingPageClient() {
                       </svg>
                     </button>
                     <div
+                      id={`lp-faq-answer-${idx}`}
+                      hidden={openFaq !== idx}
                       className={`overflow-hidden transition-all duration-200 ${openFaq === idx ? 'max-h-40 pb-5' : 'max-h-0'}`}
                     >
                       <p className="px-6 text-slate-600 leading-relaxed">{faq.a}</p>

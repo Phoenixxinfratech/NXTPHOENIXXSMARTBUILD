@@ -57,7 +57,7 @@ export default function BecomePartnerPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-emerald-900 via-teal-800 to-cyan-900 py-20 md:py-28">
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-[0.05]" />
@@ -149,7 +149,7 @@ export default function BecomePartnerPage() {
                 <div className="mt-8 grid gap-4 sm:grid-cols-2">
                   {advantages.map((adv) => (
                     <div key={adv.title} className="flex items-start gap-3">
-                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center text-xs">
+                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center text-xs" aria-hidden="true">
                         ✓
                       </span>
                       <div>
@@ -164,7 +164,7 @@ export default function BecomePartnerPage() {
               <div className="relative">
                 <div className="aspect-square rounded-2xl bg-gradient-to-br from-emerald-100 to-teal-100 flex items-center justify-center">
                   <div className="text-center p-8">
-                    <span className="text-9xl opacity-30">🤝</span>
+                    <span className="text-9xl opacity-30" aria-hidden="true">🤝</span>
                     <p className="mt-4 text-slate-500">Partnership Network</p>
                   </div>
                 </div>

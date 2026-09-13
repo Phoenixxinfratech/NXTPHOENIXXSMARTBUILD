@@ -118,7 +118,7 @@ export default function IndustriesPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={breadcrumbSchema} />
 
         <AISummaryBlock
@@ -259,7 +259,7 @@ export default function IndustriesPage() {
                     { title: 'Technical Support', desc: 'Industry-experienced teams for ongoing support' },
                   ].map((item) => (
                     <div key={item.title} className="flex items-start gap-4 p-4 rounded-xl bg-white shadow-sm">
-                      <span className="flex-shrink-0 w-10 h-10 rounded-lg bg-orange-100 flex items-center justify-center text-orange-600">
+                      <span className="flex-shrink-0 w-10 h-10 rounded-lg bg-orange-100 flex items-center justify-center text-orange-600" aria-hidden="true">
                         ✓
                       </span>
                       <div>

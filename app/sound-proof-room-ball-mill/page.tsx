@@ -120,7 +120,7 @@ export default function SoundProofRoomBallMillPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={organizationSchema} />
         <JsonLd data={localBusinessSchema} />
         <JsonLd data={serviceSchema} />
@@ -371,7 +371,7 @@ export default function SoundProofRoomBallMillPage() {
                   },
                 ].map((item, idx) => (
                   <div key={idx} className="bg-white rounded-xl p-6 flex gap-4">
-                    <span className="text-2xl">✓</span>
+                    <span className="text-2xl" aria-hidden="true">✓</span>
                     <div>
                       <h3 className="font-bold text-slate-900">{item.title}</h3>
                       <p className="text-slate-600 text-sm mt-1">{item.desc}</p>
@@ -513,7 +513,7 @@ export default function SoundProofRoomBallMillPage() {
                   'Maintenance clearance',
                 ].map((opt, idx) => (
                   <div key={idx} className="flex items-center gap-2 bg-white rounded-lg px-4 py-3">
-                    <span className="text-emerald-500">✓</span>
+                    <span className="text-emerald-500" aria-hidden="true">✓</span>
                     <span className="text-slate-700">{opt}</span>
                   </div>
                 ))}
@@ -598,7 +598,7 @@ export default function SoundProofRoomBallMillPage() {
                   'Creates professional factory environment',
                 ].map((benefit, idx) => (
                   <div key={idx} className="flex items-center gap-3 bg-slate-50 rounded-xl p-4">
-                    <span className="text-2xl">✓</span>
+                    <span className="text-2xl" aria-hidden="true">✓</span>
                     <span className="text-slate-700 font-medium">{benefit}</span>
                   </div>
                 ))}

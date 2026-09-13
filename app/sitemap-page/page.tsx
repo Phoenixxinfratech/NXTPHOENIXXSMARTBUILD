@@ -27,7 +27,7 @@ export default function SitemapPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={breadcrumbSchema} />
 
         <section className="border-b bg-muted/30 py-12">

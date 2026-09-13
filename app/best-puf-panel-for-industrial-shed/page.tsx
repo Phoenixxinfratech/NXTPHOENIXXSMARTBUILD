@@ -130,7 +130,7 @@ export default function BestPufPanelForIndustrialShedPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* ── 14 JSON-LD Schemas ── */}
         <JsonLd data={generateOrganizationSchema()} />
         <JsonLd data={generateLocalBusinessSchema()} />
@@ -795,7 +795,7 @@ export default function BestPufPanelForIndustrialShedPage() {
                       key={idx}
                       className="flex items-start gap-3 bg-emerald-50 rounded-xl p-4"
                     >
-                      <span className="text-emerald-600 font-bold text-lg mt-0.5">✓</span>
+                      <span className="text-emerald-600 font-bold text-lg mt-0.5" aria-hidden="true">✓</span>
                       <div>
                         <span className="font-bold text-slate-900">{item.std}</span>
                         <p className="text-sm text-slate-600">{item.desc}</p>
@@ -969,7 +969,7 @@ export default function BestPufPanelForIndustrialShedPage() {
                 >
                   <summary className="flex cursor-pointer items-center justify-between px-6 py-5 font-semibold text-slate-900 hover:bg-slate-100 transition-colors [&::-webkit-details-marker]:hidden">
                     <span>{faq.question}</span>
-                    <span className="ml-4 text-xl text-slate-400 group-open:rotate-45 transition-transform">
+                    <span className="ml-4 text-xl text-slate-500 group-open:rotate-45 transition-transform">
                       +
                     </span>
                   </summary>

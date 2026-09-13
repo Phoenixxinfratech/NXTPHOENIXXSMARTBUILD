@@ -230,7 +230,7 @@ export default function BestInsulatedPanelForWarehousePage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {schemas.map((schema, idx) => (
           <JsonLd key={idx} data={schema} />
         ))}
@@ -880,7 +880,7 @@ export default function BestInsulatedPanelForWarehousePage() {
                 >
                   <summary className="flex cursor-pointer items-center justify-between px-6 py-5 font-semibold text-slate-900 hover:bg-slate-100 transition-colors [&::-webkit-details-marker]:hidden">
                     <span>{faq.question}</span>
-                    <span className="ml-4 text-xl text-slate-400 group-open:rotate-45 transition-transform">
+                    <span className="ml-4 text-xl text-slate-500 group-open:rotate-45 transition-transform">
                       +
                     </span>
                   </summary>

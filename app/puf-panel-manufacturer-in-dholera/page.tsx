@@ -29,7 +29,7 @@ export default function DholeraPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={faqSchema} />
 
         <section className="relative bg-gradient-to-br from-violet-900 via-purple-900 to-slate-900 py-20 md:py-28">
@@ -114,7 +114,7 @@ export default function DholeraPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">PUF Panel Applications in Dholera</h2>
             <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
               {['Electronics & Semiconductor Manufacturing', 'Smart Manufacturing Facilities', 'Logistics & Warehousing Parks', 'Renewable Energy Installations', 'Food Processing & Cold Storage', 'Commercial & IT Parks', 'Automotive Component Manufacturing', 'Defense & Aerospace Manufacturing'].map((app, idx) => (
-                <div key={idx} className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg"><span className="text-violet-500">✓</span><span className="text-slate-700">{app}</span></div>
+                <div key={idx} className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg"><span className="text-violet-500" aria-hidden="true">✓</span><span className="text-slate-700">{app}</span></div>
               ))}
             </div>
           </div>

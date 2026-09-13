@@ -96,7 +96,7 @@ export default function CertificationsPage() {
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={faqSchema} />
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white section-padding">
           <div className="container-custom">
             <h1 className="text-3xl font-bold md:text-4xl lg:text-5xl">

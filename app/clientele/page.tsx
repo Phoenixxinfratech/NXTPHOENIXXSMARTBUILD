@@ -201,7 +201,7 @@ export default function ClientelePage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={breadcrumbSchema} />
 
         <AISummaryBlock
@@ -336,7 +336,7 @@ export default function ClientelePage() {
                         ))}
                         {/* And many more */}
                         <div className="flex flex-col items-center justify-center gap-2 p-4 rounded-xl border-2 border-dashed border-slate-300 bg-slate-50/50">
-                          <span className="text-3xl text-slate-400">+</span>
+                          <span className="text-3xl text-slate-500">+</span>
                           <span className="text-xs font-medium text-slate-500 text-center">
                             And many more...
                           </span>

@@ -112,7 +112,7 @@ export default function AboutPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={breadcrumbSchema} />
         <JsonLd data={organizationSchema} />
 
@@ -236,7 +236,7 @@ export default function AboutPage() {
               <div className="relative rounded-2xl bg-white/5 border border-white/10 p-8 md:p-10 overflow-hidden">
                 <div className="absolute top-0 right-0 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl" />
                 <div className="relative">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-3xl mb-6 shadow-lg">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-3xl mb-6 shadow-lg" aria-hidden="true">
                     🎯
                   </div>
                   <h2 className="text-2xl md:text-3xl font-bold text-white">Our Vision</h2>
@@ -252,7 +252,7 @@ export default function AboutPage() {
               <div className="relative rounded-2xl bg-white/5 border border-white/10 p-8 md:p-10 overflow-hidden">
                 <div className="absolute bottom-0 left-0 w-40 h-40 bg-emerald-500/10 rounded-full blur-3xl" />
                 <div className="relative">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-3xl mb-6 shadow-lg">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-3xl mb-6 shadow-lg" aria-hidden="true">
                     🚀
                   </div>
                   <h2 className="text-2xl md:text-3xl font-bold text-white">Our Mission</h2>
@@ -321,7 +321,7 @@ export default function AboutPage() {
                     { title: 'Technical Reliability', desc: 'Infrastructure built to perform over its full lifecycle' },
                   ].map((item) => (
                     <div key={item.title} className="flex items-start gap-4 p-4 rounded-xl bg-emerald-50 border border-emerald-100">
-                      <span className="flex-shrink-0 w-10 h-10 rounded-lg bg-emerald-500 flex items-center justify-center text-white">
+                      <span className="flex-shrink-0 w-10 h-10 rounded-lg bg-emerald-500 flex items-center justify-center text-white" aria-hidden="true">
                         ✓
                       </span>
                       <div>
@@ -422,7 +422,7 @@ export default function AboutPage() {
                         className="object-cover"
                       />
                     ) : (
-                      <div className="w-full h-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-4xl text-white">
+                      <div className="w-full h-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-4xl text-white" aria-hidden="true">
                         👤
                       </div>
                     )}

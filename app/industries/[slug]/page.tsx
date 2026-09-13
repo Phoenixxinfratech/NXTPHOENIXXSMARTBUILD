@@ -281,7 +281,7 @@ export default async function IndustryDetailPage({ params }: Props) {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={industrySchema} />
 
         {/* Hero */}
@@ -353,7 +353,7 @@ export default async function IndustryDetailPage({ params }: Props) {
             <div className="grid gap-8 md:grid-cols-2">
               {data.requirements.map((req) => (
                 <div key={req.title} className="flex gap-4">
-                  <span className={`flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br ${data.gradient} flex items-center justify-center text-white text-xl`}>
+                  <span className={`flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br ${data.gradient} flex items-center justify-center text-white text-xl`} aria-hidden="true">
                     ✓
                   </span>
                   <div>

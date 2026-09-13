@@ -62,7 +62,7 @@ export default function BrochurePage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* Hero */}
         <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 md:py-24">
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-[0.03]" />
@@ -95,8 +95,8 @@ export default function BrochurePage() {
                 <div className="grid gap-8 md:grid-cols-2 items-center bg-gradient-to-br from-blue-50 to-emerald-50 rounded-3xl p-8 md:p-12">
                   <div className="aspect-[3/4] bg-white rounded-2xl shadow-2xl flex items-center justify-center">
                     <div className="text-center p-8">
-                      <span className="text-8xl opacity-30">📄</span>
-                      <p className="mt-4 text-slate-400">Brochure Preview</p>
+                      <span className="text-8xl opacity-30" aria-hidden="true">📄</span>
+                      <p className="mt-4 text-slate-500">Brochure Preview</p>
                     </div>
                   </div>
                   <div>
@@ -158,7 +158,7 @@ export default function BrochurePage() {
                       <div className="flex-1">
                         <h3 className="font-bold text-slate-900">{brochure.title}</h3>
                         <p className="mt-1 text-sm text-slate-600">{brochure.description}</p>
-                        <div className="mt-3 flex items-center gap-4 text-xs text-slate-400">
+                        <div className="mt-3 flex items-center gap-4 text-xs text-slate-500">
                           <span>{brochure.pages}</span>
                           <span>{brochure.size}</span>
                         </div>

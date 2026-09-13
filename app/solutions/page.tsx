@@ -98,7 +98,7 @@ export default function SolutionsPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={breadcrumbSchema} />
 
         <AISummaryBlock
@@ -257,7 +257,7 @@ export default function SolutionsPage() {
                     { title: 'Quality Assurance', desc: 'In-house manufacturing control' },
                   ].map((item) => (
                     <div key={item.title} className="flex items-start gap-3">
-                      <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400">
+                      <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400" aria-hidden="true">
                         ✓
                       </span>
                       <div>
@@ -279,7 +279,7 @@ export default function SolutionsPage() {
               <div className="relative">
                 <div className="aspect-square rounded-2xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 border border-white/10 p-8 flex items-center justify-center">
                   <div className="text-center">
-                    <span className="text-9xl opacity-20">🔧</span>
+                    <span className="text-9xl opacity-20" aria-hidden="true">🔧</span>
                     <p className="mt-4 text-slate-400">Turnkey Project Illustration</p>
                   </div>
                 </div>

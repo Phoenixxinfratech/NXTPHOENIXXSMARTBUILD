@@ -361,7 +361,7 @@ function SandwichPanelsPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={breadcrumbSchema} />
         <JsonLd data={faqSchema} />
         <JsonLd data={productSchema} />
@@ -472,7 +472,7 @@ function SandwichPanelsPage() {
                   <div className="p-5">
                     <h3 className="font-bold text-slate-900 group-hover:text-blue-600 transition-colors">{product.name}</h3>
                     <p className="mt-2 text-sm text-slate-600 line-clamp-2">{product.description}</p>
-                    <p className="mt-2 text-xs text-slate-400">{product.keywords}</p>
+                    <p className="mt-2 text-xs text-slate-500">{product.keywords}</p>
                     <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-blue-600">
                       View Details →
                     </span>
@@ -643,7 +643,7 @@ function SandwichPanelsPage() {
               <div className="mt-4 flex items-center justify-center gap-2">
                 <div className="flex">
                   {[1, 2, 3, 4, 5].map((star) => (
-                    <span key={star} className="text-yellow-500 text-xl">★</span>
+                    <span key={star} className="text-yellow-500 text-xl" aria-hidden="true">★</span>
                   ))}
                 </div>
                 <span className="text-slate-600">{data.testimonial.rating}/5 from {data.testimonial.reviews}+ reviews</span>
@@ -697,7 +697,7 @@ function SandwichPanelsPage() {
                 {/* General */}
                 <div>
                   <h3 className="text-lg font-bold text-slate-700 mb-4 flex items-center gap-2">
-                    <span className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-sm">📌</span>
+                    <span className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-sm" aria-hidden="true">📌</span>
                     General Questions
                   </h3>
                   <div className="space-y-3">
@@ -718,7 +718,7 @@ function SandwichPanelsPage() {
                 {/* Technical */}
                 <div>
                   <h3 className="text-lg font-bold text-slate-700 mb-4 flex items-center gap-2">
-                    <span className="w-8 h-8 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm">⚙️</span>
+                    <span className="w-8 h-8 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm" aria-hidden="true">⚙️</span>
                     Technical Questions
                   </h3>
                   <div className="space-y-3">
@@ -739,7 +739,7 @@ function SandwichPanelsPage() {
                 {/* Applications */}
                 <div>
                   <h3 className="text-lg font-bold text-slate-700 mb-4 flex items-center gap-2">
-                    <span className="w-8 h-8 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center text-sm">🏭</span>
+                    <span className="w-8 h-8 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center text-sm" aria-hidden="true">🏭</span>
                     Application Questions
                   </h3>
                   <div className="space-y-3">
@@ -760,7 +760,7 @@ function SandwichPanelsPage() {
                 {/* Buying */}
                 <div>
                   <h3 className="text-lg font-bold text-slate-700 mb-4 flex items-center gap-2">
-                    <span className="w-8 h-8 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center text-sm">🛒</span>
+                    <span className="w-8 h-8 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center text-sm" aria-hidden="true">🛒</span>
                     Buying & Delivery
                   </h3>
                   <div className="space-y-3">
@@ -825,7 +825,7 @@ function OtherCategoryPage({ data, category }: { data: typeof otherCategoriesDat
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={breadcrumbSchema} />
         <AISummaryBlock summary={data.aiSummary} keywords={data.keywords} />
 
@@ -872,7 +872,7 @@ function OtherCategoryPage({ data, category }: { data: typeof otherCategoriesDat
                     <div className="mt-6 grid gap-2 sm:grid-cols-2">
                       {product.features.map((feature) => (
                         <div key={feature} className="flex items-center gap-2 text-sm text-slate-700">
-                          <span className={`w-5 h-5 rounded-full bg-gradient-to-br ${data.gradient} flex items-center justify-center text-white text-xs`}>✓</span>
+                          <span className={`w-5 h-5 rounded-full bg-gradient-to-br ${data.gradient} flex items-center justify-center text-white text-xs`} aria-hidden="true">✓</span>
                           {feature}
                         </div>
                       ))}

@@ -142,7 +142,7 @@ export default function DoorsPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={breadcrumbSchema} />
         <JsonLd data={faqSchema} />
         <AISummaryBlock summary={doorsData.aiSummary} keywords={doorsData.keywords} />
@@ -318,7 +318,7 @@ export default function DoorsPage() {
           <div className="container-custom text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Trusted by Industry Leaders</h2>
             <div className="flex items-center justify-center gap-2 mb-8">
-              <div className="flex">{[1,2,3,4,5].map((s) => <span key={s} className="text-yellow-500 text-xl">★</span>)}</div>
+              <div className="flex">{[1,2,3,4,5].map((s) => <span key={s} className="text-yellow-500 text-xl" aria-hidden="true">★</span>)}</div>
               <span className="text-slate-600">{doorsData.testimonial.rating}/5 from {doorsData.testimonial.reviews}+ clients</span>
             </div>
             <blockquote className="max-w-3xl mx-auto">

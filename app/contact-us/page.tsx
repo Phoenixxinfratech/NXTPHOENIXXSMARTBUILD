@@ -84,7 +84,7 @@ export default function ContactUsPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={contactPageSchema} />
         <JsonLd data={organizationSchema} />
 
@@ -180,9 +180,9 @@ export default function ContactUsPage() {
                 <div className="rounded-2xl bg-white shadow-lg overflow-hidden">
                   <div className="aspect-video bg-slate-200 flex items-center justify-center">
                     <div className="text-center">
-                      <span className="text-6xl">🗺️</span>
+                      <span className="text-6xl" aria-hidden="true">🗺️</span>
                       <p className="mt-4 text-slate-500">Map Integration</p>
-                      <p className="text-sm text-slate-400">Ahmedabad, Gujarat</p>
+                      <p className="text-sm text-slate-500">Ahmedabad, Gujarat</p>
                     </div>
                   </div>
                   <div className="p-6">

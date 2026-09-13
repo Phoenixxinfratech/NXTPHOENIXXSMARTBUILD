@@ -75,7 +75,7 @@ export default function GetAQuotePage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-16 md:py-20">
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-[0.03]" />
@@ -137,6 +137,7 @@ export default function GetAQuotePage() {
                             type="text"
                             id="name"
                             name="name"
+                            autoComplete="name"
                             required
                             className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                             placeholder="Your full name"
@@ -150,6 +151,7 @@ export default function GetAQuotePage() {
                             type="text"
                             id="company"
                             name="company"
+                            autoComplete="organization"
                             required
                             className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                             placeholder="Your company"
@@ -163,6 +165,8 @@ export default function GetAQuotePage() {
                             type="email"
                             id="email"
                             name="email"
+                            autoComplete="email"
+                            inputMode="email"
                             required
                             className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                             placeholder="you@company.com"
@@ -176,6 +180,8 @@ export default function GetAQuotePage() {
                             type="tel"
                             id="phone"
                             name="phone"
+                            autoComplete="tel"
+                            inputMode="tel"
                             required
                             className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                             placeholder="+91 XXXXX XXXXX"
@@ -264,6 +270,7 @@ export default function GetAQuotePage() {
                               type="text"
                               id="location"
                               name="location"
+                              autoComplete="address-level2"
                               required
                               className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                               placeholder="City, State"
@@ -326,7 +333,7 @@ export default function GetAQuotePage() {
                     </div>
 
                     {error && (
-                      <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
+                      <div role="alert" className="p-4 bg-red-50 border border-red-200 rounded-lg">
                         <p className="text-red-600 text-center">{error}</p>
                       </div>
                     )}
@@ -365,7 +372,7 @@ export default function GetAQuotePage() {
                       'Fast turnaround times',
                     ].map((item) => (
                       <li key={item} className="flex items-start gap-2 text-sm text-slate-600">
-                        <span className="text-green-500 mt-0.5">✓</span>
+                        <span className="text-green-500 mt-0.5" aria-hidden="true">✓</span>
                         {item}
                       </li>
                     ))}
@@ -380,7 +387,7 @@ export default function GetAQuotePage() {
                       href="tel:+918866556879"
                       className="flex items-center gap-3 text-white/90 hover:text-white transition-colors"
                     >
-                      <span className="text-xl">📞</span>
+                      <span className="text-xl" aria-hidden="true">📞</span>
                       <span>+91 88665 56879</span>
                     </a>
                     <a
@@ -389,14 +396,14 @@ export default function GetAQuotePage() {
                       rel="noopener noreferrer"
                       className="flex items-center gap-3 text-white/90 hover:text-white transition-colors"
                     >
-                      <span className="text-xl">💬</span>
+                      <span className="text-xl" aria-hidden="true">💬</span>
                       <span>WhatsApp Us</span>
                     </a>
                     <a
                       href="mailto:sales@phoenixxsmartbuild.com"
                       className="flex items-center gap-3 text-white/90 hover:text-white transition-colors"
                     >
-                      <span className="text-xl">📧</span>
+                      <span className="text-xl" aria-hidden="true">📧</span>
                       <span>sales@phoenixxsmartbuild.com</span>
                     </a>
                   </div>
@@ -405,7 +412,7 @@ export default function GetAQuotePage() {
                 {/* Response Time */}
                 <div className="bg-amber-50 border border-amber-200 rounded-xl p-6">
                   <div className="flex items-start gap-3">
-                    <span className="text-2xl">⏱️</span>
+                    <span className="text-2xl" aria-hidden="true">⏱️</span>
                     <div>
                       <h4 className="font-semibold text-amber-900">Quick Response</h4>
                       <p className="text-sm text-amber-700 mt-1">
