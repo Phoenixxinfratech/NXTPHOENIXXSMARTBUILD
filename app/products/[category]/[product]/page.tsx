@@ -261,7 +261,7 @@ const productsData: Record<string, Record<string, ProductData>> = {
       // Related resources for internal linking
       relatedResources: [
         { title: 'PIR vs PUF vs Rockwool: Which Panel Is Best?', description: 'Complete comparison guide for choosing the right insulated panel for your project.', href: '/resources/blogs/puf-vs-pir-vs-rockwool', type: 'blog' },
-        { title: 'PIR Panel Price Guide', description: 'Current market prices and factors affecting PIR panel costs in India.', href: '/resources/blogs/puf-panel-price-ahmedabad-2025-guide', type: 'blog' },
+        { title: 'PIR Panel Price Guide', description: 'Current market prices and factors affecting PIR panel costs in India.', href: '/resources/blogs/puf-panel-price-ahmedabad', type: 'blog' },
         { title: 'Fire Safety in Industrial Buildings', description: 'Best practices for fire-safe construction using insulated panels.', href: '/resources/blogs/fire-safety-industrial-buildings', type: 'blog' },
         { title: 'PIR Panel Manufacturer in Ahmedabad', description: 'Factory-direct PIR panels from PHOENIXX headquarters in Ahmedabad.', href: '/puf-panel-manufacturer-in-ahmedabad', type: 'location' },
         { title: 'PIR Panel Supplier in Gujarat', description: 'Pan-Gujarat delivery of PIR panels from GIDC Naroda facility.', href: '/resources/blogs/puf-panel-manufacturers-in-gujarat', type: 'location' },

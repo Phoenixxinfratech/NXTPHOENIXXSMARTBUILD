@@ -223,7 +223,7 @@ const coldStorageFAQs: FAQ[] = [
     question: 'Which type of insulated panel is best for cold storage construction?',
     answer: 'PIR panels are recommended for most cold storage (+4°C to -25°C) due to excellent insulation and fire safety. For pharma cold chain, use PIR with SS inner face. Deep freeze (-40°C) requires 150mm+ PIR with vapor barrier. FM Approved PIR is mandatory for FM Global insured facilities.',
     linkText: 'Panel selection guide',
-    linkHref: '/resources/blogs/choosing-right-insulated-panel',
+    linkHref: '/resources/blogs/how-to-choose-right-insulated-panel',
   },
 ];
 

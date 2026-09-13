@@ -174,6 +174,23 @@ const nextConfig = {
       // ============================================
       // Blog slug redirects (short/incorrect slugs → correct slugs)
       // ============================================
+      // Consolidated duplicates: these targeted the same query as their
+      // destination and split rankings between near-identical articles.
+      {
+        source: '/resources/blogs/choosing-right-insulated-panel',
+        destination: '/resources/blogs/how-to-choose-right-insulated-panel',
+        permanent: true,
+      },
+      {
+        source: '/resources/blogs/puf-panel-price-ahmedabad-2025-guide',
+        destination: '/resources/blogs/puf-panel-price-ahmedabad',
+        permanent: true,
+      },
+      {
+        source: '/resources/blogs/puf-panel-price-ahmedabad-2026-guide',
+        destination: '/resources/blogs/puf-panel-price-ahmedabad',
+        permanent: true,
+      },
       {
         source: '/resources/blogs/sustainable-peb-structures',
         destination: '/resources/blogs/rise-of-sustainable-peb-structures',

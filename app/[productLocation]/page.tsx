@@ -961,7 +961,7 @@ export default async function ProductLocationPage({ params }: { params: Promise<
                         </Link>
                       </li>
                       <li>
-                        <Link href="/resources/blogs/puf-panel-price-ahmedabad-2025-guide" className="text-primary hover:underline flex items-center gap-2">
+                        <Link href="/resources/blogs/puf-panel-price-ahmedabad" className="text-primary hover:underline flex items-center gap-2">
                           <span className="text-orange-500">→</span> PUF Panel Price Guide
                         </Link>
                       </li>
