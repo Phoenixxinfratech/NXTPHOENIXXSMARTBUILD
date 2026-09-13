@@ -805,7 +805,7 @@ export default function BestPufPanelForCleanRoomPage() {
                       { label: 'Antimicrobial Coating', value: 'Optional — silver-ion or copper-based' },
                       { label: 'VOC Emission', value: 'Low outgassing certified (pharma-grade PIR)' },
                       { label: 'Cleanroom Compatibility', value: 'ISO Class 5 to ISO Class 8 (ISO 14644-1)' },
-                      { label: 'Panel Width', value: '1000mm / 1150mm (effective coverage)' },
+                      { label: 'Panel Width', value: '1000mm effective coverage (1200mm on request)' },
                       { label: 'Panel Length', value: 'Custom — up to 12 metres' },
                       { label: 'Integrated Accessories', value: 'HEPA modules, pass-boxes, doors, viewing windows, returns' },
                       { label: 'Service Life', value: '25+ years (with proper maintenance)' },

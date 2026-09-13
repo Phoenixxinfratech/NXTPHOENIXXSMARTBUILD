@@ -27,7 +27,7 @@ export const pageSEO: Record<string, PageSEO> = {
   },
   aboutUs: {
     title: 'About PHOENIXX – India\'s EPC Infrastructure Partner',
-    description: 'PHOENIXX delivers smart EPC solutions: PEB, cold storage, cleanrooms. 10+ years experience. Trusted by 500+ clients. Contact us today.',
+    description: 'PHOENIXX delivers smart EPC solutions: PEB, cold storage, cleanrooms. 13+ years experience. Trusted by 500+ clients. Contact us today.',
   },
   products: {
     title: 'Industrial Products – Panels, Doors & Cleanrooms',
@@ -286,7 +286,7 @@ export const locationSEO: Record<string, PageSEO> = {
 export const keywordPageSEO: Record<string, PageSEO> = {
   bestPufPanelManufacturer: {
     title: 'Best PUF Panel Manufacturer in India | PHOENIXX',
-    description: 'Choose India\'s best PUF panel manufacturer. ISO certified, 10+ years experience, 500+ clients. Premium quality guaranteed.',
+    description: 'Choose India\'s best PUF panel manufacturer. ISO certified, 13+ years experience, 500+ clients. Premium quality guaranteed.',
   },
   topPufPanelManufacturers: {
     title: 'Top PUF Panel Manufacturers in India',

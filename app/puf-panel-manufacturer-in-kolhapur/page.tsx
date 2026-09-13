@@ -103,7 +103,7 @@ export default function KolhapurPage() {
                 { title: 'Regional Coverage', desc: 'Western Maharashtra served' },
                 { title: 'Competitive Rates', desc: 'Best regional pricing' },
                 { title: 'Technical Support', desc: 'Expert guidance' },
-                { title: '18+ Years', desc: 'Industry experience' },
+                { title: '13+ Years', desc: 'Industry experience' },
               ].map((item, idx) => (<div key={idx} className="text-center"><h3 className="font-bold text-rose-400">{item.title}</h3><p className="mt-2 text-slate-300 text-sm">{item.desc}</p></div>))}
             </div>
           </div>

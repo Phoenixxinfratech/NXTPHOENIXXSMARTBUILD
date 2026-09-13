@@ -4,11 +4,12 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import { siteConfig } from '@/lib/site-config';
 
-const PHONE = '8866556879';
-const PHONE_DISPLAY = '88665 56879';
-const WHATSAPP_URL = `https://wa.me/91${PHONE}`;
-const EMAIL = 'sales@phoenixxsmartbuild.com';
+const PHONE = siteConfig.whatsapp.replace(/^91/, '');
+const PHONE_DISPLAY = siteConfig.contact.phone.replace(/^\+91\s*/, '');
+const WHATSAPP_URL = `https://wa.me/${siteConfig.whatsapp}`;
+const EMAIL = siteConfig.contact.sales;
 
 const productInterestOptions = [
   'Roofing PUF Panels',
@@ -293,7 +294,7 @@ export default function LandingPageClient() {
                 {[
                   { label: 'Thickness', value: '30mm to 150mm', icon: '\uD83D\uDCCF' },
                   { label: 'Density', value: '40 \u00B1 2 kg/m\u00B3', icon: '\uD83E\uDDF1' },
-                  { label: 'Width', value: '1000 to 1200 mm', icon: '\u2194\uFE0F' },
+                  { label: 'Width', value: '1000 mm effective cover (1200 mm on request)', icon: '\u2194\uFE0F' },
                   { label: 'Length', value: 'Custom Available', icon: '\uD83D\uDCD0' },
                 ].map((spec) => (
                   <div

@@ -50,7 +50,7 @@ const pufPanelFAQs: FAQ[] = [
   },
   {
     id: 'puf-2',
-    question: 'What is the current price of PUF panels per square foot in India for 2025?',
+    question: 'What is the current price of PUF panels per square foot in India?',
     answer: 'PUF panel prices in India range from ₹80-180 per square foot depending on thickness (40mm-150mm), steel gauge (0.35mm-0.60mm), and coating type. A standard 50mm PUF wall panel with 0.5mm PPGI costs approximately ₹110-130 per sq.ft. Bulk orders and project-specific requirements affect final pricing.',
     linkText: 'Get current pricing',
     linkHref: '/get-a-quote',

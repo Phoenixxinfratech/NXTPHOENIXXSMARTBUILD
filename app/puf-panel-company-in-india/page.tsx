@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     question: 'What is PHOENIXX SmartBuild\'s experience as a PUF panel company?',
-    answer: 'PHOENIXX has 18+ years of experience as a PUF panel company in India, successfully completing 150+ projects across pharmaceuticals, food processing, cold storage, warehousing, and industrial sectors with consistent quality and customer satisfaction.',
+    answer: 'PHOENIXX has 13+ years of experience as a PUF panel company in India, successfully completing 500+ projects across pharmaceuticals, food processing, cold storage, warehousing, and industrial sectors with consistent quality and customer satisfaction.',
   },
   {
     question: 'Does PHOENIXX provide turnkey solutions?',

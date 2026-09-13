@@ -241,7 +241,7 @@ export default function SuratPage() {
                 { title: 'Competitive Pricing', desc: 'Factory-direct rates for Surat' },
                 { title: 'Quality Assured', desc: '40 kg/m³ high-density foam' },
                 { title: 'Installation Help', desc: 'Guidance for GIDC projects' },
-                { title: '18+ Years', desc: 'Experience in Gujarat market' },
+                { title: '13+ Years', desc: 'Experience in Gujarat market' },
                 { title: 'All Thicknesses', desc: '30mm to 150mm available' },
               ].map((item, idx) => (
                 <div key={idx} className="text-center">

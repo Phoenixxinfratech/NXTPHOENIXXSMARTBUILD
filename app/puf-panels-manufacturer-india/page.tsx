@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: 'Who is the reliable PUF panels manufacturer in India?',
-    answer: 'PHOENIXX SmartBuild is a trusted PUF panels manufacturer in India with 18+ years of experience, 150+ completed projects, and manufacturing facilities equipped with advanced continuous lamination technology for consistent quality production.',
+    answer: 'PHOENIXX SmartBuild is a trusted PUF panels manufacturer in India with 13+ years of experience, 500+ completed projects, and manufacturing facilities equipped with advanced continuous lamination technology for consistent quality production.',
   },
   {
     question: 'What types of PUF panels does PHOENIXX manufacture?',

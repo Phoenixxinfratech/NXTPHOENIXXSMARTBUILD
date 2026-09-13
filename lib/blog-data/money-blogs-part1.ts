@@ -362,7 +362,7 @@ export const moneyBlogsPart1: Record<string, BlogPost> = {
         <li><strong>Core Density:</strong> Standard 38\u201340&nbsp;kg/m&sup3; density is the most economical. Higher densities (42\u201345&nbsp;kg/m&sup3;) for structural applications add 5\u20138% to cost.</li>
         <li><strong>Steel Sheet Specification:</strong> Upgrading from 0.45&nbsp;mm to 0.60&nbsp;mm steel or switching from PPGI to stainless steel can increase pricing by 20\u201350%.</li>
         <li><strong>Joint Type:</strong> Tongue-and-groove joints are standard and most affordable. Cam-lock joints used in cold storage are 10\u201315% more expensive per sq ft.</li>
-        <li><strong>Fire Rating:</strong> Standard PUF is B3 rated. Achieving B1 or B2 fire-rated panels using fire-retardant additives adds 8\u201315% to cost. For higher fire ratings, consider <a href="/products/sandwich-panels/pir-panel">PIR panels</a>.</li>
+        <li><strong>Fire Rating:</strong> Standard PUF is B3 under DIN 4102, equivalent to Class E under EN 13501-1. Achieving B1 or B2 fire-rated panels using fire-retardant additives adds 8\u201315% to cost. For higher fire ratings, consider <a href="/products/sandwich-panels/pir-panel">PIR panels</a>.</li>
         <li><strong>Delivery Location:</strong> Freight from Gujarat to South or East India can add \u20b912\u2013\u20b930 per sq ft.</li>
         <li><strong>Market Conditions:</strong> International steel and chemical prices directly influence domestic panel costs.</li>
       </ul>
@@ -385,6 +385,7 @@ export const moneyBlogsPart1: Record<string, BlogPost> = {
     `,
     category: 'Pricing',
     date: '2026-03-09',
+    lastModified: '2026-09-13',
     readTime: '9 min read',
     author: { name: 'Engineering Team', role: 'PHOENIXX SmartBuild' },
     keywords: [

@@ -197,7 +197,7 @@ export const serpBlogsPart3: Record<string, BlogPost> = {
       <h2>Why Choose Phoenixx SmartBuild for Ceiling Panels?</h2>
       <ul>
         <li><strong>Manufacturing facility in Beawar, Rajasthan</strong> with 1,00,000+ sq ft annual capacity</li>
-        <li><strong>Ready stock available</strong> for standard sizes (1000 mm / 1150 mm width)</li>
+        <li><strong>Ready stock available</strong> for standard sizes (1000 mm effective cover width)</li>
         <li>Custom lengths up to 12 metres \u2013 reducing on-site joints</li>
         <li>In-house design support for grid layout and load calculations</li>
         <li>Pan-India delivery with dedicated fleet to Gujarat, Maharashtra, Rajasthan, and MP</li>
@@ -208,6 +208,7 @@ export const serpBlogsPart3: Record<string, BlogPost> = {
     `,
     category: 'Application Guide',
     date: '2026-04-04',
+    lastModified: '2026-09-13',
     readTime: '10 min read',
     author: { name: 'Engineering Team', role: 'PHOENIXX SmartBuild' },
     keywords: ['PUF ceiling panels', 'commercial ceiling insulation', 'false ceiling PUF panel', 'walkable ceiling panels', 'cleanroom ceiling panels', 'PUF panel cost per sq ft', 'PUF vs gypsum ceiling'],
@@ -806,7 +807,7 @@ export const serpBlogsPart3: Record<string, BlogPost> = {
         <li><strong>Installation support:</strong> Network of trained installation partners across Maharashtra</li>
         <li><strong>Site technical assistance:</strong> Phoenixx engineers available for project supervision</li>
       </ul>
-      <p>We have successfully delivered to over <strong>200+ projects across Maharashtra</strong>, including MIDC factories, food parks, pharmaceutical plants, and logistics warehouses.</p>
+      <p>We have successfully delivered to over <strong>500+ projects across Maharashtra</strong>, including MIDC factories, food parks, pharmaceutical plants, and logistics warehouses.</p>
 
       <p><strong>Ready stock available. Get quote in 24 hours.</strong> Whether your project is in Chakan, Bhiwandi, Waluj, or Butibori, Phoenixx SmartBuild delivers factory-direct. <a href="/get-a-quote">Get Maharashtra quote \u2192</a></p>
       <p>Visit our Maharashtra-specific page for more: <a href="/sandwich-puf-panel-in-maharashtra">PUF panel Maharashtra</a>.</p>
@@ -815,6 +816,7 @@ export const serpBlogsPart3: Record<string, BlogPost> = {
     `,
     category: 'Location Guide',
     date: '2026-04-04',
+    lastModified: '2026-09-13',
     readTime: '11 min read',
     author: { name: 'Engineering Team', role: 'PHOENIXX SmartBuild' },
     keywords: ['PUF panels Maharashtra', 'PUF panel manufacturer Maharashtra', 'industrial insulation Maharashtra', 'PUF panel MIDC', 'PUF panel Pune', 'PUF panel Mumbai', 'PUF panel Aurangabad'],

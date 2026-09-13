@@ -181,7 +181,7 @@ const nearbyLocations = [
 // Related blog posts for internal linking
 const relatedBlogs = [
   { title: 'PUF Panel Manufacturers in Ahmedabad - Complete Guide', href: '/resources/blogs/puf-panel-manufacturers-in-ahmedabad' },
-  { title: 'PUF Panel Price Ahmedabad 2025 Guide', href: '/resources/blogs/puf-panel-price-ahmedabad-2025-guide' },
+  { title: 'PUF Panel Price Ahmedabad Guide', href: '/resources/blogs/puf-panel-price-ahmedabad-2025-guide' },
   { title: 'Industrial Roofing Solutions Ahmedabad GIDC', href: '/resources/blogs/industrial-roofing-solutions-ahmedabad-gidc' },
   { title: 'PUF vs PIR vs Rockwool for Ahmedabad Climate', href: '/resources/blogs/puf-vs-pir-vs-rockwool-ahmedabad-climate' },
   { title: 'Cold Storage Panel Manufacturers Ahmedabad', href: '/resources/blogs/cold-storage-panel-manufacturers-ahmedabad' },

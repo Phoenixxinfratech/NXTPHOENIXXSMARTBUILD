@@ -832,7 +832,7 @@ export default function BestPufPanelForColdStoragePage() {
                       { label: 'Interior Finish', value: 'Food-grade PPGI / Stainless Steel 304 option' },
                       { label: 'Water Absorption', value: 'Zero (closed-cell structure)' },
                       { label: 'Compressive Strength', value: '≥ 0.15 MPa' },
-                      { label: 'Panel Width', value: '1000mm / 1150mm (effective coverage)' },
+                      { label: 'Panel Width', value: '1000mm effective coverage (1200mm on request)' },
                       { label: 'Panel Length', value: 'Custom — up to 12 metres' },
                       { label: 'Service Life', value: '25-30 years (95%+ insulation retention)' },
                     ].map((row, idx) => (

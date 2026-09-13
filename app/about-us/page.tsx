@@ -11,7 +11,7 @@ import { AeoContentBlocks, DEFAULT_PUF_SPECS } from '@/components/seo/aeo-conten
 export const metadata: Metadata = {
   title: 'About PHOENIXX – India\'s EPC Infrastructure Partner',
   description:
-    'PHOENIXX delivers smart EPC solutions: PEB, cold storage, cleanrooms. 10+ years experience. Trusted by 500+ clients. Contact us today.',
+    'PHOENIXX delivers smart EPC solutions: PEB, cold storage, cleanrooms. 13+ years experience. Trusted by 500+ clients. Contact us today.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/about-us',
   },
@@ -23,6 +23,7 @@ const milestones = [
   { year: '2017', title: 'First Turnkey Project', description: 'First turnkey cold storage project delivered successfully' },
   { year: '2020', title: 'Multi-Sector Expansion', description: 'Expansion into multi-sector EPC solutions' },
   { year: '2024', title: 'Industry Recognition', description: 'Recognized as a future-ready EPC infrastructure partner' },
+  { year: '2026', title: 'Export Operations', description: 'Container export of panels and building systems to African markets from our Gujarat facility' },
 ];
 
 // Core values

@@ -26,7 +26,7 @@ const resources = [
     description: 'Browse our completed projects across industries—cold storage, cleanrooms, PEB, and more.',
     href: '/resources/project-gallery',
     icon: '📷',
-    count: '100+ Projects',
+    count: '500+ Projects',
     gradient: 'from-emerald-500 to-teal-600',
   },
   {

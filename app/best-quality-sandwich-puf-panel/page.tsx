@@ -539,7 +539,7 @@ export default function BestQualitySandwichPufPanelPage() {
                 <em>
                   Content authored by the <strong>PHOENIXX SMARTBUILD Engineering Team</strong> — 13+ years of
                   hands-on experience in insulated panel manufacturing, installation, and quality assurance across
-                  150+ industrial projects in India.
+                  500+ industrial projects in India.
                 </em>
               </p>
             </div>

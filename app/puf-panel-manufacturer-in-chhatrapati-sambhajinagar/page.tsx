@@ -103,7 +103,7 @@ export default function AurangabadPage() {
                 { title: 'Technical Support', desc: 'Expert guidance' },
                 { title: 'Competitive Rates', desc: 'Best pricing' },
                 { title: 'Greenfield Support', desc: 'New project expertise' },
-                { title: '18+ Years', desc: 'Maharashtra experience' },
+                { title: '13+ Years', desc: 'Maharashtra experience' },
               ].map((item, idx) => (<div key={idx} className="text-center"><h3 className="font-bold text-orange-400">{item.title}</h3><p className="mt-2 text-slate-300 text-sm">{item.desc}</p></div>))}
             </div>
           </div>

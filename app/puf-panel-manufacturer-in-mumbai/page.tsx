@@ -147,7 +147,7 @@ export default function MumbaiPage() {
                 { title: 'Quality Certified', desc: 'ISO-compliant products' },
                 { title: 'Technical Support', desc: 'Expert guidance available' },
                 { title: 'Competitive Rates', desc: 'Best pricing for volume' },
-                { title: '18+ Years', desc: 'Maharashtra market experience' },
+                { title: '13+ Years', desc: 'Maharashtra market experience' },
                 { title: 'Full Range', desc: '30mm to 150mm thickness' },
               ].map((item, idx) => (<div key={idx} className="text-center"><h3 className="font-bold text-blue-400">{item.title}</h3><p className="mt-2 text-slate-300 text-sm">{item.desc}</p></div>))}
             </div>

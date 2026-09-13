@@ -103,7 +103,7 @@ export default function JamnagarPage() {
                 { title: 'Large Projects', desc: 'Bulk supply capability' },
                 { title: 'Timely Delivery', desc: '8-12 days to Jamnagar' },
                 { title: 'Technical Support', desc: 'Expert guidance available' },
-                { title: '18+ Years', desc: 'Gujarat market presence' },
+                { title: '13+ Years', desc: 'Gujarat market presence' },
               ].map((item, idx) => (<div key={idx} className="text-center"><h3 className="font-bold text-amber-400">{item.title}</h3><p className="mt-2 text-slate-300 text-sm">{item.desc}</p></div>))}
             </div>
           </div>

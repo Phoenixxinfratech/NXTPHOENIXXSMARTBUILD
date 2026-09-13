@@ -376,7 +376,7 @@ export const locationBlogs: Record<string, BlogPost> = {
   <li><strong>Custom dimensions</strong> \u2013 panels cut to your exact length and width, minimising on-site waste.</li>
   <li><strong>Fire safety expertise</strong> \u2013 we recommend the right fire-rated panel for your industry\u2019s compliance needs.</li>
   <li><strong>Installation support</strong> \u2013 our technical team provides on-site supervision for Surat projects.</li>
-  <li><strong>Proven track record</strong> \u2013 100+ projects delivered in the Surat\u2013Vapi\u2013Navsari industrial belt.</li>
+  <li><strong>Proven track record</strong> \u2013 500+ projects delivered in the Surat\u2013Vapi\u2013Navsari industrial belt.</li>
 </ul>
 
 <h2>Get Sandwich Panels Delivered to Surat</h2>

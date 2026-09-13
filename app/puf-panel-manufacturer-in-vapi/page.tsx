@@ -103,7 +103,7 @@ export default function VapiPage() {
                 { title: 'Quality Certified', desc: 'Documentation for audits' },
                 { title: 'Competitive Rates', desc: 'Best pricing for GIDC' },
                 { title: 'Technical Support', desc: 'Expert guidance team' },
-                { title: '18+ Years', desc: 'Industry experience' },
+                { title: '13+ Years', desc: 'Industry experience' },
               ].map((item, idx) => (<div key={idx} className="text-center"><h3 className="font-bold text-teal-400">{item.title}</h3><p className="mt-2 text-slate-300 text-sm">{item.desc}</p></div>))}
             </div>
           </div>

@@ -261,7 +261,7 @@ const productsData: Record<string, Record<string, ProductData>> = {
       // Related resources for internal linking
       relatedResources: [
         { title: 'PIR vs PUF vs Rockwool: Which Panel Is Best?', description: 'Complete comparison guide for choosing the right insulated panel for your project.', href: '/resources/blogs/puf-vs-pir-vs-rockwool', type: 'blog' },
-        { title: 'PIR Panel Price Guide 2025', description: 'Current market prices and factors affecting PIR panel costs in India.', href: '/resources/blogs/puf-panel-price-ahmedabad-2025-guide', type: 'blog' },
+        { title: 'PIR Panel Price Guide', description: 'Current market prices and factors affecting PIR panel costs in India.', href: '/resources/blogs/puf-panel-price-ahmedabad-2025-guide', type: 'blog' },
         { title: 'Fire Safety in Industrial Buildings', description: 'Best practices for fire-safe construction using insulated panels.', href: '/resources/blogs/fire-safety-industrial-buildings', type: 'blog' },
         { title: 'PIR Panel Manufacturer in Ahmedabad', description: 'Factory-direct PIR panels from PHOENIXX headquarters in Ahmedabad.', href: '/puf-panel-manufacturer-in-ahmedabad', type: 'location' },
         { title: 'PIR Panel Supplier in Gujarat', description: 'Pan-Gujarat delivery of PIR panels from GIDC Naroda facility.', href: '/resources/blogs/puf-panel-manufacturers-in-gujarat', type: 'location' },
@@ -342,7 +342,7 @@ const productsData: Record<string, Record<string, ProductData>> = {
         { question: 'What thickness of PUF panel is best for walls?', answer: 'For general industrial walls, 40-60mm PUF panels are recommended. For temperature-controlled environments, 80-120mm provides better insulation. Our team can recommend optimal thickness based on your specific needs.' },
         { question: 'How long do PUF panels last?', answer: 'Quality PUF panels like PHOENIXX last 20-25 years with proper installation and maintenance. The foam core maintains its insulation properties throughout its lifespan.' },
         { question: 'Can PUF panels be used for roofing?', answer: 'Yes, PHOENIXX offers roofing-specific PUF panels with trapezoidal profiles for water drainage and added structural strength. They provide both insulation and weatherproofing.' },
-        { question: 'Are PUF panels fire resistant?', answer: 'Standard PUF panels have Class E fire rating with self-extinguishing properties. For higher fire resistance, we recommend PIR or Rockwool panels.' },
+        { question: 'Are PUF panels fire resistant?', answer: 'Standard PUF panels are Class E under EN 13501-1, equivalent to B3 under DIN 4102, and are self-extinguishing. For higher fire resistance we recommend PIR panels (B-s1,d0) or Rockwool panels (Class A1, non-combustible).' },
         { question: 'What is the R-value of PUF panels?', answer: 'PUF panels provide R-values from R-5.5 (30mm) to R-35 (150mm). The 0.024 W/mK thermal conductivity offers excellent insulation per thickness.' },
         { question: 'How are PUF panels installed?', answer: 'PUF panels install quickly using cam-lock or tongue-and-groove joints. Vertical installation for walls with concealed fixings, horizontal for roofs with through-fixings. Typical installation rate is 200-300 sqm per day.' },
         { question: 'Can PUF panels be cut on site?', answer: 'Yes, PUF panels can be cut on site using circular saws or jigsaws. However, factory cutting is recommended for clean edges and proper sealing.' },
@@ -561,7 +561,7 @@ PHOENIXX PUF sandwich roof panels are specially designed to perform reliably in 
           category: 'Panel Dimensions',
           items: [
             { label: 'Thickness', value: '25, 30, 40, 50 mm' },
-            { label: 'Width', value: '1000/1200 mm' },
+            { label: 'Width', value: '1000 mm effective cover (1200 mm on request)' },
             { label: 'Length', value: 'Up to 6,000 mm' },
             { label: 'Weight', value: '6-12 kg/m²' },
           ],

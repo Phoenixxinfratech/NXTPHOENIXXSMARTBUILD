@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: 'What makes PHOENIXX a leading PUF panel company in India?',
-    answer: 'PHOENIXX SmartBuild has earned its position as a leading PUF panel company through 18+ years of industry experience, advanced manufacturing capabilities, consistent product quality, pan-India delivery network, and successful completion of 150+ industrial projects across diverse sectors.',
+    answer: 'PHOENIXX SmartBuild has earned its position as a leading PUF panel company through 13+ years of industry experience, advanced manufacturing capabilities, consistent product quality, pan-India delivery network, and successful completion of 500+ industrial projects across diverse sectors.',
   },
   {
     question: 'What products does a leading PUF panel company offer?',

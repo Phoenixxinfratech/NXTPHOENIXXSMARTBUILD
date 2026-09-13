@@ -103,7 +103,7 @@ export default function RajkotPage() {
                 { title: 'Quality Assured', desc: 'High-density 40 kg/m³ foam' },
                 { title: 'Fast Delivery', desc: '7-10 days to Rajkot' },
                 { title: 'All Applications', desc: 'Roof, wall, cold room panels' },
-                { title: '18+ Years', desc: 'Gujarat market experience' },
+                { title: '13+ Years', desc: 'Gujarat market experience' },
               ].map((item, idx) => (<div key={idx} className="text-center"><h3 className="font-bold text-blue-400">{item.title}</h3><p className="mt-2 text-slate-300 text-sm">{item.desc}</p></div>))}
             </div>
           </div>

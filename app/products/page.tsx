@@ -188,7 +188,7 @@ export default function ProductsPage() {
         <JsonLd data={productSchema} />
 
         <AISummaryBlock
-          summary="PHOENIXX manufactures high-performance infrastructure products including Sandwich PUF Panels (PIR, PUF, Roofing panels with thermal conductivity 0.022-0.024 W/mK), Industrial Doors (Cleanroom, Fire-rated up to 120 minutes), Cold Chain Solutions (Cold rooms, Freezers, Temperature-controlled storage), and Cleanroom Products (Partitions, Ceilings for ISO Class 5-8). With 14+ years experience and 210+ projects delivered across 20+ cities in India."
+          summary="PHOENIXX manufactures high-performance infrastructure products including Sandwich PUF Panels (PIR, PUF, Roofing panels with thermal conductivity 0.022-0.024 W/mK), Industrial Doors (Cleanroom, Fire-rated up to 120 minutes), Cold Chain Solutions (Cold rooms, Freezers, Temperature-controlled storage), and Cleanroom Products (Partitions, Ceilings for ISO Class 5-8). With 13+ years experience and 500+ projects delivered across 20+ cities in India."
           keywords={['Sandwich PUF Panels', 'PUF panels', 'cleanroom doors', 'fire doors', 'cold storage', 'insulated panels', 'cold chain solutions']}
         />
 

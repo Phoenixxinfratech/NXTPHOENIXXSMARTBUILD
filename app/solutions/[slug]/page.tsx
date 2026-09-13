@@ -430,7 +430,7 @@ const solutionsData: Record<string, {
       { question: 'What is the cost of a prefab cabin?', answer: 'Standard site office (10x12 ft): ₹1.5-2.5 lakhs. Labor accommodation (20x40 ft): ₹4-6 lakhs. Prices depend on size, specifications, and accessories included.' },
       { question: 'What foundation is required?', answer: 'Simple leveled ground with concrete blocks is sufficient for temporary installations. Permanent structures may require strip foundations depending on soil conditions.' },
       { question: 'Can AC be installed in prefab units?', answer: 'Yes. Our insulated panels support AC loads. We provide provisions for split AC units with proper sealing to maintain thermal efficiency.' },
-      { question: 'Are prefab units fire-resistant?', answer: 'Standard PUF panels are B3 rated. For enhanced fire safety, we offer PIR panels with B2 rating. Fire extinguishers and smoke detectors are recommended.' },
+      { question: 'Are prefab units fire-resistant?', answer: 'Standard PUF panels are B3 under DIN 4102, equivalent to Class E under EN 13501-1. For enhanced fire safety we offer PIR panels rated B-s1,d0, and Rockwool panels which are non-combustible (Class A1). Fire extinguishers and smoke detectors are recommended in all cases.' },
       { question: 'Do you provide toilet and bathroom fittings?', answer: 'Yes. We supply prefab units with integrated toilets, bathrooms, plumbing, and fixtures. Portable toilet units are also available for construction sites.' },
       { question: 'Can multiple units be connected?', answer: 'Yes. Units can be joined to create larger facilities. Corridors, common areas, and multi-room configurations are possible with proper connection details.' },
     ],

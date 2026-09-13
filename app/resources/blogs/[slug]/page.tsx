@@ -74,6 +74,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     headline: post.title,
     description: post.excerpt,
     datePublished: post.date,
+    // Without dateModified, Google has no freshness signal for revised posts.
+    dateModified: post.lastModified || post.date,
     ...(post.coverImage ? { image: `https://phoenixxsmartbuild.com${post.coverImage}` } : {}),
     author: { '@type': 'Person', name: post.author.name },
     publisher: {

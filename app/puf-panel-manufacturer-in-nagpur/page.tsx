@@ -103,7 +103,7 @@ export default function NagpurPage() {
                 { title: 'Technical Support', desc: 'Expert guidance' },
                 { title: 'Competitive Rates', desc: 'Best Central India pricing' },
                 { title: 'Reliable Delivery', desc: '10-14 days standard' },
-                { title: '18+ Years', desc: 'Industry experience' },
+                { title: '13+ Years', desc: 'Industry experience' },
               ].map((item, idx) => (<div key={idx} className="text-center"><h3 className="font-bold text-green-400">{item.title}</h3><p className="mt-2 text-slate-300 text-sm">{item.desc}</p></div>))}
             </div>
           </div>

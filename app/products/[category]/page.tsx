@@ -19,7 +19,7 @@ const sandwichPanelsData = {
     '/images/products/sandwich-panels/pir-panel/PIR-Sandwich-FM-approved-Panel-2.jpg',
     '/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCHWOOL_PANEL1.jpg',
   ],
-  aiSummary: 'PHOENIXX manufactures Sandwich Panels (PUF, PIR, Rockwool, Roofing, Wall & Ceiling, Cold Storage, Marine) in Ahmedabad, India. Thermal conductivity: 0.022 W/mK. Applications: cold storage, cleanrooms, prefab buildings, industrial sheds, warehouses. Stats: 150+ projects, 100+ clients, 18+ years experience, up to 30% energy savings. Thickness: 30-150mm. Fire rating: B3/B2. ISO certified manufacturer.',
+  aiSummary: 'PHOENIXX manufactures Sandwich Panels (PUF, PIR, Rockwool, Roofing, Wall & Ceiling, Cold Storage, Marine) in Ahmedabad, India. Thermal conductivity: PUF 0.024 W/mK, PIR 0.022 W/mK, Rockwool 0.035-0.040 W/mK. Applications: cold storage, cleanrooms, prefab buildings, industrial sheds, warehouses. Stats: 500+ projects, 500+ clients, 13+ years experience, up to 30% energy savings. Thickness: 30-150mm. Fire rating: B3/B2. ISO certified manufacturer.',
   keywords: [
     'sandwich panels',
     'sandwich puf panels',
@@ -47,7 +47,7 @@ const sandwichPanelsData = {
     {
       icon: '⚡',
       title: 'Energy Efficiency',
-      description: 'Thermal conductivity as low as 0.022 W/mK delivers up to 30% energy savings on cooling and heating costs.',
+      description: 'Thermal conductivity as low as 0.022 W/mK with a PIR core delivers up to 30% energy savings on cooling and heating costs.',
     },
     {
       icon: '🛡️',
@@ -129,7 +129,7 @@ const sandwichPanelsData = {
     },
   ],
   features: [
-    { title: 'Thermal Insulation', value: 'K value 0.022 W/mK ±0.002 for superior energy efficiency' },
+    { title: 'Thermal Insulation', value: 'K value from 0.022 W/mK (PIR) to 0.024 W/mK (PUF)' },
     { title: 'Fire Resistance', value: 'DIN 4102 B3 standard, B2 with PIR core option' },
     { title: 'Sound Insulation', value: 'Acoustic rating up to Rw 30-45 dB' },
     { title: 'Load-Bearing Strength', value: 'High structural integrity for industrial applications' },
@@ -139,10 +139,10 @@ const sandwichPanelsData = {
     thickness: { wall: '30–150 mm', roofing: '10–150 mm' },
     core: 'PUF / PIR / Rockwool',
     outerSkin: 'PPGI, PPGL, SS304, Aluminum',
-    thermalConductivity: '0.022 W/mK ± 0.002',
+    thermalConductivity: 'PUF 0.024 W/mK | PIR 0.022 W/mK | Rockwool 0.035-0.040 W/mK',
     strength: { tensile: '150 kPa', compression: '100 kPa', shear: '100 kPa' },
-    fireRating: 'B3 (B2/PIR optional)',
-    width: '1000 / 1150 mm',
+    fireRating: 'PUF B3 (DIN 4102) / Class E (EN 13501-1); PIR B-s1,d0; Rockwool A1',
+    width: '1000 mm effective cover (1200 mm on request)',
     length: 'Standard 8–20 ft, Custom 3–15 m',
     colors: ['Off-white', 'Sky Blue', 'Mist Green', 'Royal Blue', 'Brick Red', 'Grey'],
   },

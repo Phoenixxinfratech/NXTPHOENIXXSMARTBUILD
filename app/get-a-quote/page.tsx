@@ -357,7 +357,7 @@ export default function GetAQuotePage() {
                   <h3 className="text-lg font-bold text-slate-900 mb-4">Why Choose PHOENIXX?</h3>
                   <ul className="space-y-3">
                     {[
-                      '18+ years of industry experience',
+                      '13+ years of industry experience',
                       '500+ successful projects delivered',
                       'Pan-India service network',
                       'Competitive pricing',

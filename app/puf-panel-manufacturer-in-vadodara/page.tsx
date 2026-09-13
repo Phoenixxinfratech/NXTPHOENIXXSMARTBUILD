@@ -182,7 +182,7 @@ export default function VadodaraPage() {
                 { title: 'Quality Certified', desc: 'ISO-compliant manufacturing' },
                 { title: 'Custom Panels', desc: 'As per project specifications' },
                 { title: 'Competitive Rates', desc: 'Best pricing for Baroda' },
-                { title: '18+ Years', desc: 'Gujarat market experience' },
+                { title: '13+ Years', desc: 'Gujarat market experience' },
                 { title: 'Complete Range', desc: '30mm to 150mm thickness' },
               ].map((item, idx) => (
                 <div key={idx} className="text-center">

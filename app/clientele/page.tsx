@@ -205,7 +205,7 @@ export default function ClientelePage() {
         <JsonLd data={breadcrumbSchema} />
 
         <AISummaryBlock
-          summary="PHOENIXX is trusted by 300+ clients across industries including Coca-Cola, Amul, Torrent Pharmaceuticals, Ford Motors, Intas Pharmaceuticals, Mother Dairy, Uflex, SKF Bearings, and many more. We serve Food & Beverages, Dairy Processing, Pharmaceuticals, Automobile, Industrial Manufacturing, and Cold Storage sectors."
+          summary="PHOENIXX is trusted by 500+ clients across industries including Coca-Cola, Amul, Torrent Pharmaceuticals, Ford Motors, Intas Pharmaceuticals, Mother Dairy, Uflex, SKF Bearings, and many more. We serve Food & Beverages, Dairy Processing, Pharmaceuticals, Automobile, Industrial Manufacturing, and Cold Storage sectors."
           keywords={['clients', 'Coca-Cola', 'Amul', 'Torrent Pharmaceuticals', 'Ford Motors', 'cold storage']}
         />
 
