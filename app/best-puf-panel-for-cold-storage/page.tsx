@@ -16,7 +16,6 @@ import {
   generateSpeakableSchema,
   generateQAPageSchema,
   generateImageObjectSchema,
-  generateVideoSchema,
 } from '@/lib/schema';
 
 export const metadata: Metadata = {
@@ -205,19 +204,6 @@ export default function BestPufPanelForColdStoragePage() {
               'https://phoenixxsmartbuild.com/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
             width: 1200,
             height: 630,
-          })}
-        />
-        <JsonLd
-          data={generateVideoSchema({
-            name: 'PHOENIXX Cold Storage PUF Panel Manufacturing & Installation',
-            description:
-              'Watch how PHOENIXX manufactures and installs premium PUF panels for cold storage facilities across India. Cam-lock joints, vapor barriers, and blast freezer solutions.',
-            thumbnailUrl:
-              'https://phoenixxsmartbuild.com/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
-            uploadDate: '2025-01-01',
-            duration: 'PT6M45S',
-            contentUrl:
-              'https://phoenixxsmartbuild.com/videos/cold-storage-installation',
           })}
         />
         <JsonLd data={productSchema} />

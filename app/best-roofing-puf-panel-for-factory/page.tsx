@@ -16,7 +16,6 @@ import {
   generateSpeakableSchema,
   generateQAPageSchema,
   generateImageObjectSchema,
-  generateVideoSchema,
 } from '@/lib/schema';
 
 export const metadata: Metadata = {
@@ -158,7 +157,7 @@ export default function BestRoofingPufPanelForFactoryPage() {
       description:
         'Comprehensive guide to selecting the best roofing PUF panel for factory construction. Compare profiles, thickness options, wind ratings, coatings, and costs.',
       url: pageUrl,
-      image: 'https://phoenixxsmartbuild.com/images/roofing-puf-panel-factory.jpg',
+      image: 'https://phoenixxsmartbuild.com/images/products/sandwich-panels/roofing-panel/PHOENIXX_ROOFING_PANEL5.jpg',
       datePublished: '2025-01-15',
       dateModified: '2026-01-10',
       author: { name: 'PHOENIXX SMARTBUILD Engineering Team', url: 'https://phoenixxsmartbuild.com/about' },
@@ -183,17 +182,9 @@ export default function BestRoofingPufPanelForFactoryPage() {
       name: 'Factory Roofing PUF Panel Installation by PHOENIXX',
       description:
         'Trapezoidal roofing PUF panel installation on an industrial factory showing interlocking joints and ridge cap detailing.',
-      contentUrl: '/images/roofing-puf-panel-factory.jpg',
+      contentUrl: '/images/products/sandwich-panels/roofing-panel/PHOENIXX_ROOFING_PANEL5.jpg',
       width: 1200,
       height: 630,
-    }),
-    generateVideoSchema({
-      name: 'PHOENIXX Factory Roofing Installation',
-      description:
-        'Watch a complete factory roofing PUF panel installation by PHOENIXX SMARTBUILD, from purlin layout to ridge cap finishing on a 5,000 sq.m industrial facility.',
-      thumbnailUrl: 'https://phoenixxsmartbuild.com/images/video-thumb-roofing.jpg',
-      uploadDate: '2025-01-01',
-      duration: 'PT6M15S',
     }),
   ];
 
@@ -209,7 +200,7 @@ export default function BestRoofingPufPanelForFactoryPage() {
       name: 'PHOENIXX SMARTBUILD',
       address: { '@type': 'PostalAddress', addressLocality: 'Ahmedabad', addressRegion: 'Gujarat', addressCountry: 'IN' },
     },
-    image: 'https://phoenixxsmartbuild.com/images/roofing-puf-panel-factory.jpg',
+    image: 'https://phoenixxsmartbuild.com/images/products/sandwich-panels/roofing-panel/PHOENIXX_ROOFING_PANEL5.jpg',
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'INR',
@@ -231,7 +222,7 @@ export default function BestRoofingPufPanelForFactoryPage() {
 
         {/* ─── Section 1: Trust-First Hero ─── */}
         <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20 md:py-28 overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
           <div className="container-custom relative">
             <div className="max-w-4xl">

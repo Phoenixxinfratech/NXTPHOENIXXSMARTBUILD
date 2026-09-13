@@ -77,7 +77,7 @@ const shopProducts: Record<string, {
     name: 'Roofing PUF Panel',
     shortName: 'Roof Panel',
     description: 'Insulated roofing panels with trapezoidal profile for superior drainage, wind resistance, and thermal performance. Ideal for industrial sheds and warehouses.',
-    image: '/images/projects/gallery/Phoenix-PUF-Panel-Manufacturers6.jpg',
+    image: '/images/products/sandwich-panels/puf-panel/Phoenix-PUF-Panel-Manufacturers6.jpg',
     sku: 'PHX-ROOF-001',
     category: 'Insulated Roofing Panels',
     basePrice: 950,
@@ -240,7 +240,7 @@ const shopProducts: Record<string, {
     name: 'Wall & Ceiling Panel',
     shortName: 'Wall Panel',
     description: 'Versatile insulated panels for wall and ceiling applications. Clean, hygienic finish ideal for food processing, pharmaceutical facilities, and commercial interiors.',
-    image: '/images/projects/gallery/PHOENIXX_WALL_PUF_PANEL1.jpg',
+    image: '/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL1.jpg',
     sku: 'PHX-WALL-001',
     category: 'Wall & Ceiling Panels',
     basePrice: 750,
@@ -400,7 +400,7 @@ const shopProducts: Record<string, {
     name: 'Cold Storage Door',
     shortName: 'Cold Room Door',
     description: 'Insulated doors for cold storage and freezer applications. High-density PUF core with heated frame to prevent condensation. Suitable for -40°C to +15°C environments.',
-    image: '/images/projects/gallery/Industrial-False-Ceiling-PUF-Panel-2.jpg',
+    image: '/images/products/sandwich-panels/wall-ceiling-panel/Industrial-False-Ceiling-PUF-Panel-2.jpg',
     sku: 'PHX-CSD-001',
     category: 'Cold Storage Doors',
     basePrice: 45000,
@@ -439,7 +439,7 @@ const shopProducts: Record<string, {
     name: 'Hermetic Door',
     shortName: 'Hermetic Door',
     description: 'Air-tight automatic sliding doors for hospitals, operation theatres, and critical cleanroom applications. Maintains positive/negative pressure differentials.',
-    image: '/images/projects/gallery/cleanroom-Manufacture-Supplier-in-Ahmedabad5.jpg',
+    image: '/images/solutions/cleanroom/cleanroom-Manufacture-Supplier-in-Ahmedabad5.jpg',
     sku: 'PHX-HRM-001',
     category: 'Hermetic Doors',
     basePrice: 125000,
@@ -560,7 +560,7 @@ const shopProducts: Record<string, {
     name: 'Cleanroom Doors (Solutions)',
     shortName: 'CR Doors',
     description: 'Complete cleanroom door solutions including swing, sliding, and hermetic options. Designed for integration with cleanroom partition systems. GMP compliant.',
-    image: '/images/projects/gallery/cleanroom-Manufacture-Supplier-in-Ahmedabad6.jpg',
+    image: '/images/solutions/cleanroom/cleanroom-Manufacture-Supplier-in-Ahmedabad6.jpg',
     sku: 'PHX-CRDS-001',
     category: 'Cleanroom Door Systems',
     basePrice: 32000,
@@ -599,7 +599,7 @@ const shopProducts: Record<string, {
     name: 'Cleanroom Flooring',
     shortName: 'CR Flooring',
     description: 'Seamless, anti-static, and chemical-resistant flooring systems for cleanroom environments. ESD compliant options for electronics manufacturing.',
-    image: '/images/projects/gallery/cleanroom-Manufacture-Supplier-in-Ahmedabad7.jpg',
+    image: '/images/solutions/cleanroom/cleanroom-Manufacture-Supplier-in-Ahmedabad7.jpg',
     sku: 'PHX-CRF-001',
     category: 'Cleanroom Flooring',
     basePrice: 850,
@@ -802,6 +802,7 @@ export default async function ShopProductPage({ params }: { params: Promise<{ pr
                 <Image
                   src={product.image}
                   alt={product.name}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   fill
                   className="object-cover"
                   priority

@@ -544,9 +544,9 @@ export default async function ProductLocationPage({ params }: { params: Promise<
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {[
                 { src: '/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp', alt: `${product.name} manufacturing by PHOENIXX SMARTBUILD` },
-                { src: '/images/projects/gallery/PHOENIXX_WALL_PUF_PANEL1.jpg', alt: `${product.name} wall installation in ${location.name}` },
+                { src: '/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL1.jpg', alt: `${product.name} wall installation in ${location.name}` },
                 { src: '/images/projects/gallery/PUF-Panel-False-Ceiling-1.jpg', alt: `${product.name} ceiling application` },
-                { src: '/images/projects/gallery/Industrial-False-Ceiling-PUF-Panel-2.jpg', alt: `Industrial ${product.shortName} installation` },
+                { src: '/images/products/sandwich-panels/wall-ceiling-panel/Industrial-False-Ceiling-PUF-Panel-2.jpg', alt: `Industrial ${product.shortName} installation` },
                 { src: '/images/projects/gallery/cleanroom-Manufacture-Supplier-in-Ahmedabad1.jpeg', alt: `Cleanroom project with ${product.name}` },
                 { src: '/images/projects/gallery/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects26.jpg', alt: `Pharma facility ${product.shortName} project` },
                 { src: '/images/projects/gallery/Phoenixx_infratech_Projects188.jpg', alt: `Warehouse ${product.name} installation in ${location.name}` },

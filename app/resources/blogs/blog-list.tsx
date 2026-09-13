@@ -6,7 +6,7 @@ import Image from 'next/image';
 import type { BlogListing } from '@/lib/blog-data';
 
 const FALLBACK_IMAGE =
-  '/images/products/sandwich-panels/puf-panel/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp';
+  '/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp';
 
 const ALL = 'All';
 const PAGE_SIZE = 24;

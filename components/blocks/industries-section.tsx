@@ -7,7 +7,7 @@ const industries = [
   { name: 'Food Processing', image: '/images/industries/food-processing/Food-processing-industries-phoenixx-work.jpg', icon: '🍽️', slug: 'food-processing' },
   { name: 'Dairy Industry', image: '/images/industries/dairy/epub_dairy-processing-equipment-milk-tanks-facility-plant_1200x635.jpg', icon: '🥛', slug: 'dairy' },
   { name: 'Cold Chain & Logistics', image: '/images/solutions/cold-storage/Cold-Storage-Warehouse-manufacture-1.jpg', icon: '❄️', slug: 'cold-chain' },
-  { name: 'Manufacturing & Engineering', image: '/images/industries/precision-engineering/precision-engineering-1.jpg', icon: '⚙️', slug: 'precision-engineering' },
+  { name: 'Manufacturing & Engineering', image: '/images/industries/electronics/PCB-Assembly-Line.jpg', icon: '⚙️', slug: 'precision-engineering' },
   { name: 'Hospitality & Hotels', image: '/images/industries/hospitality/Hotel-design.webp', icon: '🏨', slug: 'hospitality' },
   { name: 'Automotive Industry', image: '/images/industries/automotive/Assembly-Line-Best-Practices.jpg', icon: '🚗', slug: 'automobile' },
   { name: 'Agriculture & Agri-Processing', image: '/images/industries/food-processing/Food-processing .jpg', icon: '🌾', slug: 'agri-processing' },

@@ -14,7 +14,7 @@ const industryImages: Record<string, string[]> = {
   'pharma-chemical': [
     '/images/industries/pharmaceuticals/cleanroom.jpg',
     '/images/industries/pharmaceuticals/pharmaceutical-cleanroom-components-494_L.jpg',
-    '/images/industries/pharmaceuticals/sterile_pharma_manufacturing_discovery_450x300.jpg',
+    '/images/industries/medical-devices/sterile_pharma_manufacturing_discovery_450x300.jpg',
   ],
   'food-processing': [
     '/images/industries/food-processing/Food-processing-industries-phoenixx-work.jpg',
@@ -335,6 +335,7 @@ export default async function IndustryDetailPage({ params }: Props) {
                     <Image
                       src={img}
                       alt={`${data.title} - Project ${idx + 1}`}
+                      sizes="(max-width: 768px) 100vw, 33vw"
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />

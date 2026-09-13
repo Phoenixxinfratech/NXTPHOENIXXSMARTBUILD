@@ -11,7 +11,7 @@ export const serpBlogsPart1: Record<string, BlogPost> = {
       <p>One of the most common questions buyers ask before investing in insulated construction is: <strong>how long do PUF panels last?</strong> Whether you\u2019re building a warehouse in Ahmedabad, a cold storage facility in Gujarat, or a factory anywhere in India, the <strong>lifespan of PUF panels</strong> is a critical factor in your return-on-investment calculation.</p>
       <p>The short answer: a well-manufactured PUF (Polyurethane Foam) sandwich panel, correctly installed and reasonably maintained, will deliver <strong>25 to 30+ years</strong> of reliable service. Some installations across India have crossed the 35-year mark with only minor cosmetic wear. In this comprehensive guide, we break down everything that determines <strong>PUF panel durability</strong>, compare it to alternative construction materials, and share actionable maintenance tips to extend panel life.</p>
 
-      <img src="/images/products/sandwich-panels/puf-panel/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp" alt="Lifespan of PUF panels manufactured by Phoenixx SmartBuild India" style="max-width:100%;height:auto;margin:20px 0;border-radius:8px;" />
+      <img src="/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp" alt="Lifespan of PUF panels manufactured by Phoenixx SmartBuild India" style="max-width:100%;height:auto;margin:20px 0;border-radius:8px;" />
 
       <h2>Average Lifespan of PUF Panels by Application</h2>
       <p>The expected service life of a PUF panel varies depending on its application, exposure conditions, and panel specification. Here is a realistic overview based on industry data and on-site observations across Gujarat and India:</p>
@@ -244,7 +244,7 @@ export const serpBlogsPart1: Record<string, BlogPost> = {
       <p>Ahmedabad is the <strong>largest industrial hub in Gujarat</strong>, and the demand for PUF (Polyurethane Foam) sandwich panels continues to surge across warehousing, cold storage, pharma, food processing, and commercial construction. If you\u2019re searching for the <strong>PUF panel price in Ahmedabad</strong>, this comprehensive 2026 rate guide gives you everything you need to budget accurately.</p>
       <p>As a <a href="/sandwich-puf-panel-in-ahmedabad">leading PUF panel manufacturer in Ahmedabad</a>, Phoenixx SmartBuild provides factory-direct pricing without dealer markups. Below, you\u2019ll find thickness-wise pricing, factors affecting cost, bulk discount structures, and installation add-on costs.</p>
 
-      <img src="/images/products/sandwich-panels/puf-panel/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp" alt="PUF panel price in Ahmedabad 2026 by Phoenixx SmartBuild manufacturer" style="max-width:100%;height:auto;margin:20px 0;border-radius:8px;" />
+      <img src="/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp" alt="PUF panel price in Ahmedabad 2026 by Phoenixx SmartBuild manufacturer" style="max-width:100%;height:auto;margin:20px 0;border-radius:8px;" />
 
       <h2>PUF Panel Price List \u2013 Thickness Wise (Ahmedabad 2026)</h2>
       <p>The following price table covers standard <a href="/products/sandwich-panels/sandwich-puf-panel">sandwich PUF panels</a> with 0.50 mm PPGI/PPGL steel facings and 40 kg/m\u00b3 density PUF core. Prices are ex-factory Ahmedabad and may vary \u00b15% based on order quantity and current steel rates.</p>
@@ -482,7 +482,7 @@ export const serpBlogsPart1: Record<string, BlogPost> = {
       <p>Choosing the <strong>best PUF panel brand in India</strong> can feel overwhelming given the sheer number of manufacturers across the country. From national giants to regional specialists, the Indian PUF panel market is estimated at over \u20b94,500 crore and growing at 12\u201315% annually. But not all brands are created equal \u2013 quality, certifications, pricing, and after-sales support vary dramatically.</p>
       <p>In this detailed guide, we compare the <strong>top PUF panel manufacturers in India</strong> on parameters that matter most to industrial buyers, contractors, and architects. Whether you\u2019re building in Ahmedabad, Mumbai, Delhi, or anywhere across India, this comparison will help you pick the right brand for your project.</p>
 
-      <img src="/images/products/sandwich-panels/puf-panel/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp" alt="Best PUF panel brand in India comparison by top manufacturers 2026" style="max-width:100%;height:auto;margin:20px 0;border-radius:8px;" />
+      <img src="/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp" alt="Best PUF panel brand in India comparison by top manufacturers 2026" style="max-width:100%;height:auto;margin:20px 0;border-radius:8px;" />
 
       <h2>What Makes a Good PUF Panel Brand?</h2>
       <p>Before diving into the comparison, let\u2019s establish the criteria that separate a premium <strong>PUF panel brand</strong> from an average one:</p>
@@ -707,7 +707,7 @@ export const serpBlogsPart1: Record<string, BlogPost> = {
       <p>Ahmedabad is undeniably the <strong>PUF panel manufacturing capital of India</strong>. With over 40 manufacturers and fabricators operating across the city\u2019s industrial zones, Ahmedabad produces more than 35% of India\u2019s total PUF sandwich panel output. For buyers seeking <strong>PUF panel manufacturers in Ahmedabad</strong>, this guide provides a comprehensive directory, selection criteria, and pricing overview for 2026.</p>
       <p>Whether you\u2019re a contractor building a warehouse, an architect specifying insulated panels, or a business owner expanding your cold storage, knowing the right manufacturer in Ahmedabad saves you money and ensures quality. Let\u2019s explore the market landscape.</p>
 
-      <img src="/images/products/sandwich-panels/puf-panel/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp" alt="Top PUF panel manufacturer in Ahmedabad factory production line" style="max-width:100%;height:auto;margin:20px 0;border-radius:8px;" />
+      <img src="/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp" alt="Top PUF panel manufacturer in Ahmedabad factory production line" style="max-width:100%;height:auto;margin:20px 0;border-radius:8px;" />
 
       <h2>Why Ahmedabad is India\u2019s PUF Panel Hub</h2>
       <p>Several factors make Ahmedabad the epicentre of PUF panel manufacturing:</p>
@@ -915,7 +915,7 @@ export const serpBlogsPart1: Record<string, BlogPost> = {
       <p>Gujarat is the undisputed leader in India\u2019s PUF panel manufacturing sector, contributing over <strong>40% of the country\u2019s total production</strong>. The state\u2019s thriving industrial base \u2013 spanning pharmaceuticals, chemicals, textiles, food processing, automotive, and petrochemicals \u2013 creates massive local demand for insulated <a href="/products/sandwich-panels/sandwich-puf-panel">PUF panels</a>. This comprehensive directory covers all major <strong>PUF panel manufacturers in Gujarat</strong>, organised by city and GIDC zone.</p>
       <p>Whether you\u2019re sourcing panels for a factory in Surat, a warehouse in Vadodara, a cold storage in Rajkot, or a chemical plant in Vapi, this guide helps you find the right manufacturer with competitive pricing and reliable delivery.</p>
 
-      <img src="/images/products/sandwich-panels/puf-panel/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp" alt="PUF panel manufacturers in Gujarat complete directory 2026" style="max-width:100%;height:auto;margin:20px 0;border-radius:8px;" />
+      <img src="/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp" alt="PUF panel manufacturers in Gujarat complete directory 2026" style="max-width:100%;height:auto;margin:20px 0;border-radius:8px;" />
 
       <h2>Gujarat\u2019s PUF Panel Manufacturing Landscape</h2>
       <p>Gujarat\u2019s dominance in PUF panel manufacturing stems from several strategic advantages:</p>
@@ -1094,7 +1094,7 @@ export const serpBlogsPart1: Record<string, BlogPost> = {
       <p>Looking for a detailed <strong>PUF panel price list in Ahmedabad</strong>? This is the most comprehensive rate chart you\u2019ll find for 2026, covering wall panels, roofing panels, cold room panels, and ceiling panels across all thicknesses. We\u2019ve also included coating upgrade costs, accessory pricing, bulk discount tiers, and installation charges to help you budget your entire project accurately.</p>
       <p>All prices listed are from <a href="/sandwich-puf-panel-in-ahmedabad">Phoenixx SmartBuild</a>, Ahmedabad\u2019s leading PUF panel manufacturer, and represent <strong>factory direct pricing</strong> without dealer markups.</p>
 
-      <img src="/images/products/sandwich-panels/puf-panel/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp" alt="PUF panel price list Ahmedabad 2026 all types and thicknesses" style="max-width:100%;height:auto;margin:20px 0;border-radius:8px;" />
+      <img src="/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp" alt="PUF panel price list Ahmedabad 2026 all types and thicknesses" style="max-width:100%;height:auto;margin:20px 0;border-radius:8px;" />
 
       <h2>Wall PUF Panel Price List \u2013 Ahmedabad 2026</h2>
       <p>Wall PUF panels are the most commonly used type for factory cladding, warehouse walls, office partitions, and cold room enclosures. Prices below are for standard flat/micro-ribbed profile with 0.50 mm PPGI steel on both faces and 40 kg/m\u00b3 PUF core:</p>
@@ -1456,7 +1456,7 @@ export const serpBlogsPart1: Record<string, BlogPost> = {
       <p>Ahmedabad\u2019s booming industrial and commercial construction sector has made <strong>PUF panels</strong> the preferred building material for warehouses, factories, cold storage facilities, clean rooms, and commercial buildings. If you\u2019re looking to buy <strong>PUF panel in Ahmedabad</strong>, this guide covers everything from product selection and pricing to delivery areas and installation support.</p>
       <p>Phoenixx SmartBuild is Ahmedabad\u2019s leading <a href="/puf-panel-manufacturer-in-ahmedabad">PUF panel manufacturer</a>, offering factory-direct pricing, ready stock availability, and end-to-end project support. Buy directly from our production line \u2013 no dealers, no markups, no middlemen.</p>
 
-      <img src="/images/products/sandwich-panels/puf-panel/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp" alt="Buy PUF panel in Ahmedabad from Phoenixx SmartBuild manufacturer" style="max-width:100%;height:auto;margin:20px 0;border-radius:8px;" />
+      <img src="/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp" alt="Buy PUF panel in Ahmedabad from Phoenixx SmartBuild manufacturer" style="max-width:100%;height:auto;margin:20px 0;border-radius:8px;" />
 
       <h2>Why Ahmedabad is the Best Place to Buy PUF Panels</h2>
       <p>There\u2019s a reason Ahmedabad leads India\u2019s PUF panel market:</p>
@@ -1631,7 +1631,7 @@ export const serpBlogsPart1: Record<string, BlogPost> = {
       <h2>PUF Panel Contact in Ahmedabad \u2013 Get Expert Consultation</h2>
       <p>Need <strong>PUF panels in Ahmedabad</strong>? Whether you\u2019re planning a new warehouse, expanding cold storage, building a cleanroom, or replacing old roofing, the first step is connecting with a reliable manufacturer for expert guidance and accurate pricing. This page provides all the ways you can reach <strong>Phoenixx SmartBuild</strong> \u2013 Ahmedabad\u2019s leading PUF panel manufacturer \u2013 for consultation, quotation, factory visit, or immediate purchase.</p>
 
-      <img src="/images/products/sandwich-panels/puf-panel/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp" alt="Contact PUF panel manufacturer in Ahmedabad Phoenixx SmartBuild" style="max-width:100%;height:auto;margin:20px 0;border-radius:8px;" />
+      <img src="/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp" alt="Contact PUF panel manufacturer in Ahmedabad Phoenixx SmartBuild" style="max-width:100%;height:auto;margin:20px 0;border-radius:8px;" />
 
       <h2>How to Reach Phoenixx SmartBuild</h2>
       <p>We\u2019ve made it easy to get in touch through multiple channels. Choose whichever is most convenient for you:</p>
@@ -1843,7 +1843,7 @@ export const serpBlogsPart1: Record<string, BlogPost> = {
       <p>Vadodara (Baroda) is Gujarat\u2019s second-largest industrial city and a major consumption centre for <strong>PUF panels</strong>. The city\u2019s thriving chemical, pharmaceutical, engineering, and food processing industries drive consistent demand for insulated building panels across multiple applications \u2013 from factory cladding and warehouse insulation to cold storage rooms and cleanroom enclosures.</p>
       <p>If you\u2019re looking for <strong>PUF panel in Vadodara</strong>, this guide covers everything: industrial landscape, sector-wise applications, pricing overview, delivery options, and how to buy directly from <a href="/sandwich-puf-panel-in-vadodara">Phoenixx SmartBuild</a> with same-day dispatch from Ahmedabad.</p>
 
-      <img src="/images/products/sandwich-panels/puf-panel/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp" alt="PUF panel in Vadodara manufacturer price and supply guide 2026" style="max-width:100%;height:auto;margin:20px 0;border-radius:8px;" />
+      <img src="/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp" alt="PUF panel in Vadodara manufacturer price and supply guide 2026" style="max-width:100%;height:auto;margin:20px 0;border-radius:8px;" />
 
       <h2>Vadodara\u2019s Industrial Landscape</h2>
       <p>Vadodara is home to a diverse industrial ecosystem that makes it one of Gujarat\u2019s top three cities for PUF panel consumption. The key industrial areas include:</p>

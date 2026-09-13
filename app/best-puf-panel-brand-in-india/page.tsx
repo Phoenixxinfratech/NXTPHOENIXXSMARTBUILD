@@ -16,7 +16,6 @@ import {
   generateSpeakableSchema,
   generateQAPageSchema,
   generateImageObjectSchema,
-  generateVideoSchema,
 } from '@/lib/schema';
 
 export const metadata: Metadata = {
@@ -112,7 +111,7 @@ export default function BestPufPanelBrandInIndiaPage() {
       title: 'Which PUF Panel Brand Is Best in India? — Trusted Manufacturer Guide 2026',
       description: 'Compare India\'s best PUF panel brands. PHOENIXX SMARTBUILD: ISO certified, 500+ projects, 13+ years of manufacturing excellence.',
       url: '/best-puf-panel-brand-in-india',
-      image: '/images/brand/og/best-puf-panel-brand-india.jpg',
+      image: '/og-image.png',
       datePublished: '2025-01-15',
       dateModified: '2026-02-17',
       author: { name: 'PHOENIXX SMARTBUILD Editorial', url: 'https://phoenixxsmartbuild.com/about-us' },
@@ -139,17 +138,9 @@ export default function BestPufPanelBrandInIndiaPage() {
     generateImageObjectSchema({
       name: 'PHOENIXX PUF Panel Manufacturing Facility',
       description: 'In-house continuous lamination PUF panel production line at PHOENIXX SMARTBUILD factory in Ahmedabad, Gujarat.',
-      contentUrl: '/images/brand/factory/puf-panel-manufacturing-line.jpg',
+      contentUrl: '/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
       width: 1200,
       height: 630,
-    }),
-    generateVideoSchema({
-      name: 'PHOENIXX PUF Panel Manufacturing Process',
-      description: 'See how PHOENIXX SMARTBUILD manufactures premium PUF panels using in-house continuous lamination technology in Ahmedabad, Gujarat.',
-      thumbnailUrl: 'https://phoenixxsmartbuild.com/images/video/puf-manufacturing-thumbnail.jpg',
-      uploadDate: '2025-06-01',
-      duration: 'PT3M45S',
-      contentUrl: 'https://phoenixxsmartbuild.com/videos/puf-panel-manufacturing.mp4',
     }),
     {
       '@context': 'https://schema.org',
@@ -159,7 +150,7 @@ export default function BestPufPanelBrandInIndiaPage() {
       brand: { '@type': 'Brand', name: 'PHOENIXX SMARTBUILD' },
       manufacturer: { '@type': 'Organization', name: 'PHOENIXX SMARTBUILD' },
       url: 'https://phoenixxsmartbuild.com/best-puf-panel-brand-in-india',
-      image: 'https://phoenixxsmartbuild.com/images/products/puf-panel-hero.jpg',
+      image: 'https://phoenixxsmartbuild.com/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL1.jpg',
       offers: {
         '@type': 'AggregateOffer',
         priceCurrency: 'INR',
@@ -181,7 +172,7 @@ export default function BestPufPanelBrandInIndiaPage() {
 
         {/* ===== Section 1: Trust-First Hero ===== */}
         <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20 md:py-28">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-emerald-500/10 px-4 py-2 text-sm font-medium text-emerald-400 mb-6">

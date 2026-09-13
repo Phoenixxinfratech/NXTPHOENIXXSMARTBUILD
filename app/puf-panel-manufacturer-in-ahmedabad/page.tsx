@@ -196,8 +196,8 @@ export default function AhmedabadPage() {
     name: 'PHOENIXX SmartBuild - Ahmedabad',
     description: 'Leading PUF panel manufacturer in Ahmedabad, Gujarat. Premium insulated sandwich panels for industrial, pharmaceutical, and cold storage applications.',
     url: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-ahmedabad',
-    logo: 'https://phoenixxsmartbuild.com/images/logo.png',
-    image: 'https://phoenixxsmartbuild.com/images/factory-ahmedabad.jpg',
+    logo: 'https://phoenixxsmartbuild.com/images/brand/logos/logo.png',
+    image: 'https://phoenixxsmartbuild.com/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'GIDC Naroda, Phase II',
@@ -294,7 +294,7 @@ export default function AhmedabadPage() {
 
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-slate-900 via-gray-900 to-blue-900 py-20 md:py-28">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
             <div className="max-w-4xl">
               <div className="flex flex-wrap gap-3 mb-6">

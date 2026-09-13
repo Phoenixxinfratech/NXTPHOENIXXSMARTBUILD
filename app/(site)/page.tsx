@@ -17,10 +17,10 @@ const homepageClients = [
   { name: 'Sarhad Dairy', logo: '/images/clients/sarhad-dairy.png' },
   { name: 'Hotel Fern', logo: '/images/clients/hotel-fern.png' },
   { name: 'Info City Club', logo: '/images/clients/info-city-club.png' },
-  { name: 'Uflex', logo: '/images/clients/Uflex.png' },
+  { name: 'Uflex', logo: '/images/clients/uflex.png' },
   { name: 'IFGL', logo: '/images/clients/ifgl.png' },
   { name: 'Vyara Tiles', logo: '/images/clients/vyara-tiles.png' },
-  { name: 'SKF Bearings', logo: '/images/clients/SKF-01.png' },
+  { name: 'SKF Bearings', logo: '/images/clients/skf.png' },
 ];
 
 export const metadata: Metadata = {
@@ -37,7 +37,7 @@ const products = [
     details: 'Includes PIR Panels, Sandwich PUF Panels, Roofing PUF Panels, and Wall & Ceiling Panels, ideal for energy-efficient industrial and commercial buildings.',
     href: '/products/sandwich-panels',
     icon: '🧱',
-    image: '/images/products/sandwich-panels/puf-panel/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
+    image: '/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
   },
   {
     title: 'Industrial & Specialty Doors',
@@ -79,7 +79,7 @@ const solutions = [
     description: 'Walkable and non-walkable ceiling systems designed for accessibility, acoustic control, and clean aesthetics, suitable for offices, industries, and cleanrooms.',
     href: '/solutions/walkable-ceiling-systems',
     icon: '📐',
-    image: '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-2.jpg',
+    image: '/images/products/sandwich-panels/wall-ceiling-panel/Industrial-False-Ceiling-PUF-Panel-2.jpg',
   },
   {
     title: 'Partition Solutions',

@@ -33,7 +33,7 @@ export default function VapiPage() {
         <JsonLd data={faqSchema} />
 
         <section className="relative bg-gradient-to-br from-teal-900 via-cyan-900 to-slate-900 py-20 md:py-28">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-teal-500/10 px-4 py-2 text-sm font-medium text-teal-400 mb-6">📍 Serving Vapi & South Gujarat Chemical Belt</span>

@@ -92,7 +92,7 @@ const clientsByIndustry = [
     gradient: 'from-slate-500 to-zinc-600',
     showLogos: true,
     clients: [
-      { name: 'Uflex Ltd.', logo: '/images/clients/Uflex.png' },
+      { name: 'Uflex Ltd.', logo: '/images/clients/uflex.png' },
       { name: 'PGP Glass', logo: '/images/clients/pgp-glass.png' },
       { name: 'IFGL Refractories', logo: '/images/clients/ifgl.png' },
       { name: 'Jaquar Sanitaryware', logo: '/images/clients/jaquar.png' },
@@ -159,7 +159,7 @@ const featuredClients = [
   { name: 'Ford Motors', logo: '/images/clients/ford.png' },
   { name: 'SKF Bearings', logo: '/images/clients/skf.png' },
   { name: 'L&T', logo: '/images/clients/lnt.png' },
-  { name: 'Uflex', logo: '/images/clients/Uflex.png' },
+  { name: 'Uflex', logo: '/images/clients/uflex.png' },
   { name: 'Hershey', logo: '/images/clients/hershey.webp' },
   { name: 'NDDB', logo: '/images/clients/nddb.jpg' },
   { name: 'Balaji Wafers', logo: '/images/clients/balaji-wafers.png' },

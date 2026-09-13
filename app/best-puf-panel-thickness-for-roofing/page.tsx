@@ -16,7 +16,6 @@ import {
   generateSpeakableSchema,
   generateQAPageSchema,
   generateImageObjectSchema,
-  generateVideoSchema,
 } from '@/lib/schema';
 
 export const metadata: Metadata = {
@@ -158,7 +157,7 @@ export default function BestPufPanelThicknessForRoofingPage() {
       description:
         'Complete thickness vs R-value guide for roofing PUF panels. Covers 30mm to 150mm options with climate zone recommendations, application matrix, and cost analysis.',
       url: pageUrl,
-      image: 'https://phoenixxsmartbuild.com/images/puf-panel-thickness-roofing.jpg',
+      image: 'https://phoenixxsmartbuild.com/images/products/sandwich-panels/roofing-panel/PHOENIXX_ROOFING_PANEL5.jpg',
       datePublished: '2025-02-10',
       dateModified: '2026-02-15',
       author: { name: 'PHOENIXX SMARTBUILD Engineering Team', url: 'https://phoenixxsmartbuild.com/about' },
@@ -183,17 +182,9 @@ export default function BestPufPanelThicknessForRoofingPage() {
       name: 'PUF Panel Thickness Comparison Chart for Roofing',
       description:
         'Visual comparison of PUF panel thicknesses from 30mm to 150mm showing cross-section, R-value, and recommended roofing applications.',
-      contentUrl: '/images/puf-panel-thickness-roofing.jpg',
+      contentUrl: '/images/products/sandwich-panels/roofing-panel/PHOENIXX_ROOFING_PANEL5.jpg',
       width: 1200,
       height: 630,
-    }),
-    generateVideoSchema({
-      name: 'PHOENIXX PUF Panel Thickness Selection Guide',
-      description:
-        'Watch our engineering team explain how to choose the right PUF panel thickness for your roofing project, with live R-value calculations and climate zone mapping.',
-      thumbnailUrl: 'https://phoenixxsmartbuild.com/images/video-thumb-thickness-guide.jpg',
-      uploadDate: '2025-02-01',
-      duration: 'PT8M30S',
     }),
   ];
 
@@ -209,7 +200,7 @@ export default function BestPufPanelThicknessForRoofingPage() {
       name: 'PHOENIXX SMARTBUILD',
       address: { '@type': 'PostalAddress', addressLocality: 'Ahmedabad', addressRegion: 'Gujarat', addressCountry: 'IN' },
     },
-    image: 'https://phoenixxsmartbuild.com/images/puf-panel-thickness-roofing.jpg',
+    image: 'https://phoenixxsmartbuild.com/images/products/sandwich-panels/roofing-panel/PHOENIXX_ROOFING_PANEL5.jpg',
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'INR',
@@ -231,7 +222,7 @@ export default function BestPufPanelThicknessForRoofingPage() {
 
         {/* ─── Section 1: Trust-First Hero ─── */}
         <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20 md:py-28 overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
           <div className="container-custom relative">
             <div className="max-w-4xl">

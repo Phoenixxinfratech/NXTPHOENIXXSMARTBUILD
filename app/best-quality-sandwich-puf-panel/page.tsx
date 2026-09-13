@@ -16,7 +16,6 @@ import {
   generateSpeakableSchema,
   generateQAPageSchema,
   generateImageObjectSchema,
-  generateVideoSchema,
 } from '@/lib/schema';
 
 export const metadata: Metadata = {
@@ -145,14 +144,6 @@ export default function BestQualitySandwichPufPanelPage() {
           contentUrl: 'https://phoenixxsmartbuild.com/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
           width: 1200,
           height: 630,
-        })} />
-        <JsonLd data={generateVideoSchema({
-          name: 'PHOENIXX PUF Panel Quality Control Process',
-          description: 'See how PHOENIXX ensures premium quality in every PUF panel through rigorous testing and continuous lamination technology.',
-          thumbnailUrl: 'https://phoenixxsmartbuild.com/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
-          uploadDate: '2025-01-01',
-          duration: 'PT4M45S',
-          contentUrl: 'https://phoenixxsmartbuild.com/videos/quality-control',
         })} />
         <JsonLd data={productSchema} />
 

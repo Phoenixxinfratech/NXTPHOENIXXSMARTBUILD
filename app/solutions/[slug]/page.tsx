@@ -33,17 +33,17 @@ const solutionImages: Record<string, string[]> = {
     '/images/solutions/cold-storage/Cold-Storage-Warehouse-manufacture-17.jpg',
   ],
   'walkable-ceiling-systems': [
-    '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-2.jpg',
+    '/images/products/sandwich-panels/wall-ceiling-panel/Industrial-False-Ceiling-PUF-Panel-2.jpg',
     '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-3.jpg',
-    '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-4.jpg',
+    '/images/projects/gallery/Industrial-False-Ceiling-PUF-Panel-4.jpg',
     '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-5.jpg',
     '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-6.jpg',
-    '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-7.jpg',
+    '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-5.jpg',
     '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-8.jpg',
     '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-10.jpg',
   ],
   'non-walkable-ceiling-systems': [
-    '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-2.jpg',
+    '/images/products/sandwich-panels/wall-ceiling-panel/Industrial-False-Ceiling-PUF-Panel-2.jpg',
     '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-3.jpg',
     '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-5.jpg',
     '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-6.jpg',
@@ -68,9 +68,9 @@ const solutionImages: Record<string, string[]> = {
     '/images/solutions/cleanroom/cleanroom-Manufacture-Supplier-in-Ahmedabad5.jpg',
     '/images/solutions/cleanroom/cleanroom-Manufacture-Supplier-in-Ahmedabad6.jpg',
     '/images/solutions/cleanroom/cleanroom-Manufacture-Supplier-in-Ahmedabad7.jpg',
-    '/images/solutions/cleanroom/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects26.jpg',
-    '/images/solutions/cleanroom/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects74.jpg',
-    '/images/solutions/cleanroom/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects75.jpg',
+    '/images/products/cleanroom/ceiling/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects26.jpg',
+    '/images/projects/gallery/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects74.jpg',
+    '/images/solutions/cleanroom/cleanroom-Manufacture-Supplier-in-Ahmedabad7.jpg',
   ],
 };
 
@@ -564,7 +564,7 @@ export default async function SolutionDetailPage({ params }: Props) {
         {/* Hero */}
         <section className="relative min-h-[70vh] flex items-center overflow-hidden">
           <div className="absolute inset-0">
-            {images[0] && <Image src={images[0]} alt={data.title} fill className="object-cover" priority />}
+            {images[0] && <Image src={images[0]} alt={data.title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" priority />}
             <div className={`absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/80 to-slate-900/60`} />
           </div>
 
@@ -643,7 +643,7 @@ export default async function SolutionDetailPage({ params }: Props) {
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {images.map((img, idx) => (
                   <div key={idx} className="relative aspect-[4/3] rounded-xl overflow-hidden group shadow-lg">
-                    <Image src={img} alt={`${data.title} - Project ${idx + 1}`} fill className="object-cover transition-transform duration-500 group-hover:scale-110" />
+                    <Image src={img} alt={`${data.title} - Project ${idx + 1}`} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition-transform duration-500 group-hover:scale-110" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                 ))}

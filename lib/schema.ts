@@ -50,7 +50,7 @@ export function generateOrganizationSchema() {
     url: siteConfig.url,
     logo: {
       '@type': 'ImageObject',
-      url: `${siteConfig.url}/images/logo.png`,
+      url: `${siteConfig.url}/images/brand/logos/logo.png`,
     },
     foundingDate: siteConfig.company.foundingDate,
     contactPoint: {
@@ -185,7 +185,7 @@ export function generateArticleSchema(article: ArticleData) {
       name: siteConfig.company.name,
       logo: {
         '@type': 'ImageObject',
-        url: `${siteConfig.url}/images/logo.png`,
+        url: `${siteConfig.url}/images/brand/logos/logo.png`,
       },
     },
   };

@@ -24,7 +24,7 @@ const productImages: Record<string, Record<string, string[]>> = {
       '/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL1.jpg',
       '/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL3.jpg',
       '/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL9.jpg',
-      '/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL19.jpg',
+      '/images/projects/gallery/PHOENIXX_WALL_PUF_PANEL19.jpg',
     ],
     'roofing-puf-panel': [
       '/images/products/sandwich-panels/roofing-panel/PHOENIXX_ROOFING_PANEL5.jpg',
@@ -33,9 +33,9 @@ const productImages: Record<string, Record<string, string[]>> = {
     ],
     'wall-ceiling-panel': [
       '/images/products/sandwich-panels/wall-ceiling-panel/Industrial-False-Ceiling-PUF-Panel-2.jpg',
-      '/images/products/sandwich-panels/wall-ceiling-panel/Industrial-False-Ceiling-PUF-Panel-3.jpg',
-      '/images/products/sandwich-panels/wall-ceiling-panel/Industrial-False-Ceiling-PUF-Panel-4.jpg',
-      '/images/products/sandwich-panels/wall-ceiling-panel/Industrial-False-Ceiling-PUF-Panel-10.jpg',
+      '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-3.jpg',
+      '/images/projects/gallery/Industrial-False-Ceiling-PUF-Panel-4.jpg',
+      '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-10.jpg',
     ],
     'rockwool-panel': [
       '/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCHWOOL_PANEL1.jpg',
@@ -51,9 +51,9 @@ const productImages: Record<string, Record<string, string[]>> = {
       '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-1.jpg',
       '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-2.jpg',
       '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-3.jpg',
-      '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-4.jpg',
-      '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-5.jpg',
-      '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-6.jpg',
+      '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-1.jpg',
+      '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-2.jpg',
+      '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-3.jpg',
     ],
     'fire-rated-multipurpose-door': [
       '/images/products/doors/multipurpose-door/Metal-Door-Manufacturer-Ahmedabad-1.jpg',
@@ -85,13 +85,13 @@ const productImages: Record<string, Record<string, string[]>> = {
     ],
     'cleanroom-false-ceiling': [
       '/images/products/cleanroom/ceiling/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects26.jpg',
-      '/images/products/cleanroom/ceiling/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects74.jpg',
-      '/images/products/cleanroom/ceiling/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects75.jpg',
-      '/images/products/cleanroom/ceiling/cleanroom-Manufacture-Supplier-in-Ahmedabad5.jpg',
+      '/images/projects/gallery/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects74.jpg',
+      '/images/solutions/cleanroom/cleanroom-Manufacture-Supplier-in-Ahmedabad7.jpg',
+      '/images/solutions/cleanroom/cleanroom-Manufacture-Supplier-in-Ahmedabad5.jpg',
     ],
     'cleanroom-doors': [
-      '/images/products/cleanroom/doors/Cleanroom-Door-Manufacturer-in-Ahmedabad-1.jpg',
-      '/images/products/cleanroom/doors/Cleanroom-Door-Manufacturer-in-Ahmedabad-2.jpg',
+      '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-1.jpg',
+      '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-2.jpg',
       '/images/products/cleanroom/doors/Cleanroom-Door-Manufacturer-in-Ahmedabad-10.jpg',
       '/images/products/cleanroom/doors/Cleanroom-Door-Manufacturer-in-Ahmedabad-12.jpg',
     ],
@@ -1369,7 +1369,7 @@ export default async function ProductDetailPage({ params }: Props) {
     '@type': 'Product',
     name: data.name,
     description: data.description,
-    image: `https://phoenixxsmartbuild.com/images/products/sandwich-panels/puf-panel/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp`,
+    image: `https://phoenixxsmartbuild.com/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp`,
     brand: { '@type': 'Brand', name: 'PHOENIXX SMARTBUILD' },
     manufacturer: { '@type': 'Organization', name: 'NXT PHOENIXX SMARTBUILD LLP', url: 'https://phoenixxsmartbuild.com' },
     offers: {
@@ -1486,6 +1486,7 @@ export default async function ProductDetailPage({ params }: Props) {
                     <Image
                       src={img}
                       alt={`${data.name} - Image ${idx + 1}`}
+                      sizes="(max-width: 768px) 100vw, 33vw"
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />

@@ -11,7 +11,11 @@ const nextConfig = {
 
   // Image optimization configuration
   images: {
-    // Disable image optimization to use direct images (fixes Netlify IPX issues)
+    // Runtime optimization stays off because @netlify/plugin-nextjs v4 serves it
+    // through IPX, which this site hit problems with. The local library is
+    // instead pre-compressed and capped at 1920px at build-time, so the bytes on
+    // the wire are already close to what the optimizer would have produced.
+    // Revisit alongside a plugin upgrade to v5 (Netlify Image CDN).
     unoptimized: true,
     remotePatterns: [
       {
@@ -20,11 +24,9 @@ const nextConfig = {
         pathname: '/images/**',
       },
     ],
-    formats: ['image/avif', 'image/webp'],
     // Device sizes for responsive images
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    // Minimize image quality for performance while maintaining visual quality
     minimumCacheTTL: 31536000,
   },
 

@@ -93,7 +93,7 @@ const leadership = [
     role: 'Head of Operations',
     bio: 'An execution specialist focused on precision project delivery, operational efficiency, and customer satisfaction across diverse industrial sectors.',
     quote: 'Execution with precision defines who we are.',
-    image: '/images/team/harshad-gupta.jpg',
+    image: '',
   },
 ];
 
@@ -418,12 +418,16 @@ export default function AboutPage() {
                       <Image
                         src={leader.image}
                         alt={leader.name}
+                        sizes="(max-width: 768px) 50vw, 25vw"
                         fill
                         className="object-cover"
                       />
                     ) : (
-                      <div className="w-full h-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-4xl text-white" aria-hidden="true">
-                        👤
+                      <div className="w-full h-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-3xl font-bold text-white" aria-hidden="true">
+                        {leader.name
+                          .split(' ')
+                          .map((part) => part[0])
+                          .join('')}
                       </div>
                     )}
                   </div>

@@ -67,7 +67,7 @@ const localBusinessSchema = {
   },
   priceRange: '\u20B9\u20B9',
   image:
-    'https://phoenixxsmartbuild.com/images/products/sandwich-panels/puf-panel/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
+    'https://phoenixxsmartbuild.com/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
 };
 
 export default function LandingPageClient() {
@@ -192,8 +192,9 @@ export default function LandingPageClient() {
                 <div className="hidden lg:block">
                   <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl ring-1 ring-white/10">
                     <Image
-                      src="/images/products/sandwich-panels/puf-panel/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp"
+                      src="/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp"
                       alt="PUF panel manufacturing facility in Ahmedabad - PHOENIXX SMARTBUILD"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
                       fill
                       className="object-cover"
                       priority
@@ -264,6 +265,7 @@ export default function LandingPageClient() {
                       <Image
                         src={product.img}
                         alt={product.alt}
+                        sizes="(max-width: 768px) 100vw, 33vw"
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />

@@ -16,7 +16,6 @@ import {
   generateSpeakableSchema,
   generateQAPageSchema,
   generateImageObjectSchema,
-  generateVideoSchema,
 } from '@/lib/schema';
 
 export const metadata: Metadata = {
@@ -205,19 +204,6 @@ export default function BestPufPanelForCleanRoomPage() {
               'https://phoenixxsmartbuild.com/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
             width: 1200,
             height: 630,
-          })}
-        />
-        <JsonLd
-          data={generateVideoSchema({
-            name: 'PHOENIXX Cleanroom Panel Manufacturing & Installation Process',
-            description:
-              'Watch how PHOENIXX manufactures and installs GMP-compliant insulated panels for pharmaceutical cleanrooms across India. Flush-mount joints, antimicrobial coatings, and ISO 14644 validated installations.',
-            thumbnailUrl:
-              'https://phoenixxsmartbuild.com/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
-            uploadDate: '2025-01-01',
-            duration: 'PT7M30S',
-            contentUrl:
-              'https://phoenixxsmartbuild.com/videos/cleanroom-panel-installation',
           })}
         />
         <JsonLd data={productSchema} />

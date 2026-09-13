@@ -16,7 +16,6 @@ import {
   generateSpeakableSchema,
   generateQAPageSchema,
   generateImageObjectSchema,
-  generateVideoSchema,
 } from '@/lib/schema';
 
 export const metadata: Metadata = {
@@ -205,19 +204,6 @@ export default function BestPufPanelForIndustrialShedPage() {
               'https://phoenixxsmartbuild.com/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
             width: 1200,
             height: 630,
-          })}
-        />
-        <JsonLd
-          data={generateVideoSchema({
-            name: 'PHOENIXX PUF Panel Manufacturing & Installation',
-            description:
-              'Watch how PHOENIXX manufactures and installs premium PUF panels for industrial sheds across India.',
-            thumbnailUrl:
-              'https://phoenixxsmartbuild.com/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
-            uploadDate: '2025-01-01',
-            duration: 'PT5M30S',
-            contentUrl:
-              'https://phoenixxsmartbuild.com/videos/factory-tour',
           })}
         />
         <JsonLd data={productSchema} />

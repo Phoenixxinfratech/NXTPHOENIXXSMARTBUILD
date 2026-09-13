@@ -92,7 +92,7 @@ export default function SuratPage() {
 
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-orange-900 via-amber-900 to-slate-900 py-20 md:py-28">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-orange-500/10 px-4 py-2 text-sm font-medium text-orange-400 mb-6">

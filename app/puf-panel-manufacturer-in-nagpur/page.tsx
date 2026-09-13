@@ -33,7 +33,7 @@ export default function NagpurPage() {
         <JsonLd data={faqSchema} />
 
         <section className="relative bg-gradient-to-br from-green-900 via-emerald-900 to-slate-900 py-20 md:py-28">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-green-500/10 px-4 py-2 text-sm font-medium text-green-400 mb-6">📍 Serving Nagpur & Central India</span>

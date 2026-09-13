@@ -16,7 +16,6 @@ import {
   generateSpeakableSchema,
   generateQAPageSchema,
   generateImageObjectSchema,
-  generateVideoSchema,
 } from '@/lib/schema';
 
 export const metadata: Metadata = {
@@ -193,14 +192,6 @@ export default function BestInsulatedPanelForWarehousePage() {
       contentUrl: 'https://phoenixxsmartbuild.com/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
       width: 1200,
       height: 630,
-    }),
-    generateVideoSchema({
-      name: 'PHOENIXX Warehouse PUF Panel Installation',
-      description:
-        'Watch a complete warehouse insulated panel installation by PHOENIXX SMARTBUILD, from PEB erection to final PUF panel cladding on a 5,000 sq.m logistics warehouse.',
-      thumbnailUrl: 'https://phoenixxsmartbuild.com/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
-      uploadDate: '2025-06-01',
-      duration: 'PT7M20S',
     }),
   ];
 

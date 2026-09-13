@@ -16,7 +16,6 @@ import {
   generateSpeakableSchema,
   generateQAPageSchema,
   generateImageObjectSchema,
-  generateVideoSchema,
 } from '@/lib/schema';
 
 export const metadata: Metadata = {
@@ -112,7 +111,7 @@ export default function BestDensityPufPanelForInsulationPage() {
       title: 'What Density PUF Panel Is Best for Insulation? — Expert Guide 2026',
       description: 'Comprehensive technical guide on PUF panel density for insulation. Learn why 40 kg/m³ is optimal, how to verify density, and the science behind closed-cell foam performance.',
       url: '/best-density-puf-panel-for-insulation',
-      image: '/images/guides/og/puf-panel-density-insulation-guide.jpg',
+      image: '/og-image.png',
       datePublished: '2025-03-10',
       dateModified: '2026-02-17',
       author: { name: 'PHOENIXX SMARTBUILD Technical Team', url: 'https://phoenixxsmartbuild.com/about-us' },
@@ -139,17 +138,9 @@ export default function BestDensityPufPanelForInsulationPage() {
     generateImageObjectSchema({
       name: 'PUF Panel Density Cross-Section Analysis',
       description: 'Cross-section view of a 40 kg/m³ PUF panel showing closed-cell structure under magnification at PHOENIXX SMARTBUILD quality laboratory in Ahmedabad.',
-      contentUrl: '/images/guides/density/puf-panel-density-cross-section.jpg',
+      contentUrl: '/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL9.jpg',
       width: 1200,
       height: 630,
-    }),
-    generateVideoSchema({
-      name: 'PUF Panel Density Testing — How to Verify 40 kg/m³',
-      description: 'Watch how PHOENIXX SMARTBUILD tests PUF panel density per IS 3346 standards. Learn how to verify density on-site and interpret density test certificates.',
-      thumbnailUrl: 'https://phoenixxsmartbuild.com/images/video/density-testing-thumbnail.jpg',
-      uploadDate: '2025-08-15',
-      duration: 'PT4M20S',
-      contentUrl: 'https://phoenixxsmartbuild.com/videos/puf-panel-density-testing.mp4',
     }),
     {
       '@context': 'https://schema.org',
@@ -159,7 +150,7 @@ export default function BestDensityPufPanelForInsulationPage() {
       brand: { '@type': 'Brand', name: 'PHOENIXX SMARTBUILD' },
       manufacturer: { '@type': 'Organization', name: 'PHOENIXX SMARTBUILD' },
       url: 'https://phoenixxsmartbuild.com/best-density-puf-panel-for-insulation',
-      image: 'https://phoenixxsmartbuild.com/images/products/puf-panel-density-40kg.jpg',
+      image: 'https://phoenixxsmartbuild.com/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL3.jpg',
       offers: {
         '@type': 'AggregateOffer',
         priceCurrency: 'INR',
@@ -181,7 +172,7 @@ export default function BestDensityPufPanelForInsulationPage() {
 
         {/* ===== Section 1: Hero — Insulation Science Experts ===== */}
         <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20 md:py-28">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-emerald-500/10 px-4 py-2 text-sm font-medium text-emerald-400 mb-6">

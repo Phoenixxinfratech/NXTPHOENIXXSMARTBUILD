@@ -256,7 +256,7 @@ export const serpBlogsPart3: Record<string, BlogPost> = {
       <p>The <strong>true cost of a building envelope</strong> includes construction time (and the revenue lost during delays), energy consumption over the building\u2019s lifetime, maintenance and repair expenditure, and eventual replacement or upgrade costs. When these factors are accounted for, PUF panels consistently emerge as the most cost-effective solution for industrial and commercial construction.</p>
       <p>In this comprehensive comparison, the engineering team at <strong>Phoenixx SmartBuild</strong> puts real numbers behind the debate \u2013 helping project owners, architects, and consultants make data-driven decisions.</p>
 
-      <img src="/images/products/sandwich-panels/puf-panel/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp" alt="PUF panel manufacturing at Phoenixx SmartBuild factory showing top quality insulated panels" loading="lazy" />
+      <img src="/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp" alt="PUF panel manufacturing at Phoenixx SmartBuild factory showing top quality insulated panels" loading="lazy" />
 
       <h2>Head-to-Head Material Cost Comparison (2026)</h2>
       <p>Let\u2019s start with what most people look at first \u2013 the raw material and construction cost per square foot for a typical industrial wall or roof enclosure:</p>
@@ -499,7 +499,7 @@ export const serpBlogsPart3: Record<string, BlogPost> = {
       <p>The Indian <strong>PUF (Polyurethane Foam) panel market</strong> is at an inflection point. Driven by rapid industrialisation, cold-chain infrastructure expansion, and a national push toward energy-efficient construction, the market is projected to grow at <strong>12\u201315% CAGR between 2026 and 2030</strong>, reaching an estimated valuation of \u20b9 8,500\u20139,200 crore by the end of the decade.</p>
       <p>For stakeholders across the construction value chain \u2013 from developers and architects to contractors and end-users \u2013 understanding where the PUF panel industry is headed is essential for making future-ready investment decisions. In this analysis, the engineering team at <strong>Phoenixx SmartBuild</strong> examines the five mega-trends shaping the next chapter of <a href="/products/sandwich-panels/sandwich-puf-panel">PUF panels</a> in India.</p>
 
-      <img src="/images/products/sandwich-panels/puf-panel/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp" alt="Top PUF panel manufacturer in India Phoenixx SmartBuild showcasing advanced manufacturing facility" loading="lazy" />
+      <img src="/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp" alt="Top PUF panel manufacturer in India Phoenixx SmartBuild showcasing advanced manufacturing facility" loading="lazy" />
 
       <h2>Market Growth Projections: 2026\u20132030</h2>
       <p>India\u2019s PUF panel market has evolved from a niche product used primarily in cold storage to a mainstream construction material embraced across sectors. Key demand drivers include:</p>
@@ -662,7 +662,7 @@ export const serpBlogsPart3: Record<string, BlogPost> = {
       <p>As Maharashtra\u2019s factories, warehouses, and processing units modernise, <strong>PUF (Polyurethane Foam) sandwich panels</strong> are replacing traditional brick-and-mortar construction across the state. The reasons are compelling: faster construction (4\u20136x), superior thermal insulation, lower lifecycle costs, and compliance with ECBC and FSSAI standards.</p>
       <p>In this guide, the engineering team at <strong>Phoenixx SmartBuild</strong> maps PUF panel applications to Maharashtra\u2019s key industrial zones and sectors, providing project owners with actionable information on specifications, pricing, and supply logistics.</p>
 
-      <img src="/images/products/sandwich-panels/puf-panel/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp" alt="Top PUF panel manufacturer in India supplying to Maharashtra industrial projects" loading="lazy" />
+      <img src="/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp" alt="Top PUF panel manufacturer in India supplying to Maharashtra industrial projects" loading="lazy" />
 
       <h2>Key MIDC Zones and PUF Panel Applications</h2>
 
@@ -1079,7 +1079,7 @@ export const serpBlogsPart3: Record<string, BlogPost> = {
       <p>The state\u2019s agricultural output exceeds <strong>\u20b9 2.5 lakh crore annually</strong>, which means post-harvest losses represent a staggering \u20b9 75,000\u20131,00,000 crore economic drain. The solution lies in rapidly building climate-controlled storage and processing infrastructure across MP\u2019s agricultural heartland \u2013 and <strong>PUF (Polyurethane Foam) panels</strong> are the ideal construction material for this purpose.</p>
       <p>In this guide, the engineering team at <strong>Phoenixx SmartBuild</strong> outlines how PUF panels are transforming MP\u2019s agricultural infrastructure \u2013 from farm-gate cold rooms in Indore to large-scale grain silos in Bhopal and Gwalior.</p>
 
-      <img src="/images/products/sandwich-panels/puf-panel/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp" alt="PUF panel manufacturer in India Phoenixx SmartBuild supplying agricultural cold storage solutions" loading="lazy" />
+      <img src="/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp" alt="PUF panel manufacturer in India Phoenixx SmartBuild supplying agricultural cold storage solutions" loading="lazy" />
 
       <h2>Agricultural Cold Storage: Why PUF Panels Are the Standard</h2>
       <p>Cold storage construction in India has overwhelmingly adopted PUF panels as the default insulation material. The reasons are both technical and economic:</p>
@@ -1492,7 +1492,7 @@ export const serpBlogsPart3: Record<string, BlogPost> = {
       <p>Effective soundproofing requires materials that combine <strong>sound insulation</strong> (blocking noise transmission through walls and ceilings) with <strong>sound absorption</strong> (reducing echo and reverberation within a space). <a href="/products/sandwich-panels/sandwich-puf-panel">PUF (Polyurethane Foam) panels</a> deliver on both fronts, making them a versatile and cost-effective acoustic solution for a wide range of applications.</p>
       <p>In this technical guide, the engineering team at <strong>Phoenixx SmartBuild</strong> breaks down PUF panel acoustic performance, application-specific recommendations, and how PUF compares to dedicated acoustic materials like rockwool and glass wool.</p>
 
-      <img src="/images/products/sandwich-panels/puf-panel/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp" alt="PUF soundproofing panels manufactured by Phoenixx SmartBuild for industrial acoustic insulation" loading="lazy" />
+      <img src="/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp" alt="PUF soundproofing panels manufactured by Phoenixx SmartBuild for industrial acoustic insulation" loading="lazy" />
 
       <h2>PUF Panel Acoustic Properties Explained</h2>
       <p>PUF panels contribute to acoustic performance through two distinct mechanisms:</p>

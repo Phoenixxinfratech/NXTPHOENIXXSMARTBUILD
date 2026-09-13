@@ -42,7 +42,7 @@ const productCategories = [
         slug: 'roofing-puf-panel',
         name: 'Roofing PUF Panel',
         description: 'Insulated roofing panels with trapezoidal profile for industrial sheds.',
-        image: '/images/projects/gallery/Phoenix-PUF-Panel-Manufacturers6.jpg',
+        image: '/images/products/sandwich-panels/puf-panel/Phoenix-PUF-Panel-Manufacturers6.jpg',
         basePrice: 950,
         priceUnit: '/sq.mtr',
         features: ['150 km/h wind', '4m span', 'UV resistant'],
@@ -72,7 +72,7 @@ const productCategories = [
         slug: 'wall-ceiling-panel',
         name: 'Wall & Ceiling Panel',
         description: 'Versatile insulated panels for wall and ceiling applications.',
-        image: '/images/projects/gallery/PHOENIXX_WALL_PUF_PANEL1.jpg',
+        image: '/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL1.jpg',
         basePrice: 750,
         priceUnit: '/sq.mtr',
         features: ['GMP finish', 'Easy clean', 'Cam-lock'],
@@ -130,7 +130,7 @@ const productCategories = [
         slug: 'cold-storage-door',
         name: 'Cold Storage Door',
         description: 'Insulated doors for cold storage and freezer applications.',
-        image: '/images/projects/gallery/Industrial-False-Ceiling-PUF-Panel-2.jpg',
+        image: '/images/products/sandwich-panels/wall-ceiling-panel/Industrial-False-Ceiling-PUF-Panel-2.jpg',
         basePrice: 45000,
         priceUnit: '/unit',
         features: ['-40°C rated', 'Heated frame', 'Magnetic seal'],
@@ -140,7 +140,7 @@ const productCategories = [
         slug: 'hermetic-door',
         name: 'Hermetic Door',
         description: 'Air-tight automatic sliding doors for hospitals and OTs.',
-        image: '/images/projects/gallery/cleanroom-Manufacture-Supplier-in-Ahmedabad5.jpg',
+        image: '/images/solutions/cleanroom/cleanroom-Manufacture-Supplier-in-Ahmedabad5.jpg',
         basePrice: 125000,
         priceUnit: '/unit',
         features: ['True hermetic', 'Touchless', 'Lead-lined opt'],
@@ -178,7 +178,7 @@ const productCategories = [
         slug: 'cleanroom-doors',
         name: 'Cleanroom Doors (Solutions)',
         description: 'Complete cleanroom door solutions for partition integration.',
-        image: '/images/projects/gallery/cleanroom-Manufacture-Supplier-in-Ahmedabad6.jpg',
+        image: '/images/solutions/cleanroom/cleanroom-Manufacture-Supplier-in-Ahmedabad6.jpg',
         basePrice: 32000,
         priceUnit: '/unit',
         features: ['Interlock', 'Pass-through', 'GMP docs'],
@@ -188,7 +188,7 @@ const productCategories = [
         slug: 'cleanroom-flooring',
         name: 'Cleanroom Flooring',
         description: 'Seamless, anti-static, chemical-resistant flooring systems.',
-        image: '/images/projects/gallery/cleanroom-Manufacture-Supplier-in-Ahmedabad7.jpg',
+        image: '/images/solutions/cleanroom/cleanroom-Manufacture-Supplier-in-Ahmedabad7.jpg',
         basePrice: 850,
         priceUnit: '/sq.mtr',
         features: ['ESD options', 'Seamless', 'Chem resistant'],
@@ -336,6 +336,7 @@ export default async function ShopPage() {
                       <Image
                         src={product.image}
                         alt={product.name}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-110"
                       />

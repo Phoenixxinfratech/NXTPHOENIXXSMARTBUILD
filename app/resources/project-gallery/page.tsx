@@ -25,7 +25,7 @@ const projects = [
     area: '38,000 Sq. Ft.',
     scope: 'Insulated roofing and enclosures for large-scale industrial operations.',
     icon: '🏭',
-    image: '/images/projects/gallery/Phoenix-PUF-Panel-Manufacturers6.jpg',
+    image: '/images/products/sandwich-panels/puf-panel/Phoenix-PUF-Panel-Manufacturers6.jpg',
   },
   {
     slug: 'uflex-sanand',
@@ -77,7 +77,7 @@ const projects = [
     area: '28,000 Sq. Ft.',
     scope: 'Design, supply & installation of PUF insulated roofing and wall panels for manufacturing facility.',
     icon: '🧱',
-    image: '/images/projects/gallery/Industrial-False-Ceiling-PUF-Panel-2.jpg',
+    image: '/images/products/sandwich-panels/wall-ceiling-panel/Industrial-False-Ceiling-PUF-Panel-2.jpg',
   },
   {
     slug: 'motherson-marelli-sanand',
@@ -90,7 +90,7 @@ const projects = [
     area: '27,500 Sq. Ft.',
     scope: 'Insulated roofing and partition systems for automotive manufacturing plant.',
     icon: '🚗',
-    image: '/images/projects/gallery/PHOENIXX_WALL_PUF_PANEL3.jpg',
+    image: '/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL3.jpg',
   },
   {
     slug: 'skf-ahmedabad',
@@ -129,7 +129,7 @@ const projects = [
     area: '23,000 Sq. Ft.',
     scope: 'Industrial roofing and wall cladding for glass packaging plant.',
     icon: '🫙',
-    image: '/images/projects/gallery/PHOENIXX_WALL_PUF_PANEL9.jpg',
+    image: '/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL9.jpg',
   },
   {
     slug: 'agro-tech-ankleshwar',
@@ -142,7 +142,7 @@ const projects = [
     area: '22,000 Sq. Ft.',
     scope: 'Food-grade insulated wall and ceiling panels for hygienic processing zones.',
     icon: '🍿',
-    image: '/images/projects/gallery/Industrial-False-Ceiling-PUF-Panel-3.jpg',
+    image: '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-3.jpg',
   },
   {
     slug: 'rotomotive-anand',
@@ -168,7 +168,7 @@ const projects = [
     area: '20,400 Sq. Ft.',
     scope: 'Clean insulated wall and ceiling panels for food-grade production areas.',
     icon: '💊',
-    image: '/images/projects/gallery/Insulated-Ceiling-Panels-1.jpg',
+    image: '/images/projects/gallery/PUF-Panel-False-Ceiling-1.jpg',
   },
   {
     slug: 'fuji-silvertech-ahmedabad',
@@ -220,7 +220,7 @@ const projects = [
     area: '16,800 Sq. Ft.',
     scope: 'Cleanroom wall and ceiling panels for processing and packing areas.',
     icon: '🥫',
-    image: '/images/projects/gallery/cleanroom-Manufacture-Supplier-in-Ahmedabad5.jpg',
+    image: '/images/solutions/cleanroom/cleanroom-Manufacture-Supplier-in-Ahmedabad5.jpg',
   },
   {
     slug: 'edkem-pharma-ahmedabad',
@@ -259,7 +259,7 @@ const projects = [
     area: '12,500 Sq. Ft.',
     scope: 'Thermal and acoustic roofing solutions for enhanced indoor comfort.',
     icon: '🏨',
-    image: '/images/projects/gallery/Insulated-Ceiling-Panels-2.jpg',
+    image: '/images/projects/gallery/PUF-Panel-False-Ceiling-2.jpg',
   },
   {
     slug: 'agrawal-metal-vithlapur',

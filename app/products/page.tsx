@@ -27,10 +27,10 @@ export const metadata: Metadata = {
 // Client logos for trust section
 const clientLogos = [
   { name: 'Coca-Cola', logo: '/images/clients/coca-cola.jpg' },
-  { name: 'Amul', logo: '/images/clients/Amul_official_logo.svg.png' },
-  { name: 'Intas Pharma', logo: '/images/clients/Intas pharma.png' },
-  { name: 'SKF', logo: '/images/clients/SKF-01.png' },
-  { name: 'Uflex', logo: '/images/clients/Uflex.png' },
+  { name: 'Amul', logo: '/images/clients/amul.png' },
+  { name: 'Intas Pharma', logo: '/images/clients/intas.png' },
+  { name: 'SKF', logo: '/images/clients/skf.png' },
+  { name: 'Uflex', logo: '/images/clients/uflex.png' },
   { name: 'Hershey', logo: '/images/clients/hershey.webp' },
   { name: 'Cargill', logo: '/images/clients/cargill.jpg' },
   { name: 'Bunge', logo: '/images/clients/bunge.jpg' },
@@ -265,6 +265,7 @@ export default function ProductsPage() {
                   <Image
                     src={client.logo}
                     alt={client.name}
+                    sizes="80px"
                     fill
                     className="object-contain"
                   />
@@ -317,6 +318,7 @@ export default function ProductsPage() {
                     <Image
                       src={category.image}
                       alt={category.title}
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                     />
@@ -382,6 +384,7 @@ export default function ProductsPage() {
                     <Image
                       src={industry.image}
                       alt={industry.category}
+                      sizes="(max-width: 768px) 100vw, 33vw"
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />

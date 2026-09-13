@@ -56,7 +56,7 @@ const cleanroomData = {
       name: 'Cleanroom Doors',
       description: 'Flush-finish doors with magnetic/brush sealing for controlled environment applications. Swing, sliding, and hermetic options available.',
       keywords: 'Cleanroom doors, pharmaceutical doors, hermetic doors, GMP doors',
-      image: '/images/products/cleanroom/doors/Cleanroom-Door-Manufacturer-in-Ahmedabad-1.jpg',
+      image: '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-1.jpg',
       link: '/products/cleanroom-solutions/cleanroom-doors',
       features: ['Airtight sealing', 'Interlock compatible', 'SS hardware', 'Automation ready'],
     },
