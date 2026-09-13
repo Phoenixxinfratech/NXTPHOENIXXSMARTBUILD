@@ -269,7 +269,7 @@ export default function PufPanelCompanyIndiaPage() {
                 { name: 'Pharmaceutical', link: '/industries/pharma-chemical' },
                 { name: 'Food & Beverage', link: '/industries/food-processing' },
                 { name: 'Cold Chain', link: '/solutions/cold-storage-construction' },
-                { name: 'Warehousing', link: '/industries/warehousing' },
+                { name: 'Warehousing', link: '/industries/cold-chain' },
                 { name: 'Manufacturing', link: '/solutions/peb' },
                 { name: 'Dairy', link: '/industries/dairy' },
                 { name: 'Healthcare', link: '/products/cleanroom-solutions' },

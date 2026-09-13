@@ -154,7 +154,7 @@ export default function IndustrialPufPanelManufacturerPage() {
                   title: 'Warehouses & Logistics',
                   description: 'Large-span storage facilities with climate control and operational efficiency requirements.',
                   icon: '📦',
-                  link: '/industries/warehousing',
+                  link: '/industries/cold-chain',
                 },
                 {
                   title: 'Industrial Sheds',

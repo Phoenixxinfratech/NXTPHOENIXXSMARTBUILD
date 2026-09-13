@@ -6,6 +6,7 @@ import { Footer } from '@/components/blocks/footer';
 import { AISummaryBlock } from '@/components/ai/ai-summary-block';
 import { JsonLd } from '@/components/seo/json-ld';
 import { ProductFinder } from './product-finder';
+import { locations } from '@/lib/landing-page-data';
 
 export const metadata: Metadata = {
   title: 'Industrial Products – Panels, Doors & Cleanrooms',
@@ -120,7 +121,7 @@ const industries = [
     image: '/images/industries/semiconductor/semiconductor-cleanroom-1080x675.jpg',
     gradient: 'from-violet-500 to-purple-600',
     icon: '⚡',
-    href: '/industries/semiconductor',
+    href: '/industries/precision-engineering',
   },
   {
     category: 'Food & Hospitality',
@@ -136,7 +137,7 @@ const industries = [
     image: '/images/industries/research-development/rd_banniere_photo1-1800x1200.jpg',
     gradient: 'from-blue-500 to-indigo-600',
     icon: '🔬',
-    href: '/industries/research-development',
+    href: '/industries/pharma-chemical',
   },
 ];
 
@@ -520,27 +521,43 @@ export default function ProductsPage() {
                 { state: 'Madhya Pradesh', city: 'Indore' },
                 { state: 'Uttar Pradesh', city: 'Noida' },
                 { state: 'Chhattisgarh', city: 'Raipur' },
-              ].map((location) => (
-                <Link
-                  key={location.state}
-                  href={`/sandwich-puf-panel-in-${location.state.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all border border-transparent hover:border-blue-200"
-                >
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="text-2xl" aria-hidden="true">📍</span>
-                    <h3 className="text-lg font-bold text-slate-900">{location.state}</h3>
+              ].map((location) => {
+                const slug = location.state.toLowerCase().replace(/\s+/g, '-');
+                const body = (
+                  <>
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="text-2xl" aria-hidden="true">📍</span>
+                      <h3 className="text-lg font-bold text-slate-900">{location.state}</h3>
+                    </div>
+                    <p className="text-sm text-slate-600 mb-3">
+                      Top city: {location.city}
+                    </p>
+                  </>
+                );
+                return locations[slug] ? (
+                  <Link
+                    key={location.state}
+                    href={`/sandwich-puf-panel-in-${slug}`}
+                    className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all border border-transparent hover:border-blue-200"
+                  >
+                    {body}
+                    <span className="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">
+                      View locations
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </span>
+                  </Link>
+                ) : (
+                  <div
+                    key={location.state}
+                    className="bg-white rounded-xl p-6 shadow-sm border border-transparent"
+                  >
+                    {body}
+                    <span className="text-sm text-slate-500">Supplied from our Gujarat plant</span>
                   </div>
-                  <p className="text-sm text-slate-600 mb-3">
-                    Top city: {location.city}
-                  </p>
-                  <span className="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">
-                    View locations
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </span>
-                </Link>
-              ))}
+                );
+              })}
             </div>
 
             <div className="text-center">

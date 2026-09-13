@@ -538,7 +538,7 @@ export const serpBlogsPart2: Record<string, BlogPost> = {
     ],
     relatedSolutions: [
       { name: 'Cold Storage Construction', href: '/solutions/cold-storage-construction' },
-      { name: 'Cleanroom Construction', href: '/solutions/cleanroom' },
+      { name: 'Cleanroom Construction', href: '/solutions/cleanroom-solutions' },
     ],
     faqs: [
       {
@@ -720,7 +720,7 @@ export const serpBlogsPart2: Record<string, BlogPost> = {
       { name: 'PIR Panel', href: '/products/sandwich-panels/pir-panel' },
     ],
     relatedSolutions: [
-      { name: 'Cleanroom Construction', href: '/solutions/cleanroom' },
+      { name: 'Cleanroom Construction', href: '/solutions/cleanroom-solutions' },
       { name: 'PEB Solutions', href: '/solutions/peb' },
     ],
     faqs: [
@@ -945,7 +945,7 @@ export const serpBlogsPart2: Record<string, BlogPost> = {
     ],
     relatedSolutions: [
       { name: 'PEB Solutions', href: '/solutions/peb' },
-      { name: 'Warehouse Construction', href: '/solutions/warehouse' },
+      { name: 'Warehouse Construction', href: '/solutions/peb' },
     ],
     faqs: [
       {
@@ -1160,7 +1160,7 @@ export const serpBlogsPart2: Record<string, BlogPost> = {
     ],
     relatedSolutions: [
       { name: 'Cold Storage Construction', href: '/solutions/cold-storage-construction' },
-      { name: 'Cleanroom Construction', href: '/solutions/cleanroom' },
+      { name: 'Cleanroom Construction', href: '/solutions/cleanroom-solutions' },
     ],
     faqs: [
       {
@@ -1609,7 +1609,7 @@ export const serpBlogsPart2: Record<string, BlogPost> = {
     ],
     relatedSolutions: [
       { name: 'Cold Storage Construction', href: '/solutions/cold-storage-construction' },
-      { name: 'Cleanroom Construction', href: '/solutions/cleanroom' },
+      { name: 'Cleanroom Construction', href: '/solutions/cleanroom-solutions' },
     ],
     faqs: [
       {
@@ -1822,7 +1822,7 @@ export const serpBlogsPart2: Record<string, BlogPost> = {
     ],
     relatedSolutions: [
       { name: 'PEB Solutions', href: '/solutions/peb' },
-      { name: 'Warehouse Construction', href: '/solutions/warehouse' },
+      { name: 'Warehouse Construction', href: '/solutions/peb' },
     ],
     faqs: [
       {

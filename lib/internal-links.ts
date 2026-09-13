@@ -2,7 +2,7 @@
  * Rule-based internal link selection for Related Resources blocks.
  */
 import { products, locations, getLocation } from '@/lib/landing-page-data';
-import { canonicalComboSlug } from '@/lib/geo-strategy';
+import { canonicalComboSlug, productDetailHref } from '@/lib/geo-strategy';
 import { getAllBlogSlugs } from '@/lib/blog-data';
 import {
   getExportCountry,
@@ -58,14 +58,6 @@ function hashSlug(slug: string): number {
   let h = 0;
   for (let i = 0; i < slug.length; i++) h = (h * 31 + slug.charCodeAt(i)) | 0;
   return Math.abs(h);
-}
-
-function productDetailHref(productSlug: string): string {
-  if (PRODUCT_DETAIL_SLUGS.has(productSlug)) {
-    return `/products/sandwich-panels/${productSlug}`;
-  }
-  // Products without a detail route (e.g. fm-approved-panel) live under /shop
-  return `/shop/${productSlug}`;
 }
 
 function pickNearbyCities(locationSlug: string, productSlug = 'sandwich-puf-panel', count = 4): RelatedLink[] {

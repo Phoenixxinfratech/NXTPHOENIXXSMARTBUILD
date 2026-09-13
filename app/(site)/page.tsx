@@ -6,6 +6,7 @@ import { JsonLd } from '@/components/seo/json-ld';
 import { generateOrganizationSchema, generateFAQSchema } from '@/lib/schema';
 import { FAQBlock } from '@/components/blocks/faq-block';
 import { AeoContentBlocks, DEFAULT_PUF_SPECS } from '@/components/seo/aeo-content-blocks';
+import { locations } from '@/lib/landing-page-data';
 
 // Homepage client logos
 const homepageClients = [
@@ -866,16 +867,26 @@ export default function HomePage() {
                 { state: 'West Bengal', slug: 'west-bengal' },
                 { state: 'Kerala', slug: 'kerala' },
                 { state: 'Haryana', slug: 'haryana' },
-              ].map((location) => (
-                <Link
-                  key={location.slug}
-                  href={`/sandwich-puf-panel-in-${location.slug}`}
-                  className="flex items-center gap-2 p-3 bg-white rounded-lg hover:shadow-md transition-all border border-transparent hover:border-blue-200"
-                >
-                  <span className="text-slate-500">→</span>
-                  <span className="text-sm font-medium text-slate-900">{location.state}</span>
-                </Link>
-              ))}
+              ].map((location) =>
+                locations[location.slug] ? (
+                  <Link
+                    key={location.slug}
+                    href={`/sandwich-puf-panel-in-${location.slug}`}
+                    className="flex items-center gap-2 p-3 bg-white rounded-lg hover:shadow-md transition-all border border-transparent hover:border-blue-200"
+                  >
+                    <span className="text-slate-500" aria-hidden="true">→</span>
+                    <span className="text-sm font-medium text-slate-900">{location.state}</span>
+                  </Link>
+                ) : (
+                  <div
+                    key={location.slug}
+                    className="flex items-center gap-2 p-3 bg-white rounded-lg border border-transparent"
+                  >
+                    <span className="text-slate-400" aria-hidden="true">→</span>
+                    <span className="text-sm font-medium text-slate-700">{location.state}</span>
+                  </div>
+                )
+              )}
             </div>
           </div>
 

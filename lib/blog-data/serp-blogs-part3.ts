@@ -188,7 +188,7 @@ export const serpBlogsPart3: Record<string, BlogPost> = {
       <ul>
         <li><strong>B2 classification:</strong> Standard FR-grade PUF core</li>
         <li><strong>B1 classification:</strong> Enhanced FR formulation for high-risk environments</li>
-        <li><strong>FM-approved options:</strong> Available through our <a href="/products/sandwich-panels/fm-approved-panel">FM-approved panel range</a> for insurance-sensitive projects</li>
+        <li><strong>FM-approved options:</strong> Available through our <a href="/shop/fm-approved-panel">FM-approved panel range</a> for insurance-sensitive projects</li>
       </ul>
       <p>All Phoenixx ceiling panels undergo rigorous in-house fire testing, and certificates are provided with every consignment.</p>
 
@@ -214,7 +214,7 @@ export const serpBlogsPart3: Record<string, BlogPost> = {
     keywords: ['PUF ceiling panels', 'commercial ceiling insulation', 'false ceiling PUF panel', 'walkable ceiling panels', 'cleanroom ceiling panels', 'PUF panel cost per sq ft', 'PUF vs gypsum ceiling'],
     relatedProducts: [
       { name: 'Wall & Ceiling PUF Panels', href: '/products/sandwich-panels/wall-ceiling-panel' },
-      { name: 'FM Approved Panels', href: '/products/sandwich-panels/fm-approved-panel' },
+      { name: 'FM Approved Panels', href: '/shop/fm-approved-panel' },
       { name: 'PUF Sandwich Panels', href: '/products/sandwich-panels/sandwich-puf-panel' },
     ],
     relatedSolutions: [
@@ -458,7 +458,7 @@ export const serpBlogsPart3: Record<string, BlogPost> = {
     keywords: ['PUF panel vs brick cost', 'PUF panel vs traditional material', 'insulated panel cost comparison', 'PUF panel ROI', 'PUF panel vs RCC', 'building material cost India', 'PUF panel total cost of ownership'],
     relatedProducts: [
       { name: 'PUF Sandwich Panels', href: '/products/sandwich-panels/sandwich-puf-panel' },
-      { name: 'PUF Roofing Panels', href: '/products/sandwich-panels/roofing-panel' },
+      { name: 'PUF Roofing Panels', href: '/products/sandwich-panels/roofing-puf-panel' },
       { name: 'PIR Sandwich Panels', href: '/products/sandwich-panels/pir-panel' },
     ],
     relatedSolutions: [
@@ -621,7 +621,7 @@ export const serpBlogsPart3: Record<string, BlogPost> = {
     relatedProducts: [
       { name: 'PUF Sandwich Panels', href: '/products/sandwich-panels/sandwich-puf-panel' },
       { name: 'PIR Sandwich Panels', href: '/products/sandwich-panels/pir-panel' },
-      { name: 'FM Approved Panels', href: '/products/sandwich-panels/fm-approved-panel' },
+      { name: 'FM Approved Panels', href: '/shop/fm-approved-panel' },
     ],
     relatedSolutions: [
       { name: 'Cold Storage Construction', href: '/solutions/cold-storage-construction' },
@@ -823,7 +823,7 @@ export const serpBlogsPart3: Record<string, BlogPost> = {
     relatedProducts: [
       { name: 'PUF Sandwich Panels', href: '/products/sandwich-panels/sandwich-puf-panel' },
       { name: 'PIR Sandwich Panels', href: '/products/sandwich-panels/pir-panel' },
-      { name: 'PUF Roofing Panels', href: '/products/sandwich-panels/roofing-panel' },
+      { name: 'PUF Roofing Panels', href: '/products/sandwich-panels/roofing-puf-panel' },
     ],
     relatedSolutions: [
       { name: 'PEB Solutions', href: '/solutions/peb' },
@@ -1036,7 +1036,7 @@ export const serpBlogsPart3: Record<string, BlogPost> = {
     author: { name: 'Engineering Team', role: 'PHOENIXX SmartBuild' },
     keywords: ['PUF panels Rajasthan', 'energy efficient panels Rajasthan', 'PUF panel desert climate', 'PUF panel Jaipur', 'RIICO industrial zone PUF', 'PUF panel Beawar manufacturer', 'thermal insulation Rajasthan'],
     relatedProducts: [
-      { name: 'PUF Roofing Panels', href: '/products/sandwich-panels/roofing-panel' },
+      { name: 'PUF Roofing Panels', href: '/products/sandwich-panels/roofing-puf-panel' },
       { name: 'PUF Sandwich Panels', href: '/products/sandwich-panels/sandwich-puf-panel' },
       { name: 'PUF Wall Panels', href: '/products/sandwich-panels/wall-ceiling-panel' },
     ],
@@ -1260,7 +1260,7 @@ export const serpBlogsPart3: Record<string, BlogPost> = {
     keywords: ['PUF panels agriculture MP', 'cold storage Madhya Pradesh', 'farm produce storage MP', 'PUF panel cold room', 'agricultural warehouse MP', 'MIDH subsidy cold storage', 'PUF panel Indore'],
     relatedProducts: [
       { name: 'PUF Sandwich Panels', href: '/products/sandwich-panels/sandwich-puf-panel' },
-      { name: 'PUF Roofing Panels', href: '/products/sandwich-panels/roofing-panel' },
+      { name: 'PUF Roofing Panels', href: '/products/sandwich-panels/roofing-puf-panel' },
       { name: 'Wall & Ceiling PUF Panels', href: '/products/sandwich-panels/wall-ceiling-panel' },
     ],
     relatedSolutions: [
@@ -1450,7 +1450,7 @@ export const serpBlogsPart3: Record<string, BlogPost> = {
     keywords: ['PUF panels education', 'prefab classroom PUF', 'school building PUF panel', 'PM SHRI schools', 'prefab school India', 'PUF panel hostel construction', 'education infrastructure PUF'],
     relatedProducts: [
       { name: 'PUF Sandwich Panels', href: '/products/sandwich-panels/sandwich-puf-panel' },
-      { name: 'PUF Roofing Panels', href: '/products/sandwich-panels/roofing-panel' },
+      { name: 'PUF Roofing Panels', href: '/products/sandwich-panels/roofing-puf-panel' },
       { name: 'Wall & Ceiling PUF Panels', href: '/products/sandwich-panels/wall-ceiling-panel' },
     ],
     relatedSolutions: [

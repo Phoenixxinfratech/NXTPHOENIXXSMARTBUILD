@@ -480,28 +480,28 @@ export default function BestQualitySandwichPufPanelPage() {
                     location: 'Ahmedabad, Gujarat',
                     scope: 'Precision manufacturing cleanroom with 80mm PUF wall panels and 100mm roof panels. Required tight thermal control for bearing production facility.',
                     result: 'Achieved ±1°C temperature stability. Zero panel defects reported in 3+ years of operation.',
-                    link: '/projects',
+                    link: '/resources/project-gallery',
                   },
                   {
                     client: 'Fuji Silvertech Concrete Pvt. Ltd.',
                     location: 'Ahmedabad, Gujarat',
                     scope: 'Large-scale warehouse cladding using 60mm PPGL PUF panels. Corrosion-resistant specification for concrete product storage environment.',
                     result: 'Panels performing flawlessly under high-dust, humid conditions. No delamination or coating degradation.',
-                    link: '/projects',
+                    link: '/resources/project-gallery',
                   },
                   {
                     client: 'PGP Glass Pvt. Ltd.',
                     location: 'Dahej, Gujarat',
                     scope: 'High-temperature industrial facility requiring fire-rated PUF panels with B1 classification and 0.50mm Galvalume facings.',
                     result: 'Passed all fire safety audits. Superior thermal resistance reduced cooling costs by an estimated 35%.',
-                    link: '/projects',
+                    link: '/resources/project-gallery',
                   },
                   {
                     client: 'Rajhans Nutriments Pvt. Ltd.',
                     location: 'Surat, Gujarat',
                     scope: 'Food-grade cold storage facility with 120mm PUF panels. Required IS 14925 compliance and hygiene-grade coatings for food processing.',
                     result: 'Maintained -18°C consistently. Full compliance with FSSAI and BIS requirements for food storage.',
-                    link: '/projects',
+                    link: '/resources/project-gallery',
                   },
                 ].map((project, idx) => (
                   <Link

@@ -17,7 +17,7 @@ export const comparisonBlogs: Record<string, BlogPost> = {
 
       <h2>What Is a PIR Panel?</h2>
       <p>A <a href="/products/sandwich-panels/pir-panel">PIR panel</a> uses a polyisocyanurate foam core, which is chemically similar to PUF but manufactured with a higher proportion of isocyanate. This produces a more cross-linked polymer structure that offers improved fire resistance and slightly better thermal performance at elevated temperatures.</p>
-      <p>PIR panels are increasingly specified for projects where <strong>fire safety compliance</strong> is critical, including pharmaceutical plants, food processing units, IT server rooms, and buildings that require <a href="/products/sandwich-panels/fm-approved-panel">FM Global approval</a>.</p>
+      <p>PIR panels are increasingly specified for projects where <strong>fire safety compliance</strong> is critical, including pharmaceutical plants, food processing units, IT server rooms, and buildings that require <a href="/shop/fm-approved-panel">FM Global approval</a>.</p>
 
       <h2>PUF Panel vs PIR Panel \u2013 Detailed Comparison Table</h2>
       <table>
@@ -88,7 +88,7 @@ export const comparisonBlogs: Record<string, BlogPost> = {
 
       <h2>Fire Safety \u2013 The Critical Difference</h2>
       <p>Fire performance is where PIR panels genuinely outshine PUF panels. The polyisocyanurate foam in PIR panels forms a <strong>stable char layer</strong> when exposed to flames, which acts as a thermal barrier and slows fire spread. PUF panels, by contrast, tend to melt and can emit higher levels of smoke, though fire-retardant grades (B2) offer improved performance.</p>
-      <p>If your project requires compliance with <strong>FM Global, NBC 2016 fire norms, or BIS standards for fire-rated construction</strong>, PIR panels or <a href="/products/sandwich-panels/fm-approved-panel">FM-approved panels</a> are typically the specified choice. For standard industrial buildings without stringent fire codes, PUF panels remain a cost-effective and fully adequate solution.</p>
+      <p>If your project requires compliance with <strong>FM Global, NBC 2016 fire norms, or BIS standards for fire-rated construction</strong>, PIR panels or <a href="/shop/fm-approved-panel">FM-approved panels</a> are typically the specified choice. For standard industrial buildings without stringent fire codes, PUF panels remain a cost-effective and fully adequate solution.</p>
 
       <h2>Cost Comparison \u2013 PUF Panel vs PIR Panel in India</h2>
       <p>PIR panels typically cost <strong>15\u201325% more</strong> than equivalent PUF panels due to the higher isocyanate content and manufacturing complexity. For a 50&nbsp;mm wall panel with standard PPGI facings:</p>
@@ -137,7 +137,7 @@ export const comparisonBlogs: Record<string, BlogPost> = {
     relatedProducts: [
       { name: 'PUF Sandwich Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
       { name: 'PIR Panel', href: '/products/sandwich-panels/pir-panel' },
-      { name: 'FM Approved Panel', href: '/products/sandwich-panels/fm-approved-panel' },
+      { name: 'FM Approved Panel', href: '/shop/fm-approved-panel' },
     ],
     relatedSolutions: [
       { name: 'Cold Storage Construction', href: '/solutions/cold-storage-construction' },
@@ -683,7 +683,7 @@ export const comparisonBlogs: Record<string, BlogPost> = {
 
       <h2>Material Overview</h2>
       <h3>PIR (Polyisocyanurate) Panel</h3>
-      <p>The <a href="/products/sandwich-panels/pir-panel">PIR panel</a> uses a polyisocyanurate foam core: a modified version of polyurethane with a higher isocyanate-to-polyol ratio. This chemical composition creates a highly cross-linked polymer that forms a stable char barrier when exposed to fire, significantly limiting flame spread and heat release. PIR panels are widely available with <a href="/products/sandwich-panels/fm-approved-panel">FM Global approval</a>.</p>
+      <p>The <a href="/products/sandwich-panels/pir-panel">PIR panel</a> uses a polyisocyanurate foam core: a modified version of polyurethane with a higher isocyanate-to-polyol ratio. This chemical composition creates a highly cross-linked polymer that forms a stable char barrier when exposed to fire, significantly limiting flame spread and heat release. PIR panels are widely available with <a href="/shop/fm-approved-panel">FM Global approval</a>.</p>
 
       <h3>Mineral Wool (Rockwool) Panel</h3>
       <p>The <a href="/products/sandwich-panels/rockwool-panel">Rockwool panel</a> uses stone wool fibres made from molten basalt rock. Mineral wool is naturally non-combustible and can withstand temperatures exceeding 1,000\u00b0C. It also provides excellent acoustic absorption, making it a dual-purpose insulation material.</p>
@@ -776,7 +776,7 @@ export const comparisonBlogs: Record<string, BlogPost> = {
       <p>Prices are comparable at the same thickness, but remember that PIR provides better insulation per mm. If you need equivalent insulation, the mineral wool panel will need to be thicker (and therefore more expensive) than the PIR panel. Factor in structural steel savings from PIR\u2019s lighter weight, and PIR often emerges as the more cost-effective option for most applications.</p>
 
       <h2>Get the Right Panel for Your Project</h2>
-      <p>Phoenixx SmartBuild manufactures both <a href="/products/sandwich-panels/pir-panel">PIR panels</a> and <a href="/products/sandwich-panels/rockwool-panel">mineral wool panels</a>, including <a href="/products/sandwich-panels/fm-approved-panel">FM-approved variants</a>. Our engineering team assesses your project requirements and recommends the optimal panel configuration for each zone of your building. <a href="/get-a-quote">Request a free consultation and quote</a> today.</p>
+      <p>Phoenixx SmartBuild manufactures both <a href="/products/sandwich-panels/pir-panel">PIR panels</a> and <a href="/products/sandwich-panels/rockwool-panel">mineral wool panels</a>, including <a href="/shop/fm-approved-panel">FM-approved variants</a>. Our engineering team assesses your project requirements and recommends the optimal panel configuration for each zone of your building. <a href="/get-a-quote">Request a free consultation and quote</a> today.</p>
     `,
     category: 'Comparison',
     date: '2026-03-19',
@@ -794,7 +794,7 @@ export const comparisonBlogs: Record<string, BlogPost> = {
     relatedProducts: [
       { name: 'PIR Panel', href: '/products/sandwich-panels/pir-panel' },
       { name: 'Rockwool Panel', href: '/products/sandwich-panels/rockwool-panel' },
-      { name: 'FM Approved Panel', href: '/products/sandwich-panels/fm-approved-panel' },
+      { name: 'FM Approved Panel', href: '/shop/fm-approved-panel' },
     ],
     relatedSolutions: [
       { name: 'Cold Storage Construction', href: '/solutions/cold-storage-construction' },
@@ -1001,7 +1001,7 @@ export const comparisonBlogs: Record<string, BlogPost> = {
     relatedProducts: [
       { name: 'PUF Sandwich Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
       { name: 'PIR Panel', href: '/products/sandwich-panels/pir-panel' },
-      { name: 'FM Approved Panel', href: '/products/sandwich-panels/fm-approved-panel' },
+      { name: 'FM Approved Panel', href: '/shop/fm-approved-panel' },
     ],
     relatedSolutions: [
       { name: 'Cold Storage Construction', href: '/solutions/cold-storage-construction' },
@@ -1355,7 +1355,7 @@ export const comparisonBlogs: Record<string, BlogPost> = {
         <li><strong>Calorimeter Test:</strong> Measures heat release rate and total heat released</li>
         <li><strong>Intermediate Scale Fire Test:</strong> Tests panel behaviour in a simulated wall or roof configuration</li>
       </ul>
-      <p><a href="/products/sandwich-panels/fm-approved-panel">FM-approved PIR panels</a> from Phoenixx SmartBuild have successfully passed these tests and are listed in the FM Approval Guide. While some PUF panels may meet FM criteria, PIR panels are far more commonly specified and approved for FM-insured projects.</p>
+      <p><a href="/shop/fm-approved-panel">FM-approved PIR panels</a> from Phoenixx SmartBuild have successfully passed these tests and are listed in the FM Approval Guide. While some PUF panels may meet FM criteria, PIR panels are far more commonly specified and approved for FM-insured projects.</p>
 
       <h2>Indian Fire Safety Regulations</h2>
       <p>In India, fire safety for buildings is governed by the <strong>National Building Code 2016 (NBC 2016)</strong> and local fire department regulations. Key provisions affecting insulated panel selection include:</p>
@@ -1386,7 +1386,7 @@ export const comparisonBlogs: Record<string, BlogPost> = {
       </ul>
 
       <h2>Expert Advice from Phoenixx SmartBuild</h2>
-      <p>Phoenixx SmartBuild manufactures both <a href="/products/sandwich-panels/sandwich-puf-panel">PUF panels</a> and <a href="/products/sandwich-panels/pir-panel">PIR panels</a>, including <a href="/products/sandwich-panels/fm-approved-panel">FM-approved variants</a>. Our engineering team works with fire safety consultants to recommend the right panel specification for each project\u2019s risk profile. Fire safety is not a place to cut corners\u2014let our experts help you choose wisely. <a href="/get-a-quote">Request a free consultation</a> today.</p>
+      <p>Phoenixx SmartBuild manufactures both <a href="/products/sandwich-panels/sandwich-puf-panel">PUF panels</a> and <a href="/products/sandwich-panels/pir-panel">PIR panels</a>, including <a href="/shop/fm-approved-panel">FM-approved variants</a>. Our engineering team works with fire safety consultants to recommend the right panel specification for each project\u2019s risk profile. Fire safety is not a place to cut corners\u2014let our experts help you choose wisely. <a href="/get-a-quote">Request a free consultation</a> today.</p>
     `,
     category: 'Comparison',
     date: '2026-03-22',
@@ -1403,7 +1403,7 @@ export const comparisonBlogs: Record<string, BlogPost> = {
     ],
     relatedProducts: [
       { name: 'PIR Panel', href: '/products/sandwich-panels/pir-panel' },
-      { name: 'FM Approved Panel', href: '/products/sandwich-panels/fm-approved-panel' },
+      { name: 'FM Approved Panel', href: '/shop/fm-approved-panel' },
       { name: 'PUF Sandwich Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
     ],
     relatedSolutions: [

@@ -200,7 +200,7 @@ export default function TopPufPanelManufacturersPage() {
                 { name: 'Cold Storage Facilities', link: '/solutions/cold-storage-construction', desc: 'Temperature-controlled warehouses and cold rooms' },
                 { name: 'Pharmaceutical Plants', link: '/industries/pharma-chemical', desc: 'GMP-compliant manufacturing facilities' },
                 { name: 'Food Processing Units', link: '/industries/food-processing', desc: 'Hygienic processing environments' },
-                { name: 'Warehouse & Logistics', link: '/industries/warehousing', desc: 'Distribution centers and storage facilities' },
+                { name: 'Warehouse & Logistics', link: '/industries/cold-chain', desc: 'Distribution centers and storage facilities' },
                 { name: 'Industrial Manufacturing', link: '/solutions/peb', desc: 'Factories and production plants' },
                 { name: 'Cleanroom Construction', link: '/products/cleanroom-solutions', desc: 'Controlled environment facilities' },
               ].map((industry, idx) => (

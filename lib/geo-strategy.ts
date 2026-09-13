@@ -71,6 +71,22 @@ export function getPublishedCombos(): PublishedCombo[] {
   return combos;
 }
 
+// Panel slugs that have a /products/sandwich-panels/{slug} detail route.
+const PRODUCT_DETAIL_SLUGS = new Set([
+  'sandwich-puf-panel',
+  'roofing-puf-panel',
+  'pir-panel',
+  'rockwool-panel',
+  'wall-ceiling-panel',
+]);
+
+/** Where a panel's own product page lives. fm-approved-panel only exists in /shop. */
+export function productDetailHref(productSlug: string): string {
+  return PRODUCT_DETAIL_SLUGS.has(productSlug)
+    ? `/products/sandwich-panels/${productSlug}`
+    : `/shop/${productSlug}`;
+}
+
 /** Products that still have their own page in a given location. */
 export function getPublishedProductsFor(locationSlug: string): string[] {
   return Object.keys(products).filter((productSlug) => isPublishedCombo(productSlug, locationSlug));

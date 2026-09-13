@@ -20,8 +20,8 @@ export const locationBlogs: Record<string, BlogPost> = {
     ],
     relatedProducts: [
       { name: 'Sandwich PUF Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
-      { name: 'PUF Roofing Panel', href: '/products/roofing-panels/puf-insulated-roofing-panel' },
-      { name: 'Cold Room Panel', href: '/products/cold-room-panels/puf-cold-room-panel' },
+      { name: 'PUF Roofing Panel', href: '/products/sandwich-panels/roofing-puf-panel' },
+      { name: 'Cold Room Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
     ],
     relatedSolutions: [
       { name: 'Cold Storage Construction', href: '/solutions/cold-storage-construction' },
@@ -144,9 +144,9 @@ export const locationBlogs: Record<string, BlogPost> = {
       'PUF panel cold storage',
     ],
     relatedProducts: [
-      { name: 'PUF Cold Room Panel', href: '/products/cold-room-panels/puf-cold-room-panel' },
+      { name: 'PUF Cold Room Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
       { name: 'Sandwich PUF Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
-      { name: 'Cold Room Door', href: '/products/cold-room-panels/cold-room-door' },
+      { name: 'Cold Room Door', href: '/shop/cold-storage-door' },
     ],
     relatedSolutions: [
       { name: 'Cold Storage Construction', href: '/solutions/cold-storage-construction' },
@@ -274,7 +274,7 @@ export const locationBlogs: Record<string, BlogPost> = {
     relatedProducts: [
       { name: 'Sandwich PUF Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
       { name: 'PIR Panel', href: '/products/sandwich-panels/pir-panel' },
-      { name: 'PUF Roofing Panel', href: '/products/roofing-panels/puf-insulated-roofing-panel' },
+      { name: 'PUF Roofing Panel', href: '/products/sandwich-panels/roofing-puf-panel' },
     ],
     relatedSolutions: [
       { name: 'PEB Solutions', href: '/solutions/peb' },
@@ -402,7 +402,7 @@ export const locationBlogs: Record<string, BlogPost> = {
     ],
     relatedProducts: [
       { name: 'Sandwich PUF Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
-      { name: 'PUF Roofing Panel', href: '/products/roofing-panels/puf-insulated-roofing-panel' },
+      { name: 'PUF Roofing Panel', href: '/products/sandwich-panels/roofing-puf-panel' },
       { name: 'PIR Panel', href: '/products/sandwich-panels/pir-panel' },
     ],
     relatedSolutions: [
@@ -526,7 +526,7 @@ export const locationBlogs: Record<string, BlogPost> = {
     ],
     relatedProducts: [
       { name: 'PIR Panel', href: '/products/sandwich-panels/pir-panel' },
-      { name: 'FM Approved Panel', href: '/products/sandwich-panels/fm-approved-panel' },
+      { name: 'FM Approved Panel', href: '/shop/fm-approved-panel' },
       { name: 'Sandwich PUF Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
     ],
     relatedSolutions: [
@@ -568,7 +568,7 @@ export const locationBlogs: Record<string, BlogPost> = {
   <li><strong>Char formation</strong> \u2013 the PIR core forms a protective char layer that insulates underlying material and slows fire spread.</li>
   <li><strong>B1/B2 fire classification</strong> \u2013 PIR panels achieve DIN 4102 B1 (flame retardant) classification, while standard PUF typically achieves only B2.</li>
 </ul>
-<p>For applications requiring even higher fire safety, <a href="/products/sandwich-panels/fm-approved-panel">FM-Approved panels</a> undergo rigorous third-party testing by Factory Mutual Global and meet the most demanding international fire safety standards.</p>
+<p>For applications requiring even higher fire safety, <a href="/shop/fm-approved-panel">FM-Approved panels</a> undergo rigorous third-party testing by Factory Mutual Global and meet the most demanding international fire safety standards.</p>
 
 <h2>Applications for PIR Panels in Rajkot</h2>
 
@@ -777,7 +777,7 @@ export const locationBlogs: Record<string, BlogPost> = {
     relatedProducts: [
       { name: 'Sandwich PUF Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
       { name: 'PIR Panel', href: '/products/sandwich-panels/pir-panel' },
-      { name: 'PUF Cold Room Panel', href: '/products/cold-room-panels/puf-cold-room-panel' },
+      { name: 'PUF Cold Room Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
     ],
     relatedSolutions: [
       { name: 'Cold Storage Construction', href: '/solutions/cold-storage-construction' },
@@ -807,7 +807,7 @@ export const locationBlogs: Record<string, BlogPost> = {
     ],
     content: `<h2>Ankleshwar GIDC \u2013 Gujarat\u2019s Chemical Industry Hub</h2>
 <p>Ankleshwar GIDC is one of Asia\u2019s largest chemical industrial estates, hosting over 2,000 manufacturing units spread across 1,600+ hectares in the Bharuch district of Gujarat. The estate is a nerve centre for <strong>bulk drugs, dyes &amp; intermediates, pesticides, specialty chemicals, and petrochemical derivatives</strong>. The sheer concentration of chemical processing creates unique challenges for building infrastructure \u2013 corrosive atmospheres, fire hazards, temperature-sensitive storage, and stringent environmental compliance.</p>
-<p>For Ankleshwar\u2019s industries, choosing the right insulation panels is not just about thermal performance \u2013 it\u2019s about <strong>corrosion resistance, fire safety, and chemical compatibility</strong>. As a leading <a href="/sandwich-puf-panel-in-ankleshwar">PUF panel supplier for Ankleshwar</a>, PHOENIXX SmartBuild delivers industrial-grade insulation solutions engineered for the region\u2019s demanding environment.</p>
+<p>For Ankleshwar\u2019s industries, choosing the right insulation panels is not just about thermal performance \u2013 it\u2019s about <strong>corrosion resistance, fire safety, and chemical compatibility</strong>. As a leading <a href="/sandwich-puf-panel-in-gujarat">PUF panel supplier for Ankleshwar</a>, PHOENIXX SmartBuild delivers industrial-grade insulation solutions engineered for the region\u2019s demanding environment.</p>
 
 <h2>Chemical Industry Insulation Challenges in Ankleshwar</h2>
 <p>Ankleshwar\u2019s chemical plants face several insulation challenges that standard building materials cannot address:</p>
@@ -890,7 +890,7 @@ export const locationBlogs: Record<string, BlogPost> = {
     relatedProducts: [
       { name: 'Sandwich PUF Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
       { name: 'PIR Panel', href: '/products/sandwich-panels/pir-panel' },
-      { name: 'FM Approved Panel', href: '/products/sandwich-panels/fm-approved-panel' },
+      { name: 'FM Approved Panel', href: '/shop/fm-approved-panel' },
     ],
     relatedSolutions: [
       { name: 'PEB Solutions', href: '/solutions/peb' },
@@ -920,7 +920,7 @@ export const locationBlogs: Record<string, BlogPost> = {
     ],
     content: `<h2>Dahej \u2013 India\u2019s Premier Petrochemical Investment Region</h2>
 <p>Dahej, located in the Bharuch district of Gujarat, is home to one of India\u2019s most ambitious industrial developments \u2013 the <strong>PCPIR (Petroleum, Chemicals, and Petrochemicals Investment Region)</strong>. Spanning 453 sq. km, the Dahej PCPIR is designated for large-scale petrochemical complexes, downstream processing units, and allied manufacturing facilities. Alongside the PCPIR, Dahej hosts a <strong>Special Economic Zone (SEZ)</strong>, a <strong>Dahej Port</strong> for bulk cargo handling, and the <strong>ONGC Dahej LNG Terminal</strong> \u2013 making it one of Gujarat\u2019s most strategically important industrial zones.</p>
-<p>The scale and nature of Dahej\u2019s industrial operations demand building envelope solutions that go far beyond basic thermal insulation. Fire safety, high-temperature resistance, corrosion protection, and compliance with international standards are non-negotiable. As a leading <a href="/sandwich-puf-panel-in-dahej">PUF panel supplier for Dahej</a>, PHOENIXX SmartBuild brings the product range and project experience to serve this demanding industrial zone.</p>
+<p>The scale and nature of Dahej\u2019s industrial operations demand building envelope solutions that go far beyond basic thermal insulation. Fire safety, high-temperature resistance, corrosion protection, and compliance with international standards are non-negotiable. As a leading <a href="/sandwich-puf-panel-in-gujarat">PUF panel supplier for Dahej</a>, PHOENIXX SmartBuild brings the product range and project experience to serve this demanding industrial zone.</p>
 
 <h2>Key Industries in Dahej Requiring Insulated Panels</h2>
 
@@ -965,7 +965,7 @@ export const locationBlogs: Record<string, BlogPost> = {
   <li><strong>NBC 2016 (National Building Code)</strong> fire safety provisions.</li>
   <li><strong>FM Global</strong> and <strong>UL</strong> standards for international clients and insured facilities.</li>
 </ul>
-<p>PHOENIXX SmartBuild\u2019s <a href="/products/sandwich-panels/fm-approved-panel">FM-Approved panels</a> meet or exceed all these requirements, providing documented fire test reports and compliance certificates for Dahej project approvals.</p>
+<p>PHOENIXX SmartBuild\u2019s <a href="/shop/fm-approved-panel">FM-Approved panels</a> meet or exceed all these requirements, providing documented fire test reports and compliance certificates for Dahej project approvals.</p>
 
 <h2>Logistics Advantage for Dahej Projects</h2>
 <p>Our Ahmedabad manufacturing facility is connected to Dahej via NH-48 and the Bharuch bypass, with a distance of approximately 250 km. This proximity enables:</p>
@@ -1156,7 +1156,7 @@ export const locationBlogs: Record<string, BlogPost> = {
     ],
     relatedProducts: [
       { name: 'Sandwich PUF Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
-      { name: 'PUF Roofing Panel', href: '/products/roofing-panels/puf-insulated-roofing-panel' },
+      { name: 'PUF Roofing Panel', href: '/products/sandwich-panels/roofing-puf-panel' },
       { name: 'PIR Panel', href: '/products/sandwich-panels/pir-panel' },
     ],
     relatedSolutions: [

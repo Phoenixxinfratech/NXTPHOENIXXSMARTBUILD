@@ -216,7 +216,7 @@ export const authorityBlogs: Record<string, BlogPost> = {
       <p>Fire safety is the primary reason specifiers choose PIR over PUF. Here\u2019s what the data shows:</p>
       <ul>
         <li><strong>Euroclass Bs1d0:</strong> PIR panels achieve the highest reaction-to-fire classification for organic-core panels under EN 13501-1, meaning limited combustibility, very low smoke production (s1), and no flaming droplets (d0).</li>
-        <li><strong>FM 4880/4881 Approval:</strong> <a href="/products/sandwich-panels/fm-approved-panel">FM-approved PIR panels</a> pass the rigorous Factory Mutual large-scale fire tests, which are mandatory for insurance compliance in many global and Indian cold storage and warehouse projects.</li>
+        <li><strong>FM 4880/4881 Approval:</strong> <a href="/shop/fm-approved-panel">FM-approved PIR panels</a> pass the rigorous Factory Mutual large-scale fire tests, which are mandatory for insurance compliance in many global and Indian cold storage and warehouse projects.</li>
         <li><strong>Indian NBC Compliance:</strong> PIR panels meet and exceed the fire-safety requirements of India\u2019s National Building Code (NBC 2016) for Group A and B occupancies, making them suitable for high-risk storage and manufacturing environments.</li>
       </ul>
 
@@ -258,7 +258,7 @@ export const authorityBlogs: Record<string, BlogPost> = {
     ],
     relatedProducts: [
       { name: 'PIR Panel', href: '/products/sandwich-panels/pir-panel' },
-      { name: 'FM Approved Panel', href: '/products/sandwich-panels/fm-approved-panel' },
+      { name: 'FM Approved Panel', href: '/shop/fm-approved-panel' },
       { name: 'Sandwich PUF Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
     ],
     relatedSolutions: [
@@ -602,7 +602,7 @@ export const authorityBlogs: Record<string, BlogPost> = {
     ],
     relatedProducts: [
       { name: 'PIR Panel', href: '/products/sandwich-panels/pir-panel' },
-      { name: 'FM Approved Panel', href: '/products/sandwich-panels/fm-approved-panel' },
+      { name: 'FM Approved Panel', href: '/shop/fm-approved-panel' },
       { name: 'Sandwich PUF Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
     ],
     relatedSolutions: [

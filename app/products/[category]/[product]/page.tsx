@@ -401,7 +401,7 @@ const productsData: Record<string, Record<string, ProductData>> = {
           description: 'Manufacturing facilities need controlled environments for worker comfort and product quality. PUF panels create comfortable working conditions while reducing energy consumption.',
           benefits: ['Worker comfort improved', 'Reduced energy bills', 'Quick project completion', 'Customizable lengths'],
           linkText: 'Textile Industry Solutions',
-          linkHref: '/industries/textile',
+          linkHref: '/industries/precision-engineering',
         },
       ],
       // Related resources for internal linking

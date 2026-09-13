@@ -533,7 +533,7 @@ export default function BestPufPanelBrandInIndiaPage() {
                           product: 'FM Approved Panels',
                           application: 'Insurance-compliant Projects',
                           thickness: '50-150mm',
-                          link: '/products/sandwich-panels/fm-approved-panel',
+                          link: '/shop/fm-approved-panel',
                         },
                       ].map((row, idx) => (
                         <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>

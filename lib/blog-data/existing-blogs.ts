@@ -2459,7 +2459,7 @@ export const existingBlogs: Record<string, BlogPost> = {
       <h2>PHOENIXX: Gujarat's Trusted Panel Partner</h2>
       <p>Operating from Gujarat's industrial heartland, PHOENIXX serves as a comprehensive solution provider:</p>
       <ul>
-        <li><strong>Full product range:</strong> <a href="/products/sandwich-panels/sandwich-puf-panel">PUF</a>, <a href="/products/sandwich-panels/pir-panel">PIR</a>, <a href="/products/sandwich-panels/rockwool-panel">rockwool</a>, and <a href="/products/sandwich-panels/fm-approved-panel">FM-approved panels</a></li>
+        <li><strong>Full product range:</strong> <a href="/products/sandwich-panels/sandwich-puf-panel">PUF</a>, <a href="/products/sandwich-panels/pir-panel">PIR</a>, <a href="/products/sandwich-panels/rockwool-panel">rockwool</a>, and <a href="/shop/fm-approved-panel">FM-approved panels</a></li>
         <li><strong>Statewide presence:</strong> Delivery across all Gujarat districts</li>
         <li><strong>Pan-India capability:</strong> Projects delivered in 20+ states</li>
         <li><strong>Technical expertise:</strong> Engineering support for complex projects</li>
@@ -2479,7 +2479,7 @@ export const existingBlogs: Record<string, BlogPost> = {
     relatedProducts: [
       { name: 'Sandwich PUF Panels', href: '/products/sandwich-panels/sandwich-puf-panel' },
       { name: 'PIR Panels', href: '/products/sandwich-panels/pir-panel' },
-      { name: 'FM Approved Panels', href: '/products/sandwich-panels/fm-approved-panel' },
+      { name: 'FM Approved Panels', href: '/shop/fm-approved-panel' },
     ],
     relatedSolutions: [
       { name: 'Pre-Engineered Buildings', href: '/solutions/peb' },
@@ -2534,7 +2534,7 @@ export const existingBlogs: Record<string, BlogPost> = {
       <ul>
         <li><strong><a href="/products/sandwich-panels/pir-panel">PIR Panels</a>:</strong> 15-25% premium over standard PUF</li>
         <li><strong><a href="/products/sandwich-panels/rockwool-panel">Rockwool Panels</a>:</strong> 40-60% premium over PUF</li>
-        <li><strong><a href="/products/sandwich-panels/fm-approved-panel">FM Approved Panels</a>:</strong> 50-80% premium</li>
+        <li><strong><a href="/shop/fm-approved-panel">FM Approved Panels</a>:</strong> 50-80% premium</li>
         <li><strong>Stainless Steel Skin Panels:</strong> 80-120% premium</li>
       </ul>
 

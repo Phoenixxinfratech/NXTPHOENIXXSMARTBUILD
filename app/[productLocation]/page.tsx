@@ -31,6 +31,7 @@ import {
   getPublishedCombos,
   getPublishedProductsFor,
   isPublishedCombo,
+  productDetailHref,
   FLAGSHIP_PRODUCT_SLUG,
 } from '@/lib/geo-strategy';
 import { RajasthanGeoPage } from '@/components/geo/rajasthan-geo-page';
@@ -279,7 +280,7 @@ export default async function ProductLocationPage({ params }: { params: Promise<
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://phoenixxsmartbuild.com' },
       { '@type': 'ListItem', position: 2, name: 'Products', item: 'https://phoenixxsmartbuild.com/products' },
-      { '@type': 'ListItem', position: 3, name: product.name, item: `https://phoenixxsmartbuild.com/products/sandwich-panels/${parsed.productSlug}` },
+      { '@type': 'ListItem', position: 3, name: product.name, item: `https://phoenixxsmartbuild.com${productDetailHref(parsed.productSlug)}` },
       { '@type': 'ListItem', position: 4, name: `${product.name} in ${location.name}`, item: `https://phoenixxsmartbuild.com/${productLocation}` },
     ],
   };
@@ -302,7 +303,7 @@ export default async function ProductLocationPage({ params }: { params: Promise<
               <span className="mx-2">/</span>
               <Link href="/products" className="hover:text-white transition-colors">Products</Link>
               <span className="mx-2">/</span>
-              <Link href={`/products/sandwich-panels/${parsed.productSlug}`} className="hover:text-white transition-colors">{product.name}</Link>
+              <Link href={productDetailHref(parsed.productSlug)} className="hover:text-white transition-colors">{product.name}</Link>
               <span className="mx-2">/</span>
               <span className="text-white">{location.name}</span>
             </nav>
@@ -349,7 +350,7 @@ export default async function ProductLocationPage({ params }: { params: Promise<
                 <Link href="/puf-roofing-panels" className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-800 hover:underline">
                   → PUF Roofing Panels
                 </Link>
-                <Link href={`/products/sandwich-panels/${product.slug}`} className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-800 hover:underline">
+                <Link href={productDetailHref(product.slug)} className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-800 hover:underline">
                   → {product.name} Details
                 </Link>
                 <Link href="/puf-roofing-panel-manufacturer" className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-800 hover:underline">
@@ -931,7 +932,7 @@ export default async function ProductLocationPage({ params }: { params: Promise<
                 return (
                   <Link
                     key={p.slug}
-                    href={local ? `/${p.slug}-in-${location.slug}` : `/products/sandwich-panels/${p.slug}`}
+                    href={local ? `/${p.slug}-in-${location.slug}` : productDetailHref(p.slug)}
                     className="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all"
                   >
                     <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${p.gradient} mb-3 flex items-center justify-center text-white text-lg`}>

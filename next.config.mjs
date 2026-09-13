@@ -305,6 +305,54 @@ const nextConfig = {
       },
 
       // ============================================
+      // Retired paths still linked from older content
+      // ============================================
+      { source: '/projects', destination: '/resources/project-gallery', permanent: true },
+      { source: '/industries/warehousing', destination: '/industries/cold-chain', permanent: true },
+      { source: '/solutions/cleanroom', destination: '/solutions/cleanroom-solutions', permanent: true },
+      { source: '/solutions/pharma-cleanroom', destination: '/solutions/cleanroom-solutions', permanent: true },
+      { source: '/solutions/cold-storage', destination: '/solutions/cold-storage-construction', permanent: true },
+      { source: '/solutions/factory-building', destination: '/solutions/peb', permanent: true },
+      { source: '/solutions/industrial-construction', destination: '/solutions/peb', permanent: true },
+      { source: '/solutions/industrial-infrastructure', destination: '/solutions/peb', permanent: true },
+      { source: '/solutions/warehouse', destination: '/solutions/peb', permanent: true },
+      {
+        source: '/products/cold-room-panels/cold-room-door',
+        destination: '/shop/cold-storage-door',
+        permanent: true,
+      },
+      {
+        source: '/products/cold-room-panels/puf-cold-room-panel',
+        destination: '/products/sandwich-panels/sandwich-puf-panel',
+        permanent: true,
+      },
+      {
+        source: '/products/sandwich-panels/cold-room-panel',
+        destination: '/products/sandwich-panels/sandwich-puf-panel',
+        permanent: true,
+      },
+      {
+        source: '/products/sandwich-panels/fm-approved-panel',
+        destination: '/shop/fm-approved-panel',
+        permanent: true,
+      },
+      {
+        source: '/products/roofing-panels/puf-insulated-roofing-panel',
+        destination: '/products/sandwich-panels/roofing-puf-panel',
+        permanent: true,
+      },
+      {
+        source: '/products/sandwich-panels/roofing-panel',
+        destination: '/products/sandwich-panels/roofing-puf-panel',
+        permanent: true,
+      },
+      {
+        source: '/products/sandwich-panels/wall-puf-panel',
+        destination: '/products/sandwich-panels/wall-ceiling-panel',
+        permanent: true,
+      },
+
+      // ============================================
       // Sitemap redirect
       // ============================================
       {

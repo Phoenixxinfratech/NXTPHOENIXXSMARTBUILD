@@ -473,7 +473,7 @@ export const moneyBlogsPart2: Record<string, BlogPost> = {
     relatedProducts: [
       { name: 'PIR Panel', href: '/products/sandwich-panels/pir-panel' },
       { name: 'Sandwich PUF Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
-      { name: 'FM Approved Panel', href: '/products/sandwich-panels/fm-approved-panel' },
+      { name: 'FM Approved Panel', href: '/shop/fm-approved-panel' },
     ],
     relatedSolutions: [
       { name: 'Cold Storage Construction', href: '/solutions/cold-storage-construction' },

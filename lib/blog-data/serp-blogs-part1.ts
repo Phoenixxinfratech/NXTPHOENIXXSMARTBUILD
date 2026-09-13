@@ -204,11 +204,11 @@ export const serpBlogsPart1: Record<string, BlogPost> = {
     relatedProducts: [
       { name: 'Sandwich PUF Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
       { name: 'Roofing PUF Panel', href: '/products/sandwich-panels/roofing-puf-panel' },
-      { name: 'Cold Room PUF Panel', href: '/products/sandwich-panels/cold-room-panel' },
+      { name: 'Cold Room PUF Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
     ],
     relatedSolutions: [
-      { name: 'Cold Storage Construction', href: '/solutions/cold-storage' },
-      { name: 'Warehouse Building Solutions', href: '/solutions/warehouse' },
+      { name: 'Cold Storage Construction', href: '/solutions/cold-storage-construction' },
+      { name: 'Warehouse Building Solutions', href: '/solutions/peb' },
     ],
     faqs: [
       {
@@ -442,11 +442,11 @@ export const serpBlogsPart1: Record<string, BlogPost> = {
     relatedProducts: [
       { name: 'Sandwich PUF Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
       { name: 'Roofing PUF Panel', href: '/products/sandwich-panels/roofing-puf-panel' },
-      { name: 'Cold Room Panel', href: '/products/sandwich-panels/cold-room-panel' },
+      { name: 'Cold Room Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
     ],
     relatedSolutions: [
-      { name: 'Cold Storage Solutions', href: '/solutions/cold-storage' },
-      { name: 'Warehouse Construction', href: '/solutions/warehouse' },
+      { name: 'Cold Storage Solutions', href: '/solutions/cold-storage-construction' },
+      { name: 'Warehouse Construction', href: '/solutions/peb' },
     ],
     faqs: [
       {
@@ -671,11 +671,11 @@ export const serpBlogsPart1: Record<string, BlogPost> = {
     relatedProducts: [
       { name: 'Sandwich PUF Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
       { name: 'PIR Sandwich Panel', href: '/products/sandwich-panels/pir-panel' },
-      { name: 'Cold Room Panel', href: '/products/sandwich-panels/cold-room-panel' },
+      { name: 'Cold Room Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
     ],
     relatedSolutions: [
-      { name: 'Industrial Construction', href: '/solutions/industrial-construction' },
-      { name: 'Cold Storage Solutions', href: '/solutions/cold-storage' },
+      { name: 'Industrial Construction', href: '/solutions/peb' },
+      { name: 'Cold Storage Solutions', href: '/solutions/cold-storage-construction' },
     ],
     faqs: [
       {
@@ -882,8 +882,8 @@ export const serpBlogsPart1: Record<string, BlogPost> = {
       { name: 'PIR Sandwich Panel', href: '/products/sandwich-panels/pir-panel' },
     ],
     relatedSolutions: [
-      { name: 'Warehouse Construction', href: '/solutions/warehouse' },
-      { name: 'Cold Storage Solutions', href: '/solutions/cold-storage' },
+      { name: 'Warehouse Construction', href: '/solutions/peb' },
+      { name: 'Cold Storage Solutions', href: '/solutions/cold-storage-construction' },
     ],
     faqs: [
       {
@@ -1061,8 +1061,8 @@ export const serpBlogsPart1: Record<string, BlogPost> = {
       { name: 'Roofing PUF Panel', href: '/products/sandwich-panels/roofing-puf-panel' },
     ],
     relatedSolutions: [
-      { name: 'Industrial Construction', href: '/solutions/industrial-construction' },
-      { name: 'Cold Storage Solutions', href: '/solutions/cold-storage' },
+      { name: 'Industrial Construction', href: '/solutions/peb' },
+      { name: 'Cold Storage Solutions', href: '/solutions/cold-storage-construction' },
     ],
     faqs: [
       {
@@ -1420,11 +1420,11 @@ export const serpBlogsPart1: Record<string, BlogPost> = {
     relatedProducts: [
       { name: 'Sandwich PUF Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
       { name: 'Roofing PUF Panel', href: '/products/sandwich-panels/roofing-puf-panel' },
-      { name: 'Cold Room Panel', href: '/products/sandwich-panels/cold-room-panel' },
+      { name: 'Cold Room Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
     ],
     relatedSolutions: [
-      { name: 'Cold Storage Solutions', href: '/solutions/cold-storage' },
-      { name: 'Warehouse Construction', href: '/solutions/warehouse' },
+      { name: 'Cold Storage Solutions', href: '/solutions/cold-storage-construction' },
+      { name: 'Warehouse Construction', href: '/solutions/peb' },
     ],
     faqs: [
       {
@@ -1596,11 +1596,11 @@ export const serpBlogsPart1: Record<string, BlogPost> = {
     relatedProducts: [
       { name: 'Sandwich PUF Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
       { name: 'Roofing PUF Panel', href: '/products/sandwich-panels/roofing-puf-panel' },
-      { name: 'Cold Room Panel', href: '/products/sandwich-panels/cold-room-panel' },
+      { name: 'Cold Room Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
     ],
     relatedSolutions: [
-      { name: 'Industrial Construction', href: '/solutions/industrial-construction' },
-      { name: 'Cold Storage Solutions', href: '/solutions/cold-storage' },
+      { name: 'Industrial Construction', href: '/solutions/peb' },
+      { name: 'Cold Storage Solutions', href: '/solutions/cold-storage-construction' },
     ],
     faqs: [
       {
@@ -1807,11 +1807,11 @@ export const serpBlogsPart1: Record<string, BlogPost> = {
     relatedProducts: [
       { name: 'Sandwich PUF Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
       { name: 'Roofing PUF Panel', href: '/products/sandwich-panels/roofing-puf-panel' },
-      { name: 'Cold Room Panel', href: '/products/sandwich-panels/cold-room-panel' },
+      { name: 'Cold Room Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
     ],
     relatedSolutions: [
-      { name: 'Cold Storage Solutions', href: '/solutions/cold-storage' },
-      { name: 'Industrial Construction', href: '/solutions/industrial-construction' },
+      { name: 'Cold Storage Solutions', href: '/solutions/cold-storage-construction' },
+      { name: 'Industrial Construction', href: '/solutions/peb' },
     ],
     faqs: [
       {
@@ -2018,12 +2018,12 @@ export const serpBlogsPart1: Record<string, BlogPost> = {
     ],
     relatedProducts: [
       { name: 'Sandwich PUF Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
-      { name: 'Cold Room Panel', href: '/products/sandwich-panels/cold-room-panel' },
+      { name: 'Cold Room Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
       { name: 'PIR Sandwich Panel', href: '/products/sandwich-panels/pir-panel' },
     ],
     relatedSolutions: [
-      { name: 'Cold Storage Solutions', href: '/solutions/cold-storage' },
-      { name: 'Industrial Construction', href: '/solutions/industrial-construction' },
+      { name: 'Cold Storage Solutions', href: '/solutions/cold-storage-construction' },
+      { name: 'Industrial Construction', href: '/solutions/peb' },
     ],
     faqs: [
       {

@@ -184,7 +184,7 @@ export default function BestPufPanelManufacturerPage() {
                   title: 'Warehouses & Logistics',
                   description: 'Large-scale distribution centers and warehousing facilities benefiting from reduced energy costs and stable indoor temperatures.',
                   icon: '🏭',
-                  link: '/industries/warehousing',
+                  link: '/industries/cold-chain',
                 },
                 {
                   title: 'Cleanrooms & Pharma',

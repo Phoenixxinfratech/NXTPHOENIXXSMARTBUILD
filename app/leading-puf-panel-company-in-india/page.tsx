@@ -202,7 +202,7 @@ export default function LeadingPufPanelCompanyPage() {
                 { title: 'Pharmaceutical', desc: 'Cleanroom-grade panels for GMP facilities', link: '/industries/pharma-chemical' },
                 { title: 'Food & Beverage', desc: 'Hygienic solutions for processing plants', link: '/industries/food-processing' },
                 { title: 'Cold Chain', desc: 'Insulated panels for cold storage', link: '/solutions/cold-storage-construction' },
-                { title: 'Warehousing', desc: 'Energy-efficient warehouse solutions', link: '/industries/warehousing' },
+                { title: 'Warehousing', desc: 'Energy-efficient warehouse solutions', link: '/industries/cold-chain' },
                 { title: 'Manufacturing', desc: 'Industrial shed insulation', link: '/solutions/peb' },
                 { title: 'Dairy Industry', desc: 'Temperature-controlled dairy facilities', link: '/industries/dairy' },
               ].map((industry, idx) => (
