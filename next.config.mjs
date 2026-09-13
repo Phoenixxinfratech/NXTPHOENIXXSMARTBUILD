@@ -176,6 +176,13 @@ const nextConfig = {
       // ============================================
       // Blog slug redirects (short/incorrect slugs → correct slugs)
       // ============================================
+      // /sitemap.xml is now the only index; this was a second one listing the
+      // same section sitemaps.
+      {
+        source: '/sitemap-index.xml',
+        destination: '/sitemap.xml',
+        permanent: true,
+      },
       // Consolidated duplicates: these targeted the same query as their
       // destination and split rankings between near-identical articles.
       {
