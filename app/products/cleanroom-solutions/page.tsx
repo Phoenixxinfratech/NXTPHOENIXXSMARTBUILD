@@ -52,7 +52,7 @@ const cleanroomData = {
       name: 'Cleanroom Partitions',
       description: 'Modular wall systems with flush surfaces for pharmaceutical, biotech, and electronics cleanrooms. Available in sandwich panel and hollow-core configurations.',
       keywords: 'Cleanroom partitions, modular walls, GMP partitions, cleanroom panels',
-      image: '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat1.jpg',
+      image: '/images/products/cleanroom/partition/Cleanroom-Partition-supplier-Manufacture-in-Gujarat1.jpg',
       link: '/products/cleanroom-solutions/cleanroom-partition',
       features: ['50-100mm thickness', 'Coved corners', 'HPL/Steel/Glass finish', 'Cam-lock joints'],
     },
@@ -61,7 +61,7 @@ const cleanroomData = {
       name: 'Cleanroom False Ceiling',
       description: 'Walkable and non-walkable ceiling systems with HEPA filter integration, gel sealing, and maintenance access for ISO 5-8 cleanrooms.',
       keywords: 'Cleanroom ceiling, walkable ceiling, HEPA ceiling, pharmaceutical ceiling',
-      image: '/images/products/cleanroom/ceiling/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects26.jpg',
+      image: '/images/products/cleanroom/ceiling/Pharma-cleanroom-panel-manufacturers-Phoenixx-infratech-projects26.jpg',
       link: '/products/cleanroom-solutions/cleanroom-false-ceiling',
       features: ['200 kg/m² walkable', 'HEPA integration', 'Gel/gasket sealing', 'LED lighting'],
     },
@@ -154,7 +154,7 @@ export default function CleanroomSolutionsPage() {
         <section className="relative min-h-[70vh] flex items-center overflow-hidden">
           <div className="absolute inset-0">
             <Image
-              src="/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat1.jpg"
+              src="/images/products/cleanroom/partition/Cleanroom-Partition-supplier-Manufacture-in-Gujarat1.jpg"
               alt="Cleanroom Solutions - Modular Cleanroom Partitions and Systems by PHOENIXX SMARTBUILD"
               fill
               sizes="100vw"

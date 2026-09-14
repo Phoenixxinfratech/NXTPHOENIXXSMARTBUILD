@@ -20,7 +20,7 @@ const sandwichPanelsData = {
   heroImages: [
     '/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL1.jpg',
     '/images/products/sandwich-panels/pir-panel/PIR-Sandwich-FM-approved-Panel-2.jpg',
-    '/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCHWOOL_PANEL1.jpg',
+    '/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCKWOOL_PANEL1.jpg',
   ],
   aiSummary: 'PHOENIXX manufactures Sandwich Panels (PUF, PIR, Rockwool, Roofing, Wall & Ceiling, Cold Storage, Marine) in Ahmedabad, India. Thermal conductivity: PUF 0.024 W/mK, PIR 0.022 W/mK, Rockwool 0.035-0.040 W/mK. Applications: cold storage, cleanrooms, prefab buildings, industrial sheds, warehouses. Stats: 500+ projects, 500+ clients, 13+ years experience, up to 30% energy savings. Thickness: 30-150mm. Fire rating: B3/B2. ISO certified manufacturer.',
   keywords: [
@@ -95,7 +95,7 @@ const sandwichPanelsData = {
       name: 'Rockwool Panel',
       description: 'Non-combustible mineral wool panels for fire-critical and acoustic applications.',
       keywords: 'Rockwool panels, mineral wool panels, fire resistant panels',
-      image: '/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCHWOOL_PANEL1.jpg',
+      image: '/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCKWOOL_PANEL1.jpg',
       link: '/products/sandwich-panels/rockwool-panel',
     },
     {
@@ -260,11 +260,11 @@ const otherCategoriesData: Record<string, {
     aiSummary: 'PHOENIXX cleanroom solutions: Partitions, Ceilings, Doors. ISO Class 5-8 compliant. GMP/FDA suitable.',
     keywords: ['cleanroom solutions', 'cleanroom partitions', 'cleanroom ceilings', 'modular cleanroom'],
     gradient: 'from-emerald-600 to-teal-600',
-    heroImage: '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat1.jpg',
+    heroImage: '/images/products/cleanroom/partition/Cleanroom-Partition-supplier-Manufacture-in-Gujarat1.jpg',
     products: [
-      { slug: 'cleanroom-partition', name: 'Cleanroom Partitions', description: 'Modular wall systems for controlled environments.', features: ['Modular design', 'Flush surfaces'], specs: [{ label: 'Thickness', value: '50-100 mm' }], image: '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat1.jpg', keywords: ['cleanroom partitions'] },
+      { slug: 'cleanroom-partition', name: 'Cleanroom Partitions', description: 'Modular wall systems for controlled environments.', features: ['Modular design', 'Flush surfaces'], specs: [{ label: 'Thickness', value: '50-100 mm' }], image: '/images/products/cleanroom/partition/Cleanroom-Partition-supplier-Manufacture-in-Gujarat1.jpg', keywords: ['cleanroom partitions'] },
       { slug: 'cleanroom-doors', name: 'Cleanroom Doors', description: 'Doors for cleanroom applications.', features: ['Hermetic sealing', 'Automation ready'], specs: [{ label: 'Class', value: 'ISO 5-8' }], image: '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-1.jpg', keywords: ['cleanroom doors'] },
-      { slug: 'cleanroom-false-ceiling', name: 'Cleanroom False Ceiling', description: 'Walkable and non-walkable ceiling systems.', features: ['HEPA integration', 'Service access'], specs: [{ label: 'Load', value: 'Up to 200 kg/m²' }], image: '/images/products/cleanroom/ceiling/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects26.jpg', keywords: ['cleanroom ceiling'] },
+      { slug: 'cleanroom-false-ceiling', name: 'Cleanroom False Ceiling', description: 'Walkable and non-walkable ceiling systems.', features: ['HEPA integration', 'Service access'], specs: [{ label: 'Load', value: 'Up to 200 kg/m²' }], image: '/images/products/cleanroom/ceiling/Pharma-cleanroom-panel-manufacturers-Phoenixx-infratech-projects26.jpg', keywords: ['cleanroom ceiling'] },
       { slug: 'cleanroom-flooring', name: 'Cleanroom Flooring', description: 'Epoxy and PU flooring systems.', features: ['Seamless finish', 'Chemical resistant'], specs: [{ label: 'Type', value: 'Epoxy/PU/ESD' }], image: '/images/products/cleanroom/flooring/Cleanroom-Epoxy-PU-Flooring-1.jpg', keywords: ['cleanroom flooring'] },
     ],
     benefits: [

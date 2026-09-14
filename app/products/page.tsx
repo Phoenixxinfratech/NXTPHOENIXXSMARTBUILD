@@ -92,7 +92,7 @@ const productCategories = [
     tagline: 'Contamination Control Systems',
     description: 'Modular cleanroom partitions, ceilings, panels, and controlled environment systems for pharma, biotech, electronics, and healthcare industries.',
     keywords: 'Cleanroom Partitions | Cleanroom Ceilings | Cleanroom Panels | GMP Cleanrooms',
-    image: '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat1.jpg',
+    image: '/images/products/cleanroom/partition/Cleanroom-Partition-supplier-Manufacture-in-Gujarat1.jpg',
     gradient: 'from-emerald-600 to-teal-600',
     icon: '🧪',
   },

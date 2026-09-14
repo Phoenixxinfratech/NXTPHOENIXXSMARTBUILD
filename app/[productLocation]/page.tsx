@@ -579,7 +579,7 @@ export default async function ProductLocationPage({ params }: { params: Promise<
                 { src: '/images/projects/gallery/PUF-Panel-False-Ceiling-1.jpg', alt: `${product.name} ceiling application` },
                 { src: '/images/products/sandwich-panels/wall-ceiling-panel/Industrial-False-Ceiling-PUF-Panel-2.jpg', alt: `Industrial ${product.shortName} installation` },
                 { src: '/images/projects/gallery/cleanroom-Manufacture-Supplier-in-Ahmedabad1.jpeg', alt: `Cleanroom project with ${product.name}` },
-                { src: '/images/projects/gallery/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects26.jpg', alt: `Pharma facility ${product.shortName} project` },
+                { src: '/images/projects/gallery/Pharma-cleanroom-panel-manufacturers-Phoenixx-infratech-projects74.jpg', alt: `Pharma facility ${product.shortName} project` },
                 { src: '/images/projects/gallery/Phoenixx_infratech_Projects188.jpg', alt: `Warehouse ${product.name} installation in ${location.name}` },
                 { src: '/images/projects/gallery/Projects_Galary_Phoenixx_infratech-Projects2.jpeg', alt: `Industrial ${product.shortName} exterior` },
                 { src: '/images/projects/gallery/Sandwich-PUF-Ceiling-Panel-1.jpg', alt: `${product.name} interior finish` },

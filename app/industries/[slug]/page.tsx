@@ -21,7 +21,7 @@ const industryImages: Record<string, string[]> = {
   ],
   'food-processing': [
     '/images/industries/food-processing/Food-processing-industries-phoenixx-work.jpg',
-    '/images/industries/food-processing/Food-processing .jpg',
+    '/images/industries/food-processing/Food-processing.jpg',
   ],
   'dairy': [
     '/images/industries/dairy/epub_dairy-processing-equipment-milk-tanks-facility-plant_1200x635.jpg',

@@ -75,7 +75,7 @@ const products = [
     details: 'Includes partitions, doors, false ceilings, and compatible flooring systems such as Epoxy, PU, and Rubber flooring.',
     href: '/products/cleanroom-solutions',
     icon: '🔬',
-    image: '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat1.jpg',
+    image: '/images/products/cleanroom/partition/Cleanroom-Partition-supplier-Manufacture-in-Gujarat1.jpg',
   },
 ];
 
@@ -100,7 +100,7 @@ const solutions = [
     description: 'Modular and insulated partition systems for cleanrooms, offices, and industrial spaces, offering flexibility, thermal control, and fast installation.',
     href: '/solutions/partition-solutions',
     icon: '🧱',
-    image: '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat2.jpg',
+    image: '/images/products/cleanroom/partition/Cleanroom-Partition-supplier-Manufacture-in-Gujarat2.jpg',
   },
   {
     title: 'Cold Storage Construction',

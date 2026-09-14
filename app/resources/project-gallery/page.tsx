@@ -247,7 +247,7 @@ const projects = [
     area: '14,200 Sq. Ft.',
     scope: 'GMP-compliant cleanroom wall, ceiling panels and insulated doors.',
     icon: '💉',
-    image: '/images/projects/gallery/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects26.jpg',
+    image: '/images/projects/gallery/Pharma-cleanroom-panel-manufacturers-Phoenixx-infratech-projects74.jpg',
   },
   {
     slug: 'makson-pharma-surendranagar',
@@ -260,7 +260,7 @@ const projects = [
     area: '13,600 Sq. Ft.',
     scope: 'Turnkey cleanroom envelope including insulated doors.',
     icon: '🏥',
-    image: '/images/projects/gallery/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects74.jpg',
+    image: '/images/projects/gallery/Pharma-cleanroom-panel-manufacturers-Phoenixx-infratech-projects74.jpg',
   },
   {
     slug: 'infocity-club-gandhinagar',

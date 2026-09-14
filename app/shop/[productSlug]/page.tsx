@@ -119,7 +119,7 @@ const shopProducts: Record<string, {
     name: 'PIR Panel',
     shortName: 'PIR Panel',
     description: 'Polyisocyanurate foam panels with superior fire performance (B-s1,d0) and better thermal efficiency than PUF. Ideal for fire-sensitive and high-value facilities.',
-    image: '/images/projects/gallery/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects26.jpg',
+    image: '/images/projects/gallery/Pharma-cleanroom-panel-manufacturers-Phoenixx-infratech-projects74.jpg',
     sku: 'PHX-PIR-001',
     category: 'Fire Enhanced Panels',
     specifications: [
@@ -363,7 +363,7 @@ const shopProducts: Record<string, {
     name: 'Cleanroom Partition',
     shortName: 'CR Partition',
     description: 'Modular cleanroom partition systems for creating controlled environments. Flush-mounted panels with integrated services. ISO Class 5-8 compatible.',
-    image: '/images/projects/gallery/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects73.jpeg',
+    image: '/images/projects/gallery/Pharma-cleanroom-panel-manufacturers-Phoenixx-infratech-projects74.jpg',
     sku: 'PHX-CRP-001',
     category: 'Cleanroom Systems',
     specifications: [

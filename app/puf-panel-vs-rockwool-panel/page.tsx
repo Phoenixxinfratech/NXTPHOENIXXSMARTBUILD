@@ -148,7 +148,7 @@ export default function PufPanelVsRockwoolPanelPage() {
       description:
         'Unbiased, engineer-authored comparison of PUF and Rockwool insulated sandwich panels across 14 performance parameters including fire rating, thermal conductivity, cost, and applications.',
       url: pageUrl,
-      image: 'https://phoenixxsmartbuild.com/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCHWOOL_PANEL1.jpg',
+      image: 'https://phoenixxsmartbuild.com/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCKWOOL_PANEL1.jpg',
       datePublished: '2025-03-01',
       dateModified: '2026-02-17',
       author: { name: 'PHOENIXX SMARTBUILD Engineering Team', url: 'https://phoenixxsmartbuild.com/about-us' },
@@ -187,7 +187,7 @@ export default function PufPanelVsRockwoolPanelPage() {
       name: 'PUF Panel vs Rockwool Panel Comparison',
       description:
         'Side-by-side visual comparison of PUF and Rockwool sandwich panel cross-sections showing core structure, density, and thickness differences.',
-      contentUrl: '/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCHWOOL_PANEL1.jpg',
+      contentUrl: '/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCKWOOL_PANEL1.jpg',
       width: 1200,
       height: 630,
     }),
@@ -206,7 +206,7 @@ export default function PufPanelVsRockwoolPanelPage() {
       address: { '@type': 'PostalAddress', addressLocality: 'Ahmedabad', addressRegion: 'Gujarat', addressCountry: 'IN' },
     },
     url: 'https://phoenixxsmartbuild.com/puf-panel-vs-rockwool-panel',
-    image: 'https://phoenixxsmartbuild.com/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCHWOOL_PANEL1.jpg',
+    image: 'https://phoenixxsmartbuild.com/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCKWOOL_PANEL1.jpg',
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'INR',

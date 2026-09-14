@@ -1,3 +1,5 @@
+import { renamedImageRedirects } from './lib/renamed-images.mjs';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Enable React strict mode for better development experience
@@ -148,6 +150,9 @@ const nextConfig = {
   // Redirects configuration - 301 redirects for legacy/broken URLs
   async redirects() {
     return [
+      // Product photos whose filenames spelled the product wrong.
+      ...renamedImageRedirects,
+
       // ============================================
       // Generic "puf-panel-manufacturer" redirects (short URLs → SEO pages)
       // ============================================
