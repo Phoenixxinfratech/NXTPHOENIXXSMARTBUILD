@@ -6,6 +6,7 @@ import { Footer } from '@/components/blocks/footer';
 import { AISummaryBlock } from '@/components/ai/ai-summary-block';
 import { JsonLd } from '@/components/seo/json-ld';
 import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
+import { companyStats } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: 'Our Clients – Trusted by Industry Leaders',
@@ -51,6 +52,10 @@ const clientsByIndustry = [
       { name: 'Hot & Spicy Namkeen', logo: '/images/clients/hot-spicy.png' },
       { name: 'Aero Roast Coffee', logo: null },
       { name: 'Telaa Coffee & Tea', logo: null },
+      { name: 'Lorenz Snacks India Private Limited', logo: null },
+      { name: 'Rajhans Nutriments Limited', logo: null },
+      { name: 'BC Foods', logo: null },
+      { name: 'Fine Foods', logo: null },
     ],
   },
   {
@@ -98,6 +103,8 @@ const clientsByIndustry = [
       { name: 'Mahalaxmi Pharmaceuticals', logo: null },
       { name: 'Pellucid Lifesciences', logo: '/images/clients/pellucid.jpg' },
       { name: 'Brichem Sciences', logo: '/images/clients/brichem.webp' },
+      { name: 'Edkem Pharmaceuticals Limited', logo: null },
+      { name: 'Amanta Healthcare Limited', logo: null },
     ],
   },
   {
@@ -116,6 +123,12 @@ const clientsByIndustry = [
       { name: 'Aaiswarya Dyeing Mills', logo: '/images/clients/aaiswarya.png' },
       { name: 'Denasa Buildcon', logo: '/images/clients/denasa.webp' },
       { name: 'Kalpataru Doors', logo: '/images/clients/kalpataru.png' },
+      { name: 'Caps & Closures by VEEGLOW', logo: null },
+      { name: 'Fuji Silvertech Concrete Private Limited', logo: null },
+      { name: 'Qutone Ceramic', logo: null },
+      { name: 'Balkrishna Textile Pvt. Ltd', logo: null },
+      { name: 'Govardhannathji Energies LLP', logo: null },
+      { name: 'Sahitya Mudranalaya Pvt', logo: null },
     ],
   },
   {
@@ -131,6 +144,9 @@ const clientsByIndustry = [
       { name: 'Hager Electricals', logo: '/images/clients/hager.jpg' },
       { name: 'Rotomotive Powerdrives', logo: '/images/clients/rotomotive.jpg' },
       { name: 'Rotomag', logo: '/images/clients/rotomag.png' },
+      { name: 'TLT-TURBO India Pvt Ltd', logo: null },
+      { name: 'Agrawal Metal Works', logo: null },
+      { name: 'Steelrise Structures Private Limited', logo: null },
     ],
   },
   {
@@ -143,6 +159,25 @@ const clientsByIndustry = [
       { name: 'Swan Medicot LLP', logo: '/images/clients/swan-medicot.png' },
       { name: 'Brahmakumaris', logo: '/images/clients/brahmakumaris.png' },
       { name: 'Dinkal Agro Chemicals', logo: null },
+      { name: 'Narmada Biochem Limited', logo: null },
+    ],
+  },
+  {
+    category: 'Oil, Gas & Petrochemicals',
+    icon: '🛢️',
+    gradient: 'from-amber-600 to-yellow-700',
+    showLogos: true,
+    clients: [
+      { name: 'Reliance Industries Limited', logo: null },
+    ],
+  },
+  {
+    category: 'Energy & Infrastructure',
+    icon: '⚡',
+    gradient: 'from-lime-500 to-green-600',
+    showLogos: true,
+    clients: [
+      { name: 'Solberry Energy Private Limited', logo: null },
     ],
   },
   {
@@ -183,22 +218,25 @@ const featuredClients = [
 
 const testimonials = [
   {
-    quote: 'PHOENIXX delivered our cleanroom project on time and within budget. Their expertise in pharmaceutical facility construction is unmatched.',
-    author: 'Dr. Rajesh Kumar',
-    role: 'Director',
-    company: 'Torrent Pharmaceuticals',
+    quote:
+      'Our cleanroom build finished on schedule and within the agreed budget. The team understood pharmaceutical facility requirements end to end.',
+    author: 'Project Director',
+    role: 'Capital Projects',
+    company: 'Pharmaceutical manufacturer, Gujarat',
   },
   {
-    quote: 'The cold storage facility built by PHOENIXX has significantly improved our supply chain efficiency. Excellent quality and service.',
-    author: 'Amit Sharma',
-    role: 'Operations Head',
-    company: 'Amul Dairy',
+    quote:
+      'The cold storage built with PHOENIXX panels improved temperature stability and cut our refrigeration load. Quality of installation was solid.',
+    author: 'Operations Head',
+    role: 'Cold Chain',
+    company: 'Dairy processing plant, Gujarat',
   },
   {
-    quote: 'We have been working with PHOENIXX for over 5 years. Their consistent quality and reliability make them our preferred partner.',
-    author: 'Priya Patel',
-    role: 'Plant Manager',
-    company: 'Balaji Wafers Pvt. Ltd.',
+    quote:
+      'We have ordered panels across multiple expansions. Consistent sheet quality, on-time despatch, and clear technical support keep us coming back.',
+    author: 'Plant Manager',
+    role: 'Manufacturing',
+    company: 'Food processing company, Gujarat',
   },
 ];
 
@@ -219,8 +257,8 @@ export default function ClientelePage() {
         <JsonLd data={breadcrumbSchema} />
 
         <AISummaryBlock
-          summary="PHOENIXX is trusted by 500+ clients across industries including Coca-Cola, Amul, Torrent Pharmaceuticals, Ford Motors, Intas Pharmaceuticals, Mother Dairy, Uflex, SKF Bearings, and many more. We serve Food & Beverages, Dairy Processing, Pharmaceuticals, Automobile, Industrial Manufacturing, and Cold Storage sectors."
-          keywords={['clients', 'Coca-Cola', 'Amul', 'Torrent Pharmaceuticals', 'Ford Motors', 'cold storage']}
+          summary="PHOENIXX is trusted by 500+ clients across industries including Coca-Cola, Amul, Reliance Industries, Torrent Pharmaceuticals, Ford Motors, Intas Pharmaceuticals, Mother Dairy, Uflex, SKF Bearings, and many more. We serve Food & Beverages, Dairy Processing, Pharmaceuticals, Oil & Gas, Automobile, Industrial Manufacturing, Energy, and Cold Storage sectors."
+          keywords={['clients', 'Coca-Cola', 'Amul', 'Reliance Industries', 'Torrent Pharmaceuticals', 'Ford Motors', 'cold storage']}
         />
 
         {/* Page Header */}
@@ -249,7 +287,7 @@ export default function ClientelePage() {
                 <p className="mt-2 text-sm text-slate-600">Industries Served</p>
               </div>
               <div>
-                <p className="text-4xl font-bold text-blue-600">12+</p>
+                <p className="text-4xl font-bold text-blue-600">{companyStats.yearsExperience}</p>
                 <p className="mt-2 text-sm text-slate-600">Years of Trust</p>
               </div>
               <div>
