@@ -216,30 +216,6 @@ const featuredClients = [
   { name: 'Schmitten', logo: '/images/clients/schmitten.png' },
 ];
 
-const testimonials = [
-  {
-    quote:
-      'Our cleanroom build finished on schedule and within the agreed budget. The team understood pharmaceutical facility requirements end to end.',
-    author: 'Project Director',
-    role: 'Capital Projects',
-    company: 'Pharmaceutical manufacturer, Gujarat',
-  },
-  {
-    quote:
-      'The cold storage built with PHOENIXX panels improved temperature stability and cut our refrigeration load. Quality of installation was solid.',
-    author: 'Operations Head',
-    role: 'Cold Chain',
-    company: 'Dairy processing plant, Gujarat',
-  },
-  {
-    quote:
-      'We have ordered panels across multiple expansions. Consistent sheet quality, on-time despatch, and clear technical support keep us coming back.',
-    author: 'Plant Manager',
-    role: 'Manufacturing',
-    company: 'Food processing company, Gujarat',
-  },
-];
-
 export default function ClientelePage() {
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
@@ -408,27 +384,6 @@ export default function ClientelePage() {
                     )}
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials */}
-        <section className="section-padding bg-white">
-          <div className="container-custom">
-            <h2 className="text-3xl font-bold text-center mb-12 text-slate-900">What Our Clients Say</h2>
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {testimonials.map((testimonial, idx) => (
-                <blockquote key={idx} className="bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 shadow-lg relative border border-slate-100">
-                  <div className="absolute -top-4 left-6 text-7xl text-blue-200 font-serif">&ldquo;</div>
-                  <p className="relative text-slate-600 pt-4 leading-relaxed">{testimonial.quote}</p>
-                  <footer className="mt-6 pt-6 border-t border-slate-200">
-                    <cite className="not-italic font-bold text-slate-900">{testimonial.author}</cite>
-                    <p className="text-sm text-slate-500">
-                      {testimonial.role}, {testimonial.company}
-                    </p>
-                  </footer>
-                </blockquote>
               ))}
             </div>
           </div>
