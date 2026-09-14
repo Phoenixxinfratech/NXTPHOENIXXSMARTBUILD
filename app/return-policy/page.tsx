@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Return Policy',
@@ -33,11 +33,7 @@ export default function ReturnPolicyPage() {
         {/* Hero */}
         <section className="bg-slate-900 py-16">
           <div className="container-custom">
-            <nav className="mb-6 text-sm text-slate-400">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">Return Policy</span>
-            </nav>
+            <Breadcrumbs withSchema items={[{ label: 'Return Policy' }]} />
             <h1 className="text-3xl md:text-4xl font-bold text-white">Return & Refund Policy</h1>
             <p className="mt-4 text-slate-300">Last updated: January 2025</p>
           </div>

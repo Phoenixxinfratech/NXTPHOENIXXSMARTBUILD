@@ -4,6 +4,7 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { AISummaryBlock } from '@/components/ai/ai-summary-block';
 import { JsonLd } from '@/components/seo/json-ld';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Industries Served – Pharma, Food & More',
@@ -145,11 +146,7 @@ export default function IndustriesPage() {
           <div className="absolute top-1/2 -left-32 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl" />
           
           <div className="container-custom relative">
-            <nav className="mb-6 text-sm text-slate-400">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">Industries</span>
-            </nav>
+            <Breadcrumbs items={[{ label: 'Industries' }]} />
 
             <div className="max-w-3xl">
               <span className="inline-block px-4 py-1 rounded-full bg-orange-500/20 text-orange-300 text-sm font-medium mb-4">

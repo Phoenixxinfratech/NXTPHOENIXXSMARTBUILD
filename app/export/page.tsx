@@ -13,6 +13,7 @@ import {
   exportIndustries,
   getExportCountry,
 } from '@/lib/export-data';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Global Export to Africa | PUF Panels & Industrial Building Systems',
@@ -75,6 +76,8 @@ export default function ExportHubPage() {
       <main id="main-content" className="flex-1">
         <section className="bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 text-white section-padding">
           <div className="container-custom">
+            <Breadcrumbs items={[{ label: 'Global Export' }]} />
+
             <p className="text-sm font-medium text-emerald-300 uppercase tracking-wider">Global Export</p>
             <h1 className="mt-2 text-3xl font-bold md:text-4xl lg:text-5xl leading-tight">
               Africa&apos;s Trusted Engineering &amp; Export Partner for Industrial Building Solutions

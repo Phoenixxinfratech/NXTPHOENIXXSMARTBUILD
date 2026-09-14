@@ -1,10 +1,10 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { getBlogListings } from '@/lib/blog-data';
 import { BlogList } from './blog-list';
 import { NewsletterForm } from './newsletter-form';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Blog – Industry Insights & Technical Guides',
@@ -41,13 +41,7 @@ export default function BlogsPage() {
         <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 md:py-24">
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-[0.03]" />
           <div className="container-custom relative">
-            <nav className="mb-6 text-sm text-slate-400">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <Link href="/resources" className="hover:text-white transition-colors">Resources</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">Blog</span>
-            </nav>
+            <Breadcrumbs withSchema items={[{ label: 'Resources', href: '/resources' }, { label: 'Blog' }]} />
 
             <div className="max-w-3xl">
               <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">

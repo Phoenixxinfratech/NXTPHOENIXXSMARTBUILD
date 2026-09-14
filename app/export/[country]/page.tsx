@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 import { JsonLd } from '@/components/seo/json-ld';
 import { RelatedResources } from '@/components/blocks/related-resources';
 import { AeoContentBlocks, DEFAULT_PUF_SPECS } from '@/components/seo/aeo-content-blocks';
@@ -85,11 +86,10 @@ export default async function ExportCountryPage({ params }: ExportPageProps) {
       <main id="main-content" className="flex-1">
         <section className="bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 text-white section-padding">
           <div className="container-custom">
-            <nav className="text-sm text-emerald-200 mb-4">
-              <Link href="/export" className="hover:text-white">Global Export</Link>
-              <span className="mx-2">/</span>
-              <span>{data.name}</span>
-            </nav>
+            <Breadcrumbs
+              className="mb-4"
+              items={[{ label: 'Global Export', href: '/export' }, { label: data.name }]}
+            />
             <p className="text-sm font-medium text-emerald-300 uppercase tracking-wider">
               {EXPORT_REGION_LABELS[data.region]} · Global Export
             </p>

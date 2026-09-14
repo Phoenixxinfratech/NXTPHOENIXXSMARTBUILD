@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 import { JsonLd } from '@/components/seo/json-ld';
 import {
   type GeoSlugResult,
@@ -151,16 +152,6 @@ export function RajasthanGeoPage({ result }: Props) {
     })),
   };
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://phoenixxsmartbuild.com' },
-      { '@type': 'ListItem', position: 2, name: 'PUF Roofing Panels', item: 'https://phoenixxsmartbuild.com/puf-roofing-panels' },
-      { '@type': 'ListItem', position: 3, name: h1, item: `https://phoenixxsmartbuild.com/${canonicalSlug}` },
-    ],
-  };
-
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
@@ -168,19 +159,18 @@ export function RajasthanGeoPage({ result }: Props) {
         <JsonLd data={localBusinessSchema} />
         <JsonLd data={productSchema} />
         <JsonLd data={faqSchema} />
-        <JsonLd data={breadcrumbSchema} />
 
         {/* ── Hero ── */}
         <section className="relative bg-gradient-to-br from-slate-900 via-gray-900 to-blue-900 py-20 md:py-28">
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
-            <nav className="mb-6 text-sm text-white/80">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <Link href="/puf-roofing-panels" className="hover:text-white transition-colors">PUF Roofing Panels</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">{city.name}</span>
-            </nav>
+            <Breadcrumbs
+              withSchema
+              items={[
+                { label: 'PUF Roofing Panels', href: '/puf-roofing-panels' },
+                { label: city.name },
+              ]}
+            />
             <div className="max-w-4xl">
               <div className="flex flex-wrap gap-3 mb-6">
                 <span className="inline-block rounded-full bg-green-500/20 px-4 py-2 text-sm font-medium text-green-400">

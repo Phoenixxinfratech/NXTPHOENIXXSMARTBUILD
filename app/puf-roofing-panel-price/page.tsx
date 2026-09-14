@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'PUF Roofing Panel Price Guide 2026 | Phoenixx Beawar',
@@ -83,6 +84,8 @@ export default function PufRoofingPanelPricePage() {
         <section className="relative bg-gradient-to-br from-slate-900 via-gray-900 to-blue-900 py-20 md:py-28">
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
+            <Breadcrumbs withSchema items={[{ label: 'PUF Roofing Panels', href: '/puf-roofing-panels' }, { label: 'Price' }]} />
+
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-amber-500/20 px-4 py-2 text-sm font-medium text-amber-400 mb-6">
                 Price Guide — Updated 2026

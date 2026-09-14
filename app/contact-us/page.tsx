@@ -6,6 +6,7 @@ import { generateContactPageSchema } from '@/lib/schema';
 import { ContactForm } from './contact-form';
 import { siteConfig } from '@/lib/site-config';
 import type { Metadata } from 'next';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Contact PHOENIXX – Get Expert Consultation',
@@ -107,11 +108,7 @@ export default function ContactUsPage() {
           <div className="absolute top-1/4 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
           
           <div className="container-custom relative">
-            <nav className="mb-6 text-sm text-slate-400">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">Contact Us</span>
-            </nav>
+            <Breadcrumbs withSchema items={[{ label: 'Contact Us' }]} />
 
             <div className="max-w-3xl">
               <span className="inline-block px-4 py-1 rounded-full bg-blue-500/20 text-blue-300 text-sm font-medium mb-4">

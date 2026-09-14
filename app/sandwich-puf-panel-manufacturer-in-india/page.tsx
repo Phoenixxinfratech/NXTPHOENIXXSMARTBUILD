@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Sandwich PUF Panel Manufacturer in India',
@@ -81,6 +82,8 @@ export default function SandwichPufPanelManufacturerPage() {
         <section className="relative bg-gradient-to-br from-violet-900 via-purple-900 to-slate-900 py-20 md:py-28">
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
+            <Breadcrumbs withSchema items={[{ label: 'Products', href: '/products' }, { label: 'Sandwich PUF Panel Manufacturer in India' }]} />
+
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-violet-500/10 px-4 py-2 text-sm font-medium text-violet-400 mb-6">
                 🔲 Composite Panel Solutions

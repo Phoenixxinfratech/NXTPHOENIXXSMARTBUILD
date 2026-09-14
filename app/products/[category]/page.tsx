@@ -8,6 +8,7 @@ import { JsonLd } from '@/components/seo/json-ld';
 import { AISummaryBlock } from '@/components/ai/ai-summary-block';
 import { buildSocialMetadata } from '@/lib/seo';
 import { siteConfig } from '@/lib/site-config';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 // Sandwich Panels specific data
 const sandwichPanelsData = {
@@ -381,13 +382,7 @@ function SandwichPanelsPage() {
           </div>
 
           <div className="container-custom relative z-10 py-16 md:py-24">
-            <nav className="mb-6 text-sm text-white/60">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <Link href="/products" className="hover:text-white transition-colors">Products</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">Sandwich Panels</span>
-            </nav>
+            <Breadcrumbs items={[{ label: 'Products', href: '/products' }, { label: 'Sandwich Panels' }]} />
 
             <div className="max-w-4xl">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
@@ -837,13 +832,7 @@ function OtherCategoryPage({ data, category }: { data: typeof otherCategoriesDat
             <div className="absolute inset-0 bg-black/30" />
           </div>
           <div className="container-custom relative z-10 py-20">
-            <nav className="mb-6 text-sm text-white/70">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <Link href="/products" className="hover:text-white transition-colors">Products</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">{data.title}</span>
-            </nav>
+            <Breadcrumbs items={[{ label: 'Products', href: '/products' }, { label: data.title }]} />
             <div className="max-w-3xl">
               <span className="inline-block px-4 py-1 rounded-full bg-white/20 text-white text-sm font-medium mb-4">{data.tagline}</span>
               <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">{data.title}</h1>

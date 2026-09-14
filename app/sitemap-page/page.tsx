@@ -4,6 +4,7 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 import { productsData, solutionsData, industriesData } from '@/lib/navigation';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Sitemap',
@@ -45,11 +46,7 @@ export default function SitemapPage() {
 
         <section className="border-b bg-muted/30 py-12">
           <div className="container-custom">
-            <nav className="mb-4 text-sm text-muted-foreground">
-              <Link href="/" className="hover:text-primary">Home</Link>
-              <span className="mx-2">/</span>
-              <span>Sitemap</span>
-            </nav>
+            <Breadcrumbs tone="light" className="mb-4" items={[{ label: 'Sitemap' }]} />
             <h1>Sitemap</h1>
             <p className="mt-2 text-muted-foreground">
               Complete navigation map of our website

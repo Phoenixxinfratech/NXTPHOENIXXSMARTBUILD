@@ -7,6 +7,7 @@ import { AISummaryBlock } from '@/components/ai/ai-summary-block';
 import { JsonLd } from '@/components/seo/json-ld';
 import { ProductFinder } from './product-finder';
 import { locations } from '@/lib/landing-page-data';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Industrial Products – Panels, Doors & Cleanrooms',
@@ -214,11 +215,7 @@ export default function ProductsPage() {
           <div className="absolute bottom-1/4 -left-32 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl" />
           
           <div className="container-custom relative">
-            <nav className="mb-6 text-sm text-slate-400">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">Products</span>
-            </nav>
+            <Breadcrumbs items={[{ label: 'Products' }]} />
 
             <div className="max-w-4xl">
               <span className="inline-block px-4 py-1 rounded-full bg-gradient-to-r from-blue-500/20 to-emerald-500/20 text-blue-300 text-sm font-medium mb-4 border border-blue-500/20">

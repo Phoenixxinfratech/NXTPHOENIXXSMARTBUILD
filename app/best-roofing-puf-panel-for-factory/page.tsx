@@ -17,6 +17,7 @@ import {
   generateQAPageSchema,
   generateImageObjectSchema,
 } from '@/lib/schema';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Which Roofing PUF Panel Is Best for Factory? | Guide 2026',
@@ -225,6 +226,8 @@ export default function BestRoofingPufPanelForFactoryPage() {
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
           <div className="container-custom relative">
+            <Breadcrumbs items={[{ label: 'Products', href: '/products' }, { label: 'Best Roofing PUF Panel for Factory' }]} />
+
             <div className="max-w-4xl">
               <div className="flex flex-wrap gap-3 mb-6">
                 <span className="inline-block rounded-full bg-emerald-500/10 px-4 py-2 text-sm font-medium text-emerald-400">

@@ -10,6 +10,7 @@ import { getRelatedLinksForIndustry } from '@/lib/internal-links';
 import { AeoContentBlocks, DEFAULT_PUF_SPECS } from '@/components/seo/aeo-content-blocks';
 import { buildSocialMetadata } from '@/lib/seo';
 import { siteConfig } from '@/lib/site-config';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 // Industry images mapping
 const industryImages: Record<string, string[]> = {
@@ -298,13 +299,7 @@ export default async function IndustryDetailPage({ params }: Props) {
         <section className={`relative bg-gradient-to-br ${data.gradient} py-20 md:py-28`}>
           <div className="absolute inset-0 bg-black/20" />
           <div className="container-custom relative">
-            <nav className="mb-6 text-sm text-white/70">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <Link href="/industries" className="hover:text-white transition-colors">Industries</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">{data.title}</span>
-            </nav>
+            <Breadcrumbs withSchema items={[{ label: 'Industries', href: '/industries' }, { label: data.title }]} />
 
             <div className="max-w-3xl">
               <span className="inline-block px-4 py-1 rounded-full bg-white/20 text-white text-sm font-medium mb-4">

@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { VendorForm } from './vendor-form';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Vendor Registration – Supplier Onboarding',
@@ -45,11 +45,7 @@ export default function VendorRegistrationPage() {
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-[0.05]" />
           
           <div className="container-custom relative">
-            <nav className="mb-6 text-sm text-slate-400">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">Vendor Registration</span>
-            </nav>
+            <Breadcrumbs withSchema items={[{ label: 'Vendor Registration' }]} />
 
             <div className="max-w-3xl">
               <span className="inline-block px-4 py-1 rounded-full bg-amber-500/20 text-amber-300 text-sm font-medium mb-4">

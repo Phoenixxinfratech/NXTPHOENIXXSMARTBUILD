@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 // ============================================================================
 // FAQ HUB - SEO & AI OPTIMIZED
@@ -454,13 +455,7 @@ export default function FAQPage() {
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl" />
           
           <div className="container-custom relative">
-            <nav className="mb-6 text-sm text-slate-400">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <Link href="/resources" className="hover:text-white transition-colors">Resources</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">FAQ</span>
-            </nav>
+            <Breadcrumbs withSchema items={[{ label: 'Resources', href: '/resources' }, { label: 'FAQ' }]} />
 
             <div className="max-w-4xl">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">

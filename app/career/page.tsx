@@ -1,9 +1,9 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { CareerForm } from './career-form';
 import { ApplyButton } from './apply-button';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Careers at PHOENIXX – Join Our Team',
@@ -97,11 +97,7 @@ export default function CareerPage() {
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl" />
           
           <div className="container-custom relative">
-            <nav className="mb-6 text-sm text-purple-200">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">Career</span>
-            </nav>
+            <Breadcrumbs withSchema items={[{ label: 'Career' }]} />
 
             <div className="max-w-3xl">
               <span className="inline-block px-4 py-1 rounded-full bg-white/10 text-pink-300 text-sm font-medium mb-4">

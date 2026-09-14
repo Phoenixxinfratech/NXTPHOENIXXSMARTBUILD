@@ -4,6 +4,7 @@ import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 import { generateBreadcrumbSchema } from '@/lib/schema';
 import type { Metadata } from 'next';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Certifications & Quality Standards',
@@ -112,6 +113,8 @@ export default function CertificationsPage() {
       <main id="main-content" className="flex-1">
         <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white section-padding">
           <div className="container-custom">
+            <Breadcrumbs items={[{ label: 'Certifications' }]} />
+
             <h1 className="text-3xl font-bold md:text-4xl lg:text-5xl">
               Certifications &amp; Quality Standards
             </h1>

@@ -7,6 +7,7 @@ import { AISummaryBlock } from '@/components/ai/ai-summary-block';
 import { JsonLd } from '@/components/seo/json-ld';
 import { generateBreadcrumbSchema } from '@/lib/schema';
 import { buildSocialMetadata } from '@/lib/seo';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 interface ProjectPageProps {
   params: Promise<{ slug: string }>;
@@ -306,13 +307,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         {/* Header */}
         <section className="border-b bg-muted/30 py-12 md:py-16">
           <div className="container-custom">
-            <nav className="mb-4 text-sm text-muted-foreground">
-              <Link href="/" className="hover:text-primary">Home</Link>
-              <span className="mx-2">/</span>
-              <Link href="/resources" className="hover:text-primary">Resources</Link>
-              <span className="mx-2">/</span>
-              <Link href="/resources/project-gallery" className="hover:text-primary">Project Gallery</Link>
-            </nav>
+            <Breadcrumbs tone="light" className="mb-4" items={[{ label: 'Resources', href: '/resources' }, { label: 'Project Gallery', href: '/resources/project-gallery' }]} />
             
             <span className="rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
               {project.industry}

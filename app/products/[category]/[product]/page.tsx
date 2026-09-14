@@ -6,6 +6,7 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 import { siteConfig } from '@/lib/site-config';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 // Product images mapping
 const productImages: Record<string, Record<string, string[]>> = {
@@ -1414,17 +1415,7 @@ export default async function ProductDetailPage({ params }: Props) {
         <section className={`relative bg-gradient-to-br ${data.gradient} py-20 md:py-28`}>
           <div className="absolute inset-0 bg-black/20" />
           <div className="container-custom relative">
-            <nav className="mb-6 text-sm text-white/70" aria-label="Breadcrumb">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <Link href="/products" className="hover:text-white transition-colors">Products</Link>
-              <span className="mx-2">/</span>
-              <Link href={`/products/${category}`} className="hover:text-white transition-colors capitalize">
-                {categoryName}
-              </Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">{data.name}</span>
-            </nav>
+            <Breadcrumbs items={[{ label: 'Products', href: '/products' }, { label: categoryName, href: `/products/${category}` }, { label: data.name }]} />
 
             <div className="max-w-3xl">
               <span className="inline-block px-4 py-1 rounded-full bg-white/20 text-white text-sm font-medium mb-4">

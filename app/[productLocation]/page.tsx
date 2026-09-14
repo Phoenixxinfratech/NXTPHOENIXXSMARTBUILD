@@ -37,6 +37,7 @@ import {
 import { RajasthanGeoPage } from '@/components/geo/rajasthan-geo-page';
 import { RelatedResources } from '@/components/blocks/related-resources';
 import { getRelatedLinksForGeoPage } from '@/lib/internal-links';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 // Parse the URL slug to extract product and location
 function parseSlug(slug: string): { productSlug: string; locationSlug: string } | null {
@@ -298,15 +299,7 @@ export default async function ProductLocationPage({ params }: { params: Promise<
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-[0.05]" />
           <div className="container-custom relative">
             {/* Breadcrumb */}
-            <nav className="mb-6 text-sm text-white/80">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <Link href="/products" className="hover:text-white transition-colors">Products</Link>
-              <span className="mx-2">/</span>
-              <Link href={productDetailHref(parsed.productSlug)} className="hover:text-white transition-colors">{product.name}</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">{location.name}</span>
-            </nav>
+            <Breadcrumbs items={[{ label: 'Products', href: '/products' }, { label: product.name, href: productDetailHref(parsed.productSlug) }, { label: location.name }]} />
             
             <div className="max-w-4xl">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">

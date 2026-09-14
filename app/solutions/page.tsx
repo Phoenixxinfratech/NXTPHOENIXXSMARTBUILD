@@ -4,6 +4,7 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { AISummaryBlock } from '@/components/ai/ai-summary-block';
 import { JsonLd } from '@/components/seo/json-ld';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'EPC Solutions – PEB, Cold Storage & Cleanrooms',
@@ -125,11 +126,7 @@ export default function SolutionsPage() {
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl" />
           
           <div className="container-custom relative">
-            <nav className="mb-6 text-sm text-slate-400">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">Solutions</span>
-            </nav>
+            <Breadcrumbs items={[{ label: 'Solutions' }]} />
 
             <div className="max-w-3xl">
               <span className="inline-block px-4 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-sm font-medium mb-4">

@@ -10,6 +10,7 @@ import { RelatedResources } from '@/components/blocks/related-resources';
 import { getRelatedLinksForSolution } from '@/lib/internal-links';
 import { AeoContentBlocks, DEFAULT_PUF_SPECS } from '@/components/seo/aeo-content-blocks';
 import { buildSocialMetadata } from '@/lib/seo';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 // Solution images mapping
 const solutionImages: Record<string, string[]> = {
@@ -576,13 +577,7 @@ export default async function SolutionDetailPage({ params }: Props) {
           </div>
 
           <div className="container-custom relative z-10 py-16 md:py-24">
-            <nav className="mb-6 text-sm text-white/60">
-              <Link href="/" className="hover:text-white">Home</Link>
-              <span className="mx-2">/</span>
-              <Link href="/solutions" className="hover:text-white">Solutions</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">{data.title}</span>
-            </nav>
+            <Breadcrumbs items={[{ label: 'Solutions', href: '/solutions' }, { label: data.title }]} />
 
             <div className="max-w-4xl">
               <span className="inline-block px-4 py-1 rounded-full bg-white/20 text-white text-sm font-medium mb-4">{data.tagline}</span>

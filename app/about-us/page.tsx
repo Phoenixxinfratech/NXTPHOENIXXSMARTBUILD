@@ -7,6 +7,7 @@ import { AISummaryBlock } from '@/components/ai/ai-summary-block';
 import { JsonLd } from '@/components/seo/json-ld';
 import { generateOrganizationSchema } from '@/lib/schema';
 import { AeoContentBlocks, DEFAULT_PUF_SPECS } from '@/components/seo/aeo-content-blocks';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'About PHOENIXX – India\'s EPC Infrastructure Partner',
@@ -149,11 +150,7 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-950/60" />
 
           <div className="container-custom relative z-10 py-20">
-            <nav className="mb-8 text-sm text-slate-400">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">About Us</span>
-            </nav>
+            <Breadcrumbs className="mb-8" items={[{ label: 'About Us' }]} />
 
             <div className="max-w-4xl">
               {/* Tagline */}

@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { PartnerForm } from './partner-form';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Become a Partner – Channel Partnership',
@@ -77,11 +77,7 @@ export default function BecomePartnerPage() {
           <div className="absolute top-1/4 left-0 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl" />
           
           <div className="container-custom relative">
-            <nav className="mb-6 text-sm text-teal-200">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">Become a Partner</span>
-            </nav>
+            <Breadcrumbs withSchema items={[{ label: 'Become a Partner' }]} />
 
             <div className="max-w-3xl">
               <span className="inline-block px-4 py-1 rounded-full bg-white/10 text-emerald-300 text-sm font-medium mb-4">

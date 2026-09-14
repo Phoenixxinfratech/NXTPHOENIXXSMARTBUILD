@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { encodeFormData } from '@/lib/forms';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 const productOptions = [
   'PUF Panels',
@@ -81,11 +82,7 @@ export default function GetAQuotePage() {
         <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-16 md:py-20">
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-[0.03]" />
           <div className="container-custom relative">
-            <nav className="mb-6 text-sm text-slate-400">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">Get a Quote</span>
-            </nav>
+            <Breadcrumbs withSchema items={[{ label: 'Get a Quote' }]} />
             <div className="max-w-3xl">
               <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
                 Request a Free Quote

@@ -5,6 +5,7 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 import { AISummaryBlock } from '@/components/ai/ai-summary-block';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Cleanroom Solutions – GMP Compliant Systems',
@@ -164,13 +165,7 @@ export default function CleanroomSolutionsPage() {
           </div>
 
           <div className="container-custom relative z-10 py-16 md:py-24">
-            <nav className="mb-6 text-sm text-white/60">
-              <Link href="/" className="hover:text-white">Home</Link>
-              <span className="mx-2">/</span>
-              <Link href="/products" className="hover:text-white">Products</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">Cleanroom Solutions</span>
-            </nav>
+            <Breadcrumbs items={[{ label: 'Products', href: '/products' }, { label: 'Cleanroom Solutions' }]} />
 
             <div className="max-w-4xl">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">

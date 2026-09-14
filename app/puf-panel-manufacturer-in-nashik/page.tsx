@@ -4,6 +4,7 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 import { CityManufacturerAeo } from '@/components/seo/city-manufacturer-aeo';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'PUF Panel Manufacturer in Nashik',
@@ -48,6 +49,8 @@ export default function NashikPage() {
         <section className="relative bg-gradient-to-br from-purple-900 via-fuchsia-900 to-slate-900 py-20 md:py-28">
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
+            <Breadcrumbs withSchema items={[{ label: 'Products', href: '/products' }, { label: 'PUF Panel Manufacturer in Nashik' }]} />
+
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-purple-500/10 px-4 py-2 text-sm font-medium text-purple-400 mb-6">📍 Serving Nashik & Wine Country</span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">PUF Panel Manufacturer in Nashik</h1>

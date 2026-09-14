@@ -8,6 +8,7 @@ import { JsonLd } from '@/components/seo/json-ld';
 import { fetchPricesFromSheet } from '@/lib/google-sheets';
 import { getProductPricing } from '@/lib/shop-prices';
 import { canonicalComboSlug } from '@/lib/geo-strategy';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 // Presentation copy for shop pages. Prices live in lib/shop-prices.ts.
 const shopProducts: Record<string, {
@@ -603,13 +604,7 @@ export default async function ShopProductPage({ params }: { params: Promise<{ pr
         <section className="bg-slate-50 py-8">
           <div className="container-custom">
             {/* Breadcrumb */}
-            <nav className="mb-6 text-sm text-slate-500">
-              <Link href="/" className="hover:text-slate-900 transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <Link href="/shop" className="hover:text-slate-900 transition-colors">Shop</Link>
-              <span className="mx-2">/</span>
-              <span className="text-slate-900">{product.name}</span>
-            </nav>
+            <Breadcrumbs tone="light" items={[{ label: 'Shop', href: '/shop' }, { label: product.name }]} />
             
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Product Image */}

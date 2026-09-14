@@ -5,6 +5,7 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { AISummaryBlock } from '@/components/ai/ai-summary-block';
 import { JsonLd } from '@/components/seo/json-ld';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Our Clients – Trusted by Industry Leaders',
@@ -226,11 +227,7 @@ export default function ClientelePage() {
         <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-16 md:py-24">
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
-            <nav className="mb-4 text-sm text-slate-400">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">Clientele</span>
-            </nav>
+            <Breadcrumbs className="mb-4" items={[{ label: 'Clientele' }]} />
             <h1 className="text-4xl md:text-5xl font-bold text-white">Our Clientele</h1>
             <p className="mt-4 max-w-2xl text-lg text-slate-300">
               Trusted by industry leaders across sectors. Our success is 
