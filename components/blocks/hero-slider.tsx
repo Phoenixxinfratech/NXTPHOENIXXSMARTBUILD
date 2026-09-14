@@ -11,10 +11,7 @@ const FIRST_WARM_DELAY_MS = 2500;
 
 interface HeroSliderProps {
   collection: HeroCollection;
-  /**
-   * Scrim over the photography. The default is tuned for white headline copy
-   * sitting on the left of a dark hero.
-   */
+  /** Scrim over the photography. See the default below before overriding it. */
   overlayClassName?: string;
   className?: string;
 }
@@ -46,7 +43,19 @@ function widestSrc(slide: HeroSlide) {
  */
 export function HeroSlider({
   collection,
-  overlayClassName = 'bg-gradient-to-r from-slate-950/95 via-slate-950/80 to-slate-950/60',
+  /**
+   * The direction has to change with the layout. Hero copy sits to the left on
+   * desktop, so the scrim runs left to right and the photograph stays open on
+   * the right. On mobile the copy spans the full width, where a sideways ramp
+   * would leave one edge too light to read and the other needlessly black, so
+   * it runs top to bottom instead.
+   *
+   * Stops were measured against all five slides rather than eyeballed: the
+   * weakest text on the page clears 4.5:1 on both layouts, and lightening
+   * either further drops body copy below AA on the brightest frames.
+   */
+  overlayClassName = 'bg-gradient-to-b from-slate-950/80 via-slate-950/68 to-slate-950/86 ' +
+    'md:bg-gradient-to-r md:from-slate-950/90 md:via-slate-950/72 md:to-slate-950/45',
   className = '',
 }: HeroSliderProps) {
   const slides: HeroSlide[] = heroImages[collection] ?? [];

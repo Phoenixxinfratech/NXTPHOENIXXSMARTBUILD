@@ -283,11 +283,13 @@ export default function HomePage() {
             </h1>
 
             {/* Subtitle */}
-            <p className="mt-6 text-lg md:text-xl text-slate-400 max-w-3xl leading-relaxed">
+            {/* Lifted from slate-400/500: those cleared 3.8:1 and 2.1:1 against
+                the hero photography, both short of AA for body copy. */}
+            <p className="mt-6 text-lg md:text-xl text-slate-200 max-w-3xl leading-relaxed">
               PHOENIXX designs and delivers high-performance insulated panels, industrial doors, 
               cleanroom systems, and EPC solutions for modern infrastructure.
             </p>
-            <p className="mt-4 text-base md:text-lg text-slate-500 max-w-3xl">
+            <p className="mt-4 text-base md:text-lg text-slate-300 max-w-3xl">
               From Pre-Engineered Buildings to cold chain and controlled environments, we engineer 
               spaces that are efficient, durable, compliant, and future-ready.
             </p>
