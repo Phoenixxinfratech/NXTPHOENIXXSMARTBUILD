@@ -6,6 +6,7 @@ import { JsonLd } from '@/components/seo/json-ld';
 import { generateOrganizationSchema, generateFAQSchema } from '@/lib/schema';
 import { FAQBlock } from '@/components/blocks/faq-block';
 import { AeoContentBlocks, DEFAULT_PUF_SPECS } from '@/components/seo/aeo-content-blocks';
+import { HeroSlider } from '@/components/blocks/hero-slider';
 import { locations } from '@/lib/landing-page-data';
 
 // Homepage client logos
@@ -250,13 +251,17 @@ export default function HomePage() {
 
       {/* ========== HERO SECTION ========== */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+        {/* Project photography behind the copy. Carries its own scrim. */}
+        <HeroSlider collection="home" />
+
         {/* Background Elements */}
         <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-[0.03]" />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
         
         {/* Animated Gradient Orbs - Using GPU-accelerated transform for performance */}
-        <div className="absolute top-1/4 -left-32 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl will-change-transform animate-[pulse-opacity_3s_ease-in-out_infinite]" />
-        <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl will-change-transform animate-[pulse-opacity_3s_ease-in-out_infinite_1s]" />
+        {/* Dimmed from 20/10 now that photography sits behind them. */}
+        <div className="absolute top-1/4 -left-32 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl will-change-transform animate-[pulse-opacity_3s_ease-in-out_infinite]" />
+        <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl will-change-transform animate-[pulse-opacity_3s_ease-in-out_infinite_1s]" />
 
         <div className="container-custom relative z-10 py-20">
           <div className="max-w-4xl">
