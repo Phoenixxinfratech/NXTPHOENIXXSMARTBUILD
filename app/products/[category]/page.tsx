@@ -6,6 +6,9 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 import { AISummaryBlock } from '@/components/ai/ai-summary-block';
+import { buildSocialMetadata } from '@/lib/seo';
+import { siteConfig } from '@/lib/site-config';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 // Sandwich Panels specific data
 const sandwichPanelsData = {
@@ -17,9 +20,9 @@ const sandwichPanelsData = {
   heroImages: [
     '/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL1.jpg',
     '/images/products/sandwich-panels/pir-panel/PIR-Sandwich-FM-approved-Panel-2.jpg',
-    '/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCHWOOL_PANEL1.jpg',
+    '/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCKWOOL_PANEL1.jpg',
   ],
-  aiSummary: 'PHOENIXX manufactures Sandwich Panels (PUF, PIR, Rockwool, Roofing, Wall & Ceiling, Cold Storage, Marine) in Ahmedabad, India. Thermal conductivity: 0.022 W/mK. Applications: cold storage, cleanrooms, prefab buildings, industrial sheds, warehouses. Stats: 150+ projects, 100+ clients, 18+ years experience, up to 30% energy savings. Thickness: 30-150mm. Fire rating: B3/B2. ISO certified manufacturer.',
+  aiSummary: 'PHOENIXX manufactures Sandwich Panels (PUF, PIR, Rockwool, Roofing, Wall & Ceiling, Cold Storage, Marine) in Ahmedabad, India. Thermal conductivity: PUF 0.024 W/mK, PIR 0.022 W/mK, Rockwool 0.035-0.040 W/mK. Applications: cold storage, cleanrooms, prefab buildings, industrial sheds, warehouses. Stats: 500+ projects, 500+ clients, 13+ years experience, up to 30% energy savings. Thickness: 30-150mm. Fire rating: B3/B2. ISO certified manufacturer.',
   keywords: [
     'sandwich panels',
     'sandwich puf panels',
@@ -47,7 +50,7 @@ const sandwichPanelsData = {
     {
       icon: '⚡',
       title: 'Energy Efficiency',
-      description: 'Thermal conductivity as low as 0.022 W/mK delivers up to 30% energy savings on cooling and heating costs.',
+      description: 'Thermal conductivity as low as 0.022 W/mK with a PIR core delivers up to 30% energy savings on cooling and heating costs.',
     },
     {
       icon: '🛡️',
@@ -92,7 +95,7 @@ const sandwichPanelsData = {
       name: 'Rockwool Panel',
       description: 'Non-combustible mineral wool panels for fire-critical and acoustic applications.',
       keywords: 'Rockwool panels, mineral wool panels, fire resistant panels',
-      image: '/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCHWOOL_PANEL1.jpg',
+      image: '/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCKWOOL_PANEL1.jpg',
       link: '/products/sandwich-panels/rockwool-panel',
     },
     {
@@ -129,7 +132,7 @@ const sandwichPanelsData = {
     },
   ],
   features: [
-    { title: 'Thermal Insulation', value: 'K value 0.022 W/mK ±0.002 for superior energy efficiency' },
+    { title: 'Thermal Insulation', value: 'K value from 0.022 W/mK (PIR) to 0.024 W/mK (PUF)' },
     { title: 'Fire Resistance', value: 'DIN 4102 B3 standard, B2 with PIR core option' },
     { title: 'Sound Insulation', value: 'Acoustic rating up to Rw 30-45 dB' },
     { title: 'Load-Bearing Strength', value: 'High structural integrity for industrial applications' },
@@ -139,10 +142,10 @@ const sandwichPanelsData = {
     thickness: { wall: '30–150 mm', roofing: '10–150 mm' },
     core: 'PUF / PIR / Rockwool',
     outerSkin: 'PPGI, PPGL, SS304, Aluminum',
-    thermalConductivity: '0.022 W/mK ± 0.002',
+    thermalConductivity: 'PUF 0.024 W/mK | PIR 0.022 W/mK | Rockwool 0.035-0.040 W/mK',
     strength: { tensile: '150 kPa', compression: '100 kPa', shear: '100 kPa' },
-    fireRating: 'B3 (B2/PIR optional)',
-    width: '1000 / 1150 mm',
+    fireRating: 'PUF B3 (DIN 4102) / Class E (EN 13501-1); PIR B-s1,d0; Rockwool A1',
+    width: '1000 mm effective cover (1200 mm on request)',
     length: 'Standard 8–20 ft, Custom 3–15 m',
     colors: ['Off-white', 'Sky Blue', 'Mist Green', 'Royal Blue', 'Brick Red', 'Grey'],
   },
@@ -172,8 +175,6 @@ const sandwichPanelsData = {
     quote: 'PHOENIXX sandwich panels reduced our cold storage energy bills by 28%. The installation was fast, and the quality is exceptional. Highly recommended for any temperature-controlled facility.',
     author: 'Operations Director',
     company: 'Leading Food Processing Company, Gujarat',
-    rating: 4.9,
-    reviews: 100,
   },
   industries: ['Pharmaceutical', 'Food Processing', 'Automotive', 'Electronics', 'Hospitality', 'Cold Chain', 'Healthcare'],
   faqs: [
@@ -257,11 +258,11 @@ const otherCategoriesData: Record<string, {
     aiSummary: 'PHOENIXX cleanroom solutions: Partitions, Ceilings, Doors. ISO Class 5-8 compliant. GMP/FDA suitable.',
     keywords: ['cleanroom solutions', 'cleanroom partitions', 'cleanroom ceilings', 'modular cleanroom'],
     gradient: 'from-emerald-600 to-teal-600',
-    heroImage: '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat1.jpg',
+    heroImage: '/images/products/cleanroom/partition/Cleanroom-Partition-supplier-Manufacture-in-Gujarat1.jpg',
     products: [
-      { slug: 'cleanroom-partition', name: 'Cleanroom Partitions', description: 'Modular wall systems for controlled environments.', features: ['Modular design', 'Flush surfaces'], specs: [{ label: 'Thickness', value: '50-100 mm' }], image: '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat1.jpg', keywords: ['cleanroom partitions'] },
-      { slug: 'cleanroom-doors', name: 'Cleanroom Doors', description: 'Doors for cleanroom applications.', features: ['Hermetic sealing', 'Automation ready'], specs: [{ label: 'Class', value: 'ISO 5-8' }], image: '/images/products/cleanroom/doors/Cleanroom-Door-Manufacturer-in-Ahmedabad-1.jpg', keywords: ['cleanroom doors'] },
-      { slug: 'cleanroom-false-ceiling', name: 'Cleanroom False Ceiling', description: 'Walkable and non-walkable ceiling systems.', features: ['HEPA integration', 'Service access'], specs: [{ label: 'Load', value: 'Up to 200 kg/m²' }], image: '/images/products/cleanroom/ceiling/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects26.jpg', keywords: ['cleanroom ceiling'] },
+      { slug: 'cleanroom-partition', name: 'Cleanroom Partitions', description: 'Modular wall systems for controlled environments.', features: ['Modular design', 'Flush surfaces'], specs: [{ label: 'Thickness', value: '50-100 mm' }], image: '/images/products/cleanroom/partition/Cleanroom-Partition-supplier-Manufacture-in-Gujarat1.jpg', keywords: ['cleanroom partitions'] },
+      { slug: 'cleanroom-doors', name: 'Cleanroom Doors', description: 'Doors for cleanroom applications.', features: ['Hermetic sealing', 'Automation ready'], specs: [{ label: 'Class', value: 'ISO 5-8' }], image: '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-1.jpg', keywords: ['cleanroom doors'] },
+      { slug: 'cleanroom-false-ceiling', name: 'Cleanroom False Ceiling', description: 'Walkable and non-walkable ceiling systems.', features: ['HEPA integration', 'Service access'], specs: [{ label: 'Load', value: 'Up to 200 kg/m²' }], image: '/images/products/cleanroom/ceiling/Pharma-cleanroom-panel-manufacturers-Phoenixx-infratech-projects26.jpg', keywords: ['cleanroom ceiling'] },
       { slug: 'cleanroom-flooring', name: 'Cleanroom Flooring', description: 'Epoxy and PU flooring systems.', features: ['Seamless finish', 'Chemical resistant'], specs: [{ label: 'Type', value: 'Epoxy/PU/ESD' }], image: '/images/products/cleanroom/flooring/Cleanroom-Epoxy-PU-Flooring-1.jpg', keywords: ['cleanroom flooring'] },
     ],
     benefits: [
@@ -287,21 +288,19 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { category } = await params;
-  if (category === 'sandwich-panels') {
-    return {
-      title: sandwichPanelsData.seoTitle,
-      description: sandwichPanelsData.seoDescription,
-      keywords: sandwichPanelsData.keywords,
-      alternates: { canonical: `https://phoenixxsmartbuild.com/products/${category}` },
-    };
-  }
-  const data = otherCategoriesData[category];
+  const data = category === 'sandwich-panels' ? sandwichPanelsData : otherCategoriesData[category];
   if (!data) return {};
   return {
     title: data.seoTitle,
     description: data.seoDescription,
     keywords: data.keywords,
-    alternates: { canonical: `/products/${category}` },
+    alternates: { canonical: `${siteConfig.url}/products/${category}` },
+    ...buildSocialMetadata({
+      title: data.seoTitle,
+      description: data.seoDescription,
+      path: `/products/${category}`,
+      image: data.products?.[0]?.image,
+    }),
   };
 }
 
@@ -356,32 +355,12 @@ function SandwichPanelsPage() {
     image: `https://phoenixxsmartbuild.com${data.heroImages[0]}`,
     brand: { '@type': 'Brand', name: 'PHOENIXX SMARTBUILD' },
     manufacturer: { '@type': 'Organization', name: 'NXT PHOENIXX SMARTBUILD LLP', url: 'https://phoenixxsmartbuild.com' },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '127',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: {
-      '@type': 'Review',
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: '5',
-        bestRating: '5',
-      },
-      author: {
-        '@type': 'Organization',
-        name: 'Industrial Client',
-      },
-      reviewBody: `High-quality ${data.title} with excellent thermal insulation and durability. Professional installation from PHOENIXX SMARTBUILD.`,
-    },
   };
 
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={breadcrumbSchema} />
         <JsonLd data={faqSchema} />
         <JsonLd data={productSchema} />
@@ -401,13 +380,7 @@ function SandwichPanelsPage() {
           </div>
 
           <div className="container-custom relative z-10 py-16 md:py-24">
-            <nav className="mb-6 text-sm text-white/60">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <Link href="/products" className="hover:text-white transition-colors">Products</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">Sandwich Panels</span>
-            </nav>
+            <Breadcrumbs items={[{ label: 'Products', href: '/products' }, { label: 'Sandwich Panels' }]} />
 
             <div className="max-w-4xl">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
@@ -492,7 +465,7 @@ function SandwichPanelsPage() {
                   <div className="p-5">
                     <h3 className="font-bold text-slate-900 group-hover:text-blue-600 transition-colors">{product.name}</h3>
                     <p className="mt-2 text-sm text-slate-600 line-clamp-2">{product.description}</p>
-                    <p className="mt-2 text-xs text-slate-400">{product.keywords}</p>
+                    <p className="mt-2 text-xs text-slate-500">{product.keywords}</p>
                     <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-blue-600">
                       View Details →
                     </span>
@@ -660,14 +633,6 @@ function SandwichPanelsPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
                 Trusted by Leading Companies Across India
               </h2>
-              <div className="mt-4 flex items-center justify-center gap-2">
-                <div className="flex">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <span key={star} className="text-yellow-500 text-xl">★</span>
-                  ))}
-                </div>
-                <span className="text-slate-600">{data.testimonial.rating}/5 from {data.testimonial.reviews}+ reviews</span>
-              </div>
             </div>
 
             <div className="max-w-3xl mx-auto">
@@ -717,7 +682,7 @@ function SandwichPanelsPage() {
                 {/* General */}
                 <div>
                   <h3 className="text-lg font-bold text-slate-700 mb-4 flex items-center gap-2">
-                    <span className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-sm">📌</span>
+                    <span className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-sm" aria-hidden="true">📌</span>
                     General Questions
                   </h3>
                   <div className="space-y-3">
@@ -738,7 +703,7 @@ function SandwichPanelsPage() {
                 {/* Technical */}
                 <div>
                   <h3 className="text-lg font-bold text-slate-700 mb-4 flex items-center gap-2">
-                    <span className="w-8 h-8 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm">⚙️</span>
+                    <span className="w-8 h-8 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm" aria-hidden="true">⚙️</span>
                     Technical Questions
                   </h3>
                   <div className="space-y-3">
@@ -759,7 +724,7 @@ function SandwichPanelsPage() {
                 {/* Applications */}
                 <div>
                   <h3 className="text-lg font-bold text-slate-700 mb-4 flex items-center gap-2">
-                    <span className="w-8 h-8 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center text-sm">🏭</span>
+                    <span className="w-8 h-8 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center text-sm" aria-hidden="true">🏭</span>
                     Application Questions
                   </h3>
                   <div className="space-y-3">
@@ -780,7 +745,7 @@ function SandwichPanelsPage() {
                 {/* Buying */}
                 <div>
                   <h3 className="text-lg font-bold text-slate-700 mb-4 flex items-center gap-2">
-                    <span className="w-8 h-8 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center text-sm">🛒</span>
+                    <span className="w-8 h-8 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center text-sm" aria-hidden="true">🛒</span>
                     Buying & Delivery
                   </h3>
                   <div className="space-y-3">
@@ -845,7 +810,7 @@ function OtherCategoryPage({ data, category }: { data: typeof otherCategoriesDat
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={breadcrumbSchema} />
         <AISummaryBlock summary={data.aiSummary} keywords={data.keywords} />
 
@@ -857,13 +822,7 @@ function OtherCategoryPage({ data, category }: { data: typeof otherCategoriesDat
             <div className="absolute inset-0 bg-black/30" />
           </div>
           <div className="container-custom relative z-10 py-20">
-            <nav className="mb-6 text-sm text-white/70">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <Link href="/products" className="hover:text-white transition-colors">Products</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">{data.title}</span>
-            </nav>
+            <Breadcrumbs items={[{ label: 'Products', href: '/products' }, { label: data.title }]} />
             <div className="max-w-3xl">
               <span className="inline-block px-4 py-1 rounded-full bg-white/20 text-white text-sm font-medium mb-4">{data.tagline}</span>
               <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">{data.title}</h1>
@@ -892,7 +851,7 @@ function OtherCategoryPage({ data, category }: { data: typeof otherCategoriesDat
                     <div className="mt-6 grid gap-2 sm:grid-cols-2">
                       {product.features.map((feature) => (
                         <div key={feature} className="flex items-center gap-2 text-sm text-slate-700">
-                          <span className={`w-5 h-5 rounded-full bg-gradient-to-br ${data.gradient} flex items-center justify-center text-white text-xs`}>✓</span>
+                          <span className={`w-5 h-5 rounded-full bg-gradient-to-br ${data.gradient} flex items-center justify-center text-white text-xs`} aria-hidden="true">✓</span>
                           {feature}
                         </div>
                       ))}

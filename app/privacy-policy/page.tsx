@@ -1,14 +1,27 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | PHOENIXX SmartBuild',
+  title: 'Privacy Policy',
   description:
     'Read our privacy policy. Learn how PHOENIXX protects your personal data and handles information securely.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/privacy-policy',
+  },
+  openGraph: {
+    title: 'Privacy Policy | PHOENIXX SMARTBUILD',
+    description: 'Read our privacy policy. Learn how PHOENIXX protects your personal data and handles information securely.',
+    url: 'https://phoenixxsmartbuild.com/privacy-policy',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Privacy Policy | PHOENIXX SMARTBUILD',
+    description: 'Read our privacy policy. Learn how PHOENIXX protects your personal data and handles information securely.',
   },
 };
 
@@ -16,15 +29,11 @@ export default function PrivacyPolicyPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* Hero */}
         <section className="bg-slate-900 py-16">
           <div className="container-custom">
-            <nav className="mb-6 text-sm text-slate-400">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">Privacy Policy</span>
-            </nav>
+            <Breadcrumbs withSchema items={[{ label: 'Privacy Policy' }]} />
             <h1 className="text-3xl md:text-4xl font-bold text-white">Privacy Policy</h1>
             <p className="mt-4 text-slate-300">Last updated: January 2025</p>
           </div>

@@ -79,7 +79,7 @@ export const seoMissionBlogs: Record<string, BlogPost> = {
       { name: 'Sandwich PUF Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
       { name: 'Roofing PUF Panel', href: '/products/sandwich-panels/roofing-puf-panel' },
     ],
-    relatedSolutions: [{ name: 'Warehouse Solutions', href: '/solutions/warehouse' }],
+    relatedSolutions: [{ name: 'Warehouse Solutions', href: '/solutions/peb' }],
     faqs: [
       {
         question: 'How often should PUF panel joints be inspected in India?',
@@ -202,11 +202,11 @@ export const seoMissionBlogs: Record<string, BlogPost> = {
     ],
     relatedProducts: [
       { name: 'Sandwich PUF Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
-      { name: 'Cold Room Panel', href: '/products/sandwich-panels/cold-room-panel' },
+      { name: 'Cold Room Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
     ],
     relatedSolutions: [
-      { name: 'Cold Storage Construction', href: '/solutions/cold-storage' },
-      { name: 'Factory Building Solutions', href: '/solutions/factory-building' },
+      { name: 'Cold Storage Construction', href: '/solutions/cold-storage-construction' },
+      { name: 'Factory Building Solutions', href: '/solutions/peb' },
     ],
     faqs: [
       {
@@ -303,10 +303,10 @@ export const seoMissionBlogs: Record<string, BlogPost> = {
       'Ahmedabad PIR panel suppliers',
     ],
     relatedProducts: [
-      { name: 'Wall PUF Panel', href: '/products/sandwich-panels/wall-puf-panel' },
+      { name: 'Wall PUF Panel', href: '/products/sandwich-panels/wall-ceiling-panel' },
       { name: 'Roofing PUF Panel', href: '/products/sandwich-panels/roofing-puf-panel' },
     ],
-    relatedSolutions: [{ name: 'Industrial Infrastructure', href: '/solutions/industrial-infrastructure' }],
+    relatedSolutions: [{ name: 'Industrial Infrastructure', href: '/solutions/peb' }],
     faqs: [
       {
         question: 'Is PIR always better than PUF for industrial projects?',
@@ -416,12 +416,12 @@ export const seoMissionBlogs: Record<string, BlogPost> = {
       'pressure cascade panel detailing',
     ],
     relatedProducts: [
-      { name: 'Wall PUF Panel', href: '/products/sandwich-panels/wall-puf-panel' },
-      { name: 'Cold Room Panel', href: '/products/sandwich-panels/cold-room-panel' },
+      { name: 'Wall PUF Panel', href: '/products/sandwich-panels/wall-ceiling-panel' },
+      { name: 'Cold Room Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
     ],
     relatedSolutions: [
-      { name: 'Pharma Cleanroom', href: '/solutions/pharma-cleanroom' },
-      { name: 'Industrial Infrastructure', href: '/solutions/industrial-infrastructure' },
+      { name: 'Pharma Cleanroom', href: '/solutions/cleanroom-solutions' },
+      { name: 'Industrial Infrastructure', href: '/solutions/peb' },
     ],
     faqs: [
       {
@@ -517,9 +517,9 @@ export const seoMissionBlogs: Record<string, BlogPost> = {
     ],
     relatedProducts: [
       { name: 'Roofing PUF Panel', href: '/products/sandwich-panels/roofing-puf-panel' },
-      { name: 'Wall PUF Panel', href: '/products/sandwich-panels/wall-puf-panel' },
+      { name: 'Wall PUF Panel', href: '/products/sandwich-panels/wall-ceiling-panel' },
     ],
-    relatedSolutions: [{ name: 'Warehouse Solutions', href: '/solutions/warehouse' }],
+    relatedSolutions: [{ name: 'Warehouse Solutions', href: '/solutions/peb' }],
     faqs: [
       {
         question: 'Is PEB always cheaper than conventional construction?',
@@ -634,10 +634,10 @@ export const seoMissionBlogs: Record<string, BlogPost> = {
       'vapour barrier cold storage',
     ],
     relatedProducts: [
-      { name: 'Cold Room Panel', href: '/products/sandwich-panels/cold-room-panel' },
+      { name: 'Cold Room Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
       { name: 'Sandwich PUF Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
     ],
-    relatedSolutions: [{ name: 'Cold Storage Construction', href: '/solutions/cold-storage' }],
+    relatedSolutions: [{ name: 'Cold Storage Construction', href: '/solutions/cold-storage-construction' }],
     faqs: [
       {
         question: 'What thickness is standard for -18°C frozen storage?',
@@ -754,10 +754,10 @@ export const seoMissionBlogs: Record<string, BlogPost> = {
       'roof panel flashing best practice',
     ],
     relatedProducts: [
-      { name: 'Wall PUF Panel', href: '/products/sandwich-panels/wall-puf-panel' },
+      { name: 'Wall PUF Panel', href: '/products/sandwich-panels/wall-ceiling-panel' },
       { name: 'Roofing PUF Panel', href: '/products/sandwich-panels/roofing-puf-panel' },
     ],
-    relatedSolutions: [{ name: 'Factory Building Solutions', href: '/solutions/factory-building' }],
+    relatedSolutions: [{ name: 'Factory Building Solutions', href: '/solutions/peb' }],
     faqs: [
       {
         question: 'What is the biggest installation mistake in sandwich panel projects?',
@@ -868,7 +868,7 @@ export const seoMissionBlogs: Record<string, BlogPost> = {
       { name: 'Roofing PUF Panel', href: '/products/sandwich-panels/roofing-puf-panel' },
       { name: 'Sandwich PUF Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
     ],
-    relatedSolutions: [{ name: 'Industrial Infrastructure', href: '/solutions/industrial-infrastructure' }],
+    relatedSolutions: [{ name: 'Industrial Infrastructure', href: '/solutions/peb' }],
     faqs: [
       {
         question: 'Which roofing insulation has better thermal efficiency per thickness?',
@@ -986,7 +986,7 @@ export const seoMissionBlogs: Record<string, BlogPost> = {
       { name: 'Sandwich PUF Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
       { name: 'Roofing PUF Panel', href: '/products/sandwich-panels/roofing-puf-panel' },
     ],
-    relatedSolutions: [{ name: 'Factory Building Solutions', href: '/solutions/factory-building' }],
+    relatedSolutions: [{ name: 'Factory Building Solutions', href: '/solutions/peb' }],
     faqs: [
       {
         question: 'Can a simple calculator still be reliable?',
@@ -1101,10 +1101,10 @@ export const seoMissionBlogs: Record<string, BlogPost> = {
       'sandwich panel fire performance',
     ],
     relatedProducts: [
-      { name: 'Wall PUF Panel', href: '/products/sandwich-panels/wall-puf-panel' },
+      { name: 'Wall PUF Panel', href: '/products/sandwich-panels/wall-ceiling-panel' },
       { name: 'Roofing PUF Panel', href: '/products/sandwich-panels/roofing-puf-panel' },
     ],
-    relatedSolutions: [{ name: 'Industrial Infrastructure', href: '/solutions/industrial-infrastructure' }],
+    relatedSolutions: [{ name: 'Industrial Infrastructure', href: '/solutions/peb' }],
     faqs: [
       {
         question: 'Is rockwool always mandatory for industrial buildings?',
@@ -1215,9 +1215,9 @@ export const seoMissionBlogs: Record<string, BlogPost> = {
     ],
     relatedProducts: [
       { name: 'Roofing PUF Panel', href: '/products/sandwich-panels/roofing-puf-panel' },
-      { name: 'Wall PUF Panel', href: '/products/sandwich-panels/wall-puf-panel' },
+      { name: 'Wall PUF Panel', href: '/products/sandwich-panels/wall-ceiling-panel' },
     ],
-    relatedSolutions: [{ name: 'Warehouse Solutions', href: '/solutions/warehouse' }],
+    relatedSolutions: [{ name: 'Warehouse Solutions', href: '/solutions/peb' }],
     faqs: [
       {
         question: 'What insulation upgrade gives fastest benefit in existing warehouses?',
@@ -1331,10 +1331,10 @@ export const seoMissionBlogs: Record<string, BlogPost> = {
       'pressure cascade commissioning',
     ],
     relatedProducts: [
-      { name: 'Wall PUF Panel', href: '/products/sandwich-panels/wall-puf-panel' },
+      { name: 'Wall PUF Panel', href: '/products/sandwich-panels/wall-ceiling-panel' },
       { name: 'Sandwich PUF Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
     ],
-    relatedSolutions: [{ name: 'Pharma Cleanroom', href: '/solutions/pharma-cleanroom' }],
+    relatedSolutions: [{ name: 'Pharma Cleanroom', href: '/solutions/cleanroom-solutions' }],
     faqs: [
       {
         question: 'What causes most cleanroom validation delays?',
@@ -1444,10 +1444,10 @@ export const seoMissionBlogs: Record<string, BlogPost> = {
       'washdown resistant panel systems',
     ],
     relatedProducts: [
-      { name: 'Cold Room Panel', href: '/products/sandwich-panels/cold-room-panel' },
-      { name: 'Wall PUF Panel', href: '/products/sandwich-panels/wall-puf-panel' },
+      { name: 'Cold Room Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
+      { name: 'Wall PUF Panel', href: '/products/sandwich-panels/wall-ceiling-panel' },
     ],
-    relatedSolutions: [{ name: 'Cold Storage Construction', href: '/solutions/cold-storage' }],
+    relatedSolutions: [{ name: 'Cold Storage Construction', href: '/solutions/cold-storage-construction' }],
     faqs: [
       {
         question: 'Can standard industrial panels be used in food facilities?',
@@ -1557,9 +1557,9 @@ export const seoMissionBlogs: Record<string, BlogPost> = {
     ],
     relatedProducts: [
       { name: 'Sandwich PUF Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
-      { name: 'Cold Room Panel', href: '/products/sandwich-panels/cold-room-panel' },
+      { name: 'Cold Room Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
     ],
-    relatedSolutions: [{ name: 'Industrial Infrastructure', href: '/solutions/industrial-infrastructure' }],
+    relatedSolutions: [{ name: 'Industrial Infrastructure', href: '/solutions/peb' }],
     faqs: [
       {
         question: 'What is the most common cause of export panel damage?',
@@ -1675,9 +1675,9 @@ export const seoMissionBlogs: Record<string, BlogPost> = {
     ],
     relatedProducts: [
       { name: 'Sandwich PUF Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
-      { name: 'Wall PUF Panel', href: '/products/sandwich-panels/wall-puf-panel' },
+      { name: 'Wall PUF Panel', href: '/products/sandwich-panels/wall-ceiling-panel' },
     ],
-    relatedSolutions: [{ name: 'Warehouse Solutions', href: '/solutions/warehouse' }],
+    relatedSolutions: [{ name: 'Warehouse Solutions', href: '/solutions/peb' }],
     faqs: [
       {
         question: 'How should voice-search FAQs be different from normal blogs?',

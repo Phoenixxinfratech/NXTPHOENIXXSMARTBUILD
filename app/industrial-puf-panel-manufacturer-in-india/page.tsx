@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Industrial PUF Panel Manufacturer in India',
@@ -10,6 +11,19 @@ export const metadata: Metadata = {
   keywords: ['industrial PUF panel manufacturer in India', 'factory insulation panels', 'industrial shed panels'],
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/industrial-puf-panel-manufacturer-in-india',
+  },
+  openGraph: {
+    title: 'Industrial PUF Panel Manufacturer in India | PHOENIXX SMARTBUILD',
+    description: 'Industrial-grade PUF panels for factories, warehouses, cold storage. Durable, energy-efficient solutions.',
+    url: 'https://phoenixxsmartbuild.com/industrial-puf-panel-manufacturer-in-india',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Industrial PUF Panel Manufacturer in India | PHOENIXX SMARTBUILD',
+    description: 'Industrial-grade PUF panels for factories, warehouses, cold storage. Durable, energy-efficient solutions.',
   },
 };
 
@@ -61,13 +75,15 @@ export default function IndustrialPufPanelManufacturerPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={faqSchema} />
 
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-slate-800 via-zinc-900 to-slate-900 py-20 md:py-28">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
+            <Breadcrumbs withSchema items={[{ label: 'Products', href: '/products' }, { label: 'Industrial PUF Panel Manufacturer in India' }]} />
+
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-zinc-500/10 px-4 py-2 text-sm font-medium text-zinc-400 mb-6">
                 🏭 Heavy-Duty Industrial Solutions
@@ -113,7 +129,7 @@ export default function IndustrialPufPanelManufacturerPage() {
                   performance, and deliver the durability that industrial operations require.
                 </p>
                 <p>
-                  From sprawling manufacturing facilities in <Link href="/industries/warehousing" className="text-primary hover:underline">Gujarat&apos;s industrial corridors</Link> to 
+                  From sprawling manufacturing facilities in <Link href="/sandwich-puf-panel-in-gujarat" className="text-primary hover:underline">Gujarat&apos;s industrial corridors</Link> to 
                   processing plants in Maharashtra, our industrial PUF panels have proven their worth in 
                   some of India&apos;s most demanding environments. We combine heavy-duty construction with 
                   advanced insulation technology to deliver panels that perform reliably for decades.
@@ -141,7 +157,7 @@ export default function IndustrialPufPanelManufacturerPage() {
                   title: 'Warehouses & Logistics',
                   description: 'Large-span storage facilities with climate control and operational efficiency requirements.',
                   icon: '📦',
-                  link: '/industries/warehousing',
+                  link: '/industries/cold-chain',
                 },
                 {
                   title: 'Industrial Sheds',

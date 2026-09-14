@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 import { JsonLd } from '@/components/seo/json-ld';
 import {
   type GeoSlugResult,
@@ -29,7 +30,7 @@ function introBlock(r: GeoSlugResult): string {
   const base = city.cityIntro;
 
   if (pt === 'manufacturer') {
-    return `${base} As a manufacturer supplying from Beawar — just ${city.distanceFromBeawar} km away — Phoenixx Smart Build delivers factory-direct PUF roofing panels to ${city.name} with consistent quality and no intermediary markups. Industrial contractors, PEB fabricators, and warehouse developers across ${city.name} rely on Phoenixx panels for projects ranging from modest sheds to large-scale logistics facilities.`;
+    return `${base} As a manufacturer supplying from Beawar: just ${city.distanceFromBeawar} km away — Phoenixx Smart Build delivers factory-direct PUF roofing panels to ${city.name} with consistent quality and no intermediary markups. Industrial contractors, PEB fabricators, and warehouse developers across ${city.name} rely on Phoenixx panels for projects ranging from modest sheds to large-scale logistics facilities.`;
   }
   if (pt === 'supplier') {
     return `${base} Phoenixx maintains ready stock of PUF roofing panels at its Beawar warehouse for fast dispatch to ${city.name}. ${city.logisticsNote} Whether your project needs 500 sq. ft. or 50,000 sq. ft., the Phoenixx supply chain is built to deliver reliably and on schedule.`;
@@ -60,10 +61,10 @@ function introBlock(r: GeoSlugResult): string {
 function technicalParagraph(r: GeoSlugResult): string {
   const kw = r.keywordType?.id;
   if (kw === 'sandwich-puf-roofing-panel') {
-    return 'The sandwich construction bonds two steel skins to a rigid PUF core through continuous lamination. This creates a composite panel where each layer contributes distinct properties — the outer skin provides weather resistance and structural profile, the PUF core delivers insulation and rigidity, and the inner skin offers a clean, flush finish. The result is a roofing panel that outperforms conventional multi-layer assemblies in thermal efficiency, installation speed, and long-term durability.';
+    return 'The sandwich construction bonds two steel skins to a rigid PUF core through continuous lamination. This creates a composite panel where each layer contributes distinct properties: the outer skin provides weather resistance and structural profile, the PUF core delivers insulation and rigidity, and the inner skin offers a clean, flush finish. The result is a roofing panel that outperforms conventional multi-layer assemblies in thermal efficiency, installation speed, and long-term durability.';
   }
   if (kw === 'insulated-roof-panel') {
-    return 'Insulation performance is measured by R-value — the thermal resistance per unit thickness. Phoenixx PUF-core roof panels deliver an R-value of approximately 2.08 m²K/W at 50 mm thickness, significantly outperforming mineral wool (1.28 m²K/W at 50 mm) and EPS (1.39 m²K/W at 50 mm). This superior R-value means thinner Phoenixx panels achieve the same or better insulation as thicker alternatives, reducing structural load and cost.';
+    return 'Insulation performance is measured by R-value: the thermal resistance per unit thickness. Phoenixx PUF-core roof panels deliver an R-value of approximately 2.08 m²K/W at 50 mm thickness, significantly outperforming mineral wool (1.28 m²K/W at 50 mm) and EPS (1.39 m²K/W at 50 mm). This superior R-value means thinner Phoenixx panels achieve the same or better insulation as thicker alternatives, reducing structural load and cost.';
   }
   if (kw === 'puf-sandwich-panel') {
     return 'PUF sandwich panels are available in wall and roof configurations. Roof panels feature trapezoidal or standing-seam outer profiles for water drainage and structural spanning, while wall panels use flat or micro-ribbed surfaces for clean aesthetics. Both types share the same PUF core technology, ensuring uniform insulation performance across the building envelope.';
@@ -128,7 +129,6 @@ export function RajasthanGeoPage({ result }: Props) {
     manufacturer: { '@type': 'Organization', name: 'Phoenixx Smart Build', url: 'https://phoenixxsmartbuild.com' },
     category: 'Industrial Insulated Roofing Panels',
     material: 'Polyurethane Foam',
-    aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.8', reviewCount: '142', bestRating: '5', worstRating: '1' },
     ...(isPrice && {
       offers: {
         '@type': 'AggregateOffer',
@@ -152,16 +152,6 @@ export function RajasthanGeoPage({ result }: Props) {
     })),
   };
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://phoenixxsmartbuild.com' },
-      { '@type': 'ListItem', position: 2, name: 'PUF Roofing Panels', item: 'https://phoenixxsmartbuild.com/puf-roofing-panels' },
-      { '@type': 'ListItem', position: 3, name: h1, item: `https://phoenixxsmartbuild.com/${canonicalSlug}` },
-    ],
-  };
-
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
@@ -169,19 +159,18 @@ export function RajasthanGeoPage({ result }: Props) {
         <JsonLd data={localBusinessSchema} />
         <JsonLd data={productSchema} />
         <JsonLd data={faqSchema} />
-        <JsonLd data={breadcrumbSchema} />
 
         {/* ── Hero ── */}
         <section className="relative bg-gradient-to-br from-slate-900 via-gray-900 to-blue-900 py-20 md:py-28">
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
-            <nav className="mb-6 text-sm text-white/80">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <Link href="/puf-roofing-panels" className="hover:text-white transition-colors">PUF Roofing Panels</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">{city.name}</span>
-            </nav>
+            <Breadcrumbs
+              withSchema
+              items={[
+                { label: 'PUF Roofing Panels', href: '/puf-roofing-panels' },
+                { label: city.name },
+              ]}
+            />
             <div className="max-w-4xl">
               <div className="flex flex-wrap gap-3 mb-6">
                 <span className="inline-block rounded-full bg-green-500/20 px-4 py-2 text-sm font-medium text-green-400">
@@ -200,7 +189,7 @@ export function RajasthanGeoPage({ result }: Props) {
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link
                   href="/get-a-quote"
-                  className="rounded-xl bg-gradient-to-r from-green-500 to-emerald-600 px-8 py-4 font-semibold text-white shadow-lg hover:shadow-xl transition-all"
+                  className="rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 px-8 py-4 font-semibold text-white shadow-lg hover:shadow-xl transition-all"
                 >
                   Get {city.name} Quote
                 </Link>

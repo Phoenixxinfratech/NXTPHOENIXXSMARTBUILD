@@ -124,7 +124,7 @@ export const geoCities: Record<string, GeoCity> = {
     nearbyAreas: ['Pushkar', 'Nasirabad', 'Kishangarh', 'Beawar'],
     logisticsNote: 'Just 30 km from the Beawar warehouse via NH-48, Ajmer receives same-day delivery with minimal transport cost.',
     climate: 'Hot semi-arid climate with summer temperatures exceeding 45°C and significant monsoon rainfall, demanding robust thermal insulation for industrial roofing.',
-    cityIntro: 'Ajmer, a major industrial and cultural centre in central Rajasthan, hosts a growing industrial base along the Delhi-Ahmedabad industrial corridor. Its proximity to Beawar — just 30 km — makes it the most accessible city for Phoenixx PUF roofing panel supply.',
+    cityIntro: 'Ajmer, a major industrial and cultural centre in central Rajasthan, hosts a growing industrial base along the Delhi-Ahmedabad industrial corridor. Its proximity to Beawar: just 30 km — makes it the most accessible city for Phoenixx PUF roofing panel supply.',
     localPainPoint: 'Textile and marble processing units in Ajmer face 45°C+ summer roof temperatures — insulated PUF roofing reduces internal heat by 8–12°C without additional HVAC load.',
   },
   kishangarh: {
@@ -302,7 +302,7 @@ export const geoCities: Record<string, GeoCity> = {
     nearbyAreas: ['Behror', 'Shahjahanpur', 'Alwar', 'Rewari'],
     logisticsNote: '275 km from Beawar on NH-48. This premium industrial zone commands dedicated supply logistics.',
     climate: 'Semi-arid with hot summers; Japanese and multinational factories here maintain strict environmental standards requiring high-specification insulated roofing.',
-    cityIntro: 'Neemrana\'s Japanese Industrial Zone is one of India\'s premier manufacturing clusters, housing Daikin, Nissin, and other global OEMs. These world-class factories demand insulated roofing panels that meet international quality benchmarks.',
+    cityIntro: 'Neemrana\'s Japanese Industrial Zone is one of India\'s premier manufacturing clusters, housing Daikin, Nissin, and other global OEMs. These factories demand insulated roofing panels that meet international quality benchmarks.',
   },
   kota: {
     slug: 'kota',
@@ -490,14 +490,14 @@ export const geoPageTypes: Record<GeoPageTypeId, GeoPageType> = {
     h1Template: 'PUF Roofing Panel Price in {city}',
     metaTitleTemplate: 'PUF Roofing Panel Price {city} 2026 | Phoenixx',
     metaDescTemplate: 'Check PUF roofing panel price in {city}. Phoenixx offers competitive rates from ₹90/sq ft. Get instant price quote for your industrial roofing project.',
-    focusDescription: 'Explains pricing factors — thickness, density, coating, project size, transport — and positions Phoenixx as competitively priced.',
+    focusDescription: 'Explains pricing factors — thickness, density, coating, project size, transport, and positions Phoenixx as competitively priced.',
   },
   brand: {
     id: 'brand',
     urlPrefix: 'phoenixx-puf-roofing-panel',
     h1Template: 'Phoenixx PUF Roofing Panel in {city}',
     metaTitleTemplate: 'Phoenixx PUF Roofing Panel {city} | Premium',
-    metaDescTemplate: 'Phoenixx PUF roofing panels — the preferred brand in {city} for industrial roofing. Premium polyurethane insulated panels from Beawar. Request a quote.',
+    metaDescTemplate: 'Phoenixx PUF roofing panels: the preferred brand in {city} for industrial roofing. Premium polyurethane insulated panels from Beawar. Request a quote.',
     focusDescription: 'Strongly brand-focused page positioning Phoenixx as the premium industrial roofing panel brand for the target city.',
   },
 };
@@ -513,7 +513,7 @@ export const geoKeywordTypes: Record<GeoKeywordId, GeoKeywordType> = {
     h1Template: 'Sandwich PUF Roofing Panel in {city}',
     metaTitleTemplate: 'Sandwich PUF Roofing Panel {city} | Phoenixx',
     metaDescTemplate: 'Sandwich PUF roofing panels in {city} from Phoenixx. Insulated sandwich panels for industrial roofing. Fast supply from Beawar warehouse.',
-    focusDescription: 'Focuses on the sandwich construction — two steel skins bonded to a PUF core — and its advantages for industrial roofing.',
+    focusDescription: 'Focuses on the sandwich construction: two steel skins bonded to a PUF core, and its advantages for industrial roofing.',
   },
   'insulated-roof-panel': {
     id: 'insulated-roof-panel',
@@ -537,7 +537,7 @@ export const geoKeywordTypes: Record<GeoKeywordId, GeoKeywordType> = {
     h1Template: 'Polyurethane Roof Panel in {city}',
     metaTitleTemplate: 'Polyurethane Roof Panel {city} | Phoenixx',
     metaDescTemplate: 'Polyurethane roof panels in {city}. Phoenixx manufactures high-density PU-core insulated roofing panels. Competitive pricing from Beawar, Rajasthan.',
-    focusDescription: 'Focuses on the polyurethane material science — closed-cell structure, density, thermal conductivity — and how it outperforms alternatives.',
+    focusDescription: 'Focuses on the polyurethane material science — closed-cell structure, density, thermal conductivity, and how it outperforms alternatives.',
   },
 };
 
@@ -589,20 +589,42 @@ export function getAllGeoCitySlugs(): string[] {
 }
 
 /**
- * Build all static param slugs for geo pages (207 total)
+ * Nine variants per city is nine ways of saying the same thing. The keyword
+ * types are pure synonyms of the general page ("insulated roof panel" is the
+ * same query as "PUF roofing panel"), and "supplier" and "brand" answer the
+ * same question as "manufacturer" for a company that makes what it sells.
+ *
+ * We publish the three that a buyer actually searches separately — what the
+ * product is, who makes it, what it costs — and fold the rest into them.
+ */
+const PUBLISHED_GEO_PAGE_TYPES: GeoPageTypeId[] = ['general', 'manufacturer', 'price'];
+
+const COLLAPSED_PAGE_TYPE_TARGET: Partial<Record<GeoPageTypeId, GeoPageTypeId>> = {
+  supplier: 'manufacturer',
+  brand: 'manufacturer',
+};
+
+export function isPublishedGeoPage(result: GeoSlugResult): boolean {
+  return Boolean(result.pageType && PUBLISHED_GEO_PAGE_TYPES.includes(result.pageType.id));
+}
+
+/** The published page a collapsed variant folds into. */
+export function resolvePublishedGeoPage(result: GeoSlugResult): GeoSlugResult {
+  if (isPublishedGeoPage(result)) return result;
+  const target = result.pageType ? COLLAPSED_PAGE_TYPE_TARGET[result.pageType.id] : undefined;
+  return { city: result.city, pageType: geoPageTypes[target ?? 'general'] };
+}
+
+/**
+ * Build the static param slugs for the geo pages we publish.
  */
 export function generateAllGeoStaticParams(): string[] {
   const params: string[] = [];
   const citySlugs = getAllGeoCitySlugs();
 
-  for (const pt of Object.values(geoPageTypes)) {
+  for (const id of PUBLISHED_GEO_PAGE_TYPES) {
     for (const cs of citySlugs) {
-      params.push(`${pt.urlPrefix}-${cs}`);
-    }
-  }
-  for (const kt of Object.values(geoKeywordTypes)) {
-    for (const cs of citySlugs) {
-      params.push(`${kt.urlPrefix}-${cs}`);
+      params.push(`${geoPageTypes[id].urlPrefix}-${cs}`);
     }
   }
   return params;
@@ -629,8 +651,8 @@ export function getGeoH1(result: GeoSlugResult): string {
 }
 
 export function getGeoCanonicalSlug(result: GeoSlugResult): string {
-  const prefix = result.pageType?.urlPrefix ?? result.keywordType!.urlPrefix;
-  return `${prefix}-${result.city.slug}`;
+  const published = resolvePublishedGeoPage(result);
+  return `${published.pageType!.urlPrefix}-${published.city.slug}`;
 }
 
 // ---------------------------------------------------------------------------
@@ -664,7 +686,7 @@ export function generateGeoFAQs(result: GeoSlugResult): GeoFAQ[] {
     },
     {
       question: `What types of PUF roofing panels are available in ${city.name}?`,
-      answer: `Phoenixx offers roofing PUF panels in 30mm to 150mm thickness with PPGI/PPGL steel skins, polyester or PVDF coatings, and trapezoidal or standing seam profiles — suitable for factories, warehouses, cold storage, and industrial sheds in ${city.name}.`,
+      answer: `Phoenixx offers roofing PUF panels in 30mm to 150mm thickness with PPGI/PPGL steel skins, polyester or PVDF coatings, and trapezoidal or standing seam profiles, suitable for factories, warehouses, cold storage, and industrial sheds in ${city.name}.`,
     },
     {
       question: `How quickly can Phoenixx deliver PUF roofing panels to ${city.name}?`,
@@ -696,7 +718,7 @@ export function generateGeoFAQs(result: GeoSlugResult): GeoFAQ[] {
   if (isBrand) {
     faqs.push({
       question: `Why choose Phoenixx brand PUF roofing panels for projects in ${city.name}?`,
-      answer: `Phoenixx PUF roofing panels are manufactured to IS 14925:2015 standards with 40±2 kg/m³ density PUF core, delivering industry-leading thermal conductivity of 0.024 W/mK. The Beawar warehouse maintains ready stock for rapid supply to ${city.name}, backed by dedicated project support and competitive pricing.`,
+      answer: `Phoenixx PUF roofing panels are manufactured to IS 14925:2015 standards with 40±2 kg/m³ density PUF core, delivering thermal conductivity of 0.024 W/mK. The Beawar warehouse maintains ready stock for rapid supply to ${city.name}, backed by dedicated project support and competitive pricing.`,
     });
   }
 

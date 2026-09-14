@@ -16,7 +16,6 @@ import {
   generateSpeakableSchema,
   generateQAPageSchema,
   generateImageObjectSchema,
-  generateVideoSchema,
 } from '@/lib/schema';
 
 export const metadata: Metadata = {
@@ -116,26 +115,6 @@ const productSchema = {
   },
   category: 'Cleanroom Insulated Panels',
   material: 'PIR/PUF Core + Pre-painted / Stainless Steel Facings + Flush-Mount Joints',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '156',
-    bestRating: '5',
-  },
-  review: {
-    '@type': 'Review',
-    reviewRating: {
-      '@type': 'Rating',
-      ratingValue: '5',
-      bestRating: '5',
-    },
-    author: {
-      '@type': 'Organization',
-      name: 'Pharmaceutical Facility Consultants India',
-    },
-    reviewBody:
-      'Outstanding cleanroom panel quality for our WHO-GMP pharmaceutical facility. Flush joints passed particle count validation on the first attempt. Complete documentation package simplified our regulatory audit.',
-  },
   offers: {
     '@type': 'AggregateOffer',
     priceCurrency: 'INR',
@@ -150,7 +129,7 @@ export default function BestPufPanelForCleanRoomPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* ── 14 JSON-LD Schemas ── */}
         <JsonLd data={generateOrganizationSchema()} />
         <JsonLd data={generateLocalBusinessSchema()} />
@@ -227,19 +206,6 @@ export default function BestPufPanelForCleanRoomPage() {
             height: 630,
           })}
         />
-        <JsonLd
-          data={generateVideoSchema({
-            name: 'PHOENIXX Cleanroom Panel Manufacturing & Installation Process',
-            description:
-              'Watch how PHOENIXX manufactures and installs GMP-compliant insulated panels for pharmaceutical cleanrooms across India. Flush-mount joints, antimicrobial coatings, and ISO 14644 validated installations.',
-            thumbnailUrl:
-              'https://phoenixxsmartbuild.com/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
-            uploadDate: '2025-01-01',
-            duration: 'PT7M30S',
-            contentUrl:
-              'https://phoenixxsmartbuild.com/videos/cleanroom-panel-installation',
-          })}
-        />
         <JsonLd data={productSchema} />
 
         {/* ═══════════════════════════════════════════════════════════
@@ -287,7 +253,7 @@ export default function BestPufPanelForCleanRoomPage() {
                 industrial specifications. A single particle on a surface, an improperly sealed
                 joint, or a panel that off-gasses volatile compounds can contaminate an entire batch,
                 trigger regulatory shutdown, and cost crores in lost production. In this
-                comprehensive guide, our cleanroom engineering team — with 100+ validated cleanroom
+                comprehensive guide, our cleanroom engineering team, with 100+ validated cleanroom
                 projects — explains exactly how to select the right insulated panel for your ISO
                 class, GMP tier, and industry requirements.
               </p>
@@ -379,7 +345,7 @@ export default function BestPufPanelForCleanRoomPage() {
 
                 <p>
                   PHOENIXX cleanroom panels are engineered from the ground up for controlled
-                  environments. Every aspect — from the PIR/PUF core formulation that minimizes
+                  environments. Every aspect, from the PIR/PUF core formulation that minimizes
                   outgassing, to the concealed-fix flush-mount joint system that eliminates particle
                   traps, to the antimicrobial surface coatings that resist biofilm formation — is
                   designed to meet the demands of ISO 14644 classified cleanrooms. Combined with
@@ -419,51 +385,53 @@ export default function BestPufPanelForCleanRoomPage() {
                 ISO Class × Panel Specification Matrix
               </h3>
               <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
-                <table className="w-full">
-                  <thead>
-                    <tr className="bg-slate-900 text-white">
-                      <th className="px-4 py-4 text-left font-semibold">ISO Class</th>
-                      <th className="px-4 py-4 text-left font-semibold">Application</th>
-                      <th className="px-4 py-4 text-left font-semibold">Surface Finish</th>
-                      <th className="px-4 py-4 text-left font-semibold">Joint System</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-200">
-                    {[
-                      {
-                        iso: 'ISO Class 5',
-                        application: 'Injectable pharma, semiconductor fab',
-                        surface: 'Stainless Steel 304/316',
-                        joint: 'Flush-mount + pharma-grade sealant',
-                      },
-                      {
-                        iso: 'ISO Class 6',
-                        application: 'Sterile manufacturing, biotech',
-                        surface: 'SS 304 or food-safe coated steel',
-                        joint: 'Flush-mount concealed-fix',
-                      },
-                      {
-                        iso: 'ISO Class 7',
-                        application: 'Oral dosage, medical devices, API',
-                        surface: 'Food-safe coated PPGI',
-                        joint: 'Flush-mount concealed-fix',
-                      },
-                      {
-                        iso: 'ISO Class 8',
-                        application: 'Packaging, general pharma, cosmetics',
-                        surface: 'Standard PPGI with PE coating',
-                        joint: 'Concealed-fix (standard)',
-                      },
-                    ].map((row, idx) => (
-                      <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
-                        <td className="px-4 py-3 font-bold text-blue-700 text-sm">{row.iso}</td>
-                        <td className="px-4 py-3 text-slate-900 font-semibold text-sm">{row.application}</td>
-                        <td className="px-4 py-3 text-emerald-700 font-medium text-sm">{row.surface}</td>
-                        <td className="px-4 py-3 text-slate-600 text-sm">{row.joint}</td>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="bg-slate-900 text-white">
+                        <th className="px-4 py-4 text-left font-semibold">ISO Class</th>
+                        <th className="px-4 py-4 text-left font-semibold">Application</th>
+                        <th className="px-4 py-4 text-left font-semibold">Surface Finish</th>
+                        <th className="px-4 py-4 text-left font-semibold">Joint System</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody className="divide-y divide-slate-200">
+                      {[
+                        {
+                          iso: 'ISO Class 5',
+                          application: 'Injectable pharma, semiconductor fab',
+                          surface: 'Stainless Steel 304/316',
+                          joint: 'Flush-mount + pharma-grade sealant',
+                        },
+                        {
+                          iso: 'ISO Class 6',
+                          application: 'Sterile manufacturing, biotech',
+                          surface: 'SS 304 or food-safe coated steel',
+                          joint: 'Flush-mount concealed-fix',
+                        },
+                        {
+                          iso: 'ISO Class 7',
+                          application: 'Oral dosage, medical devices, API',
+                          surface: 'Food-safe coated PPGI',
+                          joint: 'Flush-mount concealed-fix',
+                        },
+                        {
+                          iso: 'ISO Class 8',
+                          application: 'Packaging, general pharma, cosmetics',
+                          surface: 'Standard PPGI with PE coating',
+                          joint: 'Concealed-fix (standard)',
+                        },
+                      ].map((row, idx) => (
+                        <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
+                          <td className="px-4 py-3 font-bold text-blue-700 text-sm">{row.iso}</td>
+                          <td className="px-4 py-3 text-slate-900 font-semibold text-sm">{row.application}</td>
+                          <td className="px-4 py-3 text-emerald-700 font-medium text-sm">{row.surface}</td>
+                          <td className="px-4 py-3 text-slate-600 text-sm">{row.joint}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
               <p className="mt-3 text-center text-sm text-slate-500">
                 All recommendations validated against ISO 14644-1:2015 and WHO-GMP Annex 2 requirements
@@ -485,32 +453,34 @@ export default function BestPufPanelForCleanRoomPage() {
                 </p>
               </div>
               <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
-                <table className="w-full">
-                  <thead>
-                    <tr className="bg-slate-900 text-white">
-                      <th className="px-6 py-4 text-left font-semibold">Property</th>
-                      <th className="px-6 py-4 text-left font-semibold">PIR Panel</th>
-                      <th className="px-6 py-4 text-left font-semibold">Standard PUF Panel</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-200">
-                    {[
-                      { property: 'Fire Classification', pir: 'B1 (self-extinguishing)', puf: 'B2 (normally flammable)' },
-                      { property: 'Smoke Generation', pir: 'Very low', puf: 'Moderate' },
-                      { property: 'Thermal Conductivity', pir: '0.022-0.024 W/mK', puf: '0.024 W/mK' },
-                      { property: 'Max Service Temp', pir: '120°C', puf: '80°C' },
-                      { property: 'VOC Outgassing', pir: 'Minimal (pharma-grade)', puf: 'Low (standard-grade)' },
-                      { property: 'WHO-GMP Compliance', pir: 'Preferred / Required', puf: 'ISO 7-8 only' },
-                      { property: 'Cleanroom Suitability', pir: '★★★★★', puf: '★★★★☆' },
-                    ].map((row, idx) => (
-                      <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
-                        <td className="px-6 py-3 font-semibold text-slate-900 text-sm">{row.property}</td>
-                        <td className="px-6 py-3 text-emerald-700 font-medium text-sm">{row.pir}</td>
-                        <td className="px-6 py-3 text-slate-500 text-sm">{row.puf}</td>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="bg-slate-900 text-white">
+                        <th className="px-6 py-4 text-left font-semibold">Property</th>
+                        <th className="px-6 py-4 text-left font-semibold">PIR Panel</th>
+                        <th className="px-6 py-4 text-left font-semibold">Standard PUF Panel</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody className="divide-y divide-slate-200">
+                      {[
+                        { property: 'Fire Classification', pir: 'B1 (self-extinguishing)', puf: 'B2 (normally flammable)' },
+                        { property: 'Smoke Generation', pir: 'Very low', puf: 'Moderate' },
+                        { property: 'Thermal Conductivity', pir: '0.022-0.024 W/mK', puf: '0.024 W/mK' },
+                        { property: 'Max Service Temp', pir: '120°C', puf: '80°C' },
+                        { property: 'VOC Outgassing', pir: 'Minimal (pharma-grade)', puf: 'Low (standard-grade)' },
+                        { property: 'WHO-GMP Compliance', pir: 'Preferred / Required', puf: 'ISO 7-8 only' },
+                        { property: 'Cleanroom Suitability', pir: '★★★★★', puf: '★★★★☆' },
+                      ].map((row, idx) => (
+                        <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
+                          <td className="px-6 py-3 font-semibold text-slate-900 text-sm">{row.property}</td>
+                          <td className="px-6 py-3 text-emerald-700 font-medium text-sm">{row.pir}</td>
+                          <td className="px-6 py-3 text-slate-500 text-sm">{row.puf}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
               <p className="mt-4 text-center text-sm text-slate-500">
                 For fire-rating comparisons with other materials:{' '}
@@ -579,7 +549,7 @@ export default function BestPufPanelForCleanRoomPage() {
                   When your facility&apos;s regulatory approval, product quality, and patient safety
                   depend on the cleanroom envelope, every panel specification matters. PHOENIXX
                   cleanroom panels are purpose-built to deliver the controlled environment your
-                  process demands — and the documentation your auditors require.
+                  process demands, and the documentation your auditors require.
                 </p>
               </div>
 
@@ -802,43 +772,45 @@ export default function BestPufPanelForCleanRoomPage() {
               </p>
 
               <div className="bg-slate-50 rounded-2xl overflow-hidden shadow-sm">
-                <table className="w-full">
-                  <thead>
-                    <tr className="bg-slate-900 text-white">
-                      <th className="px-6 py-4 text-left font-semibold">Specification</th>
-                      <th className="px-6 py-4 text-left font-semibold">Value / Range</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-200">
-                    {[
-                      { label: 'Panel Thickness', value: '50mm, 60mm, 80mm, 100mm' },
-                      { label: 'Core Material', value: 'PIR (B1 rated) or PUF (B2 rated)' },
-                      { label: 'Foam Core Density', value: '40-45 kg/m³ (high-density rigid)' },
-                      { label: 'Thermal Conductivity (λ)', value: '0.022-0.024 W/mK' },
-                      { label: 'R-Value (at 50mm)', value: '2.27 m²K/W' },
-                      { label: 'R-Value (at 80mm)', value: '3.64 m²K/W' },
-                      { label: 'Joint System', value: 'Flush-mount concealed-fix (no exposed fasteners)' },
-                      { label: 'Fire Classification', value: 'B1 self-extinguishing (PIR) / B2 (PUF)' },
-                      { label: 'Exterior Facing', value: '0.50mm PPGI / SS 304 / SS 316 options' },
-                      { label: 'Interior Facing', value: 'Food-safe coated steel / SS 304 / SS 316 (by ISO class)' },
-                      { label: 'Surface Finish', value: 'Smooth, non-porous, Ra ≤ 0.8μm (SS option)' },
-                      { label: 'Antimicrobial Coating', value: 'Optional — silver-ion or copper-based' },
-                      { label: 'VOC Emission', value: 'Low outgassing certified (pharma-grade PIR)' },
-                      { label: 'Cleanroom Compatibility', value: 'ISO Class 5 to ISO Class 8 (ISO 14644-1)' },
-                      { label: 'Panel Width', value: '1000mm / 1150mm (effective coverage)' },
-                      { label: 'Panel Length', value: 'Custom — up to 12 metres' },
-                      { label: 'Integrated Accessories', value: 'HEPA modules, pass-boxes, doors, viewing windows, returns' },
-                      { label: 'Service Life', value: '25+ years (with proper maintenance)' },
-                    ].map((row, idx) => (
-                      <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
-                        <td className="px-6 py-3 font-semibold text-slate-900 text-sm">
-                          {row.label}
-                        </td>
-                        <td className="px-6 py-3 text-slate-600 text-sm">{row.value}</td>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="bg-slate-900 text-white">
+                        <th className="px-6 py-4 text-left font-semibold">Specification</th>
+                        <th className="px-6 py-4 text-left font-semibold">Value / Range</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody className="divide-y divide-slate-200">
+                      {[
+                        { label: 'Panel Thickness', value: '50mm, 60mm, 80mm, 100mm' },
+                        { label: 'Core Material', value: 'PIR (B1 rated) or PUF (B2 rated)' },
+                        { label: 'Foam Core Density', value: '40-45 kg/m³ (high-density rigid)' },
+                        { label: 'Thermal Conductivity (λ)', value: '0.022-0.024 W/mK' },
+                        { label: 'R-Value (at 50mm)', value: '2.27 m²K/W' },
+                        { label: 'R-Value (at 80mm)', value: '3.64 m²K/W' },
+                        { label: 'Joint System', value: 'Flush-mount concealed-fix (no exposed fasteners)' },
+                        { label: 'Fire Classification', value: 'B1 self-extinguishing (PIR) / B2 (PUF)' },
+                        { label: 'Exterior Facing', value: '0.50mm PPGI / SS 304 / SS 316 options' },
+                        { label: 'Interior Facing', value: 'Food-safe coated steel / SS 304 / SS 316 (by ISO class)' },
+                        { label: 'Surface Finish', value: 'Smooth, non-porous, Ra ≤ 0.8μm (SS option)' },
+                        { label: 'Antimicrobial Coating', value: 'Optional — silver-ion or copper-based' },
+                        { label: 'VOC Emission', value: 'Low outgassing certified (pharma-grade PIR)' },
+                        { label: 'Cleanroom Compatibility', value: 'ISO Class 5 to ISO Class 8 (ISO 14644-1)' },
+                        { label: 'Panel Width', value: '1000mm effective coverage (1200mm on request)' },
+                        { label: 'Panel Length', value: 'Custom, up to 12 metres' },
+                        { label: 'Integrated Accessories', value: 'HEPA modules, pass-boxes, doors, viewing windows, returns' },
+                        { label: 'Service Life', value: '25+ years (with proper maintenance)' },
+                      ].map((row, idx) => (
+                        <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
+                          <td className="px-6 py-3 font-semibold text-slate-900 text-sm">
+                            {row.label}
+                          </td>
+                          <td className="px-6 py-3 text-slate-600 text-sm">{row.value}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
 
               {/* Certifications */}
@@ -861,7 +833,7 @@ export default function BestPufPanelForCleanRoomPage() {
                       key={idx}
                       className="flex items-start gap-3 bg-emerald-50 rounded-xl p-4"
                     >
-                      <span className="text-emerald-600 font-bold text-lg mt-0.5">✓</span>
+                      <span className="text-emerald-600 font-bold text-lg mt-0.5" aria-hidden="true">✓</span>
                       <div>
                         <span className="font-bold text-slate-900">{item.std}</span>
                         <p className="text-sm text-slate-600">{item.desc}</p>
@@ -924,37 +896,39 @@ export default function BestPufPanelForCleanRoomPage() {
 
               {/* Price Table by ISO Class */}
               <div className="mt-10 bg-white rounded-2xl overflow-hidden shadow-sm">
-                <table className="w-full">
-                  <thead>
-                    <tr className="bg-emerald-700 text-white">
-                      <th className="px-5 py-4 text-left font-semibold">ISO Class</th>
-                      <th className="px-5 py-4 text-left font-semibold">Surface Finish</th>
-                      <th className="px-5 py-4 text-left font-semibold">Price (per sq.m)</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-200">
-                    <tr className="bg-white">
-                      <td className="px-5 py-4 font-semibold text-slate-900">ISO Class 8 (Packaging / General)</td>
-                      <td className="px-5 py-4 text-slate-600">PPGI with PE coating</td>
-                      <td className="px-5 py-4 text-emerald-700 font-bold">₹1,500 – ₹2,000</td>
-                    </tr>
-                    <tr className="bg-slate-50">
-                      <td className="px-5 py-4 font-semibold text-slate-900">ISO Class 7 (Oral Dosage / API)</td>
-                      <td className="px-5 py-4 text-slate-600">Food-safe coated PPGI</td>
-                      <td className="px-5 py-4 text-emerald-700 font-bold">₹2,000 – ₹2,800</td>
-                    </tr>
-                    <tr className="bg-white">
-                      <td className="px-5 py-4 font-semibold text-slate-900">ISO Class 6 (Sterile / Biotech)</td>
-                      <td className="px-5 py-4 text-slate-600">SS 304 or food-safe steel</td>
-                      <td className="px-5 py-4 text-emerald-700 font-bold">₹2,800 – ₹3,500</td>
-                    </tr>
-                    <tr className="bg-slate-50">
-                      <td className="px-5 py-4 font-semibold text-slate-900">ISO Class 5 (Injectable / Semiconductor)</td>
-                      <td className="px-5 py-4 text-slate-600">SS 304/316 electropolished</td>
-                      <td className="px-5 py-4 text-emerald-700 font-bold">₹3,500 – ₹4,000</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="bg-emerald-700 text-white">
+                        <th className="px-5 py-4 text-left font-semibold">ISO Class</th>
+                        <th className="px-5 py-4 text-left font-semibold">Surface Finish</th>
+                        <th className="px-5 py-4 text-left font-semibold">Price (per sq.m)</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-200">
+                      <tr className="bg-white">
+                        <td className="px-5 py-4 font-semibold text-slate-900">ISO Class 8 (Packaging / General)</td>
+                        <td className="px-5 py-4 text-slate-600">PPGI with PE coating</td>
+                        <td className="px-5 py-4 text-emerald-700 font-bold">₹1,500 – ₹2,000</td>
+                      </tr>
+                      <tr className="bg-slate-50">
+                        <td className="px-5 py-4 font-semibold text-slate-900">ISO Class 7 (Oral Dosage / API)</td>
+                        <td className="px-5 py-4 text-slate-600">Food-safe coated PPGI</td>
+                        <td className="px-5 py-4 text-emerald-700 font-bold">₹2,000 – ₹2,800</td>
+                      </tr>
+                      <tr className="bg-white">
+                        <td className="px-5 py-4 font-semibold text-slate-900">ISO Class 6 (Sterile / Biotech)</td>
+                        <td className="px-5 py-4 text-slate-600">SS 304 or food-safe steel</td>
+                        <td className="px-5 py-4 text-emerald-700 font-bold">₹2,800 – ₹3,500</td>
+                      </tr>
+                      <tr className="bg-slate-50">
+                        <td className="px-5 py-4 font-semibold text-slate-900">ISO Class 5 (Injectable / Semiconductor)</td>
+                        <td className="px-5 py-4 text-slate-600">SS 304/316 electropolished</td>
+                        <td className="px-5 py-4 text-emerald-700 font-bold">₹3,500 – ₹4,000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
               <p className="mt-3 text-center text-sm text-slate-500">
                 Prices include flush-mount joint system. HEPA modules, cleanroom doors,
@@ -1042,7 +1016,7 @@ export default function BestPufPanelForCleanRoomPage() {
                 >
                   <summary className="flex cursor-pointer items-center justify-between px-6 py-5 font-semibold text-slate-900 hover:bg-slate-100 transition-colors [&::-webkit-details-marker]:hidden">
                     <span>{faq.question}</span>
-                    <span className="ml-4 text-xl text-slate-400 group-open:rotate-45 transition-transform">
+                    <span className="ml-4 text-xl text-slate-500 group-open:rotate-45 transition-transform">
                       +
                     </span>
                   </summary>

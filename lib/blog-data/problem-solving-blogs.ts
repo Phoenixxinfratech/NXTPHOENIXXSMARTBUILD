@@ -1400,7 +1400,7 @@ export const problemSolvingBlogs: Record<string, BlogPost> = {
       <p>When in doubt, PUF sandwich panels are the safe default for most industrial applications, while PIR is the better choice for cold storage and fire-sensitive projects.</p>
 
       <h2>Conclusion</h2>
-      <p>Industrial insulation is not a one-size-fits-all solution. Each insulation type has specific strengths that make it ideal for certain applications. Understanding the basics of thermal conductivity, R-values, and fire ratings empowers you to make informed decisions and avoid costly mistakes.</p>
+      <p>Industrial insulation is not a one-size-fits-all solution. Each insulation type has specific strengths that make it ideal for certain applications. Understanding the basics of thermal conductivity, R-values, and fire ratings helps you make informed decisions and avoid costly mistakes.</p>
       <p>PHOENIXX SmartBuild offers the complete range of industrial insulation solutions \u2013 <a href="/products/sandwich-panels">browse our product lineup</a> or <a href="/get-a-quote">get a free consultation</a> from our engineering team to find the best insulation for your project.</p>
     `,
     category: 'How-To Guide',
@@ -1620,7 +1620,7 @@ export const problemSolvingBlogs: Record<string, BlogPost> = {
       <p>For a detailed breakdown, read our <a href="/resources/blogs/cleanroom-construction-cost-india">cleanroom construction cost in India</a> guide.</p>
 
       <h2>Conclusion</h2>
-      <p>Building a cleanroom in India requires specialised knowledge, quality materials, and meticulous attention to detail. From panel selection to HVAC design to GMP validation, every element must work in harmony to achieve the required cleanliness classification.</p>
+      <p>Building a cleanroom in India requires specialised knowledge, quality materials, and close attention to detail. From panel selection to HVAC design to GMP validation, every element must work in harmony to achieve the required cleanliness classification.</p>
       <p>PHOENIXX SmartBuild offers comprehensive <a href="/solutions/cleanroom-solutions">cleanroom solutions</a> including design consultation, cleanroom panels, partition systems, and project management. <a href="/get-a-quote">Contact us</a> for a free consultation tailored to your industry and ISO classification requirements.</p>
     `,
     category: 'How-To Guide',

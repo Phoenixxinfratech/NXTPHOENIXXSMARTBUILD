@@ -5,11 +5,25 @@ import { JsonLd } from '@/components/seo/json-ld';
 import { generateBreadcrumbSchema } from '@/lib/schema';
 import { glossaryTerms } from '@/lib/glossary-data';
 import type { Metadata } from 'next';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Industrial Construction Glossary | PUF Panels, Cleanroom & PEB Terms',
   description: 'Comprehensive glossary of industrial construction terms: PUF panels, PIR panels, sandwich panels, cleanrooms, cold rooms, PEB, GIDC, SEZ, and HVAC explained by PHOENIXX engineers.',
   alternates: { canonical: 'https://phoenixxsmartbuild.com/resources/glossary' },
+  openGraph: {
+    title: 'Industrial Construction Glossary | PUF Panels, Cleanroom & PEB Terms | PHOENIXX SMARTBUILD',
+    description: 'Comprehensive glossary of industrial construction terms: PUF panels, PIR panels, sandwich panels, cleanrooms, cold rooms, PEB, GIDC, SEZ, and HVAC explained by PHOENIXX engineers.',
+    url: 'https://phoenixxsmartbuild.com/resources/glossary',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Industrial Construction Glossary | PUF Panels, Cleanroom & PEB Terms | PHOENIXX SMARTBUILD',
+    description: 'Comprehensive glossary of industrial construction terms: PUF panels, PIR panels, sandwich panels, cleanrooms, cold rooms, PEB, GIDC, SEZ, and HVAC explained by PHOENIXX engineers.',
+  },
 };
 
 export default function GlossaryPage() {
@@ -36,9 +50,11 @@ export default function GlossaryPage() {
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={itemListSchema} />
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <section className="bg-gradient-to-br from-slate-900 to-blue-900 text-white section-padding">
           <div className="container-custom">
+            <Breadcrumbs items={[{ label: 'Resources', href: '/resources' }, { label: 'Glossary' }]} />
+
             <h1 className="text-3xl font-bold md:text-4xl">Industrial Construction Glossary</h1>
             <p className="mt-4 text-lg text-blue-100 max-w-3xl">
               Definitions and technical explanations for key terms in insulated panel construction,

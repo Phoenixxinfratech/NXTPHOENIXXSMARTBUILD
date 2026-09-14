@@ -16,8 +16,8 @@ import {
   generateSpeakableSchema,
   generateQAPageSchema,
   generateImageObjectSchema,
-  generateVideoSchema,
 } from '@/lib/schema';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'PUF Panel vs Rockwool Panel — Which Is Better? Complete Comparison 2026',
@@ -91,7 +91,7 @@ const howToSteps = [
   },
   {
     name: 'Compare Installed Cost',
-    text: 'Get quotes for both panel types at the required R-value — not just the same thickness. Factor in structural savings from PUF\'s lighter weight and thinner profile, or Rockwool\'s insurance premium reductions.',
+    text: 'Get quotes for both panel types at the required R-value, not just the same thickness. Factor in structural savings from PUF\'s lighter weight and thinner profile, or Rockwool\'s insurance premium reductions.',
   },
   {
     name: 'Check Acoustic Requirements',
@@ -148,7 +148,7 @@ export default function PufPanelVsRockwoolPanelPage() {
       description:
         'Unbiased, engineer-authored comparison of PUF and Rockwool insulated sandwich panels across 14 performance parameters including fire rating, thermal conductivity, cost, and applications.',
       url: pageUrl,
-      image: 'https://phoenixxsmartbuild.com/images/comparison/puf-vs-rockwool-panel.jpg',
+      image: 'https://phoenixxsmartbuild.com/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCKWOOL_PANEL1.jpg',
       datePublished: '2025-03-01',
       dateModified: '2026-02-17',
       author: { name: 'PHOENIXX SMARTBUILD Engineering Team', url: 'https://phoenixxsmartbuild.com/about-us' },
@@ -178,7 +178,7 @@ export default function PufPanelVsRockwoolPanelPage() {
       'When should I choose PUF panel vs Rockwool panel?',
       [
         {
-          text: 'Choose PUF panels when thermal insulation efficiency, moisture resistance, lightweight construction, and cost-effectiveness are priorities — ideal for cold storage, warehouses, and general industrial buildings. Choose Rockwool panels when fire safety, acoustic insulation, and high-temperature resistance are critical — essential for chemical plants, electrical rooms, and fire-rated facilities. Many projects benefit from using both: Rockwool in fire-critical zones and PUF for general walls and roofing.',
+          text: 'Choose PUF panels when thermal insulation efficiency, moisture resistance, lightweight construction, and cost-effectiveness are priorities, ideal for cold storage, warehouses, and general industrial buildings. Choose Rockwool panels when fire safety, acoustic insulation, and high-temperature resistance are critical — essential for chemical plants, electrical rooms, and fire-rated facilities. Many projects benefit from using both: Rockwool in fire-critical zones and PUF for general walls and roofing.',
           author: 'PHOENIXX SMARTBUILD Engineering Team',
         },
       ]
@@ -187,18 +187,9 @@ export default function PufPanelVsRockwoolPanelPage() {
       name: 'PUF Panel vs Rockwool Panel Comparison',
       description:
         'Side-by-side visual comparison of PUF and Rockwool sandwich panel cross-sections showing core structure, density, and thickness differences.',
-      contentUrl: '/images/comparison/puf-vs-rockwool-panel.jpg',
+      contentUrl: '/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCKWOOL_PANEL1.jpg',
       width: 1200,
       height: 630,
-    }),
-    generateVideoSchema({
-      name: 'PUF Panel vs Rockwool Panel — Which Should You Choose?',
-      description:
-        'Expert video comparison of PUF and Rockwool insulated panels covering fire safety, thermal performance, moisture resistance, acoustic properties, and cost analysis.',
-      thumbnailUrl: 'https://phoenixxsmartbuild.com/images/video/puf-vs-rockwool-thumbnail.jpg',
-      uploadDate: '2025-06-15',
-      duration: 'PT8M30S',
-      contentUrl: 'https://phoenixxsmartbuild.com/videos/puf-vs-rockwool-comparison.mp4',
     }),
   ];
 
@@ -215,21 +206,7 @@ export default function PufPanelVsRockwoolPanelPage() {
       address: { '@type': 'PostalAddress', addressLocality: 'Ahmedabad', addressRegion: 'Gujarat', addressCountry: 'IN' },
     },
     url: 'https://phoenixxsmartbuild.com/puf-panel-vs-rockwool-panel',
-    image: 'https://phoenixxsmartbuild.com/images/comparison/puf-vs-rockwool-panel.jpg',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      bestRating: '5',
-      worstRating: '1',
-      reviewCount: '267',
-    },
-    review: {
-      '@type': 'Review',
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      author: { '@type': 'Organization', name: 'Verified Industrial Client' },
-      reviewBody:
-        'PHOENIXX helped us select the right combination of PUF and Rockwool panels for our facility. Their unbiased advice saved us cost on general walls while ensuring fire compliance in critical zones.',
-    },
+    image: 'https://phoenixxsmartbuild.com/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCKWOOL_PANEL1.jpg',
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'INR',
@@ -243,7 +220,7 @@ export default function PufPanelVsRockwoolPanelPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {schemas.map((schema, idx) => (
           <JsonLd key={idx} data={schema} />
         ))}
@@ -251,9 +228,11 @@ export default function PufPanelVsRockwoolPanelPage() {
 
         {/* ===== Section 1: Hero ===== */}
         <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20 md:py-28 overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
           <div className="container-custom relative">
+            <Breadcrumbs items={[{ label: 'Products', href: '/products' }, { label: 'PUF Panel vs Rockwool Panel' }]} />
+
             <div className="max-w-4xl">
               <div className="flex flex-wrap gap-3 mb-6">
                 <span className="inline-block rounded-full bg-emerald-500/10 px-4 py-2 text-sm font-medium text-emerald-400">
@@ -297,7 +276,7 @@ export default function PufPanelVsRockwoolPanelPage() {
                 {[
                   { metric: '2 Core Types', label: 'PUF & Rockwool' },
                   { metric: '500+', label: 'Projects Delivered' },
-                  { metric: '4.8/5', label: 'Client Rating' },
+                  { metric: 'ISO 9001', label: 'Certified Quality' },
                   { metric: '14+', label: 'Parameters Compared' },
                 ].map((stat, idx) => (
                   <div key={idx} className="text-center">
@@ -321,7 +300,7 @@ export default function PufPanelVsRockwoolPanelPage() {
                 <p>
                   Every week, project managers, architects, and procurement teams face the same dilemma: should we use{' '}
                   <strong>PUF panels</strong> or <strong>Rockwool panels</strong> for our building envelope? The answer
-                  is rarely straightforward because both panel types have genuine strengths — and choosing the wrong one
+                  is rarely straightforward because both panel types have genuine strengths, and choosing the wrong one
                   can cost you significantly in terms of safety, performance, and budget.
                 </p>
                 <p>
@@ -337,7 +316,7 @@ export default function PufPanelVsRockwoolPanelPage() {
                   your structure, and getting less thermal efficiency per millimeter of thickness.
                 </p>
                 <p>
-                  <strong>PHOENIXX SMARTBUILD manufactures both PUF and Rockwool panels in-house</strong> — which means
+                  <strong>PHOENIXX SMARTBUILD manufactures both PUF and Rockwool panels in-house</strong>, which means
                   we have no incentive to push one over the other. This guide presents an honest, data-backed comparison
                   to help you select the right panel for your specific application.
                 </p>
@@ -627,7 +606,7 @@ export default function PufPanelVsRockwoolPanelPage() {
                   terms — it is about which panel is better <em>for your specific application</em>. PUF delivers
                   unmatched thermal efficiency at 0.024 W/mK, making it the clear winner for cold storage, clean
                   rooms, and general industrial buildings where standard fire ratings suffice. Its closed-cell
-                  structure means zero moisture absorption — a critical advantage in humid climates and refrigerated
+                  structure means zero moisture absorption: a critical advantage in humid climates and refrigerated
                   environments where Rockwool&apos;s open-fibre structure can absorb water and lose insulating
                   capacity over time.
                 </p>
@@ -752,29 +731,31 @@ export default function PufPanelVsRockwoolPanelPage() {
                 <div className="px-6 py-4 bg-blue-700 text-white">
                   <h3 className="font-bold text-lg">PUF Panel Specifications</h3>
                 </div>
-                <table className="w-full text-sm">
-                  <tbody className="divide-y divide-blue-100">
-                    {[
-                      { label: 'Core Material', value: 'Polyurethane Foam (PUF)' },
-                      { label: 'Density', value: '40 ± 2 kg/m³' },
-                      { label: 'Thermal Conductivity', value: '0.024 W/mK @ 25°C' },
-                      { label: 'Fire Class', value: 'B2/B3 (B1 with PIR)' },
-                      { label: 'Thickness Range', value: '30–150mm' },
-                      { label: 'Panel Weight (50mm)', value: '~10 kg/m²' },
-                      { label: 'Water Absorption', value: '< 1%' },
-                      { label: 'NRC Value', value: '0.25–0.35' },
-                      { label: 'Max Temp Resistance', value: '120–150°C' },
-                      { label: 'Steel Options', value: '0.35–0.60mm PPGI/PPGL/SS' },
-                      { label: 'Coatings', value: 'SMP, SDP, PVDF' },
-                      { label: 'Blowing Agent', value: 'CFC/HFC-free (Zero ODP)' },
-                    ].map((row, idx) => (
-                      <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-blue-50/50'}>
-                        <td className="px-4 py-2.5 font-semibold text-slate-900">{row.label}</td>
-                        <td className="px-4 py-2.5 text-slate-600">{row.value}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <tbody className="divide-y divide-blue-100">
+                      {[
+                        { label: 'Core Material', value: 'Polyurethane Foam (PUF)' },
+                        { label: 'Density', value: '40 ± 2 kg/m³' },
+                        { label: 'Thermal Conductivity', value: '0.024 W/mK @ 25°C' },
+                        { label: 'Fire Class', value: 'B2/B3 (B1 with PIR)' },
+                        { label: 'Thickness Range', value: '30–150mm' },
+                        { label: 'Panel Weight (50mm)', value: '~10 kg/m²' },
+                        { label: 'Water Absorption', value: '< 1%' },
+                        { label: 'NRC Value', value: '0.25–0.35' },
+                        { label: 'Max Temp Resistance', value: '120–150°C' },
+                        { label: 'Steel Options', value: '0.35–0.60mm PPGI/PPGL/SS' },
+                        { label: 'Coatings', value: 'SMP, SDP, PVDF' },
+                        { label: 'Blowing Agent', value: 'CFC/HFC-free (Zero ODP)' },
+                      ].map((row, idx) => (
+                        <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-blue-50/50'}>
+                          <td className="px-4 py-2.5 font-semibold text-slate-900">{row.label}</td>
+                          <td className="px-4 py-2.5 text-slate-600">{row.value}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
                 <div className="p-4 text-center">
                   <Link
                     href="/products/sandwich-panels/sandwich-puf-panel"
@@ -790,29 +771,31 @@ export default function PufPanelVsRockwoolPanelPage() {
                 <div className="px-6 py-4 bg-orange-700 text-white">
                   <h3 className="font-bold text-lg">Rockwool Panel Specifications</h3>
                 </div>
-                <table className="w-full text-sm">
-                  <tbody className="divide-y divide-orange-100">
-                    {[
-                      { label: 'Core Material', value: 'Mineral Wool (Basalt Rock)' },
-                      { label: 'Density', value: '100–150 kg/m³' },
-                      { label: 'Thermal Conductivity', value: '0.035–0.040 W/mK' },
-                      { label: 'Fire Class', value: 'A1/A2 (Non-combustible)' },
-                      { label: 'Thickness Range', value: '50–150mm' },
-                      { label: 'Panel Weight (50mm)', value: '~18–20 kg/m²' },
-                      { label: 'Water Absorption', value: '1–5%' },
-                      { label: 'NRC Value', value: '0.90–0.95' },
-                      { label: 'Max Temp Resistance', value: 'Up to 1000°C' },
-                      { label: 'Steel Options', value: '0.40–0.60mm PPGI/PPGL/SS' },
-                      { label: 'Coatings', value: 'SMP, SDP, PVDF' },
-                      { label: 'Core Material Origin', value: 'Natural Basalt Rock Fibre' },
-                    ].map((row, idx) => (
-                      <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-orange-50/50'}>
-                        <td className="px-4 py-2.5 font-semibold text-slate-900">{row.label}</td>
-                        <td className="px-4 py-2.5 text-slate-600">{row.value}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <tbody className="divide-y divide-orange-100">
+                      {[
+                        { label: 'Core Material', value: 'Mineral Wool (Basalt Rock)' },
+                        { label: 'Density', value: '100–150 kg/m³' },
+                        { label: 'Thermal Conductivity', value: '0.035–0.040 W/mK' },
+                        { label: 'Fire Class', value: 'A1/A2 (Non-combustible)' },
+                        { label: 'Thickness Range', value: '50–150mm' },
+                        { label: 'Panel Weight (50mm)', value: '~18–20 kg/m²' },
+                        { label: 'Water Absorption', value: '1–5%' },
+                        { label: 'NRC Value', value: '0.90–0.95' },
+                        { label: 'Max Temp Resistance', value: 'Up to 1000°C' },
+                        { label: 'Steel Options', value: '0.40–0.60mm PPGI/PPGL/SS' },
+                        { label: 'Coatings', value: 'SMP, SDP, PVDF' },
+                        { label: 'Core Material Origin', value: 'Natural Basalt Rock Fibre' },
+                      ].map((row, idx) => (
+                        <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-orange-50/50'}>
+                          <td className="px-4 py-2.5 font-semibold text-slate-900">{row.label}</td>
+                          <td className="px-4 py-2.5 text-slate-600">{row.value}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
                 <div className="p-4 text-center">
                   <Link
                     href="/products/sandwich-panels/rockwool-panel"

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Insulated PUF Panel Manufacturer in India',
@@ -10,6 +11,19 @@ export const metadata: Metadata = {
   keywords: ['insulated PUF panel manufacturer in India', 'thermal insulation panels', 'insulated sandwich panels'],
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/insulated-puf-panel-manufacturer-in-india',
+  },
+  openGraph: {
+    title: 'Insulated PUF Panel Manufacturer in India | PHOENIXX SMARTBUILD',
+    description: 'Quality insulated PUF panels for thermal efficiency. Wall, roof, and cold storage panels. ISO certified manufacturer.',
+    url: 'https://phoenixxsmartbuild.com/insulated-puf-panel-manufacturer-in-india',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Insulated PUF Panel Manufacturer in India | PHOENIXX SMARTBUILD',
+    description: 'Quality insulated PUF panels for thermal efficiency. Wall, roof, and cold storage panels. ISO certified manufacturer.',
   },
 };
 
@@ -57,13 +71,15 @@ export default function InsulatedPufPanelManufacturerPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={faqSchema} />
 
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-cyan-900 via-blue-900 to-slate-900 py-20 md:py-28">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
+            <Breadcrumbs withSchema items={[{ label: 'Products', href: '/products' }, { label: 'Insulated PUF Panel Manufacturer in India' }]} />
+
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-cyan-500/10 px-4 py-2 text-sm font-medium text-cyan-400 mb-6">
                 🌡️ Superior Thermal Insulation
@@ -128,42 +144,44 @@ export default function InsulatedPufPanelManufacturerPage() {
             </h2>
             <div className="max-w-4xl mx-auto">
               <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
-                <table className="w-full">
-                  <thead className="bg-slate-100">
-                    <tr>
-                      <th className="px-6 py-4 text-left font-semibold text-slate-900">Material</th>
-                      <th className="px-6 py-4 text-left font-semibold text-slate-900">Thermal Conductivity</th>
-                      <th className="px-6 py-4 text-left font-semibold text-slate-900">Thickness for R-20</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-100">
-                    <tr className="bg-cyan-50">
-                      <td className="px-6 py-4 font-semibold text-cyan-700">PUF Foam (PHOENIXX)</td>
-                      <td className="px-6 py-4 text-cyan-700">0.024 W/mK</td>
-                      <td className="px-6 py-4 text-cyan-700">80mm</td>
-                    </tr>
-                    <tr>
-                      <td className="px-6 py-4">PIR Foam</td>
-                      <td className="px-6 py-4 text-slate-600">0.022 W/mK</td>
-                      <td className="px-6 py-4 text-slate-600">75mm</td>
-                    </tr>
-                    <tr>
-                      <td className="px-6 py-4">Mineral Wool</td>
-                      <td className="px-6 py-4 text-slate-600">0.035-0.040 W/mK</td>
-                      <td className="px-6 py-4 text-slate-600">130mm</td>
-                    </tr>
-                    <tr>
-                      <td className="px-6 py-4">Fiberglass</td>
-                      <td className="px-6 py-4 text-slate-600">0.040-0.045 W/mK</td>
-                      <td className="px-6 py-4 text-slate-600">150mm</td>
-                    </tr>
-                    <tr>
-                      <td className="px-6 py-4">EPS (Thermocol)</td>
-                      <td className="px-6 py-4 text-slate-600">0.035-0.038 W/mK</td>
-                      <td className="px-6 py-4 text-slate-600">125mm</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead className="bg-slate-100">
+                      <tr>
+                        <th className="px-6 py-4 text-left font-semibold text-slate-900">Material</th>
+                        <th className="px-6 py-4 text-left font-semibold text-slate-900">Thermal Conductivity</th>
+                        <th className="px-6 py-4 text-left font-semibold text-slate-900">Thickness for R-20</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-100">
+                      <tr className="bg-cyan-50">
+                        <td className="px-6 py-4 font-semibold text-cyan-700">PUF Foam (PHOENIXX)</td>
+                        <td className="px-6 py-4 text-cyan-700">0.024 W/mK</td>
+                        <td className="px-6 py-4 text-cyan-700">80mm</td>
+                      </tr>
+                      <tr>
+                        <td className="px-6 py-4">PIR Foam</td>
+                        <td className="px-6 py-4 text-slate-600">0.022 W/mK</td>
+                        <td className="px-6 py-4 text-slate-600">75mm</td>
+                      </tr>
+                      <tr>
+                        <td className="px-6 py-4">Mineral Wool</td>
+                        <td className="px-6 py-4 text-slate-600">0.035-0.040 W/mK</td>
+                        <td className="px-6 py-4 text-slate-600">130mm</td>
+                      </tr>
+                      <tr>
+                        <td className="px-6 py-4">Fiberglass</td>
+                        <td className="px-6 py-4 text-slate-600">0.040-0.045 W/mK</td>
+                        <td className="px-6 py-4 text-slate-600">150mm</td>
+                      </tr>
+                      <tr>
+                        <td className="px-6 py-4">EPS (Thermocol)</td>
+                        <td className="px-6 py-4 text-slate-600">0.035-0.038 W/mK</td>
+                        <td className="px-6 py-4 text-slate-600">125mm</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>

@@ -16,8 +16,8 @@ import {
   generateSpeakableSchema,
   generateQAPageSchema,
   generateImageObjectSchema,
-  generateVideoSchema,
 } from '@/lib/schema';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'What Density PUF Panel Is Best for Insulation? | Expert Guide 2026',
@@ -112,7 +112,7 @@ export default function BestDensityPufPanelForInsulationPage() {
       title: 'What Density PUF Panel Is Best for Insulation? — Expert Guide 2026',
       description: 'Comprehensive technical guide on PUF panel density for insulation. Learn why 40 kg/m³ is optimal, how to verify density, and the science behind closed-cell foam performance.',
       url: '/best-density-puf-panel-for-insulation',
-      image: '/images/guides/og/puf-panel-density-insulation-guide.jpg',
+      image: '/og-image.png',
       datePublished: '2025-03-10',
       dateModified: '2026-02-17',
       author: { name: 'PHOENIXX SMARTBUILD Technical Team', url: 'https://phoenixxsmartbuild.com/about-us' },
@@ -139,17 +139,9 @@ export default function BestDensityPufPanelForInsulationPage() {
     generateImageObjectSchema({
       name: 'PUF Panel Density Cross-Section Analysis',
       description: 'Cross-section view of a 40 kg/m³ PUF panel showing closed-cell structure under magnification at PHOENIXX SMARTBUILD quality laboratory in Ahmedabad.',
-      contentUrl: '/images/guides/density/puf-panel-density-cross-section.jpg',
+      contentUrl: '/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL9.jpg',
       width: 1200,
       height: 630,
-    }),
-    generateVideoSchema({
-      name: 'PUF Panel Density Testing — How to Verify 40 kg/m³',
-      description: 'Watch how PHOENIXX SMARTBUILD tests PUF panel density per IS 3346 standards. Learn how to verify density on-site and interpret density test certificates.',
-      thumbnailUrl: 'https://phoenixxsmartbuild.com/images/video/density-testing-thumbnail.jpg',
-      uploadDate: '2025-08-15',
-      duration: 'PT4M20S',
-      contentUrl: 'https://phoenixxsmartbuild.com/videos/puf-panel-density-testing.mp4',
     }),
     {
       '@context': 'https://schema.org',
@@ -159,20 +151,7 @@ export default function BestDensityPufPanelForInsulationPage() {
       brand: { '@type': 'Brand', name: 'PHOENIXX SMARTBUILD' },
       manufacturer: { '@type': 'Organization', name: 'PHOENIXX SMARTBUILD' },
       url: 'https://phoenixxsmartbuild.com/best-density-puf-panel-for-insulation',
-      image: 'https://phoenixxsmartbuild.com/images/products/puf-panel-density-40kg.jpg',
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.8',
-        bestRating: '5',
-        worstRating: '1',
-        reviewCount: '189',
-      },
-      review: {
-        '@type': 'Review',
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        author: { '@type': 'Organization', name: 'Verified Industrial Client' },
-        reviewBody: 'PHOENIXX panels consistently delivered 40 kg/m³ density across our entire cold storage project. Thermal performance matched specifications perfectly — no hot spots or condensation issues even after 18 months.',
-      },
+      image: 'https://phoenixxsmartbuild.com/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL3.jpg',
       offers: {
         '@type': 'AggregateOffer',
         priceCurrency: 'INR',
@@ -187,15 +166,17 @@ export default function BestDensityPufPanelForInsulationPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {schemas.map((schema, i) => (
           <JsonLd key={i} data={schema} />
         ))}
 
         {/* ===== Section 1: Hero — Insulation Science Experts ===== */}
         <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20 md:py-28">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
+            <Breadcrumbs items={[{ label: 'Products', href: '/products' }, { label: 'Best Density PUF Panel for Insulation' }]} />
+
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-emerald-500/10 px-4 py-2 text-sm font-medium text-emerald-400 mb-6">
                 Insulation Science Experts | 40 kg/m³ Guaranteed | ISO Certified
@@ -253,7 +234,7 @@ export default function BestDensityPufPanelForInsulationPage() {
               </h2>
               <div className="prose prose-lg prose-slate max-w-none">
                 <p>
-                  PUF panel density is the single most important — and most frequently manipulated — quality parameter
+                  PUF panel density is the single most important, and most frequently manipulated — quality parameter
                   in insulated sandwich panels. Unlike visible defects such as dents or discoloration, <strong>density
                   is invisible to the naked eye</strong>. A panel manufactured at 32 kg/m³ looks identical to one at
                   40 kg/m³. The difference only becomes apparent months later when energy bills spike, condensation
@@ -313,7 +294,7 @@ export default function BestDensityPufPanelForInsulationPage() {
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="mt-1 text-emerald-500">&#x2713;</span>
-                      <span>Zero water absorption — no condensation, no corrosion risk</span>
+                      <span>Zero water absorption: no condensation, no corrosion risk</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="mt-1 text-emerald-500">&#x2713;</span>
@@ -402,7 +383,7 @@ export default function BestDensityPufPanelForInsulationPage() {
                   {
                     icon: '🏋️',
                     title: 'Compressive Strength',
-                    description: 'Compressive strength at 40 kg/m³ exceeds 200 kPa — sufficient for roof panels spanning 5-6 metres. At 32 kg/m³, compressive strength drops below 130 kPa, causing panel sag under self-weight on longer spans.',
+                    description: 'Compressive strength at 40 kg/m³ exceeds 200 kPa, sufficient for roof panels spanning 5-6 metres. At 32 kg/m³, compressive strength drops below 130 kPa, causing panel sag under self-weight on longer spans.',
                   },
                   {
                     icon: '⏱️',
@@ -439,14 +420,14 @@ export default function BestDensityPufPanelForInsulationPage() {
               </p>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
                 {[
-                  { icon: '🌡️', title: 'Superior Thermal Insulation', description: 'Thermal conductivity of 0.024 W/mK — the lowest achievable with PUF. Reduces HVAC energy consumption by 30-40% compared to uninsulated or poorly insulated structures.' },
+                  { icon: '🌡️', title: 'Superior Thermal Insulation', description: 'Thermal conductivity of 0.024 W/mK: the lowest achievable with PUF. Reduces HVAC energy consumption by 30-40% compared to uninsulated or poorly insulated structures.' },
                   { icon: '📅', title: '25-30 Year Lifespan', description: 'Closed-cell foam retains 92-95% of initial R-value over 25 years. No need for re-cladding or insulation upgrades during the building\'s primary service life.' },
                   { icon: '💧', title: 'Zero Moisture Absorption', description: 'Less than 2% water absorption ensures no condensation damage, no mould growth, and no internal steel corrosion — even in humid coastal environments.' },
                   { icon: '🏗️', title: 'Structural Integrity', description: 'Compressive strength >200 kPa supports roof spans, foot traffic during maintenance, and equipment loads without panel deformation or sagging.' },
                   { icon: '💰', title: 'Lower Lifetime Cost', description: 'While premium 40 kg/m³ panels cost 10-15% more upfront, they save 3-5x that difference through reduced energy bills and eliminated replacement costs over 25 years.' },
                   { icon: '🌿', title: 'Environmental Performance', description: 'PHOENIXX 40 kg/m³ panels are CFC/HFC-free with zero ODP. Reduced energy consumption means lower carbon emissions throughout the building\'s lifecycle.' },
                   { icon: '🛡️', title: 'Standards Compliance', description: 'Meets IS 14925, IS 3346, ISO 845, and EN 13165 requirements. Essential for statutory approvals, insurance compliance, and FM-rated facilities.' },
-                  { icon: '📊', title: 'Predictable Performance', description: 'Consistent density means predictable thermal calculations. Architects and MEP engineers can design HVAC systems with confidence — no safety margins needed for quality uncertainty.' },
+                  { icon: '📊', title: 'Predictable Performance', description: 'Consistent density means predictable thermal calculations. Architects and MEP engineers can design HVAC systems with confidence: no safety margins needed for quality uncertainty.' },
                 ].map((item, idx) => (
                   <div key={idx} className="text-center bg-slate-50 rounded-2xl p-6 hover:shadow-md transition-shadow">
                     <span className="text-3xl">{item.icon}</span>
@@ -467,7 +448,7 @@ export default function BestDensityPufPanelForInsulationPage() {
             </h2>
             <p className="text-lg text-slate-600 text-center max-w-3xl mx-auto mb-12">
               These projects demanded verified <strong>40 kg/m³ PUF panel density</strong> for thermal performance
-              guarantees. PHOENIXX delivered — with density certificates for every batch.
+              guarantees. PHOENIXX delivered, with density certificates for every batch.
             </p>
             <div className="grid md:grid-cols-2 gap-8">
               {[
@@ -680,32 +661,34 @@ export default function BestDensityPufPanelForInsulationPage() {
               </div>
 
               <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
-                <table className="w-full">
-                  <thead>
-                    <tr className="bg-emerald-700 text-white">
-                      <th className="px-6 py-4 text-left font-semibold">PHOENIXX Panel Type</th>
-                      <th className="px-6 py-4 text-left font-semibold">Density</th>
-                      <th className="px-6 py-4 text-left font-semibold">Price Range (per sq.m)</th>
-                      <th className="px-6 py-4 text-left font-semibold">Application</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-200">
-                    {[
-                      { type: 'PUF Wall Panel 30-50mm', density: '40 ± 2 kg/m³', range: '₹800 – ₹1,200', app: 'Standard wall insulation' },
-                      { type: 'PUF Wall Panel 60-100mm', density: '40 ± 2 kg/m³', range: '₹1,200 – ₹1,800', app: 'Enhanced thermal, industrial' },
-                      { type: 'PUF Cold Storage 100-150mm', density: '40 ± 2 kg/m³', range: '₹1,800 – ₹2,500', app: 'Cold storage, freezer rooms' },
-                      { type: 'PUF Roofing Panel', density: '40 ± 2 kg/m³', range: '₹900 – ₹1,500', app: 'Industrial roofing' },
-                      { type: 'PIR / FM Approved Panel', density: '40 ± 2 kg/m³', range: '₹1,400 – ₹2,500', app: 'Fire-rated applications' },
-                    ].map((row, idx) => (
-                      <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
-                        <td className="px-6 py-4 font-medium text-slate-900">{row.type}</td>
-                        <td className="px-6 py-4 text-emerald-700 font-semibold">{row.density}</td>
-                        <td className="px-6 py-4 font-semibold text-emerald-700">{row.range}</td>
-                        <td className="px-6 py-4 text-slate-600">{row.app}</td>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="bg-emerald-700 text-white">
+                        <th className="px-6 py-4 text-left font-semibold">PHOENIXX Panel Type</th>
+                        <th className="px-6 py-4 text-left font-semibold">Density</th>
+                        <th className="px-6 py-4 text-left font-semibold">Price Range (per sq.m)</th>
+                        <th className="px-6 py-4 text-left font-semibold">Application</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody className="divide-y divide-slate-200">
+                      {[
+                        { type: 'PUF Wall Panel 30-50mm', density: '40 ± 2 kg/m³', range: '₹800 – ₹1,200', app: 'Standard wall insulation' },
+                        { type: 'PUF Wall Panel 60-100mm', density: '40 ± 2 kg/m³', range: '₹1,200 – ₹1,800', app: 'Enhanced thermal, industrial' },
+                        { type: 'PUF Cold Storage 100-150mm', density: '40 ± 2 kg/m³', range: '₹1,800 – ₹2,500', app: 'Cold storage, freezer rooms' },
+                        { type: 'PUF Roofing Panel', density: '40 ± 2 kg/m³', range: '₹900 – ₹1,500', app: 'Industrial roofing' },
+                        { type: 'PIR / FM Approved Panel', density: '40 ± 2 kg/m³', range: '₹1,400 – ₹2,500', app: 'Fire-rated applications' },
+                      ].map((row, idx) => (
+                        <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
+                          <td className="px-6 py-4 font-medium text-slate-900">{row.type}</td>
+                          <td className="px-6 py-4 text-emerald-700 font-semibold">{row.density}</td>
+                          <td className="px-6 py-4 font-semibold text-emerald-700">{row.range}</td>
+                          <td className="px-6 py-4 text-slate-600">{row.app}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
               <p className="mt-6 text-sm text-slate-500 text-center">
                 All PHOENIXX panels are manufactured at guaranteed 40 ± 2 kg/m³ density. Prices vary by thickness,
@@ -787,8 +770,7 @@ export default function BestDensityPufPanelForInsulationPage() {
               Insist on 40 kg/m³ — Insist on PHOENIXX SMARTBUILD
             </h2>
             <p className="text-xl text-emerald-100 mb-4 max-w-2xl mx-auto">
-              Every PHOENIXX PUF panel ships with a density certificate. No guesswork, no hidden shortcuts —
-              just verified 40 ± 2 kg/m³ density that delivers the insulation performance your project demands.
+              Every PHOENIXX PUF panel ships with a density certificate. No guesswork, no hidden shortcuts: just verified 40 ± 2 kg/m³ density that delivers the insulation performance your project demands.
             </p>
             <div className="flex flex-wrap justify-center gap-6 mt-6 mb-10 text-sm text-emerald-200">
               <span>40 kg/m³ Guaranteed</span>

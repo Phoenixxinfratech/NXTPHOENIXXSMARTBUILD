@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://phoenixxsmartbuild.com/images/products/sandwich-panels/puf-panel/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
+        url: 'https://phoenixxsmartbuild.com/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
         width: 1200,
         height: 630,
         alt: 'PUF Panel Manufacturer in Ahmedabad - PHOENIXX SMARTBUILD',

@@ -4,9 +4,10 @@ import Image from 'next/image';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'PUF Roofing Panels for Industrial Roofing | Phoenixx',
+  title: 'PUF Roofing Panels for Industrial Roofing',
   description:
     'Premium PUF roofing panels for factories, warehouses & cold storage. Phoenixx Smart Build supplies insulated sandwich roof panels across Rajasthan from Beawar.',
   keywords: [
@@ -64,19 +65,12 @@ export default function PufRoofingPanelsPage() {
     },
     category: 'Industrial Insulated Roofing Panels',
     material: 'Polyurethane Foam',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '142',
-      bestRating: '5',
-      worstRating: '1',
-    },
   };
 
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={localBusinessSchema} />
         <JsonLd data={productSchema} />
 
@@ -84,6 +78,8 @@ export default function PufRoofingPanelsPage() {
         <section className="relative bg-gradient-to-br from-slate-900 via-gray-900 to-blue-900 py-20 md:py-28">
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
+            <Breadcrumbs withSchema items={[{ label: 'Products', href: '/products' }, { label: 'PUF Roofing Panels' }]} />
+
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-green-500/20 px-4 py-2 text-sm font-medium text-green-400 mb-6">
                 Phoenixx Smart Build — Beawar, Rajasthan
@@ -99,7 +95,7 @@ export default function PufRoofingPanelsPage() {
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link
                   href="/get-a-quote"
-                  className="rounded-xl bg-gradient-to-r from-green-500 to-emerald-600 px-8 py-4 font-semibold text-white shadow-lg hover:shadow-xl transition-all"
+                  className="rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 px-8 py-4 font-semibold text-white shadow-lg hover:shadow-xl transition-all"
                 >
                   Get a Free Quote
                 </Link>
@@ -313,7 +309,7 @@ export default function PufRoofingPanelsPage() {
                   Energy Efficiency
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  By reducing heat transfer through the roof — the largest heat-gain surface
+                  By reducing heat transfer through the roof: the largest heat-gain surface
                   in any industrial building — PUF panels cut HVAC operating costs by
                   25–30%. In Rajasthan&apos;s 8-month summer, this translates to substantial
                   electricity savings. Most industrial projects achieve insulation ROI
@@ -345,7 +341,7 @@ export default function PufRoofingPanelsPage() {
                 return (
                   <Link
                     key={slug}
-                    href={`/puf-roofing-panel-${slug}/`}
+                    href={`/puf-roofing-panel-${slug}`}
                     className="bg-white rounded-xl p-4 text-center hover:bg-blue-50 hover:shadow-md transition-all border border-slate-200"
                   >
                     <span className="font-bold text-slate-900">{city}</span>

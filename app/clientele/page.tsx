@@ -5,6 +5,7 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { AISummaryBlock } from '@/components/ai/ai-summary-block';
 import { JsonLd } from '@/components/seo/json-ld';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Our Clients – Trusted by Industry Leaders',
@@ -12,6 +13,19 @@ export const metadata: Metadata = {
     'PHOENIXX serves 500+ clients: Coca-Cola, Amul, Torrent Pharma, Cargill, and more. See our client portfolio.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/clientele',
+  },
+  openGraph: {
+    title: 'Our Clients – Trusted by Industry Leaders | PHOENIXX SMARTBUILD',
+    description: 'PHOENIXX serves 500+ clients: Coca-Cola, Amul, Torrent Pharma, Cargill, and more. See our client portfolio.',
+    url: 'https://phoenixxsmartbuild.com/clientele',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Our Clients – Trusted by Industry Leaders | PHOENIXX SMARTBUILD',
+    description: 'PHOENIXX serves 500+ clients: Coca-Cola, Amul, Torrent Pharma, Cargill, and more. See our client portfolio.',
   },
 };
 
@@ -92,7 +106,7 @@ const clientsByIndustry = [
     gradient: 'from-slate-500 to-zinc-600',
     showLogos: true,
     clients: [
-      { name: 'Uflex Ltd.', logo: '/images/clients/Uflex.png' },
+      { name: 'Uflex Ltd.', logo: '/images/clients/uflex.png' },
       { name: 'PGP Glass', logo: '/images/clients/pgp-glass.png' },
       { name: 'IFGL Refractories', logo: '/images/clients/ifgl.png' },
       { name: 'Jaquar Sanitaryware', logo: '/images/clients/jaquar.png' },
@@ -159,7 +173,7 @@ const featuredClients = [
   { name: 'Ford Motors', logo: '/images/clients/ford.png' },
   { name: 'SKF Bearings', logo: '/images/clients/skf.png' },
   { name: 'L&T', logo: '/images/clients/lnt.png' },
-  { name: 'Uflex', logo: '/images/clients/Uflex.png' },
+  { name: 'Uflex', logo: '/images/clients/uflex.png' },
   { name: 'Hershey', logo: '/images/clients/hershey.webp' },
   { name: 'NDDB', logo: '/images/clients/nddb.jpg' },
   { name: 'Balaji Wafers', logo: '/images/clients/balaji-wafers.png' },
@@ -201,11 +215,11 @@ export default function ClientelePage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={breadcrumbSchema} />
 
         <AISummaryBlock
-          summary="PHOENIXX is trusted by 300+ clients across industries including Coca-Cola, Amul, Torrent Pharmaceuticals, Ford Motors, Intas Pharmaceuticals, Mother Dairy, Uflex, SKF Bearings, and many more. We serve Food & Beverages, Dairy Processing, Pharmaceuticals, Automobile, Industrial Manufacturing, and Cold Storage sectors."
+          summary="PHOENIXX is trusted by 500+ clients across industries including Coca-Cola, Amul, Torrent Pharmaceuticals, Ford Motors, Intas Pharmaceuticals, Mother Dairy, Uflex, SKF Bearings, and many more. We serve Food & Beverages, Dairy Processing, Pharmaceuticals, Automobile, Industrial Manufacturing, and Cold Storage sectors."
           keywords={['clients', 'Coca-Cola', 'Amul', 'Torrent Pharmaceuticals', 'Ford Motors', 'cold storage']}
         />
 
@@ -213,11 +227,7 @@ export default function ClientelePage() {
         <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-16 md:py-24">
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
-            <nav className="mb-4 text-sm text-slate-400">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">Clientele</span>
-            </nav>
+            <Breadcrumbs className="mb-4" items={[{ label: 'Clientele' }]} />
             <h1 className="text-4xl md:text-5xl font-bold text-white">Our Clientele</h1>
             <p className="mt-4 max-w-2xl text-lg text-slate-300">
               Trusted by industry leaders across sectors. Our success is 
@@ -336,7 +346,7 @@ export default function ClientelePage() {
                         ))}
                         {/* And many more */}
                         <div className="flex flex-col items-center justify-center gap-2 p-4 rounded-xl border-2 border-dashed border-slate-300 bg-slate-50/50">
-                          <span className="text-3xl text-slate-400">+</span>
+                          <span className="text-3xl text-slate-500">+</span>
                           <span className="text-xs font-medium text-slate-500 text-center">
                             And many more...
                           </span>

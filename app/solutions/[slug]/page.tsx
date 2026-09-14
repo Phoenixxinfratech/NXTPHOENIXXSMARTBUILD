@@ -9,6 +9,8 @@ import { AISummaryBlock } from '@/components/ai/ai-summary-block';
 import { RelatedResources } from '@/components/blocks/related-resources';
 import { getRelatedLinksForSolution } from '@/lib/internal-links';
 import { AeoContentBlocks, DEFAULT_PUF_SPECS } from '@/components/seo/aeo-content-blocks';
+import { buildSocialMetadata } from '@/lib/seo';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 // Solution images mapping
 const solutionImages: Record<string, string[]> = {
@@ -33,28 +35,28 @@ const solutionImages: Record<string, string[]> = {
     '/images/solutions/cold-storage/Cold-Storage-Warehouse-manufacture-17.jpg',
   ],
   'walkable-ceiling-systems': [
-    '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-2.jpg',
+    '/images/products/sandwich-panels/wall-ceiling-panel/Industrial-False-Ceiling-PUF-Panel-2.jpg',
     '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-3.jpg',
-    '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-4.jpg',
+    '/images/projects/gallery/Industrial-False-Ceiling-PUF-Panel-4.jpg',
     '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-5.jpg',
     '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-6.jpg',
-    '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-7.jpg',
+    '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-5.jpg',
     '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-8.jpg',
     '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-10.jpg',
   ],
   'non-walkable-ceiling-systems': [
-    '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-2.jpg',
+    '/images/products/sandwich-panels/wall-ceiling-panel/Industrial-False-Ceiling-PUF-Panel-2.jpg',
     '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-3.jpg',
     '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-5.jpg',
     '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-6.jpg',
   ],
   'partition-solutions': [
-    '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat1.jpg',
-    '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat2.jpg',
-    '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat3.jpg',
-    '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat4.jpg',
-    '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat5.jpg',
-    '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat6.jpg',
+    '/images/products/cleanroom/partition/Cleanroom-Partition-supplier-Manufacture-in-Gujarat1.jpg',
+    '/images/products/cleanroom/partition/Cleanroom-Partition-supplier-Manufacture-in-Gujarat2.jpg',
+    '/images/products/cleanroom/partition/Cleanroom-Partition-supplier-Manufacture-in-Gujarat3.jpg',
+    '/images/products/cleanroom/partition/Cleanroom-Partition-supplier-Manufacture-in-Gujarat4.jpg',
+    '/images/products/cleanroom/partition/Cleanroom-Partition-supplier-Manufacture-in-Gujarat5.jpg',
+    '/images/products/cleanroom/partition/Cleanroom-Partition-supplier-Manufacture-in-Gujarat6.jpg',
   ],
   'prefab-house': [
     '/images/solutions/prefab-house/phoenixx-pre-fab-house-1.jpg',
@@ -68,9 +70,9 @@ const solutionImages: Record<string, string[]> = {
     '/images/solutions/cleanroom/cleanroom-Manufacture-Supplier-in-Ahmedabad5.jpg',
     '/images/solutions/cleanroom/cleanroom-Manufacture-Supplier-in-Ahmedabad6.jpg',
     '/images/solutions/cleanroom/cleanroom-Manufacture-Supplier-in-Ahmedabad7.jpg',
-    '/images/solutions/cleanroom/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects26.jpg',
-    '/images/solutions/cleanroom/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects74.jpg',
-    '/images/solutions/cleanroom/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects75.jpg',
+    '/images/products/cleanroom/ceiling/Pharma-cleanroom-panel-manufacturers-Phoenixx-infratech-projects26.jpg',
+    '/images/projects/gallery/Pharma-cleanroom-panel-manufacturers-Phoenixx-infratech-projects74.jpg',
+    '/images/solutions/cleanroom/cleanroom-Manufacture-Supplier-in-Ahmedabad7.jpg',
   ],
 };
 
@@ -90,7 +92,7 @@ const solutionsData: Record<string, {
   process: { step: number; title: string; description: string }[];
   applications: { question: string; answer: string }[];
   industries: string[];
-  testimonial: { quote: string; author: string; company: string; rating: number; reviews: number };
+  testimonial: { quote: string; author: string; company: string };
   faqs: { question: string; answer: string }[];
 }> = {
   'peb': {
@@ -141,8 +143,6 @@ const solutionsData: Record<string, {
       quote: 'PHOENIXX delivered our 25,000 sq.ft warehouse in just 12 weeks from design to handover. The quality and professionalism were outstanding. Already planning our next expansion with them.',
       author: 'Operations Director',
       company: 'Logistics Company, Gujarat',
-      rating: 4.9,
-      reviews: 35,
     },
     faqs: [
       { question: 'What is the lifespan of a PEB building?', answer: 'Well-designed and maintained PEB buildings last 25-50 years. Galvanized or painted steel with proper maintenance (periodic repainting every 5-7 years) ensures long service life.' },
@@ -205,8 +205,6 @@ const solutionsData: Record<string, {
       quote: 'PHOENIXX built our 5000 MT frozen food facility with excellent attention to detail. Energy costs are 25% lower than our older facility. The temperature uniformity is exceptional.',
       author: 'CEO',
       company: 'Frozen Food Company, Gujarat',
-      rating: 4.9,
-      reviews: 28,
     },
     faqs: [
       { question: 'How long does cold storage construction take?', answer: 'Small cold rooms (100-500 sq.ft): 4-6 weeks. Medium facilities (500-5000 sq.ft): 8-12 weeks. Large cold storage (5000+ sq.ft): 12-20 weeks. Timelines include design, civil, panels, and MEP.' },
@@ -267,8 +265,6 @@ const solutionsData: Record<string, {
       quote: 'The walkable ceiling system from PHOENIXX made our HVAC maintenance so much easier. Filter changes that took 4 hours now take 45 minutes. Excellent investment.',
       author: 'Maintenance Manager',
       company: 'Pharmaceutical Company, Gujarat',
-      rating: 4.8,
-      reviews: 22,
     },
     faqs: [
       { question: 'What load can walkable ceilings support?', answer: 'Our walkable ceilings support distributed loads up to 200 kg/m² and point loads of 100 kg on any tile. This accommodates maintenance personnel with tools and equipment.' },
@@ -322,8 +318,6 @@ const solutionsData: Record<string, {
       quote: 'The non-walkable ceiling system was perfect for our office renovation. Clean finish, good acoustics, and completed in just 2 weeks. Great value for money.',
       author: 'Facility Manager',
       company: 'IT Company, Ahmedabad',
-      rating: 4.7,
-      reviews: 18,
     },
     faqs: [
       { question: 'What is the load capacity?', answer: 'Non-walkable ceilings are not designed for personnel access. They support their own weight plus integrated services (lights, diffusers) typically under 20 kg/m².' },
@@ -378,8 +372,6 @@ const solutionsData: Record<string, {
       quote: 'We reconfigured our entire production floor using PHOENIXX partitions over a weekend. Zero downtime and excellent finish quality. Already planning our R&D expansion with same system.',
       author: 'Plant Head',
       company: 'Electronics Manufacturer, Gujarat',
-      rating: 4.7,
-      reviews: 18,
     },
     faqs: [
       { question: 'How long does partition installation take?', answer: 'Installation rates: 100-200 sq.ft/day depending on complexity. A 5000 sq.ft office partition project typically takes 2-3 weeks including doors and electrical integration.' },
@@ -407,7 +399,7 @@ const solutionsData: Record<string, {
       { value: '25+', label: 'Year Lifespan' },
     ],
     benefits: [
-      { icon: '⚡', title: 'Assembly in Days', description: 'Pre-fabricated components enable rapid on-site assembly—typically 3-7 days for standard units.' },
+      { icon: '⚡', title: 'Assembly in Days', description: 'Pre-fabricated components enable rapid on-site assembly, typically 3-7 days for standard units.' },
       { icon: '✅', title: 'Consistent Quality', description: 'Factory manufacturing ensures uniform quality regardless of site conditions or weather.' },
       { icon: '🚚', title: 'Relocatable', description: 'Can be disassembled and moved to new locations with 70%+ material reuse.' },
       { icon: '💰', title: 'Cost-Effective', description: 'Lower construction costs, faster occupancy, and reduced site labor requirements.' },
@@ -418,7 +410,7 @@ const solutionsData: Record<string, {
     ],
     process: [
       { step: 1, title: 'Design', description: 'Layout and specification finalization based on requirements.' },
-      { step: 2, title: 'Foundation', description: 'Simple foundation preparation—often just leveled ground with blocks.' },
+      { step: 2, title: 'Foundation', description: 'Simple foundation preparation, often just leveled ground with blocks.' },
       { step: 3, title: 'Manufacturing', description: 'Factory production of wall, roof, and floor modules.' },
       { step: 4, title: 'Transport', description: 'Delivery to site on standard trucks.' },
       { step: 5, title: 'Assembly', description: 'On-site assembly by our trained team.' },
@@ -435,14 +427,12 @@ const solutionsData: Record<string, {
       quote: 'Delivered 20 site office units across 3 project sites in just 6 weeks. Quality is excellent and our teams are comfortable even in summer heat. Great value for money.',
       author: 'Project Manager',
       company: 'Construction Company, Maharashtra',
-      rating: 4.6,
-      reviews: 15,
     },
     faqs: [
       { question: 'What is the cost of a prefab cabin?', answer: 'Standard site office (10x12 ft): ₹1.5-2.5 lakhs. Labor accommodation (20x40 ft): ₹4-6 lakhs. Prices depend on size, specifications, and accessories included.' },
       { question: 'What foundation is required?', answer: 'Simple leveled ground with concrete blocks is sufficient for temporary installations. Permanent structures may require strip foundations depending on soil conditions.' },
       { question: 'Can AC be installed in prefab units?', answer: 'Yes. Our insulated panels support AC loads. We provide provisions for split AC units with proper sealing to maintain thermal efficiency.' },
-      { question: 'Are prefab units fire-resistant?', answer: 'Standard PUF panels are B3 rated. For enhanced fire safety, we offer PIR panels with B2 rating. Fire extinguishers and smoke detectors are recommended.' },
+      { question: 'Are prefab units fire-resistant?', answer: 'Standard PUF panels are B3 under DIN 4102, equivalent to Class E under EN 13501-1. For enhanced fire safety we offer PIR panels rated B-s1,d0, and Rockwool panels which are non-combustible (Class A1). Fire extinguishers and smoke detectors are recommended in all cases.' },
       { question: 'Do you provide toilet and bathroom fittings?', answer: 'Yes. We supply prefab units with integrated toilets, bathrooms, plumbing, and fixtures. Portable toilet units are also available for construction sites.' },
       { question: 'Can multiple units be connected?', answer: 'Yes. Units can be joined to create larger facilities. Corridors, common areas, and multi-room configurations are possible with proper connection details.' },
     ],
@@ -493,8 +483,6 @@ const solutionsData: Record<string, {
       quote: 'PHOENIXX delivered our ISO Class 7 cleanroom for API manufacturing ahead of schedule. The quality and GMP compliance documentation were excellent. Highly recommended.',
       author: 'Plant Head',
       company: 'Pharmaceutical Company, Gujarat',
-      rating: 4.9,
-      reviews: 45,
     },
     faqs: [
       { question: 'What is the cost of cleanroom construction?', answer: 'Cleanroom costs vary based on classification, size, and specifications. ISO Class 8: ₹2,500-4,000/sq.ft, ISO Class 7: ₹4,000-6,000/sq.ft, ISO Class 5-6: ₹6,000-10,000/sq.ft. Contact us for project-specific quotation.' },
@@ -520,6 +508,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: data.seoDescription,
     keywords: data.keywords,
     alternates: { canonical: `https://phoenixxsmartbuild.com/solutions/${slug}` },
+    ...buildSocialMetadata({
+      title: data.seoTitle,
+      description: data.seoDescription,
+      path: `/solutions/${slug}`,
+      image: solutionImages[slug]?.[0],
+    }),
   };
 }
 
@@ -562,7 +556,6 @@ export default async function SolutionDetailPage({ params }: Props) {
       name: 'PHOENIXX Infratech Projects',
       address: { '@type': 'PostalAddress', addressLocality: 'Ahmedabad', addressCountry: 'IN' },
     },
-    aggregateRating: { '@type': 'AggregateRating', ratingValue: data.testimonial.rating.toString(), reviewCount: data.testimonial.reviews.toString() },
   };
 
   const images = solutionImages[slug] || [];
@@ -570,7 +563,7 @@ export default async function SolutionDetailPage({ params }: Props) {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={breadcrumbSchema} />
         <JsonLd data={faqSchema} />
         <JsonLd data={serviceSchema} />
@@ -579,18 +572,12 @@ export default async function SolutionDetailPage({ params }: Props) {
         {/* Hero */}
         <section className="relative min-h-[70vh] flex items-center overflow-hidden">
           <div className="absolute inset-0">
-            {images[0] && <Image src={images[0]} alt={data.title} fill className="object-cover" priority />}
+            {images[0] && <Image src={images[0]} alt={data.title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" priority />}
             <div className={`absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/80 to-slate-900/60`} />
           </div>
 
           <div className="container-custom relative z-10 py-16 md:py-24">
-            <nav className="mb-6 text-sm text-white/60">
-              <Link href="/" className="hover:text-white">Home</Link>
-              <span className="mx-2">/</span>
-              <Link href="/solutions" className="hover:text-white">Solutions</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">{data.title}</span>
-            </nav>
+            <Breadcrumbs items={[{ label: 'Solutions', href: '/solutions' }, { label: data.title }]} />
 
             <div className="max-w-4xl">
               <span className="inline-block px-4 py-1 rounded-full bg-white/20 text-white text-sm font-medium mb-4">{data.tagline}</span>
@@ -658,7 +645,7 @@ export default async function SolutionDetailPage({ params }: Props) {
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {images.map((img, idx) => (
                   <div key={idx} className="relative aspect-[4/3] rounded-xl overflow-hidden group shadow-lg">
-                    <Image src={img} alt={`${data.title} - Project ${idx + 1}`} fill className="object-cover transition-transform duration-500 group-hover:scale-110" />
+                    <Image src={img} alt={`${data.title} - Project ${idx + 1}`} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition-transform duration-500 group-hover:scale-110" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                 ))}
@@ -710,11 +697,7 @@ export default async function SolutionDetailPage({ params }: Props) {
         {/* Testimonials */}
         <section className="section-padding bg-slate-50">
           <div className="container-custom text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">What Our Clients Say</h2>
-            <div className="flex items-center justify-center gap-2 mb-8">
-              <div className="flex">{[1,2,3,4,5].map((s) => <span key={s} className="text-yellow-500 text-xl">★</span>)}</div>
-              <span className="text-slate-600">{data.testimonial.rating}/5 from {data.testimonial.reviews}+ projects</span>
-            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">What Our Clients Say</h2>
             <blockquote className="max-w-3xl mx-auto">
               <p className="text-xl text-slate-700 italic">&ldquo;{data.testimonial.quote}&rdquo;</p>
               <footer className="mt-4">

@@ -16,8 +16,8 @@ import {
   generateSpeakableSchema,
   generateQAPageSchema,
   generateImageObjectSchema,
-  generateVideoSchema,
 } from '@/lib/schema';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Which Roofing PUF Panel Is Best for Factory? | Guide 2026',
@@ -62,7 +62,7 @@ const faqs = [
   {
     question: 'Do roofing PUF panels prevent condensation in factories?',
     answer:
-      'Yes. The insulated PUF core creates a thermal barrier that prevents condensation forming on the underside of the roof — a common problem with bare metal roofing sheets. Anti-condensation fleece can be added for high-humidity environments.',
+      'Yes. The insulated PUF core creates a thermal barrier that prevents condensation forming on the underside of the roof, a common problem with bare metal roofing sheets. Anti-condensation fleece can be added for high-humidity environments.',
   },
   {
     question: 'How long do factory roofing PUF panels last?',
@@ -158,7 +158,7 @@ export default function BestRoofingPufPanelForFactoryPage() {
       description:
         'Comprehensive guide to selecting the best roofing PUF panel for factory construction. Compare profiles, thickness options, wind ratings, coatings, and costs.',
       url: pageUrl,
-      image: 'https://phoenixxsmartbuild.com/images/roofing-puf-panel-factory.jpg',
+      image: 'https://phoenixxsmartbuild.com/images/products/sandwich-panels/roofing-panel/PHOENIXX_ROOFING_PANEL5.jpg',
       datePublished: '2025-01-15',
       dateModified: '2026-01-10',
       author: { name: 'PHOENIXX SMARTBUILD Engineering Team', url: 'https://phoenixxsmartbuild.com/about' },
@@ -183,17 +183,9 @@ export default function BestRoofingPufPanelForFactoryPage() {
       name: 'Factory Roofing PUF Panel Installation by PHOENIXX',
       description:
         'Trapezoidal roofing PUF panel installation on an industrial factory showing interlocking joints and ridge cap detailing.',
-      contentUrl: '/images/roofing-puf-panel-factory.jpg',
+      contentUrl: '/images/products/sandwich-panels/roofing-panel/PHOENIXX_ROOFING_PANEL5.jpg',
       width: 1200,
       height: 630,
-    }),
-    generateVideoSchema({
-      name: 'PHOENIXX Factory Roofing Installation',
-      description:
-        'Watch a complete factory roofing PUF panel installation by PHOENIXX SMARTBUILD — from purlin layout to ridge cap finishing on a 5,000 sq.m industrial facility.',
-      thumbnailUrl: 'https://phoenixxsmartbuild.com/images/video-thumb-roofing.jpg',
-      uploadDate: '2025-01-01',
-      duration: 'PT6M15S',
     }),
   ];
 
@@ -209,20 +201,7 @@ export default function BestRoofingPufPanelForFactoryPage() {
       name: 'PHOENIXX SMARTBUILD',
       address: { '@type': 'PostalAddress', addressLocality: 'Ahmedabad', addressRegion: 'Gujarat', addressCountry: 'IN' },
     },
-    image: 'https://phoenixxsmartbuild.com/images/roofing-puf-panel-factory.jpg',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '142',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: {
-      '@type': 'Review',
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      author: { '@type': 'Organization', name: 'Verified Industrial Client' },
-      reviewBody: 'Excellent roofing PUF panels — zero leakage after two monsoon seasons and noticeable drop in factory temperature.',
-    },
+    image: 'https://phoenixxsmartbuild.com/images/products/sandwich-panels/roofing-panel/PHOENIXX_ROOFING_PANEL5.jpg',
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'INR',
@@ -236,7 +215,7 @@ export default function BestRoofingPufPanelForFactoryPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {schemas.map((schema, idx) => (
           <JsonLd key={idx} data={schema} />
         ))}
@@ -244,9 +223,11 @@ export default function BestRoofingPufPanelForFactoryPage() {
 
         {/* ─── Section 1: Trust-First Hero ─── */}
         <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20 md:py-28 overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
           <div className="container-custom relative">
+            <Breadcrumbs items={[{ label: 'Products', href: '/products' }, { label: 'Best Roofing PUF Panel for Factory' }]} />
+
             <div className="max-w-4xl">
               <div className="flex flex-wrap gap-3 mb-6">
                 <span className="inline-block rounded-full bg-emerald-500/10 px-4 py-2 text-sm font-medium text-emerald-400">
@@ -265,7 +246,7 @@ export default function BestRoofingPufPanelForFactoryPage() {
               <p className="ai-summary mt-6 text-xl text-slate-300 max-w-3xl">
                 The right roofing PUF panel can cut your factory&apos;s cooling costs by up to 30%, eliminate roof
                 condensation, and slash construction time in half. This guide helps you choose the ideal profile,
-                thickness, and coating for your factory — backed by 500+ roofing projects delivered across India.
+                thickness, and coating for your factory, backed by 500+ roofing projects delivered across India.
               </p>
               <p className="mt-4 text-slate-400 text-sm">
                 Trusted by factory owners in Gujarat, Maharashtra, Rajasthan &amp; Tamil Nadu
@@ -298,7 +279,7 @@ export default function BestRoofingPufPanelForFactoryPage() {
               <div className="prose prose-lg prose-slate max-w-none">
                 <p>
                   Most factory owners don&apos;t realize that their roof is the single largest source of heat gain in an
-                  industrial building. Bare metal roofing sheets — the default choice in most Indian factories — absorb
+                  industrial building. Bare metal roofing sheets: the default choice in most Indian factories — absorb
                   solar radiation all day long, turning the factory floor into an oven by mid-afternoon. The
                   consequences are far-reaching: workers become less productive in temperatures exceeding 38°C, machinery
                   runs hotter and requires more frequent maintenance, and air conditioning systems work overtime trying
@@ -313,7 +294,7 @@ export default function BestRoofingPufPanelForFactoryPage() {
                 </p>
                 <p>
                   <strong>Insulated roofing PUF panels solve every one of these problems in a single product.</strong>{' '}
-                  A roofing PUF panel is a factory-engineered sandwich — a rigid polyurethane foam core bonded between
+                  A roofing PUF panel is a factory-engineered sandwich: a rigid polyurethane foam core bonded between
                   two profiled metal sheets. The PUF core provides outstanding thermal insulation (thermal conductivity
                   as low as 0.024 W/mK), the profiled outer sheet sheds water efficiently, and the inner lining creates
                   a clean, condensation-free ceiling. The result is a factory that stays 8-12°C cooler in summer,
@@ -341,7 +322,7 @@ export default function BestRoofingPufPanelForFactoryPage() {
               </h2>
               <div className="prose prose-lg prose-slate max-w-none">
                 <p>
-                  Not all roofing PUF panels are the same. The <strong>profile type</strong> — the shape pressed into the
+                  Not all roofing PUF panels are the same. The <strong>profile type</strong>: the shape pressed into the
                   outer metal sheet — determines how the panel drains water, how far it can span between purlins, and how
                   it handles wind uplift. Choosing the correct profile is just as important as choosing the right
                   thickness or coating.
@@ -442,7 +423,7 @@ export default function BestRoofingPufPanelForFactoryPage() {
                   {
                     num: '03',
                     title: '40% Less Structural Steel',
-                    desc: 'Trapezoidal PUF panels span 3-4 meters between purlins, reducing the number of secondary steel members by up to 40% — a significant cost saving on large factory roofs.',
+                    desc: 'Trapezoidal PUF panels span 3-4 meters between purlins, reducing the number of secondary steel members by up to 40%: a significant cost saving on large factory roofs.',
                   },
                   {
                     num: '04',
@@ -532,7 +513,7 @@ export default function BestRoofingPufPanelForFactoryPage() {
                   </div>
                   <p className="mt-3 text-slate-600 text-sm leading-relaxed">{project.detail}</p>
                   <Link
-                    href="/projects"
+                    href="/resources/project-gallery"
                     className="mt-4 inline-flex items-center text-primary text-sm font-medium hover:underline"
                   >
                     View Project Gallery →
@@ -561,31 +542,33 @@ export default function BestRoofingPufPanelForFactoryPage() {
               Complete engineering data for architects, structural consultants, and procurement teams.
             </p>
             <div className="max-w-4xl mx-auto bg-slate-50 rounded-2xl overflow-hidden border border-slate-200">
-              <table className="w-full">
-                <tbody className="divide-y divide-slate-200">
-                  {[
-                    { label: 'Profile Types', value: 'Trapezoidal, Standing Seam, Concealed Fix' },
-                    { label: 'Panel Thickness', value: '40mm, 50mm, 60mm, 80mm, 100mm, 120mm' },
-                    { label: 'PUF Density', value: '40 ± 2 kg/m³ (CFC & HFC Free)' },
-                    { label: 'Thermal Conductivity', value: '0.024 W/mK @ 25°C' },
-                    { label: 'Panel Width (effective)', value: '1000mm standard' },
-                    { label: 'Panel Length', value: 'Up to 16 meters (custom lengths available)' },
-                    { label: 'Steel Thickness', value: '0.45mm – 0.60mm (PPGI / PPGL / SS)' },
-                    { label: 'Coating Options', value: 'SMP (standard), PVDF (coastal/harsh), SDP' },
-                    { label: 'Wind Load Rating', value: 'Tested as per IS 875 — up to 150 km/h' },
-                    { label: 'Purlin Span', value: '3-4m (trapezoidal), 2.5-3.5m (standing seam)' },
-                    { label: 'Fire Rating', value: 'B2 standard, B1 / PIR options available' },
-                    { label: 'Accessories', value: 'Ridge caps, valley gutters, flashing, skylights, ventilators' },
-                    { label: 'Service Life', value: '25+ years with proper installation' },
-                    { label: 'Compliance', value: 'IS 14925:2015, ISO 9001:2015, ISO 14001:2015' },
-                  ].map((row, idx) => (
-                    <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
-                      <td className="px-6 py-4 font-semibold text-slate-900 w-2/5">{row.label}</td>
-                      <td className="px-6 py-4 text-slate-600">{row.value}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <tbody className="divide-y divide-slate-200">
+                    {[
+                      { label: 'Profile Types', value: 'Trapezoidal, Standing Seam, Concealed Fix' },
+                      { label: 'Panel Thickness', value: '40mm, 50mm, 60mm, 80mm, 100mm, 120mm' },
+                      { label: 'PUF Density', value: '40 ± 2 kg/m³ (CFC & HFC Free)' },
+                      { label: 'Thermal Conductivity', value: '0.024 W/mK @ 25°C' },
+                      { label: 'Panel Width (effective)', value: '1000mm standard' },
+                      { label: 'Panel Length', value: 'Up to 16 meters (custom lengths available)' },
+                      { label: 'Steel Thickness', value: '0.45mm – 0.60mm (PPGI / PPGL / SS)' },
+                      { label: 'Coating Options', value: 'SMP (standard), PVDF (coastal/harsh), SDP' },
+                      { label: 'Wind Load Rating', value: 'Tested as per IS 875, up to 150 km/h' },
+                      { label: 'Purlin Span', value: '3-4m (trapezoidal), 2.5-3.5m (standing seam)' },
+                      { label: 'Fire Rating', value: 'B2 standard, B1 / PIR options available' },
+                      { label: 'Accessories', value: 'Ridge caps, valley gutters, flashing, skylights, ventilators' },
+                      { label: 'Service Life', value: '25+ years with proper installation' },
+                      { label: 'Compliance', value: 'IS 14925:2015, ISO 9001:2015, ISO 14001:2015' },
+                    ].map((row, idx) => (
+                      <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
+                        <td className="px-6 py-4 font-semibold text-slate-900 w-2/5">{row.label}</td>
+                        <td className="px-6 py-4 text-slate-600">{row.value}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
             <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm">
               <Link

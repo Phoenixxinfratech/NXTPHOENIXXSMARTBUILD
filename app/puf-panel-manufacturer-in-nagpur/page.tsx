@@ -4,12 +4,26 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 import { CityManufacturerAeo } from '@/components/seo/city-manufacturer-aeo';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'PUF Panel Manufacturer in Nagpur | PHOENIXX',
+  title: 'PUF Panel Manufacturer in Nagpur',
   description: 'PUF panel supplier serving Nagpur and Vidarbha. Industrial insulated panels for all applications. Get a free quote today!',
   keywords: ['PUF panel manufacturer in Nagpur', 'PUF panel Butibori MIDC', 'insulated panel Vidarbha'],
   alternates: { canonical: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-nagpur' },
+  openGraph: {
+    title: 'PUF Panel Manufacturer in Nagpur | PHOENIXX SMARTBUILD',
+    description: 'PUF panel supplier serving Nagpur and Vidarbha. Industrial insulated panels for all applications. Get a free quote today!',
+    url: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-nagpur',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PUF Panel Manufacturer in Nagpur | PHOENIXX SMARTBUILD',
+    description: 'PUF panel supplier serving Nagpur and Vidarbha. Industrial insulated panels for all applications. Get a free quote today!',
+  },
 };
 
 const faqs = [
@@ -29,18 +43,20 @@ export default function NagpurPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={faqSchema} />
 
         <section className="relative bg-gradient-to-br from-green-900 via-emerald-900 to-slate-900 py-20 md:py-28">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
+            <Breadcrumbs withSchema items={[{ label: 'Products', href: '/products' }, { label: 'PUF Panel Manufacturer in Nagpur' }]} />
+
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-green-500/10 px-4 py-2 text-sm font-medium text-green-400 mb-6">📍 Serving Nagpur & Central India</span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">PUF Panel Manufacturer in Nagpur</h1>
               <p className="mt-6 text-xl text-slate-300 max-w-3xl">PHOENIXX SmartBuild delivers premium PUF panels to India&apos;s geographic center. From Butibori MIDC to MIHAN SEZ, we serve Nagpur and Vidarbha region with quality insulation solutions.</p>
               <div className="mt-10 flex flex-wrap gap-4">
-                <Link href="/get-a-quote" className="rounded-xl bg-gradient-to-r from-green-500 to-emerald-600 px-8 py-4 font-semibold text-white shadow-lg hover:shadow-xl transition-all">Get Nagpur Quote</Link>
+                <Link href="/get-a-quote" className="rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 px-8 py-4 font-semibold text-white shadow-lg hover:shadow-xl transition-all">Get Nagpur Quote</Link>
                 <a href="tel:+918866556879" className="rounded-xl border-2 border-white/20 bg-white/5 px-8 py-4 font-semibold text-white backdrop-blur hover:bg-white/10 transition-all">📞 Call: +91 88665 56879</a>
               </div>
             </div>
@@ -103,7 +119,7 @@ export default function NagpurPage() {
                 { title: 'Technical Support', desc: 'Expert guidance' },
                 { title: 'Competitive Rates', desc: 'Best Central India pricing' },
                 { title: 'Reliable Delivery', desc: '10-14 days standard' },
-                { title: '18+ Years', desc: 'Industry experience' },
+                { title: '13+ Years', desc: 'Industry experience' },
               ].map((item, idx) => (<div key={idx} className="text-center"><h3 className="font-bold text-green-400">{item.title}</h3><p className="mt-2 text-slate-300 text-sm">{item.desc}</p></div>))}
             </div>
           </div>
@@ -114,7 +130,7 @@ export default function NagpurPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">PUF Panel Applications in Nagpur</h2>
             <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
               {['Logistics & Warehousing Centers', 'E-commerce Fulfillment Hubs', 'Agri-Cold Storage Facilities', 'Food Processing Plants', 'Manufacturing Units', 'IT Parks & Commercial Buildings', 'Pharmaceutical Units', 'Textile & Engineering Factories'].map((app, idx) => (
-                <div key={idx} className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg"><span className="text-green-500">✓</span><span className="text-slate-700">{app}</span></div>
+                <div key={idx} className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg"><span className="text-green-500" aria-hidden="true">✓</span><span className="text-slate-700">{app}</span></div>
               ))}
             </div>
           </div>

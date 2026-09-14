@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { siteConfig } from '@/lib/site-config';
 
 /**
  * Lead Capture API Endpoint
@@ -105,9 +106,44 @@ async function storeLead(lead: LeadRecord): Promise<void> {
   console.log('='.repeat(60));
 }
 
+// Best-effort in-process rate limit. Serverless instances are not shared, so
+// this throttles per-instance bursts rather than acting as a global quota.
+const RATE_LIMIT_WINDOW_MS = 60_000;
+const RATE_LIMIT_MAX_REQUESTS = 5;
+const recentSubmissions = new Map<string, number[]>();
+
+function isRateLimited(request: NextRequest): boolean {
+  const ip =
+    request.headers.get('x-nf-client-connection-ip') ||
+    request.headers.get('x-forwarded-for')?.split(',')[0].trim() ||
+    'unknown';
+  const now = Date.now();
+  const hits = (recentSubmissions.get(ip) || []).filter((t) => now - t < RATE_LIMIT_WINDOW_MS);
+  hits.push(now);
+  recentSubmissions.set(ip, hits);
+
+  // Keep the map from growing without bound on long-lived instances.
+  if (recentSubmissions.size > 1000) {
+    recentSubmissions.forEach((times: number[], key: string) => {
+      if (times.every((t: number) => now - t >= RATE_LIMIT_WINDOW_MS)) {
+        recentSubmissions.delete(key);
+      }
+    });
+  }
+
+  return hits.length > RATE_LIMIT_MAX_REQUESTS;
+}
+
 // POST /api/lead - Create a new lead
 export async function POST(request: NextRequest) {
   try {
+    if (isRateLimited(request)) {
+      return NextResponse.json(
+        { success: false, error: 'Too many submissions. Please try again in a minute.' },
+        { status: 429 }
+      );
+    }
+
     const body: LeadData = await request.json();
 
     // Validate required fields
@@ -196,9 +232,11 @@ export async function OPTIONS() {
   return new NextResponse(null, {
     status: 200,
     headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+      // Only our own site posts leads; a wildcard lets any origin submit.
+      'Access-Control-Allow-Origin': siteConfig.url,
+      'Access-Control-Allow-Methods': 'POST, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type',
+      Vary: 'Origin',
     },
   });
 }

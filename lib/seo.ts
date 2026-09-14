@@ -178,6 +178,52 @@ export function truncateDescription(text: string, maxLength = 155): string {
   return stripped.slice(0, maxLength - 3).trim() + '...';
 }
 
+/**
+ * Just the openGraph and twitter halves of a page's metadata, for routes that
+ * already build their own title and description in generateMetadata. Without
+ * this, a page inherits the root layout's OG image and homepage URL, so every
+ * share of a product or country page looked identical.
+ */
+export function buildSocialMetadata({
+  title,
+  description,
+  path,
+  image,
+  type = 'website',
+}: {
+  title: string;
+  description: string;
+  path: string;
+  image?: string;
+  type?: 'website' | 'article';
+}): Pick<Metadata, 'openGraph' | 'twitter'> {
+  const url = path.startsWith('http') ? path : `${siteConfig.url}${path}`;
+  const resolvedImage = image
+    ? image.startsWith('http')
+      ? image
+      : `${siteConfig.url}${image}`
+    : `${siteConfig.url}${siteConfig.ogImage}`;
+
+  return {
+    openGraph: {
+      title,
+      description,
+      url,
+      siteName: siteConfig.name,
+      type,
+      locale: 'en_IN',
+      images: [{ url: resolvedImage, width: 1200, height: 630, alt: title }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [resolvedImage],
+      creator: siteConfig.twitterHandle,
+    },
+  };
+}
+
 
 
 

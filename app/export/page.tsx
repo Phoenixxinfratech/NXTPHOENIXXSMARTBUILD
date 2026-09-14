@@ -13,12 +13,24 @@ import {
   exportIndustries,
   getExportCountry,
 } from '@/lib/export-data';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Global Export to Africa | PUF Panels & Industrial Building Systems',
   description:
     'PHOENIXX SMARTBUILD exports sandwich PUF panels, PIR panels, cold storage systems, and PEB solutions to 16 African markets. Africa\'s trusted engineering partner for industrial building infrastructure.',
   alternates: { canonical: 'https://phoenixxsmartbuild.com/export' },
+  openGraph: {
+    title: 'Global Export to Africa | PUF Panels & Industrial Building Systems | PHOENIXX SMARTBUILD',
+    url: 'https://phoenixxsmartbuild.com/export',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Global Export to Africa | PUF Panels & Industrial Building Systems | PHOENIXX SMARTBUILD',
+  },
 };
 
 const exportProcess = [
@@ -32,7 +44,7 @@ const exportProcess = [
 const trustAssets = [
   { title: 'ISO 9001 Manufacturing', desc: 'Certified quality management processes for consistent panel performance.' },
   { title: 'Export Documentation', desc: 'Commercial invoice, packing list, COO, test certificates, and MSDS where applicable.' },
-  { title: 'Container Optimisation', desc: 'Loading drawings maximise sqm per container — reducing landed cost per square metre.' },
+  { title: 'Container Optimisation', desc: 'Loading drawings maximise sqm per container, reducing landed cost per square metre.' },
   { title: 'Engineering Support', desc: 'Thickness selection, profile matching, and installation guidance from our technical team.' },
   { title: 'Certifications Hub', desc: 'IS 14925, fire test reports, and optional FM-approved specifications.', href: '/certifications' },
   { title: 'Case Studies', desc: 'Real-world cold storage, cleanroom, and industrial projects across India.', href: '/resources/project-gallery' },
@@ -61,17 +73,18 @@ export default function ExportHubPage() {
       <JsonLd data={serviceSchema} />
       <JsonLd data={faqSchema} />
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <section className="bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 text-white section-padding">
           <div className="container-custom">
+            <Breadcrumbs items={[{ label: 'Global Export' }]} />
+
             <p className="text-sm font-medium text-emerald-300 uppercase tracking-wider">Global Export</p>
             <h1 className="mt-2 text-3xl font-bold md:text-4xl lg:text-5xl leading-tight">
               Africa&apos;s Trusted Engineering &amp; Export Partner for Industrial Building Solutions
             </h1>
             <p className="mt-4 text-lg text-emerald-100 max-w-3xl leading-relaxed">
               PHOENIXX SMARTBUILD LLP exports premium sandwich PUF panels, PIR panels, Rockwool panels,
-              cold storage systems, cleanroom partitions, and pre-engineered buildings to 16 African markets —
-              with factory-direct manufacturing from Gujarat, India and engineering support at every stage.
+              cold storage systems, cleanroom partitions, and pre-engineered buildings to 16 African markets, with factory-direct manufacturing from Gujarat, India and engineering support at every stage.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link href="/get-a-quote" className="btn-primary">Request Export Quote</Link>

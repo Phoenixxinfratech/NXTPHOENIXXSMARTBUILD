@@ -4,9 +4,10 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 import { CityManufacturerAeo } from '@/components/seo/city-manufacturer-aeo';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'PUF Panel Manufacturer in Ahmedabad | PHOENIXX',
+  title: 'PUF Panel Manufacturer in Ahmedabad',
   description: 'Leading PUF panel manufacturer in Ahmedabad, Gujarat. Factory in GIDC Naroda. Same-day delivery across Ahmedabad. Get free quote!',
   keywords: [
     'PUF panel manufacturer in Ahmedabad',
@@ -181,7 +182,7 @@ const nearbyLocations = [
 // Related blog posts for internal linking
 const relatedBlogs = [
   { title: 'PUF Panel Manufacturers in Ahmedabad - Complete Guide', href: '/resources/blogs/puf-panel-manufacturers-in-ahmedabad' },
-  { title: 'PUF Panel Price Ahmedabad 2025 Guide', href: '/resources/blogs/puf-panel-price-ahmedabad-2025-guide' },
+  { title: 'PUF Panel Price Ahmedabad Guide', href: '/resources/blogs/puf-panel-price-ahmedabad' },
   { title: 'Industrial Roofing Solutions Ahmedabad GIDC', href: '/resources/blogs/industrial-roofing-solutions-ahmedabad-gidc' },
   { title: 'PUF vs PIR vs Rockwool for Ahmedabad Climate', href: '/resources/blogs/puf-vs-pir-vs-rockwool-ahmedabad-climate' },
   { title: 'Cold Storage Panel Manufacturers Ahmedabad', href: '/resources/blogs/cold-storage-panel-manufacturers-ahmedabad' },
@@ -196,8 +197,8 @@ export default function AhmedabadPage() {
     name: 'PHOENIXX SmartBuild - Ahmedabad',
     description: 'Leading PUF panel manufacturer in Ahmedabad, Gujarat. Premium insulated sandwich panels for industrial, pharmaceutical, and cold storage applications.',
     url: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-ahmedabad',
-    logo: 'https://phoenixxsmartbuild.com/images/logo.png',
-    image: 'https://phoenixxsmartbuild.com/images/factory-ahmedabad.jpg',
+    logo: 'https://phoenixxsmartbuild.com/images/brand/logos/logo.png',
+    image: 'https://phoenixxsmartbuild.com/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'GIDC Naroda, Phase II',
@@ -287,15 +288,17 @@ export default function AhmedabadPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={localBusinessSchema} />
         <JsonLd data={faqSchema} />
         <JsonLd data={productSchema} />
 
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-slate-900 via-gray-900 to-blue-900 py-20 md:py-28">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
+            <Breadcrumbs withSchema items={[{ label: 'Products', href: '/products' }, { label: 'PUF Panel Manufacturer in Ahmedabad' }]} />
+
             <div className="max-w-4xl">
               <div className="flex flex-wrap gap-3 mb-6">
                 <span className="inline-block rounded-full bg-green-500/20 px-4 py-2 text-sm font-medium text-green-400">
@@ -314,7 +317,7 @@ export default function AhmedabadPage() {
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link
                   href="/get-a-quote"
-                  className="rounded-xl bg-gradient-to-r from-green-500 to-emerald-600 px-8 py-4 font-semibold text-white shadow-lg hover:shadow-xl transition-all"
+                  className="rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 px-8 py-4 font-semibold text-white shadow-lg hover:shadow-xl transition-all"
                 >
                   Get Ahmedabad Quote
                 </Link>
@@ -449,7 +452,7 @@ export default function AhmedabadPage() {
                   key={idx}
                   className="flex items-center gap-4 p-5 bg-gradient-to-r from-slate-50 to-white rounded-xl border border-slate-100"
                 >
-                  <span className="text-green-600 text-2xl">✓</span>
+                  <span className="text-green-600 text-2xl" aria-hidden="true">✓</span>
                   <span className="text-lg text-slate-700 font-medium">{app}</span>
                 </div>
               ))}

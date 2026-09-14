@@ -1,3 +1,5 @@
+import { renamedImageRedirects } from './lib/renamed-images.mjs';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Enable React strict mode for better development experience
@@ -11,7 +13,11 @@ const nextConfig = {
 
   // Image optimization configuration
   images: {
-    // Disable image optimization to use direct images (fixes Netlify IPX issues)
+    // Runtime optimization stays off because @netlify/plugin-nextjs v4 serves it
+    // through IPX, which this site hit problems with. The local library is
+    // instead pre-compressed and capped at 1920px at build-time, so the bytes on
+    // the wire are already close to what the optimizer would have produced.
+    // Revisit alongside a plugin upgrade to v5 (Netlify Image CDN).
     unoptimized: true,
     remotePatterns: [
       {
@@ -20,11 +26,9 @@ const nextConfig = {
         pathname: '/images/**',
       },
     ],
-    formats: ['image/avif', 'image/webp'],
     // Device sizes for responsive images
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    // Minimize image quality for performance while maintaining visual quality
     minimumCacheTTL: 31536000,
   },
 
@@ -146,6 +150,9 @@ const nextConfig = {
   // Redirects configuration - 301 redirects for legacy/broken URLs
   async redirects() {
     return [
+      // Product photos whose filenames spelled the product wrong.
+      ...renamedImageRedirects,
+
       // ============================================
       // Generic "puf-panel-manufacturer" redirects (short URLs → SEO pages)
       // ============================================
@@ -174,6 +181,30 @@ const nextConfig = {
       // ============================================
       // Blog slug redirects (short/incorrect slugs → correct slugs)
       // ============================================
+      // /sitemap.xml is now the only index; this was a second one listing the
+      // same section sitemaps.
+      {
+        source: '/sitemap-index.xml',
+        destination: '/sitemap.xml',
+        permanent: true,
+      },
+      // Consolidated duplicates: these targeted the same query as their
+      // destination and split rankings between near-identical articles.
+      {
+        source: '/resources/blogs/choosing-right-insulated-panel',
+        destination: '/resources/blogs/how-to-choose-right-insulated-panel',
+        permanent: true,
+      },
+      {
+        source: '/resources/blogs/puf-panel-price-ahmedabad-2025-guide',
+        destination: '/resources/blogs/puf-panel-price-ahmedabad',
+        permanent: true,
+      },
+      {
+        source: '/resources/blogs/puf-panel-price-ahmedabad-2026-guide',
+        destination: '/resources/blogs/puf-panel-price-ahmedabad',
+        permanent: true,
+      },
       {
         source: '/resources/blogs/sustainable-peb-structures',
         destination: '/resources/blogs/rise-of-sustainable-peb-structures',
@@ -275,6 +306,54 @@ const nextConfig = {
       {
         source: '/solutions/false-ceiling-partition',
         destination: '/solutions/partition-solutions',
+        permanent: true,
+      },
+
+      // ============================================
+      // Retired paths still linked from older content
+      // ============================================
+      { source: '/projects', destination: '/resources/project-gallery', permanent: true },
+      { source: '/industries/warehousing', destination: '/industries/cold-chain', permanent: true },
+      { source: '/solutions/cleanroom', destination: '/solutions/cleanroom-solutions', permanent: true },
+      { source: '/solutions/pharma-cleanroom', destination: '/solutions/cleanroom-solutions', permanent: true },
+      { source: '/solutions/cold-storage', destination: '/solutions/cold-storage-construction', permanent: true },
+      { source: '/solutions/factory-building', destination: '/solutions/peb', permanent: true },
+      { source: '/solutions/industrial-construction', destination: '/solutions/peb', permanent: true },
+      { source: '/solutions/industrial-infrastructure', destination: '/solutions/peb', permanent: true },
+      { source: '/solutions/warehouse', destination: '/solutions/peb', permanent: true },
+      {
+        source: '/products/cold-room-panels/cold-room-door',
+        destination: '/shop/cold-storage-door',
+        permanent: true,
+      },
+      {
+        source: '/products/cold-room-panels/puf-cold-room-panel',
+        destination: '/products/sandwich-panels/sandwich-puf-panel',
+        permanent: true,
+      },
+      {
+        source: '/products/sandwich-panels/cold-room-panel',
+        destination: '/products/sandwich-panels/sandwich-puf-panel',
+        permanent: true,
+      },
+      {
+        source: '/products/sandwich-panels/fm-approved-panel',
+        destination: '/shop/fm-approved-panel',
+        permanent: true,
+      },
+      {
+        source: '/products/roofing-panels/puf-insulated-roofing-panel',
+        destination: '/products/sandwich-panels/roofing-puf-panel',
+        permanent: true,
+      },
+      {
+        source: '/products/sandwich-panels/roofing-panel',
+        destination: '/products/sandwich-panels/roofing-puf-panel',
+        permanent: true,
+      },
+      {
+        source: '/products/sandwich-panels/wall-puf-panel',
+        destination: '/products/sandwich-panels/wall-ceiling-panel',
         permanent: true,
       },
 

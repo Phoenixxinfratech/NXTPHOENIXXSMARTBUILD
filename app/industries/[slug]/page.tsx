@@ -8,17 +8,20 @@ import { JsonLd } from '@/components/seo/json-ld';
 import { RelatedResources } from '@/components/blocks/related-resources';
 import { getRelatedLinksForIndustry } from '@/lib/internal-links';
 import { AeoContentBlocks, DEFAULT_PUF_SPECS } from '@/components/seo/aeo-content-blocks';
+import { buildSocialMetadata } from '@/lib/seo';
+import { siteConfig } from '@/lib/site-config';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 // Industry images mapping
 const industryImages: Record<string, string[]> = {
   'pharma-chemical': [
     '/images/industries/pharmaceuticals/cleanroom.jpg',
     '/images/industries/pharmaceuticals/pharmaceutical-cleanroom-components-494_L.jpg',
-    '/images/industries/pharmaceuticals/sterile_pharma_manufacturing_discovery_450x300.jpg',
+    '/images/industries/medical-devices/sterile_pharma_manufacturing_discovery_450x300.jpg',
   ],
   'food-processing': [
     '/images/industries/food-processing/Food-processing-industries-phoenixx-work.jpg',
-    '/images/industries/food-processing/Food-processing .jpg',
+    '/images/industries/food-processing/Food-processing.jpg',
   ],
   'dairy': [
     '/images/industries/dairy/epub_dairy-processing-equipment-milk-tanks-facility-plant_1200x635.jpg',
@@ -254,10 +257,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const data = industriesData[slug];
   if (!data) return {};
+  const title = `${data.title} Infrastructure Solutions`;
+  const description = data.metaDescription || data.description;
   return {
-    title: `${data.title} | PHOENIXX Industries`,
-    description: data.metaDescription || data.description,
+    title,
+    description,
     alternates: { canonical: `https://phoenixxsmartbuild.com/industries/${slug}` },
+    ...buildSocialMetadata({
+      title: `${title} | ${siteConfig.name}`,
+      description,
+      path: `/industries/${slug}`,
+      image: industryImages[slug]?.[0],
+    }),
   };
 }
 
@@ -281,20 +292,14 @@ export default async function IndustryDetailPage({ params }: Props) {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={industrySchema} />
 
         {/* Hero */}
         <section className={`relative bg-gradient-to-br ${data.gradient} py-20 md:py-28`}>
           <div className="absolute inset-0 bg-black/20" />
           <div className="container-custom relative">
-            <nav className="mb-6 text-sm text-white/70">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <Link href="/industries" className="hover:text-white transition-colors">Industries</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">{data.title}</span>
-            </nav>
+            <Breadcrumbs withSchema items={[{ label: 'Industries', href: '/industries' }, { label: data.title }]} />
 
             <div className="max-w-3xl">
               <span className="inline-block px-4 py-1 rounded-full bg-white/20 text-white text-sm font-medium mb-4">
@@ -335,6 +340,7 @@ export default async function IndustryDetailPage({ params }: Props) {
                     <Image
                       src={img}
                       alt={`${data.title} - Project ${idx + 1}`}
+                      sizes="(max-width: 768px) 100vw, 33vw"
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
@@ -353,7 +359,7 @@ export default async function IndustryDetailPage({ params }: Props) {
             <div className="grid gap-8 md:grid-cols-2">
               {data.requirements.map((req) => (
                 <div key={req.title} className="flex gap-4">
-                  <span className={`flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br ${data.gradient} flex items-center justify-center text-white text-xl`}>
+                  <span className={`flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br ${data.gradient} flex items-center justify-center text-white text-xl`} aria-hidden="true">
                     ✓
                   </span>
                   <div>

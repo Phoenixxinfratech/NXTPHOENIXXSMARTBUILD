@@ -4,12 +4,26 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 import { CityManufacturerAeo } from '@/components/seo/city-manufacturer-aeo';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'PUF Panel Manufacturer in Jamnagar | PHOENIXX',
+  title: 'PUF Panel Manufacturer in Jamnagar',
   description: 'PUF panels for Jamnagar industries. Quality insulated panels for industrial and cold storage. Request pricing today!',
   keywords: ['PUF panel manufacturer in Jamnagar', 'PUF panel Jamnagar', 'insulated panel refinery'],
   alternates: { canonical: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-jamnagar' },
+  openGraph: {
+    title: 'PUF Panel Manufacturer in Jamnagar | PHOENIXX SMARTBUILD',
+    description: 'PUF panels for Jamnagar industries. Quality insulated panels for industrial and cold storage. Request pricing today!',
+    url: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-jamnagar',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PUF Panel Manufacturer in Jamnagar | PHOENIXX SMARTBUILD',
+    description: 'PUF panels for Jamnagar industries. Quality insulated panels for industrial and cold storage. Request pricing today!',
+  },
 };
 
 const faqs = [
@@ -29,12 +43,14 @@ export default function JamnagarPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={faqSchema} />
 
         <section className="relative bg-gradient-to-br from-amber-900 via-yellow-900 to-slate-900 py-20 md:py-28">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
+            <Breadcrumbs withSchema items={[{ label: 'Products', href: '/products' }, { label: 'PUF Panel Manufacturer in Jamnagar' }]} />
+
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-amber-500/10 px-4 py-2 text-sm font-medium text-amber-400 mb-6">📍 Serving Jamnagar & Refinery Belt</span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">PUF Panel Manufacturer in Jamnagar</h1>
@@ -103,7 +119,7 @@ export default function JamnagarPage() {
                 { title: 'Large Projects', desc: 'Bulk supply capability' },
                 { title: 'Timely Delivery', desc: '8-12 days to Jamnagar' },
                 { title: 'Technical Support', desc: 'Expert guidance available' },
-                { title: '18+ Years', desc: 'Gujarat market presence' },
+                { title: '13+ Years', desc: 'Gujarat market presence' },
               ].map((item, idx) => (<div key={idx} className="text-center"><h3 className="font-bold text-amber-400">{item.title}</h3><p className="mt-2 text-slate-300 text-sm">{item.desc}</p></div>))}
             </div>
           </div>
@@ -114,7 +130,7 @@ export default function JamnagarPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">PUF Panel Applications in Jamnagar</h2>
             <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
               {['Refinery Contractor Buildings', 'Oil & Gas Ancillary Facilities', 'Brass Parts Manufacturing Units', 'Cold Storage & Seafood Processing', 'Marine & Port Facilities', 'Commercial & Office Buildings', 'Warehouses & Logistics', 'Food Processing Plants'].map((app, idx) => (
-                <div key={idx} className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg"><span className="text-amber-500">✓</span><span className="text-slate-700">{app}</span></div>
+                <div key={idx} className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg"><span className="text-amber-500" aria-hidden="true">✓</span><span className="text-slate-700">{app}</span></div>
               ))}
             </div>
           </div>

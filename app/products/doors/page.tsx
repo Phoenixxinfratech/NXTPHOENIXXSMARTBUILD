@@ -5,6 +5,7 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 import { AISummaryBlock } from '@/components/ai/ai-summary-block';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Industrial Doors – Fire Rated & Cleanroom',
@@ -14,6 +15,19 @@ export const metadata: Metadata = {
     'fire doors manufacturer india', 'cleanroom door supplier',
   ],
   alternates: { canonical: 'https://phoenixxsmartbuild.com/products/doors' },
+  openGraph: {
+    title: 'Industrial Doors – Fire Rated & Cleanroom | PHOENIXX SMARTBUILD',
+    description: 'Fire-rated doors, cleanroom doors, and industrial specialty doors. IS/ISO compliant. Request door specifications and pricing.',
+    url: 'https://phoenixxsmartbuild.com/products/doors',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Industrial Doors – Fire Rated & Cleanroom | PHOENIXX SMARTBUILD',
+    description: 'Fire-rated doors, cleanroom doors, and industrial specialty doors. IS/ISO compliant. Request door specifications and pricing.',
+  },
 };
 
 const doorsData = {
@@ -27,7 +41,7 @@ const doorsData = {
   ],
   benefits: [
     { icon: '🔥', title: 'Fire Safety', description: 'Doors rated 30 to 120 minutes fire resistance, IS/BS/UL certified for life safety compliance.' },
-    { icon: '🧹', title: 'Hygienic Design', description: 'Flush surfaces, no ledges, easy to clean—ideal for GMP, FDA, and cleanroom environments.' },
+    { icon: '🧹', title: 'Hygienic Design', description: 'Flush surfaces, no ledges, easy to clean, ideal for GMP, FDA, and cleanroom environments.' },
     { icon: '❄️', title: 'Thermal Performance', description: 'Insulated doors maintaining temperature integrity for cold storage (-40°C to +15°C).' },
     { icon: '🔒', title: 'Security & Access', description: 'Compatible with access control, interlocks, and emergency panic hardware.' },
     { icon: '⚙️', title: 'Automation Ready', description: 'Integrate with automatic openers, sensors, and building management systems.' },
@@ -98,8 +112,6 @@ const doorsData = {
     quote: 'PHOENIXX delivered 28 fire-rated doors for our new pharmaceutical facility. The quality, certification, and installation were impeccable. Highly recommended for GMP projects.',
     author: 'Project Manager',
     company: 'Leading Pharmaceutical Company, Gujarat',
-    rating: 4.8,
-    reviews: 45,
   },
   industries: ['Pharmaceutical', 'Healthcare', 'Food Processing', 'Cold Chain', 'Data Centers', 'Hospitality', 'Industrial'],
   faqs: [
@@ -142,7 +154,7 @@ export default function DoorsPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={breadcrumbSchema} />
         <JsonLd data={faqSchema} />
         <AISummaryBlock summary={doorsData.aiSummary} keywords={doorsData.keywords} />
@@ -162,13 +174,7 @@ export default function DoorsPage() {
           </div>
 
           <div className="container-custom relative z-10 py-16 md:py-24">
-            <nav className="mb-6 text-sm text-white/60">
-              <Link href="/" className="hover:text-white">Home</Link>
-              <span className="mx-2">/</span>
-              <Link href="/products" className="hover:text-white">Products</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">Doors</span>
-            </nav>
+            <Breadcrumbs items={[{ label: 'Products', href: '/products' }, { label: 'Doors' }]} />
 
             <div className="max-w-4xl">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
@@ -317,11 +323,7 @@ export default function DoorsPage() {
         <section className="section-padding bg-white">
           <div className="container-custom text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Trusted by Industry Leaders</h2>
-            <div className="flex items-center justify-center gap-2 mb-8">
-              <div className="flex">{[1,2,3,4,5].map((s) => <span key={s} className="text-yellow-500 text-xl">★</span>)}</div>
-              <span className="text-slate-600">{doorsData.testimonial.rating}/5 from {doorsData.testimonial.reviews}+ clients</span>
-            </div>
-            <blockquote className="max-w-3xl mx-auto">
+            <blockquote className="max-w-3xl mx-auto mt-8">
               <p className="text-xl text-slate-700 italic">&ldquo;{doorsData.testimonial.quote}&rdquo;</p>
               <footer className="mt-4">
                 <p className="font-bold text-slate-900">{doorsData.testimonial.author}</p>

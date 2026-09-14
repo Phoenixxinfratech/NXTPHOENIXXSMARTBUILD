@@ -90,6 +90,21 @@ const formTypes: Record<string, {
       { label: 'Contact Us', href: '/contact-us' },
     ],
   },
+  ads: {
+    title: 'Enquiry Received!',
+    subtitle: 'We have your panel requirement and will send pricing shortly.',
+    icon: '📐',
+    nextSteps: [
+      { title: 'Requirement Check', description: 'Our team reviews your product interest and project details.' },
+      { title: 'Price Calculation', description: 'We work out panel thickness, sheet options, and quantity for your job.' },
+      { title: 'Call Back', description: 'Expect a call within 30 minutes during working hours.' },
+    ],
+    relatedLinks: [
+      { label: 'View Our Products', href: '/products' },
+      { label: 'Panel Specifications', href: '/products/sandwich-panels' },
+      { label: 'Project Gallery', href: '/resources/project-gallery' },
+    ],
+  },
   newsletter: {
     title: 'Subscribed Successfully!',
     subtitle: 'You\'ll receive our latest insights and industry updates.',
@@ -124,9 +139,10 @@ const formTypes: Record<string, {
 
 function ThankYouContent() {
   const searchParams = useSearchParams();
-  const type = searchParams.get('type') || 'default';
+  // Forms redirect with `formType`; `type` is kept as a fallback for older links.
+  const type = searchParams.get('formType') || searchParams.get('type') || 'default';
   const source = searchParams.get('source') || 'Website';
-  
+
   const config = formTypes[type] || formTypes.default;
 
   return (
@@ -155,7 +171,7 @@ function ThankYouContent() {
         {/* What Happens Next */}
         <div className="bg-white rounded-2xl shadow-xl border border-slate-100 p-8 mb-8">
           <h2 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-            <span className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+            <span className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600" aria-hidden="true">
               📌
             </span>
             What Happens Next?
@@ -247,15 +263,15 @@ function ThankYouContent() {
           <p className="text-sm text-slate-500 mb-4">Trusted by 300+ Companies Across India</p>
           <div className="flex flex-wrap justify-center gap-6 text-sm text-slate-600">
             <span className="flex items-center gap-1.5">
-              <span className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-600 text-xs">✓</span>
-              12+ Years Experience
+              <span className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-600 text-xs" aria-hidden="true">✓</span>
+              13+ Years Experience
             </span>
             <span className="flex items-center gap-1.5">
-              <span className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-600 text-xs">✓</span>
+              <span className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-600 text-xs" aria-hidden="true">✓</span>
               500+ Projects Delivered
             </span>
             <span className="flex items-center gap-1.5">
-              <span className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-600 text-xs">✓</span>
+              <span className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-green-600 text-xs" aria-hidden="true">✓</span>
               Pan-India Service
             </span>
           </div>
@@ -269,7 +285,7 @@ export default function ThankYouPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1 bg-gradient-to-b from-slate-50 to-white">
+      <main id="main-content" className="flex-1 bg-gradient-to-b from-slate-50 to-white">
         <Suspense fallback={
           <div className="container-custom py-24 text-center">
             <div className="animate-pulse">

@@ -4,6 +4,7 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { AISummaryBlock } from '@/components/ai/ai-summary-block';
 import { JsonLd } from '@/components/seo/json-ld';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'EPC Solutions – PEB, Cold Storage & Cleanrooms',
@@ -11,6 +12,19 @@ export const metadata: Metadata = {
     'Turnkey EPC solutions: Pre-Engineered Buildings, cold storage, cleanrooms, ceiling systems. Complete project delivery. Get your quote.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/solutions',
+  },
+  openGraph: {
+    title: 'EPC Solutions – PEB, Cold Storage & Cleanrooms | PHOENIXX SMARTBUILD',
+    description: 'Turnkey EPC solutions: Pre-Engineered Buildings, cold storage, cleanrooms, ceiling systems. Complete project delivery. Get your quote.',
+    url: 'https://phoenixxsmartbuild.com/solutions',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'EPC Solutions – PEB, Cold Storage & Cleanrooms | PHOENIXX SMARTBUILD',
+    description: 'Turnkey EPC solutions: Pre-Engineered Buildings, cold storage, cleanrooms, ceiling systems. Complete project delivery. Get your quote.',
   },
 };
 
@@ -98,7 +112,7 @@ export default function SolutionsPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={breadcrumbSchema} />
 
         <AISummaryBlock
@@ -112,11 +126,7 @@ export default function SolutionsPage() {
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl" />
           
           <div className="container-custom relative">
-            <nav className="mb-6 text-sm text-slate-400">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">Solutions</span>
-            </nav>
+            <Breadcrumbs items={[{ label: 'Solutions' }]} />
 
             <div className="max-w-3xl">
               <span className="inline-block px-4 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-sm font-medium mb-4">
@@ -246,8 +256,7 @@ export default function SolutionsPage() {
                   Complete EPC Project Execution
                 </h2>
                 <p className="mt-4 text-slate-300 leading-relaxed">
-                  End-to-end project delivery—from concept and engineering to construction and commissioning—
-                  ensuring seamless coordination, cost control, and predictable outcomes.
+                  End-to-end project delivery, from concept and engineering to construction and commissioning, with coordination, cost control, and delivery dates held in one place.
                 </p>
 
                 <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -258,7 +267,7 @@ export default function SolutionsPage() {
                     { title: 'Quality Assurance', desc: 'In-house manufacturing control' },
                   ].map((item) => (
                     <div key={item.title} className="flex items-start gap-3">
-                      <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400">
+                      <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400" aria-hidden="true">
                         ✓
                       </span>
                       <div>
@@ -280,7 +289,7 @@ export default function SolutionsPage() {
               <div className="relative">
                 <div className="aspect-square rounded-2xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 border border-white/10 p-8 flex items-center justify-center">
                   <div className="text-center">
-                    <span className="text-9xl opacity-20">🔧</span>
+                    <span className="text-9xl opacity-20" aria-hidden="true">🔧</span>
                     <p className="mt-4 text-slate-400">Turnkey Project Illustration</p>
                   </div>
                 </div>

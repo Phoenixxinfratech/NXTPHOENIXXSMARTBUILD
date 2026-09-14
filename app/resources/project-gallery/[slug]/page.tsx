@@ -6,6 +6,8 @@ import { Footer } from '@/components/blocks/footer';
 import { AISummaryBlock } from '@/components/ai/ai-summary-block';
 import { JsonLd } from '@/components/seo/json-ld';
 import { generateBreadcrumbSchema } from '@/lib/schema';
+import { buildSocialMetadata } from '@/lib/seo';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 interface ProjectPageProps {
   params: Promise<{ slug: string }>;
@@ -57,7 +59,7 @@ const projectDetails: Record<string, {
     industry: 'Manufacturing',
     scope: 'Industrial Warehouse & Cleanroom',
     area: '35,000 sq.ft',
-    description: 'State-of-the-art packaging facility with controlled environment areas for flexible packaging production.',
+    description: 'Packaging facility with controlled environment areas for flexible packaging production.',
     highlights: ['ISO Class 8 Cleanroom', 'Temperature Controlled', 'Modular Design', 'Quick Installation'],
     products: ['Cleanroom Partition', 'Sandwich PUF Panel', 'Cleanroom Doors'],
   },
@@ -258,10 +260,17 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
   const fullDesc = `${project.title} – ${project.scope} in ${project.location}. ${project.description} Built by PHOENIXX SmartBuild.`;
   const metaDesc = fullDesc.length > 160 ? fullDesc.slice(0, 157) + '...' : fullDesc;
 
+  const title = `${project.title} | Project Gallery`;
   return {
-    title: `${project.title} | Project Gallery`,
+    title,
     description: metaDesc,
     alternates: { canonical: `https://phoenixxsmartbuild.com/resources/project-gallery/${slug}` },
+    ...buildSocialMetadata({
+      title: `${title} | PHOENIXX SMARTBUILD`,
+      description: metaDesc,
+      path: `/resources/project-gallery/${slug}`,
+      type: 'article',
+    }),
   };
 }
 
@@ -287,7 +296,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={breadcrumbSchema} />
 
         <AISummaryBlock
@@ -298,13 +307,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         {/* Header */}
         <section className="border-b bg-muted/30 py-12 md:py-16">
           <div className="container-custom">
-            <nav className="mb-4 text-sm text-muted-foreground">
-              <Link href="/" className="hover:text-primary">Home</Link>
-              <span className="mx-2">/</span>
-              <Link href="/resources" className="hover:text-primary">Resources</Link>
-              <span className="mx-2">/</span>
-              <Link href="/resources/project-gallery" className="hover:text-primary">Project Gallery</Link>
-            </nav>
+            <Breadcrumbs tone="light" className="mb-4" items={[{ label: 'Resources', href: '/resources' }, { label: 'Project Gallery', href: '/resources/project-gallery' }]} />
             
             <span className="rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
               {project.industry}
@@ -322,7 +325,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               <div className="lg:col-span-2">
                 {/* Image Placeholder */}
                 <div className="aspect-video rounded-lg bg-muted mb-8 flex items-center justify-center">
-                  <span className="text-8xl opacity-20">🏗️</span>
+                  <span className="text-8xl opacity-20" aria-hidden="true">🏗️</span>
                 </div>
 
                 <div className="prose-custom">
@@ -335,7 +338,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   <ul className="grid gap-3 sm:grid-cols-2">
                     {project.highlights.map((highlight, idx) => (
                       <li key={idx} className="flex items-center gap-2">
-                        <span className="text-primary">✓</span>
+                        <span className="text-primary" aria-hidden="true">✓</span>
                         {highlight}
                       </li>
                     ))}

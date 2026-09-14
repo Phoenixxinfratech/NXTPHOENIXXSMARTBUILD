@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 // ============================================================================
 // FAQ HUB - SEO & AI OPTIMIZED
@@ -50,7 +51,7 @@ const pufPanelFAQs: FAQ[] = [
   },
   {
     id: 'puf-2',
-    question: 'What is the current price of PUF panels per square foot in India for 2025?',
+    question: 'What is the current price of PUF panels per square foot in India?',
     answer: 'PUF panel prices in India range from ₹80-180 per square foot depending on thickness (40mm-150mm), steel gauge (0.35mm-0.60mm), and coating type. A standard 50mm PUF wall panel with 0.5mm PPGI costs approximately ₹110-130 per sq.ft. Bulk orders and project-specific requirements affect final pricing.',
     linkText: 'Get current pricing',
     linkHref: '/get-a-quote',
@@ -223,7 +224,7 @@ const coldStorageFAQs: FAQ[] = [
     question: 'Which type of insulated panel is best for cold storage construction?',
     answer: 'PIR panels are recommended for most cold storage (+4°C to -25°C) due to excellent insulation and fire safety. For pharma cold chain, use PIR with SS inner face. Deep freeze (-40°C) requires 150mm+ PIR with vapor barrier. FM Approved PIR is mandatory for FM Global insured facilities.',
     linkText: 'Panel selection guide',
-    linkHref: '/resources/blogs/choosing-right-insulated-panel',
+    linkHref: '/resources/blogs/how-to-choose-right-insulated-panel',
   },
 ];
 
@@ -446,7 +447,7 @@ export default function FAQPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-16 md:py-24 overflow-hidden">
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-[0.03]" />
@@ -454,13 +455,7 @@ export default function FAQPage() {
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl" />
           
           <div className="container-custom relative">
-            <nav className="mb-6 text-sm text-slate-400">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <Link href="/resources" className="hover:text-white transition-colors">Resources</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">FAQ</span>
-            </nav>
+            <Breadcrumbs withSchema items={[{ label: 'Resources', href: '/resources' }, { label: 'FAQ' }]} />
 
             <div className="max-w-4xl">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
@@ -498,7 +493,7 @@ export default function FAQPage() {
                     {section.title.replace(' FAQs', '')}
                   </a>
                 ))}
-                <span className="px-3 py-1.5 text-sm text-slate-400">+{faqSections.length - 6} more</span>
+                <span className="px-3 py-1.5 text-sm text-slate-500">+{faqSections.length - 6} more</span>
               </div>
               <div className="flex gap-2">
                 <button
@@ -540,7 +535,10 @@ export default function FAQPage() {
                         className="rounded-xl border border-slate-200 bg-white overflow-hidden hover:border-slate-300 hover:shadow-md transition-all"
                       >
                         <button
+                          type="button"
                           onClick={() => toggleFAQ(faq.id)}
+                          aria-expanded={expandedFAQs.has(faq.id)}
+                          aria-controls={`faq-answer-${faq.id}`}
                           className="w-full flex items-start justify-between cursor-pointer p-5 md:p-6 text-left"
                         >
                           <h3 className="font-semibold text-slate-900 pr-4 text-base md:text-lg leading-snug">
@@ -557,7 +555,7 @@ export default function FAQPage() {
                           </span>
                         </button>
                         {expandedFAQs.has(faq.id) && (
-                          <div className="px-5 md:px-6 pb-5 md:pb-6 -mt-2">
+                          <div id={`faq-answer-${faq.id}`} className="px-5 md:px-6 pb-5 md:pb-6 -mt-2">
                             <div className="pt-4 border-t border-slate-100">
                               <p className="text-slate-600 leading-relaxed">
                                 {faq.answer}

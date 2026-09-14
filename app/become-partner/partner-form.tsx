@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { encodeFormData } from '@/lib/forms';
 
 const partnerTypes = [
   'Dealer / Distributor',
@@ -45,7 +46,7 @@ export function PartnerForm() {
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as any).toString(),
+        body: encodeFormData(formData),
       });
 
       if (response.ok) {
@@ -88,6 +89,7 @@ export function PartnerForm() {
             type="text"
             id="name"
             name="name"
+            autoComplete="name"
             required
             className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
             placeholder="Your full name"
@@ -101,6 +103,7 @@ export function PartnerForm() {
             type="text"
             id="company"
             name="company"
+            autoComplete="organization"
             required
             className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
             placeholder="Your company"
@@ -117,6 +120,8 @@ export function PartnerForm() {
             type="email"
             id="email"
             name="email"
+            autoComplete="email"
+            inputMode="email"
             required
             className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
             placeholder="you@company.com"
@@ -130,6 +135,8 @@ export function PartnerForm() {
             type="tel"
             id="phone"
             name="phone"
+            autoComplete="tel"
+            inputMode="tel"
             required
             className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
             placeholder="+91 XXXXX XXXXX"
@@ -206,7 +213,7 @@ export function PartnerForm() {
       </div>
 
       {error && (
-        <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
+        <div role="alert" className="p-4 bg-red-50 border border-red-200 rounded-lg">
           <p className="text-red-600 text-center">{error}</p>
         </div>
       )}

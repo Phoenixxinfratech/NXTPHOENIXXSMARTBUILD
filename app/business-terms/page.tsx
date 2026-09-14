@@ -1,14 +1,27 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Business Terms & Conditions | PHOENIXX',
+  title: 'Business Terms & Conditions',
   description:
     'Review business terms and conditions for PHOENIXX products and services. Transparent policies for all transactions.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/business-terms',
+  },
+  openGraph: {
+    title: 'Business Terms & Conditions | PHOENIXX SMARTBUILD',
+    description: 'Review business terms and conditions for PHOENIXX products and services. Transparent policies for all transactions.',
+    url: 'https://phoenixxsmartbuild.com/business-terms',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Business Terms & Conditions | PHOENIXX SMARTBUILD',
+    description: 'Review business terms and conditions for PHOENIXX products and services. Transparent policies for all transactions.',
   },
 };
 
@@ -16,15 +29,11 @@ export default function BusinessTermsPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* Hero */}
         <section className="bg-slate-900 py-16">
           <div className="container-custom">
-            <nav className="mb-6 text-sm text-slate-400">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">Business Terms</span>
-            </nav>
+            <Breadcrumbs withSchema items={[{ label: 'Business Terms' }]} />
             <h1 className="text-3xl md:text-4xl font-bold text-white">Business Terms & Conditions</h1>
             <p className="mt-4 text-slate-300">Last updated: January 2025</p>
           </div>

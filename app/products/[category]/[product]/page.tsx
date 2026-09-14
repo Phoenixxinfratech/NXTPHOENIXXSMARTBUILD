@@ -6,6 +6,7 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 import { siteConfig } from '@/lib/site-config';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 // Product images mapping
 const productImages: Record<string, Record<string, string[]>> = {
@@ -24,7 +25,7 @@ const productImages: Record<string, Record<string, string[]>> = {
       '/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL1.jpg',
       '/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL3.jpg',
       '/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL9.jpg',
-      '/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL19.jpg',
+      '/images/projects/gallery/PHOENIXX_WALL_PUF_PANEL19.jpg',
     ],
     'roofing-puf-panel': [
       '/images/products/sandwich-panels/roofing-panel/PHOENIXX_ROOFING_PANEL5.jpg',
@@ -33,17 +34,17 @@ const productImages: Record<string, Record<string, string[]>> = {
     ],
     'wall-ceiling-panel': [
       '/images/products/sandwich-panels/wall-ceiling-panel/Industrial-False-Ceiling-PUF-Panel-2.jpg',
-      '/images/products/sandwich-panels/wall-ceiling-panel/Industrial-False-Ceiling-PUF-Panel-3.jpg',
-      '/images/products/sandwich-panels/wall-ceiling-panel/Industrial-False-Ceiling-PUF-Panel-4.jpg',
-      '/images/products/sandwich-panels/wall-ceiling-panel/Industrial-False-Ceiling-PUF-Panel-10.jpg',
+      '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-3.jpg',
+      '/images/projects/gallery/Industrial-False-Ceiling-PUF-Panel-4.jpg',
+      '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-10.jpg',
     ],
     'rockwool-panel': [
-      '/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCHWOOL_PANEL1.jpg',
-      '/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCHWOOL_PANEL2.jpg',
-      '/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCHWOOL_PANEL3.jpg',
-      '/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCHWOOL_PANEL10.jpg',
-      '/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCHWOOL_PANEL11.jpg',
-      '/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCHWOOL_PANEL12.jpg',
+      '/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCKWOOL_PANEL1.jpg',
+      '/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCKWOOL_PANEL2.jpg',
+      '/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCKWOOL_PANEL3.jpg',
+      '/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCKWOOL_PANEL10.jpg',
+      '/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCKWOOL_PANEL11.jpg',
+      '/images/products/sandwich-panels/RockWool-panel/PHOENIXX_ROCKWOOL_PANEL12.jpg',
     ],
   },
   'doors': {
@@ -51,9 +52,9 @@ const productImages: Record<string, Record<string, string[]>> = {
       '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-1.jpg',
       '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-2.jpg',
       '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-3.jpg',
-      '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-4.jpg',
-      '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-5.jpg',
-      '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-6.jpg',
+      '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-1.jpg',
+      '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-2.jpg',
+      '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-3.jpg',
     ],
     'fire-rated-multipurpose-door': [
       '/images/products/doors/multipurpose-door/Metal-Door-Manufacturer-Ahmedabad-1.jpg',
@@ -74,24 +75,24 @@ const productImages: Record<string, Record<string, string[]>> = {
   },
   'cleanroom-solutions': {
     'cleanroom-partition': [
-      '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat1.jpg',
-      '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat2.jpg',
-      '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat3.jpg',
-      '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat4.jpg',
-      '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat5.jpg',
-      '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat6.jpg',
-      '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat7.jpg',
-      '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat8.jpg',
+      '/images/products/cleanroom/partition/Cleanroom-Partition-supplier-Manufacture-in-Gujarat1.jpg',
+      '/images/products/cleanroom/partition/Cleanroom-Partition-supplier-Manufacture-in-Gujarat2.jpg',
+      '/images/products/cleanroom/partition/Cleanroom-Partition-supplier-Manufacture-in-Gujarat3.jpg',
+      '/images/products/cleanroom/partition/Cleanroom-Partition-supplier-Manufacture-in-Gujarat4.jpg',
+      '/images/products/cleanroom/partition/Cleanroom-Partition-supplier-Manufacture-in-Gujarat5.jpg',
+      '/images/products/cleanroom/partition/Cleanroom-Partition-supplier-Manufacture-in-Gujarat6.jpg',
+      '/images/products/cleanroom/partition/Cleanroom-Partition-supplier-Manufacture-in-Gujarat7.jpg',
+      '/images/products/cleanroom/partition/Cleanroom-Partition-supplier-Manufacture-in-Gujarat8.jpg',
     ],
     'cleanroom-false-ceiling': [
-      '/images/products/cleanroom/ceiling/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects26.jpg',
-      '/images/products/cleanroom/ceiling/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects74.jpg',
-      '/images/products/cleanroom/ceiling/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects75.jpg',
-      '/images/products/cleanroom/ceiling/cleanroom-Manufacture-Supplier-in-Ahmedabad5.jpg',
+      '/images/products/cleanroom/ceiling/Pharma-cleanroom-panel-manufacturers-Phoenixx-infratech-projects26.jpg',
+      '/images/projects/gallery/Pharma-cleanroom-panel-manufacturers-Phoenixx-infratech-projects74.jpg',
+      '/images/solutions/cleanroom/cleanroom-Manufacture-Supplier-in-Ahmedabad7.jpg',
+      '/images/solutions/cleanroom/cleanroom-Manufacture-Supplier-in-Ahmedabad5.jpg',
     ],
     'cleanroom-doors': [
-      '/images/products/cleanroom/doors/Cleanroom-Door-Manufacturer-in-Ahmedabad-1.jpg',
-      '/images/products/cleanroom/doors/Cleanroom-Door-Manufacturer-in-Ahmedabad-2.jpg',
+      '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-1.jpg',
+      '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-2.jpg',
       '/images/products/cleanroom/doors/Cleanroom-Door-Manufacturer-in-Ahmedabad-10.jpg',
       '/images/products/cleanroom/doors/Cleanroom-Door-Manufacturer-in-Ahmedabad-12.jpg',
     ],
@@ -261,7 +262,7 @@ const productsData: Record<string, Record<string, ProductData>> = {
       // Related resources for internal linking
       relatedResources: [
         { title: 'PIR vs PUF vs Rockwool: Which Panel Is Best?', description: 'Complete comparison guide for choosing the right insulated panel for your project.', href: '/resources/blogs/puf-vs-pir-vs-rockwool', type: 'blog' },
-        { title: 'PIR Panel Price Guide 2025', description: 'Current market prices and factors affecting PIR panel costs in India.', href: '/resources/blogs/puf-panel-price-ahmedabad-2025-guide', type: 'blog' },
+        { title: 'PIR Panel Price Guide', description: 'Current market prices and factors affecting PIR panel costs in India.', href: '/resources/blogs/puf-panel-price-ahmedabad', type: 'blog' },
         { title: 'Fire Safety in Industrial Buildings', description: 'Best practices for fire-safe construction using insulated panels.', href: '/resources/blogs/fire-safety-industrial-buildings', type: 'blog' },
         { title: 'PIR Panel Manufacturer in Ahmedabad', description: 'Factory-direct PIR panels from PHOENIXX headquarters in Ahmedabad.', href: '/puf-panel-manufacturer-in-ahmedabad', type: 'location' },
         { title: 'PIR Panel Supplier in Gujarat', description: 'Pan-Gujarat delivery of PIR panels from GIDC Naroda facility.', href: '/resources/blogs/puf-panel-manufacturers-in-gujarat', type: 'location' },
@@ -342,7 +343,7 @@ const productsData: Record<string, Record<string, ProductData>> = {
         { question: 'What thickness of PUF panel is best for walls?', answer: 'For general industrial walls, 40-60mm PUF panels are recommended. For temperature-controlled environments, 80-120mm provides better insulation. Our team can recommend optimal thickness based on your specific needs.' },
         { question: 'How long do PUF panels last?', answer: 'Quality PUF panels like PHOENIXX last 20-25 years with proper installation and maintenance. The foam core maintains its insulation properties throughout its lifespan.' },
         { question: 'Can PUF panels be used for roofing?', answer: 'Yes, PHOENIXX offers roofing-specific PUF panels with trapezoidal profiles for water drainage and added structural strength. They provide both insulation and weatherproofing.' },
-        { question: 'Are PUF panels fire resistant?', answer: 'Standard PUF panels have Class E fire rating with self-extinguishing properties. For higher fire resistance, we recommend PIR or Rockwool panels.' },
+        { question: 'Are PUF panels fire resistant?', answer: 'Standard PUF panels are Class E under EN 13501-1, equivalent to B3 under DIN 4102, and are self-extinguishing. For higher fire resistance we recommend PIR panels (B-s1,d0) or Rockwool panels (Class A1, non-combustible).' },
         { question: 'What is the R-value of PUF panels?', answer: 'PUF panels provide R-values from R-5.5 (30mm) to R-35 (150mm). The 0.024 W/mK thermal conductivity offers excellent insulation per thickness.' },
         { question: 'How are PUF panels installed?', answer: 'PUF panels install quickly using cam-lock or tongue-and-groove joints. Vertical installation for walls with concealed fixings, horizontal for roofs with through-fixings. Typical installation rate is 200-300 sqm per day.' },
         { question: 'Can PUF panels be cut on site?', answer: 'Yes, PUF panels can be cut on site using circular saws or jigsaws. However, factory cutting is recommended for clean edges and proper sealing.' },
@@ -401,7 +402,7 @@ const productsData: Record<string, Record<string, ProductData>> = {
           description: 'Manufacturing facilities need controlled environments for worker comfort and product quality. PUF panels create comfortable working conditions while reducing energy consumption.',
           benefits: ['Worker comfort improved', 'Reduced energy bills', 'Quick project completion', 'Customizable lengths'],
           linkText: 'Textile Industry Solutions',
-          linkHref: '/industries/textile',
+          linkHref: '/industries/precision-engineering',
         },
       ],
       // Related resources for internal linking
@@ -561,7 +562,7 @@ PHOENIXX PUF sandwich roof panels are specially designed to perform reliably in 
           category: 'Panel Dimensions',
           items: [
             { label: 'Thickness', value: '25, 30, 40, 50 mm' },
-            { label: 'Width', value: '1000/1200 mm' },
+            { label: 'Width', value: '1000 mm effective cover (1200 mm on request)' },
             { label: 'Length', value: 'Up to 6,000 mm' },
             { label: 'Weight', value: '6-12 kg/m²' },
           ],
@@ -1362,34 +1363,22 @@ export default async function ProductDetailPage({ params }: Props) {
 
   const categoryName = category.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
 
-  // Enhanced Schema Markup - Using aggregateRating + review (no offers without price)
+  // Product schema uses offers rather than ratings: pricing is quoted per project
+  // and we do not collect on-page reviews, so review markup would be fabricated.
   const productSchema = {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: data.name,
     description: data.description,
-    image: `https://phoenixxsmartbuild.com/images/products/sandwich-panels/puf-panel/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp`,
+    image: `https://phoenixxsmartbuild.com/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp`,
     brand: { '@type': 'Brand', name: 'PHOENIXX SMARTBUILD' },
     manufacturer: { '@type': 'Organization', name: 'NXT PHOENIXX SMARTBUILD LLP', url: 'https://phoenixxsmartbuild.com' },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '127',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: {
-      '@type': 'Review',
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: '5',
-        bestRating: '5',
-      },
-      author: {
-        '@type': 'Organization',
-        name: 'Industrial Client',
-      },
-      reviewBody: `Excellent quality ${data.name} with superior thermal insulation. Professional installation and support from PHOENIXX SMARTBUILD.`,
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'INR',
+      availability: 'https://schema.org/InStock',
+      url: `${siteConfig.url}/products/${category}/${product}`,
+      seller: { '@type': 'Organization', name: 'NXT PHOENIXX SMARTBUILD LLP' },
     },
   };
 
@@ -1417,7 +1406,7 @@ export default async function ProductDetailPage({ params }: Props) {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={productSchema} />
         <JsonLd data={breadcrumbSchema} />
         <JsonLd data={faqSchema} />
@@ -1426,17 +1415,7 @@ export default async function ProductDetailPage({ params }: Props) {
         <section className={`relative bg-gradient-to-br ${data.gradient} py-20 md:py-28`}>
           <div className="absolute inset-0 bg-black/20" />
           <div className="container-custom relative">
-            <nav className="mb-6 text-sm text-white/70" aria-label="Breadcrumb">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <Link href="/products" className="hover:text-white transition-colors">Products</Link>
-              <span className="mx-2">/</span>
-              <Link href={`/products/${category}`} className="hover:text-white transition-colors capitalize">
-                {categoryName}
-              </Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">{data.name}</span>
-            </nav>
+            <Breadcrumbs items={[{ label: 'Products', href: '/products' }, { label: categoryName, href: `/products/${category}` }, { label: data.name }]} />
 
             <div className="max-w-3xl">
               <span className="inline-block px-4 py-1 rounded-full bg-white/20 text-white text-sm font-medium mb-4">
@@ -1498,6 +1477,7 @@ export default async function ProductDetailPage({ params }: Props) {
                     <Image
                       src={img}
                       alt={`${data.name} - Image ${idx + 1}`}
+                      sizes="(max-width: 768px) 100vw, 33vw"
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
@@ -1515,7 +1495,7 @@ export default async function ProductDetailPage({ params }: Props) {
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Why Choose PHOENIXX {data.name}?</h2>
               <p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
-                Industry-leading quality backed by engineering excellence and customer trust.
+                Consistent quality backed by engineering excellence and customer trust.
               </p>
             </div>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -1620,7 +1600,7 @@ export default async function ProductDetailPage({ params }: Props) {
                   {data.name} Use Cases by Industry
                 </h2>
                 <p className="mt-4 text-slate-300 max-w-2xl mx-auto">
-                  Discover how leading industries leverage {data.name} for superior performance and compliance.
+                  Discover how leading industries use {data.name} for superior performance and compliance.
                 </p>
               </div>
               <div className="grid gap-8 md:grid-cols-2">
@@ -1637,7 +1617,7 @@ export default async function ProductDetailPage({ params }: Props) {
                     <ul className="grid grid-cols-2 gap-2 mb-4">
                       {useCase.benefits.map((benefit, bIdx) => (
                         <li key={bIdx} className="text-sm text-slate-400 flex items-center gap-2">
-                          <span className="text-emerald-400">✓</span> {benefit}
+                          <span className="text-emerald-400" aria-hidden="true">✓</span> {benefit}
                         </li>
                       ))}
                     </ul>
@@ -1663,26 +1643,28 @@ export default async function ProductDetailPage({ params }: Props) {
                 Recommended {data.name} specifications for different applications and industry standards.
               </p>
               <div className="bg-slate-50 rounded-2xl overflow-hidden">
-                <table className="w-full">
-                  <thead className={`bg-gradient-to-r ${data.gradient} text-white`}>
-                    <tr>
-                      <th className="px-6 py-4 text-left font-semibold">Application</th>
-                      <th className="px-6 py-4 text-left font-semibold">Metric</th>
-                      <th className="px-6 py-4 text-left font-semibold">Recommended Value</th>
-                      <th className="px-6 py-4 text-left font-semibold hidden md:table-cell">Industry Benchmark</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {data.performanceByApplication.map((perf, idx) => (
-                      <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
-                        <td className="px-6 py-4 font-medium text-slate-900">{perf.application}</td>
-                        <td className="px-6 py-4 text-slate-600">{perf.metric}</td>
-                        <td className="px-6 py-4 font-bold text-blue-600">{perf.value}</td>
-                        <td className="px-6 py-4 text-slate-500 hidden md:table-cell">{perf.benchmark}</td>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead className={`bg-gradient-to-r ${data.gradient} text-white`}>
+                      <tr>
+                        <th className="px-6 py-4 text-left font-semibold">Application</th>
+                        <th className="px-6 py-4 text-left font-semibold">Metric</th>
+                        <th className="px-6 py-4 text-left font-semibold">Recommended Value</th>
+                        <th className="px-6 py-4 text-left font-semibold hidden md:table-cell">Industry Benchmark</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody>
+                      {data.performanceByApplication.map((perf, idx) => (
+                        <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
+                          <td className="px-6 py-4 font-medium text-slate-900">{perf.application}</td>
+                          <td className="px-6 py-4 text-slate-600">{perf.metric}</td>
+                          <td className="px-6 py-4 font-bold text-blue-600">{perf.value}</td>
+                          <td className="px-6 py-4 text-slate-500 hidden md:table-cell">{perf.benchmark}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </section>
@@ -1830,7 +1812,7 @@ export default async function ProductDetailPage({ params }: Props) {
                   <details key={idx} className="group bg-slate-50 rounded-xl overflow-hidden">
                     <summary className="flex justify-between items-center cursor-pointer p-6 font-semibold text-slate-900 hover:bg-slate-100 transition-colors">
                       <span className="pr-4">{faq.question}</span>
-                      <span className="text-2xl text-slate-400 group-open:rotate-45 transition-transform">+</span>
+                      <span className="text-2xl text-slate-500 group-open:rotate-45 transition-transform">+</span>
                     </summary>
                     <div className="px-6 pb-6 text-slate-600 leading-relaxed">
                       {faq.answer}
@@ -1866,7 +1848,7 @@ export default async function ProductDetailPage({ params }: Props) {
                   <li>• Walk joint lines and flashings every monsoon season — sealant failure is the usual leak path</li>
                   <li>• Wash skins with mild detergent; abrasive cleaners cut coating life</li>
                   <li>• Re-check fastener torque and washers every two years on exposed roofing</li>
-                  <li>• Watch for condensation on the inner skin in humid plants — often a vapour-detail issue, not foam failure</li>
+                  <li>• Watch for condensation on the inner skin in humid plants, often a vapour-detail issue, not foam failure</li>
                   <li>• After cyclones or extreme wind events, inspect edge flashings before the next rain cycle</li>
                 </ul>
               </div>

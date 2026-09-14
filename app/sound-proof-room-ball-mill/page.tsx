@@ -14,6 +14,7 @@ import {
   generateOfferSchema,
   generateSpeakableSchema,
 } from '@/lib/schema';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Sound Proof Room for Ball Milling Machine | Acoustic Enclosure India',
@@ -120,7 +121,7 @@ export default function SoundProofRoomBallMillPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={organizationSchema} />
         <JsonLd data={localBusinessSchema} />
         <JsonLd data={serviceSchema} />
@@ -135,17 +136,7 @@ export default function SoundProofRoomBallMillPage() {
         <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20 md:py-28">
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-[0.05]" />
           <div className="container-custom relative">
-            <nav className="mb-6 text-sm text-white/80">
-              <Link href="/" className="hover:text-white transition-colors">
-                Home
-              </Link>
-              <span className="mx-2">/</span>
-              <Link href="/solutions" className="hover:text-white transition-colors">
-                Solutions
-              </Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">Sound Proof Room</span>
-            </nav>
+            <Breadcrumbs items={[{ label: 'Solutions', href: '/solutions' }, { label: 'Sound Proof Room' }]} />
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-emerald-500/10 px-4 py-2 text-sm font-medium text-emerald-400 mb-6">
                 Industrial Acoustic Solutions
@@ -371,7 +362,7 @@ export default function SoundProofRoomBallMillPage() {
                   },
                 ].map((item, idx) => (
                   <div key={idx} className="bg-white rounded-xl p-6 flex gap-4">
-                    <span className="text-2xl">✓</span>
+                    <span className="text-2xl" aria-hidden="true">✓</span>
                     <div>
                       <h3 className="font-bold text-slate-900">{item.title}</h3>
                       <p className="text-slate-600 text-sm mt-1">{item.desc}</p>
@@ -513,7 +504,7 @@ export default function SoundProofRoomBallMillPage() {
                   'Maintenance clearance',
                 ].map((opt, idx) => (
                   <div key={idx} className="flex items-center gap-2 bg-white rounded-lg px-4 py-3">
-                    <span className="text-emerald-500">✓</span>
+                    <span className="text-emerald-500" aria-hidden="true">✓</span>
                     <span className="text-slate-700">{opt}</span>
                   </div>
                 ))}
@@ -598,7 +589,7 @@ export default function SoundProofRoomBallMillPage() {
                   'Creates professional factory environment',
                 ].map((benefit, idx) => (
                   <div key={idx} className="flex items-center gap-3 bg-slate-50 rounded-xl p-4">
-                    <span className="text-2xl">✓</span>
+                    <span className="text-2xl" aria-hidden="true">✓</span>
                     <span className="text-slate-700 font-medium">{benefit}</span>
                   </div>
                 ))}

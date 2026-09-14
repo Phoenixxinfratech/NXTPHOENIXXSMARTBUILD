@@ -4,6 +4,7 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { AISummaryBlock } from '@/components/ai/ai-summary-block';
 import { JsonLd } from '@/components/seo/json-ld';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Industries Served – Pharma, Food & More',
@@ -11,6 +12,19 @@ export const metadata: Metadata = {
     'Industry-specific infrastructure: pharma cleanrooms, food processing, dairy, cold chain, automotive. Compliance assured.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/industries',
+  },
+  openGraph: {
+    title: 'Industries Served – Pharma, Food & More | PHOENIXX SMARTBUILD',
+    description: 'Industry-specific infrastructure: pharma cleanrooms, food processing, dairy, cold chain, automotive. Compliance assured.',
+    url: 'https://phoenixxsmartbuild.com/industries',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Industries Served – Pharma, Food & More | PHOENIXX SMARTBUILD',
+    description: 'Industry-specific infrastructure: pharma cleanrooms, food processing, dairy, cold chain, automotive. Compliance assured.',
   },
 };
 
@@ -118,7 +132,7 @@ export default function IndustriesPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={breadcrumbSchema} />
 
         <AISummaryBlock
@@ -132,11 +146,7 @@ export default function IndustriesPage() {
           <div className="absolute top-1/2 -left-32 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl" />
           
           <div className="container-custom relative">
-            <nav className="mb-6 text-sm text-slate-400">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">Industries</span>
-            </nav>
+            <Breadcrumbs items={[{ label: 'Industries' }]} />
 
             <div className="max-w-3xl">
               <span className="inline-block px-4 py-1 rounded-full bg-orange-500/20 text-orange-300 text-sm font-medium mb-4">
@@ -259,7 +269,7 @@ export default function IndustriesPage() {
                     { title: 'Technical Support', desc: 'Industry-experienced teams for ongoing support' },
                   ].map((item) => (
                     <div key={item.title} className="flex items-start gap-4 p-4 rounded-xl bg-white shadow-sm">
-                      <span className="flex-shrink-0 w-10 h-10 rounded-lg bg-orange-100 flex items-center justify-center text-orange-600">
+                      <span className="flex-shrink-0 w-10 h-10 rounded-lg bg-orange-100 flex items-center justify-center text-orange-600" aria-hidden="true">
                         ✓
                       </span>
                       <div>

@@ -120,6 +120,12 @@ const config: Config = {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0.5' },
         },
+        // Slow drift behind hero copy. Alternates rather than looping so it
+        // never snaps back to the start mid-view.
+        'hero-pan': {
+          from: { transform: 'scale(1)' },
+          to: { transform: 'scale(1.08)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -132,6 +138,7 @@ const config: Config = {
         'slide-in-from-right': 'slide-in-from-right 0.3s ease-out',
         shimmer: 'shimmer 2s linear infinite',
         pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'hero-pan': 'hero-pan 24s ease-in-out infinite alternate',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

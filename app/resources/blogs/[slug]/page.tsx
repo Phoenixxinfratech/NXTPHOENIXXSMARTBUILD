@@ -12,6 +12,7 @@ import { injectHeadingIds } from '@/lib/blog-utils';
 import { blogPosts, getBlogPost } from '@/lib/blog-data';
 import { RelatedResources } from '@/components/blocks/related-resources';
 import { getRelatedLinksForBlog } from '@/lib/internal-links';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
@@ -74,6 +75,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     headline: post.title,
     description: post.excerpt,
     datePublished: post.date,
+    // Without dateModified, Google has no freshness signal for revised posts.
+    dateModified: post.lastModified || post.date,
     ...(post.coverImage ? { image: `https://phoenixxsmartbuild.com${post.coverImage}` } : {}),
     author: { '@type': 'Person', name: post.author.name },
     publisher: {
@@ -100,7 +103,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={breadcrumbSchema} />
         <JsonLd data={articleSchema} />
         {faqSchema && <JsonLd data={faqSchema} />}
@@ -113,13 +116,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         {/* Article Header */}
         <section className="border-b bg-gradient-to-b from-slate-50 to-white py-12 md:py-16">
           <div className="container-custom max-w-4xl">
-            <nav className="mb-4 text-sm text-slate-500">
-              <Link href="/" className="hover:text-primary">Home</Link>
-              <span className="mx-2">/</span>
-              <Link href="/resources" className="hover:text-primary">Resources</Link>
-              <span className="mx-2">/</span>
-              <Link href="/resources/blogs" className="hover:text-primary">Blogs</Link>
-            </nav>
+            <Breadcrumbs tone="light" className="mb-4" items={[{ label: 'Resources', href: '/resources' }, { label: 'Blogs', href: '/resources/blogs' }]} />
             
             <span className="rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
               {post.category}

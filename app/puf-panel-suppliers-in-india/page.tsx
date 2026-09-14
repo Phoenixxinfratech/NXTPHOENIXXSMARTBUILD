@@ -3,13 +3,27 @@ import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'PUF Panel Suppliers in India | PHOENIXX',
+  title: 'PUF Panel Suppliers in India',
   description: 'Reliable PUF panel suppliers in India. Wide range of insulated panels for cold storage, cleanrooms, warehouses.',
   keywords: ['PUF panel suppliers in India', 'PUF panel supply', 'insulated panel suppliers'],
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/puf-panel-suppliers-in-india',
+  },
+  openGraph: {
+    title: 'PUF Panel Suppliers in India | PHOENIXX SMARTBUILD',
+    description: 'Reliable PUF panel suppliers in India. Wide range of insulated panels for cold storage, cleanrooms, warehouses.',
+    url: 'https://phoenixxsmartbuild.com/puf-panel-suppliers-in-india',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PUF Panel Suppliers in India | PHOENIXX SMARTBUILD',
+    description: 'Reliable PUF panel suppliers in India. Wide range of insulated panels for cold storage, cleanrooms, warehouses.',
   },
 };
 
@@ -61,13 +75,15 @@ export default function PufPanelSuppliersIndiaPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={faqSchema} />
 
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-rose-900 via-pink-900 to-slate-900 py-20 md:py-28">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
+            <Breadcrumbs withSchema items={[{ label: 'Products', href: '/products' }, { label: 'PUF Panel Suppliers in India' }]} />
+
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-rose-500/10 px-4 py-2 text-sm font-medium text-rose-400 mb-6">
                 🚛 Reliable Supply Chain Partner

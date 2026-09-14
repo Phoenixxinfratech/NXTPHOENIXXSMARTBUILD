@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
+import { PartnerForm } from './partner-form';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Become a Partner – Channel Partnership',
@@ -9,6 +10,19 @@ export const metadata: Metadata = {
     'Partner with PHOENIXX for PUF panels and industrial products. Dealer and distributor opportunities across India.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/become-partner',
+  },
+  openGraph: {
+    title: 'Become a Partner – Channel Partnership | PHOENIXX SMARTBUILD',
+    description: 'Partner with PHOENIXX for PUF panels and industrial products. Dealer and distributor opportunities across India.',
+    url: 'https://phoenixxsmartbuild.com/become-partner',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Become a Partner – Channel Partnership | PHOENIXX SMARTBUILD',
+    description: 'Partner with PHOENIXX for PUF panels and industrial products. Dealer and distributor opportunities across India.',
   },
 };
 
@@ -56,18 +70,14 @@ export default function BecomePartnerPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-emerald-900 via-teal-800 to-cyan-900 py-20 md:py-28">
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-[0.05]" />
           <div className="absolute top-1/4 left-0 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl" />
           
           <div className="container-custom relative">
-            <nav className="mb-6 text-sm text-teal-200">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">Become a Partner</span>
-            </nav>
+            <Breadcrumbs withSchema items={[{ label: 'Become a Partner' }]} />
 
             <div className="max-w-3xl">
               <span className="inline-block px-4 py-1 rounded-full bg-white/10 text-emerald-300 text-sm font-medium mb-4">
@@ -148,7 +158,7 @@ export default function BecomePartnerPage() {
                 <div className="mt-8 grid gap-4 sm:grid-cols-2">
                   {advantages.map((adv) => (
                     <div key={adv.title} className="flex items-start gap-3">
-                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center text-xs">
+                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center text-xs" aria-hidden="true">
                         ✓
                       </span>
                       <div>
@@ -163,7 +173,7 @@ export default function BecomePartnerPage() {
               <div className="relative">
                 <div className="aspect-square rounded-2xl bg-gradient-to-br from-emerald-100 to-teal-100 flex items-center justify-center">
                   <div className="text-center p-8">
-                    <span className="text-9xl opacity-30">🤝</span>
+                    <span className="text-9xl opacity-30" aria-hidden="true">🤝</span>
                     <p className="mt-4 text-slate-500">Partnership Network</p>
                   </div>
                 </div>
@@ -186,119 +196,7 @@ export default function BecomePartnerPage() {
               </div>
 
               <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10">
-                <form className="space-y-6">
-                  <div className="grid gap-6 sm:grid-cols-2">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
-                        Full Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        required
-                        className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
-                        placeholder="Your name"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-slate-700 mb-2">
-                        Company Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="company"
-                        name="company"
-                        required
-                        className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
-                        placeholder="Company name"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid gap-6 sm:grid-cols-2">
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                        className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
-                        placeholder="you@company.com"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-2">
-                        Phone Number *
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        required
-                        className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
-                        placeholder="+91 XXXXX XXXXX"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid gap-6 sm:grid-cols-2">
-                    <div>
-                      <label htmlFor="location" className="block text-sm font-medium text-slate-700 mb-2">
-                        Location / Territory *
-                      </label>
-                      <input
-                        type="text"
-                        id="location"
-                        name="location"
-                        required
-                        className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
-                        placeholder="City, State"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="partnerType" className="block text-sm font-medium text-slate-700 mb-2">
-                        Partnership Type *
-                      </label>
-                      <select
-                        id="partnerType"
-                        name="partnerType"
-                        required
-                        className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
-                      >
-                        <option value="">Select type</option>
-                        <option value="dealer">Dealer / Distributor</option>
-                        <option value="contractor">Project Contractor</option>
-                        <option value="consultant">Consultant / Architect</option>
-                        <option value="channel">Channel Partner</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="experience" className="block text-sm font-medium text-slate-700 mb-2">
-                      Business Experience *
-                    </label>
-                    <textarea
-                      id="experience"
-                      name="experience"
-                      required
-                      rows={4}
-                      className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all resize-none"
-                      placeholder="Tell us about your business, experience, and why you want to partner with PHOENIXX..."
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full rounded-lg bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-4 font-semibold text-white shadow-lg hover:shadow-xl transition-all"
-                  >
-                    Submit Partnership Application
-                  </button>
-                </form>
+                <PartnerForm />
               </div>
             </div>
           </div>

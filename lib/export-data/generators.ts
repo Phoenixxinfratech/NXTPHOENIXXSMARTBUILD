@@ -13,7 +13,7 @@ export function generateExportCityIntro(city: ExportCity, country: ExportCountry
       : '';
   const port = city.port ? ` ${city.name} connects via ${city.port} for import logistics.` : '';
   const variants = [
-    `PHOENIXX SMARTBUILD exports sandwich PUF panels, PIR panels, roofing systems, and cold storage solutions to ${city.name}, ${country.name} — supporting ${city.keyIndustries.slice(0, 3).join(', ').toLowerCase()} projects with factory-direct engineering from India.${estate}${port} ${city.localPainPoint}`,
+    `PHOENIXX SMARTBUILD exports sandwich PUF panels, PIR panels, roofing systems, and cold storage solutions to ${city.name}, ${country.name}, supporting ${city.keyIndustries.slice(0, 3).join(', ').toLowerCase()} projects with factory-direct engineering from India.${estate}${port} ${city.localPainPoint}`,
     `Industrial buyers in ${city.name} choose PHOENIXX for insulated building envelopes that reduce HVAC costs, accelerate construction, and meet export documentation requirements for ${country.name}.${estate} ${city.localPainPoint}`,
     `From ${city.name} warehouses to cold chain and processing plants, PHOENIXX delivers premium sandwich panels with container shipping, technical datasheets, and installation guidance.${port}${estate} ${city.localPainPoint}`,
   ];
@@ -117,7 +117,7 @@ export function getExportHubFAQs(): ExportFAQ[] {
     {
       question: 'Which African countries does PHOENIXX export to?',
       answer:
-        'PHOENIXX exports to 16 African markets including Kenya, Tanzania, Uganda, Rwanda, Ghana, Zambia, Botswana, Namibia, Mozambique, Angola, South Africa, Nigeria, Zimbabwe, Ethiopia, Mauritius, and the Democratic Republic of Congo — with city-specific support for major industrial hubs.',
+        'PHOENIXX exports to 16 African markets including Kenya, Tanzania, Uganda, Rwanda, Ghana, Zambia, Botswana, Namibia, Mozambique, Angola, South Africa, Nigeria, Zimbabwe, Ethiopia, Mauritius, and the Democratic Republic of Congo, with city-specific support for major industrial hubs.',
     },
     {
       question: 'What products can be exported in a single container?',

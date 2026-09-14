@@ -16,7 +16,6 @@ import {
   generateSpeakableSchema,
   generateQAPageSchema,
   generateImageObjectSchema,
-  generateVideoSchema,
 } from '@/lib/schema';
 
 export const metadata: Metadata = {
@@ -116,26 +115,6 @@ const productSchema = {
   },
   category: 'Insulated Panels',
   material: 'Polyurethane Foam (PUF) + Pre-painted Steel',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.8',
-    reviewCount: '156',
-    bestRating: '5',
-  },
-  review: {
-    '@type': 'Review',
-    reviewRating: {
-      '@type': 'Rating',
-      ratingValue: '5',
-      bestRating: '5',
-    },
-    author: {
-      '@type': 'Organization',
-      name: 'Industrial Project Consultants',
-    },
-    reviewBody:
-      'Excellent quality PUF panels for our 5,000 sq.m industrial shed project. On-time delivery and superior insulation performance.',
-  },
   offers: {
     '@type': 'AggregateOffer',
     priceCurrency: 'INR',
@@ -150,7 +129,7 @@ export default function BestPufPanelForIndustrialShedPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* ── 14 JSON-LD Schemas ── */}
         <JsonLd data={generateOrganizationSchema()} />
         <JsonLd data={generateLocalBusinessSchema()} />
@@ -225,19 +204,6 @@ export default function BestPufPanelForIndustrialShedPage() {
               'https://phoenixxsmartbuild.com/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
             width: 1200,
             height: 630,
-          })}
-        />
-        <JsonLd
-          data={generateVideoSchema({
-            name: 'PHOENIXX PUF Panel Manufacturing & Installation',
-            description:
-              'Watch how PHOENIXX manufactures and installs premium PUF panels for industrial sheds across India.',
-            thumbnailUrl:
-              'https://phoenixxsmartbuild.com/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
-            uploadDate: '2025-01-01',
-            duration: 'PT5M30S',
-            contentUrl:
-              'https://phoenixxsmartbuild.com/videos/factory-tour',
           })}
         />
         <JsonLd data={productSchema} />
@@ -342,7 +308,7 @@ export default function BestPufPanelForIndustrialShedPage() {
                   <li>
                     <strong>Skyrocketing Energy Costs:</strong> Without insulation, industrial HVAC
                     systems work overtime. A 5,000 sq.m factory shed can spend ₹8-12 lakh annually on
-                    cooling alone — an expense that proper insulation can cut by 25-30%.
+                    cooling alone: an expense that proper insulation can cut by 25-30%.
                   </li>
                   <li>
                     <strong>Worker Discomfort &amp; Safety:</strong> High temperatures and condensation
@@ -369,7 +335,7 @@ export default function BestPufPanelForIndustrialShedPage() {
                   PUF (Polyurethane Foam) sandwich panels solve every one of these problems in a
                   single building component. By combining a rigid closed-cell insulation core with
                   durable pre-painted steel facings, PUF panels deliver thermal protection, weather
-                  resistance, acoustic dampening, and structural strength — all without the need for
+                  resistance, acoustic dampening, and structural strength, all without the need for
                   secondary insulation layers, waterproofing membranes, or additional cladding. The
                   result is faster construction, lower lifetime costs, and a dramatically better
                   working environment inside your industrial shed.
@@ -391,8 +357,7 @@ export default function BestPufPanelForIndustrialShedPage() {
 
               <div className="prose prose-lg prose-slate max-w-none">
                 <p>
-                  A PUF panel is an engineered sandwich structure consisting of two metal skins —
-                  typically pre-painted galvanized steel (PPGI) or galvalume (PPGL) — bonded to a
+                  A PUF panel is an engineered sandwich structure consisting of two metal skins, typically pre-painted galvanized steel (PPGI) or galvalume (PPGL) — bonded to a
                   rigid polyurethane foam core. The foam is injected at high pressure between the
                   metal faces and expands to form a monolithic bond, creating a composite panel with
                   exceptional strength-to-weight ratio. With a thermal conductivity of just 0.024
@@ -477,30 +442,32 @@ export default function BestPufPanelForIndustrialShedPage() {
                 PUF Panel Specifications at a Glance
               </h3>
               <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
-                <table className="w-full">
-                  <thead>
-                    <tr className="bg-slate-900 text-white">
-                      <th className="px-6 py-4 text-left font-semibold">Parameter</th>
-                      <th className="px-6 py-4 text-left font-semibold">Specification</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-200">
-                    {[
-                      { label: 'Thickness Options', value: '30mm, 40mm, 50mm, 60mm, 80mm, 100mm, 120mm, 150mm' },
-                      { label: 'Foam Density', value: '40 ± 2 kg/m³' },
-                      { label: 'Thermal Conductivity', value: '0.024 W/mK (λ)' },
-                      { label: 'Fire Rating', value: 'B1, B2, B3 (PIR option available)' },
-                      { label: 'Max Span (Roof)', value: 'Up to 6-8 metres without purlins' },
-                      { label: 'Steel Thickness', value: '0.40mm – 0.60mm PPGI/PPGL' },
-                      { label: 'Coating Options', value: 'PE, SMP, PVDF' },
-                    ].map((row, idx) => (
-                      <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
-                        <td className="px-6 py-4 font-semibold text-slate-900">{row.label}</td>
-                        <td className="px-6 py-4 text-slate-600">{row.value}</td>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="bg-slate-900 text-white">
+                        <th className="px-6 py-4 text-left font-semibold">Parameter</th>
+                        <th className="px-6 py-4 text-left font-semibold">Specification</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody className="divide-y divide-slate-200">
+                      {[
+                        { label: 'Thickness Options', value: '30mm, 40mm, 50mm, 60mm, 80mm, 100mm, 120mm, 150mm' },
+                        { label: 'Foam Density', value: '40 ± 2 kg/m³' },
+                        { label: 'Thermal Conductivity', value: '0.024 W/mK (λ)' },
+                        { label: 'Fire Rating', value: 'B1, B2, B3 (PIR option available)' },
+                        { label: 'Max Span (Roof)', value: 'Up to 6-8 metres without purlins' },
+                        { label: 'Steel Thickness', value: '0.40mm – 0.60mm PPGI/PPGL' },
+                        { label: 'Coating Options', value: 'PE, SMP, PVDF' },
+                      ].map((row, idx) => (
+                        <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
+                          <td className="px-6 py-4 font-semibold text-slate-900">{row.label}</td>
+                          <td className="px-6 py-4 text-slate-600">{row.value}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
               <p className="mt-4 text-center text-sm text-slate-500">
                 Also explore:{' '}
@@ -547,7 +514,7 @@ export default function BestPufPanelForIndustrialShedPage() {
                   {
                     num: '01',
                     title: 'Superior Thermal Insulation',
-                    desc: 'PUF panels deliver an R-value of up to 6.25 m²K/W at 150mm thickness — the highest per-millimetre insulation of any commercial panel. This keeps indoor temperatures stable, reducing HVAC load by 25-30% compared to uninsulated sheds.',
+                    desc: 'PUF panels deliver an R-value of up to 6.25 m²K/W at 150mm thickness: the highest per-millimetre insulation of any commercial panel. This keeps indoor temperatures stable, reducing HVAC load by 25-30% compared to uninsulated sheds.',
                   },
                   {
                     num: '02',
@@ -765,39 +732,41 @@ export default function BestPufPanelForIndustrialShedPage() {
               </p>
 
               <div className="bg-slate-50 rounded-2xl overflow-hidden shadow-sm">
-                <table className="w-full">
-                  <thead>
-                    <tr className="bg-slate-900 text-white">
-                      <th className="px-6 py-4 text-left font-semibold">Specification</th>
-                      <th className="px-6 py-4 text-left font-semibold">Value / Range</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-200">
-                    {[
-                      { label: 'Panel Thickness', value: '30mm, 40mm, 50mm, 60mm, 80mm, 100mm, 120mm, 150mm' },
-                      { label: 'Foam Core Density', value: '40 ± 2 kg/m³ (high-density rigid PUF)' },
-                      { label: 'Thermal Conductivity (λ)', value: '0.024 W/mK' },
-                      { label: 'R-Value (at 50mm)', value: '2.08 m²K/W' },
-                      { label: 'R-Value (at 100mm)', value: '4.17 m²K/W' },
-                      { label: 'Fire Classification', value: 'B1 (self-extinguishing), B2, B3; PIR option available' },
-                      { label: 'Steel Facing Thickness', value: '0.40mm, 0.45mm, 0.50mm, 0.60mm (PPGI/PPGL)' },
-                      { label: 'Coating Options', value: 'PE (Polyester), SMP (Silicone Modified Polyester), PVDF (Polyvinylidene Fluoride)' },
-                      { label: 'Panel Width', value: '1000mm (effective coverage)' },
-                      { label: 'Panel Length', value: 'Custom — up to 20 metres' },
-                      { label: 'Temperature Range', value: '-40°C to +80°C' },
-                      { label: 'Water Absorption', value: '< 1.5% by volume (closed-cell structure)' },
-                      { label: 'Compressive Strength', value: '≥ 0.15 MPa' },
-                      { label: 'Service Life', value: '25-30 years with proper installation' },
-                    ].map((row, idx) => (
-                      <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
-                        <td className="px-6 py-3 font-semibold text-slate-900 text-sm">
-                          {row.label}
-                        </td>
-                        <td className="px-6 py-3 text-slate-600 text-sm">{row.value}</td>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="bg-slate-900 text-white">
+                        <th className="px-6 py-4 text-left font-semibold">Specification</th>
+                        <th className="px-6 py-4 text-left font-semibold">Value / Range</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody className="divide-y divide-slate-200">
+                      {[
+                        { label: 'Panel Thickness', value: '30mm, 40mm, 50mm, 60mm, 80mm, 100mm, 120mm, 150mm' },
+                        { label: 'Foam Core Density', value: '40 ± 2 kg/m³ (high-density rigid PUF)' },
+                        { label: 'Thermal Conductivity (λ)', value: '0.024 W/mK' },
+                        { label: 'R-Value (at 50mm)', value: '2.08 m²K/W' },
+                        { label: 'R-Value (at 100mm)', value: '4.17 m²K/W' },
+                        { label: 'Fire Classification', value: 'B1 (self-extinguishing), B2, B3; PIR option available' },
+                        { label: 'Steel Facing Thickness', value: '0.40mm, 0.45mm, 0.50mm, 0.60mm (PPGI/PPGL)' },
+                        { label: 'Coating Options', value: 'PE (Polyester), SMP (Silicone Modified Polyester), PVDF (Polyvinylidene Fluoride)' },
+                        { label: 'Panel Width', value: '1000mm (effective coverage)' },
+                        { label: 'Panel Length', value: 'Custom, up to 20 metres' },
+                        { label: 'Temperature Range', value: '-40°C to +80°C' },
+                        { label: 'Water Absorption', value: '< 1.5% by volume (closed-cell structure)' },
+                        { label: 'Compressive Strength', value: '≥ 0.15 MPa' },
+                        { label: 'Service Life', value: '25-30 years with proper installation' },
+                      ].map((row, idx) => (
+                        <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
+                          <td className="px-6 py-3 font-semibold text-slate-900 text-sm">
+                            {row.label}
+                          </td>
+                          <td className="px-6 py-3 text-slate-600 text-sm">{row.value}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
 
               {/* Compliance */}
@@ -816,7 +785,7 @@ export default function BestPufPanelForIndustrialShedPage() {
                       key={idx}
                       className="flex items-start gap-3 bg-emerald-50 rounded-xl p-4"
                     >
-                      <span className="text-emerald-600 font-bold text-lg mt-0.5">✓</span>
+                      <span className="text-emerald-600 font-bold text-lg mt-0.5" aria-hidden="true">✓</span>
                       <div>
                         <span className="font-bold text-slate-900">{item.std}</span>
                         <p className="text-sm text-slate-600">{item.desc}</p>
@@ -878,40 +847,42 @@ export default function BestPufPanelForIndustrialShedPage() {
 
               {/* Price Table */}
               <div className="mt-10 bg-white rounded-2xl overflow-hidden shadow-sm">
-                <table className="w-full">
-                  <thead>
-                    <tr className="bg-emerald-700 text-white">
-                      <th className="px-6 py-4 text-left font-semibold">Thickness Range</th>
-                      <th className="px-6 py-4 text-left font-semibold">
-                        Price Range (per sq.m)
-                      </th>
-                      <th className="px-6 py-4 text-left font-semibold">Best For</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-200">
-                    <tr className="bg-white">
-                      <td className="px-6 py-4 font-semibold text-slate-900">30-50mm</td>
-                      <td className="px-6 py-4 text-emerald-700 font-bold">₹800 – ₹1,200</td>
-                      <td className="px-6 py-4 text-slate-600 text-sm">
-                        Standard walls, partitions, mild climates
-                      </td>
-                    </tr>
-                    <tr className="bg-slate-50">
-                      <td className="px-6 py-4 font-semibold text-slate-900">50-80mm</td>
-                      <td className="px-6 py-4 text-emerald-700 font-bold">₹1,200 – ₹1,800</td>
-                      <td className="px-6 py-4 text-slate-600 text-sm">
-                        Roofing, temperature-sensitive sheds, hot climates
-                      </td>
-                    </tr>
-                    <tr className="bg-white">
-                      <td className="px-6 py-4 font-semibold text-slate-900">80-150mm</td>
-                      <td className="px-6 py-4 text-emerald-700 font-bold">₹1,800 – ₹2,500</td>
-                      <td className="px-6 py-4 text-slate-600 text-sm">
-                        Cold storage, controlled environments, extreme climates
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="bg-emerald-700 text-white">
+                        <th className="px-6 py-4 text-left font-semibold">Thickness Range</th>
+                        <th className="px-6 py-4 text-left font-semibold">
+                          Price Range (per sq.m)
+                        </th>
+                        <th className="px-6 py-4 text-left font-semibold">Best For</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-200">
+                      <tr className="bg-white">
+                        <td className="px-6 py-4 font-semibold text-slate-900">30-50mm</td>
+                        <td className="px-6 py-4 text-emerald-700 font-bold">₹800 – ₹1,200</td>
+                        <td className="px-6 py-4 text-slate-600 text-sm">
+                          Standard walls, partitions, mild climates
+                        </td>
+                      </tr>
+                      <tr className="bg-slate-50">
+                        <td className="px-6 py-4 font-semibold text-slate-900">50-80mm</td>
+                        <td className="px-6 py-4 text-emerald-700 font-bold">₹1,200 – ₹1,800</td>
+                        <td className="px-6 py-4 text-slate-600 text-sm">
+                          Roofing, temperature-sensitive sheds, hot climates
+                        </td>
+                      </tr>
+                      <tr className="bg-white">
+                        <td className="px-6 py-4 font-semibold text-slate-900">80-150mm</td>
+                        <td className="px-6 py-4 text-emerald-700 font-bold">₹1,800 – ₹2,500</td>
+                        <td className="px-6 py-4 text-slate-600 text-sm">
+                          Cold storage, controlled environments, extreme climates
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
 
               <div className="mt-10">
@@ -990,7 +961,7 @@ export default function BestPufPanelForIndustrialShedPage() {
                 >
                   <summary className="flex cursor-pointer items-center justify-between px-6 py-5 font-semibold text-slate-900 hover:bg-slate-100 transition-colors [&::-webkit-details-marker]:hidden">
                     <span>{faq.question}</span>
-                    <span className="ml-4 text-xl text-slate-400 group-open:rotate-45 transition-transform">
+                    <span className="ml-4 text-xl text-slate-500 group-open:rotate-45 transition-transform">
                       +
                     </span>
                   </summary>

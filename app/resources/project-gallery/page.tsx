@@ -3,13 +3,27 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Case Studies & Project Gallery | PHOENIXX SMARTBUILD',
+  title: 'Case Studies & Project Gallery',
   description:
     'Real-world case studies: cold storage, cleanrooms, PEB buildings, and industrial facilities delivered by PHOENIXX SMARTBUILD across India. Challenge, solution, and results.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/resources/project-gallery',
+  },
+  openGraph: {
+    title: 'Case Studies & Project Gallery | PHOENIXX SMARTBUILD',
+    description: 'Real-world case studies: cold storage, cleanrooms, PEB buildings, and industrial facilities delivered by PHOENIXX SMARTBUILD across India. Challenge, solution, and results.',
+    url: 'https://phoenixxsmartbuild.com/resources/project-gallery',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Case Studies & Project Gallery | PHOENIXX SMARTBUILD',
+    description: 'Real-world case studies: cold storage, cleanrooms, PEB buildings, and industrial facilities delivered by PHOENIXX SMARTBUILD across India. Challenge, solution, and results.',
   },
 };
 
@@ -25,7 +39,7 @@ const projects = [
     area: '38,000 Sq. Ft.',
     scope: 'Insulated roofing and enclosures for large-scale industrial operations.',
     icon: '🏭',
-    image: '/images/projects/gallery/Phoenix-PUF-Panel-Manufacturers6.jpg',
+    image: '/images/products/sandwich-panels/puf-panel/Phoenix-PUF-Panel-Manufacturers6.jpg',
   },
   {
     slug: 'uflex-sanand',
@@ -77,7 +91,7 @@ const projects = [
     area: '28,000 Sq. Ft.',
     scope: 'Design, supply & installation of PUF insulated roofing and wall panels for manufacturing facility.',
     icon: '🧱',
-    image: '/images/projects/gallery/Industrial-False-Ceiling-PUF-Panel-2.jpg',
+    image: '/images/products/sandwich-panels/wall-ceiling-panel/Industrial-False-Ceiling-PUF-Panel-2.jpg',
   },
   {
     slug: 'motherson-marelli-sanand',
@@ -90,7 +104,7 @@ const projects = [
     area: '27,500 Sq. Ft.',
     scope: 'Insulated roofing and partition systems for automotive manufacturing plant.',
     icon: '🚗',
-    image: '/images/projects/gallery/PHOENIXX_WALL_PUF_PANEL3.jpg',
+    image: '/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL3.jpg',
   },
   {
     slug: 'skf-ahmedabad',
@@ -129,7 +143,7 @@ const projects = [
     area: '23,000 Sq. Ft.',
     scope: 'Industrial roofing and wall cladding for glass packaging plant.',
     icon: '🫙',
-    image: '/images/projects/gallery/PHOENIXX_WALL_PUF_PANEL9.jpg',
+    image: '/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL9.jpg',
   },
   {
     slug: 'agro-tech-ankleshwar',
@@ -142,7 +156,7 @@ const projects = [
     area: '22,000 Sq. Ft.',
     scope: 'Food-grade insulated wall and ceiling panels for hygienic processing zones.',
     icon: '🍿',
-    image: '/images/projects/gallery/Industrial-False-Ceiling-PUF-Panel-3.jpg',
+    image: '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-3.jpg',
   },
   {
     slug: 'rotomotive-anand',
@@ -168,7 +182,7 @@ const projects = [
     area: '20,400 Sq. Ft.',
     scope: 'Clean insulated wall and ceiling panels for food-grade production areas.',
     icon: '💊',
-    image: '/images/projects/gallery/Insulated-Ceiling-Panels-1.jpg',
+    image: '/images/projects/gallery/PUF-Panel-False-Ceiling-1.jpg',
   },
   {
     slug: 'fuji-silvertech-ahmedabad',
@@ -220,7 +234,7 @@ const projects = [
     area: '16,800 Sq. Ft.',
     scope: 'Cleanroom wall and ceiling panels for processing and packing areas.',
     icon: '🥫',
-    image: '/images/projects/gallery/cleanroom-Manufacture-Supplier-in-Ahmedabad5.jpg',
+    image: '/images/solutions/cleanroom/cleanroom-Manufacture-Supplier-in-Ahmedabad5.jpg',
   },
   {
     slug: 'edkem-pharma-ahmedabad',
@@ -233,7 +247,7 @@ const projects = [
     area: '14,200 Sq. Ft.',
     scope: 'GMP-compliant cleanroom wall, ceiling panels and insulated doors.',
     icon: '💉',
-    image: '/images/projects/gallery/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects26.jpg',
+    image: '/images/projects/gallery/Pharma-cleanroom-panel-manufacturers-Phoenixx-infratech-projects74.jpg',
   },
   {
     slug: 'makson-pharma-surendranagar',
@@ -246,7 +260,7 @@ const projects = [
     area: '13,600 Sq. Ft.',
     scope: 'Turnkey cleanroom envelope including insulated doors.',
     icon: '🏥',
-    image: '/images/projects/gallery/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects74.jpg',
+    image: '/images/projects/gallery/Pharma-cleanroom-panel-manufacturers-Phoenixx-infratech-projects74.jpg',
   },
   {
     slug: 'infocity-club-gandhinagar',
@@ -259,7 +273,7 @@ const projects = [
     area: '12,500 Sq. Ft.',
     scope: 'Thermal and acoustic roofing solutions for enhanced indoor comfort.',
     icon: '🏨',
-    image: '/images/projects/gallery/Insulated-Ceiling-Panels-2.jpg',
+    image: '/images/projects/gallery/PUF-Panel-False-Ceiling-2.jpg',
   },
   {
     slug: 'agrawal-metal-vithlapur',
@@ -295,18 +309,12 @@ export default function ProjectGalleryPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* Hero */}
         <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 md:py-24">
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-[0.03]" />
           <div className="container-custom relative">
-            <nav className="mb-6 text-sm text-slate-400">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <Link href="/resources" className="hover:text-white transition-colors">Resources</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">Project Gallery</span>
-            </nav>
+            <Breadcrumbs withSchema items={[{ label: 'Resources', href: '/resources' }, { label: 'Project Gallery' }]} />
 
             <div className="max-w-3xl">
               <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
@@ -407,11 +415,11 @@ export default function ProjectGalleryPage() {
                     
                     <div className="mt-4 pt-4 border-t border-slate-100 grid grid-cols-2 gap-3 text-sm">
                       <div>
-                        <p className="text-slate-400 text-xs">Location</p>
+                        <p className="text-slate-500 text-xs">Location</p>
                         <p className="font-medium text-slate-700">{project.location}</p>
                       </div>
                       <div>
-                        <p className="text-slate-400 text-xs">Industry</p>
+                        <p className="text-slate-500 text-xs">Industry</p>
                         <p className="font-medium text-slate-700">{project.industry}</p>
                       </div>
                     </div>

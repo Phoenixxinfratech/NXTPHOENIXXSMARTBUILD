@@ -4,12 +4,26 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 import { CityManufacturerAeo } from '@/components/seo/city-manufacturer-aeo';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'PUF Panel Manufacturer in Dholera | PHOENIXX',
+  title: 'PUF Panel Manufacturer in Dholera',
   description: 'PUF panels for Dholera SIR industrial projects. Premium insulated panels for modern infrastructure. Get quote!',
   keywords: ['PUF panel manufacturer in Dholera', 'PUF panel Dholera SIR', 'insulated panel smart city'],
   alternates: { canonical: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-dholera' },
+  openGraph: {
+    title: 'PUF Panel Manufacturer in Dholera | PHOENIXX SMARTBUILD',
+    description: 'PUF panels for Dholera SIR industrial projects. Premium insulated panels for modern infrastructure. Get quote!',
+    url: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-dholera',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PUF Panel Manufacturer in Dholera | PHOENIXX SMARTBUILD',
+    description: 'PUF panels for Dholera SIR industrial projects. Premium insulated panels for modern infrastructure. Get quote!',
+  },
 };
 
 const faqs = [
@@ -29,12 +43,14 @@ export default function DholeraPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={faqSchema} />
 
         <section className="relative bg-gradient-to-br from-violet-900 via-purple-900 to-slate-900 py-20 md:py-28">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
+            <Breadcrumbs withSchema items={[{ label: 'Products', href: '/products' }, { label: 'PUF Panel Manufacturer in Dholera' }]} />
+
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-violet-500/10 px-4 py-2 text-sm font-medium text-violet-400 mb-6">📍 Building India&apos;s First Smart City</span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">PUF Panel Manufacturer in Dholera</h1>
@@ -52,7 +68,7 @@ export default function DholeraPage() {
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">PUF Panels for Dholera Smart City Development</h2>
               <div className="prose prose-lg prose-slate max-w-none">
-                <p>Dholera Special Investment Region (SIR) represents India&apos;s most ambitious smart city project, attracting global investments in manufacturing, electronics, and logistics. As a forward-thinking <strong>PUF panel manufacturer in Dholera</strong>, PHOENIXX SmartBuild is positioned to support this transformational development with world-class insulation solutions.</p>
+                <p>Dholera Special Investment Region (SIR) represents India&apos;s most ambitious smart city project, attracting global investments in manufacturing, electronics, and logistics. As a forward-thinking <strong>PUF panel manufacturer in Dholera</strong>, PHOENIXX SmartBuild is positioned to support this transformational development with insulation solutions.</p>
                 <p>Our <Link href="/products/sandwich-panels/sandwich-puf-panel" className="text-primary hover:underline">PUF sandwich panels</Link> are ideal for Dholera&apos;s greenfield industrial parks, offering rapid construction, excellent thermal performance, and energy efficiency aligned with smart city sustainability goals. From electronics manufacturing facilities to large-scale logistics hubs, our panels meet the demanding requirements of modern industrial infrastructure.</p>
                 <p>With proximity to Dholera and strong project execution capabilities, PHOENIXX is ready to support mega projects with bulk supplies, phased deliveries, and comprehensive technical support for this emerging industrial powerhouse.</p>
               </div>
@@ -114,7 +130,7 @@ export default function DholeraPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">PUF Panel Applications in Dholera</h2>
             <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
               {['Electronics & Semiconductor Manufacturing', 'Smart Manufacturing Facilities', 'Logistics & Warehousing Parks', 'Renewable Energy Installations', 'Food Processing & Cold Storage', 'Commercial & IT Parks', 'Automotive Component Manufacturing', 'Defense & Aerospace Manufacturing'].map((app, idx) => (
-                <div key={idx} className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg"><span className="text-violet-500">✓</span><span className="text-slate-700">{app}</span></div>
+                <div key={idx} className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg"><span className="text-violet-500" aria-hidden="true">✓</span><span className="text-slate-700">{app}</span></div>
               ))}
             </div>
           </div>

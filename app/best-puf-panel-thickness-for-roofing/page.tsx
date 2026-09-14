@@ -16,8 +16,8 @@ import {
   generateSpeakableSchema,
   generateQAPageSchema,
   generateImageObjectSchema,
-  generateVideoSchema,
 } from '@/lib/schema';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'What Is the Best Thickness of PUF Panel for Roofing? — Technical Guide 2026',
@@ -150,7 +150,7 @@ export default function BestPufPanelThicknessForRoofingPage() {
     ]),
     generateHowToSchema(
       'How to Determine the Right PUF Panel Thickness for Roofing',
-      'A step-by-step engineering guide to selecting the optimal PUF panel thickness for your roofing application — from climate zone identification through R-value calculation to final specification.',
+      'A step-by-step engineering guide to selecting the optimal PUF panel thickness for your roofing application, from climate zone identification through R-value calculation to final specification.',
       howToSteps
     ),
     generateArticleSchema({
@@ -158,7 +158,7 @@ export default function BestPufPanelThicknessForRoofingPage() {
       description:
         'Complete thickness vs R-value guide for roofing PUF panels. Covers 30mm to 150mm options with climate zone recommendations, application matrix, and cost analysis.',
       url: pageUrl,
-      image: 'https://phoenixxsmartbuild.com/images/puf-panel-thickness-roofing.jpg',
+      image: 'https://phoenixxsmartbuild.com/images/products/sandwich-panels/roofing-panel/PHOENIXX_ROOFING_PANEL5.jpg',
       datePublished: '2025-02-10',
       dateModified: '2026-02-15',
       author: { name: 'PHOENIXX SMARTBUILD Engineering Team', url: 'https://phoenixxsmartbuild.com/about' },
@@ -175,7 +175,7 @@ export default function BestPufPanelThicknessForRoofingPage() {
     generateSpeakableSchema(['h1', '.ai-summary', '.faq-answer']),
     generateQAPageSchema('What is the best thickness of PUF panel for roofing?', [
       {
-        text: '50-80mm is optimal for most factory roofing in India. At 0.024 W/mK thermal conductivity, a 50mm panel delivers R2.08 m²K/W and an 80mm panel delivers R3.33 m²K/W — sufficient for 20-30% HVAC cost reduction in tropical climates. For cold storage roofing, 100-150mm is required. The ideal thickness depends on your climate zone, target internal temperature, and energy cost model. Over-specifying thickness wastes budget; under-specifying wastes energy.',
+        text: '50-80mm is optimal for most factory roofing in India. At 0.024 W/mK thermal conductivity, a 50mm panel delivers R2.08 m²K/W and an 80mm panel delivers R3.33 m²K/W, sufficient for 20-30% HVAC cost reduction in tropical climates. For cold storage roofing, 100-150mm is required. The ideal thickness depends on your climate zone, target internal temperature, and energy cost model. Over-specifying thickness wastes budget; under-specifying wastes energy.',
         author: 'PHOENIXX SMARTBUILD Engineering Team',
       },
     ]),
@@ -183,17 +183,9 @@ export default function BestPufPanelThicknessForRoofingPage() {
       name: 'PUF Panel Thickness Comparison Chart for Roofing',
       description:
         'Visual comparison of PUF panel thicknesses from 30mm to 150mm showing cross-section, R-value, and recommended roofing applications.',
-      contentUrl: '/images/puf-panel-thickness-roofing.jpg',
+      contentUrl: '/images/products/sandwich-panels/roofing-panel/PHOENIXX_ROOFING_PANEL5.jpg',
       width: 1200,
       height: 630,
-    }),
-    generateVideoSchema({
-      name: 'PHOENIXX PUF Panel Thickness Selection Guide',
-      description:
-        'Watch our engineering team explain how to choose the right PUF panel thickness for your roofing project — with live R-value calculations and climate zone mapping.',
-      thumbnailUrl: 'https://phoenixxsmartbuild.com/images/video-thumb-thickness-guide.jpg',
-      uploadDate: '2025-02-01',
-      duration: 'PT8M30S',
     }),
   ];
 
@@ -209,20 +201,7 @@ export default function BestPufPanelThicknessForRoofingPage() {
       name: 'PHOENIXX SMARTBUILD',
       address: { '@type': 'PostalAddress', addressLocality: 'Ahmedabad', addressRegion: 'Gujarat', addressCountry: 'IN' },
     },
-    image: 'https://phoenixxsmartbuild.com/images/puf-panel-thickness-roofing.jpg',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '178',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: {
-      '@type': 'Review',
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      author: { '@type': 'Organization', name: 'Verified Industrial Client' },
-      reviewBody: 'PHOENIXX team recommended 80mm for our factory roof based on thermal analysis. Perfect thickness — cool interiors and excellent cost-to-performance ratio.',
-    },
+    image: 'https://phoenixxsmartbuild.com/images/products/sandwich-panels/roofing-panel/PHOENIXX_ROOFING_PANEL5.jpg',
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'INR',
@@ -236,7 +215,7 @@ export default function BestPufPanelThicknessForRoofingPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {schemas.map((schema, idx) => (
           <JsonLd key={idx} data={schema} />
         ))}
@@ -244,9 +223,11 @@ export default function BestPufPanelThicknessForRoofingPage() {
 
         {/* ─── Section 1: Trust-First Hero ─── */}
         <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20 md:py-28 overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
           <div className="container-custom relative">
+            <Breadcrumbs items={[{ label: 'Products', href: '/products' }, { label: 'Best PUF Panel Thickness for Roofing' }]} />
+
             <div className="max-w-4xl">
               <div className="flex flex-wrap gap-3 mb-6">
                 <span className="inline-block rounded-full bg-emerald-500/10 px-4 py-2 text-sm font-medium text-emerald-400">
@@ -299,7 +280,7 @@ export default function BestPufPanelThicknessForRoofingPage() {
               <div className="prose prose-lg prose-slate max-w-none">
                 <p>
                   Every year, thousands of factory owners across India either over-specify or under-specify their
-                  roofing PUF panel thickness — and both mistakes are expensive. The problem is that most buyers
+                  roofing PUF panel thickness, and both mistakes are expensive. The problem is that most buyers
                   treat thickness as a simple &quot;thicker is better&quot; decision when, in reality, it&apos;s an
                   engineering calculation that depends on climate, building use, energy costs, and structural
                   constraints.
@@ -502,7 +483,7 @@ export default function BestPufPanelThicknessForRoofingPage() {
                   {
                     num: '06',
                     title: 'Future-Proofed Investment',
-                    desc: 'Slightly over-engineering by one standard step (e.g., 60mm instead of 50mm) adds 5-8% cost but provides a buffer for climate warming, production changes, or energy price increases — a smart long-term hedge.',
+                    desc: 'Slightly over-engineering by one standard step (e.g., 60mm instead of 50mm) adds 5-8% cost but provides a buffer for climate warming, production changes, or energy price increases: a smart long-term hedge.',
                   },
                   {
                     num: '07',
@@ -554,7 +535,7 @@ export default function BestPufPanelThicknessForRoofingPage() {
                   </div>
                   <p className="mt-3 text-slate-600 text-sm leading-relaxed">{project.detail}</p>
                   <Link
-                    href="/projects"
+                    href="/resources/project-gallery"
                     className="mt-4 inline-flex items-center text-primary text-sm font-medium hover:underline"
                   >
                     View Project Gallery →
@@ -583,31 +564,33 @@ export default function BestPufPanelThicknessForRoofingPage() {
               Complete engineering data for architects, structural consultants, and procurement teams.
             </p>
             <div className="max-w-4xl mx-auto bg-slate-50 rounded-2xl overflow-hidden border border-slate-200">
-              <table className="w-full">
-                <tbody className="divide-y divide-slate-200">
-                  {[
-                    { label: 'Available Thickness', value: '30mm, 40mm, 50mm, 60mm, 80mm, 100mm, 120mm, 150mm' },
-                    { label: 'PUF Core Density', value: '40 ± 2 kg/m³ (CFC & HFC Free)' },
-                    { label: 'Thermal Conductivity (k)', value: '0.024 W/mK @ 25°C mean temperature' },
-                    { label: 'R-Value Range', value: 'R1.25 (30mm) to R6.25 (150mm) m²K/W' },
-                    { label: 'U-Value Range', value: '0.16 (150mm) to 0.80 (30mm) W/m²K' },
-                    { label: 'Panel Width (effective)', value: '1000mm standard' },
-                    { label: 'Panel Length', value: 'Up to 16 meters (custom lengths available)' },
-                    { label: 'Steel Thickness', value: '0.45mm – 0.60mm (PPGI / PPGL / SS)' },
-                    { label: 'Profile Types', value: 'Trapezoidal, Standing Seam, Concealed Fix' },
-                    { label: 'Coating Options', value: 'SMP (standard), PVDF (coastal/harsh), SDP' },
-                    { label: 'Panel Weight', value: '8 kg/sq.m (30mm) to 16 kg/sq.m (150mm)' },
-                    { label: 'Wind Load Rating', value: 'Tested as per IS 875 — up to 150 km/h' },
-                    { label: 'Fire Rating', value: 'B2 standard, B1 / PIR options available' },
-                    { label: 'Compliance', value: 'IS 14925:2015, ISO 9001:2015, ISO 14001:2015, ECBC' },
-                  ].map((row, idx) => (
-                    <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
-                      <td className="px-6 py-4 font-semibold text-slate-900 w-2/5">{row.label}</td>
-                      <td className="px-6 py-4 text-slate-600">{row.value}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <tbody className="divide-y divide-slate-200">
+                    {[
+                      { label: 'Available Thickness', value: '30mm, 40mm, 50mm, 60mm, 80mm, 100mm, 120mm, 150mm' },
+                      { label: 'PUF Core Density', value: '40 ± 2 kg/m³ (CFC & HFC Free)' },
+                      { label: 'Thermal Conductivity (k)', value: '0.024 W/mK @ 25°C mean temperature' },
+                      { label: 'R-Value Range', value: 'R1.25 (30mm) to R6.25 (150mm) m²K/W' },
+                      { label: 'U-Value Range', value: '0.16 (150mm) to 0.80 (30mm) W/m²K' },
+                      { label: 'Panel Width (effective)', value: '1000mm standard' },
+                      { label: 'Panel Length', value: 'Up to 16 meters (custom lengths available)' },
+                      { label: 'Steel Thickness', value: '0.45mm – 0.60mm (PPGI / PPGL / SS)' },
+                      { label: 'Profile Types', value: 'Trapezoidal, Standing Seam, Concealed Fix' },
+                      { label: 'Coating Options', value: 'SMP (standard), PVDF (coastal/harsh), SDP' },
+                      { label: 'Panel Weight', value: '8 kg/sq.m (30mm) to 16 kg/sq.m (150mm)' },
+                      { label: 'Wind Load Rating', value: 'Tested as per IS 875, up to 150 km/h' },
+                      { label: 'Fire Rating', value: 'B2 standard, B1 / PIR options available' },
+                      { label: 'Compliance', value: 'IS 14925:2015, ISO 9001:2015, ISO 14001:2015, ECBC' },
+                    ].map((row, idx) => (
+                      <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
+                        <td className="px-6 py-4 font-semibold text-slate-900 w-2/5">{row.label}</td>
+                        <td className="px-6 py-4 text-slate-600">{row.value}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
             <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm">
               <Link

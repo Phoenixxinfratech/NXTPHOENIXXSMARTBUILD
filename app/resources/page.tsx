@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Resources – Guides, Gallery & Downloads',
@@ -9,6 +10,19 @@ export const metadata: Metadata = {
     'Access technical resources: project gallery, brochures, technical sheets, FAQs. Download product specifications.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/resources',
+  },
+  openGraph: {
+    title: 'Resources – Guides, Gallery & Downloads | PHOENIXX SMARTBUILD',
+    description: 'Access technical resources: project gallery, brochures, technical sheets, FAQs. Download product specifications.',
+    url: 'https://phoenixxsmartbuild.com/resources',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Resources – Guides, Gallery & Downloads | PHOENIXX SMARTBUILD',
+    description: 'Access technical resources: project gallery, brochures, technical sheets, FAQs. Download product specifications.',
   },
 };
 
@@ -26,7 +40,7 @@ const resources = [
     description: 'Browse our completed projects across industries—cold storage, cleanrooms, PEB, and more.',
     href: '/resources/project-gallery',
     icon: '📷',
-    count: '100+ Projects',
+    count: '500+ Projects',
     gradient: 'from-emerald-500 to-teal-600',
   },
   {
@@ -58,7 +72,7 @@ const resources = [
 const featuredInsights = [
   {
     title: 'The Rise of Sustainable PEB Structures in India',
-    excerpt: 'How Pre-Engineered Buildings are revolutionizing industrial construction with sustainability at the core.',
+    excerpt: 'How Pre-Engineered Buildings are reshaping industrial construction with sustainability at the core.',
     category: 'PEB',
     readTime: '5 min read',
   },
@@ -80,18 +94,14 @@ export default function ResourcesPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* Hero */}
         <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 md:py-28">
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-[0.03]" />
           <div className="absolute top-1/4 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
           
           <div className="container-custom relative">
-            <nav className="mb-6 text-sm text-slate-400">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">Resources</span>
-            </nav>
+            <Breadcrumbs withSchema items={[{ label: 'Resources' }]} />
 
             <div className="max-w-3xl">
               <span className="inline-block px-4 py-1 rounded-full bg-blue-500/20 text-blue-300 text-sm font-medium mb-4">
@@ -126,7 +136,7 @@ export default function ResourcesPage() {
                   </h3>
                   <p className="mt-2 text-slate-600 text-sm">{resource.description}</p>
                   <div className="mt-4 flex items-center justify-between">
-                    <span className="text-xs text-slate-400">{resource.count}</span>
+                    <span className="text-xs text-slate-500">{resource.count}</span>
                     <span className="text-blue-600 group-hover:translate-x-1 transition-transform">→</span>
                   </div>
                 </Link>
@@ -161,14 +171,14 @@ export default function ResourcesPage() {
                   className="group rounded-2xl bg-white shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
                 >
                   <div className="aspect-video bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center">
-                    <span className="text-5xl opacity-20">📝</span>
+                    <span className="text-5xl opacity-20" aria-hidden="true">📝</span>
                   </div>
                   <div className="p-6">
                     <div className="flex items-center gap-3 mb-3">
                       <span className="px-2 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-medium">
                         {article.category}
                       </span>
-                      <span className="text-xs text-slate-400">{article.readTime}</span>
+                      <span className="text-xs text-slate-500">{article.readTime}</span>
                     </div>
                     <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
                       {article.title}
@@ -244,7 +254,7 @@ export default function ResourcesPage() {
               <div className="relative">
                 <div className="aspect-square rounded-2xl bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center">
                   <div className="text-center p-8">
-                    <span className="text-9xl opacity-30">📚</span>
+                    <span className="text-9xl opacity-30" aria-hidden="true">📚</span>
                     <p className="mt-4 text-slate-500">Resource Library</p>
                   </div>
                 </div>

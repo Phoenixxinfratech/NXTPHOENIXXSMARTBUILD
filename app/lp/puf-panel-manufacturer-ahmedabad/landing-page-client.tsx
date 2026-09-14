@@ -1,14 +1,17 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import { siteConfig } from '@/lib/site-config';
+import { useBottomBarOffset } from '@/components/ui/use-bottom-bar-offset';
+import { encodeFormData } from '@/lib/forms';
 
-const PHONE = '8866556879';
-const PHONE_DISPLAY = '88665 56879';
-const WHATSAPP_URL = `https://wa.me/91${PHONE}`;
-const EMAIL = 'sales@phoenixxsmartbuild.com';
+const PHONE = siteConfig.whatsapp.replace(/^91/, '');
+const PHONE_DISPLAY = siteConfig.contact.phone.replace(/^\+91\s*/, '');
+const WHATSAPP_URL = `https://wa.me/${siteConfig.whatsapp}`;
+const EMAIL = siteConfig.contact.sales;
 
 const productInterestOptions = [
   'Roofing PUF Panels',
@@ -65,7 +68,7 @@ const localBusinessSchema = {
   },
   priceRange: '\u20B9\u20B9',
   image:
-    'https://phoenixxsmartbuild.com/images/products/sandwich-panels/puf-panel/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
+    'https://phoenixxsmartbuild.com/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
 };
 
 export default function LandingPageClient() {
@@ -73,6 +76,8 @@ export default function LandingPageClient() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const stickyBarRef = useRef<HTMLDivElement>(null);
+  useBottomBarOffset(stickyBarRef, '--sticky-cta-height');
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -86,7 +91,7 @@ export default function LandingPageClient() {
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
+        body: encodeFormData(formData),
       });
 
       if (response.ok) {
@@ -142,7 +147,7 @@ export default function LandingPageClient() {
           </div>
         </header>
 
-        <main className="flex-1">
+        <main id="main-content" className="flex-1">
           {/* Hero Section */}
           <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-16 md:py-24">
             <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-[0.03]" />
@@ -188,8 +193,9 @@ export default function LandingPageClient() {
                 <div className="hidden lg:block">
                   <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl ring-1 ring-white/10">
                     <Image
-                      src="/images/products/sandwich-panels/puf-panel/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp"
+                      src="/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp"
                       alt="PUF panel manufacturing facility in Ahmedabad - PHOENIXX SMARTBUILD"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
                       fill
                       className="object-cover"
                       priority
@@ -260,6 +266,7 @@ export default function LandingPageClient() {
                       <Image
                         src={product.img}
                         alt={product.alt}
+                        sizes="(max-width: 768px) 100vw, 33vw"
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />
@@ -293,7 +300,7 @@ export default function LandingPageClient() {
                 {[
                   { label: 'Thickness', value: '30mm to 150mm', icon: '\uD83D\uDCCF' },
                   { label: 'Density', value: '40 \u00B1 2 kg/m\u00B3', icon: '\uD83E\uDDF1' },
-                  { label: 'Width', value: '1000 to 1200 mm', icon: '\u2194\uFE0F' },
+                  { label: 'Width', value: '1000 mm effective cover (1200 mm on request)', icon: '\u2194\uFE0F' },
                   { label: 'Length', value: 'Custom Available', icon: '\uD83D\uDCD0' },
                 ].map((spec) => (
                   <div
@@ -424,6 +431,7 @@ export default function LandingPageClient() {
                             type="text"
                             id="lp-name"
                             name="name"
+                            autoComplete="name"
                             required
                             className="w-full rounded-lg border border-slate-300 px-4 py-3 transition-all focus:border-transparent focus:ring-2 focus:ring-blue-500"
                             placeholder="Your name"
@@ -437,6 +445,8 @@ export default function LandingPageClient() {
                             type="tel"
                             id="lp-phone"
                             name="phone"
+                            autoComplete="tel"
+                            inputMode="tel"
                             required
                             className="w-full rounded-lg border border-slate-300 px-4 py-3 transition-all focus:border-transparent focus:ring-2 focus:ring-blue-500"
                             placeholder="+91 XXXXX XXXXX"
@@ -452,6 +462,8 @@ export default function LandingPageClient() {
                           type="email"
                           id="lp-email"
                           name="email"
+                          autoComplete="email"
+                          inputMode="email"
                           className="w-full rounded-lg border border-slate-300 px-4 py-3 transition-all focus:border-transparent focus:ring-2 focus:ring-blue-500"
                           placeholder="you@company.com"
                         />
@@ -490,7 +502,7 @@ export default function LandingPageClient() {
                       </div>
 
                       {error && (
-                        <div className="rounded-lg border border-red-200 bg-red-50 p-3">
+                        <div role="alert" className="rounded-lg border border-red-200 bg-red-50 p-3">
                           <p className="text-center text-sm text-red-600">{error}</p>
                         </div>
                       )}
@@ -610,12 +622,15 @@ export default function LandingPageClient() {
                     className="overflow-hidden rounded-xl border border-slate-200 bg-white transition-all"
                   >
                     <button
+                      type="button"
                       onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                      aria-expanded={openFaq === idx}
+                      aria-controls={`lp-faq-answer-${idx}`}
                       className="flex w-full items-center justify-between px-6 py-5 text-left"
                     >
                       <span className="pr-4 font-semibold text-slate-900">{faq.q}</span>
                       <svg
-                        className={`h-5 w-5 shrink-0 text-slate-400 transition-transform duration-200 ${openFaq === idx ? 'rotate-180' : ''}`}
+                        className={`h-5 w-5 shrink-0 text-slate-500 transition-transform duration-200 ${openFaq === idx ? 'rotate-180' : ''}`}
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -625,6 +640,8 @@ export default function LandingPageClient() {
                       </svg>
                     </button>
                     <div
+                      id={`lp-faq-answer-${idx}`}
+                      hidden={openFaq !== idx}
                       className={`overflow-hidden transition-all duration-200 ${openFaq === idx ? 'max-h-40 pb-5' : 'max-h-0'}`}
                     >
                       <p className="px-6 text-slate-600 leading-relaxed">{faq.a}</p>
@@ -681,7 +698,7 @@ export default function LandingPageClient() {
                 Privacy Policy
               </Link>
               {' \u00B7 '}
-              <Link href="/terms-and-conditions" className="hover:text-slate-700 transition-colors">
+              <Link href="/business-terms" className="hover:text-slate-700 transition-colors">
                 Terms &amp; Conditions
               </Link>
             </p>
@@ -689,7 +706,10 @@ export default function LandingPageClient() {
         </footer>
 
         {/* Sticky Mobile CTA */}
-        <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-slate-200 bg-white p-3 shadow-[0_-4px_20px_rgba(0,0,0,0.1)] md:hidden">
+        <div
+          ref={stickyBarRef}
+          className="safe-area-pb fixed bottom-0 left-0 right-0 z-50 border-t border-slate-200 bg-white px-3 pt-3 shadow-[0_-4px_20px_rgba(0,0,0,0.1)] md:hidden"
+        >
           <div className="flex gap-3">
             <a
               href={`tel:+91${PHONE}`}

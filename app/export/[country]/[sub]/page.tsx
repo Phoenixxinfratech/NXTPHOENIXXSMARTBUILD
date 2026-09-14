@@ -3,11 +3,13 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 import { JsonLd } from '@/components/seo/json-ld';
 import { RelatedResources } from '@/components/blocks/related-resources';
 import { AeoContentBlocks, DEFAULT_PUF_SPECS } from '@/components/seo/aeo-content-blocks';
 import { generateBreadcrumbSchema, generateFAQSchema, generateServiceSchema } from '@/lib/schema';
 import { getRelatedLinksForExport } from '@/lib/internal-links';
+import { buildSocialMetadata } from '@/lib/seo';
 import {
   getExportCountry,
   getExportCity,
@@ -40,16 +42,28 @@ export async function generateMetadata({ params }: ExportSubPageProps): Promise<
       title: city.metaTitle,
       description: city.metaDescription,
       alternates: { canonical: `https://phoenixxsmartbuild.com/export/${country}/${sub}` },
+      ...buildSocialMetadata({
+        title: city.metaTitle,
+        description: city.metaDescription,
+        path: `/export/${country}/${sub}`,
+      }),
     };
   }
 
   const industry = getExportIndustry(sub);
   const countryData = getExportCountry(country);
   if (!industry || !countryData) return { title: 'Industry Not Found' };
+  const title = `${industry.name} Panel Export to ${countryData.name}`;
+  const description = `${industry.metaDescription} Focused on ${countryData.name} export projects.`;
   return {
-    title: `${industry.name} Panel Export to ${countryData.name} | PHOENIXX SMARTBUILD`,
-    description: `${industry.metaDescription} Focused on ${countryData.name} export projects.`,
+    title,
+    description,
     alternates: { canonical: `https://phoenixxsmartbuild.com/export/${country}/${sub}` },
+    ...buildSocialMetadata({
+      title: `${title} | PHOENIXX SMARTBUILD`,
+      description,
+      path: `/export/${country}/${sub}`,
+    }),
   };
 }
 
@@ -87,16 +101,17 @@ export default async function ExportSubPage({ params }: ExportSubPageProps) {
         <JsonLd data={serviceSchema} />
         <JsonLd data={faqSchema} />
         <Header />
-        <main className="flex-1">
+        <main id="main-content" className="flex-1">
           <section className="bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 text-white section-padding">
             <div className="container-custom">
-              <nav className="text-sm text-emerald-200 mb-4">
-                <Link href="/export" className="hover:text-white">Export</Link>
-                <span className="mx-2">/</span>
-                <Link href={`/export/${country}`} className="hover:text-white">{countryData.name}</Link>
-                <span className="mx-2">/</span>
-                <span>{city.name}</span>
-              </nav>
+              <Breadcrumbs
+                className="mb-4"
+                items={[
+                  { label: 'Global Export', href: '/export' },
+                  { label: countryData.name, href: `/export/${country}` },
+                  { label: city.name },
+                ]}
+              />
               <p className="text-sm font-medium text-emerald-300 uppercase tracking-wider">City Export Hub</p>
               <h1 className="mt-2 text-3xl font-bold md:text-4xl lg:text-5xl">
                 PUF Panel Export to {city.name}, {countryData.name}
@@ -206,16 +221,17 @@ export default async function ExportSubPage({ params }: ExportSubPageProps) {
       <JsonLd data={serviceSchema} />
       <JsonLd data={faqSchema} />
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <section className="bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 text-white section-padding">
           <div className="container-custom">
-            <nav className="text-sm text-emerald-200 mb-4">
-              <Link href="/export" className="hover:text-white">Export</Link>
-              <span className="mx-2">/</span>
-              <Link href={`/export/${country}`} className="hover:text-white">{countryData.name}</Link>
-              <span className="mx-2">/</span>
-              <span>{industry.name}</span>
-            </nav>
+            <Breadcrumbs
+              className="mb-4"
+              items={[
+                { label: 'Global Export', href: '/export' },
+                { label: countryData.name, href: `/export/${country}` },
+                { label: industry.name },
+              ]}
+            />
             <p className="text-sm font-medium text-emerald-300 uppercase tracking-wider">Industry Export</p>
             <h1 className="mt-2 text-3xl font-bold md:text-4xl lg:text-5xl">
               {industry.name} — Panel Export to {countryData.name}

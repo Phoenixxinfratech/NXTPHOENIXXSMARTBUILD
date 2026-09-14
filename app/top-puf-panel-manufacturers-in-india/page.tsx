@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Top PUF Panel Manufacturers in India',
@@ -10,6 +11,19 @@ export const metadata: Metadata = {
   keywords: ['top PUF panel manufacturers in India', 'PUF panel manufacturers', 'insulated panel suppliers'],
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/top-puf-panel-manufacturers-in-india',
+  },
+  openGraph: {
+    title: 'Top PUF Panel Manufacturers in India | PHOENIXX SMARTBUILD',
+    description: 'PHOENIXX ranks among top PUF panel manufacturers in India. Quality products, competitive pricing, nationwide delivery.',
+    url: 'https://phoenixxsmartbuild.com/top-puf-panel-manufacturers-in-india',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Top PUF Panel Manufacturers in India | PHOENIXX SMARTBUILD',
+    description: 'PHOENIXX ranks among top PUF panel manufacturers in India. Quality products, competitive pricing, nationwide delivery.',
   },
 };
 
@@ -61,13 +75,15 @@ export default function TopPufPanelManufacturersPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={faqSchema} />
 
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-indigo-900 to-slate-900 py-20 md:py-28">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
+            <Breadcrumbs withSchema items={[{ label: 'Products', href: '/products' }, { label: 'Top PUF Panel Manufacturers in India' }]} />
+
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-400 mb-6">
                 🏅 Trusted by 100+ Companies Across India
@@ -108,13 +124,13 @@ export default function TopPufPanelManufacturersPage() {
               <div className="prose prose-lg prose-slate max-w-none">
                 <p>
                   When searching for <strong>top PUF panel manufacturers in India</strong>, industry professionals 
-                  consistently recognize PHOENIXX SmartBuild for our unwavering commitment to quality, innovation, 
+                  consistently recognize PHOENIXX SmartBuild for our consistency on quality, innovation, 
                   and customer service. With advanced manufacturing infrastructure and a dedicated team of engineers, 
                   we have earned the trust of leading companies across pharmaceuticals, food processing, logistics, 
                   and industrial sectors.
                 </p>
                 <p>
-                  Our manufacturing facility utilizes state-of-the-art continuous lamination technology, ensuring 
+                  Our manufacturing facility utilizes modern continuous lamination technology, ensuring 
                   uniform foam distribution, precise thickness control, and consistent panel quality across every 
                   production batch. This technological edge, combined with our extensive experience across 150+ 
                   successful projects, positions us among the most reliable <Link href="/products/sandwich-panels" className="text-primary hover:underline">insulated panel suppliers</Link> in India.
@@ -187,7 +203,7 @@ export default function TopPufPanelManufacturersPage() {
                 { name: 'Cold Storage Facilities', link: '/solutions/cold-storage-construction', desc: 'Temperature-controlled warehouses and cold rooms' },
                 { name: 'Pharmaceutical Plants', link: '/industries/pharma-chemical', desc: 'GMP-compliant manufacturing facilities' },
                 { name: 'Food Processing Units', link: '/industries/food-processing', desc: 'Hygienic processing environments' },
-                { name: 'Warehouse & Logistics', link: '/industries/warehousing', desc: 'Distribution centers and storage facilities' },
+                { name: 'Warehouse & Logistics', link: '/industries/cold-chain', desc: 'Distribution centers and storage facilities' },
                 { name: 'Industrial Manufacturing', link: '/solutions/peb', desc: 'Factories and production plants' },
                 { name: 'Cleanroom Construction', link: '/products/cleanroom-solutions', desc: 'Controlled environment facilities' },
               ].map((industry, idx) => (

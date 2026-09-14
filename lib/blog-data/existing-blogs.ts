@@ -3,10 +3,10 @@ import type { BlogPost } from './types';
 export const existingBlogs: Record<string, BlogPost> = {
   'rise-of-sustainable-peb-structures': {
     title: 'The Rise of Sustainable PEB Structures in India',
-    excerpt: 'How Pre-Engineered Buildings are revolutionizing industrial construction with sustainability at the core. Discover the environmental and economic benefits driving adoption.',
+    excerpt: 'How Pre-Engineered Buildings are reshaping industrial construction with sustainability at the core. Discover the environmental and economic benefits driving adoption.',
     content: `
       <h2>Introduction to Sustainable PEB</h2>
-      <p>Pre-Engineered Buildings (PEB) have emerged as a game-changer in India's industrial construction landscape. With growing environmental concerns and economic pressures, PEB structures offer a sustainable alternative to conventional construction methods.</p>
+      <p>Pre-Engineered Buildings (PEB) have emerged as a game-changer in India's industrial construction sector. With growing environmental concerns and economic pressures, PEB structures offer a sustainable alternative to conventional construction methods.</p>
       
       <h2>Why PEB is the Future of Industrial Construction</h2>
       <p>The adoption of <a href="/solutions/peb">Pre-Engineered Buildings</a> in India has grown by over 30% annually, driven by several key advantages:</p>
@@ -199,7 +199,7 @@ export const existingBlogs: Record<string, BlogPost> = {
       <p>PHOENIXX offers complete <a href="/products/cleanroom-solutions">cleanroom solutions</a> including GMP-compliant panels, doors, ceilings, and flooring systems. Our turnkey approach ensures seamless integration of all components.</p>
       
       <h2>Conclusion</h2>
-      <p>Successful cleanroom design requires a holistic approach considering all building elements, HVAC systems, and operational workflows. Partner with experienced cleanroom specialists to ensure compliance and efficiency.</p>
+      <p>Successful cleanroom design requires a end-to-end approach considering all building elements, HVAC systems, and operational workflows. Partner with experienced cleanroom specialists to ensure compliance and efficiency.</p>
       
       <p><strong>Need cleanroom expertise?</strong> <a href="/get-a-quote">Contact PHOENIXX</a> for a detailed assessment of your requirements.</p>
     `,
@@ -216,102 +216,6 @@ export const existingBlogs: Record<string, BlogPost> = {
     ],
     relatedSolutions: [
       { name: 'Cleanroom Solutions', href: '/solutions/cleanroom-solutions' },
-    ],
-  },
-  'choosing-right-insulated-panel': {
-    title: 'Choosing the Right Insulated Panel for Your Project',
-    excerpt: 'A comprehensive guide to selecting between PIR, PUF, Rockwool, and other insulation types based on your application requirements.',
-    content: `
-      <h2>Introduction to Insulated Panels</h2>
-      <p>Insulated sandwich panels have revolutionized industrial construction, offering superior thermal performance, fast installation, and design flexibility. Choosing the right panel type is crucial for project success.</p>
-      
-      <h2>Types of Insulated Panels</h2>
-      
-      <h3>1. PUF (Polyurethane Foam) Panels</h3>
-      <p><a href="/products/sandwich-panels/sandwich-puf-panel">Sandwich PUF Panels</a> are the most widely used insulation type:</p>
-      <ul>
-        <li><strong>Thermal Conductivity:</strong> 0.024 W/mK</li>
-        <li><strong>Fire Rating:</strong> Class E (standard)</li>
-        <li><strong>Best For:</strong> Warehouses, factories, commercial buildings</li>
-        <li><strong>Cost:</strong> Most economical option</li>
-      </ul>
-      
-      <h3>2. PIR (Polyisocyanurate) Panels</h3>
-      <p><a href="/products/sandwich-panels/pir-panel">PIR Panels</a> offer enhanced fire performance:</p>
-      <ul>
-        <li><strong>Thermal Conductivity:</strong> 0.022 W/mK</li>
-        <li><strong>Fire Rating:</strong> Class B-s1, d0</li>
-        <li><strong>Best For:</strong> Cold storage, pharma, food processing</li>
-        <li><strong>Cost:</strong> Premium pricing for better safety</li>
-      </ul>
-      
-      <h3>3. Rockwool Panels</h3>
-      <p><a href="/products/sandwich-panels/rockwool-panel">Rockwool Panels</a> provide maximum fire safety:</p>
-      <ul>
-        <li><strong>Thermal Conductivity:</strong> 0.035-0.040 W/mK</li>
-        <li><strong>Fire Rating:</strong> A1 (Non-combustible)</li>
-        <li><strong>Best For:</strong> High fire-risk areas, acoustic applications</li>
-        <li><strong>Cost:</strong> Higher due to mineral wool core</li>
-      </ul>
-      
-      <h3>4. Roofing Panels</h3>
-      <p><a href="/products/sandwich-panels/roofing-puf-panel">Roofing PUF Panels</a> are specifically designed for roof applications:</p>
-      <ul>
-        <li>Trapezoidal profile for water drainage</li>
-        <li>Long-span capability</li>
-        <li>Weather-resistant coatings</li>
-      </ul>
-      
-      <h2>Selection Criteria</h2>
-      
-      <h3>Temperature Requirements</h3>
-      <table>
-        <tr><th>Application</th><th>Recommended Panel</th><th>Thickness</th></tr>
-        <tr><td>Ambient warehouse</td><td>PUF</td><td>40-60mm</td></tr>
-        <tr><td>Chilled storage</td><td>PIR</td><td>80-100mm</td></tr>
-        <tr><td>Frozen storage</td><td>PIR</td><td>120-150mm</td></tr>
-        <tr><td>High fire risk</td><td>Rockwool</td><td>50-100mm</td></tr>
-      </table>
-      
-      <h3>Fire Safety Considerations</h3>
-      <ul>
-        <li>Standard warehouses: PUF is adequate</li>
-        <li>Food/Pharma: PIR recommended</li>
-        <li>Oil & Gas: Rockwool required</li>
-        <li>High-rise buildings: Check local fire codes</li>
-      </ul>
-      
-      <h3>Budget Considerations</h3>
-      <p>While initial cost matters, consider total cost of ownership:</p>
-      <ul>
-        <li>Energy savings over 25+ year lifespan</li>
-        <li>Insurance premium reductions (PIR/Rockwool)</li>
-        <li>Maintenance requirements</li>
-        <li>Replacement costs</li>
-      </ul>
-      
-      <h2>PHOENIXX Panel Range</h2>
-      <p>PHOENIXX manufactures a complete range of <a href="/products/sandwich-panels">sandwich panels</a> to meet every requirement. Our technical team can help you select the optimal panel type for your project.</p>
-      
-      <h2>Conclusion</h2>
-      <p>The right panel choice depends on your specific requirements for thermal performance, fire safety, budget, and application. Don't compromise on quality—the right insulation pays for itself through energy savings.</p>
-      
-      <p><strong>Need guidance?</strong> <a href="/get-a-quote">Request a free technical consultation</a> from our panel experts.</p>
-    `,
-    category: 'Panels',
-    date: '2024-12-10',
-    readTime: '8 min read',
-    author: { name: 'Technical Team', role: 'PHOENIXX SmartBuild' },
-    keywords: ['Insulated Panels', 'PUF', 'PIR', 'Rockwool', 'Thermal Insulation'],
-    relatedProducts: [
-      { name: 'Sandwich PUF Panels', href: '/products/sandwich-panels/sandwich-puf-panel' },
-      { name: 'PIR Panels', href: '/products/sandwich-panels/pir-panel' },
-      { name: 'Rockwool Panels', href: '/products/sandwich-panels/rockwool-panel' },
-      { name: 'Roofing PUF Panels', href: '/products/sandwich-panels/roofing-puf-panel' },
-    ],
-    relatedSolutions: [
-      { name: 'Cold Storage Construction', href: '/solutions/cold-storage-construction' },
-      { name: 'Pre-Engineered Buildings', href: '/solutions/peb' },
     ],
   },
   'fire-safety-industrial-buildings': {
@@ -983,7 +887,7 @@ export const existingBlogs: Record<string, BlogPost> = {
     excerpt: 'Energy costs account for a significant portion of factory operating expenses. One of the most effective ways to reduce these costs is by using PUF panels for insulation.',
     content: `
       <h2>Introduction</h2>
-      <p>Energy costs account for a significant portion of factory operating expenses—often 30-40% of total overhead. One of the most effective ways to reduce these costs is by using <a href="/products/sandwich-panels/sandwich-puf-panel">PUF panels</a> for building insulation. This article explains the science and economics behind PUF panel energy savings.</p>
+      <p>Energy costs account for a significant portion of factory operating expenses, often 30-40% of total overhead. One of the most effective ways to reduce these costs is by using <a href="/products/sandwich-panels/sandwich-puf-panel">PUF panels</a> for building insulation. This article explains the science and economics behind PUF panel energy savings.</p>
       
       <h2>The Energy Loss Problem in Factories</h2>
       <p>Factories with conventional construction lose energy through:</p>
@@ -1186,7 +1090,7 @@ export const existingBlogs: Record<string, BlogPost> = {
       </ul>
       
       <h2>Conclusion</h2>
-      <p>Selecting the right panel thickness ensures optimal insulation, regulatory compliance, and operating efficiency. Don't compromise on thickness for short-term cost savings—the right insulation pays for itself through energy savings.</p>
+      <p>Selecting the right panel thickness ensures optimal insulation, regulatory compliance, and operating efficiency. Don't compromise on thickness for short-term cost savings: the right insulation pays for itself through energy savings.</p>
       
       <p><strong>Need help selecting the right thickness?</strong> <a href="/get-a-quote">Contact PHOENIXX</a> for free technical consultation and thermal calculations.</p>
     `,
@@ -1483,7 +1387,7 @@ export const existingBlogs: Record<string, BlogPost> = {
     content: `
       <h2>The Challenge of Finding Quality Installation</h2>
       <p>Let me be honest with you—PUF panel installation is not something any general contractor can do well. I've seen projects where excellent panels were ruined by inexperienced installers who treated them like regular roofing sheets. The result? Thermal bridges, water leakage, and panels that needed replacement within five years.</p>
-      <p>Whether you're in <a href="/resources/blogs/puf-panel-manufacturers-in-ahmedabad">Ahmedabad</a>, Mumbai, Pune, or anywhere across India, finding the right installation team is crucial. Here's what 18+ years in this industry has taught me about getting it right.</p>
+      <p>Whether you're in <a href="/resources/blogs/puf-panel-manufacturers-in-ahmedabad">Ahmedabad</a>, Mumbai, Pune, or anywhere across India, finding the right installation team is crucial. Here's what 13+ years in this industry has taught me about getting it right.</p>
 
       <h2>What Makes PUF Panel Installation Different</h2>
       <p>Unlike conventional roofing or cladding, <a href="/products/sandwich-panels/sandwich-puf-panel">PUF panel installation</a> requires specialized knowledge:</p>
@@ -1566,6 +1470,7 @@ export const existingBlogs: Record<string, BlogPost> = {
     `,
     category: 'Installation',
     date: '2025-01-27',
+    lastModified: '2026-09-13',
     readTime: '8 min read',
     author: { name: 'Projects Team', role: 'PHOENIXX SmartBuild' },
     keywords: ['PUF Panel Installation', 'Panel Installers Near Me', 'PUF Installation Services', 'Certified Installers'],
@@ -1592,7 +1497,7 @@ export const existingBlogs: Record<string, BlogPost> = {
     content: `
       <h2>Ahmedabad: India's PUF Panel Manufacturing Capital</h2>
       <p>If you're sourcing PUF panels anywhere in Western or Central India, chances are they'll come from Ahmedabad or nearby Gujarat industrial areas. The city has emerged as the undisputed hub of <a href="/products/sandwich-panels/sandwich-puf-panel">insulated panel manufacturing</a> in India, and for good reasons.</p>
-      <p>Having operated from Ahmedabad for over 18 years, I've witnessed this ecosystem develop from a handful of small fabricators to a mature industry serving projects across India and even exports. Let me share what makes this market unique and how to navigate it effectively.</p>
+      <p>Having operated from Ahmedabad since 2013, I've witnessed this ecosystem develop from a handful of small fabricators to a mature industry serving projects across India and even exports. Let me share what makes this market unique and how to navigate it effectively.</p>
       <p>PHOENIXX SmartBuild is headquartered in GIDC Naroda, Ahmedabad, giving us a unique advantage in serving local industries with same-day delivery and factory-direct pricing. Visit our dedicated page for <a href="/puf-panel-manufacturer-in-ahmedabad">PUF panel manufacturing in Ahmedabad</a>.</p>
 
       <h2>Why Ahmedabad Dominates PUF Panel Manufacturing</h2>
@@ -1728,7 +1633,7 @@ export const existingBlogs: Record<string, BlogPost> = {
       </ul>
 
       <h2>PUF Panel Prices in Ahmedabad</h2>
-      <p>Ahmedabad's competitive market means prices are generally fair, but beware of unrealistically low quotes. Current price ranges (2025):</p>
+      <p>Ahmedabad's competitive market means prices are generally fair, but beware of unrealistically low quotes. Current price ranges:</p>
       
       <table>
         <tr><th>Panel Type</th><th>Thickness</th><th>Price Range (per sq.ft)</th></tr>
@@ -1757,8 +1662,8 @@ export const existingBlogs: Record<string, BlogPost> = {
       <h2>PHOENIXX: Your Ahmedabad Manufacturing Partner</h2>
       <p>As a leading <a href="/puf-panel-manufacturer-in-ahmedabad">PUF panel manufacturer in Ahmedabad</a>, PHOENIXX offers:</p>
       <ul>
-        <li><strong>18+ years</strong> of manufacturing experience</li>
-        <li><strong>GIDC Naroda headquarters</strong> with state-of-the-art facilities</li>
+        <li><strong>13+ years</strong> of manufacturing experience</li>
+        <li><strong>GIDC Naroda headquarters</strong> with modern facilities</li>
         <li><strong>Complete product range:</strong> PUF, PIR, rockwool, and FM-approved panels</li>
         <li><strong>500+ projects</strong> delivered across India</li>
         <li><strong>In-house engineering</strong> for design optimization</li>
@@ -1782,12 +1687,13 @@ export const existingBlogs: Record<string, BlogPost> = {
       <h2>Conclusion</h2>
       <p>Ahmedabad's PUF panel industry offers excellent options, but choosing wisely requires looking beyond price. Evaluate capabilities, visit facilities if possible, and check references before committing to large orders.</p>
       
-      <p>As a manufacturer headquartered in Ahmedabad since 2012, PHOENIXX understands the local market better than anyone. Whether you need panels for a small warehouse or a large pharmaceutical facility, we have the capacity and expertise to deliver.</p>
+      <p>As a manufacturer headquartered in Ahmedabad since 2013, PHOENIXX understands the local market better than anyone. Whether you need panels for a small warehouse or a large pharmaceutical facility, we have the capacity and expertise to deliver.</p>
       
       <p><strong>Looking for a reliable Ahmedabad manufacturer?</strong> <a href="/get-a-quote">Request a quote from PHOENIXX</a>—we'll provide technical guidance along with competitive factory-direct pricing. Or call us directly at +91 88665 56879.</p>
     `,
     category: 'Industry Guide',
     date: '2025-02-01',
+    lastModified: '2026-09-13',
     readTime: '12 min read',
     author: { name: 'Business Team', role: 'PHOENIXX SmartBuild' },
     keywords: ['PUF Panel Manufacturers Ahmedabad', 'PUF Panel Suppliers Gujarat', 'Sandwich Panel Ahmedabad', 'Industrial Panel Manufacturers', 'GIDC Naroda', 'PUF Panel Price Ahmedabad', 'PUF Panel GIDC'],
@@ -1826,7 +1732,7 @@ export const existingBlogs: Record<string, BlogPost> = {
     content: `
       <h2>Cold Storage Industry in Ahmedabad</h2>
       <p>Gujarat's cold chain infrastructure has grown rapidly, driven by the dairy industry (Amul in Anand), pharmaceutical cold chain (Zydus, Torrent), and food processing sectors. Ahmedabad, as the commercial capital, serves as the manufacturing and supply hub for cold storage panels across Western India.</p>
-      <p>PHOENIXX SmartBuild, headquartered in <a href="/puf-panel-manufacturer-in-ahmedabad">GIDC Naroda, Ahmedabad</a>, has been supplying cold storage panels to Gujarat's cold chain industry for over 18 years. Our panels are installed in 200+ cold storage facilities across the state.</p>
+      <p>PHOENIXX SmartBuild, headquartered in <a href="/puf-panel-manufacturer-in-ahmedabad">GIDC Naroda, Ahmedabad</a>, has been supplying cold storage panels to Gujarat's cold chain industry since 2013. Our panels are installed in 200+ cold storage facilities across the state.</p>
 
       <h2>Why Ahmedabad for Cold Storage Panels?</h2>
       <p>Ahmedabad offers unique advantages for cold storage panel sourcing:</p>
@@ -1905,7 +1811,7 @@ export const existingBlogs: Record<string, BlogPost> = {
         <li><strong>FM 4880:</strong> For insurance-mandated projects</li>
       </ul>
 
-      <h2>Cold Storage Panel Prices in Ahmedabad (2025)</h2>
+      <h2>Cold Storage Panel Prices in Ahmedabad</h2>
       <table>
         <tr><th>Panel Type</th><th>Thickness</th><th>Price Range (per sq.ft)</th></tr>
         <tr><td>PUF Cold Storage</td><td>100mm</td><td>₹140-170</td></tr>
@@ -1933,6 +1839,7 @@ export const existingBlogs: Record<string, BlogPost> = {
     `,
     category: 'Cold Storage',
     date: '2025-02-01',
+    lastModified: '2026-09-13',
     readTime: '10 min read',
     author: { name: 'Cold Chain Team', role: 'PHOENIXX SmartBuild' },
     keywords: ['Cold Storage Panel Ahmedabad', 'Cold Room Panel Manufacturer', 'PIR Panel Cold Storage', 'Freezer Room Panel', 'Cold Chain Gujarat'],
@@ -2042,7 +1949,7 @@ export const existingBlogs: Record<string, BlogPost> = {
         <li>Packaging areas with controlled environment</li>
       </ul>
 
-      <h2>Cleanroom Panel Prices in Ahmedabad (2025)</h2>
+      <h2>Cleanroom Panel Prices in Ahmedabad</h2>
       <table>
         <tr><th>Panel Type</th><th>Core</th><th>Price Range (per sq.ft)</th></tr>
         <tr><td>Wall panel 50mm</td><td>PIR</td><td>₹130-170</td></tr>
@@ -2076,6 +1983,7 @@ export const existingBlogs: Record<string, BlogPost> = {
     `,
     category: 'Cleanroom',
     date: '2025-02-01',
+    lastModified: '2026-09-13',
     readTime: '11 min read',
     author: { name: 'Pharma Solutions Team', role: 'PHOENIXX SmartBuild' },
     keywords: ['Cleanroom Panel Ahmedabad', 'Pharma Panel Manufacturer', 'GMP Compliant Panel', 'WHO GMP Cleanroom', 'Pharmaceutical Cleanroom Gujarat'],
@@ -2091,166 +1999,6 @@ export const existingBlogs: Record<string, BlogPost> = {
       { question: 'What panel is best for pharma cleanrooms?', answer: 'PIR panels with B-s1,d0 fire rating are recommended for most pharmaceutical applications. For high-risk areas or FM Global insured facilities, rockwool panels with A1 rating may be required. The choice depends on facility classification and regulatory requirements.' },
       { question: 'Do PHOENIXX panels meet WHO-GMP requirements?', answer: 'Yes, PHOENIXX cleanroom panels are designed to meet WHO-GMP and Schedule M requirements. We provide documentation including material certificates, surface finish reports, and fire rating certificates for regulatory submissions.' },
       { question: 'Can you provide turnkey cleanroom installation?', answer: 'Yes, PHOENIXX offers turnkey cleanroom solutions including design, supply, installation, and validation support. Our team has experience with 50+ pharmaceutical cleanroom projects in Gujarat.' },
-    ],
-  },
-
-  'puf-panel-price-ahmedabad-2025-guide': {
-    title: 'PUF Panel Price in Ahmedabad 2025: Complete Pricing Guide',
-    metaTitle: 'PUF Panel Price in Ahmedabad 2025 | Rate List & Calculator',
-    metaDescription: 'Current PUF panel prices in Ahmedabad for 2025. Compare rates by thickness, type, and coating. Factory-direct pricing from PHOENIXX in GIDC Naroda.',
-    excerpt: 'Complete guide to PUF panel pricing in Ahmedabad for 2025. Understand factors affecting cost, compare panel types, and get factory-direct rates.',
-    content: `
-      <h2>PUF Panel Pricing Overview for Ahmedabad</h2>
-      <p>As India's PUF panel manufacturing hub, Ahmedabad offers competitive pricing due to local production, raw material availability, and healthy market competition. This guide provides current pricing information to help you budget accurately for your project.</p>
-      <p>PHOENIXX SmartBuild, headquartered in <a href="/puf-panel-manufacturer-in-ahmedabad">GIDC Naroda, Ahmedabad</a>, offers factory-direct pricing without middleman markup. Visit our <a href="/shop">online shop</a> for instant price calculations.</p>
-
-      <h2>PUF Panel Price List Ahmedabad (February 2025)</h2>
-      
-      <h3>Sandwich PUF Panels (Wall/Partition)</h3>
-      <table>
-        <tr><th>Thickness</th><th>Density</th><th>Price Range (per sq.ft)</th><th>Price Range (per sq.m)</th></tr>
-        <tr><td>30mm</td><td>40 kg/m³</td><td>₹70-90</td><td>₹750-970</td></tr>
-        <tr><td>40mm</td><td>40 kg/m³</td><td>₹80-100</td><td>₹860-1,075</td></tr>
-        <tr><td>50mm</td><td>40 kg/m³</td><td>₹85-110</td><td>₹915-1,185</td></tr>
-        <tr><td>60mm</td><td>40 kg/m³</td><td>₹95-120</td><td>₹1,020-1,290</td></tr>
-        <tr><td>80mm</td><td>40 kg/m³</td><td>₹110-140</td><td>₹1,185-1,505</td></tr>
-        <tr><td>100mm</td><td>40 kg/m³</td><td>₹130-165</td><td>₹1,400-1,775</td></tr>
-        <tr><td>120mm</td><td>40 kg/m³</td><td>₹150-190</td><td>₹1,615-2,045</td></tr>
-        <tr><td>150mm</td><td>40 kg/m³</td><td>₹180-230</td><td>₹1,935-2,475</td></tr>
-      </table>
-
-      <h3>Roofing PUF Panels</h3>
-      <table>
-        <tr><th>Thickness</th><th>Profile</th><th>Price Range (per sq.ft)</th></tr>
-        <tr><td>30mm</td><td>Trapezoidal</td><td>₹75-95</td></tr>
-        <tr><td>40mm</td><td>Trapezoidal</td><td>₹85-105</td></tr>
-        <tr><td>50mm</td><td>Trapezoidal</td><td>₹90-115</td></tr>
-        <tr><td>60mm</td><td>Trapezoidal</td><td>₹100-125</td></tr>
-        <tr><td>80mm</td><td>Trapezoidal</td><td>₹115-145</td></tr>
-        <tr><td>100mm</td><td>Trapezoidal</td><td>₹135-170</td></tr>
-      </table>
-
-      <h3>PIR Panels (Fire-Rated)</h3>
-      <table>
-        <tr><th>Thickness</th><th>Fire Rating</th><th>Price Range (per sq.ft)</th></tr>
-        <tr><td>50mm</td><td>B-s1,d0</td><td>₹120-155</td></tr>
-        <tr><td>80mm</td><td>B-s1,d0</td><td>₹150-190</td></tr>
-        <tr><td>100mm</td><td>B-s1,d0</td><td>₹175-220</td></tr>
-        <tr><td>120mm</td><td>B-s1,d0</td><td>₹200-250</td></tr>
-        <tr><td>150mm</td><td>B-s1,d0</td><td>₹230-290</td></tr>
-      </table>
-
-      <h3>Rockwool Panels (Non-Combustible)</h3>
-      <table>
-        <tr><th>Thickness</th><th>Density</th><th>Price Range (per sq.ft)</th></tr>
-        <tr><td>50mm</td><td>100 kg/m³</td><td>₹140-180</td></tr>
-        <tr><td>80mm</td><td>100 kg/m³</td><td>₹170-220</td></tr>
-        <tr><td>100mm</td><td>100 kg/m³</td><td>₹200-260</td></tr>
-        <tr><td>120mm</td><td>100 kg/m³</td><td>₹230-300</td></tr>
-      </table>
-
-      <h3>FM Approved Panels</h3>
-      <table>
-        <tr><th>Thickness</th><th>Core Type</th><th>Price Range (per sq.ft)</th></tr>
-        <tr><td>50mm</td><td>PIR</td><td>₹150-200</td></tr>
-        <tr><td>80mm</td><td>PIR</td><td>₹180-240</td></tr>
-        <tr><td>100mm</td><td>Rockwool</td><td>₹220-300</td></tr>
-      </table>
-
-      <h2>Factors Affecting PUF Panel Prices</h2>
-      
-      <h3>1. Panel Thickness</h3>
-      <p>Thicker panels cost more due to increased foam material. A 100mm panel costs approximately 50-60% more than a 50mm panel of the same type.</p>
-
-      <h3>2. Core Material</h3>
-      <ul>
-        <li><strong>PUF:</strong> Most economical option</li>
-        <li><strong>PIR:</strong> 15-25% premium over PUF for better fire safety</li>
-        <li><strong>Rockwool:</strong> 40-60% premium over PUF for non-combustibility</li>
-      </ul>
-
-      <h3>3. Skin Material</h3>
-      <ul>
-        <li><strong>PPGI (standard):</strong> Base price</li>
-        <li><strong>PPGL (galvalume):</strong> 5-10% premium</li>
-        <li><strong>Stainless Steel 304:</strong> 150-200% premium</li>
-        <li><strong>Stainless Steel 316:</strong> 200-250% premium</li>
-      </ul>
-
-      <h3>4. Coating Type</h3>
-      <ul>
-        <li><strong>Polyester (PE):</strong> Standard coating, no extra cost</li>
-        <li><strong>Silicon Modified Polyester (SMP):</strong> 5-8% premium</li>
-        <li><strong>PVDF:</strong> 15-20% premium for high durability</li>
-        <li><strong>Food-safe coating:</strong> 10-15% premium</li>
-      </ul>
-
-      <h3>5. Order Quantity</h3>
-      <ul>
-        <li><strong>Small orders (<500 sq.ft):</strong> Higher per-unit price</li>
-        <li><strong>Medium orders (500-5,000 sq.ft):</strong> Standard pricing</li>
-        <li><strong>Large orders (>5,000 sq.ft):</strong> Volume discounts (5-15%)</li>
-        <li><strong>Bulk orders (>50,000 sq.ft):</strong> Project-specific negotiation</li>
-      </ul>
-
-      <h3>6. Delivery Location</h3>
-      <ul>
-        <li><strong>Ahmedabad city/GIDC:</strong> Free delivery or minimal charges</li>
-        <li><strong>Gujarat (other cities):</strong> ₹15-40 per sq.ft transport</li>
-        <li><strong>Maharashtra/Rajasthan:</strong> ₹30-60 per sq.ft transport</li>
-        <li><strong>Pan-India:</strong> ₹40-100 per sq.ft depending on distance</li>
-      </ul>
-
-      <h2>How to Get the Best Price</h2>
-      <ol>
-        <li><strong>Plan ahead:</strong> Rush orders cost 10-20% more</li>
-        <li><strong>Optimize thickness:</strong> Don't over-specify - get thermal calculation done</li>
-        <li><strong>Consider alternatives:</strong> PUF may suffice where PIR isn't mandatory</li>
-        <li><strong>Consolidate orders:</strong> Larger quantities get better rates</li>
-        <li><strong>Buy from manufacturer:</strong> Avoid dealer markup (10-20%)</li>
-        <li><strong>Standard colors:</strong> Custom colors cost extra</li>
-      </ol>
-
-      <h2>PHOENIXX Pricing Advantage</h2>
-      <p>As a manufacturer headquartered in Ahmedabad, PHOENIXX offers:</p>
-      <ul>
-        <li><strong>Factory-direct pricing:</strong> No middleman markup</li>
-        <li><strong>Transparent quotations:</strong> Clear breakdown of all costs</li>
-        <li><strong>Volume discounts:</strong> Better rates for larger orders</li>
-        <li><strong>Free delivery:</strong> Within Ahmedabad city limits</li>
-        <li><strong>Online pricing:</strong> Instant quotes on our <a href="/shop">shop page</a></li>
-      </ul>
-
-      <h2>Related Resources</h2>
-      <ul>
-        <li><a href="/puf-panel-manufacturer-in-ahmedabad">PUF Panel Manufacturer in Ahmedabad</a></li>
-        <li><a href="/sandwich-puf-panel-in-ahmedabad">Sandwich PUF Panel in Ahmedabad</a></li>
-        <li><a href="/roofing-puf-panel-in-ahmedabad">Roofing PUF Panel in Ahmedabad</a></li>
-        <li><a href="/shop">Online Price Calculator</a></li>
-        <li><a href="/resources/blogs/puf-panel-installation-cost">PUF Panel Installation Cost Guide</a></li>
-      </ul>
-
-      <h2>Conclusion</h2>
-      <p>PUF panel prices in Ahmedabad are among the most competitive in India due to local manufacturing. However, price should not be the only factor - quality, certifications, and after-sales support matter equally for long-term project success.</p>
-      
-      <p><strong>Need an accurate quote?</strong> <a href="/get-a-quote">Contact PHOENIXX</a> with your specifications for factory-direct pricing.</p>
-    `,
-    category: 'Pricing',
-    date: '2025-02-01',
-    readTime: '10 min read',
-    author: { name: 'Sales Team', role: 'PHOENIXX SmartBuild' },
-    keywords: ['PUF Panel Price Ahmedabad', 'PUF Panel Rate', 'Sandwich Panel Cost', 'PUF Panel Price Per Sq Ft', 'Panel Price Gujarat'],
-    relatedProducts: [
-      { name: 'Sandwich PUF Panels', href: '/products/sandwich-panels/sandwich-puf-panel' },
-      { name: 'Roofing PUF Panels', href: '/products/sandwich-panels/roofing-puf-panel' },
-      { name: 'PIR Panels', href: '/products/sandwich-panels/pir-panel' },
-    ],
-    relatedSolutions: [],
-    faqs: [
-      { question: 'What is the cheapest PUF panel available in Ahmedabad?', answer: "30mm PUF panels start at around ₹70 per sq.ft for basic specifications. However, we recommend choosing panel thickness based on thermal requirements rather than just cost. Underpowered insulation leads to higher energy costs over the building's lifetime." },
-      { question: 'Why do prices vary between manufacturers?', answer: 'Price variations reflect differences in foam density (some use 35 kg/m³ vs standard 40 kg/m³), steel thickness, coating quality, and manufacturing process control. Very low prices often indicate compromised specifications.' },
-      { question: 'Do you provide written quotations with specifications?', answer: 'Yes, PHOENIXX provides detailed written quotations specifying panel type, thickness, density, skin material, coating, and all inclusions. This ensures you can compare apples-to-apples with other manufacturers.' },
-      { question: 'Is GST included in the prices shown?', answer: 'Prices mentioned are typically ex-factory excluding GST. GST @18% applies on PUF panels. PHOENIXX quotations clearly mention whether prices are inclusive or exclusive of GST.' },
     ],
   },
 
@@ -2348,7 +2096,7 @@ export const existingBlogs: Record<string, BlogPost> = {
         <li><strong>Sealants:</strong> Weather-tight joints</li>
       </ul>
 
-      <h2>Roofing Panel Prices in Ahmedabad (2025)</h2>
+      <h2>Roofing Panel Prices in Ahmedabad</h2>
       <table>
         <tr><th>Panel Type</th><th>Thickness</th><th>Price (per sq.ft)</th></tr>
         <tr><td>PUF Roofing</td><td>40mm</td><td>₹85-105</td></tr>
@@ -2402,6 +2150,7 @@ export const existingBlogs: Record<string, BlogPost> = {
     `,
     category: 'Roofing',
     date: '2025-02-01',
+    lastModified: '2026-09-13',
     readTime: '9 min read',
     author: { name: 'Engineering Team', role: 'PHOENIXX SmartBuild' },
     keywords: ['Industrial Roofing Ahmedabad', 'Factory Roof Panel', 'GIDC Roofing', 'PUF Roof Sheet', 'Warehouse Roofing Gujarat'],
@@ -2426,7 +2175,7 @@ export const existingBlogs: Record<string, BlogPost> = {
     excerpt: "Confused between PUF, PIR, and Rockwool panels? This comprehensive comparison helps you choose the right insulation type for Ahmedabad's extreme climate and your specific application.",
     content: `
       <h2>Introduction: Choosing the Right Panel</h2>
-      <p>Ahmedabad's extreme climate—with summers touching 48°C and monsoons bringing heavy humidity—demands careful panel selection. The three main insulation types each have distinct advantages:</p>
+      <p>Ahmedabad's extreme climate, with summers touching 48°C and monsoons bringing heavy humidity—demands careful panel selection. The three main insulation types each have distinct advantages:</p>
       <ul>
         <li><strong>PUF (Polyurethane Foam):</strong> Best thermal performance, most economical</li>
         <li><strong>PIR (Polyisocyanurate):</strong> Better fire safety, slightly better thermal</li>
@@ -2619,11 +2368,11 @@ export const existingBlogs: Record<string, BlogPost> = {
     title: 'PUF Panel Manufacturers in Gujarat: State-Wide Industry Overview',
     metaTitle: 'PUF Panel Manufacturers in Gujarat | Complete Directory 2025',
     metaDescription: 'Comprehensive guide to PUF panel manufacturers across Gujarat - Ahmedabad, Surat, Vadodara, Rajkot & more. Find the right supplier for your project.',
-    excerpt: 'Gujarat leads India in PUF panel manufacturing with facilities across multiple cities. This guide covers the entire state\'s manufacturing landscape.',
+    excerpt: 'Gujarat leads India in PUF panel manufacturing with facilities across multiple cities. This guide covers the entire state\'s manufacturing sector.',
     content: `
       <h2>Gujarat: The National Hub for Insulated Panels</h2>
       <p>When it comes to <a href="/products/sandwich-panels/sandwich-puf-panel">PUF panel manufacturing</a>, Gujarat stands in a league of its own. The state produces an estimated 60-65% of India's total insulated panel output, serving projects from Kashmir to Kanyakumari. Whether you're building a pharmaceutical cleanroom in Hyderabad or a cold storage in Delhi, your panels likely originate from Gujarat.</p>
-      <p>Let me walk you through the manufacturing landscape across Gujarat's key industrial centers.</p>
+      <p>Let me walk you through the manufacturing sector across Gujarat's key industrial centers.</p>
 
       <h2>Manufacturing Clusters Across Gujarat</h2>
       
@@ -2710,7 +2459,7 @@ export const existingBlogs: Record<string, BlogPost> = {
       <h2>PHOENIXX: Gujarat's Trusted Panel Partner</h2>
       <p>Operating from Gujarat's industrial heartland, PHOENIXX serves as a comprehensive solution provider:</p>
       <ul>
-        <li><strong>Full product range:</strong> <a href="/products/sandwich-panels/sandwich-puf-panel">PUF</a>, <a href="/products/sandwich-panels/pir-panel">PIR</a>, <a href="/products/sandwich-panels/rockwool-panel">rockwool</a>, and <a href="/products/sandwich-panels/fm-approved-panel">FM-approved panels</a></li>
+        <li><strong>Full product range:</strong> <a href="/products/sandwich-panels/sandwich-puf-panel">PUF</a>, <a href="/products/sandwich-panels/pir-panel">PIR</a>, <a href="/products/sandwich-panels/rockwool-panel">rockwool</a>, and <a href="/shop/fm-approved-panel">FM-approved panels</a></li>
         <li><strong>Statewide presence:</strong> Delivery across all Gujarat districts</li>
         <li><strong>Pan-India capability:</strong> Projects delivered in 20+ states</li>
         <li><strong>Technical expertise:</strong> Engineering support for complex projects</li>
@@ -2730,7 +2479,7 @@ export const existingBlogs: Record<string, BlogPost> = {
     relatedProducts: [
       { name: 'Sandwich PUF Panels', href: '/products/sandwich-panels/sandwich-puf-panel' },
       { name: 'PIR Panels', href: '/products/sandwich-panels/pir-panel' },
-      { name: 'FM Approved Panels', href: '/products/sandwich-panels/fm-approved-panel' },
+      { name: 'FM Approved Panels', href: '/shop/fm-approved-panel' },
     ],
     relatedSolutions: [
       { name: 'Pre-Engineered Buildings', href: '/solutions/peb' },
@@ -2751,9 +2500,9 @@ export const existingBlogs: Record<string, BlogPost> = {
     content: `
       <h2>Understanding PUF Panel Pricing</h2>
       <p>If you're searching for panel price lists online, you've probably noticed significant price variations between suppliers. A 50mm panel might be quoted at ₹850/sqm by one manufacturer and ₹1,100/sqm by another. Are they the same product? Almost certainly not.</p>
-      <p>After 18+ years in this industry, I've learned that comparing <a href="/products/sandwich-panels/sandwich-puf-panel">PUF panel prices</a> requires understanding what drives those prices. Let me share insights that will help you make informed decisions.</p>
+      <p>After 13+ years in this industry, I've learned that comparing <a href="/products/sandwich-panels/sandwich-puf-panel">PUF panel prices</a> requires understanding what drives those prices. Let me share insights that will help you make informed decisions.</p>
 
-      <h2>Current Market Price Ranges (2025)</h2>
+      <h2>Current Market Price Ranges</h2>
       <p>These are indicative market rates for quality panels from established manufacturers:</p>
       
       <h3>Standard PUF Panels (Wall/Ceiling)</h3>
@@ -2785,7 +2534,7 @@ export const existingBlogs: Record<string, BlogPost> = {
       <ul>
         <li><strong><a href="/products/sandwich-panels/pir-panel">PIR Panels</a>:</strong> 15-25% premium over standard PUF</li>
         <li><strong><a href="/products/sandwich-panels/rockwool-panel">Rockwool Panels</a>:</strong> 40-60% premium over PUF</li>
-        <li><strong><a href="/products/sandwich-panels/fm-approved-panel">FM Approved Panels</a>:</strong> 50-80% premium</li>
+        <li><strong><a href="/shop/fm-approved-panel">FM Approved Panels</a>:</strong> 50-80% premium</li>
         <li><strong>Stainless Steel Skin Panels:</strong> 80-120% premium</li>
       </ul>
 
@@ -2854,6 +2603,7 @@ export const existingBlogs: Record<string, BlogPost> = {
     `,
     category: 'Pricing',
     date: '2025-01-27',
+    lastModified: '2026-09-13',
     readTime: '9 min read',
     author: { name: 'Sales Team', role: 'PHOENIXX SmartBuild' },
     keywords: ['PUF Panel Price', 'PUF Panel Price List', 'Sandwich Panel Rates', 'PUF Panel Cost per sqft'],
@@ -3302,8 +3052,8 @@ export const existingBlogs: Record<string, BlogPost> = {
     excerpt: 'PUF panel houses offer a faster, more affordable path to homeownership. This guide covers everything from benefits to construction process.',
     content: `
       <h2>The Rise of Prefab Housing in India</h2>
-      <p>Five years ago, when someone mentioned "prefab house" in India, images of temporary construction site offices came to mind. Today, that perception is changing rapidly. We're seeing architects, professionals, and families choosing <a href="/products/sandwich-panels/sandwich-puf-panel">PUF panel houses</a> as permanent residences—and for good reasons.</p>
-      <p>Having built prefab structures for industrial clients for nearly two decades, I've watched this technology mature. The same panels that keep cold storage at -25°C can keep your home comfortable at 25°C using a fraction of the energy. Let me share what makes this approach so compelling.</p>
+      <p>Five years ago, when someone mentioned "prefab house" in India, images of temporary construction site offices came to mind. Today, that perception is changing rapidly. We're seeing architects, professionals, and families choosing <a href="/products/sandwich-panels/sandwich-puf-panel">PUF panel houses</a> as permanent residences, and for good reasons.</p>
+      <p>Having built prefab structures for industrial clients since 2013, I've watched this technology mature. The same panels that keep cold storage at -25°C can keep your home comfortable at 25°C using a fraction of the energy. Let me share what makes this approach so compelling.</p>
 
       <h2>What Is a PUF Panel House?</h2>
       <p>A PUF panel house uses insulated sandwich panels as the primary building envelope instead of traditional brick and mortar:</p>

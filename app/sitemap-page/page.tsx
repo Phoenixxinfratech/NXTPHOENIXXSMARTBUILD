@@ -4,13 +4,27 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 import { productsData, solutionsData, industriesData } from '@/lib/navigation';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Sitemap | PHOENIXX SmartBuild',
+  title: 'Sitemap',
   description:
     'Navigate all pages on PHOENIXX SmartBuild. Find products, solutions, industries, and resources easily.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/sitemap-page',
+  },
+  openGraph: {
+    title: 'Sitemap | PHOENIXX SMARTBUILD',
+    description: 'Navigate all pages on PHOENIXX SmartBuild. Find products, solutions, industries, and resources easily.',
+    url: 'https://phoenixxsmartbuild.com/sitemap-page',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Sitemap | PHOENIXX SMARTBUILD',
+    description: 'Navigate all pages on PHOENIXX SmartBuild. Find products, solutions, industries, and resources easily.',
   },
 };
 
@@ -27,16 +41,12 @@ export default function SitemapPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={breadcrumbSchema} />
 
         <section className="border-b bg-muted/30 py-12">
           <div className="container-custom">
-            <nav className="mb-4 text-sm text-muted-foreground">
-              <Link href="/" className="hover:text-primary">Home</Link>
-              <span className="mx-2">/</span>
-              <span>Sitemap</span>
-            </nav>
+            <Breadcrumbs tone="light" className="mb-4" items={[{ label: 'Sitemap' }]} />
             <h1>Sitemap</h1>
             <p className="mt-2 text-muted-foreground">
               Complete navigation map of our website
@@ -67,6 +77,7 @@ export default function SitemapPage() {
                 <h2 className="text-lg font-semibold mb-4">Products</h2>
                 <ul className="space-y-2 text-sm">
                   <li><Link href="/products" className="text-muted-foreground hover:text-primary">All Products</Link></li>
+                  <li><Link href="/shop" className="text-muted-foreground hover:text-primary">Shop – Buy Online</Link></li>
                   {Object.entries(productsData).map(([slug, category]) => (
                     <li key={slug}>
                       <Link href={`/products/${slug}`} className="text-muted-foreground hover:text-primary">

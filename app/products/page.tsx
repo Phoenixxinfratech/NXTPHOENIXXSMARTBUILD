@@ -5,6 +5,9 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { AISummaryBlock } from '@/components/ai/ai-summary-block';
 import { JsonLd } from '@/components/seo/json-ld';
+import { ProductFinder } from './product-finder';
+import { locations } from '@/lib/landing-page-data';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Industrial Products – Panels, Doors & Cleanrooms',
@@ -21,15 +24,28 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/products',
   },
+  openGraph: {
+    title: 'Industrial Products – Panels, Doors & Cleanrooms | PHOENIXX SMARTBUILD',
+    description: 'Explore PUF panels, fire-rated doors, and cleanroom solutions. Engineered for performance, certified for quality. Request a quote now.',
+    url: 'https://phoenixxsmartbuild.com/products',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Industrial Products – Panels, Doors & Cleanrooms | PHOENIXX SMARTBUILD',
+    description: 'Explore PUF panels, fire-rated doors, and cleanroom solutions. Engineered for performance, certified for quality. Request a quote now.',
+  },
 };
 
 // Client logos for trust section
 const clientLogos = [
   { name: 'Coca-Cola', logo: '/images/clients/coca-cola.jpg' },
-  { name: 'Amul', logo: '/images/clients/Amul_official_logo.svg.png' },
-  { name: 'Intas Pharma', logo: '/images/clients/Intas pharma.png' },
-  { name: 'SKF', logo: '/images/clients/SKF-01.png' },
-  { name: 'Uflex', logo: '/images/clients/Uflex.png' },
+  { name: 'Amul', logo: '/images/clients/amul.png' },
+  { name: 'Intas Pharma', logo: '/images/clients/intas.png' },
+  { name: 'SKF', logo: '/images/clients/skf.png' },
+  { name: 'Uflex', logo: '/images/clients/uflex.png' },
   { name: 'Hershey', logo: '/images/clients/hershey.webp' },
   { name: 'Cargill', logo: '/images/clients/cargill.jpg' },
   { name: 'Bunge', logo: '/images/clients/bunge.jpg' },
@@ -76,7 +92,7 @@ const productCategories = [
     tagline: 'Contamination Control Systems',
     description: 'Modular cleanroom partitions, ceilings, panels, and controlled environment systems for pharma, biotech, electronics, and healthcare industries.',
     keywords: 'Cleanroom Partitions | Cleanroom Ceilings | Cleanroom Panels | GMP Cleanrooms',
-    image: '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat1.jpg',
+    image: '/images/products/cleanroom/partition/Cleanroom-Partition-supplier-Manufacture-in-Gujarat1.jpg',
     gradient: 'from-emerald-600 to-teal-600',
     icon: '🧪',
   },
@@ -106,7 +122,7 @@ const industries = [
     image: '/images/industries/semiconductor/semiconductor-cleanroom-1080x675.jpg',
     gradient: 'from-violet-500 to-purple-600',
     icon: '⚡',
-    href: '/industries/semiconductor',
+    href: '/industries/precision-engineering',
   },
   {
     category: 'Food & Hospitality',
@@ -122,7 +138,7 @@ const industries = [
     image: '/images/industries/research-development/rd_banniere_photo1-1800x1200.jpg',
     gradient: 'from-blue-500 to-indigo-600',
     icon: '🔬',
-    href: '/industries/research-development',
+    href: '/industries/pharma-chemical',
   },
 ];
 
@@ -183,12 +199,12 @@ export default function ProductsPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={breadcrumbSchema} />
         <JsonLd data={productSchema} />
 
         <AISummaryBlock
-          summary="PHOENIXX manufactures high-performance infrastructure products including Sandwich PUF Panels (PIR, PUF, Roofing panels with thermal conductivity 0.022-0.024 W/mK), Industrial Doors (Cleanroom, Fire-rated up to 120 minutes), Cold Chain Solutions (Cold rooms, Freezers, Temperature-controlled storage), and Cleanroom Products (Partitions, Ceilings for ISO Class 5-8). With 14+ years experience and 210+ projects delivered across 20+ cities in India."
+          summary="PHOENIXX manufactures high-performance infrastructure products including Sandwich PUF Panels (PIR, PUF, Roofing panels with thermal conductivity 0.022-0.024 W/mK), Industrial Doors (Cleanroom, Fire-rated up to 120 minutes), Cold Chain Solutions (Cold rooms, Freezers, Temperature-controlled storage), and Cleanroom Products (Partitions, Ceilings for ISO Class 5-8). With 13+ years experience and 500+ projects delivered across 20+ cities in India."
           keywords={['Sandwich PUF Panels', 'PUF panels', 'cleanroom doors', 'fire doors', 'cold storage', 'insulated panels', 'cold chain solutions']}
         />
 
@@ -199,11 +215,7 @@ export default function ProductsPage() {
           <div className="absolute bottom-1/4 -left-32 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl" />
           
           <div className="container-custom relative">
-            <nav className="mb-6 text-sm text-slate-400">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">Products</span>
-            </nav>
+            <Breadcrumbs items={[{ label: 'Products' }]} />
 
             <div className="max-w-4xl">
               <span className="inline-block px-4 py-1 rounded-full bg-gradient-to-r from-blue-500/20 to-emerald-500/20 text-blue-300 text-sm font-medium mb-4 border border-blue-500/20">
@@ -264,6 +276,7 @@ export default function ProductsPage() {
                   <Image
                     src={client.logo}
                     alt={client.name}
+                    sizes="80px"
                     fill
                     className="object-contain"
                   />
@@ -284,79 +297,11 @@ export default function ProductsPage() {
                 Find the Right Product in Seconds
               </h2>
               <p className="mt-4 text-slate-600 leading-relaxed">
-                Our intelligent product finder helps you quickly discover the most suitable solution from our complete portfolio of <strong>Sandwich PUF Panels</strong>, insulated panels, cold storage systems, cleanroom products, and industrial doors. Whether you&apos;re planning a cold storage facility, pharma cleanroom, warehouse, or industrial shed, we help you match the right product to your exact requirement.
+                Search or filter across our <strong>Sandwich PUF Panels</strong>, insulated panels, cold storage systems, cleanroom products, and industrial doors. Whether you&apos;re planning a cold storage facility, pharma cleanroom, warehouse, or industrial shed, this narrows the portfolio down to what fits your requirement.
               </p>
             </div>
 
-            {/* Search & Filters */}
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 border border-slate-200">
-                {/* Search Input */}
-                <div className="relative">
-                  <input
-                    type="text"
-                    placeholder="Search by product name, category, thickness, or feature..."
-                    className="w-full px-5 py-4 pl-12 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-all text-slate-900"
-                  />
-                  <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
-                </div>
-
-                {/* Filter Tags */}
-                <div className="mt-6 space-y-4">
-                  <div>
-                    <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">By Category</p>
-                    <div className="flex flex-wrap gap-2">
-                      {['Sandwich Panels', 'Doors', 'Cold Chain Solutions', 'Cleanroom Products'].map((filter) => (
-                        <button
-                          key={filter}
-                          type="button"
-                          aria-label={`Filter by ${filter}`}
-                          className="px-4 py-2 rounded-full bg-slate-100 text-slate-700 text-sm font-medium hover:bg-blue-100 hover:text-blue-700 transition-colors"
-                        >
-                          {filter}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                  <div>
-                    <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">By Feature</p>
-                    <div className="flex flex-wrap gap-2">
-                      {['Fire-Rated', 'Energy-Efficient', 'Acoustic', 'Hygienic', 'Custom Sizes'].map((filter) => (
-                        <button
-                          key={filter}
-                          type="button"
-                          aria-label={`Filter by ${filter} feature`}
-                          className="px-4 py-2 rounded-full bg-slate-100 text-slate-700 text-sm font-medium hover:bg-emerald-100 hover:text-emerald-700 transition-colors"
-                        >
-                          {filter}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                  <div>
-                    <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">By Industry</p>
-                    <div className="flex flex-wrap gap-2">
-                      {['Pharma', 'Food Processing', 'Dairy', 'Healthcare', 'Manufacturing', 'Logistics'].map((filter) => (
-                        <button
-                          key={filter}
-                          type="button"
-                          aria-label={`Filter by ${filter} industry`}
-                          className="px-4 py-2 rounded-full bg-slate-100 text-slate-700 text-sm font-medium hover:bg-orange-100 hover:text-orange-700 transition-colors"
-                        >
-                          {filter}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                <p className="mt-6 text-center text-sm text-slate-500">
-                  Start typing or apply filters to explore our most in-demand insulated infrastructure products.
-                </p>
-              </div>
-            </div>
+            <ProductFinder />
           </div>
         </section>
 
@@ -384,6 +329,7 @@ export default function ProductsPage() {
                     <Image
                       src={category.image}
                       alt={category.title}
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                     />
@@ -449,6 +395,7 @@ export default function ProductsPage() {
                     <Image
                       src={industry.image}
                       alt={industry.category}
+                      sizes="(max-width: 768px) 100vw, 33vw"
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
@@ -571,27 +518,43 @@ export default function ProductsPage() {
                 { state: 'Madhya Pradesh', city: 'Indore' },
                 { state: 'Uttar Pradesh', city: 'Noida' },
                 { state: 'Chhattisgarh', city: 'Raipur' },
-              ].map((location) => (
-                <Link
-                  key={location.state}
-                  href={`/sandwich-puf-panel-in-${location.state.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all border border-transparent hover:border-blue-200"
-                >
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="text-2xl">📍</span>
-                    <h3 className="text-lg font-bold text-slate-900">{location.state}</h3>
+              ].map((location) => {
+                const slug = location.state.toLowerCase().replace(/\s+/g, '-');
+                const body = (
+                  <>
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="text-2xl" aria-hidden="true">📍</span>
+                      <h3 className="text-lg font-bold text-slate-900">{location.state}</h3>
+                    </div>
+                    <p className="text-sm text-slate-600 mb-3">
+                      Top city: {location.city}
+                    </p>
+                  </>
+                );
+                return locations[slug] ? (
+                  <Link
+                    key={location.state}
+                    href={`/sandwich-puf-panel-in-${slug}`}
+                    className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all border border-transparent hover:border-blue-200"
+                  >
+                    {body}
+                    <span className="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">
+                      View locations
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </span>
+                  </Link>
+                ) : (
+                  <div
+                    key={location.state}
+                    className="bg-white rounded-xl p-6 shadow-sm border border-transparent"
+                  >
+                    {body}
+                    <span className="text-sm text-slate-500">Supplied from our Gujarat plant</span>
                   </div>
-                  <p className="text-sm text-slate-600 mb-3">
-                    Top city: {location.city}
-                  </p>
-                  <span className="inline-flex items-center gap-1 text-blue-600 text-sm font-medium">
-                    View locations
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </span>
-                </Link>
-              ))}
+                );
+              })}
             </div>
 
             <div className="text-center">

@@ -4,12 +4,26 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 import { CityManufacturerAeo } from '@/components/seo/city-manufacturer-aeo';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'PUF Panel Manufacturer in Mumbai | PHOENIXX',
+  title: 'PUF Panel Manufacturer in Mumbai',
   description: 'Leading PUF panel manufacturer in Mumbai. Quality insulated panels for cold storage, warehouses & industries. Get free quote!',
   keywords: ['PUF panel manufacturer in Mumbai', 'PUF sandwich panel Mumbai', 'cold storage panel Mumbai'],
   alternates: { canonical: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-mumbai' },
+  openGraph: {
+    title: 'PUF Panel Manufacturer in Mumbai | PHOENIXX SMARTBUILD',
+    description: 'Leading PUF panel manufacturer in Mumbai. Quality insulated panels for cold storage, warehouses & industries. Get free quote!',
+    url: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-mumbai',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PUF Panel Manufacturer in Mumbai | PHOENIXX SMARTBUILD',
+    description: 'Leading PUF panel manufacturer in Mumbai. Quality insulated panels for cold storage, warehouses & industries. Get free quote!',
+  },
 };
 
 const faqs = [
@@ -74,12 +88,14 @@ export default function MumbaiPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={faqSchema} />
 
         <section className="relative bg-gradient-to-br from-slate-900 via-gray-900 to-blue-900 py-20 md:py-28">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
+            <Breadcrumbs withSchema items={[{ label: 'Products', href: '/products' }, { label: 'PUF Panel Manufacturer in Mumbai' }]} />
+
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-400 mb-6">📍 Serving Mumbai & Maharashtra Industries</span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">PUF Panel Manufacturer in Mumbai</h1>
@@ -147,7 +163,7 @@ export default function MumbaiPage() {
                 { title: 'Quality Certified', desc: 'ISO-compliant products' },
                 { title: 'Technical Support', desc: 'Expert guidance available' },
                 { title: 'Competitive Rates', desc: 'Best pricing for volume' },
-                { title: '18+ Years', desc: 'Maharashtra market experience' },
+                { title: '13+ Years', desc: 'Maharashtra market experience' },
                 { title: 'Full Range', desc: '30mm to 150mm thickness' },
               ].map((item, idx) => (<div key={idx} className="text-center"><h3 className="font-bold text-blue-400">{item.title}</h3><p className="mt-2 text-slate-300 text-sm">{item.desc}</p></div>))}
             </div>
@@ -159,7 +175,7 @@ export default function MumbaiPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">PUF Panel Applications in Mumbai</h2>
             <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
               {['Pharmaceutical Manufacturing Plants', 'Cold Storage & Logistics Warehouses', 'Food Processing & Packaging Units', 'IT Parks & Commercial Buildings', 'E-commerce Fulfillment Centers', 'Industrial Manufacturing Units', 'Data Centers & Server Rooms', 'Retail & Cold Chain Infrastructure'].map((app, idx) => (
-                <div key={idx} className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg"><span className="text-blue-500">✓</span><span className="text-slate-700">{app}</span></div>
+                <div key={idx} className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg"><span className="text-blue-500" aria-hidden="true">✓</span><span className="text-slate-700">{app}</span></div>
               ))}
             </div>
           </div>

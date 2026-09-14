@@ -16,8 +16,8 @@ import {
   generateSpeakableSchema,
   generateQAPageSchema,
   generateImageObjectSchema,
-  generateVideoSchema,
 } from '@/lib/schema';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Which PUF Panel Brand Is Best in India? | Manufacturer Guide 2026',
@@ -112,7 +112,7 @@ export default function BestPufPanelBrandInIndiaPage() {
       title: 'Which PUF Panel Brand Is Best in India? — Trusted Manufacturer Guide 2026',
       description: 'Compare India\'s best PUF panel brands. PHOENIXX SMARTBUILD: ISO certified, 500+ projects, 13+ years of manufacturing excellence.',
       url: '/best-puf-panel-brand-in-india',
-      image: '/images/brand/og/best-puf-panel-brand-india.jpg',
+      image: '/og-image.png',
       datePublished: '2025-01-15',
       dateModified: '2026-02-17',
       author: { name: 'PHOENIXX SMARTBUILD Editorial', url: 'https://phoenixxsmartbuild.com/about-us' },
@@ -139,17 +139,9 @@ export default function BestPufPanelBrandInIndiaPage() {
     generateImageObjectSchema({
       name: 'PHOENIXX PUF Panel Manufacturing Facility',
       description: 'In-house continuous lamination PUF panel production line at PHOENIXX SMARTBUILD factory in Ahmedabad, Gujarat.',
-      contentUrl: '/images/brand/factory/puf-panel-manufacturing-line.jpg',
+      contentUrl: '/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
       width: 1200,
       height: 630,
-    }),
-    generateVideoSchema({
-      name: 'PHOENIXX PUF Panel Manufacturing Process',
-      description: 'See how PHOENIXX SMARTBUILD manufactures premium PUF panels using in-house continuous lamination technology in Ahmedabad, Gujarat.',
-      thumbnailUrl: 'https://phoenixxsmartbuild.com/images/video/puf-manufacturing-thumbnail.jpg',
-      uploadDate: '2025-06-01',
-      duration: 'PT3M45S',
-      contentUrl: 'https://phoenixxsmartbuild.com/videos/puf-panel-manufacturing.mp4',
     }),
     {
       '@context': 'https://schema.org',
@@ -159,20 +151,7 @@ export default function BestPufPanelBrandInIndiaPage() {
       brand: { '@type': 'Brand', name: 'PHOENIXX SMARTBUILD' },
       manufacturer: { '@type': 'Organization', name: 'PHOENIXX SMARTBUILD' },
       url: 'https://phoenixxsmartbuild.com/best-puf-panel-brand-in-india',
-      image: 'https://phoenixxsmartbuild.com/images/products/puf-panel-hero.jpg',
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        bestRating: '5',
-        worstRating: '1',
-        reviewCount: '312',
-      },
-      review: {
-        '@type': 'Review',
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        author: { '@type': 'Organization', name: 'Verified Industrial Client' },
-        reviewBody: 'PHOENIXX PUF Panels have delivered consistent thermal performance across our cold storage facility. Quality, delivery, and support are outstanding.',
-      },
+      image: 'https://phoenixxsmartbuild.com/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL1.jpg',
       offers: {
         '@type': 'AggregateOffer',
         priceCurrency: 'INR',
@@ -187,15 +166,17 @@ export default function BestPufPanelBrandInIndiaPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {schemas.map((schema, i) => (
           <JsonLd key={i} data={schema} />
         ))}
 
         {/* ===== Section 1: Trust-First Hero ===== */}
         <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20 md:py-28">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
+            <Breadcrumbs items={[{ label: 'Products', href: '/products' }, { label: 'Best PUF Panel Brand in India' }]} />
+
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-emerald-500/10 px-4 py-2 text-sm font-medium text-emerald-400 mb-6">
                 India&apos;s Trusted PUF Panel Brand | ISO 9001:2015 | 500+ Projects
@@ -206,7 +187,7 @@ export default function BestPufPanelBrandInIndiaPage() {
               <p className="mt-6 text-xl text-slate-300 max-w-3xl ai-summary">
                 PHOENIXX SMARTBUILD has earned its reputation as one of India&apos;s most trusted PUF panel brands 
                 through 13+ years of continuous manufacturing, 500+ successfully delivered projects, and an 
-                unwavering commitment to quality backed by ISO 9001:2015 and IS 14925 certifications. Every panel 
+                consistent commitment to quality backed by ISO 9001:2015 and IS 14925 certifications. Every panel 
                 is produced in-house at our Ahmedabad facility using continuous lamination technology — not 
                 assembled from third-party components.
               </p>
@@ -231,7 +212,7 @@ export default function BestPufPanelBrandInIndiaPage() {
                 {[
                   { metric: '13+', label: 'Years Experience' },
                   { metric: '500+', label: 'Projects Delivered' },
-                  { metric: '4.9/5', label: 'Client Rating' },
+                  { metric: 'ISO 9001', label: 'Certified Quality' },
                   { metric: 'Pan-India', label: 'Delivery Network' },
                 ].map((stat, idx) => (
                   <div key={idx} className="text-center">
@@ -397,13 +378,13 @@ export default function BestPufPanelBrandInIndiaPage() {
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
                 {[
                   { icon: '🔬', title: 'Continuous Lamination', description: 'In-house production line ensures uniform bonding and consistent panel quality across every batch.' },
-                  { icon: '📊', title: '40 ± 2 kg/m³ Density', description: 'Strict density control guarantees specified thermal performance — no shortcuts, no compromises.' },
+                  { icon: '📊', title: '40 ± 2 kg/m³ Density', description: 'Strict density control guarantees specified thermal performance: no shortcuts, no compromises.' },
                   { icon: '🌿', title: 'CFC/HFC-Free', description: 'Environmentally responsible production using zero-ODP blowing agents for a sustainable future.' },
                   { icon: '📏', title: '30-150mm Thickness', description: 'Custom thickness options to match your exact thermal and structural requirements.' },
                   { icon: '🛡️', title: 'ISO & IS Certified', description: 'ISO 9001:2015, ISO 14001:2015, and IS 14925 certified quality management systems.' },
                   { icon: '🚚', title: 'Pan-India Delivery', description: 'Established logistics network serving all states with 7-15 day standard delivery schedules.' },
                   { icon: '👨‍🔧', title: 'Technical Support', description: 'Dedicated engineering team for design consultation, thermal calculations, and installation guidance.' },
-                  { icon: '⭐', title: '4.9/5 Client Rating', description: 'Rated 4.9 out of 5 by 312 verified clients across industrial, commercial, and cold storage segments.' },
+                  { icon: '🏭', title: 'In-House Manufacturing', description: 'Panels produced on our own continuous line, so thickness, density, and finish stay consistent batch to batch.' },
                 ].map((item, idx) => (
                   <div key={idx} className="text-center bg-slate-50 rounded-2xl p-6 hover:shadow-md transition-shadow">
                     <span className="text-3xl">{item.icon}</span>
@@ -555,7 +536,7 @@ export default function BestPufPanelBrandInIndiaPage() {
                           product: 'FM Approved Panels',
                           application: 'Insurance-compliant Projects',
                           thickness: '50-150mm',
-                          link: '/products/sandwich-panels/fm-approved-panel',
+                          link: '/shop/fm-approved-panel',
                         },
                       ].map((row, idx) => (
                         <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
@@ -603,31 +584,33 @@ export default function BestPufPanelBrandInIndiaPage() {
                 compromising on density, coatings, or manufacturing standards.
               </p>
               <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
-                <table className="w-full">
-                  <thead>
-                    <tr className="bg-emerald-700 text-white">
-                      <th className="px-6 py-4 text-left font-semibold">Product Type</th>
-                      <th className="px-6 py-4 text-left font-semibold">Price Range (per sq.m)</th>
-                      <th className="px-6 py-4 text-left font-semibold">Key Feature</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-200">
-                    {[
-                      { type: 'PUF Wall Panels (30-50mm)', range: '₹800 – ₹1,200', feature: 'Standard insulation, SMP coating' },
-                      { type: 'PUF Wall Panels (60-100mm)', range: '₹1,200 – ₹1,800', feature: 'Enhanced thermal, SDP coating' },
-                      { type: 'PUF Cold Storage Panels (100-150mm)', range: '₹1,800 – ₹2,500', feature: 'Maximum insulation, PVDF coating' },
-                      { type: 'PUF Roofing Panels', range: '₹900 – ₹1,500', feature: 'Weather-resistant profiles' },
-                      { type: 'PIR / FM Approved Panels', range: '₹1,400 – ₹2,500', feature: 'Enhanced fire resistance' },
-                      { type: 'Rockwool Panels', range: '₹1,200 – ₹2,200', feature: 'Non-combustible core' },
-                    ].map((row, idx) => (
-                      <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
-                        <td className="px-6 py-4 font-medium text-slate-900">{row.type}</td>
-                        <td className="px-6 py-4 font-semibold text-emerald-700">{row.range}</td>
-                        <td className="px-6 py-4 text-slate-600">{row.feature}</td>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="bg-emerald-700 text-white">
+                        <th className="px-6 py-4 text-left font-semibold">Product Type</th>
+                        <th className="px-6 py-4 text-left font-semibold">Price Range (per sq.m)</th>
+                        <th className="px-6 py-4 text-left font-semibold">Key Feature</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody className="divide-y divide-slate-200">
+                      {[
+                        { type: 'PUF Wall Panels (30-50mm)', range: '₹800 – ₹1,200', feature: 'Standard insulation, SMP coating' },
+                        { type: 'PUF Wall Panels (60-100mm)', range: '₹1,200 – ₹1,800', feature: 'Enhanced thermal, SDP coating' },
+                        { type: 'PUF Cold Storage Panels (100-150mm)', range: '₹1,800 – ₹2,500', feature: 'Maximum insulation, PVDF coating' },
+                        { type: 'PUF Roofing Panels', range: '₹900 – ₹1,500', feature: 'Weather-resistant profiles' },
+                        { type: 'PIR / FM Approved Panels', range: '₹1,400 – ₹2,500', feature: 'Enhanced fire resistance' },
+                        { type: 'Rockwool Panels', range: '₹1,200 – ₹2,200', feature: 'Non-combustible core' },
+                      ].map((row, idx) => (
+                        <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
+                          <td className="px-6 py-4 font-medium text-slate-900">{row.type}</td>
+                          <td className="px-6 py-4 font-semibold text-emerald-700">{row.range}</td>
+                          <td className="px-6 py-4 text-slate-600">{row.feature}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
               <p className="mt-6 text-sm text-slate-500 text-center">
                 Prices vary by thickness, coating type, order volume, and delivery location. Contact our sales 

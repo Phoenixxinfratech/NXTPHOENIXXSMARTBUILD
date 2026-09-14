@@ -4,6 +4,7 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 import { getDirectorySections, getTotalLinkCount } from '@/lib/directory-data';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 const baseUrl = 'https://phoenixxsmartbuild.com';
 
@@ -69,26 +70,20 @@ export default function ProductDirectoryPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={itemListSchema} />
         <JsonLd data={breadcrumbSchema} />
 
         {/* Hero */}
         <section className="border-b bg-muted/30 py-12">
           <div className="container-custom">
-            <nav className="mb-4 text-sm text-muted-foreground">
-              <Link href="/" className="hover:text-primary">
-                Home
-              </Link>
-              <span className="mx-2">/</span>
-              <span>Product Directory</span>
-            </nav>
+            <Breadcrumbs className="mb-4" items={[{ label: 'Product Directory' }]} />
             <h1 className="text-3xl font-bold tracking-tight md:text-4xl">
               Complete Product &amp; Solution Directory &ndash; Phoenixx Smart Build
             </h1>
             <p className="mt-4 max-w-3xl text-muted-foreground">
               This page lists every product, solution, and location page available on
-              the Phoenixx Smart Build website &mdash; including industrial door solutions,
+              the Phoenixx Smart Build website, including industrial door solutions,
               fire rated doors, cleanroom doors, multipurpose doors, PUF insulated
               sandwich panels, and building material products. Use this directory to
               quickly find what you need.

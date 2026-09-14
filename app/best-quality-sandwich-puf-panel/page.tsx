@@ -16,8 +16,8 @@ import {
   generateSpeakableSchema,
   generateQAPageSchema,
   generateImageObjectSchema,
-  generateVideoSchema,
 } from '@/lib/schema';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Which Sandwich PUF Panel Is Best Quality? | Buyer Guide 2026',
@@ -78,19 +78,6 @@ export default function BestQualitySandwichPufPanelPage() {
     image: 'https://phoenixxsmartbuild.com/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
     brand: { '@type': 'Brand', name: 'PHOENIXX SMARTBUILD' },
     manufacturer: { '@type': 'Organization', name: 'PHOENIXX SMARTBUILD' },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '203',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: {
-      '@type': 'Review',
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      author: { '@type': 'Organization', name: 'SKF India Ltd.' },
-      reviewBody: 'Exceptional PUF panel quality with consistent 40 kg/m³ density and excellent thermal performance. PHOENIXX delivered on time with full documentation.',
-    },
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'INR',
@@ -104,7 +91,7 @@ export default function BestQualitySandwichPufPanelPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {/* JSON-LD Schemas */}
         <JsonLd data={generateOrganizationSchema()} />
         <JsonLd data={generateLocalBusinessSchema()} />
@@ -159,14 +146,6 @@ export default function BestQualitySandwichPufPanelPage() {
           width: 1200,
           height: 630,
         })} />
-        <JsonLd data={generateVideoSchema({
-          name: 'PHOENIXX PUF Panel Quality Control Process',
-          description: 'See how PHOENIXX ensures premium quality in every PUF panel through rigorous testing and continuous lamination technology.',
-          thumbnailUrl: 'https://phoenixxsmartbuild.com/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
-          uploadDate: '2025-01-01',
-          duration: 'PT4M45S',
-          contentUrl: 'https://phoenixxsmartbuild.com/videos/quality-control',
-        })} />
         <JsonLd data={productSchema} />
 
         {/* ============================================================
@@ -176,6 +155,8 @@ export default function BestQualitySandwichPufPanelPage() {
           <div className="absolute inset-0 bg-[url('/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp')] bg-cover bg-center opacity-10" />
           <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 to-slate-900/95" />
           <div className="container-custom relative z-10">
+            <Breadcrumbs items={[{ label: 'Products', href: '/products' }, { label: 'Best Quality Sandwich PUF Panel' }]} />
+
             <div className="max-w-4xl">
               <div className="flex flex-wrap items-center gap-3 mb-6">
                 <span className="inline-block rounded-full bg-emerald-500/10 border border-emerald-500/20 px-4 py-2 text-sm font-medium text-emerald-400">
@@ -300,7 +281,7 @@ export default function BestQualitySandwichPufPanelPage() {
               </h2>
               <p className="text-lg text-slate-600 mb-10 max-w-3xl">
                 Quality in a sandwich PUF panel is determined by five measurable parameters. Understanding each one
-                empowers you to make informed purchasing decisions and avoid costly mistakes.
+                helps you make informed purchasing decisions and avoid costly mistakes.
               </p>
 
               <div className="space-y-8">
@@ -314,7 +295,7 @@ export default function BestQualitySandwichPufPanelPage() {
                   {
                     number: '02',
                     title: 'Thermal Conductivity — Insulation Efficiency',
-                    description: 'Thermal conductivity (k-value) measures how readily heat passes through the foam core. Lower values mean better insulation. Premium PUF panels achieve 0.024 W/mK or below — the lowest k-value among common insulation materials. For context, mineral wool has a k-value of 0.035-0.040 W/mK, meaning PUF provides 40-50% better insulation in the same thickness. This translates directly to energy savings: a 80mm premium PUF panel can replace a 120mm mineral wool panel while delivering identical or superior thermal resistance.',
+                    description: 'Thermal conductivity (k-value) measures how readily heat passes through the foam core. Lower values mean better insulation. Premium PUF panels achieve 0.024 W/mK or below: the lowest k-value among common insulation materials. For context, mineral wool has a k-value of 0.035-0.040 W/mK, meaning PUF provides 40-50% better insulation in the same thickness. This translates directly to energy savings: a 80mm premium PUF panel can replace a 120mm mineral wool panel while delivering identical or superior thermal resistance.',
                     metric: '≤ 0.024 W/mK',
                   },
                   {
@@ -326,7 +307,7 @@ export default function BestQualitySandwichPufPanelPage() {
                   {
                     number: '04',
                     title: 'Coating Quality — Weather & UV Protection',
-                    description: 'The exterior coating determines color retention, chalking resistance, and long-term aesthetics. Three tiers exist: PE (Polyester) is the most economical but only suitable for indoor or sheltered applications with a 5-8 year color life. SMP (Silicon Modified Polyester) offers the best value for standard outdoor use with a 15-20 year performance window. PVDF (Polyvinylidene Fluoride) is the premium choice with 25+ year color retention, maximum UV resistance, and the lowest chalking index — ideal for architectural and long-service-life applications.',
+                    description: 'The exterior coating determines color retention, chalking resistance, and long-term aesthetics. Three tiers exist: PE (Polyester) is the most economical but only suitable for indoor or sheltered applications with a 5-8 year color life. SMP (Silicon Modified Polyester) offers the best value for standard outdoor use with a 15-20 year performance window. PVDF (Polyvinylidene Fluoride) is the premium choice with 25+ year color retention, maximum UV resistance, and the lowest chalking index, ideal for architectural and long-service-life applications.',
                     metric: 'PVDF / SMP / PE',
                   },
                   {
@@ -502,28 +483,28 @@ export default function BestQualitySandwichPufPanelPage() {
                     location: 'Ahmedabad, Gujarat',
                     scope: 'Precision manufacturing cleanroom with 80mm PUF wall panels and 100mm roof panels. Required tight thermal control for bearing production facility.',
                     result: 'Achieved ±1°C temperature stability. Zero panel defects reported in 3+ years of operation.',
-                    link: '/projects',
+                    link: '/resources/project-gallery',
                   },
                   {
                     client: 'Fuji Silvertech Concrete Pvt. Ltd.',
                     location: 'Ahmedabad, Gujarat',
                     scope: 'Large-scale warehouse cladding using 60mm PPGL PUF panels. Corrosion-resistant specification for concrete product storage environment.',
                     result: 'Panels performing flawlessly under high-dust, humid conditions. No delamination or coating degradation.',
-                    link: '/projects',
+                    link: '/resources/project-gallery',
                   },
                   {
                     client: 'PGP Glass Pvt. Ltd.',
                     location: 'Dahej, Gujarat',
                     scope: 'High-temperature industrial facility requiring fire-rated PUF panels with B1 classification and 0.50mm Galvalume facings.',
                     result: 'Passed all fire safety audits. Superior thermal resistance reduced cooling costs by an estimated 35%.',
-                    link: '/projects',
+                    link: '/resources/project-gallery',
                   },
                   {
                     client: 'Rajhans Nutriments Pvt. Ltd.',
                     location: 'Surat, Gujarat',
                     scope: 'Food-grade cold storage facility with 120mm PUF panels. Required IS 14925 compliance and hygiene-grade coatings for food processing.',
                     result: 'Maintained -18°C consistently. Full compliance with FSSAI and BIS requirements for food storage.',
-                    link: '/projects',
+                    link: '/resources/project-gallery',
                   },
                 ].map((project, idx) => (
                   <Link
@@ -552,7 +533,7 @@ export default function BestQualitySandwichPufPanelPage() {
                 <em>
                   Content authored by the <strong>PHOENIXX SMARTBUILD Engineering Team</strong> — 13+ years of
                   hands-on experience in insulated panel manufacturing, installation, and quality assurance across
-                  150+ industrial projects in India.
+                  500+ industrial projects in India.
                 </em>
               </p>
             </div>
@@ -712,7 +693,7 @@ export default function BestQualitySandwichPufPanelPage() {
               <div className="mt-10 prose prose-lg prose-slate max-w-3xl mx-auto">
                 <h3>Factors That Affect PUF Panel Pricing</h3>
                 <p>
-                  Panel thickness is the primary cost driver — a 100mm panel costs roughly 60% more than a 50mm panel
+                  Panel thickness is the primary cost driver: a 100mm panel costs roughly 60% more than a 50mm panel
                   due to increased foam volume. Steel grade and thickness add 10-25% depending on specification. Coating
                   type (PE vs SMP vs PVDF) impacts cost by 5-15%. Order volume, custom profiling, and delivery distance
                   also influence final pricing. For accurate project-specific pricing, we recommend requesting a detailed
@@ -755,7 +736,7 @@ export default function BestQualitySandwichPufPanelPage() {
                     <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-lg font-semibold text-slate-900 hover:bg-slate-50 transition-colors">
                       {faq.question}
                       <svg
-                        className="h-5 w-5 flex-shrink-0 text-slate-400 transition-transform group-open:rotate-180"
+                        className="h-5 w-5 flex-shrink-0 text-slate-500 transition-transform group-open:rotate-180"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"

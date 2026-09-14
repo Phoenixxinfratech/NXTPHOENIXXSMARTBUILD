@@ -5,6 +5,7 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 import { AISummaryBlock } from '@/components/ai/ai-summary-block';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Cleanroom Solutions – GMP Compliant Systems',
@@ -14,6 +15,19 @@ export const metadata: Metadata = {
     'cleanroom manufacturer india', 'pharmaceutical cleanroom', 'GMP cleanroom',
   ],
   alternates: { canonical: 'https://phoenixxsmartbuild.com/products/cleanroom-solutions' },
+  openGraph: {
+    title: 'Cleanroom Solutions – GMP Compliant Systems | PHOENIXX SMARTBUILD',
+    description: 'Complete cleanroom infrastructure: partitions, doors, ceilings, flooring. ISO Class 5-8. Get cleanroom project quote.',
+    url: 'https://phoenixxsmartbuild.com/products/cleanroom-solutions',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Cleanroom Solutions – GMP Compliant Systems | PHOENIXX SMARTBUILD',
+    description: 'Complete cleanroom infrastructure: partitions, doors, ceilings, flooring. ISO Class 5-8. Get cleanroom project quote.',
+  },
 };
 
 const cleanroomData = {
@@ -38,7 +52,7 @@ const cleanroomData = {
       name: 'Cleanroom Partitions',
       description: 'Modular wall systems with flush surfaces for pharmaceutical, biotech, and electronics cleanrooms. Available in sandwich panel and hollow-core configurations.',
       keywords: 'Cleanroom partitions, modular walls, GMP partitions, cleanroom panels',
-      image: '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat1.jpg',
+      image: '/images/products/cleanroom/partition/Cleanroom-Partition-supplier-Manufacture-in-Gujarat1.jpg',
       link: '/products/cleanroom-solutions/cleanroom-partition',
       features: ['50-100mm thickness', 'Coved corners', 'HPL/Steel/Glass finish', 'Cam-lock joints'],
     },
@@ -47,7 +61,7 @@ const cleanroomData = {
       name: 'Cleanroom False Ceiling',
       description: 'Walkable and non-walkable ceiling systems with HEPA filter integration, gel sealing, and maintenance access for ISO 5-8 cleanrooms.',
       keywords: 'Cleanroom ceiling, walkable ceiling, HEPA ceiling, pharmaceutical ceiling',
-      image: '/images/products/cleanroom/ceiling/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects26.jpg',
+      image: '/images/products/cleanroom/ceiling/Pharma-cleanroom-panel-manufacturers-Phoenixx-infratech-projects26.jpg',
       link: '/products/cleanroom-solutions/cleanroom-false-ceiling',
       features: ['200 kg/m² walkable', 'HEPA integration', 'Gel/gasket sealing', 'LED lighting'],
     },
@@ -56,7 +70,7 @@ const cleanroomData = {
       name: 'Cleanroom Doors',
       description: 'Flush-finish doors with magnetic/brush sealing for controlled environment applications. Swing, sliding, and hermetic options available.',
       keywords: 'Cleanroom doors, pharmaceutical doors, hermetic doors, GMP doors',
-      image: '/images/products/cleanroom/doors/Cleanroom-Door-Manufacturer-in-Ahmedabad-1.jpg',
+      image: '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-1.jpg',
       link: '/products/cleanroom-solutions/cleanroom-doors',
       features: ['Airtight sealing', 'Interlock compatible', 'SS hardware', 'Automation ready'],
     },
@@ -87,8 +101,6 @@ const cleanroomData = {
     quote: 'PHOENIXX built our ISO Class 7 pharmaceutical cleanroom in record time. The modular system allowed us to expand capacity within 3 weeks when demand increased. Excellent quality and support.',
     author: 'Production Head',
     company: 'API Manufacturer, Ahmedabad',
-    rating: 4.9,
-    reviews: 65,
   },
   industries: ['Pharmaceutical', 'Biotechnology', 'Electronics', 'Semiconductor', 'Healthcare', 'Food Processing', 'Research Labs'],
   faqs: [
@@ -131,7 +143,7 @@ export default function CleanroomSolutionsPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={breadcrumbSchema} />
         <JsonLd data={faqSchema} />
         <AISummaryBlock summary={cleanroomData.aiSummary} keywords={cleanroomData.keywords} />
@@ -140,7 +152,7 @@ export default function CleanroomSolutionsPage() {
         <section className="relative min-h-[70vh] flex items-center overflow-hidden">
           <div className="absolute inset-0">
             <Image
-              src="/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat1.jpg"
+              src="/images/products/cleanroom/partition/Cleanroom-Partition-supplier-Manufacture-in-Gujarat1.jpg"
               alt="Cleanroom Solutions - Modular Cleanroom Partitions and Systems by PHOENIXX SMARTBUILD"
               fill
               sizes="100vw"
@@ -151,13 +163,7 @@ export default function CleanroomSolutionsPage() {
           </div>
 
           <div className="container-custom relative z-10 py-16 md:py-24">
-            <nav className="mb-6 text-sm text-white/60">
-              <Link href="/" className="hover:text-white">Home</Link>
-              <span className="mx-2">/</span>
-              <Link href="/products" className="hover:text-white">Products</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">Cleanroom Solutions</span>
-            </nav>
+            <Breadcrumbs items={[{ label: 'Products', href: '/products' }, { label: 'Cleanroom Solutions' }]} />
 
             <div className="max-w-4xl">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
@@ -311,11 +317,7 @@ export default function CleanroomSolutionsPage() {
         <section className="section-padding bg-white">
           <div className="container-custom text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Trusted by Pharma & Biotech Leaders</h2>
-            <div className="flex items-center justify-center gap-2 mb-8">
-              <div className="flex">{[1,2,3,4,5].map((s) => <span key={s} className="text-yellow-500 text-xl">★</span>)}</div>
-              <span className="text-slate-600">{cleanroomData.testimonial.rating}/5 from {cleanroomData.testimonial.reviews}+ projects</span>
-            </div>
-            <blockquote className="max-w-3xl mx-auto">
+            <blockquote className="max-w-3xl mx-auto mt-8">
               <p className="text-xl text-slate-700 italic">&ldquo;{cleanroomData.testimonial.quote}&rdquo;</p>
               <footer className="mt-4">
                 <p className="font-bold text-slate-900">{cleanroomData.testimonial.author}</p>

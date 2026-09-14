@@ -2,6 +2,7 @@
  * Rule-based internal link selection for Related Resources blocks.
  */
 import { products, locations, getLocation } from '@/lib/landing-page-data';
+import { canonicalComboSlug, productDetailHref } from '@/lib/geo-strategy';
 import { getAllBlogSlugs } from '@/lib/blog-data';
 import {
   getExportCountry,
@@ -59,14 +60,6 @@ function hashSlug(slug: string): number {
   return Math.abs(h);
 }
 
-function productDetailHref(productSlug: string): string {
-  if (PRODUCT_DETAIL_SLUGS.has(productSlug)) {
-    return `/products/sandwich-panels/${productSlug}`;
-  }
-  // Products without a detail route (e.g. fm-approved-panel) live under /shop
-  return `/shop/${productSlug}`;
-}
-
 function pickNearbyCities(locationSlug: string, productSlug = 'sandwich-puf-panel', count = 4): RelatedLink[] {
   const loc = getLocation(locationSlug);
   if (!loc) return [];
@@ -80,12 +73,15 @@ function pickNearbyCities(locationSlug: string, productSlug = 'sandwich-puf-pane
   const pool = matched.length > 0 ? matched : cities;
 
   const sorted = pool.sort((a, b) => hashSlug(a.slug + locationSlug) - hashSlug(b.slug + locationSlug));
-  const productLabel = products[productSlug]?.name || 'PUF Panel';
-  return sorted.slice(0, count).map((c) => ({
-    href: `/${productSlug}-in-${c.slug}`,
-    label: `${productLabel} in ${c.name}`,
-    category: 'city' as const,
-  }));
+  return sorted.slice(0, count).map((c) => {
+    const slug = canonicalComboSlug(productSlug, c.slug);
+    const targetProduct = products[slug.slice(0, slug.lastIndexOf(`-in-${c.slug}`))];
+    return {
+      href: `/${slug}`,
+      label: `${targetProduct?.name || 'PUF Panel'} in ${c.name}`,
+      category: 'city' as const,
+    };
+  });
 }
 
 function pickBlogs(seed: string, count = 2): RelatedLink[] {

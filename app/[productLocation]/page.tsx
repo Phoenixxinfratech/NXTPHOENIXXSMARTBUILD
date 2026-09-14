@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { notFound } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
@@ -24,10 +24,20 @@ import {
   getGeoMetaDescription,
   getGeoCanonicalSlug,
   getGeoH1,
+  isPublishedGeoPage,
 } from '@/lib/rajasthan-geo-data';
+import {
+  canonicalComboSlug,
+  getPublishedCombos,
+  getPublishedProductsFor,
+  isPublishedCombo,
+  productDetailHref,
+  FLAGSHIP_PRODUCT_SLUG,
+} from '@/lib/geo-strategy';
 import { RajasthanGeoPage } from '@/components/geo/rajasthan-geo-page';
 import { RelatedResources } from '@/components/blocks/related-resources';
 import { getRelatedLinksForGeoPage } from '@/lib/internal-links';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 // Parse the URL slug to extract product and location
 function parseSlug(slug: string): { productSlug: string; locationSlug: string } | null {
@@ -39,18 +49,13 @@ function parseSlug(slug: string): { productSlug: string; locationSlug: string } 
   };
 }
 
-// Generate static params for all product-location combinations + Rajasthan geo pages
+// Generate static params for every published product-location page + Rajasthan geo pages
 export async function generateStaticParams() {
   const params: { productLocation: string }[] = [];
-  
-  // Existing product-in-location combinations
-  Object.keys(products).forEach(productSlug => {
-    Object.keys(locations).forEach(locationSlug => {
-      params.push({
-        productLocation: `${productSlug}-in-${locationSlug}`,
-      });
-    });
-  });
+
+  for (const combo of getPublishedCombos()) {
+    params.push({ productLocation: combo.slug });
+  }
 
   // Rajasthan geo SEO pages (207 URLs)
   for (const slug of generateAllGeoStaticParams()) {
@@ -67,6 +72,9 @@ export async function generateMetadata({ params }: { params: Promise<{ productLo
   // Check for Rajasthan geo SEO pages first
   const geoResult = parseGeoSlug(productLocation);
   if (geoResult) {
+    if (!isPublishedGeoPage(geoResult)) {
+      return { title: getGeoH1(geoResult), robots: { index: false, follow: true } };
+    }
     const title = getGeoMetaTitle(geoResult);
     const description = getGeoMetaDescription(geoResult);
     const canonical = getGeoCanonicalSlug(geoResult);
@@ -114,6 +122,11 @@ export async function generateMetadata({ params }: { params: Promise<{ productLo
   
   if (!product || !location) {
     return { title: 'Page Not Found' };
+  }
+
+  // Collapsed combinations redirect in the page body; keep them out of the index.
+  if (!isPublishedCombo(parsed.productSlug, parsed.locationSlug)) {
+    return { title: product.name, robots: { index: false, follow: true } };
   }
   
   const title = generatePageTitle(product, location);
@@ -165,6 +178,10 @@ export default async function ProductLocationPage({ params }: { params: Promise<
   // Check for Rajasthan geo SEO pages first
   const geoResult = parseGeoSlug(productLocation);
   if (geoResult) {
+    // Synonym and near-duplicate variants fold into the page they duplicate.
+    if (!isPublishedGeoPage(geoResult)) {
+      permanentRedirect(`/${getGeoCanonicalSlug(geoResult)}`);
+    }
     return <RajasthanGeoPage result={geoResult} />;
   }
 
@@ -181,15 +198,36 @@ export default async function ProductLocationPage({ params }: { params: Promise<
   if (!product || !location) {
     notFound();
   }
+
+  // Only locations with real local material carry a page per product. Everywhere
+  // else the four secondary panels fold into the flagship page for that location.
+  if (!isPublishedCombo(parsed.productSlug, parsed.locationSlug)) {
+    permanentRedirect(`/${canonicalComboSlug(parsed.productSlug, parsed.locationSlug)}`);
+  }
   
   const parentLocation = getParentLocation(location);
   const childLocations = getChildLocations(location.slug);
+
+  // Cross-location links have to respect the same collapsing rule, otherwise
+  // they point at URLs that only exist to redirect.
+  const comboFor = (targetLocationSlug: string) => {
+    const targetProductSlug = isPublishedCombo(parsed.productSlug, targetLocationSlug)
+      ? parsed.productSlug
+      : FLAGSHIP_PRODUCT_SLUG;
+    return {
+      href: `/${targetProductSlug}-in-${targetLocationSlug}`,
+      shortName: products[targetProductSlug].shortName,
+    };
+  };
+  const siblingProducts = getPublishedProductsFor(location.slug)
+    .filter((slug) => slug !== product.slug)
+    .map((slug) => products[slug]);
   
   // Generate FAQs
   const faqs = generateFAQs(product, location);
   
-  // Schema markup - Product schema with aggregateRating (required by Google)
-  // Using aggregateRating instead of offers for informational pages
+  // Product schema uses offers rather than ratings: pricing is quoted per project
+  // and we do not collect on-page reviews, so review markup would be fabricated.
   const productSchema = {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -207,26 +245,12 @@ export default async function ProductLocationPage({ params }: { params: Promise<
     },
     category: 'Industrial Insulated Panels',
     material: product.slug.includes('rockwool') ? 'Mineral Wool' : product.slug.includes('pir') ? 'Polyisocyanurate Foam' : 'Polyurethane Foam',
-    // aggregateRating is required by Google for Product schema validation
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '127',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: {
-      '@type': 'Review',
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: '5',
-        bestRating: '5',
-      },
-      author: {
-        '@type': 'Organization',
-        name: 'Industrial Client',
-      },
-      reviewBody: `High-quality ${product.name} with excellent thermal insulation and durability. Professional installation and support from PHOENIXX SMARTBUILD.`,
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'INR',
+      availability: 'https://schema.org/InStock',
+      url: `https://phoenixxsmartbuild.com/${productLocation}`,
+      seller: { '@type': 'Organization', name: 'NXT PHOENIXX SMARTBUILD LLP' },
     },
     audience: {
       '@type': 'BusinessAudience',
@@ -257,7 +281,7 @@ export default async function ProductLocationPage({ params }: { params: Promise<
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://phoenixxsmartbuild.com' },
       { '@type': 'ListItem', position: 2, name: 'Products', item: 'https://phoenixxsmartbuild.com/products' },
-      { '@type': 'ListItem', position: 3, name: product.name, item: `https://phoenixxsmartbuild.com/products/sandwich-panels/${parsed.productSlug}` },
+      { '@type': 'ListItem', position: 3, name: product.name, item: `https://phoenixxsmartbuild.com${productDetailHref(parsed.productSlug)}` },
       { '@type': 'ListItem', position: 4, name: `${product.name} in ${location.name}`, item: `https://phoenixxsmartbuild.com/${productLocation}` },
     ],
   };
@@ -265,7 +289,7 @@ export default async function ProductLocationPage({ params }: { params: Promise<
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={productSchema} />
         <JsonLd data={faqSchema} />
         <JsonLd data={breadcrumbSchema} />
@@ -275,15 +299,7 @@ export default async function ProductLocationPage({ params }: { params: Promise<
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-[0.05]" />
           <div className="container-custom relative">
             {/* Breadcrumb */}
-            <nav className="mb-6 text-sm text-white/80">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <Link href="/products" className="hover:text-white transition-colors">Products</Link>
-              <span className="mx-2">/</span>
-              <Link href={`/products/sandwich-panels/${parsed.productSlug}`} className="hover:text-white transition-colors">{product.name}</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">{location.name}</span>
-            </nav>
+            <Breadcrumbs items={[{ label: 'Products', href: '/products' }, { label: product.name, href: productDetailHref(parsed.productSlug) }, { label: location.name }]} />
             
             <div className="max-w-4xl">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
@@ -327,7 +343,7 @@ export default async function ProductLocationPage({ params }: { params: Promise<
                 <Link href="/puf-roofing-panels" className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-800 hover:underline">
                   → PUF Roofing Panels
                 </Link>
-                <Link href={`/products/sandwich-panels/${product.slug}`} className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-800 hover:underline">
+                <Link href={productDetailHref(product.slug)} className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-800 hover:underline">
                   → {product.name} Details
                 </Link>
                 <Link href="/puf-roofing-panel-manufacturer" className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-800 hover:underline">
@@ -338,12 +354,13 @@ export default async function ProductLocationPage({ params }: { params: Promise<
                 </Link>
                 {location.nearbyAreas && location.nearbyAreas.slice(0, 3).map((area) => {
                   const areaSlug = area.toLowerCase().replace(/\s+/g, '-');
-                  const areaExists = locations[areaSlug];
-                  return areaExists ? (
-                    <Link key={areaSlug} href={`/${product.slug}-in-${areaSlug}`} className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-800 hover:underline">
-                      → {product.shortName} in {area}
+                  if (!locations[areaSlug]) return null;
+                  const combo = comboFor(areaSlug);
+                  return (
+                    <Link key={areaSlug} href={combo.href} className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-800 hover:underline">
+                      → {combo.shortName} in {area}
                     </Link>
-                  ) : null;
+                  );
                 })}
               </div>
             </div>
@@ -361,10 +378,9 @@ export default async function ProductLocationPage({ params }: { params: Promise<
               <div className="bg-white rounded-2xl p-8 shadow-lg">
                 <h3 className="text-xl font-bold text-slate-900 mb-4">PUF Sandwich Panel &amp; Insulated Panels</h3>
                 <p className="text-slate-600 leading-relaxed">
-                  PHOENIXX PUF sandwich panels in {location.name} are engineered with a rigid polyurethane foam core
-                  between pre-painted metal sheets. These insulated sandwich panels deliver thermal conductivity
-                  of {product.specifications.thermalConductivity}, making them ideal for temperature-sensitive facilities
-                  across {location.name}.
+                  A rigid polyurethane foam core bonded between pre-painted metal sheets, giving a thermal
+                  conductivity of {product.specifications.thermalConductivity}. That is what makes the panel
+                  worth specifying for anything temperature-sensitive in {location.name}.
                 </p>
                 <p className="text-slate-600 leading-relaxed mt-4">
                   Available in PUF insulated roofing panels and PUF insulated wall panels, our range covers
@@ -377,23 +393,23 @@ export default async function ProductLocationPage({ params }: { params: Promise<
                 <h3 className="text-xl font-bold text-slate-900 mb-4">Technical Advantages</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-2 text-slate-600">
-                    <span className="text-green-500 mt-1">✓</span>
-                    <span><strong>Thermal Insulation:</strong> Industry-leading {product.specifications.thermalConductivity} conductivity</span>
+                    <span className="text-green-500 mt-1" aria-hidden="true">✓</span>
+                    <span><strong>Thermal Insulation:</strong> {product.specifications.thermalConductivity} conductivity</span>
                   </li>
                   <li className="flex items-start gap-2 text-slate-600">
-                    <span className="text-green-500 mt-1">✓</span>
+                    <span className="text-green-500 mt-1" aria-hidden="true">✓</span>
                     <span><strong>Fire Resistance:</strong> PIR panels offer B-s1,d0 rating with minimal smoke</span>
                   </li>
                   <li className="flex items-start gap-2 text-slate-600">
-                    <span className="text-green-500 mt-1">✓</span>
+                    <span className="text-green-500 mt-1" aria-hidden="true">✓</span>
                     <span><strong>Energy Efficiency:</strong> 25-30% reduction in HVAC operating costs</span>
                   </li>
                   <li className="flex items-start gap-2 text-slate-600">
-                    <span className="text-green-500 mt-1">✓</span>
+                    <span className="text-green-500 mt-1" aria-hidden="true">✓</span>
                     <span><strong>Durability:</strong> 25-30 year lifespan with proper installation</span>
                   </li>
                   <li className="flex items-start gap-2 text-slate-600">
-                    <span className="text-green-500 mt-1">✓</span>
+                    <span className="text-green-500 mt-1" aria-hidden="true">✓</span>
                     <span><strong>Lightweight Structure:</strong> 8-15 kg/m&sup2; reduces structural steel needs by up to 30%</span>
                   </li>
                 </ul>
@@ -404,7 +420,7 @@ export default async function ProductLocationPage({ params }: { params: Promise<
                 <ul className="space-y-3">
                   {product.certifications.map((cert, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-slate-600">
-                      <span className="text-blue-500">🏆</span>
+                      <span className="text-blue-500" aria-hidden="true">🏆</span>
                       <span>{cert}</span>
                     </li>
                   ))}
@@ -444,33 +460,63 @@ export default async function ProductLocationPage({ params }: { params: Promise<
                     </span>
                   ))}
                 </div>
-                <p className="text-slate-600 mt-4">
-                  Each of these sectors benefits from PHOENIXX PUF and PIR panels for temperature control,
-                  energy efficiency, and regulatory compliance.
-                </p>
+                {location.localPainPoint && (
+                  <p className="text-slate-600 mt-4">{location.localPainPoint}</p>
+                )}
               </div>
             </div>
 
             <div className="grid gap-8 lg:grid-cols-2 mt-8">
               <div className="bg-gradient-to-br from-emerald-50 to-white rounded-2xl p-8 border border-emerald-100">
-                <h3 className="text-xl font-bold text-slate-900 mb-4">🔧 PUF Panel Installation in {location.name}</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-4">🔧 Installation</h3>
                 <p className="text-slate-600 leading-relaxed">
-                  PHOENIXX provides professional PUF panel installation services across {location.name} and surrounding areas.
-                  Our trained crews handle complete panel erection, sealing, flashing, and finishing &mdash; ensuring leak-proof,
-                  thermally efficient building envelopes that comply with IS 14925:2015 standards. From roofing panels to wall
-                  cladding, we deliver turnkey installation for factories, warehouses, cold storage facilities, and cleanrooms.
+                  Our crews handle erection, sealing, flashing, and finishing to IS 14925:2015. Most leak
+                  complaints on panel buildings trace back to joints and flashing rather than the panel itself,
+                  which is why we would rather do that work than hand it over. Roofing, wall cladding, or a full
+                  envelope for a factory, warehouse, cold store, or cleanroom.
                 </p>
               </div>
               <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border border-blue-100">
-                <h3 className="text-xl font-bold text-slate-900 mb-4">❄️ Cold Storage Construction in {location.name}</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-4">❄️ Cold Storage Construction</h3>
                 <p className="text-slate-600 leading-relaxed">
-                  PHOENIXX offers complete cold storage construction services in {location.name}, from design consultation
-                  to panel supply and installation. Our insulated sandwich panels maintain chamber temperatures from +15&deg;C
-                  to -40&deg;C, serving agriculture, dairy, pharmaceutical cold chain, and frozen food industries across
-                  {location.type === 'city' ? location.state : location.name}.
+                  Design consultation through panel supply and installation, for chambers holding +15&deg;C down
+                  to &minus;40&deg;C. Typical work across {location.type === 'city' ? location.state : location.name} covers
+                  agriculture, dairy, pharmaceutical cold chain, and frozen food. If you already have a
+                  refrigeration contractor, we can build the envelope only.
                 </p>
               </div>
             </div>
+
+            {(location.uniqueFacts?.length || location.localProjects?.length) && (
+              <div className="mt-8 grid gap-8 lg:grid-cols-2">
+                {location.uniqueFacts && location.uniqueFacts.length > 0 && (
+                  <div className="bg-white rounded-2xl p-8 border border-slate-200">
+                    <h3 className="text-xl font-bold text-slate-900 mb-4">What&apos;s specific to {location.name}</h3>
+                    <ul className="space-y-3">
+                      {location.uniqueFacts.map((fact, idx) => (
+                        <li key={idx} className="flex items-start gap-2 text-slate-600 text-sm leading-relaxed">
+                          <span className="text-emerald-500 mt-1">&bull;</span>
+                          <span>{fact}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {location.localProjects && location.localProjects.length > 0 && (
+                  <div className="bg-white rounded-2xl p-8 border border-slate-200">
+                    <h3 className="text-xl font-bold text-slate-900 mb-4">Work we&apos;ve done nearby</h3>
+                    <ul className="space-y-3">
+                      {location.localProjects.map((project, idx) => (
+                        <li key={idx} className="flex items-start gap-2 text-slate-600 text-sm leading-relaxed">
+                          <span className="text-blue-500 mt-1">&bull;</span>
+                          <span>{project}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            )}
             
             {location.industrialZones && location.industrialZones.length > 0 && (
               <div className="mt-8 bg-blue-50 rounded-2xl p-8">
@@ -497,12 +543,12 @@ export default async function ProductLocationPage({ params }: { params: Promise<
             
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {[
-                { key: 'warehouse', icon: '🏭', title: `Warehouses & Factories in ${location.name}`, desc: `PUF insulated wall panels and roofing panels reduce structural steel by up to 30% in ${location.name} warehouses and factories. Lightweight, fast to install, and energy-efficient for large-span industrial buildings.` },
-                { key: 'coldStorage', icon: '❄️', title: `Cold Storage in ${location.name}`, desc: `PHOENIXX insulated sandwich panels maintain temperatures from +15°C to -40°C for cold storage and cold chain facilities in ${location.name}. Zero moisture absorption ensures long-term performance for dairy, pharma, and frozen food storage.` },
-                { key: 'pharma', icon: '💊', title: `Cleanrooms & Pharma in ${location.name}`, desc: `WHO-GMP compliant PUF panels for pharmaceutical cleanrooms in ${location.name}. Smooth, non-porous surfaces prevent bacterial growth while maintaining controlled temperature and humidity environments.` },
-                { key: 'manufacturing', icon: '⚙️', title: `Industrial Buildings in ${location.name}`, desc: `PUF and PIR panels provide dust-free, temperature-controlled environments for manufacturing plants in ${location.name}. Quick installation minimizes production downtime during facility expansion or renovation.` },
-                { key: 'foodProcessing', icon: '🍕', title: `Food Processing in ${location.name}`, desc: `Food-safe coated insulated sandwich panels for dairy plants, beverage facilities, and FSSAI-compliant food manufacturing units in ${location.name}. Resistant to mould growth and easy to sanitise.` },
-                { key: 'dataCenter', icon: '🖥️', title: `Data Centres & Utilities in ${location.name}`, desc: `Precision climate control with PUF and PIR panels for data centres in ${location.name}. Maintain server room temperatures within ±1°C tolerance while reducing cooling costs by 20-30%.` },
+                { key: 'warehouse', icon: '🏭', title: 'Warehouses & Factories', desc: 'Insulated wall and roofing panels cut structural steel by up to 30%, because the panel spans further than sheeting and carries its own insulation. Light enough to install quickly over a large span.' },
+                { key: 'coldStorage', icon: '❄️', title: 'Cold Storage', desc: 'Holds anywhere from +15°C to −40°C. The closed-cell core absorbs effectively no moisture, which is what stops a cold store losing performance after a few seasons of dairy, pharma, or frozen food duty.' },
+                { key: 'pharma', icon: '💊', title: 'Cleanrooms & Pharma', desc: 'WHO-GMP compliant panels with smooth, non-porous faces that will not harbour bacteria and wipe down without shedding. Holds controlled temperature and humidity.' },
+                { key: 'manufacturing', icon: '⚙️', title: 'Industrial Buildings', desc: 'Dust-free, temperature-controlled process halls. The main draw is speed: panels go up fast enough that expansion or renovation need not shut production down for long.' },
+                { key: 'foodProcessing', icon: '🍕', title: 'Food Processing', desc: 'Food-safe coated panels for dairy plants, beverage lines, and FSSAI-compliant units. Resists mould and takes repeated sanitation without degrading.' },
+                { key: 'dataCenter', icon: '🖥️', title: 'Data Centres & Utilities', desc: 'Precision climate control, holding server room temperature within ±1°C while cutting cooling costs 20-30%. Worth the specification where downtime is expensive.' },
               ].map((item) => (
                 <div key={item.key} className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
                   <div className="text-3xl mb-4">{item.icon}</div>
@@ -529,11 +575,11 @@ export default async function ProductLocationPage({ params }: { params: Promise<
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {[
                 { src: '/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp', alt: `${product.name} manufacturing by PHOENIXX SMARTBUILD` },
-                { src: '/images/projects/gallery/PHOENIXX_WALL_PUF_PANEL1.jpg', alt: `${product.name} wall installation in ${location.name}` },
+                { src: '/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL1.jpg', alt: `${product.name} wall installation in ${location.name}` },
                 { src: '/images/projects/gallery/PUF-Panel-False-Ceiling-1.jpg', alt: `${product.name} ceiling application` },
-                { src: '/images/projects/gallery/Industrial-False-Ceiling-PUF-Panel-2.jpg', alt: `Industrial ${product.shortName} installation` },
+                { src: '/images/products/sandwich-panels/wall-ceiling-panel/Industrial-False-Ceiling-PUF-Panel-2.jpg', alt: `Industrial ${product.shortName} installation` },
                 { src: '/images/projects/gallery/cleanroom-Manufacture-Supplier-in-Ahmedabad1.jpeg', alt: `Cleanroom project with ${product.name}` },
-                { src: '/images/projects/gallery/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects26.jpg', alt: `Pharma facility ${product.shortName} project` },
+                { src: '/images/projects/gallery/Pharma-cleanroom-panel-manufacturers-Phoenixx-infratech-projects74.jpg', alt: `Pharma facility ${product.shortName} project` },
                 { src: '/images/projects/gallery/Phoenixx_infratech_Projects188.jpg', alt: `Warehouse ${product.name} installation in ${location.name}` },
                 { src: '/images/projects/gallery/Projects_Galary_Phoenixx_infratech-Projects2.jpeg', alt: `Industrial ${product.shortName} exterior` },
                 { src: '/images/projects/gallery/Sandwich-PUF-Ceiling-Panel-1.jpg', alt: `${product.name} interior finish` },
@@ -568,7 +614,7 @@ export default async function ProductLocationPage({ params }: { params: Promise<
                 { icon: '📐', title: 'Custom Solutions & Engineering', desc: `Our engineering team provides custom PUF and PIR panel designs, thickness calculations, and project-specific solutions tailored to ${location.name}'s climate and industry requirements.` },
                 { icon: '✅', title: 'ISO-Certified Quality Assurance', desc: 'ISO 9001:2015 certified processes with rigorous testing for density, thermal conductivity, and fire performance on every batch of PUF, PIR, and sandwich panels.' },
                 { icon: '🇮🇳', title: `Leading PUF Panel Manufacturer in ${location.state || 'India'}`, desc: `From ${location.name} to any corner of India, PHOENIXX is a leading PUF panel manufacturer in ${location.state || 'India'} with proven logistics and installation capabilities across the region.` },
-                { icon: '🔧', title: 'PUF Panel Installation Support', desc: `Complete turnkey PUF panel installation services in ${location.name} \u2014 from design and supply to erection, sealing, and finishing, including accessories, flashings, and technical support.` },
+                { icon: '🔧', title: 'PUF Panel Installation Support', desc: `Complete turnkey PUF panel installation services in ${location.name}, from design and supply to erection, sealing, and finishing, including accessories, flashings, and technical support.` },
                 { icon: '⏱️', title: 'Fast Delivery & Turnaround', desc: `Quick production and delivery schedules to ${location.name} with project-specific timelines. Same-day dispatch available for standard specifications to meet your construction milestones.` },
               ].map((item, idx) => (
                 <div key={idx} className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
@@ -592,7 +638,7 @@ export default async function ProductLocationPage({ params }: { params: Promise<
               <div className="grid gap-8 md:grid-cols-2">
                 <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border border-blue-100">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="text-3xl">🏗️</span>
+                    <span className="text-3xl" aria-hidden="true">🏗️</span>
                     <h3 className="text-xl font-bold text-slate-900">PUF Panel Projects Delivered</h3>
                   </div>
                   <p className="text-slate-700 leading-relaxed">
@@ -610,7 +656,7 @@ export default async function ProductLocationPage({ params }: { params: Promise<
                 
                 <div className="bg-gradient-to-br from-emerald-50 to-white rounded-2xl p-8 border border-emerald-100">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="text-3xl">🎯</span>
+                    <span className="text-3xl" aria-hidden="true">🎯</span>
                     <h3 className="text-xl font-bold text-slate-900">Industry Understanding</h3>
                   </div>
                   <p className="text-slate-700 leading-relaxed">
@@ -632,25 +678,25 @@ export default async function ProductLocationPage({ params }: { params: Promise<
                 <h3 className="font-bold text-lg text-slate-900 mb-4">Why Choose a Local PUF Panel Manufacturer in {location.name}?</h3>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="flex items-start gap-3">
-                    <span className="text-green-500 mt-1">✓</span>
+                    <span className="text-green-500 mt-1" aria-hidden="true">✓</span>
                     <span className="text-slate-700">
                       <strong>Faster Delivery:</strong> Proximity means quicker turnaround on PUF panel orders and emergencies
                     </span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <span className="text-green-500 mt-1">✓</span>
+                    <span className="text-green-500 mt-1" aria-hidden="true">✓</span>
                     <span className="text-slate-700">
                       <strong>Lower Logistics Cost:</strong> Reduced freight charges for sandwich panel shipments to {location.name}
                     </span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <span className="text-green-500 mt-1">✓</span>
+                    <span className="text-green-500 mt-1" aria-hidden="true">✓</span>
                     <span className="text-slate-700">
                       <strong>On-Site Support:</strong> Our PUF panel installation engineers can visit your {location.name} site
                     </span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <span className="text-green-500 mt-1">✓</span>
+                    <span className="text-green-500 mt-1" aria-hidden="true">✓</span>
                     <span className="text-slate-700">
                       <strong>Local References:</strong> Speak with our {location.name} clients about their PUF panel projects
                     </span>
@@ -721,34 +767,38 @@ export default async function ProductLocationPage({ params }: { params: Promise<
             {/* Child locations or nearby areas */}
             {childLocations.length > 0 ? (
               <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                {childLocations.map((child) => (
-                  <Link
-                    key={child.slug}
-                    href={`/${parsed.productSlug}-in-${child.slug}`}
-                    className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all hover:border-blue-300 border border-transparent"
-                  >
-                    <span className="text-blue-500">📍</span>
-                    <span className="font-medium text-slate-900">{product.shortName} in {child.name}</span>
-                  </Link>
-                ))}
+                {childLocations.map((child) => {
+                  const combo = comboFor(child.slug);
+                  return (
+                    <Link
+                      key={child.slug}
+                      href={combo.href}
+                      className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all hover:border-blue-300 border border-transparent"
+                    >
+                      <span className="text-blue-500" aria-hidden="true">📍</span>
+                      <span className="font-medium text-slate-900">{combo.shortName} in {child.name}</span>
+                    </Link>
+                  );
+                })}
               </div>
             ) : location.nearbyAreas ? (
               <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 {location.nearbyAreas.map((area, idx) => {
                   const areaSlug = area.toLowerCase().replace(/\s+/g, '-');
                   const areaExists = locations[areaSlug];
-                  return areaExists ? (
+                  const combo = areaExists ? comboFor(areaSlug) : null;
+                  return combo ? (
                     <Link
                       key={idx}
-                      href={`/${parsed.productSlug}-in-${areaSlug}`}
+                      href={combo.href}
                       className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all hover:border-blue-300 border border-transparent"
                     >
-                      <span className="text-blue-500">📍</span>
-                      <span className="font-medium text-slate-900">{product.shortName} in {area}</span>
+                      <span className="text-blue-500" aria-hidden="true">📍</span>
+                      <span className="font-medium text-slate-900">{combo.shortName} in {area}</span>
                     </Link>
                   ) : (
                     <div key={idx} className="flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm border border-transparent">
-                      <span className="text-slate-400">📍</span>
+                      <span className="text-slate-500" aria-hidden="true">📍</span>
                       <span className="text-slate-600">{area}</span>
                     </div>
                   );
@@ -763,10 +813,10 @@ export default async function ProductLocationPage({ params }: { params: Promise<
                   Looking for {product.name} in other parts of {parentLocation.name}?
                 </p>
                 <Link
-                  href={`/${parsed.productSlug}-in-${parentLocation.slug}`}
+                  href={comboFor(parentLocation.slug).href}
                   className="inline-flex items-center gap-2 mt-3 text-blue-600 font-semibold hover:underline"
                 >
-                  View {product.shortName} in {parentLocation.name}
+                  View {comboFor(parentLocation.slug).shortName} in {parentLocation.name}
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
@@ -861,25 +911,33 @@ export default async function ProductLocationPage({ params }: { params: Promise<
         <section className="section-padding bg-slate-50">
           <div className="container-custom">
             <h2 className="text-2xl font-bold text-slate-900 mb-6">
-              Other PUF &amp; Insulated Panel Products in {location.name}
+              {siblingProducts.length > 0
+                ? `Other PUF & Insulated Panel Products in ${location.name}`
+                : `Other Panels We Supply to ${location.name}`}
             </h2>
             
             <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
-              {Object.values(products)
-                .filter(p => p.slug !== product.slug)
-                .map((p) => (
+              {(siblingProducts.length > 0
+                ? siblingProducts
+                : Object.values(products).filter(p => p.slug !== product.slug)
+              ).map((p) => {
+                const local = siblingProducts.length > 0;
+                return (
                   <Link
                     key={p.slug}
-                    href={`/${p.slug}-in-${location.slug}`}
+                    href={local ? `/${p.slug}-in-${location.slug}` : productDetailHref(p.slug)}
                     className="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all"
                   >
                     <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${p.gradient} mb-3 flex items-center justify-center text-white text-lg`}>
                       {p.slug.includes('roof') ? '🏠' : p.slug.includes('rock') ? '🪨' : p.slug.includes('pir') ? '🔥' : p.slug.includes('fm') ? '🏆' : '🧱'}
                     </div>
                     <h3 className="font-semibold text-slate-900">{p.name}</h3>
-                    <p className="text-sm text-slate-500 mt-1">in {location.name}</p>
+                    <p className="text-sm text-slate-500 mt-1">
+                      {local ? `in ${location.name}` : 'Specs & datasheet'}
+                    </p>
                   </Link>
-                ))}
+                );
+              })}
             </div>
           </div>
         </section>
@@ -946,8 +1004,8 @@ export default async function ProductLocationPage({ params }: { params: Promise<
                         </Link>
                       </li>
                       <li>
-                        <Link href="/resources/blogs/puf-panel-price-ahmedabad-2025-guide" className="text-primary hover:underline flex items-center gap-2">
-                          <span className="text-orange-500">→</span> PUF Panel Price Guide 2025
+                        <Link href="/resources/blogs/puf-panel-price-ahmedabad" className="text-primary hover:underline flex items-center gap-2">
+                          <span className="text-orange-500">→</span> PUF Panel Price Guide
                         </Link>
                       </li>
                       <li>
@@ -1004,7 +1062,7 @@ function generateIntroContent(product: ProductData, location: LocationData): str
   const openings = [
     `PHOENIXX SMARTBUILD is a leading ${product.shortName} manufacturer in ${location.name}, ${stateOrRegion}, delivering premium insulated sandwich panels with ${thermalValue} thermal conductivity for industrial and commercial applications.`,
     `For businesses in ${location.name} seeking a trusted ${product.shortName} supplier, PHOENIXX SMARTBUILD offers factory-engineered sandwich panels with ${thermalValue} thermal performance and ISO-certified manufacturing.`,
-    `Industrial projects across ${location.name} rely on PHOENIXX SMARTBUILD for ${product.name} systems that combine structural strength, thermal insulation, and rapid installation — backed by ${thermalValue} conductivity ratings.`,
+    `Industrial projects across ${location.name} rely on PHOENIXX SMARTBUILD for ${product.name} systems that combine structural strength, thermal insulation, and rapid installation, backed by ${thermalValue} conductivity ratings.`,
   ];
 
   const base = openings[variation];
@@ -1014,67 +1072,92 @@ function generateIntroContent(product: ProductData, location: LocationData): str
   }
 
   if (location.type === 'state') {
-    return `${base} Industries across ${location.name} — including ${topIndustries} — rely on our PUF insulated roofing panels and wall panels for thermal insulation, fire safety, and energy efficiency.${painPoint ? ` ${painPoint}` : ''} We provide end-to-end PUF panel installation and cold storage construction services throughout the state, backed by ISO-certified manufacturing and a dedicated engineering team. From warehouses and factories to cleanrooms and cold chain facilities, PHOENIXX is ${location.name}'s preferred partner for high-performance building envelope solutions.`;
+    return `${base} Industries across ${location.name}, including ${topIndustries}, rely on our PUF insulated roofing panels and wall panels for thermal insulation, fire safety, and energy efficiency.${painPoint ? ` ${painPoint}` : ''} We provide end-to-end PUF panel installation and cold storage construction services throughout the state, backed by ISO-certified manufacturing and a dedicated engineering team. From warehouses and factories to cleanrooms and cold chain facilities, PHOENIXX is ${location.name}'s preferred partner for high-performance building envelope solutions.`;
   }
 
   return `${base} Our product range includes PUF insulated roofing panels and PUF insulated wall panels engineered for superior thermal insulation, fire resistance, and durability across industries spanning ${topIndustries}. With comprehensive PUF panel installation and cold storage construction services, PHOENIXX serves warehouses, factories, cleanrooms, and industrial facilities across the country. Choose PHOENIXX for quality manufacturing, fast delivery, and turnkey execution.`;
 }
 
+/**
+ * Build the FAQ set for a product-in-location page.
+ *
+ * These pages are generated for every product/location pair, so the answers
+ * have to draw on the location record (industrial estates, local climate
+ * pressure, nearby supply areas, state regulations) rather than dropping the
+ * place name into the same boilerplate. Questions whose supporting data is
+ * missing are skipped instead of falling back to filler.
+ */
 function generateFAQs(product: ProductData, location: LocationData) {
-  const baseFaqs = [
-    {
-      question: `What is the PUF panel price in ${location.name}?`,
-      answer: `PUF panel prices in ${location.name} vary based on thickness (${product.specifications.thickness.slice(0, 3).join(', ')}, etc.), skin material, coating type, and order quantity. PHOENIXX SMARTBUILD offers competitive factory-direct pricing with typical ranges from \u20B980-180/sq.ft for PUF insulated wall panels and \u20B9100-220/sq.ft for PUF insulated roofing panels. Contact us for a project-specific quotation for ${location.name}.`,
-    },
-    {
-      question: `What is the difference between PUF panel and PIR panel?`,
-      answer: `PUF (Polyurethane Foam) panels offer excellent thermal insulation at 0.024 W/mK with B2/B3 fire rating, making them cost-effective for most applications. PIR (Polyisocyanurate) panels provide superior fire performance at B-s1,d0 with even better thermal conductivity of 0.022 W/mK and minimal smoke emission. PIR panels are preferred for fire-sensitive projects in ${location.name} such as pharmaceutical plants, data centres, and high-value warehouses. PHOENIXX manufactures both PUF and PIR panels.`,
-    },
-    {
-      question: `Are PUF and PIR panels fire rated?`,
-      answer: `Yes, PHOENIXX PUF panels meet B2/B3 (self-extinguishing) fire rating requirements. PIR panels offer enhanced B-s1,d0 fire rating with very low smoke and no burning droplets. For maximum fire safety, we also offer Rockwool panels with A1/A2 non-combustible rating. Our technical team can advise on the appropriate fire-rated panel for your ${location.name} facility.`,
-    },
-    {
-      question: `What is the delivery time for PUF panels in ${location.name}?`,
-      answer: `Standard delivery time for PUF panels and sandwich panels in ${location.name} is 7-15 working days from order confirmation, depending on panel specifications and quantity. Expedited delivery is available for urgent projects. PHOENIXX maintains ready stock of common PUF and PIR panel specifications for faster turnaround to ${location.name}.`,
-    },
-    {
-      question: `Do you provide PUF panel installation in ${location.name}?`,
-      answer: `Yes, PHOENIXX SMARTBUILD provides professional PUF panel installation services in ${location.name}. Our trained installation crews handle complete panel erection, sealing, flashing, and finishing as per IS 14925:2015 standards. We also offer installation supervision and training for contractor teams working on your ${location.name} project.`,
-    },
-    {
-      question: `Which industries use PUF panels most in ${location.name}?`,
-      answer: `In ${location.name}, PUF panels and insulated sandwich panels are widely used in ${location.industries.slice(0, 4).join(', ')} industries. Key applications include cold storage facilities, pharmaceutical cleanrooms, food processing plants, warehouses, factories, and industrial buildings requiring thermal insulation and energy efficiency.`,
-    },
-    {
-      question: `What thickness of PUF panel do I need for my project?`,
-      answer: `PUF panel thickness depends on your application: 30-50mm for standard wall partitions, 50-80mm for temperature-controlled environments, 80-120mm for cold storage (0\u00B0C to -25\u00B0C), and 120-150mm for deep freeze applications. PHOENIXX engineers provide free thickness calculations based on your ${location.name} project requirements.`,
-    },
-    {
-      question: `What is a sandwich panel used for?`,
-      answer: `Sandwich panels (also called insulated sandwich panels) are composite building materials with an insulating core between two metal skins. They are used for walls, roofs, ceilings, and partitions in warehouses, factories, cold storage, cleanrooms, food processing plants, and commercial buildings. In ${location.name}, PHOENIXX sandwich panels are widely used for rapid construction with built-in thermal insulation.`,
-    },
-    {
-      question: `Do you construct cold storage in ${location.name}?`,
-      answer: `Yes, PHOENIXX provides complete cold storage construction services in ${location.name} \u2014 from design consultation and panel supply to installation and commissioning. Our insulated sandwich panels maintain temperatures from +15\u00B0C to -40\u00B0C for agriculture, dairy, pharma cold chain, frozen food, and logistics cold storage facilities across ${location.name} and ${location.state || 'India'}.`,
-    },
-    {
-      question: `Can PUF panels be used for both walls and roofs?`,
-      answer: `Yes, PHOENIXX offers specialised PUF insulated roofing panels with trapezoidal profiles for drainage and spanning, and PUF insulated wall panels with flat or micro-ribbed profiles for aesthetics. We recommend using purpose-designed panels for optimal performance. Contact us for guidance on your ${location.name} project.`,
-    },
-  ];
+  const isCity = location.type === 'city';
+  const region = location.state || location.name;
+  const estate = location.primaryIndustrialEstate || location.industrialZones?.[0];
+  const topIndustries = location.industries.slice(0, 3).join(', ');
 
-  const voiceFaqs = [
-    {
-      question: `Which ${product.shortName} is best for warehouses in ${location.name}?`,
-      answer: `For warehouses in ${location.name}, 50–80mm PUF roofing panels with trapezoidal profiles are typically optimal. They span 3–4 metres between purlins, reduce heat gain by 60–70% compared to bare metal sheeting, and install at 400–600 sqm per day. PHOENIXX engineers assess your warehouse size, goods sensitivity, and budget to recommend the right specification.`,
-    },
-    {
-      question: `How do I choose the right panel thickness for my ${location.name} project?`,
-      answer: `Panel thickness depends on three factors: target internal temperature, ambient conditions in ${location.name}, and energy cost targets. Standard partitions need 30–50mm; temperature-controlled areas need 50–80mm; cold storage needs 80–150mm. PHOENIXX provides free thickness calculations — share your project brief for a recommendation.`,
-    },
-  ];
+  const faqs: { question: string; answer: string }[] = [];
 
-  return [...baseFaqs, ...voiceFaqs];
+  faqs.push({
+    question: `What does ${product.name.toLowerCase()} cost in ${location.name}?`,
+    answer: `Cost comes down to thickness (${product.specifications.thickness.slice(0, 3).join(', ')} are the common options), skin material, coating, and how much you order. As a rough guide, insulated wall panels run ₹80–180 per sq.ft and insulated roofing panels ₹100–220 per sq.ft, factory-direct. Send us the building dimensions and target internal temperature and we will price the actual job rather than quote a range.`,
+  });
+
+  if (estate) {
+    faqs.push({
+      question: `Do you supply to ${estate}?`,
+      answer: `Yes. ${estate} is one of the areas we deliver to regularly${isCity ? '' : ` across ${location.name}`}, and repeat work there means our team already knows the site access and unloading constraints. Standard despatch is 7–15 working days from order confirmation; we hold stock of common specifications to shorten that where a project is running tight.`,
+    });
+  }
+
+  if (location.localPainPoint) {
+    faqs.push({
+      question: `Why do buildings in ${location.name} need insulated panels?`,
+      answer: `${location.localPainPoint} ${product.name} addresses that directly, since the insulation sits inside the panel rather than being added as a separate layer that can sag or gap over time.`,
+    });
+  }
+
+  faqs.push({
+    question: `Which is better for my project, PUF or PIR?`,
+    answer: `PUF is the cost-effective choice for most buildings: 0.024 W/mK thermal conductivity, rated B3 under DIN 4102 (Class E under EN 13501-1) and self-extinguishing. PIR costs more but performs better on both counts, at 0.022 W/mK and B-s1,d0, meaning very low smoke and no flaming droplets. Choose PIR where fire compliance drives the specification${topIndustries ? `, which in ${location.name} usually means ${topIndustries.toLowerCase()} work` : ''}. Where the material must not burn at all, Rockwool is Class A1 non-combustible. We make all three.`,
+  });
+
+  faqs.push({
+    question: `What thickness should I specify?`,
+    answer: `Work back from the internal temperature you need to hold. Partitions and general walling are fine at 30–50mm. Temperature-controlled rooms usually need 50–80mm. Cold storage between 0°C and −25°C calls for 80–120mm, and deep freeze for 120–150mm. Our engineers will run the calculation against local ambient conditions at no cost if you send the brief.`,
+  });
+
+  if (location.regulations?.length) {
+    faqs.push({
+      question: `What approvals apply in ${region}?`,
+      answer: `Projects here typically have to satisfy ${location.regulations.slice(0, 3).join(', ')}. We supply the test certificates, material datasheets, and declarations needed for those submissions, which is usually what holds up approval when panels are bought from a trader rather than a manufacturer.`,
+    });
+  }
+
+  faqs.push({
+    question: `Do you install, or only supply?`,
+    answer: `Both. Our crews handle erection, sealing, flashing, and finishing to IS 14925:2015. If you already have a contractor, we can supply only, or send a supervisor to train your team on the first bay and leave them to it. Which route makes sense usually depends on how much panel work your contractor has done before.`,
+  });
+
+  faqs.push({
+    question: `Which industries buy these panels in ${location.name}?`,
+    answer: `Mostly ${location.industries.slice(0, 4).join(', ')}. The building types repeat even when the industry does not: cold stores, cleanrooms, process halls, warehouses, and factory sheds all need a skin that insulates and cleans down easily.`,
+  });
+
+  if (location.nearbyAreas?.length) {
+    faqs.push({
+      question: `Do you cover areas around ${location.name}?`,
+      answer: `Yes, including ${location.nearbyAreas.slice(0, 5).join(', ')}. Being within a single despatch radius matters more than it sounds: panels are long, light, and easy to damage, so fewer transfers between vehicles means fewer dented edges arriving on site.`,
+    });
+  }
+
+  faqs.push({
+    question: `Can the same panel be used on walls and the roof?`,
+    answer: `It is better not to. Roofing panels are made with a trapezoidal profile so water drains and the sheet spans between purlins; wall panels are flat or micro-ribbed because appearance matters more than drainage. Using a wall panel on a roof is where most leak complaints start.`,
+  });
+
+  faqs.push({
+    question: `Do you build complete cold storage, or just supply the panels?`,
+    answer: `We do complete cold storage, from design through panel supply, installation, and commissioning, holding anywhere from +15°C down to −40°C. Typical work in ${region} covers agriculture, dairy, pharma cold chain, frozen food, and logistics. If you only need the envelope and have your own refrigeration contractor, that works too.`,
+  });
+
+  return faqs;
 }
 

@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'FAQ - PUF Panel, Cold Storage & Cleanroom Questions | PHOENIXX',
+  title: 'FAQ - PUF Panel, Cold Storage & Cleanroom Questions',
   description: 'Technical FAQs about PUF panels, PIR panels, rockwool insulation, cold storage construction, cleanroom systems, and industrial building solutions in India.',
   keywords: [
     'PUF panel FAQ',

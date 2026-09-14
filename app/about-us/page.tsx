@@ -7,13 +7,29 @@ import { AISummaryBlock } from '@/components/ai/ai-summary-block';
 import { JsonLd } from '@/components/seo/json-ld';
 import { generateOrganizationSchema } from '@/lib/schema';
 import { AeoContentBlocks, DEFAULT_PUF_SPECS } from '@/components/seo/aeo-content-blocks';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'About PHOENIXX – India\'s EPC Infrastructure Partner',
   description:
-    'PHOENIXX delivers smart EPC solutions: PEB, cold storage, cleanrooms. 10+ years experience. Trusted by 500+ clients. Contact us today.',
+    'PHOENIXX delivers smart EPC solutions: PEB, cold storage, cleanrooms. 13+ years experience. Trusted by 500+ clients. Contact us today.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/about-us',
+  },
+  openGraph: {
+    title: 'About PHOENIXX SMARTBUILD – India\'s EPC Infrastructure Partner',
+    description:
+      'PHOENIXX delivers smart EPC solutions: PEB, cold storage, cleanrooms. 13+ years experience. Trusted by 500+ clients.',
+    url: 'https://phoenixxsmartbuild.com/about-us',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About PHOENIXX SMARTBUILD – India\'s EPC Infrastructure Partner',
+    description:
+      'PHOENIXX delivers smart EPC solutions: PEB, cold storage, cleanrooms. 13+ years experience. Trusted by 500+ clients.',
   },
 };
 
@@ -23,6 +39,7 @@ const milestones = [
   { year: '2017', title: 'First Turnkey Project', description: 'First turnkey cold storage project delivered successfully' },
   { year: '2020', title: 'Multi-Sector Expansion', description: 'Expansion into multi-sector EPC solutions' },
   { year: '2024', title: 'Industry Recognition', description: 'Recognized as a future-ready EPC infrastructure partner' },
+  { year: '2026', title: 'Export Operations', description: 'Container export of panels and building systems to African markets from our Gujarat facility' },
 ];
 
 // Core values
@@ -92,7 +109,7 @@ const leadership = [
     role: 'Head of Operations',
     bio: 'An execution specialist focused on precision project delivery, operational efficiency, and customer satisfaction across diverse industrial sectors.',
     quote: 'Execution with precision defines who we are.',
-    image: '/images/team/harshad-gupta.jpg',
+    image: '',
   },
 ];
 
@@ -111,7 +128,7 @@ export default function AboutPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={breadcrumbSchema} />
         <JsonLd data={organizationSchema} />
 
@@ -133,11 +150,7 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-950/60" />
 
           <div className="container-custom relative z-10 py-20">
-            <nav className="mb-8 text-sm text-slate-400">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">About Us</span>
-            </nav>
+            <Breadcrumbs className="mb-8" items={[{ label: 'About Us' }]} />
 
             <div className="max-w-4xl">
               {/* Tagline */}
@@ -235,7 +248,7 @@ export default function AboutPage() {
               <div className="relative rounded-2xl bg-white/5 border border-white/10 p-8 md:p-10 overflow-hidden">
                 <div className="absolute top-0 right-0 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl" />
                 <div className="relative">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-3xl mb-6 shadow-lg">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-3xl mb-6 shadow-lg" aria-hidden="true">
                     🎯
                   </div>
                   <h2 className="text-2xl md:text-3xl font-bold text-white">Our Vision</h2>
@@ -251,7 +264,7 @@ export default function AboutPage() {
               <div className="relative rounded-2xl bg-white/5 border border-white/10 p-8 md:p-10 overflow-hidden">
                 <div className="absolute bottom-0 left-0 w-40 h-40 bg-emerald-500/10 rounded-full blur-3xl" />
                 <div className="relative">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-3xl mb-6 shadow-lg">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-3xl mb-6 shadow-lg" aria-hidden="true">
                     🚀
                   </div>
                   <h2 className="text-2xl md:text-3xl font-bold text-white">Our Mission</h2>
@@ -320,7 +333,7 @@ export default function AboutPage() {
                     { title: 'Technical Reliability', desc: 'Infrastructure built to perform over its full lifecycle' },
                   ].map((item) => (
                     <div key={item.title} className="flex items-start gap-4 p-4 rounded-xl bg-emerald-50 border border-emerald-100">
-                      <span className="flex-shrink-0 w-10 h-10 rounded-lg bg-emerald-500 flex items-center justify-center text-white">
+                      <span className="flex-shrink-0 w-10 h-10 rounded-lg bg-emerald-500 flex items-center justify-center text-white" aria-hidden="true">
                         ✓
                       </span>
                       <div>
@@ -417,12 +430,16 @@ export default function AboutPage() {
                       <Image
                         src={leader.image}
                         alt={leader.name}
+                        sizes="(max-width: 768px) 50vw, 25vw"
                         fill
                         className="object-cover"
                       />
                     ) : (
-                      <div className="w-full h-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-4xl text-white">
-                        👤
+                      <div className="w-full h-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-3xl font-bold text-white" aria-hidden="true">
+                        {leader.name
+                          .split(' ')
+                          .map((part) => part[0])
+                          .join('')}
                       </div>
                     )}
                   </div>

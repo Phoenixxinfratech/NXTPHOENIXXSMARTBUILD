@@ -4,9 +4,10 @@ import Image from 'next/image';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'PUF Roofing Panel Supplier in Rajasthan | Phoenixx',
+  title: 'PUF Roofing Panel Supplier in Rajasthan',
   description:
     'Reliable PUF roofing panel supplier in Rajasthan. Phoenixx delivers insulated sandwich roof panels from Beawar with ready stock and fast dispatch to 23 cities.',
   keywords: [
@@ -50,13 +51,12 @@ export default function PufRoofingPanelSupplierPage() {
     brand: { '@type': 'Brand', name: 'PHOENIXX' },
     manufacturer: { '@type': 'Organization', name: 'Phoenixx Smart Build', url: 'https://phoenixxsmartbuild.com' },
     category: 'Industrial Insulated Roofing Panels',
-    aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.8', reviewCount: '142', bestRating: '5', worstRating: '1' },
   };
 
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={localBusinessSchema} />
         <JsonLd data={productSchema} />
 
@@ -64,6 +64,8 @@ export default function PufRoofingPanelSupplierPage() {
         <section className="relative bg-gradient-to-br from-slate-900 via-gray-900 to-blue-900 py-20 md:py-28">
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
+            <Breadcrumbs withSchema items={[{ label: 'PUF Roofing Panels', href: '/puf-roofing-panels' }, { label: 'Supplier' }]} />
+
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-green-500/20 px-4 py-2 text-sm font-medium text-green-400 mb-6">
                 Ready Stock — Beawar Warehouse
@@ -79,7 +81,7 @@ export default function PufRoofingPanelSupplierPage() {
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link
                   href="/get-a-quote"
-                  className="rounded-xl bg-gradient-to-r from-green-500 to-emerald-600 px-8 py-4 font-semibold text-white shadow-lg hover:shadow-xl transition-all"
+                  className="rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 px-8 py-4 font-semibold text-white shadow-lg hover:shadow-xl transition-all"
                 >
                   Get Supply Quote
                 </Link>
@@ -233,7 +235,7 @@ export default function PufRoofingPanelSupplierPage() {
                 return (
                   <Link
                     key={slug}
-                    href={`/puf-roofing-panel-supplier-${slug}/`}
+                    href={`/puf-roofing-panel-manufacturer-${slug}`}
                     className="bg-white rounded-xl p-4 text-center hover:bg-blue-50 hover:shadow-md transition-all border border-slate-200"
                   >
                     <span className="font-bold text-slate-900">{city}</span>

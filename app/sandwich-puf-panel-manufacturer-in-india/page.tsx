@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Sandwich PUF Panel Manufacturer in India',
@@ -10,6 +11,19 @@ export const metadata: Metadata = {
   keywords: ['sandwich PUF panel manufacturer in India', 'sandwich panels', 'composite panels'],
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/sandwich-puf-panel-manufacturer-in-india',
+  },
+  openGraph: {
+    title: 'Sandwich PUF Panel Manufacturer in India | PHOENIXX SMARTBUILD',
+    description: 'Top sandwich PUF panel manufacturer in India. Premium insulated panels for industrial and commercial buildings.',
+    url: 'https://phoenixxsmartbuild.com/sandwich-puf-panel-manufacturer-in-india',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Sandwich PUF Panel Manufacturer in India | PHOENIXX SMARTBUILD',
+    description: 'Top sandwich PUF panel manufacturer in India. Premium insulated panels for industrial and commercial buildings.',
   },
 };
 
@@ -61,13 +75,15 @@ export default function SandwichPufPanelManufacturerPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={faqSchema} />
 
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-violet-900 via-purple-900 to-slate-900 py-20 md:py-28">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
+            <Breadcrumbs withSchema items={[{ label: 'Products', href: '/products' }, { label: 'Sandwich PUF Panel Manufacturer in India' }]} />
+
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-violet-500/10 px-4 py-2 text-sm font-medium text-violet-400 mb-6">
                 🔲 Composite Panel Solutions
@@ -110,7 +126,7 @@ export default function SandwichPufPanelManufacturerPage() {
                   As a specialized <strong>sandwich PUF panel manufacturer in India</strong>, PHOENIXX 
                   SmartBuild produces advanced composite building panels that combine thermal insulation, 
                   structural integrity, and aesthetic finish in a single factory-made component. Our 
-                  sandwich panels revolutionize building construction by eliminating the need for separate 
+                  sandwich panels transform building construction by eliminating the need for separate 
                   insulation layers and finish materials.
                 </p>
                 <p>
@@ -234,25 +250,27 @@ export default function SandwichPufPanelManufacturerPage() {
             </h2>
             <div className="max-w-4xl mx-auto">
               <div className="bg-slate-50 rounded-2xl overflow-hidden">
-                <table className="w-full">
-                  <tbody className="divide-y divide-slate-200">
-                    {[
-                      { label: 'Panel Thickness', value: '30, 40, 50, 60, 80, 100, 120, 150 mm' },
-                      { label: 'Panel Width', value: '1000mm (effective), 1070mm (total)' },
-                      { label: 'Panel Length', value: 'Up to 20,000mm' },
-                      { label: 'Core Density', value: '40 ± 2 kg/m³' },
-                      { label: 'Thermal Conductivity', value: '0.024 W/mK' },
-                      { label: 'Steel Facing', value: '0.40mm - 0.60mm PPGI/PPGL' },
-                      { label: 'Coatings Available', value: 'SMP, SDP, PVDF' },
-                      { label: 'Fire Rating', value: 'B1, B2, B3 (PIR available)' },
-                    ].map((spec, idx) => (
-                      <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
-                        <td className="px-6 py-4 font-semibold text-slate-900">{spec.label}</td>
-                        <td className="px-6 py-4 text-slate-600">{spec.value}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <tbody className="divide-y divide-slate-200">
+                      {[
+                        { label: 'Panel Thickness', value: '30, 40, 50, 60, 80, 100, 120, 150 mm' },
+                        { label: 'Panel Width', value: '1000mm (effective), 1070mm (total)' },
+                        { label: 'Panel Length', value: 'Up to 20,000mm' },
+                        { label: 'Core Density', value: '40 ± 2 kg/m³' },
+                        { label: 'Thermal Conductivity', value: '0.024 W/mK' },
+                        { label: 'Steel Facing', value: '0.40mm - 0.60mm PPGI/PPGL' },
+                        { label: 'Coatings Available', value: 'SMP, SDP, PVDF' },
+                        { label: 'Fire Rating', value: 'B1, B2, B3 (PIR available)' },
+                      ].map((spec, idx) => (
+                        <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
+                          <td className="px-6 py-4 font-semibold text-slate-900">{spec.label}</td>
+                          <td className="px-6 py-4 text-slate-600">{spec.value}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
               <p className="mt-6 text-center">
                 <Link href="/products/sandwich-panels/sandwich-puf-panel" className="text-primary hover:underline font-medium">

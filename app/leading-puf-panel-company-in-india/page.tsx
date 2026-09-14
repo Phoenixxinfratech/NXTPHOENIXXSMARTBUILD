@@ -3,20 +3,32 @@ import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Leading PUF Panel Company in India | PHOENIXX',
+  title: 'Leading PUF Panel Company in India',
   description: 'India\'s leading PUF panel company for industrial infrastructure. Complete panel solutions for all applications.',
   keywords: ['leading PUF panel company in India', 'PUF panel company', 'insulated panels'],
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/leading-puf-panel-company-in-india',
+  },
+  openGraph: {
+    title: 'Leading PUF Panel Company in India | PHOENIXX SMARTBUILD',
+    url: 'https://phoenixxsmartbuild.com/leading-puf-panel-company-in-india',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Leading PUF Panel Company in India | PHOENIXX SMARTBUILD',
   },
 };
 
 const faqs = [
   {
     question: 'What makes PHOENIXX a leading PUF panel company in India?',
-    answer: 'PHOENIXX SmartBuild has earned its position as a leading PUF panel company through 18+ years of industry experience, advanced manufacturing capabilities, consistent product quality, pan-India delivery network, and successful completion of 150+ industrial projects across diverse sectors.',
+    answer: 'PHOENIXX SmartBuild has earned its position as a leading PUF panel company through 13+ years of industry experience, advanced manufacturing capabilities, consistent product quality, pan-India delivery network, and successful completion of 500+ industrial projects across diverse sectors.',
   },
   {
     question: 'What products does a leading PUF panel company offer?',
@@ -53,13 +65,15 @@ export default function LeadingPufPanelCompanyPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={faqSchema} />
 
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-emerald-900 via-teal-900 to-slate-900 py-20 md:py-28">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
+            <Breadcrumbs withSchema items={[{ label: 'Products', href: '/products' }, { label: 'Leading PUF Panel Company in India' }]} />
+
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-emerald-500/10 px-4 py-2 text-sm font-medium text-emerald-400 mb-6">
                 🌟 Trusted Industrial Infrastructure Partner
@@ -102,11 +116,11 @@ export default function LeadingPufPanelCompanyPage() {
                   As a <strong>leading PUF panel company in India</strong>, PHOENIXX SmartBuild has been at the 
                   forefront of the insulated panel industry, driving innovation and setting quality benchmarks 
                   that others aspire to match. Our journey began with a vision to provide Indian industries with 
-                  world-class insulation solutions, and today we serve as trusted partners to some of the country&apos;s 
+                  insulation solutions, and today we serve as trusted partners to some of the country&apos;s 
                   most prominent corporations.
                 </p>
                 <p>
-                  What distinguishes PHOENIXX from other companies is our holistic approach to industrial infrastructure. 
+                  What distinguishes PHOENIXX from other companies is our end-to-end approach to industrial infrastructure. 
                   We don&apos;t just manufacture panels – we provide complete solutions encompassing design consultation, 
                   technical engineering, manufacturing, delivery, and installation support. This end-to-end capability 
                   makes us the preferred choice for <Link href="/solutions/cold-storage-construction" className="text-primary hover:underline">cold storage projects</Link>, 
@@ -191,7 +205,7 @@ export default function LeadingPufPanelCompanyPage() {
                 { title: 'Pharmaceutical', desc: 'Cleanroom-grade panels for GMP facilities', link: '/industries/pharma-chemical' },
                 { title: 'Food & Beverage', desc: 'Hygienic solutions for processing plants', link: '/industries/food-processing' },
                 { title: 'Cold Chain', desc: 'Insulated panels for cold storage', link: '/solutions/cold-storage-construction' },
-                { title: 'Warehousing', desc: 'Energy-efficient warehouse solutions', link: '/industries/warehousing' },
+                { title: 'Warehousing', desc: 'Energy-efficient warehouse solutions', link: '/industries/cold-chain' },
                 { title: 'Manufacturing', desc: 'Industrial shed insulation', link: '/solutions/peb' },
                 { title: 'Dairy Industry', desc: 'Temperature-controlled dairy facilities', link: '/industries/dairy' },
               ].map((industry, idx) => (
@@ -261,7 +275,7 @@ export default function LeadingPufPanelCompanyPage() {
               Partner with India&apos;s Leading PUF Panel Company
             </h2>
             <p className="text-xl text-emerald-100 mb-10 max-w-2xl mx-auto">
-              Experience industry-leading quality, innovation, and service for your next project.
+              Consistent quality, engineering support, and service for your next project.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link

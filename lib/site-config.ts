@@ -62,3 +62,30 @@ export const siteConfig = {
 } as const;
 
 export type SiteConfig = typeof siteConfig;
+
+/**
+ * Canonical company figures.
+ *
+ * These were previously hardcoded per page and had drifted badly: years in
+ * business appeared as 10+, 12+, 13+, 14+ and 18+, projects as 100+, 150+,
+ * 200+, 210+ and 500+, and clients as 300+ and 500+. Quote these from here so
+ * a correction lands everywhere at once.
+ *
+ * Update `projectsDelivered` and `clientsServed` whenever the real figures
+ * change; they are claims made to buyers, not decoration.
+ */
+const FOUNDING_YEAR = Number(siteConfig.company.foundingDate);
+
+export const companyStats = {
+  foundingYear: FOUNDING_YEAR,
+  projectsDelivered: '500+',
+  clientsServed: '500+',
+  /** Derived so it never goes stale, e.g. "13+" in 2026. */
+  get yearsExperience(): string {
+    return `${new Date().getFullYear() - FOUNDING_YEAR}+`;
+  },
+  /** e.g. "13+ years" */
+  get yearsExperienceLabel(): string {
+    return `${this.yearsExperience} years`;
+  },
+} as const;

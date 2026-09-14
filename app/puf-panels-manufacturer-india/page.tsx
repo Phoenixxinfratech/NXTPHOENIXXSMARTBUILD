@@ -3,20 +3,34 @@ import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'PUF Panels Manufacturer India | PHOENIXX',
+  title: 'PUF Panels Manufacturer India',
   description: 'Premier PUF panels manufacturer in India. High-quality sandwich panels for roofing, walls, cold storage applications.',
   keywords: ['PUF panels manufacturer India', 'polyurethane panels', 'PUF panel supplier'],
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/puf-panels-manufacturer-india',
+  },
+  openGraph: {
+    title: 'PUF Panels Manufacturer India | PHOENIXX SMARTBUILD',
+    description: 'Premier PUF panels manufacturer in India. High-quality sandwich panels for roofing, walls, cold storage applications.',
+    url: 'https://phoenixxsmartbuild.com/puf-panels-manufacturer-india',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PUF Panels Manufacturer India | PHOENIXX SMARTBUILD',
+    description: 'Premier PUF panels manufacturer in India. High-quality sandwich panels for roofing, walls, cold storage applications.',
   },
 };
 
 const faqs = [
   {
     question: 'Who is the reliable PUF panels manufacturer in India?',
-    answer: 'PHOENIXX SmartBuild is a trusted PUF panels manufacturer in India with 18+ years of experience, 150+ completed projects, and manufacturing facilities equipped with advanced continuous lamination technology for consistent quality production.',
+    answer: 'PHOENIXX SmartBuild is a trusted PUF panels manufacturer in India with 13+ years of experience, 500+ completed projects, and manufacturing facilities equipped with advanced continuous lamination technology for consistent quality production.',
   },
   {
     question: 'What types of PUF panels does PHOENIXX manufacture?',
@@ -57,13 +71,15 @@ export default function PufPanelsManufacturerIndiaPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={faqSchema} />
 
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-green-900 via-emerald-900 to-slate-900 py-20 md:py-28">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
+            <Breadcrumbs withSchema items={[{ label: 'Products', href: '/products' }, { label: 'PUF Panels Manufacturer India' }]} />
+
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-green-500/10 px-4 py-2 text-sm font-medium text-green-400 mb-6">
                 🇮🇳 Made in India | For India
@@ -79,7 +95,7 @@ export default function PufPanelsManufacturerIndiaPage() {
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link
                   href="/get-a-quote"
-                  className="rounded-xl bg-gradient-to-r from-green-500 to-emerald-600 px-8 py-4 font-semibold text-white shadow-lg hover:shadow-xl transition-all"
+                  className="rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 px-8 py-4 font-semibold text-white shadow-lg hover:shadow-xl transition-all"
                 >
                   Request Quote
                 </Link>
@@ -109,7 +125,7 @@ export default function PufPanelsManufacturerIndiaPage() {
                   panels that meet international quality standards while being optimized for Indian conditions.
                 </p>
                 <p>
-                  With over 18 years of industry experience, we have developed deep expertise in understanding 
+                  With 13+ years of industry experience, we have developed deep expertise in understanding 
                   the unique requirements of Indian industries – from the extreme heat of Rajasthan to the 
                   humidity of coastal regions. Our <Link href="/products/sandwich-panels/sandwich-puf-panel" className="text-primary hover:underline">PUF panels</Link> are 
                   engineered to perform reliably across all Indian climate zones, delivering consistent thermal 

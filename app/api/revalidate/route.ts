@@ -20,10 +20,10 @@ const typeToPath: Record<string, (slug?: string) => string[]> = {
   product: (slug) => ['/products', slug ? `/products/${slug}` : ''],
   solution: (slug) => ['/solutions', slug ? `/solutions/${slug}` : ''],
   industry: (slug) => ['/industries', slug ? `/industries/${slug}` : ''],
-  cleanroom: (slug) => ['/cleanroom-solutions', slug ? `/cleanroom-solutions/${slug}` : ''],
-  post: (slug) => ['/blog', slug ? `/blog/${slug}` : ''],
+  cleanroom: (slug) => ['/products/cleanroom-solutions', slug ? `/products/cleanroom-solutions/${slug}` : ''],
+  post: (slug) => ['/resources/blogs', slug ? `/resources/blogs/${slug}` : ''],
   resource: (slug) => ['/resources', slug ? `/resources/${slug}` : ''],
-  faq: () => ['/faqs'],
+  faq: () => ['/resources/faq'],
   page: (slug) => [slug === 'home' ? '/' : `/${slug}`],
   siteSettings: () => ['/'],
 };
@@ -34,9 +34,16 @@ export async function POST(request: NextRequest) {
     const authHeader = request.headers.get('authorization');
     const token = authHeader?.replace('Bearer ', '');
 
+    // Fail closed: without a configured secret there is no way to tell a Sanity
+    // webhook from an anonymous caller, and revalidation is a write operation.
     if (!REVALIDATION_SECRET) {
-      console.warn('REVALIDATION_SECRET not set - skipping auth check');
-    } else if (token !== REVALIDATION_SECRET) {
+      return NextResponse.json(
+        { error: 'Revalidation is not configured' },
+        { status: 503 }
+      );
+    }
+
+    if (token !== REVALIDATION_SECRET) {
       return NextResponse.json(
         { error: 'Invalid revalidation token' },
         { status: 401 }

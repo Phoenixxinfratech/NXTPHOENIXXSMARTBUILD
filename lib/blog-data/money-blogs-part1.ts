@@ -1,179 +1,6 @@
 import type { BlogPost } from './types';
 
 export const moneyBlogsPart1: Record<string, BlogPost> = {
-  'puf-panel-price-ahmedabad-2026-guide': {
-    title: 'PUF Panel Price in Ahmedabad 2026 | Updated Cost Guide',
-    metaTitle: 'PUF Panel Price in Ahmedabad 2026 | Updated Cost Guide',
-    metaDescription: 'Get the latest PUF panel price in Ahmedabad for 2026. Compare thickness-wise costs per sq ft, find trusted manufacturers, and learn what affects pricing.',
-    excerpt: 'Complete guide to PUF panel price in Ahmedabad for 2026. Thickness-wise cost per sq ft, factors affecting pricing, and where to buy from trusted manufacturers like Phoenixx SmartBuild.',
-    content: `
-      <h2>PUF Panel Price in Ahmedabad \u2013 2026 Updated Guide</h2>
-      <p>If you\u2019re planning an industrial project, cold storage facility, or commercial building in Ahmedabad, understanding the current <strong>PUF panel price in Ahmedabad</strong> is essential for accurate budgeting. Polyurethane Foam (PUF) panels have become the go-to insulation and cladding solution for modern construction across Gujarat, and Ahmedabad leads the demand owing to its thriving industrial and warehousing sector.</p>
-      <p>In this guide, we break down the latest 2026 pricing, explain the factors that influence cost, and help you find the best deals from reliable suppliers. Whether you need panels for roofing, cold storage walls, or cleanroom partitions, this comprehensive price guide has you covered.</p>
-
-      <h2>PUF Panel Price Per Sq Ft in Ahmedabad \u2013 2026 Price Table</h2>
-      <p>PUF panel prices depend primarily on <strong>thickness</strong>, <strong>density</strong>, and the <strong>metal sheet specification</strong> used on each face. Below is an indicative price table for standard PUF sandwich panels with 0.50&nbsp;mm PPGI/PPGL steel facings and 40&nbsp;kg/m&sup3; density core, applicable in Ahmedabad for 2026:</p>
-      <table>
-        <tr>
-          <th>Panel Thickness</th>
-          <th>Price Per Sq Ft (\u20b9)</th>
-          <th>Price Per Sq Metre (\u20b9)</th>
-          <th>Common Application</th>
-        </tr>
-        <tr>
-          <td>30 mm</td>
-          <td>\u20b9 105 \u2013 \u20b9 125</td>
-          <td>\u20b9 1,130 \u2013 \u20b9 1,345</td>
-          <td>Partition Walls, Office Cabins</td>
-        </tr>
-        <tr>
-          <td>40 mm</td>
-          <td>\u20b9 120 \u2013 \u20b9 140</td>
-          <td>\u20b9 1,290 \u2013 \u20b9 1,505</td>
-          <td>Warehouse Cladding, Roofing</td>
-        </tr>
-        <tr>
-          <td>50 mm</td>
-          <td>\u20b9 135 \u2013 \u20b9 160</td>
-          <td>\u20b9 1,450 \u2013 \u20b9 1,720</td>
-          <td>Factory Walls, PEB Cladding</td>
-        </tr>
-        <tr>
-          <td>60 mm</td>
-          <td>\u20b9 155 \u2013 \u20b9 180</td>
-          <td>\u20b9 1,670 \u2013 \u20b9 1,935</td>
-          <td>Cold Rooms (5\u00b0C to 10\u00b0C)</td>
-        </tr>
-        <tr>
-          <td>80 mm</td>
-          <td>\u20b9 185 \u2013 \u20b9 215</td>
-          <td>\u20b9 1,990 \u2013 \u20b9 2,315</td>
-          <td>Cold Storage (0\u00b0C to 5\u00b0C)</td>
-        </tr>
-        <tr>
-          <td>100 mm</td>
-          <td>\u20b9 220 \u2013 \u20b9 260</td>
-          <td>\u20b9 2,370 \u2013 \u20b9 2,800</td>
-          <td>Frozen Storage (\u221218\u00b0C to 0\u00b0C)</td>
-        </tr>
-        <tr>
-          <td>120 mm</td>
-          <td>\u20b9 260 \u2013 \u20b9 310</td>
-          <td>\u20b9 2,800 \u2013 \u20b9 3,335</td>
-          <td>Deep Freeze (\u221225\u00b0C and below)</td>
-        </tr>
-        <tr>
-          <td>150 mm</td>
-          <td>\u20b9 310 \u2013 \u20b9 370</td>
-          <td>\u20b9 3,335 \u2013 \u20b9 3,985</td>
-          <td>Blast Freezer, Pharma Cold Chain</td>
-        </tr>
-      </table>
-      <p><em>Note: Prices are indicative for Q1\u20132026 and may vary based on order volume, customisation, and prevailing steel rates. For an exact quote, <a href="/get-a-quote">Get a quote</a> directly from our team.</em></p>
-
-      <h2>Factors Affecting PUF Panel Price in Ahmedabad</h2>
-      <p>Understanding what drives the cost of PUF panels helps you make informed purchasing decisions. Here are the key factors:</p>
-      <h3>1. Panel Thickness and Density</h3>
-      <p>Thicker panels use more polyurethane foam, increasing the material cost proportionally. Similarly, higher-density foam (e.g., 42\u201345&nbsp;kg/m&sup3;) offers better insulation and structural rigidity but comes at a premium over the standard 38\u201340&nbsp;kg/m&sup3; range.</p>
-      <h3>2. Steel Sheet Grade and Coating</h3>
-      <p>The metal facings significantly impact cost. A standard 0.45&nbsp;mm PPGI sheet is the most economical, while upgrading to 0.50&nbsp;mm or 0.60&nbsp;mm PPGL or stainless steel facings can increase the price by 15\u201340%. Food-grade and corrosion-resistant coatings for pharma and dairy cold storage applications cost even more.</p>
-      <h3>3. Order Quantity</h3>
-      <p>Bulk orders of 5,000+ sq ft typically enjoy 5\u201310% discounts from <a href="/puf-panel-manufacturer-in-ahmedabad">PUF panel manufacturer in Ahmedabad</a> facilities. Smaller orders may attract higher per-unit pricing due to production setup costs.</p>
-      <h3>4. Customisation Requirements</h3>
-      <p>Custom lengths, non-standard profiles, cam-lock joints for cold storage, and special colour RAL codes can add 3\u20138% to the base price of a standard <a href="/products/sandwich-panels/sandwich-puf-panel">Sandwich PUF Panel</a>.</p>
-      <h3>5. Delivery Distance</h3>
-      <p>Ahmedabad-based buyers benefit from lower freight costs when purchasing from local manufacturers. Sourcing panels from distant states can add \u20b910\u2013\u20b925 per sq ft in transportation charges alone.</p>
-      <h3>6. Prevailing Steel and Chemical Prices</h3>
-      <p>PUF panel pricing is directly linked to the commodity prices of steel coils and MDI/polyol chemicals. Fluctuations in international steel prices can cause 5\u201312% swings in panel costs within a single quarter.</p>
-
-      <h2>Where to Buy PUF Panels in Ahmedabad</h2>
-      <p>Ahmedabad has a well-established ecosystem of panel manufacturers, dealers, and distributors. When choosing a supplier, prioritise:</p>
-      <ul>
-        <li><strong>Direct manufacturers</strong> over traders \u2013 you get factory-direct pricing and quality assurance</li>
-        <li><strong>CFC-free formulations</strong> \u2013 modern panels should use cyclopentane-blown foam for environmental compliance</li>
-        <li><strong>BIS and ISO certifications</strong> \u2013 ensure the manufacturer follows quality management standards</li>
-        <li><strong>After-sales support</strong> \u2013 installation guidance, warranty, and technical assistance matter for long-term performance</li>
-      </ul>
-      <p>If you\u2019re searching for a reliable <a href="/sandwich-puf-panel-in-ahmedabad">PUF panel in Ahmedabad</a>, PHOENIXX SmartBuild operates a state-of-the-art manufacturing facility near Ahmedabad with continuous production lines capable of delivering panels in any thickness from 30&nbsp;mm to 200&nbsp;mm.</p>
-
-      <h2>Why Choose PHOENIXX SmartBuild for PUF Panels in Ahmedabad?</h2>
-      <p>PHOENIXX SmartBuild is one of the leading PUF panel manufacturers serving Ahmedabad and the rest of Gujarat. Here\u2019s what sets us apart:</p>
-      <ul>
-        <li><strong>Integrated Production:</strong> In-house steel coil slitting, roll forming, and foam injection ensure consistent quality and competitive pricing.</li>
-        <li><strong>Wide Product Range:</strong> From standard wall and <a href="/products/sandwich-panels/sandwich-puf-panel">Sandwich PUF Panel</a> options to specialised cold storage and cleanroom panels.</li>
-        <li><strong>Pan-India Delivery:</strong> While based near Gujarat, we deliver across India. Check our <a href="/resources/blogs/puf-panel-price-india-cost-per-sq-ft">PUF panel price in India</a> guide for nationwide pricing.</li>
-        <li><strong>Technical Support:</strong> Our engineering team assists with panel selection, thermal calculations, and installation supervision.</li>
-        <li><strong>Competitive Pricing:</strong> Factory-direct rates with no middleman margins, transparent quotation process.</li>
-      </ul>
-
-      <h2>PUF Panel Price Trends in Ahmedabad \u2013 2024 to 2026</h2>
-      <p>Over the past two years, PUF panel prices in Ahmedabad have seen moderate fluctuations driven primarily by steel market dynamics:</p>
-      <ul>
-        <li><strong>2024:</strong> Prices ranged from \u20b9 95\u2013\u20b9 340 per sq ft, with a mid-year spike due to global steel shortages.</li>
-        <li><strong>2025:</strong> Stabilisation in steel prices brought relief, with average costs dropping 3\u20135% from peak levels.</li>
-        <li><strong>2026 (Current):</strong> Prices have settled in the \u20b9 105\u2013\u20b9 370 per sq ft range. Demand from Gujarat\u2019s cold chain and warehousing expansion keeps the market active.</li>
-      </ul>
-      <p>Experts project stable pricing through 2026, with potential upward pressure if global crude oil prices rise significantly, as polyol is a petroleum derivative.</p>
-
-      <h2>Tips to Get the Best PUF Panel Price in Ahmedabad</h2>
-      <ul>
-        <li><strong>Order in bulk:</strong> Larger orders mean better rates per sq ft.</li>
-        <li><strong>Plan ahead:</strong> Placing orders 4\u20136 weeks in advance avoids rush-order premiums.</li>
-        <li><strong>Compare quotes:</strong> Get quotations from at least 3 manufacturers, but don\u2019t compromise on quality for marginal savings.</li>
-        <li><strong>Choose the right thickness:</strong> Over-specifying thickness wastes money; under-specifying hurts energy efficiency. Consult an engineer.</li>
-        <li><strong>Buy direct:</strong> Eliminate dealer margins by purchasing from the <a href="/puf-panel-manufacturer-in-ahmedabad">PUF panel manufacturer in Ahmedabad</a> directly.</li>
-      </ul>
-
-      <h2>Conclusion</h2>
-      <p>Understanding the <strong>PUF panel price in Ahmedabad</strong> for 2026 empowers you to budget accurately and choose the right supplier for your project. With prices ranging from \u20b9 105 to \u20b9 370 per sq ft depending on thickness and specifications, PUF panels remain one of the most cost-effective insulation solutions for industrial and commercial construction.</p>
-      <p>Ready to get started? <a href="/get-a-quote">Get a quote</a> from PHOENIXX SmartBuild today and discover factory-direct pricing for your Ahmedabad project.</p>
-    `,
-    category: 'Pricing',
-    date: '2026-03-10',
-    readTime: '8 min read',
-    author: { name: 'Engineering Team', role: 'PHOENIXX SmartBuild' },
-    keywords: [
-      'PUF panel price in Ahmedabad',
-      'PUF panel cost Ahmedabad 2026',
-      'PUF panel rate per sq ft Ahmedabad',
-      'sandwich PUF panel price Gujarat',
-      'PUF panel manufacturer Ahmedabad',
-      'insulated panel price Ahmedabad',
-      'PUF panel supplier Ahmedabad',
-    ],
-    relatedProducts: [
-      { name: 'Sandwich PUF Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
-      { name: 'Roofing PUF Panel', href: '/products/sandwich-panels/roofing-puf-panel' },
-      { name: 'PIR Panel', href: '/products/sandwich-panels/pir-panel' },
-    ],
-    relatedSolutions: [
-      { name: 'Cold Storage Construction', href: '/solutions/cold-storage-construction' },
-      { name: 'PEB Solutions', href: '/solutions/peb' },
-    ],
-    faqs: [
-      {
-        question: 'What is the current PUF panel price per sq ft in Ahmedabad?',
-        answer: 'As of 2026, PUF panel prices in Ahmedabad range from \u20b9105 to \u20b9370 per sq ft depending on thickness (30 mm to 150 mm), density, and steel sheet specification. Standard 50 mm panels for industrial cladding typically cost \u20b9135\u2013\u20b9160 per sq ft.',
-      },
-      {
-        question: 'Why do PUF panel prices vary between manufacturers in Ahmedabad?',
-        answer: 'Price differences arise from variations in foam density, steel sheet thickness and coating quality, production technology, and whether you are buying from a manufacturer directly or through a dealer. BIS-certified manufacturers may charge slightly more but deliver superior quality.',
-      },
-      {
-        question: 'Is it cheaper to buy PUF panels locally in Ahmedabad or from other states?',
-        answer: 'Buying from a local Ahmedabad-based manufacturer is usually cheaper because you save \u20b910\u2013\u20b925 per sq ft on transportation. Local manufacturers also offer faster delivery and better after-sales support.',
-      },
-      {
-        question: 'How can I get a discount on PUF panel orders in Ahmedabad?',
-        answer: 'Bulk orders above 5,000 sq ft typically attract 5\u201310% discounts. Placing orders 4\u20136 weeks in advance, choosing standard colours, and buying directly from manufacturers like PHOENIXX SmartBuild can further reduce costs.',
-      },
-      {
-        question: 'Do PUF panel prices in Ahmedabad include installation?',
-        answer: 'No, the prices quoted above are for material supply only (ex-factory or delivered). Installation is usually charged separately at \u20b930\u2013\u20b960 per sq ft depending on project complexity, height, and site conditions.',
-      },
-    ],
-  },
-
   'puf-panel-price-india-cost-per-sq-ft': {
     title: 'PUF Panel Price in India 2026 | Cost Per Sq Ft Guide',
     metaTitle: 'PUF Panel Price in India 2026 | Cost Per Sq Ft Guide',
@@ -293,7 +120,7 @@ export const moneyBlogsPart1: Record<string, BlogPost> = {
           <td>+15\u201322%</td>
         </tr>
       </table>
-      <p>As you can see, Gujarat-based manufacturers like PHOENIXX SmartBuild offer some of the most competitive base pricing in the country. For Ahmedabad-specific rates, see our <a href="/resources/blogs/puf-panel-price-ahmedabad-2026-guide">PUF panel price in Ahmedabad</a> guide.</p>
+      <p>As you can see, Gujarat-based manufacturers like PHOENIXX SmartBuild offer some of the most competitive base pricing in the country. For Ahmedabad-specific rates, see our <a href="/resources/blogs/puf-panel-price-ahmedabad">PUF panel price in Ahmedabad</a> guide.</p>
 
       <h2>Bulk Pricing and Volume Discounts</h2>
       <p>Large-scale projects can achieve significant savings through bulk procurement. Here\u2019s the typical discount structure for <a href="/sandwich-puf-panel-in-india">PUF panel across India</a>:</p>
@@ -362,7 +189,7 @@ export const moneyBlogsPart1: Record<string, BlogPost> = {
         <li><strong>Core Density:</strong> Standard 38\u201340&nbsp;kg/m&sup3; density is the most economical. Higher densities (42\u201345&nbsp;kg/m&sup3;) for structural applications add 5\u20138% to cost.</li>
         <li><strong>Steel Sheet Specification:</strong> Upgrading from 0.45&nbsp;mm to 0.60&nbsp;mm steel or switching from PPGI to stainless steel can increase pricing by 20\u201350%.</li>
         <li><strong>Joint Type:</strong> Tongue-and-groove joints are standard and most affordable. Cam-lock joints used in cold storage are 10\u201315% more expensive per sq ft.</li>
-        <li><strong>Fire Rating:</strong> Standard PUF is B3 rated. Achieving B1 or B2 fire-rated panels using fire-retardant additives adds 8\u201315% to cost. For higher fire ratings, consider <a href="/products/sandwich-panels/pir-panel">PIR panels</a>.</li>
+        <li><strong>Fire Rating:</strong> Standard PUF is B3 under DIN 4102, equivalent to Class E under EN 13501-1. Achieving B1 or B2 fire-rated panels using fire-retardant additives adds 8\u201315% to cost. For higher fire ratings, consider <a href="/products/sandwich-panels/pir-panel">PIR panels</a>.</li>
         <li><strong>Delivery Location:</strong> Freight from Gujarat to South or East India can add \u20b912\u2013\u20b930 per sq ft.</li>
         <li><strong>Market Conditions:</strong> International steel and chemical prices directly influence domestic panel costs.</li>
       </ul>
@@ -385,6 +212,7 @@ export const moneyBlogsPart1: Record<string, BlogPost> = {
     `,
     category: 'Pricing',
     date: '2026-03-09',
+    lastModified: '2026-09-13',
     readTime: '9 min read',
     author: { name: 'Engineering Team', role: 'PHOENIXX SmartBuild' },
     keywords: [
@@ -1144,7 +972,7 @@ export const moneyBlogsPart1: Record<string, BlogPost> = {
         <li><strong>Insurance and safety:</strong> Ensure the contractor carries labour insurance and follows safety protocols, especially for roofing work at height.</li>
         <li><strong>Warranty support:</strong> Some manufacturers, including PHOENIXX SmartBuild, offer installation supervision or approved contractor networks to ensure quality and preserve panel warranties.</li>
       </ul>
-      <p>For a complete understanding of panel material costs before factoring in installation, refer to our <a href="/resources/blogs/puf-panel-price-ahmedabad-2026-guide">PUF panel price guide</a> for Ahmedabad.</p>
+      <p>For a complete understanding of panel material costs before factoring in installation, refer to our <a href="/resources/blogs/puf-panel-price-ahmedabad">PUF panel price guide</a> for Ahmedabad.</p>
 
       <h2>Conclusion</h2>
       <p>The <strong>PUF panel installation cost in Ahmedabad</strong> for 2026 ranges from \u20b9 37 to \u20b9 101 per sq ft depending on the application type, adding 20\u201335% to your material costs. For a typical industrial cladding project, budget approximately \u20b9 180\u2013\u20b9 250 per sq ft for the complete material-plus-installation package.</p>

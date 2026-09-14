@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "npm run hero:manifest && next dev",
+    "prebuild": "npm run hero:manifest",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "hero:optimize": "node scripts/optimize-hero-images.mjs",
+    "hero:manifest": "node scripts/build-hero-manifest.mjs"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.0",
@@ -43,7 +46,7 @@
     "@types/react-dom": "^18.3.0",
     "eslint": "^8.57.0",
     "eslint-config-next": "14.2.22",
+    "sharp": "^0.32.6",
     "typescript": "^5.5.4"
   }
 }
-

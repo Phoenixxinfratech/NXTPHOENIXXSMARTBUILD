@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { encodeFormData } from '@/lib/forms';
 
 interface CareerFormProps {
   position?: string;
@@ -25,7 +26,7 @@ export function CareerForm({ position = '' }: CareerFormProps) {
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as any).toString(),
+        body: encodeFormData(formData),
       });
 
       if (response.ok) {
@@ -68,6 +69,7 @@ export function CareerForm({ position = '' }: CareerFormProps) {
             type="text"
             id="name"
             name="name"
+            autoComplete="name"
             required
             className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
             placeholder="Your full name"
@@ -81,6 +83,8 @@ export function CareerForm({ position = '' }: CareerFormProps) {
             type="email"
             id="email"
             name="email"
+            autoComplete="email"
+            inputMode="email"
             required
             className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
             placeholder="you@example.com"
@@ -97,6 +101,8 @@ export function CareerForm({ position = '' }: CareerFormProps) {
             type="tel"
             id="phone"
             name="phone"
+            autoComplete="tel"
+            inputMode="tel"
             required
             className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
             placeholder="+91 XXXXX XXXXX"
@@ -210,6 +216,7 @@ export function CareerForm({ position = '' }: CareerFormProps) {
           type="text"
           id="location"
           name="location"
+          autoComplete="address-level2"
           required
           className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
           placeholder="City, State"
@@ -262,7 +269,7 @@ export function CareerForm({ position = '' }: CareerFormProps) {
       </p>
 
       {error && (
-        <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
+        <div role="alert" className="p-4 bg-red-50 border border-red-200 rounded-lg">
           <p className="text-red-600 text-center">{error}</p>
         </div>
       )}

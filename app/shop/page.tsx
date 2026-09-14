@@ -5,9 +5,11 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 import { fetchPricesFromSheet } from '@/lib/google-sheets';
+import { getProductPricing } from '@/lib/shop-prices';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Shop – Buy PUF Panels Online | PHOENIXX',
+  title: 'Shop – Buy PUF Panels Online',
   description: 'Order PUF panels online with transparent pricing. Calculate project costs instantly. Fast delivery across India.',
   keywords: [
     'buy puf panels online',
@@ -17,6 +19,19 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/shop',
+  },
+  openGraph: {
+    title: 'Shop – Buy PUF Panels Online | PHOENIXX SMARTBUILD',
+    description: 'Order PUF panels online with transparent pricing. Calculate project costs instantly. Fast delivery across India.',
+    url: 'https://phoenixxsmartbuild.com/shop',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Shop – Buy PUF Panels Online | PHOENIXX SMARTBUILD',
+    description: 'Order PUF panels online with transparent pricing. Calculate project costs instantly. Fast delivery across India.',
   },
 };
 
@@ -33,8 +48,6 @@ const productCategories = [
         name: 'Sandwich PUF Panel',
         description: 'Premium polyurethane foam insulated panels for cold storage, warehouses, and cleanrooms.',
         image: '/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
-        basePrice: 850,
-        priceUnit: '/sq.mtr',
         features: ['0.024 W/mK', 'B2/B3 Fire', '25-30 yr life'],
         gradient: 'from-blue-600 to-cyan-600',
       },
@@ -42,9 +55,7 @@ const productCategories = [
         slug: 'roofing-puf-panel',
         name: 'Roofing PUF Panel',
         description: 'Insulated roofing panels with trapezoidal profile for industrial sheds.',
-        image: '/images/projects/gallery/Phoenix-PUF-Panel-Manufacturers6.jpg',
-        basePrice: 950,
-        priceUnit: '/sq.mtr',
+        image: '/images/products/sandwich-panels/puf-panel/Phoenix-PUF-Panel-Manufacturers6.jpg',
         features: ['150 km/h wind', '4m span', 'UV resistant'],
         gradient: 'from-green-600 to-emerald-600',
       },
@@ -52,9 +63,7 @@ const productCategories = [
         slug: 'pir-panel',
         name: 'PIR Panel',
         description: 'Polyisocyanurate panels with superior fire performance and thermal efficiency.',
-        image: '/images/projects/gallery/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects26.jpg',
-        basePrice: 1200,
-        priceUnit: '/sq.mtr',
+        image: '/images/projects/gallery/Pharma-cleanroom-panel-manufacturers-Phoenixx-infratech-projects74.jpg',
         features: ['B-s1,d0 fire', '0.022 W/mK', 'Low smoke'],
         gradient: 'from-purple-600 to-indigo-600',
       },
@@ -63,8 +72,6 @@ const productCategories = [
         name: 'Rockwool Panel',
         description: 'Non-combustible mineral wool panels with A1/A2 fire rating.',
         image: '/images/projects/gallery/cleanroom-Manufacture-Supplier-in-Ahmedabad1.jpeg',
-        basePrice: 1400,
-        priceUnit: '/sq.mtr',
         features: ['A1/A2 fire', 'FM 4880', '32-45 dB'],
         gradient: 'from-orange-600 to-red-600',
       },
@@ -72,9 +79,7 @@ const productCategories = [
         slug: 'wall-ceiling-panel',
         name: 'Wall & Ceiling Panel',
         description: 'Versatile insulated panels for wall and ceiling applications.',
-        image: '/images/projects/gallery/PHOENIXX_WALL_PUF_PANEL1.jpg',
-        basePrice: 750,
-        priceUnit: '/sq.mtr',
+        image: '/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL1.jpg',
         features: ['GMP finish', 'Easy clean', 'Cam-lock'],
         gradient: 'from-cyan-600 to-blue-600',
       },
@@ -83,8 +88,6 @@ const productCategories = [
         name: 'FM Approved Panel',
         description: 'Factory Mutual certified panels for insurance-compliant facilities.',
         image: '/images/projects/gallery/Phoenixx_infratech_Projects188.jpg',
-        basePrice: 1600,
-        priceUnit: '/sq.mtr',
         features: ['FM 4880', 'Insurance OK', '15-yr warranty'],
         gradient: 'from-amber-600 to-yellow-600',
       },
@@ -101,8 +104,6 @@ const productCategories = [
         name: 'Cleanroom Door',
         description: 'Specialized doors for cleanroom and controlled environments.',
         image: '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-2.jpg',
-        basePrice: 35000,
-        priceUnit: '/unit',
         features: ['GMP compliant', 'Air-tight', 'SS options'],
         gradient: 'from-teal-600 to-cyan-600',
       },
@@ -111,8 +112,6 @@ const productCategories = [
         name: 'Fire Door – Emergency Exit',
         description: 'Fire-rated emergency exit doors with panic hardware.',
         image: '/images/projects/gallery/Phoenixx_infratech_Projects189.jpg',
-        basePrice: 28000,
-        priceUnit: '/unit',
         features: ['60-120 min', 'CBRI tested', 'NBC 2016'],
         gradient: 'from-red-600 to-orange-600',
       },
@@ -121,8 +120,6 @@ const productCategories = [
         name: 'Fire Rated Multipurpose Door',
         description: 'Versatile fire-rated doors for general access points.',
         image: '/images/projects/gallery/Phoenix-Infratech-Project-Pics23.jpg',
-        basePrice: 25000,
-        priceUnit: '/unit',
         features: ['Vision panel', 'RAL colors', 'Heavy duty'],
         gradient: 'from-orange-500 to-red-500',
       },
@@ -130,9 +127,7 @@ const productCategories = [
         slug: 'cold-storage-door',
         name: 'Cold Storage Door',
         description: 'Insulated doors for cold storage and freezer applications.',
-        image: '/images/projects/gallery/Industrial-False-Ceiling-PUF-Panel-2.jpg',
-        basePrice: 45000,
-        priceUnit: '/unit',
+        image: '/images/products/sandwich-panels/wall-ceiling-panel/Industrial-False-Ceiling-PUF-Panel-2.jpg',
         features: ['-40°C rated', 'Heated frame', 'Magnetic seal'],
         gradient: 'from-sky-600 to-blue-600',
       },
@@ -140,9 +135,7 @@ const productCategories = [
         slug: 'hermetic-door',
         name: 'Hermetic Door',
         description: 'Air-tight automatic sliding doors for hospitals and OTs.',
-        image: '/images/projects/gallery/cleanroom-Manufacture-Supplier-in-Ahmedabad5.jpg',
-        basePrice: 125000,
-        priceUnit: '/unit',
+        image: '/images/solutions/cleanroom/cleanroom-Manufacture-Supplier-in-Ahmedabad5.jpg',
         features: ['True hermetic', 'Touchless', 'Lead-lined opt'],
         gradient: 'from-indigo-600 to-purple-600',
       },
@@ -158,9 +151,7 @@ const productCategories = [
         slug: 'cleanroom-partition',
         name: 'Cleanroom Partition',
         description: 'Modular cleanroom partition systems for ISO Class 5-8.',
-        image: '/images/projects/gallery/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects73.jpeg',
-        basePrice: 2800,
-        priceUnit: '/sq.mtr',
+        image: '/images/projects/gallery/Pharma-cleanroom-panel-manufacturers-Phoenixx-infratech-projects74.jpg',
         features: ['GMP surfaces', 'Flush design', 'Modular'],
         gradient: 'from-emerald-600 to-teal-600',
       },
@@ -169,8 +160,6 @@ const productCategories = [
         name: 'Cleanroom False Ceiling',
         description: 'Cleanroom-grade ceiling systems with HEPA integration.',
         image: '/images/projects/gallery/Sandwich-PUF-Ceiling-Panel-1.jpg',
-        basePrice: 3500,
-        priceUnit: '/sq.mtr',
         features: ['HEPA ready', 'Walkable opt', 'LED integrated'],
         gradient: 'from-violet-600 to-purple-600',
       },
@@ -178,9 +167,7 @@ const productCategories = [
         slug: 'cleanroom-doors',
         name: 'Cleanroom Doors (Solutions)',
         description: 'Complete cleanroom door solutions for partition integration.',
-        image: '/images/projects/gallery/cleanroom-Manufacture-Supplier-in-Ahmedabad6.jpg',
-        basePrice: 32000,
-        priceUnit: '/unit',
+        image: '/images/solutions/cleanroom/cleanroom-Manufacture-Supplier-in-Ahmedabad6.jpg',
         features: ['Interlock', 'Pass-through', 'GMP docs'],
         gradient: 'from-cyan-500 to-teal-500',
       },
@@ -188,34 +175,13 @@ const productCategories = [
         slug: 'cleanroom-flooring',
         name: 'Cleanroom Flooring',
         description: 'Seamless, anti-static, chemical-resistant flooring systems.',
-        image: '/images/projects/gallery/cleanroom-Manufacture-Supplier-in-Ahmedabad7.jpg',
-        basePrice: 850,
-        priceUnit: '/sq.mtr',
+        image: '/images/solutions/cleanroom/cleanroom-Manufacture-Supplier-in-Ahmedabad7.jpg',
         features: ['ESD options', 'Seamless', 'Chem resistant'],
         gradient: 'from-slate-600 to-gray-700',
       },
     ],
   },
 ];
-
-// SKU mapping for each product slug (for price lookup)
-const productSkuMap: Record<string, string> = {
-  'sandwich-puf-panel': 'PHX-PUF-30',
-  'roofing-puf-panel': 'PHX-ROOF-30',
-  'pir-panel': 'PHX-PIR-40',
-  'rockwool-panel': 'PHX-RW-50',
-  'wall-ceiling-panel': 'PHX-WALL-30',
-  'fm-approved-panel': 'PHX-FM-PIR-50',
-  'cleanroom-door': 'PHX-CRD-S90',
-  'fire-door-emergency-exit': 'PHX-FED-60S',
-  'fire-rated-multipurpose-door': 'PHX-FMD-60S',
-  'cold-storage-door': 'PHX-CSD-H100',
-  'hermetic-door': 'PHX-HRM-S100',
-  'cleanroom-partition': 'PHX-CRP-50P',
-  'cleanroom-false-ceiling': 'PHX-CRC-NW50',
-  'cleanroom-doors': 'PHX-CRDS-S90',
-  'cleanroom-flooring': 'PHX-CRF-EP2',
-};
 
 export default async function ShopPage() {
   // Fetch live prices from Google Sheets
@@ -225,11 +191,13 @@ export default async function ShopPage() {
   const updatedCategories = productCategories.map(category => ({
     ...category,
     products: category.products.map(product => {
-      const baseSku = productSkuMap[product.slug];
+      const pricing = getProductPricing(product.slug);
+      const baseSku = pricing?.variants[0]?.sku;
       const livePrice = baseSku ? livePrices.get(baseSku) : undefined;
       return {
         ...product,
-        basePrice: livePrice ?? product.basePrice,
+        basePrice: livePrice ?? pricing?.basePrice ?? 0,
+        priceUnit: pricing ? `/${pricing.priceUnit.replace(/^per /, '')}` : '',
       };
     }),
   }));
@@ -252,27 +220,6 @@ export default async function ShopPage() {
         description: product.description,
         image: `https://phoenixxsmartbuild.com${product.image}`,
         url: `https://phoenixxsmartbuild.com/shop/${product.slug}`,
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: '4.8',
-          reviewCount: '127',
-          bestRating: '5',
-          worstRating: '1',
-        },
-        review: {
-          '@type': 'Review',
-          reviewRating: {
-            '@type': 'Rating',
-            ratingValue: '5',
-            bestRating: '5',
-          },
-          author: {
-            '@type': 'Organization',
-            name: 'Industrial Client',
-          },
-          reviewBody: `Excellent quality ${product.name} with great insulation.`,
-          datePublished: '2024-01-15',
-        },
       },
     })),
   };
@@ -280,17 +227,13 @@ export default async function ShopPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={itemListSchema} />
         
         {/* Hero */}
         <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-16 md:py-20">
           <div className="container-custom">
-            <nav className="mb-6 text-sm text-slate-400">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">Shop</span>
-            </nav>
+            <Breadcrumbs withSchema items={[{ label: 'Shop' }]} />
             
             <div className="max-w-3xl">
               <h1 className="text-4xl md:text-5xl font-bold text-white">
@@ -302,13 +245,13 @@ export default async function ShopPage() {
               </p>
               <div className="mt-6 flex flex-wrap gap-4 text-sm text-slate-300">
                 <span className="flex items-center gap-2">
-                  <span className="text-green-400">✓</span> Direct from Manufacturer
+                  <span className="text-green-400" aria-hidden="true">✓</span> Direct from Manufacturer
                 </span>
                 <span className="flex items-center gap-2">
-                  <span className="text-green-400">✓</span> ISO 9001 Certified
+                  <span className="text-green-400" aria-hidden="true">✓</span> ISO 9001 Certified
                 </span>
                 <span className="flex items-center gap-2">
-                  <span className="text-green-400">✓</span> Bulk Discounts Available
+                  <span className="text-green-400" aria-hidden="true">✓</span> Bulk Discounts Available
                 </span>
               </div>
               
@@ -357,6 +300,7 @@ export default async function ShopPage() {
                       <Image
                         src={product.image}
                         alt={product.name}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-110"
                       />

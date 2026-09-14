@@ -3,13 +3,27 @@ import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'PUF Panel Company in India – PHOENIXX',
+  title: 'PUF Panel Company in India',
   description: 'Trusted PUF panel company serving industries across India. Quality insulated panels for diverse applications.',
   keywords: ['PUF panel company in India', 'insulated panel company', 'PUF panel solutions'],
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/puf-panel-company-in-india',
+  },
+  openGraph: {
+    title: 'PUF Panel Company in India | PHOENIXX SMARTBUILD',
+    description: 'Trusted PUF panel company serving industries across India. Quality insulated panels for diverse applications.',
+    url: 'https://phoenixxsmartbuild.com/puf-panel-company-in-india',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PUF Panel Company in India | PHOENIXX SMARTBUILD',
+    description: 'Trusted PUF panel company serving industries across India. Quality insulated panels for diverse applications.',
   },
 };
 
@@ -24,7 +38,7 @@ const faqs = [
   },
   {
     question: 'What is PHOENIXX SmartBuild\'s experience as a PUF panel company?',
-    answer: 'PHOENIXX has 18+ years of experience as a PUF panel company in India, successfully completing 150+ projects across pharmaceuticals, food processing, cold storage, warehousing, and industrial sectors with consistent quality and customer satisfaction.',
+    answer: 'PHOENIXX has 13+ years of experience as a PUF panel company in India, successfully completing 500+ projects across pharmaceuticals, food processing, cold storage, warehousing, and industrial sectors with consistent quality and customer satisfaction.',
   },
   {
     question: 'Does PHOENIXX provide turnkey solutions?',
@@ -74,14 +88,16 @@ export default function PufPanelCompanyIndiaPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={faqSchema} />
         <JsonLd data={organizationSchema} />
 
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-sky-900 via-blue-900 to-slate-900 py-20 md:py-28">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
+            <Breadcrumbs withSchema items={[{ label: 'Products', href: '/products' }, { label: 'PUF Panel Company in India' }]} />
+
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-sky-500/10 px-4 py-2 text-sm font-medium text-sky-400 mb-6">
                 🏢 Your Complete Insulation Partner
@@ -124,7 +140,7 @@ export default function PufPanelCompanyIndiaPage() {
                   When you partner with a <strong>PUF panel company in India</strong> like PHOENIXX SmartBuild, 
                   you gain access to more than just a product supplier – you get a comprehensive infrastructure 
                   solutions partner. Our company is built on the foundation of engineering excellence, quality 
-                  manufacturing, and unwavering commitment to customer success.
+                  manufacturing, and consistent follow-through with customers.
                 </p>
                 <p>
                   Since our inception, we have been dedicated to building the next-generation industrial 
@@ -256,7 +272,7 @@ export default function PufPanelCompanyIndiaPage() {
                 { name: 'Pharmaceutical', link: '/industries/pharma-chemical' },
                 { name: 'Food & Beverage', link: '/industries/food-processing' },
                 { name: 'Cold Chain', link: '/solutions/cold-storage-construction' },
-                { name: 'Warehousing', link: '/industries/warehousing' },
+                { name: 'Warehousing', link: '/industries/cold-chain' },
                 { name: 'Manufacturing', link: '/solutions/peb' },
                 { name: 'Dairy', link: '/industries/dairy' },
                 { name: 'Healthcare', link: '/products/cleanroom-solutions' },

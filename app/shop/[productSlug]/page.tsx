@@ -6,8 +6,11 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 import { fetchPricesFromSheet } from '@/lib/google-sheets';
+import { getProductPricing } from '@/lib/shop-prices';
+import { canonicalComboSlug } from '@/lib/geo-strategy';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
-// Product catalog with pricing data for shop pages
+// Presentation copy for shop pages. Prices live in lib/shop-prices.ts.
 const shopProducts: Record<string, {
   slug: string;
   name: string;
@@ -16,13 +19,6 @@ const shopProducts: Record<string, {
   image: string;
   sku: string;
   category: string;
-  basePrice: number;
-  priceUnit: string;
-  variants: {
-    thickness: string;
-    price: number;
-    sku: string;
-  }[];
   specifications: {
     label: string;
     value: string;
@@ -39,18 +35,6 @@ const shopProducts: Record<string, {
     image: '/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
     sku: 'PHX-PUF-001',
     category: 'Insulated Sandwich Panels',
-    basePrice: 850,
-    priceUnit: 'per sq.mtr',
-    variants: [
-      { thickness: '30mm', price: 850, sku: 'PHX-PUF-30' },
-      { thickness: '40mm', price: 950, sku: 'PHX-PUF-40' },
-      { thickness: '50mm', price: 1100, sku: 'PHX-PUF-50' },
-      { thickness: '60mm', price: 1250, sku: 'PHX-PUF-60' },
-      { thickness: '80mm', price: 1500, sku: 'PHX-PUF-80' },
-      { thickness: '100mm', price: 1750, sku: 'PHX-PUF-100' },
-      { thickness: '120mm', price: 2000, sku: 'PHX-PUF-120' },
-      { thickness: '150mm', price: 2400, sku: 'PHX-PUF-150' },
-    ],
     specifications: [
       { label: 'Core Material', value: 'Polyurethane Foam (PUF)' },
       { label: 'Density', value: '40 ± 2 kg/m³' },
@@ -77,21 +61,9 @@ const shopProducts: Record<string, {
     name: 'Roofing PUF Panel',
     shortName: 'Roof Panel',
     description: 'Insulated roofing panels with trapezoidal profile for superior drainage, wind resistance, and thermal performance. Ideal for industrial sheds and warehouses.',
-    image: '/images/projects/gallery/Phoenix-PUF-Panel-Manufacturers6.jpg',
+    image: '/images/products/sandwich-panels/puf-panel/Phoenix-PUF-Panel-Manufacturers6.jpg',
     sku: 'PHX-ROOF-001',
     category: 'Insulated Roofing Panels',
-    basePrice: 950,
-    priceUnit: 'per sq.mtr',
-    variants: [
-      { thickness: '30mm', price: 950, sku: 'PHX-ROOF-30' },
-      { thickness: '40mm', price: 1100, sku: 'PHX-ROOF-40' },
-      { thickness: '50mm', price: 1250, sku: 'PHX-ROOF-50' },
-      { thickness: '60mm', price: 1400, sku: 'PHX-ROOF-60' },
-      { thickness: '80mm', price: 1650, sku: 'PHX-ROOF-80' },
-      { thickness: '100mm', price: 1900, sku: 'PHX-ROOF-100' },
-      { thickness: '120mm', price: 2150, sku: 'PHX-ROOF-120' },
-      { thickness: '150mm', price: 2600, sku: 'PHX-ROOF-150' },
-    ],
     specifications: [
       { label: 'Core Material', value: 'Polyurethane Foam (PUF)' },
       { label: 'Density', value: '40 ± 2 kg/m³' },
@@ -121,16 +93,6 @@ const shopProducts: Record<string, {
     image: '/images/projects/gallery/cleanroom-Manufacture-Supplier-in-Ahmedabad1.jpeg',
     sku: 'PHX-RW-001',
     category: 'Fire Rated Panels',
-    basePrice: 1400,
-    priceUnit: 'per sq.mtr',
-    variants: [
-      { thickness: '50mm', price: 1400, sku: 'PHX-RW-50' },
-      { thickness: '80mm', price: 1750, sku: 'PHX-RW-80' },
-      { thickness: '100mm', price: 2000, sku: 'PHX-RW-100' },
-      { thickness: '120mm', price: 2300, sku: 'PHX-RW-120' },
-      { thickness: '150mm', price: 2700, sku: 'PHX-RW-150' },
-      { thickness: '200mm', price: 3200, sku: 'PHX-RW-200' },
-    ],
     specifications: [
       { label: 'Core Material', value: 'Mineral Wool (Stone Wool)' },
       { label: 'Density', value: '80-150 kg/m³' },
@@ -157,20 +119,9 @@ const shopProducts: Record<string, {
     name: 'PIR Panel',
     shortName: 'PIR Panel',
     description: 'Polyisocyanurate foam panels with superior fire performance (B-s1,d0) and better thermal efficiency than PUF. Ideal for fire-sensitive and high-value facilities.',
-    image: '/images/projects/gallery/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects26.jpg',
+    image: '/images/projects/gallery/Pharma-cleanroom-panel-manufacturers-Phoenixx-infratech-projects74.jpg',
     sku: 'PHX-PIR-001',
     category: 'Fire Enhanced Panels',
-    basePrice: 1200,
-    priceUnit: 'per sq.mtr',
-    variants: [
-      { thickness: '40mm', price: 1200, sku: 'PHX-PIR-40' },
-      { thickness: '50mm', price: 1400, sku: 'PHX-PIR-50' },
-      { thickness: '60mm', price: 1600, sku: 'PHX-PIR-60' },
-      { thickness: '80mm', price: 1900, sku: 'PHX-PIR-80' },
-      { thickness: '100mm', price: 2200, sku: 'PHX-PIR-100' },
-      { thickness: '120mm', price: 2500, sku: 'PHX-PIR-120' },
-      { thickness: '150mm', price: 3000, sku: 'PHX-PIR-150' },
-    ],
     specifications: [
       { label: 'Core Material', value: 'Polyisocyanurate (PIR) Foam' },
       { label: 'Density', value: '40 ± 2 kg/m³' },
@@ -200,16 +151,6 @@ const shopProducts: Record<string, {
     image: '/images/projects/gallery/Phoenixx_infratech_Projects188.jpg',
     sku: 'PHX-FM-001',
     category: 'Insurance Grade Panels',
-    basePrice: 1600,
-    priceUnit: 'per sq.mtr',
-    variants: [
-      { thickness: '50mm PIR', price: 1600, sku: 'PHX-FM-PIR-50' },
-      { thickness: '80mm PIR', price: 2100, sku: 'PHX-FM-PIR-80' },
-      { thickness: '100mm PIR', price: 2500, sku: 'PHX-FM-PIR-100' },
-      { thickness: '100mm Rockwool', price: 2800, sku: 'PHX-FM-RW-100' },
-      { thickness: '120mm Rockwool', price: 3200, sku: 'PHX-FM-RW-120' },
-      { thickness: '150mm Rockwool', price: 3800, sku: 'PHX-FM-RW-150' },
-    ],
     specifications: [
       { label: 'Core Options', value: 'PIR / Rockwool' },
       { label: 'FM Certification', value: 'FM 4880 Class 1' },
@@ -240,19 +181,9 @@ const shopProducts: Record<string, {
     name: 'Wall & Ceiling Panel',
     shortName: 'Wall Panel',
     description: 'Versatile insulated panels for wall and ceiling applications. Clean, hygienic finish ideal for food processing, pharmaceutical facilities, and commercial interiors.',
-    image: '/images/projects/gallery/PHOENIXX_WALL_PUF_PANEL1.jpg',
+    image: '/images/products/sandwich-panels/puf-panel/PHOENIXX_WALL_PUF_PANEL1.jpg',
     sku: 'PHX-WALL-001',
     category: 'Wall & Ceiling Panels',
-    basePrice: 750,
-    priceUnit: 'per sq.mtr',
-    variants: [
-      { thickness: '30mm', price: 750, sku: 'PHX-WALL-30' },
-      { thickness: '40mm', price: 850, sku: 'PHX-WALL-40' },
-      { thickness: '50mm', price: 950, sku: 'PHX-WALL-50' },
-      { thickness: '60mm', price: 1100, sku: 'PHX-WALL-60' },
-      { thickness: '80mm', price: 1300, sku: 'PHX-WALL-80' },
-      { thickness: '100mm', price: 1500, sku: 'PHX-WALL-100' },
-    ],
     specifications: [
       { label: 'Core Material', value: 'PUF / PIR / Rockwool' },
       { label: 'Density', value: '40 ± 2 kg/m³' },
@@ -286,16 +217,6 @@ const shopProducts: Record<string, {
     image: '/images/products/doors/Cleanroom-door/Cleanroom-Door-Manufacturer-in-Ahmedabad-2.jpg',
     sku: 'PHX-CRD-001',
     category: 'Cleanroom Doors',
-    basePrice: 35000,
-    priceUnit: 'per unit',
-    variants: [
-      { thickness: 'Single Leaf 900x2100mm', price: 35000, sku: 'PHX-CRD-S90' },
-      { thickness: 'Single Leaf 1000x2100mm', price: 38000, sku: 'PHX-CRD-S100' },
-      { thickness: 'Double Leaf 1200x2100mm', price: 55000, sku: 'PHX-CRD-D120' },
-      { thickness: 'Double Leaf 1500x2100mm', price: 65000, sku: 'PHX-CRD-D150' },
-      { thickness: 'Double Leaf 1800x2100mm', price: 75000, sku: 'PHX-CRD-D180' },
-      { thickness: 'Sliding Door 1200x2100mm', price: 85000, sku: 'PHX-CRD-SL120' },
-    ],
     specifications: [
       { label: 'Door Type', value: 'Swing / Sliding / Hermetic' },
       { label: 'Core Material', value: 'PUF / PIR / Honeycomb' },
@@ -325,16 +246,6 @@ const shopProducts: Record<string, {
     image: '/images/projects/gallery/Phoenixx_infratech_Projects189.jpg',
     sku: 'PHX-FED-001',
     category: 'Fire Rated Doors',
-    basePrice: 28000,
-    priceUnit: 'per unit',
-    variants: [
-      { thickness: '60 min Single 900x2100mm', price: 28000, sku: 'PHX-FED-60S' },
-      { thickness: '60 min Double 1200x2100mm', price: 45000, sku: 'PHX-FED-60D' },
-      { thickness: '90 min Single 900x2100mm', price: 35000, sku: 'PHX-FED-90S' },
-      { thickness: '90 min Double 1200x2100mm', price: 55000, sku: 'PHX-FED-90D' },
-      { thickness: '120 min Single 900x2100mm', price: 42000, sku: 'PHX-FED-120S' },
-      { thickness: '120 min Double 1200x2100mm', price: 68000, sku: 'PHX-FED-120D' },
-    ],
     specifications: [
       { label: 'Fire Rating', value: '60 / 90 / 120 minutes' },
       { label: 'Core Material', value: 'Mineral Wool / Vermiculite' },
@@ -364,16 +275,6 @@ const shopProducts: Record<string, {
     image: '/images/projects/gallery/Phoenix-Infratech-Project-Pics23.jpg',
     sku: 'PHX-FMD-001',
     category: 'Fire Rated Doors',
-    basePrice: 25000,
-    priceUnit: 'per unit',
-    variants: [
-      { thickness: '60 min Single 900x2100mm', price: 25000, sku: 'PHX-FMD-60S' },
-      { thickness: '60 min Double 1200x2100mm', price: 42000, sku: 'PHX-FMD-60D' },
-      { thickness: '90 min Single 900x2100mm', price: 32000, sku: 'PHX-FMD-90S' },
-      { thickness: '90 min Double 1200x2100mm', price: 52000, sku: 'PHX-FMD-90D' },
-      { thickness: '120 min Single 900x2100mm', price: 38000, sku: 'PHX-FMD-120S' },
-      { thickness: '120 min Double 1200x2100mm', price: 62000, sku: 'PHX-FMD-120D' },
-    ],
     specifications: [
       { label: 'Fire Rating', value: '60 / 90 / 120 minutes' },
       { label: 'Core Material', value: 'Mineral Wool / Honeycomb' },
@@ -400,19 +301,9 @@ const shopProducts: Record<string, {
     name: 'Cold Storage Door',
     shortName: 'Cold Room Door',
     description: 'Insulated doors for cold storage and freezer applications. High-density PUF core with heated frame to prevent condensation. Suitable for -40°C to +15°C environments.',
-    image: '/images/projects/gallery/Industrial-False-Ceiling-PUF-Panel-2.jpg',
+    image: '/images/products/sandwich-panels/wall-ceiling-panel/Industrial-False-Ceiling-PUF-Panel-2.jpg',
     sku: 'PHX-CSD-001',
     category: 'Cold Storage Doors',
-    basePrice: 45000,
-    priceUnit: 'per unit',
-    variants: [
-      { thickness: 'Hinged 1000x2100mm 100mm', price: 45000, sku: 'PHX-CSD-H100' },
-      { thickness: 'Hinged 1200x2100mm 100mm', price: 52000, sku: 'PHX-CSD-H120' },
-      { thickness: 'Sliding 1500x2100mm 100mm', price: 75000, sku: 'PHX-CSD-S150' },
-      { thickness: 'Sliding 2000x2100mm 120mm', price: 95000, sku: 'PHX-CSD-S200' },
-      { thickness: 'Bi-parting 2500x2500mm', price: 125000, sku: 'PHX-CSD-BP250' },
-      { thickness: 'Rapid Roll Freezer', price: 185000, sku: 'PHX-CSD-RR' },
-    ],
     specifications: [
       { label: 'Core Material', value: 'High-density PUF (50 kg/m³)' },
       { label: 'Core Thickness', value: '80mm / 100mm / 120mm / 150mm' },
@@ -439,19 +330,9 @@ const shopProducts: Record<string, {
     name: 'Hermetic Door',
     shortName: 'Hermetic Door',
     description: 'Air-tight automatic sliding doors for hospitals, operation theatres, and critical cleanroom applications. Maintains positive/negative pressure differentials.',
-    image: '/images/projects/gallery/cleanroom-Manufacture-Supplier-in-Ahmedabad5.jpg',
+    image: '/images/solutions/cleanroom/cleanroom-Manufacture-Supplier-in-Ahmedabad5.jpg',
     sku: 'PHX-HRM-001',
     category: 'Hermetic Doors',
-    basePrice: 125000,
-    priceUnit: 'per unit',
-    variants: [
-      { thickness: 'Single Leaf 1000x2100mm', price: 125000, sku: 'PHX-HRM-S100' },
-      { thickness: 'Single Leaf 1200x2100mm', price: 138000, sku: 'PHX-HRM-S120' },
-      { thickness: 'Double Leaf 1500x2100mm', price: 185000, sku: 'PHX-HRM-D150' },
-      { thickness: 'Double Leaf 1800x2100mm', price: 215000, sku: 'PHX-HRM-D180' },
-      { thickness: 'Lead-lined (X-ray)', price: 195000, sku: 'PHX-HRM-XR' },
-      { thickness: 'ICU/OT Interlock System', price: 285000, sku: 'PHX-HRM-ICU' },
-    ],
     specifications: [
       { label: 'Door Type', value: 'Automatic Sliding Hermetic' },
       { label: 'Core Material', value: 'Aluminum honeycomb / Lead' },
@@ -482,19 +363,9 @@ const shopProducts: Record<string, {
     name: 'Cleanroom Partition',
     shortName: 'CR Partition',
     description: 'Modular cleanroom partition systems for creating controlled environments. Flush-mounted panels with integrated services. ISO Class 5-8 compatible.',
-    image: '/images/projects/gallery/Pharma-clean room-panel-manufacturers-Phoenixx-infratech-projects73.jpeg',
+    image: '/images/projects/gallery/Pharma-cleanroom-panel-manufacturers-Phoenixx-infratech-projects74.jpg',
     sku: 'PHX-CRP-001',
     category: 'Cleanroom Systems',
-    basePrice: 2800,
-    priceUnit: 'per sq.mtr',
-    variants: [
-      { thickness: '50mm PUF Panel', price: 2800, sku: 'PHX-CRP-50P' },
-      { thickness: '50mm PIR Panel', price: 3200, sku: 'PHX-CRP-50R' },
-      { thickness: '50mm Rockwool Panel', price: 3800, sku: 'PHX-CRP-50W' },
-      { thickness: '60mm PUF Panel', price: 3100, sku: 'PHX-CRP-60P' },
-      { thickness: '80mm PUF Panel', price: 3600, sku: 'PHX-CRP-80P' },
-      { thickness: 'SS 304 Clad System', price: 4500, sku: 'PHX-CRP-SS' },
-    ],
     specifications: [
       { label: 'Core Material', value: 'PUF / PIR / Rockwool' },
       { label: 'Surface', value: 'PPGI / PPGL / SS 304/316' },
@@ -524,16 +395,6 @@ const shopProducts: Record<string, {
     image: '/images/projects/gallery/Sandwich-PUF-Ceiling-Panel-1.jpg',
     sku: 'PHX-CRC-001',
     category: 'Cleanroom Ceiling Systems',
-    basePrice: 3500,
-    priceUnit: 'per sq.mtr',
-    variants: [
-      { thickness: 'Non-walkable 50mm', price: 3500, sku: 'PHX-CRC-NW50' },
-      { thickness: 'Non-walkable 60mm', price: 3900, sku: 'PHX-CRC-NW60' },
-      { thickness: 'Walkable 80mm', price: 5500, sku: 'PHX-CRC-W80' },
-      { thickness: 'Walkable 100mm', price: 6500, sku: 'PHX-CRC-W100' },
-      { thickness: 'T-Grid System', price: 4200, sku: 'PHX-CRC-TG' },
-      { thickness: 'SS Clad Walkable', price: 8500, sku: 'PHX-CRC-SSW' },
-    ],
     specifications: [
       { label: 'Panel Type', value: 'Flush / T-grid / Walkable' },
       { label: 'Core Material', value: 'PUF / PIR / Honeycomb' },
@@ -560,19 +421,9 @@ const shopProducts: Record<string, {
     name: 'Cleanroom Doors (Solutions)',
     shortName: 'CR Doors',
     description: 'Complete cleanroom door solutions including swing, sliding, and hermetic options. Designed for integration with cleanroom partition systems. GMP compliant.',
-    image: '/images/projects/gallery/cleanroom-Manufacture-Supplier-in-Ahmedabad6.jpg',
+    image: '/images/solutions/cleanroom/cleanroom-Manufacture-Supplier-in-Ahmedabad6.jpg',
     sku: 'PHX-CRDS-001',
     category: 'Cleanroom Door Systems',
-    basePrice: 32000,
-    priceUnit: 'per unit',
-    variants: [
-      { thickness: 'Swing Single 900x2100mm', price: 32000, sku: 'PHX-CRDS-S90' },
-      { thickness: 'Swing Double 1500x2100mm', price: 52000, sku: 'PHX-CRDS-D150' },
-      { thickness: 'Sliding Single 1000x2100mm', price: 65000, sku: 'PHX-CRDS-SL100' },
-      { thickness: 'Sliding Double 1800x2100mm', price: 95000, sku: 'PHX-CRDS-SLD180' },
-      { thickness: 'Airtight Swing', price: 48000, sku: 'PHX-CRDS-AT' },
-      { thickness: 'Interlocked Pair', price: 85000, sku: 'PHX-CRDS-INT' },
-    ],
     specifications: [
       { label: 'Door Types', value: 'Swing / Sliding / Hermetic' },
       { label: 'Core Material', value: 'PUF / PIR / Honeycomb' },
@@ -599,19 +450,9 @@ const shopProducts: Record<string, {
     name: 'Cleanroom Flooring',
     shortName: 'CR Flooring',
     description: 'Seamless, anti-static, and chemical-resistant flooring systems for cleanroom environments. ESD compliant options for electronics manufacturing.',
-    image: '/images/projects/gallery/cleanroom-Manufacture-Supplier-in-Ahmedabad7.jpg',
+    image: '/images/solutions/cleanroom/cleanroom-Manufacture-Supplier-in-Ahmedabad7.jpg',
     sku: 'PHX-CRF-001',
     category: 'Cleanroom Flooring',
-    basePrice: 850,
-    priceUnit: 'per sq.mtr',
-    variants: [
-      { thickness: 'Epoxy Coating 2mm', price: 850, sku: 'PHX-CRF-EP2' },
-      { thickness: 'Epoxy Self-leveling 3mm', price: 1200, sku: 'PHX-CRF-EP3' },
-      { thickness: 'PU Screed 4mm', price: 1500, sku: 'PHX-CRF-PU4' },
-      { thickness: 'ESD Epoxy 3mm', price: 1400, sku: 'PHX-CRF-ESD' },
-      { thickness: 'Vinyl Sheet Antistatic', price: 950, sku: 'PHX-CRF-VIN' },
-      { thickness: 'Raised Access Floor', price: 3500, sku: 'PHX-CRF-RAF' },
-    ],
     specifications: [
       { label: 'Flooring Types', value: 'Epoxy / PU / Vinyl / Raised' },
       { label: 'Thickness', value: '2mm - 6mm' },
@@ -644,14 +485,15 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ productSlug: string }> }): Promise<Metadata> {
   const { productSlug } = await params;
   const product = shopProducts[productSlug];
+  const pricing = getProductPricing(productSlug);
   
-  if (!product) {
+  if (!product || !pricing) {
     return { title: 'Product Not Found' };
   }
   
   return {
-    title: `Buy ${product.name} Online | Starting ₹${product.basePrice}/${product.priceUnit} | PHOENIXX`,
-    description: `${product.description} Starting from ₹${product.basePrice} ${product.priceUnit}. Request quote for bulk pricing. PAN-India delivery.`,
+    title: `Buy ${product.name} Online | Starting ₹${pricing.basePrice}/${pricing.priceUnit} | PHOENIXX`,
+    description: `${product.description} Starting from ₹${pricing.basePrice} ${pricing.priceUnit}. Request quote for bulk pricing. PAN-India delivery.`,
     keywords: [
       `${product.name} price`,
       `buy ${product.shortName} online`,
@@ -663,7 +505,7 @@ export async function generateMetadata({ params }: { params: Promise<{ productSl
       canonical: `https://phoenixxsmartbuild.com/shop/${productSlug}`,
     },
     openGraph: {
-      title: `Buy ${product.name} | Starting ₹${product.basePrice}/${product.priceUnit}`,
+      title: `Buy ${product.name} | Starting ₹${pricing.basePrice}/${pricing.priceUnit}`,
       description: product.description,
       type: 'website',
       images: [{ url: `https://phoenixxsmartbuild.com${product.image}` }],
@@ -675,8 +517,9 @@ export async function generateMetadata({ params }: { params: Promise<{ productSl
 export default async function ShopProductPage({ params }: { params: Promise<{ productSlug: string }> }) {
   const { productSlug } = await params;
   const staticProduct = shopProducts[productSlug];
+  const pricing = getProductPricing(productSlug);
   
-  if (!staticProduct) {
+  if (!staticProduct || !pricing) {
     notFound();
   }
   
@@ -684,7 +527,7 @@ export default async function ShopProductPage({ params }: { params: Promise<{ pr
   const livePrices = await fetchPricesFromSheet();
   
   // Update variants with live prices
-  const updatedVariants = staticProduct.variants.map(variant => ({
+  const updatedVariants = pricing.variants.map(variant => ({
     ...variant,
     price: livePrices.get(variant.sku) ?? variant.price,
   }));
@@ -695,6 +538,7 @@ export default async function ShopProductPage({ params }: { params: Promise<{ pr
   // Create product with updated prices
   const product = {
     ...staticProduct,
+    priceUnit: pricing.priceUnit,
     basePrice: updatedBasePrice,
     variants: updatedVariants,
   };
@@ -737,41 +581,6 @@ export default async function ShopProductPage({ params }: { params: Promise<{ pr
       },
       url: `https://phoenixxsmartbuild.com/shop/${productSlug}`,
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '127',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    review: [
-      {
-        '@type': 'Review',
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: '5',
-          bestRating: '5',
-        },
-        author: {
-          '@type': 'Person',
-          name: 'Rajesh Patel',
-        },
-        reviewBody: 'Excellent quality panels. Delivered on time and installation support was very helpful.',
-      },
-      {
-        '@type': 'Review',
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: '5',
-          bestRating: '5',
-        },
-        author: {
-          '@type': 'Person',
-          name: 'Suresh Kumar',
-        },
-        reviewBody: 'Best PUF panels we have used. Great thermal performance and competitive pricing.',
-      },
-    ],
   };
   
   const breadcrumbSchema = {
@@ -787,7 +596,7 @@ export default async function ShopProductPage({ params }: { params: Promise<{ pr
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={productSchema} />
         <JsonLd data={breadcrumbSchema} />
         
@@ -795,13 +604,7 @@ export default async function ShopProductPage({ params }: { params: Promise<{ pr
         <section className="bg-slate-50 py-8">
           <div className="container-custom">
             {/* Breadcrumb */}
-            <nav className="mb-6 text-sm text-slate-500">
-              <Link href="/" className="hover:text-slate-900 transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <Link href="/shop" className="hover:text-slate-900 transition-colors">Shop</Link>
-              <span className="mx-2">/</span>
-              <span className="text-slate-900">{product.name}</span>
-            </nav>
+            <Breadcrumbs tone="light" items={[{ label: 'Shop', href: '/shop' }, { label: product.name }]} />
             
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Product Image */}
@@ -809,6 +612,7 @@ export default async function ShopProductPage({ params }: { params: Promise<{ pr
                 <Image
                   src={product.image}
                   alt={product.name}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   fill
                   className="object-cover"
                   priority
@@ -827,18 +631,6 @@ export default async function ShopProductPage({ params }: { params: Promise<{ pr
                 <p className="mt-4 text-slate-600 leading-relaxed">
                   {product.description}
                 </p>
-                
-                {/* Rating */}
-                <div className="mt-4 flex items-center gap-2">
-                  <div className="flex items-center">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <svg key={star} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
-                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                      </svg>
-                    ))}
-                  </div>
-                  <span className="text-slate-600 text-sm">4.8 (127 reviews)</span>
-                </div>
                 
                 {/* Price */}
                 <div className="mt-6 p-6 bg-white rounded-xl border border-slate-200">
@@ -878,15 +670,15 @@ export default async function ShopProductPage({ params }: { params: Promise<{ pr
                 {/* Trust Signals */}
                 <div className="mt-6 grid grid-cols-3 gap-4 text-center">
                   <div className="p-3 bg-slate-50 rounded-lg">
-                    <span className="text-2xl">🚚</span>
+                    <span className="text-2xl" aria-hidden="true">🚚</span>
                     <p className="text-xs text-slate-600 mt-1">PAN-India Delivery</p>
                   </div>
                   <div className="p-3 bg-slate-50 rounded-lg">
-                    <span className="text-2xl">🏭</span>
+                    <span className="text-2xl" aria-hidden="true">🏭</span>
                     <p className="text-xs text-slate-600 mt-1">Direct from Factory</p>
                   </div>
                   <div className="p-3 bg-slate-50 rounded-lg">
-                    <span className="text-2xl">✓</span>
+                    <span className="text-2xl" aria-hidden="true">✓</span>
                     <p className="text-xs text-slate-600 mt-1">ISO Certified</p>
                   </div>
                 </div>
@@ -970,7 +762,7 @@ export default async function ShopProductPage({ params }: { params: Promise<{ pr
                 <ul className="space-y-3">
                   {product.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-slate-600">
-                      <span className="text-green-500 mt-1">✓</span>
+                      <span className="text-green-500 mt-1" aria-hidden="true">✓</span>
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -1015,7 +807,7 @@ export default async function ShopProductPage({ params }: { params: Promise<{ pr
               {['india', 'gujarat', 'ahmedabad', 'surat', 'vadodara', 'rajkot', 'raipur', 'bhilai'].map((loc) => (
                 <Link
                   key={loc}
-                  href={`/${productSlug}-in-${loc}`}
+                  href={`/${canonicalComboSlug(productSlug, loc)}`}
                   className="inline-flex items-center gap-1 px-4 py-2 rounded-lg bg-white border border-slate-200 text-slate-700 hover:border-blue-300 hover:text-blue-600 transition-colors"
                 >
                   📍 {loc.charAt(0).toUpperCase() + loc.slice(1)}

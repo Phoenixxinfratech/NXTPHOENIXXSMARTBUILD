@@ -1,0 +1,41 @@
+{
+  "collection": "home",
+  "note": "Slides are decorative background behind the hero copy, so they are hidden from assistive technology and carry no alt text. The descriptions below are for maintenance, and the source block is the licence record.",
+  "images": {
+    "home-01": {
+      "description": "Aerial view of a completed PHOENIXX industrial facility with loading bays and trucks in the yard.",
+      "focal": "center 55%",
+      "source": "PHOENIXX SMARTBUILD project photography",
+      "origin": "public/images/solutions/peb/Pre-Engineering-Building-Ahmedabad-Phoenixx-infratech-projects17.jpg",
+      "license": "Owned by PHOENIXX SMARTBUILD"
+    },
+    "home-02": {
+      "description": "Interior of a pre-engineered steel building showing the roof structure and bay lighting.",
+      "focal": "center 60%",
+      "source": "PHOENIXX SMARTBUILD project photography",
+      "origin": "public/images/solutions/peb/Pre-Engineering-Building-Ahmedabad-Phoenixx-infratech-projects2.jpg",
+      "license": "Owned by PHOENIXX SMARTBUILD"
+    },
+    "home-03": {
+      "description": "Crane lifting an insulated panel into position during erection, with the installation crew working below.",
+      "focal": "center 50%",
+      "source": "PHOENIXX SMARTBUILD project photography",
+      "origin": "public/images/projects/gallery/Phoenixx_infratech_Projects188.jpg",
+      "license": "Owned by PHOENIXX SMARTBUILD"
+    },
+    "home-04": {
+      "description": "Full-height insulated panel wall going up on site, with the site team at the base giving a sense of scale.",
+      "focal": "center 45%",
+      "source": "PHOENIXX SMARTBUILD project photography",
+      "origin": "public/images/products/sandwich-panels/puf-panel/Phoenix-PUF-Panel-Manufacturers6.jpg",
+      "license": "Owned by PHOENIXX SMARTBUILD"
+    },
+    "home-05": {
+      "description": "Completed temperature-controlled interior finished in sandwich panel, with process equipment installed.",
+      "focal": "center 55%",
+      "source": "PHOENIXX SMARTBUILD project photography",
+      "origin": "public/images/projects/gallery/Sandwich-PUF-Ceiling-Panel-3.jpg",
+      "license": "Owned by PHOENIXX SMARTBUILD"
+    }
+  }
+}

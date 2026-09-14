@@ -4,13 +4,27 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 import { CityManufacturerAeo } from '@/components/seo/city-manufacturer-aeo';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'PUF Panel Manufacturer in Surat | PHOENIXX',
+  title: 'PUF Panel Manufacturer in Surat',
   description: 'Leading PUF panel manufacturer in Surat, Gujarat. High-quality insulated panels for industries. Get competitive pricing!',
   keywords: ['PUF panel manufacturer in Surat', 'PUF sandwich panel Surat', 'cold storage panel Surat'],
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-surat',
+  },
+  openGraph: {
+    title: 'PUF Panel Manufacturer in Surat | PHOENIXX SMARTBUILD',
+    description: 'Leading PUF panel manufacturer in Surat, Gujarat. High-quality insulated panels for industries. Get competitive pricing!',
+    url: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-surat',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PUF Panel Manufacturer in Surat | PHOENIXX SMARTBUILD',
+    description: 'Leading PUF panel manufacturer in Surat, Gujarat. High-quality insulated panels for industries. Get competitive pricing!',
   },
 };
 
@@ -86,14 +100,16 @@ export default function SuratPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={faqSchema} />
         <JsonLd data={localBusinessSchema} />
 
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-orange-900 via-amber-900 to-slate-900 py-20 md:py-28">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
+            <Breadcrumbs withSchema items={[{ label: 'Products', href: '/products' }, { label: 'PUF Panel Manufacturer in Surat' }]} />
+
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-orange-500/10 px-4 py-2 text-sm font-medium text-orange-400 mb-6">
                 📍 Serving Surat & South Gujarat Industries
@@ -102,7 +118,7 @@ export default function SuratPage() {
                 PUF Panel Manufacturer in Surat
               </h1>
               <p className="mt-6 text-xl text-slate-300 max-w-3xl">
-                Coastal humidity and salt air around Sachin, Pandesara, and Hazira wear bare metal roofs fast. PHOENIXX supplies PUF panels to Surat with marine-grade coating options, so textile, diamond, and chemical units get insulation that holds through monsoon seasons — not just summer heat.
+                Coastal humidity and salt air around Sachin, Pandesara, and Hazira wear bare metal roofs fast. PHOENIXX supplies PUF panels to Surat with marine-grade coating options, so textile, diamond, and chemical units get insulation that holds through monsoon seasons, not just summer heat.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link
@@ -241,7 +257,7 @@ export default function SuratPage() {
                 { title: 'Competitive Pricing', desc: 'Factory-direct rates for Surat' },
                 { title: 'Quality Assured', desc: '40 kg/m³ high-density foam' },
                 { title: 'Installation Help', desc: 'Guidance for GIDC projects' },
-                { title: '18+ Years', desc: 'Experience in Gujarat market' },
+                { title: '13+ Years', desc: 'Experience in Gujarat market' },
                 { title: 'All Thicknesses', desc: '30mm to 150mm available' },
               ].map((item, idx) => (
                 <div key={idx} className="text-center">
@@ -271,7 +287,7 @@ export default function SuratPage() {
                 'Commercial & Office Buildings',
               ].map((app, idx) => (
                 <div key={idx} className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg">
-                  <span className="text-orange-500">✓</span>
+                  <span className="text-orange-500" aria-hidden="true">✓</span>
                   <span className="text-slate-700">{app}</span>
                 </div>
               ))}

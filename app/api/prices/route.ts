@@ -74,9 +74,24 @@ export async function GET(request: Request) {
  */
 export async function POST(request: Request) {
   try {
+    // Refreshing hits the upstream Google Sheet, so an open endpoint lets anyone
+    // drive unbounded requests against it.
+    const secret = process.env.PRICE_REFRESH_SECRET || process.env.REVALIDATION_SECRET;
+    if (!secret) {
+      return NextResponse.json(
+        { error: 'Price refresh is not configured' },
+        { status: 503 }
+      );
+    }
+
+    const token = request.headers.get('authorization')?.replace('Bearer ', '');
+    if (token !== secret) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
     const { searchParams } = new URL(request.url);
     const action = searchParams.get('action');
-    
+
     if (action === 'refresh') {
       clearPriceCache();
       const prices = await fetchPricesFromSheet();

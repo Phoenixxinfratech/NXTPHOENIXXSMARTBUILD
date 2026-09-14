@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Phoenixx PUF Roofing Panels — Premium Industrial Brand',
@@ -51,13 +52,12 @@ export default function PhoenixxPufRoofingPanelsPage() {
     manufacturer: { '@type': 'Organization', name: 'Phoenixx Smart Build', url: 'https://phoenixxsmartbuild.com' },
     category: 'Industrial Insulated Roofing Panels',
     material: 'Polyurethane Foam',
-    aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '156', bestRating: '5', worstRating: '1' },
   };
 
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={localBusinessSchema} />
         <JsonLd data={productSchema} />
 
@@ -65,6 +65,8 @@ export default function PhoenixxPufRoofingPanelsPage() {
         <section className="relative bg-gradient-to-br from-slate-900 via-gray-900 to-blue-900 py-20 md:py-28">
           <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
+            <Breadcrumbs withSchema items={[{ label: 'Products', href: '/products' }, { label: 'PHOENIXX PUF Roofing Panels' }]} />
+
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-green-500/20 px-4 py-2 text-sm font-medium text-green-400 mb-6">
                 Premium Brand — Phoenixx Smart Build
@@ -81,7 +83,7 @@ export default function PhoenixxPufRoofingPanelsPage() {
               <div className="mt-10 flex flex-wrap gap-4">
                 <Link
                   href="/get-a-quote"
-                  className="rounded-xl bg-gradient-to-r from-green-500 to-emerald-600 px-8 py-4 font-semibold text-white shadow-lg hover:shadow-xl transition-all"
+                  className="rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 px-8 py-4 font-semibold text-white shadow-lg hover:shadow-xl transition-all"
                 >
                   Get Phoenixx Quote
                 </Link>
@@ -107,7 +109,7 @@ export default function PhoenixxPufRoofingPanelsPage() {
                 <p>
                   In a market where PUF roofing panels are often treated as commodities,
                   Phoenixx stands apart. Every Phoenixx insulated panel is manufactured with
-                  a commitment to consistent quality — from raw material selection through
+                  a commitment to consistent quality, from raw material selection through
                   final dispatch. The brand represents a promise: that the panel installed on
                   your roof today will perform at its rated specification for 25+ years.
                 </p>
@@ -188,7 +190,7 @@ export default function PhoenixxPufRoofingPanelsPage() {
                 { title: 'IS 14925 Compliant', desc: 'Full compliance with Indian Standard for insulated sandwich panels' },
                 { title: 'Premium Coatings', desc: 'Polyester, SMP, and PVDF coating options for UV and corrosion protection' },
                 { title: 'Project Support', desc: 'Technical guidance from specification through installation for every Phoenixx project' },
-                { title: 'Competitive Pricing', desc: 'Factory-direct Phoenixx pricing — no distributor or dealer margins' },
+                { title: 'Competitive Pricing', desc: 'Factory-direct Phoenixx pricing: no distributor or dealer margins' },
                 { title: '25+ Year Life', desc: 'Engineered for decades of performance in Rajasthan extreme heat and monsoon conditions' },
               ].map((item, idx) => (
                 <div key={idx} className="text-center">
@@ -257,7 +259,7 @@ export default function PhoenixxPufRoofingPanelsPage() {
                 return (
                   <Link
                     key={slug}
-                    href={`/phoenixx-puf-roofing-panel-${slug}/`}
+                    href={`/puf-roofing-panel-manufacturer-${slug}`}
                     className="bg-white rounded-xl p-4 text-center hover:bg-blue-50 hover:shadow-md transition-all border border-slate-200"
                   >
                     <span className="font-bold text-slate-900">{city}</span>

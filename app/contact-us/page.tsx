@@ -6,6 +6,7 @@ import { generateContactPageSchema } from '@/lib/schema';
 import { ContactForm } from './contact-form';
 import { siteConfig } from '@/lib/site-config';
 import type { Metadata } from 'next';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Contact PHOENIXX – Get Expert Consultation',
@@ -13,6 +14,19 @@ export const metadata: Metadata = {
     'Reach PHOENIXX for industrial infrastructure needs. Request quotes, schedule site visits. Based in Ahmedabad, serving all India.',
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/contact-us',
+  },
+  openGraph: {
+    title: 'Contact PHOENIXX – Get Expert Consultation | PHOENIXX SMARTBUILD',
+    description: 'Reach PHOENIXX for industrial infrastructure needs. Request quotes, schedule site visits. Based in Ahmedabad, serving all India.',
+    url: 'https://phoenixxsmartbuild.com/contact-us',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact PHOENIXX – Get Expert Consultation | PHOENIXX SMARTBUILD',
+    description: 'Reach PHOENIXX for industrial infrastructure needs. Request quotes, schedule site visits. Based in Ahmedabad, serving all India.',
   },
 };
 
@@ -84,7 +98,7 @@ export default function ContactUsPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={contactPageSchema} />
         <JsonLd data={organizationSchema} />
 
@@ -94,11 +108,7 @@ export default function ContactUsPage() {
           <div className="absolute top-1/4 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
           
           <div className="container-custom relative">
-            <nav className="mb-6 text-sm text-slate-400">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">Contact Us</span>
-            </nav>
+            <Breadcrumbs withSchema items={[{ label: 'Contact Us' }]} />
 
             <div className="max-w-3xl">
               <span className="inline-block px-4 py-1 rounded-full bg-blue-500/20 text-blue-300 text-sm font-medium mb-4">
@@ -180,9 +190,9 @@ export default function ContactUsPage() {
                 <div className="rounded-2xl bg-white shadow-lg overflow-hidden">
                   <div className="aspect-video bg-slate-200 flex items-center justify-center">
                     <div className="text-center">
-                      <span className="text-6xl">🗺️</span>
+                      <span className="text-6xl" aria-hidden="true">🗺️</span>
                       <p className="mt-4 text-slate-500">Map Integration</p>
-                      <p className="text-sm text-slate-400">Ahmedabad, Gujarat</p>
+                      <p className="text-sm text-slate-500">Ahmedabad, Gujarat</p>
                     </div>
                   </div>
                   <div className="p-6">

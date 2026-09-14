@@ -6,6 +6,8 @@ import { JsonLd } from '@/components/seo/json-ld';
 import { generateOrganizationSchema, generateFAQSchema } from '@/lib/schema';
 import { FAQBlock } from '@/components/blocks/faq-block';
 import { AeoContentBlocks, DEFAULT_PUF_SPECS } from '@/components/seo/aeo-content-blocks';
+import { HeroSlider } from '@/components/blocks/hero-slider';
+import { locations } from '@/lib/landing-page-data';
 
 // Homepage client logos
 const homepageClients = [
@@ -17,16 +19,29 @@ const homepageClients = [
   { name: 'Sarhad Dairy', logo: '/images/clients/sarhad-dairy.png' },
   { name: 'Hotel Fern', logo: '/images/clients/hotel-fern.png' },
   { name: 'Info City Club', logo: '/images/clients/info-city-club.png' },
-  { name: 'Uflex', logo: '/images/clients/Uflex.png' },
+  { name: 'Uflex', logo: '/images/clients/uflex.png' },
   { name: 'IFGL', logo: '/images/clients/ifgl.png' },
   { name: 'Vyara Tiles', logo: '/images/clients/vyara-tiles.png' },
-  { name: 'SKF Bearings', logo: '/images/clients/SKF-01.png' },
+  { name: 'SKF Bearings', logo: '/images/clients/skf.png' },
 ];
 
 export const metadata: Metadata = {
   title: 'PUF Panel Manufacturer & Supplier India | Roofing, Wall & Sandwich Panels',
   description:
     'Phoenixx SmartBuild is a trusted PUF panel manufacturer in India delivering insulated roofing panels, wall panels & sandwich panels for industrial and commercial projects.',
+  openGraph: {
+    title: 'PUF Panel Manufacturer & Supplier India | Roofing, Wall & Sandwich Panels | PHOENIXX SMARTBUILD',
+    description: 'Phoenixx SmartBuild is a trusted PUF panel manufacturer in India delivering insulated roofing panels, wall panels & sandwich panels for industrial and commercial projects.',
+    url: 'https://phoenixxsmartbuild.com/',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PUF Panel Manufacturer & Supplier India | Roofing, Wall & Sandwich Panels | PHOENIXX SMARTBUILD',
+    description: 'Phoenixx SmartBuild is a trusted PUF panel manufacturer in India delivering insulated roofing panels, wall panels & sandwich panels for industrial and commercial projects.',
+  },
 };
 
 // Products data - Using high-quality images for better display
@@ -34,10 +49,10 @@ const products = [
   {
     title: 'Wall & Roof Panels',
     description: 'High-performance insulated panels engineered for thermal efficiency, structural strength, and long service life.',
-    details: 'Includes PIR Panels, Sandwich PUF Panels, Roofing PUF Panels, and Wall & Ceiling Panels—ideal for energy-efficient industrial and commercial buildings.',
+    details: 'Includes PIR Panels, Sandwich PUF Panels, Roofing PUF Panels, and Wall & Ceiling Panels, ideal for energy-efficient industrial and commercial buildings.',
     href: '/products/sandwich-panels',
     icon: '🧱',
-    image: '/images/products/sandwich-panels/puf-panel/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
+    image: '/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp',
   },
   {
     title: 'Industrial & Specialty Doors',
@@ -61,7 +76,7 @@ const products = [
     details: 'Includes partitions, doors, false ceilings, and compatible flooring systems such as Epoxy, PU, and Rubber flooring.',
     href: '/products/cleanroom-solutions',
     icon: '🔬',
-    image: '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat1.jpg',
+    image: '/images/products/cleanroom/partition/Cleanroom-Partition-supplier-Manufacture-in-Gujarat1.jpg',
   },
 ];
 
@@ -76,17 +91,17 @@ const solutions = [
   },
   {
     title: 'Ceiling Systems',
-    description: 'Walkable and non-walkable ceiling systems designed for accessibility, acoustic control, and clean aesthetics—suitable for offices, industries, and cleanrooms.',
+    description: 'Walkable and non-walkable ceiling systems designed for accessibility, acoustic control, and clean aesthetics, suitable for offices, industries, and cleanrooms.',
     href: '/solutions/walkable-ceiling-systems',
     icon: '📐',
-    image: '/images/solutions/false-ceiling/Industrial-False-Ceiling-PUF-Panel-2.jpg',
+    image: '/images/products/sandwich-panels/wall-ceiling-panel/Industrial-False-Ceiling-PUF-Panel-2.jpg',
   },
   {
     title: 'Partition Solutions',
-    description: 'Modular and insulated partition systems for cleanrooms, offices, and industrial spaces—offering flexibility, thermal control, and fast installation.',
+    description: 'Modular and insulated partition systems for cleanrooms, offices, and industrial spaces, offering flexibility, thermal control, and fast installation.',
     href: '/solutions/partition-solutions',
     icon: '🧱',
-    image: '/images/products/cleanroom/partition/Cleanroom-Partation-supplier-Manufacture-in-Gujarat2.jpg',
+    image: '/images/products/cleanroom/partition/Cleanroom-Partition-supplier-Manufacture-in-Gujarat2.jpg',
   },
   {
     title: 'Cold Storage Construction',
@@ -97,7 +112,7 @@ const solutions = [
   },
   {
     title: 'Turnkey Industrial EPC Projects',
-    description: 'End-to-end project delivery—from concept and engineering to construction and commissioning—ensuring seamless coordination, cost control, and predictable outcomes.',
+    description: 'End-to-end project delivery, from concept and engineering to construction and commissioning, with coordination, cost control, and delivery dates held in one place.',
     href: '/contact-us',
     icon: '🔧',
     image: '/images/solutions/peb/Pre-Engineering-Building-Ahmedabad-Phoenixx-infratech-projects17.jpg',
@@ -108,7 +123,7 @@ const solutions = [
 const valueProps = [
   {
     title: 'Engineering-Driven Execution',
-    description: 'Every solution is engineered for performance, compliance, and durability—reducing lifecycle costs and operational risks.',
+    description: 'Every solution is engineered for performance, compliance, and durability, reducing lifecycle costs and operational risks.',
     icon: '⚙️',
   },
   {
@@ -204,7 +219,7 @@ const insights = [
 const faqs = [
   {
     question: 'What makes PHOENIXX solutions different?',
-    answer: 'Our solutions combine engineering precision, compliant materials, and on-ground execution experience—ensuring predictable performance.',
+    answer: 'Our solutions combine engineering precision, compliant materials, and on-ground execution experience, ensuring predictable performance.',
   },
   {
     question: 'Do you deliver turnkey EPC projects?',
@@ -236,13 +251,17 @@ export default function HomePage() {
 
       {/* ========== HERO SECTION ========== */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+        {/* Project photography behind the copy. Carries its own scrim. */}
+        <HeroSlider collection="home" />
+
         {/* Background Elements */}
         <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-[0.03]" />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
         
         {/* Animated Gradient Orbs - Using GPU-accelerated transform for performance */}
-        <div className="absolute top-1/4 -left-32 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl will-change-transform animate-[pulse-opacity_3s_ease-in-out_infinite]" />
-        <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl will-change-transform animate-[pulse-opacity_3s_ease-in-out_infinite_1s]" />
+        {/* Dimmed from 20/10 now that photography sits behind them. */}
+        <div className="absolute top-1/4 -left-32 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl will-change-transform animate-[pulse-opacity_3s_ease-in-out_infinite]" />
+        <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl will-change-transform animate-[pulse-opacity_3s_ease-in-out_infinite_1s]" />
 
         <div className="container-custom relative z-10 py-20">
           <div className="max-w-4xl">
@@ -264,11 +283,13 @@ export default function HomePage() {
             </h1>
 
             {/* Subtitle */}
-            <p className="mt-6 text-lg md:text-xl text-slate-400 max-w-3xl leading-relaxed">
+            {/* Lifted from slate-400/500: those cleared 3.8:1 and 2.1:1 against
+                the hero photography, both short of AA for body copy. */}
+            <p className="mt-6 text-lg md:text-xl text-slate-200 max-w-3xl leading-relaxed">
               PHOENIXX designs and delivers high-performance insulated panels, industrial doors, 
               cleanroom systems, and EPC solutions for modern infrastructure.
             </p>
-            <p className="mt-4 text-base md:text-lg text-slate-500 max-w-3xl">
+            <p className="mt-4 text-base md:text-lg text-slate-300 max-w-3xl">
               From Pre-Engineered Buildings to cold chain and controlled environments, we engineer 
               spaces that are efficient, durable, compliant, and future-ready.
             </p>
@@ -707,7 +728,7 @@ export default function HomePage() {
                 className="group rounded-xl border border-slate-200 bg-white overflow-hidden transition-[box-shadow] duration-300 hover:shadow-lg"
               >
                 <div className="aspect-[4/3] bg-gradient-to-br from-cyan-100 to-blue-100 flex items-center justify-center">
-                  <span className="text-4xl opacity-30">📝</span>
+                  <span className="text-4xl opacity-30" aria-hidden="true">📝</span>
                 </div>
                 <div className="p-5">
                   <h3 className="text-base font-semibold text-slate-900 group-hover:text-cyan-600 transition-colors line-clamp-2">
@@ -745,7 +766,7 @@ export default function HomePage() {
             {/* Featured State 1 - Gujarat */}
             <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-6 border border-blue-100 hover:shadow-lg transition-shadow">
               <div className="flex items-center gap-3 mb-4">
-                <span className="text-2xl">📍</span>
+                <span className="text-2xl" aria-hidden="true">📍</span>
                 <h3 className="text-xl font-bold text-slate-900">Gujarat</h3>
               </div>
               <p className="text-slate-600 text-sm mb-4">
@@ -776,7 +797,7 @@ export default function HomePage() {
             {/* Featured State 2 - Maharashtra */}
             <div className="bg-gradient-to-br from-purple-50 to-white rounded-2xl p-6 border border-purple-100 hover:shadow-lg transition-shadow">
               <div className="flex items-center gap-3 mb-4">
-                <span className="text-2xl">📍</span>
+                <span className="text-2xl" aria-hidden="true">📍</span>
                 <h3 className="text-xl font-bold text-slate-900">Maharashtra</h3>
               </div>
               <p className="text-slate-600 text-sm mb-4">
@@ -807,7 +828,7 @@ export default function HomePage() {
             {/* Featured State 3 - Rajasthan */}
             <div className="bg-gradient-to-br from-amber-50 to-white rounded-2xl p-6 border border-amber-100 hover:shadow-lg transition-shadow">
               <div className="flex items-center gap-3 mb-4">
-                <span className="text-2xl">📍</span>
+                <span className="text-2xl" aria-hidden="true">📍</span>
                 <h3 className="text-xl font-bold text-slate-900">Rajasthan</h3>
               </div>
               <p className="text-slate-600 text-sm mb-4">
@@ -853,16 +874,26 @@ export default function HomePage() {
                 { state: 'West Bengal', slug: 'west-bengal' },
                 { state: 'Kerala', slug: 'kerala' },
                 { state: 'Haryana', slug: 'haryana' },
-              ].map((location) => (
-                <Link
-                  key={location.slug}
-                  href={`/sandwich-puf-panel-in-${location.slug}`}
-                  className="flex items-center gap-2 p-3 bg-white rounded-lg hover:shadow-md transition-all border border-transparent hover:border-blue-200"
-                >
-                  <span className="text-slate-400">→</span>
-                  <span className="text-sm font-medium text-slate-900">{location.state}</span>
-                </Link>
-              ))}
+              ].map((location) =>
+                locations[location.slug] ? (
+                  <Link
+                    key={location.slug}
+                    href={`/sandwich-puf-panel-in-${location.slug}`}
+                    className="flex items-center gap-2 p-3 bg-white rounded-lg hover:shadow-md transition-all border border-transparent hover:border-blue-200"
+                  >
+                    <span className="text-slate-500" aria-hidden="true">→</span>
+                    <span className="text-sm font-medium text-slate-900">{location.state}</span>
+                  </Link>
+                ) : (
+                  <div
+                    key={location.slug}
+                    className="flex items-center gap-2 p-3 bg-white rounded-lg border border-transparent"
+                  >
+                    <span className="text-slate-400" aria-hidden="true">→</span>
+                    <span className="text-sm font-medium text-slate-700">{location.state}</span>
+                  </div>
+                )
+              )}
             </div>
           </div>
 

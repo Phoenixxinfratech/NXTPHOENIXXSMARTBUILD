@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Premium PUF Panel Manufacturer in India',
@@ -10,6 +11,19 @@ export const metadata: Metadata = {
   keywords: ['premium PUF panel manufacturer in India', 'high-quality PUF panels', 'premium insulated panels'],
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/premium-puf-panel-manufacturer-in-india',
+  },
+  openGraph: {
+    title: 'Premium PUF Panel Manufacturer in India | PHOENIXX SMARTBUILD',
+    description: 'Premium quality PUF panels with superior insulation. Fire-rated options available. Request premium panel quote.',
+    url: 'https://phoenixxsmartbuild.com/premium-puf-panel-manufacturer-in-india',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Premium PUF Panel Manufacturer in India | PHOENIXX SMARTBUILD',
+    description: 'Premium quality PUF panels with superior insulation. Fire-rated options available. Request premium panel quote.',
   },
 };
 
@@ -57,13 +71,15 @@ export default function PremiumPufPanelManufacturerPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={faqSchema} />
 
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-amber-900 via-orange-900 to-slate-900 py-20 md:py-28">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
+            <Breadcrumbs withSchema items={[{ label: 'Products', href: '/products' }, { label: 'Premium PUF Panel Manufacturer in India' }]} />
+
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-amber-500/10 px-4 py-2 text-sm font-medium text-amber-400 mb-6">
                 ⭐ Premium Quality Guaranteed
@@ -221,24 +237,26 @@ export default function PremiumPufPanelManufacturerPage() {
             </h2>
             <div className="max-w-4xl mx-auto">
               <div className="bg-white/10 backdrop-blur rounded-2xl overflow-hidden">
-                <table className="w-full">
-                  <tbody className="divide-y divide-white/10">
-                    {[
-                      { label: 'Foam Density', standard: '35-38 kg/m³', premium: '40 ± 2 kg/m³' },
-                      { label: 'Thermal Conductivity', standard: '0.026-0.028 W/mK', premium: '0.024 W/mK' },
-                      { label: 'Steel Thickness', standard: '0.35-0.45mm', premium: '0.50-0.60mm' },
-                      { label: 'Coating Options', standard: 'PE, SMP', premium: 'SMP, SDP, PVDF' },
-                      { label: 'Color Retention', standard: '5-10 years', premium: '15-20 years' },
-                      { label: 'Service Life', standard: '15-20 years', premium: '25-30 years' },
-                    ].map((row, idx) => (
-                      <tr key={idx}>
-                        <td className="px-6 py-4 font-semibold">{row.label}</td>
-                        <td className="px-6 py-4 text-slate-300">{row.standard}</td>
-                        <td className="px-6 py-4 text-amber-400 font-medium">{row.premium}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <tbody className="divide-y divide-white/10">
+                      {[
+                        { label: 'Foam Density', standard: '35-38 kg/m³', premium: '40 ± 2 kg/m³' },
+                        { label: 'Thermal Conductivity', standard: '0.026-0.028 W/mK', premium: '0.024 W/mK' },
+                        { label: 'Steel Thickness', standard: '0.35-0.45mm', premium: '0.50-0.60mm' },
+                        { label: 'Coating Options', standard: 'PE, SMP', premium: 'SMP, SDP, PVDF' },
+                        { label: 'Color Retention', standard: '5-10 years', premium: '15-20 years' },
+                        { label: 'Service Life', standard: '15-20 years', premium: '25-30 years' },
+                      ].map((row, idx) => (
+                        <tr key={idx}>
+                          <td className="px-6 py-4 font-semibold">{row.label}</td>
+                          <td className="px-6 py-4 text-slate-300">{row.standard}</td>
+                          <td className="px-6 py-4 text-amber-400 font-medium">{row.premium}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>

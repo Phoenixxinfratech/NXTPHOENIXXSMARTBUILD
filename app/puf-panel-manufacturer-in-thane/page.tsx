@@ -4,12 +4,26 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 import { CityManufacturerAeo } from '@/components/seo/city-manufacturer-aeo';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'PUF Panel Manufacturer in Thane | PHOENIXX',
+  title: 'PUF Panel Manufacturer in Thane',
   description: 'Premium PUF panels in Thane for cold storage and industrial use. Serving Thane-Belapur industrial belt. Request quote!',
   keywords: ['PUF panel manufacturer in Thane', 'PUF panel Wagle Estate', 'insulated panel Bhiwandi'],
   alternates: { canonical: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-thane' },
+  openGraph: {
+    title: 'PUF Panel Manufacturer in Thane | PHOENIXX SMARTBUILD',
+    description: 'Premium PUF panels in Thane for cold storage and industrial use. Serving Thane-Belapur industrial belt. Request quote!',
+    url: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-thane',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PUF Panel Manufacturer in Thane | PHOENIXX SMARTBUILD',
+    description: 'Premium PUF panels in Thane for cold storage and industrial use. Serving Thane-Belapur industrial belt. Request quote!',
+  },
 };
 
 const faqs = [
@@ -29,12 +43,14 @@ export default function ThanePage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={faqSchema} />
 
         <section className="relative bg-gradient-to-br from-cyan-900 via-teal-900 to-slate-900 py-20 md:py-28">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
+            <Breadcrumbs withSchema items={[{ label: 'Products', href: '/products' }, { label: 'PUF Panel Manufacturer in Thane' }]} />
+
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-cyan-500/10 px-4 py-2 text-sm font-medium text-cyan-400 mb-6">📍 Serving Thane & MMR Industrial Belt</span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">PUF Panel Manufacturer in Thane</h1>
@@ -103,7 +119,7 @@ export default function ThanePage() {
                 { title: 'MMR Coverage', desc: 'All zones served' },
                 { title: 'Competitive Rates', desc: 'Best pricing for volume' },
                 { title: 'Technical Support', desc: 'Expert guidance' },
-                { title: '18+ Years', desc: 'Maharashtra experience' },
+                { title: '13+ Years', desc: 'Maharashtra experience' },
               ].map((item, idx) => (<div key={idx} className="text-center"><h3 className="font-bold text-cyan-400">{item.title}</h3><p className="mt-2 text-slate-300 text-sm">{item.desc}</p></div>))}
             </div>
           </div>
@@ -114,7 +130,7 @@ export default function ThanePage() {
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">PUF Panel Applications in Thane</h2>
             <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
               {['Warehousing & Logistics Centers', 'E-commerce Fulfillment Hubs', 'Pharmaceutical Manufacturing', 'Food Processing Plants', 'Engineering & Manufacturing', 'Cold Storage Facilities', 'IT Parks & Commercial Buildings', 'Retail Distribution Centers'].map((app, idx) => (
-                <div key={idx} className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg"><span className="text-cyan-500">✓</span><span className="text-slate-700">{app}</span></div>
+                <div key={idx} className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg"><span className="text-cyan-500" aria-hidden="true">✓</span><span className="text-slate-700">{app}</span></div>
               ))}
             </div>
           </div>

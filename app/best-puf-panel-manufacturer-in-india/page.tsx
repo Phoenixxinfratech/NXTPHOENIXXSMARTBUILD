@@ -3,13 +3,25 @@ import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Best PUF Panel Manufacturer in India | PHOENIXX',
-  description: 'Choose India\'s best PUF panel manufacturer. ISO certified, 10+ years experience, 500+ clients. Premium quality guaranteed.',
+  title: 'Best PUF Panel Manufacturer in India',
+  description: 'Choose India\'s best PUF panel manufacturer. ISO certified, 13+ years experience, 500+ clients. Premium quality guaranteed.',
   keywords: ['best PUF panel manufacturer in India', 'PUF panel manufacturer', 'insulated panels India'],
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/best-puf-panel-manufacturer-in-india',
+  },
+  openGraph: {
+    title: 'Best PUF Panel Manufacturer in India | PHOENIXX SMARTBUILD',
+    url: 'https://phoenixxsmartbuild.com/best-puf-panel-manufacturer-in-india',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best PUF Panel Manufacturer in India | PHOENIXX SMARTBUILD',
   },
 };
 
@@ -67,14 +79,16 @@ export default function BestPufPanelManufacturerPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={faqSchema} />
         <JsonLd data={organizationSchema} />
 
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20 md:py-28">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
+            <Breadcrumbs withSchema items={[{ label: 'Products', href: '/products' }, { label: 'Best PUF Panel Manufacturer in India' }]} />
+
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-emerald-500/10 px-4 py-2 text-sm font-medium text-emerald-400 mb-6">
                 🏆 India&apos;s Trusted PUF Panel Manufacturer
@@ -115,12 +129,12 @@ export default function BestPufPanelManufacturerPage() {
               <div className="prose prose-lg prose-slate max-w-none">
                 <p>
                   PHOENIXX SmartBuild has established itself as the <strong>best PUF panel manufacturer in India</strong> through 
-                  a relentless commitment to quality, innovation, and customer satisfaction. With state-of-the-art manufacturing 
+                  a relentless commitment to quality, innovation, and customer satisfaction. With modern manufacturing 
                   facilities and a team of experienced engineers, we produce high-performance insulated sandwich panels that meet 
                   the demanding requirements of modern industrial infrastructure.
                 </p>
                 <p>
-                  Our manufacturing expertise spans over 18 years, during which we have successfully delivered more than 150 projects 
+                  Our manufacturing expertise spans 13+ years, during which we have successfully delivered more than 500 projects 
                   across diverse industries including pharmaceuticals, food processing, cold chain logistics, and commercial construction. 
                   With a strong <strong>pan-India presence</strong>, PHOENIXX serves clients from <Link href="/industries/pharma-chemical" className="text-primary hover:underline">Gujarat</Link> to 
                   Tamil Nadu, Maharashtra to West Bengal, ensuring consistent quality and timely delivery nationwide.
@@ -173,7 +187,7 @@ export default function BestPufPanelManufacturerPage() {
                   title: 'Warehouses & Logistics',
                   description: 'Large-scale distribution centers and warehousing facilities benefiting from reduced energy costs and stable indoor temperatures.',
                   icon: '🏭',
-                  link: '/industries/warehousing',
+                  link: '/industries/cold-chain',
                 },
                 {
                   title: 'Cleanrooms & Pharma',
@@ -283,27 +297,29 @@ export default function BestPufPanelManufacturerPage() {
             </h2>
             <div className="max-w-4xl mx-auto">
               <div className="bg-slate-50 rounded-2xl overflow-hidden">
-                <table className="w-full">
-                  <tbody className="divide-y divide-slate-200">
-                    {[
-                      { label: 'Panel Thickness Range', value: '30mm, 40mm, 50mm, 60mm, 80mm, 100mm, 120mm, 150mm' },
-                      { label: 'Foam Density', value: '40 ± 2 kg/m³' },
-                      { label: 'Thermal Conductivity', value: '0.024 W/mK' },
-                      { label: 'Panel Length', value: 'Up to 20 meters (custom lengths available)' },
-                      { label: 'Steel Thickness', value: '0.40mm to 0.60mm (PPGI/PPGL)' },
-                      { label: 'Coating Options', value: 'SMP, SDP, PVDF' },
-                      { label: 'Fire Rating Options', value: 'B1, B2, B3, PIR (enhanced fire resistance)' },
-                      { label: 'Temperature Range', value: '-40°C to +80°C' },
-                      { label: 'Service Life', value: '25-30 years with proper installation' },
-                      { label: 'Environmental', value: 'CFC & HFC Free' },
-                    ].map((row, idx) => (
-                      <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
-                        <td className="px-6 py-4 font-semibold text-slate-900">{row.label}</td>
-                        <td className="px-6 py-4 text-slate-600">{row.value}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <tbody className="divide-y divide-slate-200">
+                      {[
+                        { label: 'Panel Thickness Range', value: '30mm, 40mm, 50mm, 60mm, 80mm, 100mm, 120mm, 150mm' },
+                        { label: 'Foam Density', value: '40 ± 2 kg/m³' },
+                        { label: 'Thermal Conductivity', value: '0.024 W/mK' },
+                        { label: 'Panel Length', value: 'Up to 20 meters (custom lengths available)' },
+                        { label: 'Steel Thickness', value: '0.40mm to 0.60mm (PPGI/PPGL)' },
+                        { label: 'Coating Options', value: 'SMP, SDP, PVDF' },
+                        { label: 'Fire Rating Options', value: 'B1, B2, B3, PIR (enhanced fire resistance)' },
+                        { label: 'Temperature Range', value: '-40°C to +80°C' },
+                        { label: 'Service Life', value: '25-30 years with proper installation' },
+                        { label: 'Environmental', value: 'CFC & HFC Free' },
+                      ].map((row, idx) => (
+                        <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
+                          <td className="px-6 py-4 font-semibold text-slate-900">{row.label}</td>
+                          <td className="px-6 py-4 text-slate-600">{row.value}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
               <p className="mt-6 text-center text-slate-600">
                 View complete specifications: <Link href="/products/sandwich-panels/sandwich-puf-panel" className="text-primary hover:underline font-medium">PUF Panel Product Page</Link>

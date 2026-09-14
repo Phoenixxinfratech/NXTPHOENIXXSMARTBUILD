@@ -4,11 +4,25 @@ import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 import { generateBreadcrumbSchema } from '@/lib/schema';
 import type { Metadata } from 'next';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Certifications & Quality Standards | PHOENIXX SMARTBUILD',
+  title: 'Certifications & Quality Standards',
   description: 'PHOENIXX SMARTBUILD certifications: ISO 9001, ISO 14001, IS 14925:2015 sandwich panel standards, fire ratings, and quality testing. Trusted manufacturing excellence.',
   alternates: { canonical: 'https://phoenixxsmartbuild.com/certifications' },
+  openGraph: {
+    title: 'Certifications & Quality Standards | PHOENIXX SMARTBUILD',
+    description: 'PHOENIXX SMARTBUILD certifications: ISO 9001, ISO 14001, IS 14925:2015 sandwich panel standards, fire ratings, and quality testing. Trusted manufacturing excellence.',
+    url: 'https://phoenixxsmartbuild.com/certifications',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Certifications & Quality Standards | PHOENIXX SMARTBUILD',
+    description: 'PHOENIXX SMARTBUILD certifications: ISO 9001, ISO 14001, IS 14925:2015 sandwich panel standards, fire ratings, and quality testing. Trusted manufacturing excellence.',
+  },
 };
 
 const certifications = [
@@ -96,9 +110,11 @@ export default function CertificationsPage() {
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={faqSchema} />
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white section-padding">
           <div className="container-custom">
+            <Breadcrumbs items={[{ label: 'Certifications' }]} />
+
             <h1 className="text-3xl font-bold md:text-4xl lg:text-5xl">
               Certifications &amp; Quality Standards
             </h1>

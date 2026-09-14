@@ -114,9 +114,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Preconnect to external resources for faster loading */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Preconnect to external resources for faster loading.
+            No fonts.googleapis.com hint: next/font self-hosts Inter. */}
         <link rel="preconnect" href="https://cdn.sanity.io" />
         <link rel="dns-prefetch" href="https://cdn.sanity.io" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
@@ -134,7 +133,7 @@ export default function RootLayout({
         {/* Preload LCP hero images for faster initial paint */}
         <link 
           rel="preload" 
-          href="/images/products/sandwich-panels/puf-panel/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp" 
+          href="/images/projects/gallery/TOP-PUF-PANEL-MANUFACTURE-IN-INDIA.webp" 
           as="image"
           type="image/webp"
           fetchPriority="high"

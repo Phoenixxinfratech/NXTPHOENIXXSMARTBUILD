@@ -63,15 +63,9 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/admin/'],
       },
     ],
-    sitemap: [
-      `${baseUrl}/sitemap-index.xml`,
-      `${baseUrl}/sitemap.xml`,
-      `${baseUrl}/sitemap-core.xml`,
-      `${baseUrl}/sitemap-shop.xml`,
-      `${baseUrl}/sitemap-geo.xml`,
-      `${baseUrl}/sitemap-export.xml`,
-      `${baseUrl}/sitemap-rajasthan-geo.xml`,
-    ],
+    // Only the index. Submitting it and its children meant every URL was
+    // submitted twice, previously with conflicting priorities.
+    sitemap: `${baseUrl}/sitemap.xml`,
     host: baseUrl,
   };
 }

@@ -8,7 +8,7 @@ export const moneyBlogsPart2: Record<string, BlogPost> = {
     excerpt: 'Detailed cost breakdown for building a warehouse using PUF panels in India. Compare PUF panel costs vs conventional construction, explore size-wise budgets from 5,000 to 20,000 sq ft, and calculate your ROI.',
     content: `
       <h2>Why PUF Panels Are Changing Warehouse Construction Economics</h2>
-      <p>Warehouse construction in India is undergoing a major transformation. Developers and business owners are increasingly switching from conventional brick-and-mortar or RCC construction to <a href="/products/sandwich-panels/sandwich-puf-panel">PUF sandwich panels</a> for their warehouses\u2014and the reason is simple: significant cost savings without compromising quality. In 2026, the cost of building a warehouse using PUF panels is 25\u201340% lower than traditional methods, and the construction timeline is reduced by up to 60%.</p>
+      <p>Warehouse construction in India is undergoing a major transformation. Developers and business owners are increasingly switching from conventional brick-and-mortar or RCC construction to <a href="/products/sandwich-panels/sandwich-puf-panel">PUF sandwich panels</a> for their warehouses, and the reason is simple: significant cost savings without compromising quality. In 2026, the cost of building a warehouse using PUF panels is 25\u201340% lower than traditional methods, and the construction timeline is reduced by up to 60%.</p>
       <p>Whether you\u2019re planning a small storage facility or a large-scale logistics hub, understanding the true cost of PUF panel warehouse construction will help you make an informed decision. This guide provides a comprehensive cost breakdown with real 2026 pricing from India\u2019s leading markets.</p>
 
       <h2>PUF Panel Warehouse vs Conventional Construction: Cost Comparison</h2>
@@ -60,7 +60,7 @@ export const moneyBlogsPart2: Record<string, BlogPost> = {
           <td>Demolition needed</td>
         </tr>
       </table>
-      <p>The table makes it clear: PUF panel warehouses deliver faster occupancy, lower total cost, and better insulation performance\u2014a critical advantage for climate-sensitive goods.</p>
+      <p>The table makes it clear: PUF panel warehouses deliver faster occupancy, lower total cost, and better insulation performance: a critical advantage for climate-sensitive goods.</p>
 
       <h2>Per Square Foot Cost Breakdown for PUF Panel Warehouses</h2>
       <p>The total cost of a PUF panel warehouse depends on several components. Here\u2019s a detailed breakdown based on 2026 pricing:</p>
@@ -258,10 +258,10 @@ export const moneyBlogsPart2: Record<string, BlogPost> = {
     title: 'PIR Panel Price vs PUF Panel: Which Is the Better Investment in 2026?',
     metaTitle: 'PIR Panel Price vs PUF Panel 2026 | Which Is Better?',
     metaDescription: 'Detailed PIR panel price vs PUF panel comparison for 2026. Head-to-head analysis of pricing, thermal performance, fire rating, and cost-benefit for different applications.',
-    excerpt: 'PIR panel or PUF panel\u2014which offers better value for your project? Compare prices, thermal performance, fire ratings, and total cost of ownership to make the right choice in 2026.',
+    excerpt: 'PIR panel or PUF panel, which offers better value for your project? Compare prices, thermal performance, fire ratings, and total cost of ownership to make the right choice in 2026.',
     content: `
       <h2>PIR vs PUF Panels: Understanding the Key Differences</h2>
-      <p>When it comes to insulated sandwich panels for industrial and commercial construction, two materials dominate the market: Polyisocyanurate (PIR) and Polyurethane Foam (PUF). While both belong to the polyurethane family, they differ significantly in performance, pricing, and application suitability. Choosing between <a href="/products/sandwich-panels/pir-panel">PIR panels</a> and <a href="/products/sandwich-panels/sandwich-puf-panel">PUF panels</a> is one of the most important decisions you\u2019ll make for your building project\u2014and it all comes down to understanding where each material excels.</p>
+      <p>When it comes to insulated sandwich panels for industrial and commercial construction, two materials dominate the market: Polyisocyanurate (PIR) and Polyurethane Foam (PUF). While both belong to the polyurethane family, they differ significantly in performance, pricing, and application suitability. Choosing between <a href="/products/sandwich-panels/pir-panel">PIR panels</a> and <a href="/products/sandwich-panels/sandwich-puf-panel">PUF panels</a> is one of the most important decisions you\u2019ll make for your building project, and it all comes down to understanding where each material excels.</p>
       <p>This guide provides a comprehensive 2026 price comparison with performance data to help you select the right panel for your needs.</p>
 
       <h2>Head-to-Head Price Comparison: PIR vs PUF Panels (2026)</h2>
@@ -473,7 +473,7 @@ export const moneyBlogsPart2: Record<string, BlogPost> = {
     relatedProducts: [
       { name: 'PIR Panel', href: '/products/sandwich-panels/pir-panel' },
       { name: 'Sandwich PUF Panel', href: '/products/sandwich-panels/sandwich-puf-panel' },
-      { name: 'FM Approved Panel', href: '/products/sandwich-panels/fm-approved-panel' },
+      { name: 'FM Approved Panel', href: '/shop/fm-approved-panel' },
     ],
     relatedSolutions: [
       { name: 'Cold Storage Construction', href: '/solutions/cold-storage-construction' },
@@ -498,7 +498,7 @@ export const moneyBlogsPart2: Record<string, BlogPost> = {
       },
       {
         question: 'What is the price difference between PIR and PUF panels for a 5,000 sq ft project?',
-        answer: 'For a 5,000 sq ft project using 50mm panels, PUF panels would cost approximately \u20b910.5\u201314 lakh while PIR panels would cost approximately \u20b913\u201317.5 lakh\u2014a difference of \u20b92.5\u20134 lakh. However, if fire compliance requires PIR, the alternative (PUF + additional fire protection) may cost even more.',
+        answer: 'For a 5,000 sq ft project using 50mm panels, PUF panels would cost approximately \u20b910.5\u201314 lakh while PIR panels would cost approximately \u20b913\u201317.5 lakh: a difference of \u20b92.5\u20134 lakh. However, if fire compliance requires PIR, the alternative (PUF + additional fire protection) may cost even more.',
       },
     ],
   },
@@ -765,7 +765,7 @@ export const moneyBlogsPart2: Record<string, BlogPost> = {
           <td>269%</td>
         </tr>
       </table>
-      <p>With government subsidies and optimal occupancy rates, cold storage projects can achieve payback in under 4 years\u2014making them one of the most attractive infrastructure investments in India.</p>
+      <p>With government subsidies and optimal occupancy rates, cold storage projects can achieve payback in under 4 years, making them one of the most attractive infrastructure investments in India.</p>
 
       <h2>How PHOENIXX SmartBuild Reduces Your Cold Storage Cost</h2>
       <p>As a vertically integrated manufacturer of insulation panels and <a href="/solutions/cold-storage-construction">cold storage construction</a> solutions, PHOENIXX SmartBuild offers several cost advantages:</p>
@@ -941,7 +941,7 @@ export const moneyBlogsPart2: Record<string, BlogPost> = {
           <td><strong>100%</strong></td>
         </tr>
       </table>
-      <p>HVAC is consistently the single largest cost component, accounting for roughly one-third of the total budget. The second-largest component is the cleanroom envelope\u2014the <a href="/products/cleanroom-solutions">cleanroom panel system</a> that creates the sealed, controlled environment.</p>
+      <p>HVAC is consistently the single largest cost component, accounting for roughly one-third of the total budget. The second-largest component is the cleanroom envelope: the <a href="/products/cleanroom-solutions">cleanroom panel system</a> that creates the sealed, controlled environment.</p>
 
       <h3>Panel Selection for Cleanrooms</h3>
       <p>The cleanroom envelope must be smooth, non-porous, non-shedding, and easy to clean. PHOENIXX SmartBuild offers specialised cleanroom panels with:</p>

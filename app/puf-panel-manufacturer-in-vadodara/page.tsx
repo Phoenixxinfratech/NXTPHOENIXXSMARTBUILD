@@ -4,13 +4,27 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 import { CityManufacturerAeo } from '@/components/seo/city-manufacturer-aeo';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'PUF Panel Manufacturer in Vadodara | PHOENIXX',
+  title: 'PUF Panel Manufacturer in Vadodara',
   description: 'Quality PUF panels in Vadodara for industrial and commercial projects. Serving Vadodara GIDC. Contact for quote!',
   keywords: ['PUF panel manufacturer in Vadodara', 'PUF sandwich panel Vadodara', 'insulated panel Baroda'],
   alternates: {
     canonical: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-vadodara',
+  },
+  openGraph: {
+    title: 'PUF Panel Manufacturer in Vadodara | PHOENIXX SMARTBUILD',
+    description: 'Quality PUF panels in Vadodara for industrial and commercial projects. Serving Vadodara GIDC. Contact for quote!',
+    url: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-vadodara',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PUF Panel Manufacturer in Vadodara | PHOENIXX SMARTBUILD',
+    description: 'Quality PUF panels in Vadodara for industrial and commercial projects. Serving Vadodara GIDC. Contact for quote!',
   },
 };
 
@@ -66,13 +80,15 @@ export default function VadodaraPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={faqSchema} />
 
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-red-900 via-rose-900 to-slate-900 py-20 md:py-28">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
+            <Breadcrumbs withSchema items={[{ label: 'Products', href: '/products' }, { label: 'PUF Panel Manufacturer in Vadodara' }]} />
+
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-red-500/10 px-4 py-2 text-sm font-medium text-red-400 mb-6">
                 📍 Serving Vadodara & Central Gujarat
@@ -182,7 +198,7 @@ export default function VadodaraPage() {
                 { title: 'Quality Certified', desc: 'ISO-compliant manufacturing' },
                 { title: 'Custom Panels', desc: 'As per project specifications' },
                 { title: 'Competitive Rates', desc: 'Best pricing for Baroda' },
-                { title: '18+ Years', desc: 'Gujarat market experience' },
+                { title: '13+ Years', desc: 'Gujarat market experience' },
                 { title: 'Complete Range', desc: '30mm to 150mm thickness' },
               ].map((item, idx) => (
                 <div key={idx} className="text-center">
@@ -210,7 +226,7 @@ export default function VadodaraPage() {
                 'Commercial & IT Buildings',
               ].map((app, idx) => (
                 <div key={idx} className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg">
-                  <span className="text-red-500">✓</span>
+                  <span className="text-red-500" aria-hidden="true">✓</span>
                   <span className="text-slate-700">{app}</span>
                 </div>
               ))}

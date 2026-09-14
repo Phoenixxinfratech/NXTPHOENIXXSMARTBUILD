@@ -4,12 +4,26 @@ import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
 import { CityManufacturerAeo } from '@/components/seo/city-manufacturer-aeo';
+import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'PUF Panel Manufacturer in Vapi | PHOENIXX',
+  title: 'PUF Panel Manufacturer in Vapi',
   description: 'Premium PUF panels in Vapi for chemical and industrial applications. Serving Vapi GIDC industries. Get quote!',
   keywords: ['PUF panel manufacturer in Vapi', 'PUF panel Vapi GIDC', 'insulated panel Vapi'],
   alternates: { canonical: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-vapi' },
+  openGraph: {
+    title: 'PUF Panel Manufacturer in Vapi | PHOENIXX SMARTBUILD',
+    description: 'Premium PUF panels in Vapi for chemical and industrial applications. Serving Vapi GIDC industries. Get quote!',
+    url: 'https://phoenixxsmartbuild.com/puf-panel-manufacturer-in-vapi',
+    siteName: 'PHOENIXX SMARTBUILD',
+    type: 'website',
+    locale: 'en_IN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PUF Panel Manufacturer in Vapi | PHOENIXX SMARTBUILD',
+    description: 'Premium PUF panels in Vapi for chemical and industrial applications. Serving Vapi GIDC industries. Get quote!',
+  },
 };
 
 const faqs = [
@@ -29,12 +43,14 @@ export default function VapiPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <JsonLd data={faqSchema} />
 
         <section className="relative bg-gradient-to-br from-teal-900 via-cyan-900 to-slate-900 py-20 md:py-28">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-10" />
           <div className="container-custom relative">
+            <Breadcrumbs withSchema items={[{ label: 'Products', href: '/products' }, { label: 'PUF Panel Manufacturer in Vapi' }]} />
+
             <div className="max-w-4xl">
               <span className="inline-block rounded-full bg-teal-500/10 px-4 py-2 text-sm font-medium text-teal-400 mb-6">📍 Serving Vapi & South Gujarat Chemical Belt</span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">PUF Panel Manufacturer in Vapi</h1>
@@ -103,7 +119,7 @@ export default function VapiPage() {
                 { title: 'Quality Certified', desc: 'Documentation for audits' },
                 { title: 'Competitive Rates', desc: 'Best pricing for GIDC' },
                 { title: 'Technical Support', desc: 'Expert guidance team' },
-                { title: '18+ Years', desc: 'Industry experience' },
+                { title: '13+ Years', desc: 'Industry experience' },
               ].map((item, idx) => (<div key={idx} className="text-center"><h3 className="font-bold text-teal-400">{item.title}</h3><p className="mt-2 text-slate-300 text-sm">{item.desc}</p></div>))}
             </div>
           </div>
@@ -114,7 +130,7 @@ export default function VapiPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">PUF Panel Applications in Vapi</h2>
             <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
               {['Pharmaceutical Manufacturing Plants', 'Chemical Processing Units', 'Dye & Pigment Industries', 'Food Processing & Cold Storage', 'Paper & Packaging Industries', 'Warehouses & Logistics Centers', 'Textile Processing Units', 'Commercial & Office Buildings'].map((app, idx) => (
-                <div key={idx} className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg"><span className="text-teal-500">✓</span><span className="text-slate-700">{app}</span></div>
+                <div key={idx} className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg"><span className="text-teal-500" aria-hidden="true">✓</span><span className="text-slate-700">{app}</span></div>
               ))}
             </div>
           </div>

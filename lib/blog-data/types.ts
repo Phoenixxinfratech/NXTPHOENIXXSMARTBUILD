@@ -6,6 +6,8 @@ export interface BlogPost {
   content: string;
   category: string;
   date: string;
+  /** Last substantive revision. Falls back to `date` when a post has not been revised. */
+  lastModified?: string;
   readTime: string;
   author: { name: string; role: string };
   keywords: string[];
