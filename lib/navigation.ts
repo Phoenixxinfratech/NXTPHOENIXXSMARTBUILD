@@ -92,20 +92,6 @@ export const mainNavigation: NavItem[] = [
     ],
   },
   {
-    label: 'Global Exports',
-    href: '/export',
-    children: [
-      { label: 'Export Hub — Africa', href: '/export', description: 'All African export markets' },
-      { label: 'Kenya', href: '/export/kenya' },
-      { label: 'Tanzania', href: '/export/tanzania' },
-      { label: 'Ghana', href: '/export/ghana' },
-      { label: 'Nigeria', href: '/export/nigeria' },
-      { label: 'South Africa', href: '/export/south-africa' },
-      { label: 'Zambia', href: '/export/zambia' },
-      { label: 'Angola', href: '/export/angola' },
-    ],
-  },
-  {
     label: 'Clientele',
     href: '/clientele',
   },
@@ -172,12 +158,12 @@ export const footerNavigation = {
   quickLinks: [
     { label: 'Get a Quote', href: '/get-a-quote' },
     { label: 'Shop – Buy Online', href: '/shop' },
-    { label: 'Global Export Hub', href: '/export' },
     { label: 'Become Partner', href: '/become-partner' },
     { label: 'Vendor Registration', href: '/vendor-registration' },
   ],
+  /** Moved out of the header — lives as its own footer column. */
   exportMarkets: [
-    { label: 'Export Hub', href: '/export' },
+    { label: 'Global Export Hub', href: '/export' },
     { label: 'Kenya', href: '/export/kenya' },
     { label: 'Tanzania', href: '/export/tanzania' },
     { label: 'Ghana', href: '/export/ghana' },

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Header } from '@/components/blocks/header';
 import { Footer } from '@/components/blocks/footer';
 import { JsonLd } from '@/components/seo/json-ld';
-import { productsData, solutionsData, industriesData } from '@/lib/navigation';
+import { productsData, solutionsData, industriesData, footerNavigation } from '@/lib/navigation';
 import { Breadcrumbs } from '@/components/blocks/breadcrumbs';
 
 export const metadata: Metadata = {
@@ -124,6 +124,20 @@ export default function SitemapPage() {
                     <li key={industry.slug}>
                       <Link href={`/industries/${industry.slug}`} className="text-muted-foreground hover:text-primary">
                         {industry.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Global Exports */}
+              <div>
+                <h2 className="text-lg font-semibold mb-4">Global Exports</h2>
+                <ul className="space-y-2 text-sm">
+                  {footerNavigation.exportMarkets.map((link) => (
+                    <li key={link.href}>
+                      <Link href={link.href} className="text-muted-foreground hover:text-primary">
+                        {link.label}
                       </Link>
                     </li>
                   ))}

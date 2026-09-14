@@ -67,7 +67,7 @@ export function Footer() {
             <p className="mt-2 text-lg font-medium text-white">
               {siteConfig.tagline}
             </p>
-            <p className="mt-4 text-sm text-slate-400 max-w-sm leading-relaxed">
+            <p className="mt-4 text-sm text-slate-300 max-w-sm leading-relaxed">
               Smart, sustainable infrastructure built for performance. From PEB structures to 
               cleanroom systems, we engineer spaces that are efficient, durable, and future-ready.
             </p>
@@ -76,7 +76,7 @@ export function Footer() {
             <div className="mt-8 space-y-3">
               <a
                 href={`mailto:${siteConfig.contact.email}`}
-                className="flex items-center gap-3 text-sm text-slate-400 hover:text-white transition-colors"
+                className="flex items-center gap-3 text-sm text-slate-300 hover:text-white transition-colors"
               >
                 <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center" aria-hidden="true">
                   📧
@@ -85,14 +85,14 @@ export function Footer() {
               </a>
               <a
                 href={`tel:${siteConfig.contact.phone.replace(/\s/g, '')}`}
-                className="flex items-center gap-3 text-sm text-slate-400 hover:text-white transition-colors"
+                className="flex items-center gap-3 text-sm text-slate-300 hover:text-white transition-colors"
               >
                 <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center" aria-hidden="true">
                   📞
                 </span>
                 {siteConfig.contact.phone} | {siteConfig.contact.phoneAlt}
               </a>
-              <div className="flex items-start gap-3 text-sm text-slate-400">
+              <div className="flex items-start gap-3 text-sm text-slate-300">
                 <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center" aria-hidden="true">
                   📍
                 </span>
@@ -108,7 +108,7 @@ export function Footer() {
                   <a
                     key={social.name}
                     href={social.href}
-                    className="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-slate-700 hover:text-white transition-all"
+                    className="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-slate-700 hover:text-white transition-all"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.name}
@@ -122,14 +122,14 @@ export function Footer() {
 
           {/* Links Columns */}
           <div className="lg:col-span-8">
-            <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+            <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-5">
               {/* Products */}
               <div>
                 <h3 className="text-sm font-semibold text-white uppercase tracking-wider">Products</h3>
                 <ul className="mt-4 space-y-3">
                   {footerNavigation.products.map((link) => (
                     <li key={link.label}>
-                      <Link href={link.href} className="text-sm text-slate-400 hover:text-white transition-colors">
+                      <Link href={link.href} className="text-sm text-slate-300 hover:text-white transition-colors">
                         {link.label}
                       </Link>
                     </li>
@@ -148,7 +148,7 @@ export function Footer() {
                 <ul className="mt-4 space-y-3">
                   {footerNavigation.solutions.map((link) => (
                     <li key={link.label}>
-                      <Link href={link.href} className="text-sm text-slate-400 hover:text-white transition-colors">
+                      <Link href={link.href} className="text-sm text-slate-300 hover:text-white transition-colors">
                         {link.label}
                       </Link>
                     </li>
@@ -166,32 +166,32 @@ export function Footer() {
                 <h3 className="text-sm font-semibold text-white uppercase tracking-wider">Company</h3>
                 <ul className="mt-4 space-y-3">
                   <li>
-                    <Link href="/about-us" className="text-sm text-slate-400 hover:text-white transition-colors">
+                    <Link href="/about-us" className="text-sm text-slate-300 hover:text-white transition-colors">
                       About Us
                     </Link>
                   </li>
                   <li>
-                    <Link href="/industries" className="text-sm text-slate-400 hover:text-white transition-colors">
+                    <Link href="/industries" className="text-sm text-slate-300 hover:text-white transition-colors">
                       Industries
                     </Link>
                   </li>
                   <li>
-                    <Link href="/clientele" className="text-sm text-slate-400 hover:text-white transition-colors">
+                    <Link href="/clientele" className="text-sm text-slate-300 hover:text-white transition-colors">
                       Clientele
                     </Link>
                   </li>
                   <li>
-                    <Link href="/resources/project-gallery" className="text-sm text-slate-400 hover:text-white transition-colors">
+                    <Link href="/resources/project-gallery" className="text-sm text-slate-300 hover:text-white transition-colors">
                       Projects
                     </Link>
                   </li>
                   <li>
-                    <Link href="/career" className="text-sm text-slate-400 hover:text-white transition-colors">
+                    <Link href="/career" className="text-sm text-slate-300 hover:text-white transition-colors">
                       Careers
                     </Link>
                   </li>
                   <li>
-                    <Link href="/contact-us" className="text-sm text-slate-400 hover:text-white transition-colors">
+                    <Link href="/contact-us" className="text-sm text-slate-300 hover:text-white transition-colors">
                       Contact Us
                     </Link>
                   </li>
@@ -202,49 +202,21 @@ export function Footer() {
               <div>
                 <h3 className="text-sm font-semibold text-white uppercase tracking-wider">Resources</h3>
                 <ul className="mt-4 space-y-3">
+                  {footerNavigation.resources.map((link) => (
+                    <li key={link.label}>
+                      <Link href={link.href} className="text-sm text-slate-300 hover:text-white transition-colors">
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
                   <li>
-                    <Link href="/resources/blogs" className="text-sm text-slate-400 hover:text-white transition-colors">
-                      Insights & Blog
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/resources/technical-sheet" className="text-sm text-slate-400 hover:text-white transition-colors">
-                      Technical Sheets
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/resources/brochure" className="text-sm text-slate-400 hover:text-white transition-colors">
-                      Brochures
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/resources/faq" className="text-sm text-slate-400 hover:text-white transition-colors">
-                      FAQ
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/resources/glossary" className="text-sm text-slate-400 hover:text-white transition-colors">
+                    <Link href="/resources/glossary" className="text-sm text-slate-300 hover:text-white transition-colors">
                       Glossary
                     </Link>
                   </li>
                   <li>
-                    <Link href="/certifications" className="text-sm text-slate-400 hover:text-white transition-colors">
+                    <Link href="/certifications" className="text-sm text-slate-300 hover:text-white transition-colors">
                       Certifications
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/export" className="text-sm text-slate-400 hover:text-white transition-colors">
-                      Global Export Hub
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/export/kenya" className="text-sm text-slate-400 hover:text-white transition-colors">
-                      Export to Kenya
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/export/nigeria" className="text-sm text-slate-400 hover:text-white transition-colors">
-                      Export to Nigeria
                     </Link>
                   </li>
                   <li>
@@ -252,6 +224,20 @@ export function Footer() {
                       Get a Quote →
                     </Link>
                   </li>
+                </ul>
+              </div>
+
+              {/* Global Exports — moved from header */}
+              <div>
+                <h3 className="text-sm font-semibold text-white uppercase tracking-wider">Global Exports</h3>
+                <ul className="mt-4 space-y-3">
+                  {footerNavigation.exportMarkets.map((link) => (
+                    <li key={link.href}>
+                      <Link href={link.href} className="text-sm text-slate-300 hover:text-white transition-colors">
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
