@@ -56,7 +56,7 @@ export default function NagpurPage() {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">PUF Panel Manufacturer in Nagpur</h1>
               <p className="mt-6 text-xl text-slate-300 max-w-3xl">PHOENIXX SmartBuild delivers premium PUF panels to India&apos;s geographic center. From Butibori MIDC to MIHAN SEZ, we serve Nagpur and Vidarbha region with quality insulation solutions.</p>
               <div className="mt-10 flex flex-wrap gap-4">
-                <Link href="/get-a-quote" className="rounded-xl bg-gradient-to-r from-green-500 to-emerald-600 px-8 py-4 font-semibold text-white shadow-lg hover:shadow-xl transition-all">Get Nagpur Quote</Link>
+                <Link href="/get-a-quote" className="rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 px-8 py-4 font-semibold text-white shadow-lg hover:shadow-xl transition-all">Get Nagpur Quote</Link>
                 <a href="tel:+918866556879" className="rounded-xl border-2 border-white/20 bg-white/5 px-8 py-4 font-semibold text-white backdrop-blur hover:bg-white/10 transition-all">📞 Call: +91 88665 56879</a>
               </div>
             </div>
