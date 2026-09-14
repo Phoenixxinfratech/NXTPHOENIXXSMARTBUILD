@@ -112,8 +112,6 @@ const doorsData = {
     quote: 'PHOENIXX delivered 28 fire-rated doors for our new pharmaceutical facility. The quality, certification, and installation were impeccable. Highly recommended for GMP projects.',
     author: 'Project Manager',
     company: 'Leading Pharmaceutical Company, Gujarat',
-    rating: 4.8,
-    reviews: 45,
   },
   industries: ['Pharmaceutical', 'Healthcare', 'Food Processing', 'Cold Chain', 'Data Centers', 'Hospitality', 'Industrial'],
   faqs: [
@@ -325,11 +323,7 @@ export default function DoorsPage() {
         <section className="section-padding bg-white">
           <div className="container-custom text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Trusted by Industry Leaders</h2>
-            <div className="flex items-center justify-center gap-2 mb-8">
-              <div className="flex">{[1,2,3,4,5].map((s) => <span key={s} className="text-yellow-500 text-xl" aria-hidden="true">★</span>)}</div>
-              <span className="text-slate-600">{doorsData.testimonial.rating}/5 from {doorsData.testimonial.reviews}+ clients</span>
-            </div>
-            <blockquote className="max-w-3xl mx-auto">
+            <blockquote className="max-w-3xl mx-auto mt-8">
               <p className="text-xl text-slate-700 italic">&ldquo;{doorsData.testimonial.quote}&rdquo;</p>
               <footer className="mt-4">
                 <p className="font-bold text-slate-900">{doorsData.testimonial.author}</p>

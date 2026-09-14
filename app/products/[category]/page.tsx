@@ -175,8 +175,6 @@ const sandwichPanelsData = {
     quote: 'PHOENIXX sandwich panels reduced our cold storage energy bills by 28%. The installation was fast, and the quality is exceptional. Highly recommended for any temperature-controlled facility.',
     author: 'Operations Director',
     company: 'Leading Food Processing Company, Gujarat',
-    rating: 4.9,
-    reviews: 100,
   },
   industries: ['Pharmaceutical', 'Food Processing', 'Automotive', 'Electronics', 'Hospitality', 'Cold Chain', 'Healthcare'],
   faqs: [
@@ -635,14 +633,6 @@ function SandwichPanelsPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
                 Trusted by Leading Companies Across India
               </h2>
-              <div className="mt-4 flex items-center justify-center gap-2">
-                <div className="flex">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <span key={star} className="text-yellow-500 text-xl" aria-hidden="true">★</span>
-                  ))}
-                </div>
-                <span className="text-slate-600">{data.testimonial.rating}/5 from {data.testimonial.reviews}+ reviews</span>
-              </div>
             </div>
 
             <div className="max-w-3xl mx-auto">

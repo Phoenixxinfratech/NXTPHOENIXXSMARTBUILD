@@ -101,8 +101,6 @@ const cleanroomData = {
     quote: 'PHOENIXX built our ISO Class 7 pharmaceutical cleanroom in record time. The modular system allowed us to expand capacity within 3 weeks when demand increased. Excellent quality and support.',
     author: 'Production Head',
     company: 'API Manufacturer, Ahmedabad',
-    rating: 4.9,
-    reviews: 65,
   },
   industries: ['Pharmaceutical', 'Biotechnology', 'Electronics', 'Semiconductor', 'Healthcare', 'Food Processing', 'Research Labs'],
   faqs: [
@@ -319,11 +317,7 @@ export default function CleanroomSolutionsPage() {
         <section className="section-padding bg-white">
           <div className="container-custom text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Trusted by Pharma & Biotech Leaders</h2>
-            <div className="flex items-center justify-center gap-2 mb-8">
-              <div className="flex">{[1,2,3,4,5].map((s) => <span key={s} className="text-yellow-500 text-xl" aria-hidden="true">★</span>)}</div>
-              <span className="text-slate-600">{cleanroomData.testimonial.rating}/5 from {cleanroomData.testimonial.reviews}+ projects</span>
-            </div>
-            <blockquote className="max-w-3xl mx-auto">
+            <blockquote className="max-w-3xl mx-auto mt-8">
               <p className="text-xl text-slate-700 italic">&ldquo;{cleanroomData.testimonial.quote}&rdquo;</p>
               <footer className="mt-4">
                 <p className="font-bold text-slate-900">{cleanroomData.testimonial.author}</p>

@@ -632,18 +632,6 @@ export default async function ShopProductPage({ params }: { params: Promise<{ pr
                   {product.description}
                 </p>
                 
-                {/* Rating */}
-                <div className="mt-4 flex items-center gap-2">
-                  <div className="flex items-center">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <svg key={star} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
-                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                      </svg>
-                    ))}
-                  </div>
-                  <span className="text-slate-600 text-sm">4.8 (127 reviews)</span>
-                </div>
-                
                 {/* Price */}
                 <div className="mt-6 p-6 bg-white rounded-xl border border-slate-200">
                   <div className="flex items-baseline gap-2">
